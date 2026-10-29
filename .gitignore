@@ -1,0 +1,40 @@
+# Pesados, claves y cachés
+.runtime/
+
+# Vídeos de referencia de terceros (solo se versiona el README)
+referencias/*
+!referencias/README.md
+
+# Salidas de cada vídeo (se conserva la carpeta)
+proyectos/*/render/**
+!proyectos/*/render/**/
+!proyectos/*/render/**/.gitkeep
+proyectos/*/salida/**
+!proyectos/*/salida/**/
+!proyectos/*/salida/**/.gitkeep
+plantillas/proyecto/render/**/*
+!plantillas/proyecto/render/**/
+!plantillas/proyecto/render/**/.gitkeep
+plantillas/proyecto/salida/*
+!plantillas/proyecto/salida/.gitkeep
+
+# Node
+node_modules/
+
+# Secretos (solo se versiona el ejemplo)
+.env
+.env.*
+!.env.example
+
+# Medios sueltos fuera de su sitio
+*.wav
+*.mp3
+*.mp4
+*.mov
+*.mkv
+*.webm
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
