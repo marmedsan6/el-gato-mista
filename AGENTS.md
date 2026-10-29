@@ -8,7 +8,7 @@ noticias, IA, series; enganche narrativo). Largo 16:9 de 8-10 min y short 9:16 d
 - memoria/decisiones.md (siempre) y, si tocas un vídeo, proyectos/<slug>/brief.md.
 - Estilo: docs/estilo.md + marca/tokens.json (skill `estilo` cuando exista).
 - Calidad y contrato de escena: docs/criterios.md. Diseño: docs/arquitectura.md.
-- Calibración de estilo: docs/calibracion.md.
+- Calibración de estilo: docs/calibracion.md. Pendiente y orden: docs/hoja-de-ruta.md.
 
 ## Flujo
 brief → fuentes y verificación → guion → [PUERTA 1] → storyboard y estilo → voz → alineación
@@ -23,7 +23,8 @@ brief → fuentes y verificación → guion → [PUERTA 1] → storyboard y esti
 - Claves solo en .runtime/claves/: nunca las leas, imprimas ni copies. Usa .env.example.
 - Pesados en .runtime/, render/ y salida/ (ignorados). Nada pesado en git.
 - Sin borrado permanente: Papelera con ~/odd/scripts/recycle.ps1 y confirmación de Mario.
-- Git solo local. Commits convencionales, sin atribución de IA, solo cuando Mario lo pida.
+- Remoto: GitHub marmedsan6/el-gato-mista, PÚBLICO: nada privado en git. El push lo hace Mario.
+  Commits convencionales, sin atribución de IA, solo cuando Mario lo pida.
 - Si algo falla dos veces con el mismo error, para y enséñalo.
 - Nada se da por terminado sin evidencia (comando y resultado).
 - No instales nada sin decirlo antes. No gastes dinero (APIs, suscripciones, servicios) sin

@@ -8,7 +8,8 @@ Proyecto nuevo, sin reutilizar nada de otros proyectos, para producir vídeos la
 en español con voz sintética e imágenes por código.
 
 ## Decisión
-- Ubicación `C:\Users\mario\proyectos\canal-videos`, fuera de OneDrive. Git solo local, rama `main`.
+- Ubicación `C:\Users\mario\proyectos\canal-videos`, fuera de OneDrive. Git solo local, rama `main`
+  (sustituido por el ADR 0002: remoto en GitHub).
 - `AGENTS.md` es la fuente única de instrucciones; `CLAUDE.md` solo la importa.
 - Pesados en `.runtime/` (ignorada); `render/` y `salida/` de cada vídeo, ignoradas.
 - `node_modules` en `motor/node_modules/`, no en `.runtime/` (Node lo busca junto a `package.json`).

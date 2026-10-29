@@ -17,6 +17,7 @@ Estado: **esqueleto**. Sin motor de render, sin voz y sin estilo calibrado todav
 | `docs/criterios.md` | Contrato de escena, fuentes, puertas y QA | Sí |
 | `docs/estilo.md` | Estilo visual (se rellena en la calibración) | Sí |
 | `docs/calibracion.md` | Método de calibración de estilo | Sí |
+| `docs/hoja-de-ruta.md` | Qué está hecho y qué falta, en orden | Sí |
 | `docs/decisiones/` | Registros de decisión (ADR) | Sí |
 | `memoria/` | Decisiones, estado de vídeos y aprendizajes | Sí |
 | `marca/` | Nombre, tokens y fuentes de la marca | Sí |
