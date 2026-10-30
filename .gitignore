@@ -18,6 +18,15 @@ plantillas/proyecto/render/**/*
 plantillas/proyecto/salida/*
 !plantillas/proyecto/salida/.gitkeep
 
+# Paquetes de publicación y sus intermedios
+proyectos/*/para-subir/
+proyectos/*/trabajo/
+proyectos/*/.lock
+
+# Python
+__pycache__/
+.pytest_cache/
+
 # Node
 node_modules/
 

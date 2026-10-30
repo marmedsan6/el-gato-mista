@@ -1,0 +1,27 @@
+{
+  "perfil": "es",
+  "formatos": {
+    "short": {
+      "archivo": "salida/short.mp4",
+      "titulo": "<hasta 100 caracteres; específico de este vídeo, sin promesas que el vídeo no cumpla>",
+      "descripcion": "<de descripcion.md: fuentes, créditos de música y efectos; sin comentarios>",
+      "tags": ["<5-8 etiquetas, sin #>"],
+      "categoria": "28",
+      "visibilidad": "public",
+      "portada_segundo": 0.5,
+      "made_for_kids": false,
+      "contains_synthetic_media": null
+    },
+    "largo": {
+      "archivo": "salida/largo.mp4",
+      "titulo": "<hasta 100 caracteres>",
+      "descripcion": "<de descripcion.md>",
+      "tags": ["<5-8 etiquetas, sin #>"],
+      "categoria": "28",
+      "visibilidad": "public",
+      "portada_segundo": 0.5,
+      "made_for_kids": false,
+      "contains_synthetic_media": null
+    }
+  }
+}
