@@ -14,8 +14,19 @@ FORMATS = ['short', 'largo']
 def parser():
     p = argparse.ArgumentParser(description='Exportar y publicar en YouTube los vídeos con la PUERTA 2 aprobada.')
     commands = p.add_subparsers(dest='command', required=True)
+    upload = commands.add_parser('subir', help='Orden de Mario: aprueba, exporta y sube a YouTube, Instagram y la bandeja de TikTok, sin huellas')
+    upload.add_argument('proyecto')
+    upload.add_argument('--orden', required=True, help='Palabras literales de Mario en el chat; quedan anotadas en reviews/puerta-2.md')
     export = commands.add_parser('exportar', help='Generar el paquete de subida de los vídeos aprobados')
     export.add_argument('proyecto')
+    commands.add_parser('redes-estado', help='Estado de las credenciales y conexiones de TikTok e Instagram (sin mostrar valores)')
+    commands.add_parser('tiktok-conectar', help='Autorización OAuth de TikTok (video.upload); abre el navegador y guarda el token fuera del repo')
+    ig_login = commands.add_parser('instagram-conectar', help='Autorización de Meta (Facebook Login for Business); abre el navegador')
+    ig_login.add_argument('--usuario', help='Usuario de Instagram, solo si hay varias cuentas posibles')
+    ig_login.add_argument('--pagina', help='ID de la página de Facebook, si /me/accounts no la lista (páginas de un porfolio empresarial)')
+    ig_account = commands.add_parser('instagram-cuenta', help='Elegir la cuenta de Instagram con el token de Meta ya guardado (sin abrir el navegador)')
+    ig_account.add_argument('--usuario')
+    ig_account.add_argument('--pagina')
     login = commands.add_parser('youtube-conectar', help='OAuth de un perfil de canal; abre la autorización de Google')
     login.add_argument('credenciales', type=Path)
     login.add_argument('--perfil', required=True, choices=PROFILES)
@@ -49,9 +60,24 @@ def run(args):
     if name == 'youtube-conectar':
         from .youtube_profiles import connect
         return connect(args.credenciales, args.perfil, args.canal_id)
+    if name == 'redes-estado':
+        from .redes import status
+        return status()
+    if name == 'tiktok-conectar':
+        from .tiktok import connect
+        return connect()
+    if name == 'instagram-conectar':
+        from .instagram import connect
+        return connect(args.usuario, page_id=args.pagina)
+    if name == 'instagram-cuenta':
+        from .instagram import resolve
+        return resolve(args.usuario, args.pagina)
     from .story_publication import execute, export, manual_result, plan
     project = project_path(args.proyecto)
     with project_lock(project):
+        if name == 'subir':
+            from .subir import subir
+            return subir(project, args.orden)
         if name == 'exportar':
             return {'carpeta': export(project)}
         if name == 'publicar':

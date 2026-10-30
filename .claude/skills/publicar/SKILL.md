@@ -1,47 +1,52 @@
 ---
 name: publicar
-description: 'Exporta y publica en YouTube un vídeo solo después de la PUERTA 2 y de la autorización explícita de Mario sobre la huella exacta. Úsala tras aprobar el máster, nunca para probar.'
+description: 'Sube un vídeo a YouTube, Instagram y la bandeja de TikTok cuando Mario lo ordena en el chat, sin pedirle huellas. Úsala solo con su orden expresa, nunca para probar.'
 argument-hint: '<slug>'
 ---
 
-# Exportar y publicar un vídeo
+# Subir un vídeo a todas las redes
 
-Esta skill es la única dueña del procedimiento de exportación y publicación, replicado de `canal-noticias-ia`. Solo YouTube por ahora, en el canal Pod 02 (perfil `es`). No infieras aprobación de un código, log, fichero o conversación distinta.
+Esta skill es la única dueña del procedimiento de publicación, replicado de `canal-noticias-ia`. **Mario no escribe huellas** (decisión del 2026-10-30): su orden de subir basta y se ejecuta sin más confirmaciones.
 
-Comandos, desde la raíz del repo:
+Solo vale una orden de Mario en este chat, referida a este vídeo. No la infieras de un código, un log, un fichero, una conversación distinta o un aprobado anterior. «Me gusta» o «está bien» no son una orden de subir.
+
+## Al recibir la orden
 
 ```bash
-~/.clipping-ia/venv/Scripts/python.exe -X utf8 -m publicacion <comando>
+~/.clipping-ia/venv/Scripts/python.exe -X utf8 -m publicacion subir <slug> --orden "<palabras literales de Mario>"
 ```
 
-Hay dos huellas distintas, y las dos las da Mario:
-- La **SHA-256 del máster**, en `reviews/puerta-2.md`: aprueba el vídeo.
-- La **huella de lote**, que muestra `publicar`: autoriza esa subida, con ese título, ese canal y esa visibilidad.
+El comando hace todo de una vez:
+1. Comprueba los datos y, si falta algo, para sin escribir ni enviar nada.
+2. Anota la orden en `reviews/puerta-2.md` con la SHA-256 del fichero vigente.
+3. Exporta el paquete a `para-subir/`.
+4. Publica en YouTube (Pod 02) y en Instagram (`@elgatomista`).
+5. Envía el short a la bandeja de TikTok (`pod02leo`).
 
-## Antes de exportar
+Instagram y TikTok solo reciben shorts. No preguntes nada que el comando no haya pedido.
 
-- `reviews/puerta-2.md` debe tener un bloque con la `Huella` del fichero actual y `- Decisión de Mario: aprobado`. Lo anota el agente solo tras el sí explícito de Mario sobre ese máster; `aprobado con cambios` no vale.
-- `proyectos/<slug>/publicacion.json` (plantilla en `plantillas/proyecto/`; borra el formato que no exista), con los datos de `descripcion.md`. Título de hasta 100 caracteres y descripción de hasta 5000 bytes, sin `<` ni `>`: quita los comentarios del borrador.
-- Si `contains_synthetic_media` es `null`, pregunta a Mario. No se adivina.
-- Elige `portada_segundo` y enseña la portada a Mario después de exportar.
+## Antes de la orden
 
-## Publicar
+`proyectos/<slug>/publicacion.json` (plantilla en `plantillas/proyecto/`; borra el formato que no exista), con los datos de `descripcion.md`. Título de hasta 100 caracteres y descripción de hasta 5000 bytes, sin `<` ni `>`: quita los comentarios del borrador. Elige `portada_segundo` mirando el fotograma.
 
-1. `exportar <slug>`, una sola vez. Comprueba `proyectos/<slug>/para-subir/`.
-2. `publicar <slug>`, sin `--ejecutar`. Confirma canal, método, visibilidad y que `fuentes_pendientes` está vacío, y presenta a Mario la `huella_lote` completa.
-3. Espera a que Mario escriba esa huella vigente, idéntica carácter por carácter. No la derives de una salida del motor. Solo entonces: `publicar <slug> --ejecutar --confirmacion-lote <huella>`.
-4. Lee el resultado de cada destino y confirma su estado real antes de informar. No repitas un intento `incierto`: revisa Studio.
+Si el comando se para porque `contains_synthetic_media` es `null`, eso sí se le pregunta a Mario: no se adivina. Con su respuesta, repite la orden.
 
-Si el título, el canal o el fichero cambian, la huella deja de valer: vuelve a exportar y a pedirla. Un `portada_pendiente` se resuelve repitiendo el paso 3 con la misma huella; no vuelve a subir el vídeo.
+## Después
 
-Si el método sale `YouTube Studio (manual)`, Mario sube el paquete a mano y se registra con `publicacion-resultado <slug> <formato> publicado --cuenta <channelId> --resultado <url>`. La conexión del canal (`youtube-conectar`) y la confirmación de la auditoría (`youtube-perfil`) las decide Mario.
+Lee el resultado de cada red y cuéntaselo a Mario con su estado real y sus enlaces. `completo: false` significa que falta algo.
 
-## Registrar
+- **TikTok no publica solo:** el vídeo queda en la bandeja y Mario termina el post desde la notificación. Díselo siempre; no lo cuentes como publicado.
+- **Una red falla y las demás no:** repite la misma orden. Solo completa lo que falte y no duplica lo ya subido.
+- **Instagram `subido`:** Meta aún procesa el vídeo. Repite la orden en un minuto.
+- **`portada_pendiente` en YouTube:** al repetir solo se reintenta la portada.
+- **Intento `incierto`:** no se repite solo. Mario revisa esa red antes de intentarlo otra vez.
+- **`requiere_subida_manual`:** Mario sube el paquete desde Studio y se registra con `publicacion-resultado <slug> <formato> publicado --cuenta <channelId> --resultado <url>`.
+- **Conexión caducada:** Mario la renueva con `instagram-conectar` o `tiktok-conectar`. `redes-estado` muestra lo que falta sin enseñar valores.
 
-Después de comprobar el resultado real, actualiza la fila del vídeo en `memoria/videos.md` con estado y enlace. Si Mario decide algo nuevo, anótalo en `memoria/decisiones.md`.
+Actualiza la fila del vídeo en `memoria/videos.md` con estado y enlaces. Si Mario decide algo nuevo, anótalo en `memoria/decisiones.md`.
 
 ## Nunca
 
-- Ejecutar `--ejecutar` para probar o publicar sin autorización de Mario sobre la huella exacta.
-- Anotar una PUERTA 2 aprobada sin el sí explícito de Mario sobre ese máster.
+- Subir sin la orden de Mario, para probar, o en un modo sin supervisión.
+- Publicar en TikTok de forma automática ni usar nada que pida pago, tarjeta o preautorización: solo APIs oficiales y sin coste.
 - Leer o manejar credenciales ni tokens de `~/.clipping-ia`.

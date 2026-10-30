@@ -9,10 +9,10 @@ from .core import ClipError, digest_json, ffmpeg, now, read_json, sha_file, writ
 from . import youtube_profiles as profiles
 
 
-def _payload(project):
+def _payload(project, gate=True):
     from .youtube_upload import publication_body
     result = []
-    for format_id, publication, render, path in approved(project):
+    for format_id, publication, render, path in approved(project, gate):
         if not publication['titulo'].strip() or not isinstance(publication['made_for_kids'], bool) or not isinstance(publication['contains_synthetic_media'], bool):
             raise ClipError('Completa título, audiencia infantil y declaración de contenido sintético antes de exportar: ' + format_id)
         check_youtube_limits(publication, format_id)
@@ -33,6 +33,11 @@ def _payload(project):
                        'portada_segundo': cover, 'metodo': profiles.route(PROFILE, publication['visibilidad']),
                        'fuentes_pendientes': rights_pending(project), 'evidencia_uso': source_evidence(project)})
     return result
+
+
+def validate(project):
+    """Lo que se publicaría si Mario diera la orden ahora; para si falta algo, sin escribir nada."""
+    return _payload(project, gate=False)
 
 
 def fingerprint(items):

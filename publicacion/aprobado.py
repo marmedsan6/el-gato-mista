@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import re
 
-from .core import ClipError, duration, read_json, sha_file
+from .core import ClipError, duration, now, read_json, sha_file
 
 FORMATS = ('short', 'largo')
 PROFILE = 'es'
@@ -42,8 +42,21 @@ def load(project):
     return data
 
 
-def approved(project):
-    """Formatos cuyo fichero actual tiene la PUERTA 2 aprobada; el resto se omite y, si no queda ninguno, se para."""
+def record_order(project, path, sha, order):
+    """Anota la orden de subir de Mario como aprobación de esta huella exacta; si ya estaba aprobada, no toca nada."""
+    if gate_approved(project, sha):
+        return False
+    gate = project / 'reviews' / 'puerta-2.md'
+    previous = gate.read_text(encoding='utf-8-sig').rstrip() + '\n\n---\n\n' if gate.is_file() else ''
+    gate.parent.mkdir(parents=True, exist_ok=True)
+    gate.write_text(previous + f'# Puerta 2 · {project.name} · orden de subir\n- Fecha: {now()}\n- Fichero: `salida/{path.name}`\n'
+                    f'- Huella: SHA-256 `{sha}`\n- Orden de Mario: «{order}»\n- Decisión de Mario: aprobado\n', encoding='utf-8')
+    return True
+
+
+def approved(project, gate=True):
+    """Formatos cuyo fichero actual tiene la PUERTA 2 aprobada; el resto se omite y, si no queda ninguno, se para.
+    Con gate=False da los que se aprobarían con la orden de subir: sirve para comprobar antes de anotarla."""
     result = []
     for format_id, publication in load(project)['formatos'].items():
         path = (project / publication['archivo']).resolve()
@@ -52,7 +65,7 @@ def approved(project):
         if not path.is_file():
             raise ClipError('No se encuentra el vídeo de ' + format_id + ': ' + path.name)
         sha = sha_file(path)
-        if gate_approved(project, sha):
+        if not gate or gate_approved(project, sha):
             result.append((format_id, publication, {'sha256': sha, 'duracion': duration(path)}, path))
     if not result:
         raise ClipError('Todavía no hay vídeos con la PUERTA 2 aprobada sobre su huella exacta (reviews/puerta-2.md).')
