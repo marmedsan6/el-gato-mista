@@ -1,0 +1,10 @@
+{
+  "name": "elgatomista-piloto-propio",
+  "private": true,
+  "type": "module",
+  "description": "Candidata «propio» del piloto de motor (Playwright + FFmpeg) y capturas de calibración C5a",
+  "dependencies": {
+    "playwright": "1.64.1",
+    "pngjs": "7.0.0"
+  }
+}

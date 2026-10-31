@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=__W__, height=__H__" />
+    <title>piloto-01 (__FORMATO__)</title>
+    <style>
+      /* Fuente de marca local (nada de CDN): copiada junto al HTML por render.mjs */
+      @font-face {
+        font-family: "Press Start 2P";
+        src: url("PressStart2P-Regular.ttf") format("truetype");
+        font-display: block;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: __W__px; height: __H__px; overflow: hidden; background: #0c1016; }
+      /* Lienzo base __W__x__H__; HyperFrames lo escala x4 (render --resolution) pintando a DPR 4 («nitido»). */
+      #root { position: relative; width: __W__px; height: __H__px; overflow: hidden; }
+      #root div { position: absolute; }
+      #fondo { left: 0; top: 0; width: __W__px; height: __H__px; background: #0c1016; }
+      #cuadricula {
+        left: 0; top: 0; width: __W__px; height: __H__px;
+        background-image:
+          linear-gradient(to right, #36373b 1px, transparent 1px),
+          linear-gradient(to bottom, #36373b 1px, transparent 1px);
+        background-size: 16px 16px;
+      }
+      #titular {
+        font-family: "Press Start 2P", monospace; font-size: 16px; line-height: 16px;
+        color: #f5f7fb; white-space: pre; height: 16px; width: 240px;
+      }
+      #panel { background: #171e2a; display: none; }
+      #pista { background: #171e2a; border: 1px solid #8a93a6; height: 14px; }
+      #relleno { left: 1px; top: 1px; height: 12px; background: #ff8a3d; }
+      #etiqueta {
+        font-family: "Press Start 2P", monospace; font-size: 8px; line-height: 8px;
+        color: #f5f7fb; white-space: pre; height: 8px; width: 48px;
+      }
+      #sprite { width: 16px; height: 16px; }
+      #sprite div { background: #ff8a3d; }
+      .p { width: 2px; height: 2px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="25" data-fps="60"
+         data-width="__W__" data-height="__H__">
+      <div id="fondo" class="clip" data-start="0" data-duration="25"></div>
+      <div id="cuadricula"></div>
+      <div id="panel"></div>
+      <div id="titular"></div>
+      <div id="pista"><div id="relleno"></div></div>
+      <div id="etiqueta"></div>
+      <div id="sprite">
+        <!-- gato provisional con rectángulos, 16x16 -->
+        <div style="left:2px;top:0;width:2px;height:3px"></div>
+        <div style="left:12px;top:0;width:2px;height:3px"></div>
+        <div style="left:2px;top:3px;width:12px;height:6px"></div>
+        <div style="left:4px;top:5px;width:2px;height:2px;background:#0c1016"></div>
+        <div style="left:10px;top:5px;width:2px;height:2px;background:#0c1016"></div>
+        <div style="left:7px;top:7px;width:2px;height:1px;background:#e0454f"></div>
+        <div style="left:3px;top:9px;width:10px;height:5px"></div>
+        <div style="left:3px;top:14px;width:3px;height:2px"></div>
+        <div style="left:10px;top:14px;width:3px;height:2px"></div>
+        <div style="left:13px;top:10px;width:2px;height:2px"></div>
+        <div style="left:14px;top:8px;width:2px;height:3px"></div>
+      </div>
+      <div id="particulas"></div>
+    </div>
+
+    <script>
+      /*__ESCENA__*/
+    </script>
+    <script>
+      // Sin reloj real: la timeline de HyperFrames es un objeto propio cuyo seek() solo
+      // llama a estado(t). GSAP no se usa (el CDN está prohibido y no hay copia local).
+      (function () {
+        const FORMATO = "__FORMATO__";
+        const $ = (id) => document.getElementById(id);
+        const R = {
+          fondo: $("fondo"), panel: $("panel"), titular: $("titular"), pista: $("pista"),
+          relleno: $("relleno"), etiqueta: $("etiqueta"), sprite: $("sprite"),
+          cuadricula: $("cuadricula"), particulas: $("particulas"),
+        };
+        const MARGEN = FORMATO === "largo" ? 24 : 15;
+        const ancho = estado(0, FORMATO).W - 2 * MARGEN;
+        const yPista = FORMATO === "largo" ? 96 : 150;
+        const pos = (el, x, y) => { el.style.left = x + "px"; el.style.top = y + "px"; };
+        pos(R.titular, MARGEN, 24);
+        pos(R.pista, MARGEN, yPista); R.pista.style.width = ancho + "px";
+        pos(R.etiqueta, MARGEN, yPista + 22);
+        pos(R.panel, MARGEN - 8, yPista - 12); R.panel.style.width = (ancho + 16) + "px"; R.panel.style.height = "52px";
+
+        const pool = [];
+        for (let i = 0; i < 30; i++) {
+          const d = document.createElement("div");
+          d.className = "p"; d.style.display = "none"; R.particulas.appendChild(d); pool.push(d);
+        }
+        const COLOR = { azul: PALETA.azul, dorado: PALETA.dorado };
+
+        function seek(t) {
+          const e = estado(t, FORMATO);
+          const B = e.composicion === "B";
+          R.fondo.style.background = B ? PALETA.fondoVioleta : PALETA.fondo;
+          document.body.style.background = R.fondo.style.background;
+          R.panel.style.display = B ? "block" : "none";
+          R.titular.style.color = B ? PALETA.naranja : PALETA.texto;
+          R.relleno.style.background = B ? PALETA.azul : PALETA.naranja;
+          R.cuadricula.style.backgroundPosition = e.cuadricula.desplazamiento + "px " + e.cuadricula.desplazamiento + "px";
+          R.titular.textContent = e.titular;
+          R.relleno.style.width = Math.round((ancho - 2) * e.barra / 100) + "px";
+          R.etiqueta.textContent = e.barra + "%";
+          pos(R.sprite, e.sprite.x, e.sprite.y);
+          for (let i = 0; i < pool.length; i++) {
+            const p = e.particulas[i];
+            // el estado filtra las que salen del lienzo; se reasignan en orden (misma foto en cualquier orden de seek)
+            if (p) { pool[i].style.display = "block"; pos(pool[i], p.x, p.y); pool[i].style.background = COLOR[p.c]; }
+            else pool[i].style.display = "none";
+          }
+        }
+
+        let actual = 0;
+        const tl = {
+          play() { return tl; }, pause() { return tl; }, paused() { return true; },
+          totalTime(t) { if (t === undefined) return actual; actual = t; seek(t); return tl; },
+          time(t) { return tl.totalTime(t); },
+          seek(t) { return tl.totalTime(t); },
+          progress(p) { if (p === undefined) return actual / DURACION; return tl.totalTime(p * DURACION); },
+          duration() { return DURACION; }, totalDuration() { return DURACION; },
+        };
+        window.__timelines = window.__timelines || {};
+        window.__timelines["main"] = tl;
+        window.seek = seek; // para depurar a mano
+        seek(0);
+      })();
+    </script>
+  </body>
+</html>

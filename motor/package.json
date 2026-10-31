@@ -1,0 +1,13 @@
+{
+  "name": "elgatomista-motor",
+  "private": true,
+  "type": "module",
+  "description": "Motor de render de ElGatoMista (ADR 0004): Playwright + chrome-headless-shell + FFmpeg",
+  "scripts": {
+    "test": "node --test \"tests/*.test.mjs\""
+  },
+  "dependencies": {
+    "playwright": "1.64.1",
+    "pngjs": "7.0.0"
+  }
+}

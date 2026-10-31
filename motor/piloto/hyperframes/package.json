@@ -1,0 +1,9 @@
+{
+  "name": "elgatomista-piloto-hyperframes",
+  "private": true,
+  "type": "module",
+  "description": "Candidata HyperFrames del piloto de motor",
+  "dependencies": {
+    "hyperframes": "0.8.158"
+  }
+}

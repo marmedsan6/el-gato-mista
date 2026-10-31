@@ -1,0 +1,16 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Fixture: escena determinista mínima</title>
+<style>html, body { margin: 0; overflow: hidden; background: #0c1016; } #c { position: absolute; width: 8px; height: 8px; background: #5b8cff; }</style>
+<body><div id="c"></div>
+<script>
+  // Posición entera en función de t; color de fondo por tramos.
+  window.seek = (t) => {
+    const c = document.getElementById("c");
+    c.style.left = Math.floor(t * 40) + "px";
+    c.style.top = Math.floor(t * 20) + "px";
+    document.body.style.background = t < 0.25 ? "#0c1016" : "#1e1727";
+  };
+  window.claveFotograma = (t) => `${Math.floor(t * 40)}|${Math.floor(t * 20)}|${t < 0.25}`;
+</script>
+</body>

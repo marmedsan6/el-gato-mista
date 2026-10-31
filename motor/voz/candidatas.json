@@ -1,0 +1,34 @@
+[
+  {
+    "proveedor": "chirp",
+    "voz": "es-ES-Chirp3-HD-Charon"
+  },
+  {
+    "proveedor": "chirp",
+    "voz": "es-ES-Chirp3-HD-Orus"
+  },
+  {
+    "proveedor": "chirp",
+    "voz": "es-ES-Chirp3-HD-Iapetus"
+  },
+  {
+    "proveedor": "gemini",
+    "voz": "Charon"
+  },
+  {
+    "proveedor": "gemini",
+    "voz": "Orus"
+  },
+  {
+    "proveedor": "gemini",
+    "voz": "Sadaltager"
+  },
+  {
+    "proveedor": "inworld",
+    "voz": "Alvaro"
+  },
+  {
+    "proveedor": "inworld",
+    "voz": "Curro"
+  }
+]

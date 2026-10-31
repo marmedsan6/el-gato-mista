@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>piloto-01 · propio</title>
+<style>
+  @font-face { font-family: "Press Start 2P"; font-display: block;
+    src: url("../../../marca/fuentes/press-start-2p/PressStart2P-Regular.ttf") format("truetype"); }
+  html, body { margin: 0; padding: 0; overflow: hidden; background: #0c1016; }
+  #lienzo { position: relative; overflow: hidden; }
+  #lienzo div { position: absolute; box-sizing: border-box; }
+  .txt { font-family: "Press Start 2P", monospace; white-space: pre; line-height: 1; }
+</style>
+</head>
+<body>
+<div id="lienzo"></div>
+<script>
+// Escena «piloto-01». Todo sale de estado(t, formato) (inyectado por render.mjs en window.__escena).
+// Sin transitions/animations, sin temporizadores, sin reloj: seek(t) solo reescribe estilos.
+(() => {
+  const formato = new URLSearchParams(location.search).get("formato") || "largo";
+  let n = null; // nodos del DOM, creados una vez
+
+  const caja = (padre, x, y, w, h, color) => {
+    const d = document.createElement("div");
+    d.style.cssText = `left:${x}px;top:${y}px;width:${w}px;height:${h}px;` + (color ? `background:${color};` : "");
+    padre.appendChild(d);
+    return d;
+  };
+  const texto = (padre, x, y, px, color) => {
+    const d = caja(padre, x, y, 0, 0, null);
+    d.className = "txt";
+    d.style.fontSize = px + "px";
+    d.style.color = color;
+    return d;
+  };
+
+  function construir() {
+    const { PALETA: P, LIENZO } = window.__escena;
+    const [W, H] = LIENZO[formato];
+    const lienzo = document.getElementById("lienzo");
+    lienzo.style.width = W + "px";
+    lienzo.style.height = H + "px";
+    const barraY = H - 40;
+    n = { P, W, H, barraY, lienzo };
+    n.cuadricula = caja(lienzo, 0, 0, W, H, null);
+    n.cuadricula.style.backgroundImage =
+      `linear-gradient(to right, ${P.linea} 1px, transparent 1px), linear-gradient(to bottom, ${P.linea} 1px, transparent 1px)`;
+    n.cuadricula.style.backgroundSize = "16px 16px";
+    n.panelB = caja(lienzo, 8, 16, W - 16, 48, P.panel);
+    n.panelB.style.border = `1px solid ${P.linea}`;
+    n.titular = texto(lienzo, 16, 32, 16, P.texto);
+    n.etiqueta = texto(lienzo, 16, barraY - 12, 8, P.textoSuave);
+    caja(lienzo, 16, barraY, W - 32, 12, P.panel).style.border = `1px solid ${P.linea}`;
+    n.relleno = caja(lienzo, 17, barraY + 1, 0, 10, P.naranja);
+    n.particulas = Array.from({ length: 30 }, () => caja(lienzo, 0, 0, 2, 2, P.azul));
+    // gato provisional 16×16 con rectángulos [x, y, w, h, color]
+    n.gato = caja(lienzo, 0, 0, 16, 16, null);
+    [[2, 1, 2, 3, P.naranja], [12, 1, 2, 3, P.naranja], [2, 3, 12, 6, P.naranja], [3, 9, 10, 5, P.naranja],
+     [3, 14, 3, 2, P.naranja], [10, 14, 3, 2, P.naranja], [13, 10, 2, 5, P.naranja], [3, 1, 1, 2, P.dorado],
+     [5, 5, 2, 2, P.fondo], [9, 5, 2, 2, P.fondo], [7, 7, 2, 1, P.rojo], [5, 11, 6, 1, P.dorado]]
+      .forEach(([x, y, w, h, c]) => caja(n.gato, x, y, w, h, c));
+  }
+
+  window.seek = (t) => {
+    if (!n) construir();
+    const e = window.__escena.estado(t, formato);
+    const { P } = n;
+    const B = e.composicion === "B";
+    n.lienzo.style.background = B ? P.fondoVioleta : P.fondo;
+    n.cuadricula.style.backgroundPosition = `${-e.cuadricula.desplazamiento}px ${-e.cuadricula.desplazamiento}px`;
+    n.panelB.style.display = B ? "block" : "none";
+    n.titular.textContent = e.titular;
+    n.titular.style.color = B ? P.dorado : P.texto;
+    n.gato.style.left = e.sprite.x + "px";
+    n.gato.style.top = e.sprite.y + "px";
+    n.etiqueta.textContent = e.barra + "%";
+    n.relleno.style.width = Math.round((n.W - 34) * e.barra / 100) + "px";
+    n.relleno.style.background = B ? P.azul : P.naranja;
+    n.particulas.forEach((d, i) => {
+      const p = e.particulas[i];
+      d.style.display = p ? "block" : "none";
+      if (p) { d.style.left = p.x + "px"; d.style.top = p.y + "px"; d.style.background = P[p.c]; }
+    });
+  };
+})();
+</script>
+</body>
+</html>
