@@ -9,6 +9,8 @@ from __future__ import annotations
 from . import aprobado, instagram, story_publication, tiktok
 from .core import ClipError
 
+NETWORKS = ('youtube', 'instagram', 'tiktok')
+
 
 def _safely(action):
     try:
@@ -30,11 +32,14 @@ def _instagram(project):
 
 def _complete(result):
     return (all(item['estado'] == 'publicado' for item in result['youtube'])
-            and result['instagram']['estado'] in ('publicado', 'no_aplica')
-            and (result['tiktok']['estado'] == 'no_aplica' or result['tiktok'].get('tiktok') in ('SEND_TO_USER_INBOX', 'PUBLISH_COMPLETE')))
+            and result['instagram']['estado'] in ('publicado', 'no_aplica', 'omitida')
+            and (result['tiktok']['estado'] in ('no_aplica', 'omitida') or result['tiktok'].get('tiktok') in ('SEND_TO_USER_INBOX', 'PUBLISH_COMPLETE')))
 
 
-def subir(project, order):
+def subir(project, order, networks=NETWORKS):
+    """`networks` limita la subida cuando Mario lo pide; repetir la orden sin límite lleva el mismo vídeo a las que faltan."""
+    if not networks or set(networks) - set(NETWORKS):
+        raise ClipError('Redes disponibles: ' + ', '.join(NETWORKS) + '.')
     order = ' '.join(str(order or '').split())
     if not order:
         raise ClipError('Indica la orden de Mario con sus palabras literales (--orden).')
@@ -47,14 +52,16 @@ def subir(project, order):
         aprobado.record_order(project, path, render['sha256'], order)
     story_publication.export(project)
     huella = story_publication.plan(project)['huella_lote']
-    result = {'proyecto': project.name, 'videos': {item['id']: item['sha256'] for item in items},
-              'youtube': _safely(lambda: story_publication.execute(project, huella)['destinos'])}
-    if not isinstance(result['youtube'], list):
-        result['youtube'] = [result['youtube']]
-    if any(item['id'] == 'short' for item in items):
-        result['instagram'] = _safely(lambda: _instagram(project))
-        result['tiktok'] = _safely(lambda: tiktok.inbox(project, execute=True))
-    else:
-        result['instagram'] = result['tiktok'] = {'estado': 'no_aplica'}
+    result = {'proyecto': project.name, 'videos': {item['id']: item['sha256'] for item in items}, 'youtube': []}
+    if 'youtube' in networks:
+        result['youtube'] = _safely(lambda: story_publication.execute(project, huella)['destinos'])
+        if not isinstance(result['youtube'], list):
+            result['youtube'] = [result['youtube']]
+    has_short = any(item['id'] == 'short' for item in items)
+    for name, action in (('instagram', lambda: _instagram(project)), ('tiktok', lambda: tiktok.inbox(project, execute=True))):
+        if name not in networks:
+            result[name] = {'estado': 'omitida'}
+        else:
+            result[name] = _safely(action) if has_short else {'estado': 'no_aplica'}
     result['completo'] = _complete(result)
     return result

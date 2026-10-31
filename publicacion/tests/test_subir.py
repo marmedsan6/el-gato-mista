@@ -198,3 +198,32 @@ def test_el_cli_exige_las_palabras_de_mario_y_no_una_huella(proyecto, sesion, re
         cli.parser().parse_args(['subir', 'demo'])
     assert ejecutar('subir', 'demo', '--orden', ORDEN)['completo'] is True
     assert sesion.subidas == 1
+
+
+def test_solo_youtube_no_toca_las_demas_redes_y_luego_se_pueden_completar(proyecto, sesion, redes_falsas):
+    resultado = subir.subir(proyecto, 'De momento solo YouTube', ['youtube'])
+    assert resultado['youtube'][0]['estado'] == 'publicado' and sesion.subidas == 1 and not redes_falsas
+    assert resultado['instagram'] == {'estado': 'omitida'} and resultado['tiktok'] == {'estado': 'omitida'} and resultado['completo'] is True
+    despues = subir.subir(proyecto, 'Ahora a las demás')
+    assert despues['youtube'][0]['ya_publicado'] is True and sesion.subidas == 1
+    assert despues['instagram']['estado'] == 'publicado' and despues['tiktok']['estado'] == 'enviado'
+
+
+def test_solo_instagram_no_sube_a_youtube(proyecto, sesion, redes_falsas):
+    resultado = subir.subir(proyecto, ORDEN, ['instagram'])
+    assert sesion.subidas == 0 and resultado['youtube'] == [] and resultado['tiktok'] == {'estado': 'omitida'}
+    assert ('bandeja', True) not in redes_falsas and resultado['instagram']['estado'] == 'publicado'
+
+
+@pytest.mark.parametrize('redes', [[], ['facebook']])
+def test_una_red_desconocida_o_ninguna_se_rechaza_sin_anotar(proyecto, sesion, redes_falsas, redes):
+    sin_aprobar(proyecto)
+    antes = (proyecto / 'reviews' / 'puerta-2.md').read_text(encoding='utf-8')
+    with pytest.raises(ClipError, match='Redes disponibles'):
+        subir.subir(proyecto, ORDEN, redes)
+    assert (proyecto / 'reviews' / 'puerta-2.md').read_text(encoding='utf-8') == antes and sesion.subidas == 0 and not redes_falsas
+
+
+def test_el_cli_acepta_solo_youtube(proyecto, sesion, redes_falsas):
+    resultado = ejecutar('subir', 'demo', '--orden', ORDEN, '--solo', 'youtube')
+    assert resultado['youtube'][0]['estado'] == 'publicado' and sesion.subidas == 1 and not redes_falsas

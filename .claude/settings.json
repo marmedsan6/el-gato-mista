@@ -11,5 +11,22 @@
       "Bash(cat *.runtime/claves*)",
       "Bash(type *.runtime/claves*)"
     ]
+  },
+  "enabledPlugins": {
+    "hyperframes@hyperframes": true
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/verify-on-stop.sh\"",
+            "timeout": 180,
+            "statusMessage": "Verificando los tests del motor..."
+          }
+        ]
+      }
+    ]
   }
 }

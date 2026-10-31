@@ -25,9 +25,11 @@ El comando hace todo de una vez:
 
 Instagram y TikTok solo reciben shorts. No preguntes nada que el comando no haya pedido.
 
+Si Mario limita las redes («de momento, solo YouTube»), añade `--solo youtube` (repetible). Repetir la orden después sin `--solo` lleva el mismo vídeo a las redes que faltan, sin volver a subirlo donde ya está.
+
 ## Antes de la orden
 
-`proyectos/<slug>/publicacion.json` (plantilla en `plantillas/proyecto/`; borra el formato que no exista), con los datos de `descripcion.md`. Título de hasta 100 caracteres y descripción de hasta 5000 bytes, sin `<` ni `>`: quita los comentarios del borrador. Elige `portada_segundo` mirando el fotograma.
+`proyectos/<slug>/publicacion.json`, que prepara la skill `qa` (plantilla en `plantillas/proyecto/`; borra el formato que no exista). Título de hasta 100 caracteres y descripción de hasta 5000 bytes, sin `<` ni `>`.
 
 Si el comando se para porque `contains_synthetic_media` es `null`, eso sí se le pregunta a Mario: no se adivina. Con su respuesta, repite la orden.
 

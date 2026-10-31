@@ -17,6 +17,7 @@ def parser():
     upload = commands.add_parser('subir', help='Orden de Mario: aprueba, exporta y sube a YouTube, Instagram y la bandeja de TikTok, sin huellas')
     upload.add_argument('proyecto')
     upload.add_argument('--orden', required=True, help='Palabras literales de Mario en el chat; quedan anotadas en reviews/puerta-2.md')
+    upload.add_argument('--solo', action='append', choices=['youtube', 'instagram', 'tiktok'], help='Solo esa red, si Mario lo pide (repetible); por defecto, todas')
     export = commands.add_parser('exportar', help='Generar el paquete de subida de los vídeos aprobados')
     export.add_argument('proyecto')
     commands.add_parser('redes-estado', help='Estado de las credenciales y conexiones de TikTok e Instagram (sin mostrar valores)')
@@ -76,8 +77,8 @@ def run(args):
     project = project_path(args.proyecto)
     with project_lock(project):
         if name == 'subir':
-            from .subir import subir
-            return subir(project, args.orden)
+            from .subir import NETWORKS, subir
+            return subir(project, args.orden, args.solo or NETWORKS)
         if name == 'exportar':
             return {'carpeta': export(project)}
         if name == 'publicar':
