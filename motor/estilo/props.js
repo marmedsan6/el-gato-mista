@@ -151,6 +151,66 @@ function propJaula(svg, x, y, t, { w = 44, h = 30, activo = true } = {}) {
   propRaton(svg, x + 4, y + h - 7, t + 0.06, { activo: false });
 }
 
+// Teléfono de mesa 26×16; si activo, vibra 1 px a pasos
+function propTelefono(svg, x, y, t, { activo = false, color = PROP.naranja } = {}) {
+  const dx = activo ? [0, 1, 0, -1][Math.floor(t / 0.06) % 4] : 0, B = PROP.papel;
+  // Auricular claro sobre el cuerpo, con los dos extremos: se lee como teléfono también en paneles oscuros
+  rect(svg, x + dx, y, 26, 3, B); rect(svg, x + dx, y + 3, 6, 3, B); rect(svg, x + 20 + dx, y + 3, 6, 3, B);
+  rect(svg, x + 4, y + 7, 18, 9, B); rect(svg, x + 5, y + 8, 16, 7, color);
+  // Dial: aro oscuro con agujeros
+  disco(svg, x + 13, y + 11, 3, PROP.contorno);
+  for (const [a, b] of [[-2, -1], [2, -1], [0, 2]]) rect(svg, x + 13 + a, y + 11 + b, 1, 1, B);
+}
+
+// Onda de voz: barras a pasos con semilla; plana si no está activa
+function propOndaVoz(svg, x, y, w, h, t, { color = PROP.naranja, activo = true, semilla = 2, paso = 3 } = {}) {
+  const azar = mulberry32(semilla), cy = y + Math.floor(h / 2);
+  for (let k = 0; k * paso < w; k++) {
+    const fase = azar() * 9, base = azar();
+    const a = activo ? Math.max(1, Math.round((h / 2) * (0.2 + 0.8 * Math.abs(Math.sin(t * 7 + fase)) * (0.4 + 0.6 * base)))) : 0;
+    rect(svg, x + k * paso, cy - a, paso - 1, a * 2 + 1, activo ? color : PROP.gris);
+  }
+}
+
+// Máquina de la cascada 40×40: tolva arriba, luz y aguja; si activo, se enciende y traquetea
+function propMaquina(svg, x, y, t, { activo = false, color = PROP.azul } = {}) {
+  const dy = activo && Math.floor(t / 0.1) % 2 === 0 ? -1 : 0, C = PROP.contorno;
+  rect(svg, x, y + dy, 40, 40, C); rect(svg, x + 1, y + 1 + dy, 38, 38, activo ? PROP.metalClaro : PROP.metal);
+  rect(svg, x + 5, y + 5 + dy, 30, 14, C); rect(svg, x + 6, y + 6 + dy, 28, 12, activo ? "#0e2230" : "#0a0f18");
+  if (activo) for (let k = 0; k < 3; k++) rect(svg, x + 8, y + 8 + k * 3 + dy, 8 + ((Math.floor(t * 8) + k * 5) % 16), 1, color);
+  for (let k = 0; k < 3; k++) { rect(svg, x + 6 + k * 11, y + 24 + dy, 6, 6, C); rect(svg, x + 7 + k * 11, y + 25 + dy, 4, 4, activo && Math.floor(t * 4 + k) % 3 === 0 ? color : PROP.gris); }
+  rect(svg, x + 4, y + 34 + dy, 32, 2, C);
+}
+
+// Mesa de restaurante con sillas alrededor, vacías o no
+function propMesaSillas(svg, x, y, { sillas = 7 } = {}) {
+  const C = PROP.contorno, ancho = 12 + sillas * 12;
+  rect(svg, x, y + 12, ancho, 8, C); rect(svg, x + 1, y + 13, ancho - 2, 6, PROP.papel);
+  rect(svg, x + 4, y + 20, 3, 12, C); rect(svg, x + ancho - 7, y + 20, 3, 12, C);
+  for (let k = 0; k < sillas; k++) {
+    const sx = x + 6 + k * 12;
+    rect(svg, sx, y, 9, 12, C); rect(svg, sx + 1, y + 1, 7, 10, PROP.madera);
+  }
+}
+
+// Candado; abierto levanta el arco
+function propCandado(svg, x, y, { abierto = false, color = PROP.dorado } = {}) {
+  const C = PROP.contorno, A = "#cfd6e4", dy = abierto ? -3 : 0; // arco claro: se lee sobre paneles oscuros
+  rect(svg, x + 2, y + dy, 8, 2, A); rect(svg, x + 2, y + dy, 2, 7 - dy, A);
+  if (!abierto) rect(svg, x + 8, y, 2, 7, A);
+  rect(svg, x, y + 6, 12, 9, C); rect(svg, x + 1, y + 7, 10, 7, color); rect(svg, x + 5, y + 9, 2, 3, C);
+}
+
+// Lápiz en diagonal
+function propLapiz(svg, x, y) {
+  for (let k = 0; k < 12; k++) rect(svg, x + k, y + 12 - k, 3, 3, k < 2 ? PROP.contorno : k > 9 ? PROP.rojo : PROP.dorado);
+}
+
+// Persona en pictograma 7×11
+function propPersona(svg, x, y, color = PROP.gris) {
+  rect(svg, x + 2, y, 3, 3, color); rect(svg, x, y + 4, 7, 4, color); rect(svg, x + 1, y + 8, 2, 3, color); rect(svg, x + 4, y + 8, 2, 3, color);
+}
+
 // Bote de reactivo (para estanterías): cuerpo de color y tapón
 function propBote(svg, x, y, color, { alto = 12 } = {}) {
   rect(svg, x, y, 8, alto, PROP.contorno); rect(svg, x + 1, y + 3, 6, alto - 4, color); rect(svg, x + 2, y + 1, 4, 2, PROP.metalClaro);

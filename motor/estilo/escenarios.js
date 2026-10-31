@@ -195,6 +195,87 @@ function ventilador(svg, cx, cy, t) {
   for (const g of [a, a + Math.PI / 2]) linea(svg, cx - Math.round(Math.cos(g) * 3), cy - Math.round(Math.sin(g) * 3), cx + Math.round(Math.cos(g) * 3), cy + Math.round(Math.sin(g) * 3), "#8a93a6");
 }
 
+// Sala de operadores: cuadro de luces en la pared, reloj y puestos con pantalla (phonic-1-voz)
+function escenarioCentralita({ fondo, medio, brillo }, t, { W, H, suelo }) {
+  bandas(fondo, 0, suelo, ["#141c2c", "#172033", "#1a243a", "#1d2841"]);
+  // Cuadro de luces que parpadean con semilla
+  const azar = mulberry32(83);
+  rect(fondo, 8, 22, W - 16, 66, "#0d1320");
+  for (let fila = 0; fila < 7; fila++) for (let x = 14; x < W - 14; x += 9) {
+    const fase = azar(), c = ["#1fd69a", "#f2c14e", "#5b8cff", "#e0454f"][Math.floor(azar() * 4)];
+    rect(fondo, x, 27 + fila * 8, 4, 4, Math.floor(t * 1.5 + fase * 11) % 4 === 0 ? c : "#232c42");
+  }
+  // Cables con paquetes que recorren el techo
+  rect(medio, 0, 9, W, 1, "#2a3a6a");
+  for (let k = 0; k < 3; k++) { const px = Math.floor((t * 38 + k * 131) % W); rect(medio, px, 8, 3, 3, "#ff8a3d"); rect(brillo, px - 2, 6, 7, 7, "#ff8a3d"); }
+  // Lámpara que oscila 1 px a pasos
+  const cx = Math.floor(W / 2) + [0, 1, 0, -1][Math.floor(t / 0.8) % 4];
+  rect(medio, Math.floor(W / 2), 0, 1, 12, "#0d1320"); rect(medio, cx - 8, 12, 16, 3, "#34405f");
+  disco(brillo, cx, 18, 18, "#cdd8ff");
+  // Reloj con segundero
+  const rx = W - 26, ry = 104;
+  disco(medio, rx, ry, 9, "#0d1320"); disco(medio, rx, ry, 8, "#e9e1cf");
+  const s = (Math.floor(t) % 60) / 60 * Math.PI * 2;
+  linea(medio, rx, ry, rx + Math.round(Math.sin(s) * 7), ry - Math.round(Math.cos(s) * 7), "#e0454f");
+  linea(medio, rx, ry, rx + 3, ry - 3, "#14121c");
+  // Puestos: mesa corrida y pantallas con líneas que avanzan
+  rect(medio, 0, suelo - 40, W, 5, "#3a4a6a"); rect(medio, 0, suelo - 35, W, 2, "#27324a");
+  for (const x of [8, W - 14]) rect(medio, x, suelo - 33, 6, 33, "#27324a");
+  for (let x = 10; x < W - 30; x += 56) {
+    rect(medio, x, suelo - 58, 28, 18, "#14121c"); rect(medio, x + 1, suelo - 57, 26, 15, "#0e1a24");
+    const n = (Math.floor(t * 1.4) + x) % 5;
+    for (let j = 0; j < 4; j++) rect(medio, x + 3, suelo - 55 + j * 3, j <= n ? 12 + ((x + j * 7) % 11) : 0, 1, "#1fd69a");
+  }
+  // Suelo de moqueta
+  rect(medio, 0, suelo, W, H - suelo, "#10162a");
+  for (let y = suelo + 6; y < H; y += 12) for (let x = (y % 24 ? 0 : 8); x < W; x += 16) rect(medio, x, y, 2, 2, "#172038");
+}
+
+// Vestíbulo de hotel con ventanal a la bahía de noche: mar con brillos, barca, palmera y ventilador (phonic-1-voz)
+function escenarioHotel({ fondo, medio, brillo }, t, { W, H, suelo }) {
+  bandas(fondo, 0, suelo, ["#26202c", "#2b2430", "#302834", "#352c38"]);
+  // Ventanal
+  const vx = 8, vy = 14, vw = W - 16, vh = Math.min(suelo - 74, 150);
+  bandas(fondo, vy, vh, ["#101a3c", "#16214a", "#1e2858", "#2a2e60", "#3a3468"]);
+  const a = mulberry32(91);
+  for (let k = 0; k < 28; k++) { const x = vx + a() * vw, y = vy + a() * vh * 0.45, f = a(); if (Math.floor(t * 2 + f * 9) % 6 !== 0) rect(fondo, x, y, 1, 1, "#c9d2ff"); }
+  disco(brillo, W - 44, vy + 26, 14, "#f5f7fb"); disco(medio, W - 44, vy + 26, 7, "#e9e6d8");
+  // Morros junto a la bahía y mar con brillos a escalones
+  const mar = vy + Math.floor(vh * 0.7);
+  for (const [cx, r] of [[Math.floor(W * 0.24), 26], [Math.floor(W * 0.38), 16], [Math.floor(W * 0.72), 20]]) {
+    for (let dy = -r; dy <= 0; dy++) { const dx = Math.floor(Math.sqrt(r * r - dy * dy) * 0.8); rect(fondo, cx - dx, mar + dy, dx * 2, 1, "#141a38"); }
+  }
+  rect(fondo, vx, mar, vw, vy + vh - mar, "#101c44");
+  for (let k = 0; k < 18; k++) {
+    const fase = a(), x = vx + Math.floor(a() * (vw - 10)), y = mar + 2 + Math.floor(a() * (vy + vh - mar - 4));
+    if (Math.floor(t * 1.5 + fase * 7) % 3 !== 0) rect(medio, x, y, 4 + Math.floor(fase * 6), 1, "#5b7ac0");
+  }
+  // Barca que cruza la bahía despacio, con luz
+  const bx = vx + Math.floor(((t * 4) % (vw + 30))) - 15;
+  if (bx > vx && bx < vx + vw - 12) { rect(medio, bx, mar + 6, 10, 2, "#0a0c18"); rect(medio, bx + 4, mar + 3, 1, 3, "#0a0c18"); if (Math.floor(t / 0.6) % 2 === 0) rect(medio, bx + 4, mar + 2, 1, 1, "#f2c14e"); }
+  // Marco del ventanal
+  rect(medio, vx - 3, vy - 3, vw + 6, 3, "#1a141c"); rect(medio, vx - 3, vy + vh, vw + 6, 3, "#1a141c");
+  rect(medio, vx - 3, vy, 3, vh, "#1a141c"); rect(medio, vx + vw, vy, 3, vh, "#1a141c");
+  for (let k = 1; k < 4; k++) rect(medio, vx + Math.floor((vw * k) / 4), vy, 2, vh, "#1a141c");
+  // Ventilador de techo a pasos
+  const cx = Math.floor(W / 2);
+  rect(medio, cx - 1, 0, 2, 8, "#1a141c");
+  const giro = (Math.floor(t / 0.07) % 8) * (Math.PI / 8);
+  for (const g of [giro, giro + Math.PI]) linea(medio, cx, 9, cx + Math.round(Math.cos(g) * 24), 9 + Math.round(Math.sin(g) * 3), "#5a3b26", 2);
+  // Mostrador corrido con timbre
+  rect(medio, 0, suelo - 40, W, 5, "#8a5a3a"); rect(medio, 0, suelo - 35, W, 35, "#4a2f22");
+  for (let x = 10; x < W; x += 34) rect(medio, x, suelo - 31, 24, 27, "#573828");
+  rect(medio, W - 50, suelo - 44, 10, 1, "#14121c"); rect(medio, W - 48, suelo - 47, 6, 3, "#f2c14e");
+  disco(brillo, W - 45, suelo - 48, 7, "#f2c14e");
+  // Palmera en maceta que se mece
+  const hx = W - 24, hy = suelo - 40, m = [0, 1, 1, 0, -1, -1][Math.floor(t / 0.6) % 6];
+  rect(medio, hx - 5, hy - 8, 10, 8, "#a0552e"); rect(medio, hx - 1, hy - 26, 2, 18, "#4a3526");
+  for (const [dx, dy] of [[-12, 4], [-9, -3], [9, -3], [12, 4], [0, -7]]) linea(medio, hx, hy - 26, hx + dx + m, hy - 26 + dy, "#2f8a5a", 2);
+  // Suelo de damero
+  rect(medio, 0, suelo, W, H - suelo, "#1a141c");
+  for (let y = suelo; y < H; y += 10) for (let x = ((y - suelo) / 10) % 2 ? 0 : 10; x < W; x += 20) rect(medio, x, y, 10, 10, "#241c26");
+}
+
 function escenario(nombre, capas, t, opciones) {
-  ({ laboratorio: escenarioLaboratorio, servidores: escenarioServidores, despacho: escenarioDespacho, azotea: escenarioAzotea })[nombre](capas, t, opciones);
+  ({ laboratorio: escenarioLaboratorio, servidores: escenarioServidores, despacho: escenarioDespacho, azotea: escenarioAzotea, centralita: escenarioCentralita, hotel: escenarioHotel })[nombre](capas, t, opciones);
 }
