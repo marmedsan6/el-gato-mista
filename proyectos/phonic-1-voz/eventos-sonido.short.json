@@ -1,0 +1,62 @@
+[
+ {
+  "t": 1.08,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 2.04,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 5.08,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 5.48,
+  "tipo": "destello"
+ },
+ {
+  "t": 11.7,
+  "tipo": "tick"
+ },
+ {
+  "t": 16.52,
+  "tipo": "destello"
+ },
+ {
+  "t": 22.58,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 23.32,
+  "tipo": "acierto"
+ },
+ {
+  "t": 28.68,
+  "tipo": "error"
+ },
+ {
+  "t": 32.8,
+  "tipo": "tick"
+ },
+ {
+  "t": 33.8,
+  "tipo": "destello"
+ },
+ {
+  "t": 35.32,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 40.88,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 48.8,
+  "tipo": "acierto"
+ },
+ {
+  "t": 49.03,
+  "tipo": "destello"
+ }
+]

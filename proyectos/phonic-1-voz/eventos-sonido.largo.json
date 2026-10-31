@@ -1,0 +1,202 @@
+[
+ {
+  "t": 1.26,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 2.28,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 26.2,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 30.74,
+  "tipo": "destello"
+ },
+ {
+  "t": 42.16,
+  "tipo": "error"
+ },
+ {
+  "t": 46.66,
+  "tipo": "destello"
+ },
+ {
+  "t": 51.38,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 53.72,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 57,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 65.37,
+  "tipo": "destello"
+ },
+ {
+  "t": 81,
+  "tipo": "error"
+ },
+ {
+  "t": 90.82,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 98.55,
+  "tipo": "destello"
+ },
+ {
+  "t": 106.22,
+  "tipo": "tick"
+ },
+ {
+  "t": 121.58,
+  "tipo": "acierto"
+ },
+ {
+  "t": 125.763,
+  "tipo": "error"
+ },
+ {
+  "t": 131.03,
+  "tipo": "destello"
+ },
+ {
+  "t": 136.1,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 141.38,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 159,
+  "tipo": "acierto"
+ },
+ {
+  "t": 177.7,
+  "tipo": "tick"
+ },
+ {
+  "t": 188.78,
+  "tipo": "acierto"
+ },
+ {
+  "t": 196.01,
+  "tipo": "destello"
+ },
+ {
+  "t": 210.68,
+  "tipo": "tick"
+ },
+ {
+  "t": 214.36,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 227.94,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 249.64,
+  "tipo": "tick"
+ },
+ {
+  "t": 251.23,
+  "tipo": "destello"
+ },
+ {
+  "t": 263.92,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 269.26,
+  "tipo": "acierto"
+ },
+ {
+  "t": 270.24,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 276.52,
+  "tipo": "error"
+ },
+ {
+  "t": 296.02,
+  "tipo": "tick"
+ },
+ {
+  "t": 318.7,
+  "tipo": "error"
+ },
+ {
+  "t": 325.12,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 333.5,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 334.29,
+  "tipo": "destello"
+ },
+ {
+  "t": 345.18,
+  "tipo": "acierto"
+ },
+ {
+  "t": 350.9,
+  "tipo": "acierto"
+ },
+ {
+  "t": 361.75,
+  "tipo": "destello"
+ },
+ {
+  "t": 372.38,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 380.5,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 386.9,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 399.33,
+  "tipo": "destello"
+ },
+ {
+  "t": 412.86,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 417.4,
+  "tipo": "acierto"
+ },
+ {
+  "t": 444.68,
+  "tipo": "error"
+ },
+ {
+  "t": 459.52,
+  "tipo": "error"
+ },
+ {
+  "t": 461.73,
+  "tipo": "destello"
+ },
+ {
+  "t": 480.06,
+  "tipo": "seleccion"
+ }
+]

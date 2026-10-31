@@ -1,0 +1,164 @@
+# b01 · gancho
+Cancela la cita del lunes... no, la del martes.
+@pausa 0.7
+Es un ejemplo, pero piensa en él un segundo.
+Una persona esperaría a que acabaras la frase.
+La mayoría de las IA de voz, también.
+Fónic uno, no.
+Su empresa dice que es el único modelo que puede hacer cosas mientras tú sigues hablando.
+Así que tenía una duda muy simple: si actúa antes de que termines, ¿qué pasa cuando cambias de idea?
+Me fui a buscarlo a su propia demostración.
+Y encontré una reserva que nadie le mencionó a la clienta.
+Ahora llegamos.
+@pausa 0.7
+# b02 · por qué suenan torpes
+Si alguna vez has hablado con un asistente telefónico, ya conoces el baile.
+Hablas.
+Silencio.
+Más silencio.
+Y cuando por fin contesta, tú ya habías vuelto a hablar.
+No es mala educación.
+Es cómo están construidos.
+@pausa 0.7
+# b03 · la cascada
+Muchos agentes de voz son, en realidad, tres máquinas en fila.
+La primera convierte tu voz en texto.
+La segunda lee ese texto y decide qué hacer.
+La tercera convierte la respuesta otra vez en voz.
+Se llama cascada.
+Y funciona como un teléfono escacharrado muy bien organizado.
+@pausa 0.7
+# b04 · qué se pierde
+Tiene tres pegas.
+La primera: el texto no tiene tono.
+Una pausa, una duda o una ironía se quedan por el camino.
+La segunda: cada paso añade espera.
+La tercera es la importante: otros modelos esperan a que termines para usar cualquier herramienta.
+Para buscar una mesa, mirar un vuelo o apuntar un dato.
+Por eso oyes el famoso «déjame que lo compruebe», seguido de un silencio.
+Ahora bien, la cascada tiene una ventaja que luego nos va a importar: como hay texto por medio, puedes revisarlo antes de que la máquina responda.
+@pausa 0.7
+# b05 · Phonic-1
+El veintinueve de octubre, una empresa de diez personas presentó Fónic uno, junto a una ronda de veintisiete millones y medio de dólares.
+Su propuesta: quitar la transcripción de en medio.
+Tu voz entra directamente en el modelo.
+Y mientras te escucha, puede ir haciendo cosas.
+Fónic enseña esta comparación: la misma petición, cinco herramientas.
+Fónic uno contesta uno coma un segundos después de que termines.
+Ge pe te laiv, quince coma siete.
+Es una demostración elegida por la propia empresa, así que la apunto a lápiz.
+@pausa 0.7
+# b06 · la llamada
+Para enseñarlo, publicaron una llamada de cuarenta y cuatro minutos.
+Sofía organiza una despedida de soltera para once personas en Río y llama a un hotel.
+Al otro lado, Fónic uno hace de conserje del hotel: Mariana.
+@clip .runtime/audio/phonic-demo/clip-0001.wav
+Y hay que reconocerlo: impresiona.
+Sofía avisa a los seis minutos de que una amiga tiene una alergia grave a los frutos secos.
+Más de veinticinco minutos después, Mariana sigue pidiendo comida sin frutos secos para ella.
+Cuando Sofía se pone a buscar un vuelo, Mariana se calla y espera.
+Cuando Sofía pide seguir en portugués, cambia sin perder el hilo.
+@clip .runtime/audio/phonic-demo/clip-1807.wav
+Y su respuesta típica tarda cero coma cincuenta y ocho segundos.
+Pero mi momento favorito es este: Mariana manda llamar a tres restaurantes y sigue charlando.
+Esas gestiones tardan entre treinta y ocho y sesenta y cuatro segundos.
+La conversación no se para, y cuando Sofía pregunta, ya tiene las tres respuestas.
+Sin «déjame que lo compruebe».
+Sin silencio.
+@pausa 0.7
+# b07 · la letra pequeña
+Pero esa página deja ver cada herramienta que usó.
+Así que me puse a mirar.
+Fónic habla de ciento veintitrés llamadas a herramientas.
+Las conté y salen ciento veintitrés exactas.
+Pero ocho son decidir no hablar, y una es colgar.
+Quedan ciento catorce.
+Esas ciento catorce van a la misma dirección: api punto example punto com, un dominio reservado para ejemplos.
+Y los teléfonos de los invitados usan el cinco cinco cinco, cero uno, la numeración reservada para ficción.
+Sí, la de las películas.
+Todo apunta a que el hotel es un simulador y nadie ha reservado nada.
+Ojo, eso no es trampa: una demo se monta así, y Fónic ya dice que el modelo hace de conserje.
+Pero significa que esas herramientas suelen contestar en una décima de segundo, y que las ciento catorce responden que todo ha ido bien.
+Un sistema real puede no ser tan amable.
+¿Y cuántas veces actuó mientras ella hablaba?
+Por lo que muestra el registro, unas once de ciento catorce.
+@pausa 0.8
+# b08 · la reserva
+Y ahora, la reserva.
+Minuto dieciséis.
+Sofía propone Tía Rosa, el restaurante al que la llevaba su abuelo, para siete personas, a las ocho y media.
+Y en su turno, el registro muestra esto: reservar mesa.
+Tía Rosa.
+Siete personas.
+Ocho y media.
+Respuesta: confirmada.
+Código erre te, cuarenta y ocho, cuarenta y dos.
+Once segundos después, Mariana le dice que a esa hora no hay sitio.
+@clip .runtime/audio/phonic-demo/clip-1615.wav
+Sofía nunca oye ese código.
+Más tarde descartan el restaurante, porque su cocina no puede garantizar una comida sin trazas de frutos secos para su amiga.
+Repasé todo el registro.
+Nadie vuelve a mencionar ese código.
+Y no hay ninguna cancelación.
+@pausa 0.6
+Hay que ser justos.
+Parece un simulador, y dice a la vez que la mesa está confirmada y que no hay sitio.
+No sé si por detrás se corrige solo: el registro público no me lo dice.
+La documentación de Fónic dice que, por norma, ejecuta las herramientas lo antes posible.
+También que algunas se interrumpen si hablas mientras se ejecutan.
+Pero no explica qué pasa si te corriges.
+Y es exactamente la pregunta del principio.
+Con un restaurante de verdad, sería una mesa para siete que nadie va a ocupar.
+Hay otra cosa, más pequeña.
+En una nota, Mariana apunta a una invitada como Tara.
+Se llama Sara.
+@pausa 0.7
+# b09 · la regla
+¿Tiene arreglo?
+Probablemente sí, y no hace falta magia.
+En las respuestas al tweet por el que llegué aquí, un usuario, jota uve ce e, lo resumía muy bien: mientras escuchas, busca y consulta.
+Antes de reservar, cancelar o cobrar, repite lo que vas a hacer y espera un sí.
+Y si el cliente se corrige, manda lo último.
+Consultar, sí.
+Cobrar, solo con un sí.
+Esa línea no la traza la voz.
+La traza quien monta el agente.
+@pausa 0.7
+# b10 · te pasará a ti
+Porque esto no va de despedidas en Río.
+Fónic dice que ya atiende llamadas en seis continentes, en atención al cliente, sanidad, selección de personal y logística.
+Áshbi, por ejemplo, dice que la usa para sus entrevistas con IA en veinticinco países.
+Tu próxima entrevista de trabajo podría ser con una voz así.
+En Europa, desde agosto, estos sistemas deben estar diseñados para que sepas que hablas con una IA, salvo que sea evidente.
+Y en España, los servicios básicos y las grandes empresas tienen hasta finales de diciembre para adaptarse a una ley que te deja pedir hablar con una persona en cualquier momento.
+Cuanto mejor suene la máquina, más importa saber eso.
+@pausa 0.7
+# b11 · las cifras con lupa
+«Por fin alguien lo ha resuelto», decía el tweet.
+Vamos a verlo.
+Fónic uno es primero en el índice de voz a voz de Artificial Analysis.
+Cierto.
+Con ochenta y siete coma uno puntos, frente a ochenta y seis coma nueve de Grok Vois tres.
+Dos décimas.
+Donde sí saca ventaja es en resolver tareas con herramientas: setenta y nueve coma nueve por ciento, frente a setenta y cuatro coma cinco del siguiente.
+Es su dato más sólido.
+En velocidad, cero coma sesenta y un segundos: lo mejor de los cinco primeros, aunque más abajo hay modelos más rápidos.
+¿Y gusta?
+Depende de a quién preguntes.
+En Artificial Analysis queda fuera de los cinco primeros en preferencia humana.
+En la prueba que publica Fónic, gana a Ge pe te laiv por sesenta y uno coma cinco por ciento a treinta y dos.
+Frente a actores de voz humanos, pierde: cincuenta y siete a treinta y dos.
+Lo dice la propia Fónic.
+Su web también cuenta que usa modelos de frontera como supervisores, para herramientas y razonamiento, sin decir cuáles.
+La voz es directa, pero no trabaja sola.
+Y lo de ser el único: lo dice la empresa.
+No he encontrado a nadie que lo haya verificado.
+@pausa 0.7
+# b12 · cierre
+Entonces, ¿qué ha resuelto?
+Una parte muy real: que hablar con una máquina deje de parecer rellenar un formulario en voz alta.
+Lo que no ha resuelto es qué pasa cuando la máquina va más rápido que tú.
+Porque oírte mientras hablas es un avance.
+Pero a veces, la frase importante llega al final.
+@pausa 0.6
+No, la del martes.
