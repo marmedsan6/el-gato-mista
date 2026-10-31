@@ -1,0 +1,36 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>C5a · largo 3 · menú de juego y estadísticas (azul-negro)</title>
+<link rel="stylesheet" href="../../estilo/estilo.css">
+<body class="largo azul">
+  <svg class="arte" id="frente"></svg>
+  <div class="capa vineta"></div>
+
+  <!-- Acentos de la escena: azul (seleccionado, dato) y rojo. Cursor y títulos en texto. -->
+  <div class="panel-ui" style="left:32px; top:40px; width:168px; height:190px;"></div>
+  <div class="etiqueta" style="left:44px; top:52px;">Colores</div>
+  <div class="etiqueta suave" style="left:60px; top:80px;">Rojo</div>
+  <div class="etiqueta suave" style="left:60px; top:100px;">Naranja</div>
+  <div class="etiqueta suave" style="left:60px; top:120px;">Verde</div>
+  <div class="etiqueta" style="left:60px; top:140px; color:var(--azul);"><span class="sel" style="line-height:10px; padding:1px 3px;">Azul<i></i></span></div>
+  <div class="etiqueta suave" style="left:60px; top:160px;">Violeta</div>
+
+  <div class="panel-ui" style="left:224px; top:40px; width:224px; height:190px;"></div>
+  <div class="etiqueta" style="left:236px; top:52px;">Dispersión</div>
+  <div class="etiqueta suave" style="left:236px; top:80px;">Rojo</div>
+  <div class="barra" style="left:308px; top:79px; width:124px;"><b style="width:20px; background:var(--rojo);"></b></div>
+  <div class="etiqueta" style="left:236px; top:100px; color:var(--azul);">Azul</div>
+  <div class="barra" style="left:308px; top:99px; width:124px;"><b style="width:116px; background:var(--azul);"></b></div>
+
+  <div class="dato" style="left:236px; top:136px; color:var(--azul);">×5,8</div>
+  <div class="fuente-dato" style="left:236px; top:164px;">Fuente: [f1]</div>
+  <div class="etiqueta suave" style="left:236px; top:200px;">Nivel 2 · Rayleigh</div>
+
+  <script src="../../estilo/pixel.js"></script>
+  <script>
+    const f = lienzo("frente");
+    puntaFlecha(f, 52, 144, "der", "#f5f7fb", 5);
+    tildesPixel();
+    window.seek = () => {};
+  </script>
+</body>

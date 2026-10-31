@@ -1,0 +1,178 @@
+{
+  "id": "ref-02",
+  "fuente": "referencias/ref-02.mp4",
+  "duracion_s": 87.143,
+  "resolucion": "1080x1920",
+  "fps": 60,
+  "planos": {
+    "n": 7,
+    "media_s": 12.45,
+    "mediana_s": 9.65,
+    "p90_s": 22.98,
+    "cortes_s": [
+      22.98,
+      30.73,
+      40.38,
+      63.78,
+      68.4,
+      69.35
+    ]
+  },
+  "silencios": {
+    "n": 3,
+    "total_s": 1.834,
+    "tramos": [
+      [
+        3.264,
+        3.691
+      ],
+      [
+        81.108,
+        81.667
+      ],
+      [
+        86.296,
+        87.143
+      ]
+    ]
+  },
+  "sonoridad": {
+    "lufs_i": -14.1,
+    "lra": 2.4,
+    "true_peak_dbtp": 0.6
+  },
+  "paleta": [
+    {
+      "hex": "#24282e",
+      "pct": 14.19
+    },
+    {
+      "hex": "#101010",
+      "pct": 14.03
+    },
+    {
+      "hex": "#36373b",
+      "pct": 11.65
+    },
+    {
+      "hex": "#0f0f0f",
+      "pct": 10.25
+    },
+    {
+      "hex": "#44494f",
+      "pct": 8.25
+    },
+    {
+      "hex": "#8d7e75",
+      "pct": 7.22
+    },
+    {
+      "hex": "#645b52",
+      "pct": 6.81
+    },
+    {
+      "hex": "#bdac9b",
+      "pct": 6.53
+    },
+    {
+      "hex": "#1e1e20",
+      "pct": 5.7
+    },
+    {
+      "hex": "#15191f",
+      "pct": 4.39
+    },
+    {
+      "hex": "#101116",
+      "pct": 3.74
+    },
+    {
+      "hex": "#10181e",
+      "pct": 2.54
+    },
+    {
+      "hex": "#0e1217",
+      "pct": 1.81
+    },
+    {
+      "hex": "#070809",
+      "pct": 1.51
+    },
+    {
+      "hex": "#100f11",
+      "pct": 1.11
+    },
+    {
+      "hex": "#10100e",
+      "pct": 0.25
+    }
+  ],
+  "hojas": [
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-02/hoja_001.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-02/hoja_002.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-02/hoja_003.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-02/hoja_004.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-02/hoja_005.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-02/hoja_006.png"
+  ],
+  "planos_umbral": 0.1,
+  "planos_sensibilidad": {
+    "0.05": {
+      "n": 15,
+      "media_s": 5.81,
+      "mediana_s": 4.53,
+      "p90_s": 11.5,
+      "cortes_s": [
+        3.97,
+        5.82,
+        17.32,
+        22.62,
+        22.98,
+        30.62,
+        40.38,
+        51.08,
+        57.12,
+        61.65,
+        63.78,
+        68.3,
+        69.35,
+        73.52
+      ]
+    },
+    "0.1": {
+      "n": 7,
+      "media_s": 12.45,
+      "mediana_s": 9.65,
+      "p90_s": 22.98,
+      "cortes_s": [
+        22.98,
+        30.73,
+        40.38,
+        63.78,
+        68.4,
+        69.35
+      ]
+    },
+    "0.2": {
+      "n": 2,
+      "media_s": 43.57,
+      "mediana_s": 43.57,
+      "p90_s": 68.4,
+      "cortes_s": [
+        68.4
+      ]
+    },
+    "0.3": {
+      "n": 2,
+      "media_s": 43.57,
+      "mediana_s": 43.57,
+      "p90_s": 68.4,
+      "cortes_s": [
+        68.4
+      ]
+    }
+  },
+  "paleta_metodo": "mosaico de 174 fotogramas a 96 px, cuantizado a 16 colores (mediana)",
+  "recalculo": "herramientas/c1_recalculo.py, 2026-10-29",
+  "planos_score_max": 0.908
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>C5a · largo 2 · diagrama de flujo (azul-negro)</title>
+<link rel="stylesheet" href="../../estilo/estilo.css">
+<body class="largo azul">
+  <svg class="arte bloom" id="brillo"></svg>
+  <svg class="arte" id="frente"></svg>
+  <div class="capa vineta"></div>
+
+  <!-- Acentos de la escena: azul (luz dispersada, dato) y rojo (luz que sigue recta). El sol y la luz blanca, en texto. -->
+  <div class="titular p8" style="left:32px; top:32px;">Luz → aire → ojo</div>
+
+  <div class="etiqueta" style="left:40px; top:178px;">Sol</div>
+  <div class="etiqueta" style="left:178px; top:216px;">Moléculas de aire</div>
+  <div class="etiqueta" style="left:396px; top:178px;">Ojo</div>
+
+  <div class="dato" style="left:300px; top:56px; color:var(--azul);">1/λ<sup style="font-size:14px; vertical-align:10px; margin-left:-2px;">4</sup></div>
+  <div class="fuente-dato" style="left:300px; top:90px;">Fuente: [f1]</div>
+
+  <script src="../../estilo/pixel.js"></script>
+  <script>
+    const b = lienzo("brillo"), f = lienzo("frente");
+    const cx = 236, cy = 140; // punto de dispersión
+    // Sol (luz blanca: color de texto, no acento)
+    disco(b, 52, cy, 22, "#f5f7fb");
+    disco(f, 52, cy, 14, "#f5f7fb");
+    // Haz blanco hasta el punto de dispersión
+    linea(f, 72, cy, cx, cy, "#f5f7fb", 2);
+    // Nube de moléculas (gris)
+    particulas(f, 42, 260, 186, 104, 100, 72, ["#36373b", "#8a93a6"]);
+    // El azul sale en todas direcciones; el rojo sigue recto hasta el ojo
+    [[300, 96], [298, 180], [250, 92], [258, 192], [190, 100]].forEach(([x, y]) => linea(f, cx, cy, x, y, "#5b8cff"));
+    linea(f, cx, cy + 2, 388, cy + 2, "#e0454f", 2); puntaFlecha(f, 390, cy + 2, "der", "#e0454f", 5);
+    linea(f, cx, cy - 6, 388, cy - 6, "#5b8cff", 2); puntaFlecha(f, 390, cy - 6, "der", "#5b8cff", 5);
+    // Ojo pixel en forma de almendra
+    const ojo = [[6, 0, 16], [3, 1, 22], [1, 2, 26], [0, 3, 28], [0, 4, 28], [1, 5, 26], [3, 6, 22], [6, 7, 16]];
+    ojo.forEach(([dx, dy, w]) => rect(f, 398 + dx, 134 + dy * 2, w, 2, "#f5f7fb"));
+    rect(f, 402, 138, 20, 8, "#0c1016");
+    disco(f, 412, 142, 4, "#5b8cff");
+    disco(b, 412, 142, 9, "#5b8cff");
+    // Líneas guía: etiqueta a la nube y fórmula a la nube
+    linea(f, 236, 214, 236, 178, "#8a93a6");
+    linea(f, 300, 104, 278, 120, "#8a93a6");
+    tildesPixel();
+    window.seek = () => {};
+  </script>
+</body>

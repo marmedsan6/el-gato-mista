@@ -1,0 +1,37 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>C5a · short 2 · dato con interfaz de juego (azul-negro)</title>
+<link rel="stylesheet" href="../../estilo/estilo.css">
+<body class="short azul">
+  <svg class="arte" id="frente"></svg>
+  <div class="capa vineta"></div>
+
+  <!-- Acentos de la escena: azul (onda corta, dato) y rojo (onda larga). -->
+  <div class="rotulo" style="left:16px; top:64px;">Escaneando luz</div>
+  <div class="barra" style="left:16px; top:84px; width:150px;"><b style="width:104px; background:var(--texto);"></b></div>
+  <div class="etiqueta suave" style="left:172px; top:83px;">70%</div>
+
+  <div class="etiqueta" style="left:24px; top:112px; color:var(--azul);">Onda corta</div>
+  <div class="etiqueta" style="left:24px; top:172px; color:var(--rojo);">Onda larga</div>
+
+  <div class="dato" style="left:16px; top:232px; color:var(--azul);">450 nm</div>
+  <div class="dato" style="left:16px; top:258px; color:var(--texto-suave); font-size:16px;">frente a 700 nm</div>
+  <div class="fuente-dato" style="left:16px; top:282px;">Fuente: [f1]</div>
+
+  <div class="dialogo">
+    <span class="dicho">Cuanto más</span>
+    <span class="sel">corta<i></i></span>
+    <span class="cursor"></span>
+  </div>
+
+  <script src="../../estilo/pixel.js"></script>
+  <script>
+    const f = lienzo("frente");
+    rect(f, 16, 104, 210, 116, "#171e2a");
+    rect(f, 16, 104, 210, 1, "#36373b"); rect(f, 16, 219, 210, 1, "#36373b");
+    onda(f, 24, 140, 194, 18, 10, "#5b8cff");
+    onda(f, 24, 198, 194, 56, 10, "#e0454f");
+    window.seek = () => {};
+    tildesPixel();
+  </script>
+</body>

@@ -1,0 +1,41 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>C5a · short 3 · dato de cierre, comparativa (azul-negro)</title>
+<link rel="stylesheet" href="../../estilo/estilo.css">
+<body class="short azul">
+  <svg class="arte bloom" id="brillo"></svg>
+  <svg class="arte" id="frente"></svg>
+  <div class="capa vineta"></div>
+
+  <!-- Acentos de la escena: rojo y azul. Paneles en x 16-114 y 126-224 (franja derecha tapada a partir de ~237). -->
+  <div class="titular p8" style="left:16px; top:76px;">Dispersión de la luz</div>
+
+  <div class="etiqueta" style="left:24px; top:108px; color:var(--rojo);">Rojo</div>
+  <div class="etiqueta" style="left:134px; top:108px; color:var(--azul);">Azul</div>
+
+  <div class="dato" style="left:24px; top:236px; color:var(--texto-suave); font-size:16px;">×1</div>
+  <div class="dato" style="left:134px; top:228px; color:var(--azul);">×5,8</div>
+  <div class="fuente-dato" style="left:126px; top:280px;">Fuente: [f1]</div>
+
+  <div class="dialogo">
+    <span class="dicho">Por eso el aire nos devuelve casi seis veces más</span>
+    <span class="sel">azul<i></i></span>
+    <span class="cursor"></span>
+  </div>
+
+  <script src="../../estilo/pixel.js"></script>
+  <script>
+    const b = lienzo("brillo"), f = lienzo("frente");
+    // Paneles de 98 px base con 12 px de separación
+    [[16, "#e0454f"], [126, "#5b8cff"]].forEach(([x, c]) => {
+      rect(f, x, 100, 98, 172, "#171e2a");
+      rect(f, x, 100, 98, 1, c); rect(f, x, 271, 98, 1, c); rect(f, x, 100, 1, 172, c); rect(f, x + 97, 100, 1, 172, c);
+    });
+    // Una barra por color: la azul 5,8 veces la roja (14 → 81 px base)
+    rect(f, 36, 210 - 14, 24, 14, "#e0454f");
+    rect(f, 146, 210 - 81, 24, 81, "#5b8cff");
+    rect(b, 140, 122, 36, 92, "#5b8cff");
+    window.seek = () => {};
+    tildesPixel();
+  </script>
+</body>

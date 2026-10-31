@@ -1,0 +1,34 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>C5a · largo 1 · apertura de capítulo (contexto, violeta)</title>
+<link rel="stylesheet" href="../../estilo/estilo.css">
+<body class="largo violeta">
+  <svg class="arte desenfoque" id="fondo"></svg>
+  <svg class="arte bloom" id="brillo"></svg>
+  <svg class="arte" id="frente"></svg>
+  <div class="capa vineta"></div>
+
+  <!-- Acentos de la escena: naranja (insignia, palabra clave) y dorado (sol). -->
+  <div class="insignia" style="left:32px; top:56px;">Capítulo 1</div>
+  <div class="titular" style="left:32px; top:80px;">La luz<br>del <span class="clave">sol</span></div>
+  <div class="etiqueta suave" style="left:32px; top:136px;">8 min · ciencia</div>
+
+  <script src="../../estilo/pixel.js"></script>
+  <script>
+    const fondo = lienzo("fondo"), brillo = lienzo("brillo"), frente = lienzo("frente");
+    bandas(fondo, 0, 236, ["#1e1727", "#241b33", "#2b2040", "#33264d", "#3b2c58", "#46335f"]);
+    particulas(fondo, 5, 60, 0, 0, 480, 120, ["#8a93a6", "#f5f7fb"]);
+    montanas(fondo, 9, 222, 46, 8, "#2a2238");
+    disco(brillo, 340, 196, 30, "#f2c14e");
+    // Rayos de luz
+    for (let i = 0; i < 7; i++) linea(brillo, 340, 196, 250 + i * 32, 0, "#f2c14e", 2);
+    disco(frente, 340, 196, 16, "#f2c14e");
+    disco(frente, 340, 196, 12, "#ffd97a");
+    // Horizonte más bajo (y 236) y suelo con textura
+    montanas(frente, 4, 240, 30, 6, "#171e2a");
+    rect(frente, 0, 240, 480, 30, "#0c1016");
+    particulas(frente, 13, 90, 0, 242, 480, 28, ["#171e2a", "#2a2238"]);
+    tildesPixel();
+    window.seek = () => {};
+  </script>
+</body>

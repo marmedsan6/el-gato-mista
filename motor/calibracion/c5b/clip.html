@@ -1,0 +1,33 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>C5b · clip de 18 s (short y largo) · texto neutro</title>
+<link rel="stylesheet" href="../../estilo/estilo.css">
+<style>
+  #capa-a, #capa-b, #capa-c { position: absolute; inset: 0; }
+  .oculto { display: none !important; }
+</style>
+<body>
+  <!-- Bloque A: contexto (violeta) -->
+  <div id="capa-a">
+    <svg class="arte desenfoque" id="a-fondo"></svg>
+    <svg class="arte bloom" id="a-brillo"></svg>
+    <svg class="arte" id="a-frente"></svg>
+  </div>
+  <!-- Bloque B: dato o diagrama (azul-negro) -->
+  <div id="capa-b">
+    <svg class="arte bloom" id="b-brillo"></svg>
+    <svg class="arte" id="b-frente"></svg>
+  </div>
+  <!-- Bloque C: cierre o menú (azul-negro) -->
+  <div id="capa-c">
+    <svg class="arte bloom" id="c-brillo"></svg>
+    <svg class="arte" id="c-frente"></svg>
+  </div>
+  <div class="capa vineta"></div>
+  <div id="textos"></div>
+  <div class="dialogo oculto" id="dialogo"></div>
+  <svg class="arte" id="destello"></svg>
+
+  <script src="../../estilo/pixel.js"></script>
+  <script src="clip.js"></script>
+</body>

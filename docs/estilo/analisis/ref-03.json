@@ -1,0 +1,179 @@
+{
+  "id": "ref-03",
+  "fuente": "referencias/ref-03.mp4 (vídeo de terceros, solo para medir)",
+  "duracion_s": 411.814,
+  "resolucion": "1920x1080",
+  "fps": 30,
+  "planos": {
+    "n": 1,
+    "media_s": 411.81,
+    "mediana_s": 411.81,
+    "p90_s": 411.81,
+    "cortes_s": []
+  },
+  "silencios": {
+    "n": 3,
+    "total_s": 2.129,
+    "tramos": [
+      [
+        182.477896,
+        183.345438
+      ],
+      [
+        366.208271,
+        366.95025
+      ],
+      [
+        411.294437,
+        411.814
+      ]
+    ]
+  },
+  "sonoridad": {
+    "lufs_i": -14.3,
+    "lra": 3.0,
+    "true_peak_dbtp": -1.0
+  },
+  "paleta": [
+    {
+      "hex": "#0c1016",
+      "pct": 72.4
+    },
+    {
+      "hex": "#171e2a",
+      "pct": 6.21
+    },
+    {
+      "hex": "#0d2d2b",
+      "pct": 4.5
+    },
+    {
+      "hex": "#121822",
+      "pct": 2.94
+    },
+    {
+      "hex": "#2f2c39",
+      "pct": 2.42
+    },
+    {
+      "hex": "#2a5952",
+      "pct": 2.25
+    },
+    {
+      "hex": "#244141",
+      "pct": 2.18
+    },
+    {
+      "hex": "#0d1e21",
+      "pct": 1.99
+    },
+    {
+      "hex": "#0e141a",
+      "pct": 1.96
+    },
+    {
+      "hex": "#238d6d",
+      "pct": 1.33
+    },
+    {
+      "hex": "#2b2030",
+      "pct": 0.68
+    },
+    {
+      "hex": "#0d1119",
+      "pct": 0.45
+    },
+    {
+      "hex": "#0b1016",
+      "pct": 0.3
+    },
+    {
+      "hex": "#17111b",
+      "pct": 0.14
+    },
+    {
+      "hex": "#0d0f16",
+      "pct": 0.13
+    },
+    {
+      "hex": "#0c1015",
+      "pct": 0.12
+    }
+  ],
+  "hojas": [
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_001.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_002.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_003.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_004.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_005.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_006.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_007.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_008.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_009.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_010.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_011.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_012.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_013.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_014.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_015.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_016.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_017.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_018.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_019.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_020.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_021.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_022.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_023.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_024.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_025.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_026.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_027.png",
+    "C:/Users/mario/proyectos/canal-videos/.runtime/referencias/ref-03/hoja_028.png"
+  ],
+  "notas": {
+    "fotogramas": "824 PNG a fps=2 (1 cada 0,5 s), sin submuestreo; paleta sobre los 824.",
+    "cortes": "select gt(scene,0.3) no dio ningun corte. La puntuacion maxima de escena en los 12354 fotogramas es 0.093, asi que 'planos n=1' refleja que el umbral no detecta cortes duros, no que el video sea un unico plano editorial: en las hojas hay fundidos y animaciones continuas (cubo de particulas, formulas y reloj). Sin medida fiable de cambios de plano; revisar a mano.",
+    "paleta": "Cuantizacion a 8 colores por fotograma y acumulacion por hex exacto ponderada por pixeles. Muchos hex casi iguales (#0C1016, #0C1018, #0C1014...) porque cada fotograma tiene su propia paleta; los porcentajes estan fragmentados. El fondo oscuro (~74 %) es el dato util."
+  },
+  "planos_umbral": 0.1,
+  "planos_sensibilidad": {
+    "0.05": {
+      "n": 7,
+      "media_s": 58.83,
+      "mediana_s": 13.13,
+      "p90_s": 146.17,
+      "cortes_s": [
+        0.03,
+        193.53,
+        339.7,
+        348.3,
+        395.9,
+        409.03
+      ]
+    },
+    "0.1": {
+      "n": 1,
+      "media_s": 411.81,
+      "mediana_s": 411.81,
+      "p90_s": 411.81,
+      "cortes_s": []
+    },
+    "0.2": {
+      "n": 1,
+      "media_s": 411.81,
+      "mediana_s": 411.81,
+      "p90_s": 411.81,
+      "cortes_s": []
+    },
+    "0.3": {
+      "n": 1,
+      "media_s": 411.81,
+      "mediana_s": 411.81,
+      "p90_s": 411.81,
+      "cortes_s": []
+    }
+  },
+  "planos_score_max": 0.093,
+  "paleta_metodo": "mosaico de 824 fotogramas a 96 px, cuantizado a 16 colores (mediana)",
+  "recalculo": "herramientas/c1_recalculo.py, 2026-10-29"
+}

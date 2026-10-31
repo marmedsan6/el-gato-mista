@@ -1,0 +1,94 @@
+/* Estilo v1 de ElGatoMista (docs/estilo.md, marca/tokens.json). Valores en px del lienzo base. */
+@font-face { font-family: "P2P"; src: url("../../marca/fuentes/press-start-2p/PressStart2P-Regular.ttf"); }
+@font-face { font-family: "Mono"; src: url("../../marca/fuentes/jetbrains-mono/JetBrainsMono[wght].ttf"); }
+@font-face { font-family: "Dialogo"; src: url("../../marca/fuentes/pixelify-sans/PixelifySans[wght].ttf"); }
+
+:root {
+  --fondo: #0c1016;
+  --fondo-violeta: #1e1727;
+  --panel: #171e2a;
+  --linea: #36373b;
+  --texto: #f5f7fb;
+  --texto-suave: #8a93a6;
+  --naranja: #ff8a3d;
+  --verde: #1fd69a;
+  --magenta: #ff2d7a;
+  --rojo: #e0454f;
+  --dorado: #f2c14e;
+  --seleccion: #3d68ba;
+  --azul: #5b8cff;
+}
+
+/* Sin ligaduras: en Pixelify Sans «fi» se leía como «ñ» («distroñas», crítica del short v2). En cada elemento,
+   porque el atajo `font:` de una clase vuelve a poner las ligaduras en normal */
+* { box-sizing: border-box; font-variant-ligatures: none; font-feature-settings: "liga" 0, "clig" 0; }
+html, body { margin: 0; overflow: hidden; }
+body { position: relative; image-rendering: pixelated; -webkit-font-smoothing: none; }
+body.short { width: 270px; height: 480px; }
+body.largo { width: 480px; height: 270px; }
+body.violeta { background: var(--fondo-violeta); }
+body.azul { background: var(--fondo); }
+
+.capa { position: absolute; inset: 0; }
+svg.arte { position: absolute; inset: 0; shape-rendering: crispEdges; }
+.desenfoque { filter: blur(1.5px); }
+.bloom { filter: blur(6px); opacity: 0.55; mix-blend-mode: screen; }
+.vineta { background: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.45) 100%); }
+
+/* Titular pixel pesado (Press Start 2P, múltiplos de 8 px) */
+.titular { position: absolute; font: 16px/24px "P2P"; color: var(--texto); text-transform: uppercase;
+  text-shadow: 1px 1px 0 #000, 2px 2px 0 rgba(0, 0, 0, 0.5); letter-spacing: 0; }
+.titular .clave { color: var(--naranja); }
+.titular.p8 { font-size: 8px; line-height: 12px; }
+
+/* Rótulo: caja negra con borde blanco */
+.rotulo { position: absolute; font: 8px/10px "P2P"; color: var(--texto); background: #000;
+  border: 1px solid var(--texto); padding: 3px 4px 2px; text-transform: uppercase; white-space: nowrap; }
+.rotulo .clave { color: var(--naranja); }
+.insignia { position: absolute; font: 8px/10px "P2P"; color: #000; background: var(--naranja);
+  padding: 3px 4px 2px; text-transform: uppercase; }
+
+/* Datos en monoespaciada */
+.dato { position: absolute; font: 600 24px/26px "Mono"; color: var(--verde); }
+.fuente-dato { position: absolute; font: 8px/12px "P2P"; color: var(--texto-suave); text-transform: uppercase; white-space: nowrap; }
+.etiqueta { position: absolute; font: 8px/10px "P2P"; color: var(--texto); text-transform: uppercase; white-space: nowrap; }
+.etiqueta.suave { color: var(--texto-suave); }
+
+/* Caja de diálogo JRPG sin avatar (short) */
+.dialogo { position: absolute; left: 16px; width: 208px; top: 300px; height: 62px;
+  background: rgba(23, 30, 42, 0.94); border: 2px solid var(--texto); box-shadow: 0 0 0 1px #000, 2px 2px 0 1px #000;
+  padding: 7px 8px; font: 500 12px/16px "Dialogo"; font-variant-ligatures: none; color: var(--texto); }
+.dialogo .dicho { color: var(--texto-suave); }
+.dialogo .cursor { position: absolute; right: 6px; bottom: 4px; width: 0; height: 0;
+  border-left: 3px solid transparent; border-right: 3px solid transparent; border-top: 4px solid var(--texto); }
+
+/* Caja de selección pixel con tiradores (palabra clave) */
+.sel { position: relative; display: inline-block; padding: 0 3px; line-height: 14px; outline: 1px solid var(--seleccion); outline-offset: 0; }
+.sel::before, .sel::after, .sel > i::before, .sel > i::after { content: ""; position: absolute; width: 3px; height: 3px;
+  background: var(--texto); border: 1px solid var(--seleccion); }
+.sel::before { left: -2px; top: -2px; }
+.sel::after { right: -2px; top: -2px; }
+.sel > i::before { left: -2px; bottom: -2px; }
+.sel > i::after { right: -2px; bottom: -2px; }
+.sel > i { position: absolute; inset: 0; font-style: normal; }
+
+/* Interfaz de juego */
+.panel-ui { position: absolute; background: var(--panel); border: 1px solid var(--linea); }
+.barra { position: absolute; height: 6px; background: #000; border: 1px solid var(--texto); }
+.barra > b { position: absolute; left: 1px; top: 1px; bottom: 1px; background: var(--naranja); }
+
+/* Tildes pixel sobre mayúsculas de Press Start 2P (ver tildesPixel en comun.js). Unidad = 1/8 em. */
+.ac { position: relative; }
+.ac::after { content: ""; position: absolute; left: 0; top: -0.25em; width: 0.125em; height: 0.125em; background: transparent; }
+.ac.agudo::after { box-shadow: 0.5em 0 currentColor, 0.625em 0 currentColor, 0.375em 0.125em currentColor, 0.5em 0.125em currentColor; }
+.ac.virgulilla::after { box-shadow: 0.25em 0 currentColor, 0.375em 0 currentColor, 0.75em 0 currentColor,
+  0.125em 0.125em currentColor, 0.5em 0.125em currentColor, 0.625em 0.125em currentColor; }
+
+/* Estilo v2 · caja de diálogo con retrato y nombre del hablante (MISTA), y texto sobre tarjetas de papel */
+.dialogo.con-retrato { padding-left: 46px; }
+.dialogo .retrato { position: absolute; left: 6px; top: 8px; width: 34px; height: 30px; background: #0c1016; border: 1px solid #36373b; }
+.dialogo .nombre { display: block; font: 8px/10px "P2P"; color: var(--naranja); margin-bottom: 2px; text-transform: uppercase; }
+.tarjeta-texto { position: absolute; font: 8px/11px "P2P"; color: #2b1a10; text-transform: uppercase; white-space: nowrap; }
+
+/* v2: la fuente del dato lleva una tira oscura detrás (escenarios con mucho detalle) */
+.fuente-dato.con-fondo { background: #0c1016; padding: 2px 3px 1px; }

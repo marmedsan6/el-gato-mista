@@ -1,0 +1,36 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Estilo v2 · hoja de poses del gato MISTA</title>
+<link rel="stylesheet" href="../../estilo/estilo.css">
+<style>
+  body.hoja { width: 480px; height: 270px; background: #1e1727; }
+  .rot { position: absolute; font: 8px/10px "P2P"; color: #8a93a6; text-transform: uppercase; }
+</style>
+<body class="hoja">
+  <svg class="arte" id="fondo"></svg>
+  <svg class="arte" id="gatos"></svg>
+  <div id="rotulos"></div>
+  <script src="../../estilo/pixel.js"></script>
+  <script src="../../estilo/gato.js"></script>
+  <script>
+    const f = lienzo("fondo"), g = lienzo("gatos");
+    // Dos fondos: violeta (contexto) arriba y azul-negro (explicación) abajo
+    rect(f, 0, 0, 480, 135, "#1e1727"); rect(f, 0, 135, 480, 135, "#0c1016");
+    const poses = [["pie", "de pie"], ["senalar", "señalar"], ["pensar", "pensar"], ["sorpresa", "sorpresa"], ["celebrar", "celebrar"], ["tocar", "tocar"]];
+    const rot = document.getElementById("rotulos");
+    const etiqueta = (txt, x, y) => { const d = document.createElement("div"); d.className = "rot"; d.textContent = txt; d.style.left = x + "px"; d.style.top = y + "px"; rot.appendChild(d); };
+    poses.forEach(([p, nombre], i) => {
+      const x = 12 + i * 77;
+      gato(g, x, 30, { pose: p, t: 0.6 }, 2);
+      etiqueta(nombre, x + 4, 104);
+    });
+    [["pie", 0.9], ["senalar", 1.0]].forEach(([p, t], k) => gato(g, 12 + k * 77, 160, { pose: p, t, hablando: true }, 2));
+    etiqueta("hablando", 40, 232);
+    gato(g, 170, 160, { pose: "pie", t: 3.05 }, 2); etiqueta("parpadeo", 176, 232);
+    [0, 0.25, 0.5].forEach((t, k) => gato(g, 250 + k * 46, 176, { pose: "pie", t }, 1.5));
+    etiqueta("cola (3 fotogramas)", 260, 232);
+    retratoGato(g, 418, 176, { t: 0 }, 2); etiqueta("retrato", 418, 212);
+    tildesPixel(".rot");
+    window.seek = () => {};
+  </script>
+</body>

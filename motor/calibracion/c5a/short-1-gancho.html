@@ -1,0 +1,37 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>C5a · short 1 · gancho (contexto, violeta)</title>
+<link rel="stylesheet" href="../../estilo/estilo.css">
+<body class="short violeta">
+  <svg class="arte desenfoque" id="fondo"></svg>
+  <svg class="arte bloom" id="brillo"></svg>
+  <svg class="arte" id="frente"></svg>
+  <div class="capa vineta"></div>
+
+  <!-- Acentos de la escena: naranja (palabra clave, insignia) y dorado (sol). -->
+  <div class="titular" style="left:16px; top:80px;">¿Por qué<br>el cielo<br>es <span class="clave">azul?</span></div>
+  <div class="insignia" style="left:16px; top:160px;">Ciencia · 01</div>
+
+  <div class="dialogo">
+    <span class="dicho">El sol trae todos los colores. Pero arriba se ve</span>
+    <span class="sel">azul<i></i></span>
+    <span class="cursor"></span>
+  </div>
+
+  <script src="../../estilo/pixel.js"></script>
+  <script>
+    const fondo = lienzo("fondo"), brillo = lienzo("brillo"), frente = lienzo("frente");
+    bandas(fondo, 0, 300, ["#1e1727", "#241b33", "#2b2040", "#33264d", "#3b2c58"]);
+    particulas(fondo, 7, 40, 0, 0, 270, 160, ["#8a93a6", "#f5f7fb"]);
+    montanas(fondo, 3, 268, 40, 6, "#2a2238");
+    disco(brillo, 196, 228, 22, "#f2c14e");
+    disco(frente, 196, 228, 12, "#f2c14e");
+    disco(frente, 196, 228, 9, "#ffd97a");
+    montanas(frente, 11, 290, 30, 4, "#171e2a");
+    rect(frente, 0, 290, 270, 190, "#0c1016");
+    // Suelo con textura de hierba pixel bajo el horizonte
+    particulas(frente, 21, 120, 0, 292, 270, 90, ["#171e2a", "#2a2238"]);
+    tildesPixel();
+    window.seek = () => {};
+  </script>
+</body>
