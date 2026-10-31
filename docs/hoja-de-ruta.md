@@ -149,3 +149,6 @@ legal anterior. Los agentes no hacen `git push` (deny global); el push lo hace M
 - Miniaturas: quién las diseña y con qué estilo.
 - Cupo de Opus en la calibración: se mide en C2.
 - Legibilidad de fuentes pixel a 360×640: se resuelve en C4-C5.
+
+## Segundo vídeo (2026-10-31)
+- `proyectos/phonic-1-voz/`: primer largo de punta a punta (8:02) y su short (54,8 s), con PUERTA 1 aprobada y QA en `reviews/qa-*-v1.md`. Herramientas nuevas: `motor/voz/por-bloques.mjs` y `motor/voz/escrito.mjs`. Publicados el 2026-10-31 con la orden de Mario; TikTok queda en la bandeja. Enlaces en `memoria/videos.md`.

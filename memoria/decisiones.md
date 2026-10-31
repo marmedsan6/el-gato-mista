@@ -91,3 +91,11 @@
 - 2026-10-31 · El short v3 también va a Instagram y a la bandeja de TikTok — Mario («Súbelo también a Instagram y TikTok»). Sustituye a «de momento, solo YouTube».
 - 2026-10-31 · Las tareas mínimas y bien definidas las hace el último modelo barato de frontera (hoy, Haiku), no «Haiku» a secas — Mario.
 - 2026-10-31 · **Dudas:** antes de generar cada pieza se le pregunta a Mario lo que no esté decidido y sirva para refinar el vídeo, y se genera con sus respuestas — Mario («que siempre me pregunte las dudas que tenga para refinar el vídeo»). La orden de subir sigue sin preguntas: las dudas se resuelven antes.
+- 2026-10-31 · phonic-1-voz: largo y short, enfoque explicativo («oye mientras hablas»), gancho «no, la del martes», MISTA impresionado sin tragárselo, con los bloques «te pasará a ti» y clips de la llamada — Mario. Público general, sin jerga; la voz de Sofia queda fuera de los clips hasta saber si es una persona real.
+- 2026-10-31 · PUERTA 1 de phonic-1-voz aprobada («Sí, me gusta el guión»). Producción de una tirada; Mario revisa los másteres y da la orden de subir: nada se sube antes — Mario («Te lo paso y ordenas tú»).
+- 2026-10-31 · phonic-1-voz: clips solo con la voz del modelo, sin preguntar a Phonic por `RT-4842`, sin declarar contenido sintético y sin la frase de Claude — Mario. La descripción dice que la voz es sintética.
+- 2026-10-31 · Mario activa la facturación de Gemini para terminar la voz del largo, tras avisarle de que costaría menos de 0,10 $ («listo, ya debería dejarte»). A partir de aquí, cualquier gasto nuevo se sigue consultando.
+- 2026-10-31 · Voz del largo al 96 % con `atempo` para llegar a 8 min sin regenerarla: evita un gasto no aprobado. Sustituye a «ritmo normal» del plan — decisión del agente.
+- 2026-10-31 · Medidor de la voz de MISTA bajo los paneles del largo: da movimiento continuo aunque el panel tape el fondo — decisión del agente, la revisa Mario.
+- 2026-10-31 · phonic-1-voz: largo y short publicados con la orden de Mario («Súbelos»), sin pedir cambios sobre la v1.
+- 2026-10-31 · Música a -13 dB en este vídeo (antes -14): con -14 quedaba un silencio de 0,31 s tras el gancho del short — decisión del agente, 1 dB.

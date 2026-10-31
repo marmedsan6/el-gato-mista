@@ -77,3 +77,15 @@
 - 2026-10-31 · oEmbed de YouTube (`/oembed?url=…`) confirma sin sesión que un vídeo es público. Su miniatura es `hq2.jpg` aunque `thumbnails.set` respondiera bien: no prueba qué portada muestra un Short. Se comprueba mirando Studio.
 - 2026-10-31 · Desplazamiento lateral entre escenarios: dibujar cada bloque en un `<g>` desplazado y recortado a su lienzo (`clipPath` en userSpaceOnUse). Sin el recorte, lo que un escenario pinta en x<0 (el skyline) invade al vecino durante la transición; en la escena quieta no se ve.
 - 2026-10-31 · El movimiento de fondo fino (1 px) en la capa desenfocada desaparece; si debe leerse (estrella fugaz), va en la capa nítida y con cabeza de 2×2.
+- 2026-10-31 · La demo de Phonic deja ver cada herramienta en el navegador, no con WebFetch (sale «Loading»): el detalle de un registro público puede cambiar por completo la historia. Leerlo fue lo que dio el giro de phonic-1-voz.
+- 2026-10-31 · El cupo gratuito de Gemini 3.8 Flash TTS se acabó tras 10 peticiones en un día (más el límite por minuto). Para un largo, conviene agrupar los tramos: cada `@pausa` o `@clip` es una petición. `motor/voz/por-bloques.mjs` guarda en caché lo hecho y sigue donde iba.
+- 2026-10-31 · Con `claveFotograma` a 30 imágenes por segundo, el short de 54,8 s se renderizó en 87 s con 8 navegadores (1.693 de 3.288 fotogramas). Los desplazamientos entre bloques siguen a 60.
+- 2026-10-31 · `main` no tiene `motor/node_modules` (ignorado por git): la primera vez hay que ejecutar `npm ci` en `motor/`; el navegador ya está en `ms-playwright`.
+- 2026-10-31 · La llamada de la demo trae a la clienta y al modelo en canales distintos del estéreo: `pan=mono|c0=c1` aísla al modelo.
+- 2026-10-31 · En una base de escena que une estilos por texto, falta un `;` y el navegador descarta en silencio lo que sigue: los textos con color perdían el desplazamiento en las transiciones. Lo cazó el crítico en un fotograma de transición; conviene incluir siempre alguno.
+- 2026-10-31 · `freezedetect` a -60 dB no ve un marco que parpadea ni la boca del gato: con 1080p, un tramo de datos necesita algo de más superficie, como una banda de barrido en el monitor.
+- 2026-10-31 · Tachar un día en un calendario se lee como «cancelado», y un rótulo sobre un simulador puede leerse como parte de él («con uno real»): el texto en pantalla se relee fuera de la voz.
+- 2026-10-31 · Largo de 8:02: 14.602 fotogramas distintos de 28.932 y 13,5 min de render con 8 navegadores. Mucho mejor que los 50-60 min calculados.
+- 2026-10-31 · En un largo con paneles grandes, `freezedetect` ve quieto casi todo: la boca y la cola del gato no cuentan. Un medidor de voz de 362×12 px base bajo el panel lo deja en 0 tramos.
+- 2026-10-31 · Muestrear fotogramas a tiempos fijos enseña paneles a medio aparecer; el crítico no puede juzgar el dato. Mejor sacar el último instante de cada panel (`fin` de su última frase - 0,05 s). Así aparecieron dos solapes que nadie había visto.
+- 2026-10-31 · El crítico encuentra sobre todo texto que afirma más que la voz. Conviene pedírselo de forma expresa: una captura suelta circula sin el contexto hablado.
