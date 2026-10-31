@@ -23,8 +23,9 @@ Estado: **esqueleto**. Sin motor de render, sin voz y sin estilo calibrado todav
 | `marca/` | Nombre, tokens y fuentes de la marca | Sí |
 | `referencias/` | Vídeos de referencia de estilo | Solo el README |
 | `motor/` | Código de render y sus tests | Sí (sin `node_modules/`) |
+| `publicacion/` | Subir a YouTube, Instagram y la bandeja de TikTok (skill `publicar`, ADR 0008) | Sí |
 | `plantillas/proyecto/` | Plantilla para un vídeo nuevo | Sí |
-| `proyectos/<slug>/` | Un vídeo; `render/` y `salida/` ignoradas | Parcial |
+| `proyectos/<slug>/` | Un vídeo; `render/`, `salida/`, `para-subir/` y `trabajo/` ignoradas | Parcial |
 | `.runtime/` | Claves, caché de voz, fotogramas, temporales | No |
 
 ## Empezar un vídeo (cuando exista el motor)

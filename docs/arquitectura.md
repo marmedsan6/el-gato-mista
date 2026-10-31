@@ -44,9 +44,9 @@ Cada hecho se verifica con fuente antes de producir. Nada se publica sin aprobac
 | 8 | Render por escena | escenas | `render/{largo,short}/` | Motor | Fotogramas completos |
 | 9 | Montaje y mezcla | render, voz, música | máster en `salida/` | Motor | -14 LUFS, pico < -2 dBTP |
 | 10 | QA | máster | `reviews/qa.md`, hoja de contactos | Haiku + crítico | Sin defectos bloqueantes |
-| — | **PUERTA 2** | máster + SHA-256 | `reviews/puerta-2.md` | Mario | Aprobación sobre la huella |
-| 11 | Exportar | máster, timing | ficheros por plataforma + `largo.srt` | Motor | Huella registrada; SRT sincronizado |
-| 12 | Publicar | exportados | URL en `memoria/videos.md` | API de cada plataforma (*se diseña más adelante*) | Solo con PUERTA 2 aprobada |
+| — | **PUERTA 2** | máster + SHA-256 | `reviews/puerta-2.md` | Mario | Orden de subir, anotada con la huella |
+| 11 | Exportar | máster, timing, `publicacion.json` | paquete en `para-subir/` (vídeo, portada, SRT y manifiesto) | `publicacion/` | Huella de lote registrada |
+| 12 | Publicar | paquete | URL en `memoria/videos.md` | API de YouTube e Instagram; bandeja de TikTok (`publicacion/`, ADR 0008) | Orden de subir de Mario, que también pasa la PUERTA 2 |
 
 ## 4. Carpetas y git
 Ver tabla en `README.md`. Regla: en git solo texto, código, fuentes tipográficas y métricas.
@@ -152,4 +152,4 @@ Umbrales en `docs/criterios.md`.
 ## 13. Decisiones pendientes
 Cada una tendrá su ADR en `docs/decisiones/`:
 motor de render · proveedor de voz (perfil ya fijado) · alineación · plataforma de música y
-efectos por IA · diseño de la publicación por API · miniaturas.
+efectos por IA · miniaturas.

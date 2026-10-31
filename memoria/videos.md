@@ -2,5 +2,4 @@
 
 | Slug | Tema | Etapa | PUERTA 1 | PUERTA 2 | Publicado (URL) |
 |---|---|---|---|---|---|
-
-Todavía no hay vídeos.
+| mithril-ia-medicina | Anthropic compra Mithril Medicine (IA en medicina) · solo short | v3 publicada en YouTube el 2026-10-31 (`salida/short-v3.mp4`, SHA `43213645…1040`; iteración 03: desplazamiento lateral, 14 efectos a -18 dB y fondos con movimiento). Público, sin declarar contenido sintético y sin la frase de transparencia (ambas, decisión de Mario). Instagram publicado el 2026-10-31. TikTok: enviado a la bandeja de `pod02leo` (`v_inbox_file~v2.7702785653695694870`, `PROCESSING_UPLOAD` al comprobarlo); Mario termina el post. v1 y v2 no se publican | aprobada 2026-10-29 | v1: no (interna) · v2: iterada · v3: aprobada 2026-10-31 con la orden de subir | YouTube: https://www.youtube.com/watch?v=Zte7Fyd7H4c · Instagram: https://www.instagram.com/reel/DfKAJ76E3qZ/ |

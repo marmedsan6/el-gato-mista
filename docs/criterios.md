@@ -39,6 +39,7 @@ Fichero `reviews/puerta-N.md` por puerta:
 - Decisión de Mario: aprobado | cambios (lista)
 ```
 Si el fichero cambia después de aprobar, la huella deja de valer y hay que volver a aprobar.
+En la PUERTA 2, la orden de subir de Mario es la aprobación: `subir` anota su bloque con la SHA-256 del fichero vigente.
 
 ## 4. QA
 | Comprobación | Herramienta | Umbral |

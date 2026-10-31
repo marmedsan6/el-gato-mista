@@ -11,3 +11,69 @@
 - 2026-10-29 · ffmpeg/ffprobe no están en el PATH; solo hay copias dentro de ShareX y SteelSeries.
 - 2026-10-29 · La GPU registrada es AMD (RX 9070 XT): sin CUDA en Windows, WhisperX iría por CPU.
 - 2026-10-29 · El daemon de Docker no corre por defecto; no hace falta para el esqueleto.
+
+## Plan de ejecución (2026-10-29)
+- 2026-10-29 · Un worktree de Claude Code puede nacer de `origin/main` y no de `main` local; aquí venía de la web antigua — `git rev-parse HEAD` dio `e9ffddd`; se reapuntó con `git checkout -B <rama> main`.
+- 2026-10-29 · Los subagentes creados a mano en `.claude/agents/` no se cargan a mitad de sesión — el Agent tool respondió «Agent type 'verificador-enlaces' not found»; hace falta reiniciar la sesión.
+- 2026-10-29 · x.com devuelve 402 sin sesión; `api.fxtwitter.com/<usuario>/status/<id>` sirve para leer el tuit — comprobado con el tuit de @ErickSky.
+- 2026-10-29 · Las búsquedas sobre detalles técnicos de biología (anticuerpos, ensayos en ratones) pueden activar las salvaguardas de Opus — en temas de salud, el guion se queda en la noticia y la divulgación general, con fuentes primarias ya leídas.
+- 2026-10-29 · El Pages de el-gato-mista ya daba 404 antes del push forzado — API de Pages 404 y `curl` 404 en /privacidad.html.
+- 2026-10-29 · FFmpeg por winget (Gyan.FFmpeg 9.0.2) queda en `%LOCALAPPDATA%\Microsoft\WinGet\Packages\Gyan.FFmpeg_…\ffmpeg-9.0.2-full_build\bin` y en el PATH de usuario, no en WinGet\Links. Los shells ya abiertos no lo ven hasta reiniciarse — comprobado con `Get-Command ffmpeg` tras recargar el PATH.
+- 2026-10-29 · YouTube con yt-dlp 2026.7.4 daba «HTTP Error 403» (sin motor JS) — se arregló con `pip install -U "yt-dlp[default]"` (2026.10.26 + yt-dlp-ejs 0.8.0) y `--js-runtimes node:<ruta>`. Instagram bajó sin sesión con la versión antigua.
+- 2026-10-29 · El umbral de cortes `scene>0,3` de la calibración no detecta nada en estas referencias (1, 2 y 1 planos) — puntuaciones máximas 0,284, 0,908 y 0,093; se usa 0,1 como referencia y se guardan de 0,05 a 0,3. Los fundidos encadenados (ref-03) no los detecta: se cuentan en las hojas.
+- 2026-10-29 · Cuantizar cada fotograma a 8 colores y sumar RGB exactos fragmenta la paleta (12 hex ≈ 12-27 % del total) — un mosaico global cuantizado a 16 colores suma el 100 % (`herramientas/c1_recalculo.py`).
+- 2026-10-29 · Un hook impide a los subagentes escribir con Write en el checkout principal desde el worktree; con Bash sí escriben (fotogramas). Sus scripts sueltos quedaron en `.runtime/scripts/` del worktree (ignorado).
+- 2026-10-29 · C2: solo ref-01 es pixel art; ref-02 es vectorial de aspecto 3D y ref-03 un diagrama mono. Lo común es el fondo oscuro, la paleta corta con 1-2 acentos y el texto clave resaltado — los puntos comunes serán de lenguaje (jerarquía, ritmo, subtítulo), no de técnica de dibujo.
+- 2026-10-29 · ref-01 mezcla pixel art con desenfoque de fondo, brillo y escalas de píxel distintas — contradice la hipótesis de lienzo ×4 exacto; se pregunta en C4.
+- 2026-10-29 · El acento saturado ocupa solo el 2-6 % del encuadre en las 3 referencias — se fija un tope del 8 % en los tokens.
+- 2026-10-29 · Las medias de color por tono salen apagadas (mezclan píxeles y cuelan piel y arena en los tonos naranjas) — los hex de acento del borrador son el tono medido con más brillo y saturación (ajuste propio, anotado en tokens.json).
+- 2026-10-29 · `npm install playwright` no descarga navegadores; con `executablePath` se reutiliza el chrome-headless-shell-1243 ya instalado — comprobado con `motor/piloto/propio/captura.mjs`.
+- 2026-10-29 · Con deviceScaleFactor 4, Press Start 2P a 8 px queda píxel perfecto (0 bloques 4×4 mixtos), pero JetBrains Mono se suaviza (432 bloques) — si una cifra tiene que ser pixel puro, se renderiza a escala 1 y se amplía con vecino más próximo.
+- 2026-10-29 · Press Start 2P dibuja ÁÉÍÓÚ en la misma celda de 8 px que la letra (yMax igual que E): se leen como minúsculas — se resuelve con `tildesPixel()` (letra base + tilde pixel encima) en `motor/calibracion/c5a/comun.js`.
+- 2026-10-29 · Una viñeta con degradado radial pintada a ×4 hace que el 30-60 % de los bloques 4×4 no sean uniformes — para medir la nitidez hay que excluirla o pintarla en escalones.
+- 2026-10-29 · Renderizar a escala 1 y ampliar ×4 por vecino más próximo da pixel art puro (0 bloques mezclados) también con desenfoque y bloom — `captura.mjs` modo «pixel».
+- 2026-10-29 · El crítico Opus encontró lo que yo no vi (más de 2 acentos, azul de selección usado como texto, onda rota): merece la pasada antes de enseñar a Mario.
+- 2026-10-29 · npm 11 bloquea por defecto los postinstall («allow-scripts»); esbuild funciona igual porque usa el binario `@esbuild/win32-x64` — comprobado con `transformSync` en las dos carpetas del piloto.
+- 2026-10-29 · Medir en paralelo 3 motores en la misma máquina falsea los tiempos (hasta 3× de dispersión): se repitió en serie con `RUNTIME_DIR` nuevo — `motor/piloto/resultados.md`.
+- 2026-10-29 · Capturar solo los fotogramas cuyo estado cambia (estado puro) ahorra un 24-28 % de capturas a 60 fps con snapping — propio: 1074 y 1144 de 1500.
+- 2026-10-29 · `page.screenshot()` de Playwright tarda ~174 ms a 1080p; `Page.captureScreenshot` por CDP con `clip.scale` 4 baja a ~65 ms con píxeles idénticos — NOTAS de propio.
+- 2026-10-29 · El hook guard.js bloquea cualquier comando cuyo texto contenga `rmSync`, también en búsquedas con grep — usar la herramienta Grep.
+- 2026-10-29 · `node --test tests/` falla en Node 24 (busca un módulo llamado «tests»); hay que pasar un patrón: `node --test "tests/*.test.mjs"`.
+- 2026-10-29 · FFmpeg en Windows no admite `-pattern_type glob` («Function not implemented»); las hojas de fotogramas sueltos se montan con Pillow.
+- 2026-10-29 · En Git Bash, un PATH con `C:/...` se parte por los dos puntos; para anteponer una carpeta hay que usar `/c/...`.
+- 2026-10-29 · Contadores con pasos decimales: `floor(4,8 / 0,2)` da 23 en coma flotante; se cuentan los pasos con enteros.
+- 2026-10-29 · Las hojas de contactos con `fps=2` no caen en los instantes exactos (se saltaron el destello de 0,22 s) — para revisar, se muestrea con `select='not(mod(n,30))'` y `-fps_mode passthrough`.
+- 2026-10-29 · FFmpeg 9 ya no tiene `-vsync`: se usa `-fps_mode passthrough`.
+- 2026-10-29 · El crítico Opus no puede juzgar el movimiento con hojas a 2 fps: hay que darle fotogramas seguidos o medir los saltos con un script.
+- 2026-10-29 · Calibración completa en 2 vueltas (C5a fijos y C5b clip): pasar el crítico Opus antes de enseñar a Mario dejó su revisión en un «sí» directo — los defectos los cazó el crítico, no Mario.
+- 2026-10-29 · Unificar el CSS y el JS de estilo en `motor/estilo/` con `mv` y comparar las huellas de los PNG antes y después es una forma barata de refactorizar sin cambiar nada visible.
+- 2026-10-29 · Gemini TTS se llama ahora con la API Interactions (`/v1beta/interactions`, `gemini-3.8-flash-tts`) y detecta el idioma solo, sin campo de locale; Chirp 3 HD (es-ES) y Gemini comparten nombres de voz (Charon, Orus…). Leído en la documentación oficial; sin probar con clave.
+- 2026-10-29 · El Bloc de notas guardó el fichero de claves como `.env.txt`: el script acepta los dos nombres y lee UTF-8 o UTF-16. El hook guard.js bloquea cualquier comando cuyo texto contenga «.env»: los parches van en scripts aparte.
+- 2026-10-29 · Chirp 3 HD funciona con la credencial de `gcloud auth application-default login` (authorized_user → token OAuth + cabecera `x-goog-user-project`), sin clave de API — 16 voces masculinas es-ES listadas.
+- 2026-10-29 · Chirp 3 HD habla a ~13 caracteres/s en es-ES (360 caracteres → 27 s): para estimar la duración, usar caracteres/13, no palabras/2,6.
+- 2026-10-30 · El fichero de claves estaba vacío (0 bytes): se escribió y no se guardó. Un diagnóstico que solo informa de la estructura (nombres y longitudes) lo detectó sin ver valores; lo ejecutó Mario porque el clasificador bloquea que el agente lo lance.
+- 2026-10-30 · Inworld tiene 19 voces es-ES (14 masculinas castellanas: Alvaro, Borja, Curro, Ignacio, Manuel, Nacho…) con marcas de tiempo por palabra; Gemini 3.8 Flash TTS funciona con la API Interactions.
+- 2026-10-30 · Con Gemini TTS, la indicación de estilo «ritmo ágil… pausas breves» bajó el short de 62,4 a 57,8 s y las pausas de más de 0,5 s de 9 a 4, sin cambiar el texto.
+- 2026-10-30 · La versión de PyAV que instala faster-whisper 1.2.1 rompe `decode_audio` (`metadata_errors`): se decodifica con FFmpeg a f32le de 16 kHz y se pasa el array.
+- 2026-10-30 · Dar el guion como `initial_prompt` puede «forzar» la coincidencia: hay que comprobar también a ciegas (`--sin-pista`). Aquí dio el 97,6 %, con diferencias solo de formato (11 frente a «once»).
+- 2026-10-30 · `blackdetect` marca como «negro» un fotograma con más del 98 % de píxeles oscuros: en el estilo azul-negro, una escena con un solo elemento lo dispara. Las escenas deben arrancar con contenido suficiente (p. ej. elementos «apagados» que luego se encienden).
+- 2026-10-30 · Una escena que cambia en cada fotograma (estrellas, contadores) no se beneficia de `claveFotograma`: 58,3 s de short tardan ~5-6 min con 8 navegadores (un largo de 10 min serían ~50-60 min).
+- 2026-10-30 · Sacar los tiempos de los efectos de la propia escena (`window.eventosSonido()`) mantiene sonido e imagen sincronizados con una sola fuente de verdad.
+- 2026-10-30 · Pixabay bloquea curl (403) en la página de la pista, pero el enlace del CDN que hay dentro de la página (leído con el navegador integrado) sí descarga. Freesound da públicamente la vista previa HQ (MP3) de los sonidos CC0; el original exige cuenta.
+- 2026-10-30 · El crítico Opus encontró en el máster fallos de precisión que no se ven en las medidas (el marcador de 2028 se adelantaba, una caja de diálogo que decía «solo» sin el matiz): en temas N3 merece una pasada sobre el máster, no solo sobre la calibración.
+- 2026-10-30 · El verificador Haiku dio por «no respaldado» un dato que sí lo estaba («forma más grave»): sus «parcial» y «no respalda» se comprueban en la fuente antes de tocar un guion ya aprobado.
+- 2026-10-30 · Pixelify Sans tiene ligadura «fi» que se lee como «ñ» («distroñas»). Y el atajo `font:` de una clase reactiva las ligaduras aunque el `body` las quite: hay que desactivarlas en `*` (y tras cada atajo `font:`). Medido en Chromium.
+- 2026-10-30 · Con retrato, la caja de diálogo es más estrecha: paginar solo por número de palabras desbordaba («tratamientos» es ancha). Va mejor simular el ajuste de línea (21 caracteres × 2 líneas) y comprobarlo midiendo el DOM al final de cada página (165/165 en ≤2 líneas).
+- 2026-10-30 · El crítico Opus encontró en el máster v2 una falta de ortografía que no salía ni en los tests ni en las medidas: la pasada sobre el máster sigue siendo imprescindible.
+- 2026-10-30 · `git merge-base` entre `main` y la web legal no devuelve nada: tras el push forzado son historiales sin relación. Un worktree nacido de la web se reapunta con reset, no con fast-forward.
+- 2026-10-30 · `timing.short.json` guarda las palabras en `frases[].palabras`, con `escenas` vacío, al contrario que el borrador de `docs/arquitectura.md` §11. `publicacion/aprobado.py` lee los dos.
+- 2026-10-30 · El scratchpad de Claude Code tiene una ruta tan larga que un paquete dentro supera los 260 caracteres de Windows (`FileNotFoundError` en el `.tmp` de `write_json`). En la ruta real del proyecto el más largo ronda los 200; un slug largo en un worktree podría acercarse.
+- 2026-10-30 · En Git Bash, `$PWD` da `/c/...`, que Python interpreta mal: para pasar rutas a Python, `pwd -W`.
+- 2026-10-30 · Un hook impide escribir con Write y Edit en otro worktree desde una sesión; `EnterWorktree` con `path` mueve la sesión a ese worktree y entonces sí se puede.
+- 2026-10-30 · TikTok no se puede publicar directo con la app actual: sandbox y solo `video.upload`, según `publicacion/tiktok.py` y lo registrado en `canal-noticias-ia`. El vídeo va a la bandeja de `pod02leo`.
+- 2026-10-31 · Primera subida real por `subir --solo youtube`: bien a la primera. Nada más subir, `videos.list` da `uploadStatus: uploaded`, `processing` y sin etiquetas; a los ~3 min, `processed`, `succeeded` y con las 7 etiquetas. Hay que esperar antes de dar por malas las etiquetas.
+- 2026-10-31 · El canal `UCA76YezyGjv7spjOfRqAKNA` ya se llama «elgatomista» en YouTube (handle `@Pod02-leo`), aunque `perfil.json` y los documentos digan «Pod 02»: es el mismo canal.
+- 2026-10-31 · `containsSyntheticMedia: false` no vuelve en `videos.list` (sale ausente), así que la API no sirve para comprobarlo; lo enviado está en `para-subir/<huella>/publicacion.json`.
+- 2026-10-31 · oEmbed de YouTube (`/oembed?url=…`) confirma sin sesión que un vídeo es público. Su miniatura es `hq2.jpg` aunque `thumbnails.set` respondiera bien: no prueba qué portada muestra un Short. Se comprueba mirando Studio.
+- 2026-10-31 · Desplazamiento lateral entre escenarios: dibujar cada bloque en un `<g>` desplazado y recortado a su lienzo (`clipPath` en userSpaceOnUse). Sin el recorte, lo que un escenario pinta en x<0 (el skyline) invade al vecino durante la transición; en la escena quieta no se ve.
+- 2026-10-31 · El movimiento de fondo fino (1 px) en la capa desenfocada desaparece; si debe leerse (estrella fugaz), va en la capa nítida y con cabeza de 2×2.

@@ -19,3 +19,6 @@ privacidad y las condiciones de uso de la app de publicación (TikTok, Instagram
   páginas de privacidad y condiciones antes de la publicación por API.
 - Con GitHub Pages activo, `main` sin `index.html` publica el README como web: desactivar Pages
   o rehacer las páginas legales.
+
+## Actualización 2026-10-29
+- Pages ya daba 404 antes del push forzado. La web legal se recupera en la rama `gh-pages`: ver ADR 0003.
