@@ -1,0 +1,16 @@
+{
+  "perfil": "es",
+  "formatos": {
+    "short": {
+      "archivo": "salida/short-v3.mp4",
+      "titulo": "Una persona, once laboratorios y una IA: por qué Anthropic ha comprado Mithril",
+      "descripcion": "Cody Tranbarger montó Mithril Medicine, una biotecnológica de una sola persona, para buscar tratamientos contra dos distrofias musculares raras, con Claude organizando contratos, logística y experimentos con once laboratorios externos. En menos de 18 meses llegó a resultados prometedores en ratones, y el 27 de octubre de 2026 Anthropic anunció la compra.\nLos matices importan: contó con consultores a tiempo parcial, la investigación está en fase temprana, el informe técnico no ha pasado revisión por pares y los ensayos en humanos, si todo va bien, empezarían como pronto a finales de 2028.\n\nFuentes:\n- Anthropic, «Early progress on accelerating drug development with Claude» (27-10-2026): https://www.anthropic.com/research/early-progress-drug-development\n- The Next Web (28-10-2026): https://thenextweb.com/news/anthropic-mithril-acquisition-claude-drug-development\n- MedlinePlus, distrofia muscular ligada a LAMA2: https://medlineplus.gov/genetics/condition/lama2-related-muscular-dystrophy/\n- Cody Tranbarger (@Prof_Oak_) en X (27-10-2026): https://x.com/Prof_Oak_/status/2115185849424048564\n\nMúsica: «Morning Coffee» de Lesiakower (Pixabay Content License).\nEfectos de sonido: Freesound, CC0 (SomeGuy22, OwlStorm, SamsterBirdies, n_audioman, connersaw8, Greenhourglass).\nVoz sintética generada con Gemini TTS (Google).\n\nEsto es divulgación de una noticia, no consejo médico.",
+      "tags": ["IA", "Medicina", "Anthropic", "Claude", "Ciencia", "Biotecnología", "Shorts"],
+      "categoria": "28",
+      "visibilidad": "public",
+      "portada_segundo": 3.5,
+      "made_for_kids": false,
+      "contains_synthetic_media": false
+    }
+  }
+}

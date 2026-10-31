@@ -1,0 +1,23 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>mithril-ia-medicina · short v2 (estilo v2, MISTA)</title>
+<!-- Render: node motor/render.mjs --escena <este html> --ancho 270 --alto 480 --duracion 58.3
+            --incluir motor/estilo --salida proyectos/mithril-ia-medicina/render/short-v2/video.mp4 -->
+<link rel="stylesheet" href="../../../../motor/estilo/estilo.css">
+<style>.oculto { display: none !important; }</style>
+<body class="short">
+  <svg class="arte desenfoque" id="fondo"></svg>
+  <svg class="arte" id="medio"></svg>
+  <svg class="arte bloom" id="brillo"></svg>
+  <svg class="arte" id="frente"></svg>
+  <div class="capa vineta"></div>
+  <div id="textos"></div>
+  <div class="dialogo con-retrato oculto" id="dialogo"><svg class="retrato" id="retrato"></svg><span class="nombre">Mista</span><span id="frase"></span></div>
+
+  <script src="../../../../motor/estilo/pixel.js"></script>
+  <script src="../../../../motor/estilo/props.js"></script>
+  <script src="../../../../motor/estilo/escenarios.js"></script>
+  <script src="../../../../motor/estilo/gato.js"></script>
+  <script src="timing.js"></script>
+  <script src="short.js"></script>
+</body>

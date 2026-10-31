@@ -1,0 +1,25 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>mithril-ia-medicina · short (estilo v1)</title>
+<!-- Render: node motor/render.mjs --escena <este html> --ancho 270 --alto 480 --duracion 58.3
+            --incluir motor/estilo --salida proyectos/mithril-ia-medicina/render/short/short.mp4 -->
+<link rel="stylesheet" href="../../../../motor/estilo/estilo.css">
+<style>
+  .capa-bloque { position: absolute; inset: 0; }
+  .oculto { display: none !important; }
+</style>
+<body class="short violeta">
+  <div class="capa-bloque" id="capa-fondo">
+    <svg class="arte desenfoque" id="fondo"></svg>
+  </div>
+  <svg class="arte bloom" id="brillo"></svg>
+  <svg class="arte" id="frente"></svg>
+  <div class="capa vineta"></div>
+  <div id="textos"></div>
+  <div class="dialogo oculto" id="dialogo"></div>
+  <svg class="arte" id="destello"></svg>
+
+  <script src="../../../../motor/estilo/pixel.js"></script>
+  <script src="timing.js"></script>
+  <script src="short.js"></script>
+</body>

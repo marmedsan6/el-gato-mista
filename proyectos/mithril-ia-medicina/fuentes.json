@@ -1,0 +1,148 @@
+{
+  "fuentes": [
+    {
+      "id": "f1",
+      "url": "https://www.anthropic.com/research/early-progress-drug-development",
+      "autor": "Anthropic",
+      "fecha": "2026-10-27",
+      "consultada": "2026-10-30",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "Anthropic ha comprado Mithril Medicine, empresa de una persona que desarrolla tratamientos para dos formas raras de distrofia muscular; su fundador, Cody Tranbarger, usó Claude para organizar contratos, logística y experimentos con 11 laboratorios externos; de la idea a resultados prometedores en ratones en menos de 18 meses; investigación en fase temprana y sobre todo preclínica; ensayos en humanos, como pronto, a finales de 2028.",
+      "uso": "short: compra, una persona, 11 laboratorios, 18 meses, fase temprana, 2028",
+      "tramo": ""
+    },
+    {
+      "id": "f2",
+      "url": "https://thenextweb.com/news/anthropic-mithril-acquisition-claude-drug-development",
+      "autor": "Ana Maria Constantin (The Next Web)",
+      "fecha": "2026-10-28",
+      "consultada": "2026-10-30",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "El informe técnico no ha pasado revisión por pares; Anthropic no ha revelado los términos de la compra.",
+      "uso": "short: matiz de la revisión por pares",
+      "tramo": ""
+    },
+    {
+      "id": "f3",
+      "url": "https://medlineplus.gov/genetics/condition/lama2-related-muscular-dystrophy/",
+      "autor": "MedlinePlus (Biblioteca Nacional de Medicina de EE. UU.)",
+      "fecha": "2018-10-01",
+      "consultada": "2026-10-30",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "La distrofia muscular ligada a LAMA2 va de una forma grave y temprana (al nacer o en los primeros meses de vida) a otra más leve y tardía; debilita y atrofia los músculos.",
+      "uso": "short: qué es la enfermedad",
+      "tramo": ""
+    },
+    {
+      "id": "f4",
+      "url": "https://x.com/Prof_Oak_/status/2115185849424048564",
+      "autor": "Cody Tranbarger (@Prof_Oak_)",
+      "fecha": "2026-10-27",
+      "consultada": "2026-10-30",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "Tranbarger revela que es «Professor Oak» y que en su forma inicial Mithril fue un solo operador con Claude y consultores a tiempo parcial.",
+      "uso": "short: no lo hizo del todo solo",
+      "tramo": ""
+    },
+    {
+      "id": "f5",
+      "url": "https://x.com/ErickSky/status/2115439892540821925",
+      "autor": "Erick (@ErickSky)",
+      "fecha": "2026-10-28",
+      "consultada": "2026-10-30",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "Origen del tema: resume la compra de Mithril por Anthropic y el uso de Claude con 11 laboratorios externos.",
+      "uso": "origen del tema (no se cita en pantalla)",
+      "tramo": ""
+    },
+    {
+      "id": "m1",
+      "url": "https://pixabay.com/music/beats-morning-coffee-396750/",
+      "autor": "Lesiakower (Pixabay)",
+      "fecha": "",
+      "consultada": "2026-10-30",
+      "tipo": "material",
+      "licencia": "Pixabay Content License",
+      "cita": "Morning Coffee, pista lofi chiptune de 2:33; el autor declara que no usa IA; la página no menciona Content ID.",
+      "uso": "música de fondo de todo el short (-14 dB, sidechain con la voz)",
+      "tramo": "0:00-0:58,3 de la pista (recortada, fundido de salida de 1,5 s)"
+    },
+    {
+      "id": "m2",
+      "url": "https://freesound.org/people/SomeGuy22/sounds/431328/",
+      "autor": "SomeGuy22 (Freesound)",
+      "fecha": "",
+      "consultada": "2026-10-30",
+      "tipo": "material",
+      "licencia": "Creative Commons 0",
+      "cita": "8-Bit Text Blip - High Pitch (vista previa HQ en MP3).",
+      "uso": "efecto de aparición (12 veces)",
+      "tramo": "completo, 0,115 s"
+    },
+    {
+      "id": "m3",
+      "url": "https://freesound.org/people/OwlStorm/sounds/404778/",
+      "autor": "OwlStorm (Freesound)",
+      "fecha": "",
+      "consultada": "2026-10-30",
+      "tipo": "material",
+      "licencia": "Creative Commons 0",
+      "cita": "Retro video game sfx - Collect 4 (vista previa HQ en MP3).",
+      "uso": "efecto de acierto (4 veces)",
+      "tramo": "completo, 0,155 s"
+    },
+    {
+      "id": "m4",
+      "url": "https://freesound.org/people/SamsterBirdies/sounds/363920/",
+      "autor": "SamsterBirdies (Freesound)",
+      "fecha": "",
+      "consultada": "2026-10-30",
+      "tipo": "material",
+      "licencia": "Creative Commons 0",
+      "cita": "8-bit Error (vista previa HQ en MP3).",
+      "uso": "efecto de error (1 vez)",
+      "tramo": "completo, 0,397 s"
+    },
+    {
+      "id": "m5",
+      "url": "https://freesound.org/people/n_audioman/sounds/275897/",
+      "autor": "n_audioman (Freesound)",
+      "fecha": "",
+      "consultada": "2026-10-30",
+      "tipo": "material",
+      "licencia": "Creative Commons 0",
+      "cita": "Blip.wav (vista previa HQ en MP3).",
+      "uso": "efecto de tick (22 veces)",
+      "tramo": "completo, 0,100 s"
+    },
+    {
+      "id": "m6",
+      "url": "https://freesound.org/people/connersaw8/sounds/125693/",
+      "autor": "connersaw8 (Freesound)",
+      "fecha": "",
+      "consultada": "2026-10-30",
+      "tipo": "material",
+      "licencia": "Creative Commons 0",
+      "cita": "Square Sweep Up.wav (vista previa HQ en MP3).",
+      "uso": "efecto de destello (3 veces)",
+      "tramo": "completo, 0,476 s"
+    },
+    {
+      "id": "m7",
+      "url": "https://freesound.org/people/Greenhourglass/sounds/159379/",
+      "autor": "Greenhourglass (Freesound)",
+      "fecha": "",
+      "consultada": "2026-10-30",
+      "tipo": "material",
+      "licencia": "Creative Commons 0",
+      "cita": "blip1.wav (vista previa HQ en MP3).",
+      "uso": "blip de selección en cada palabra clave (short v2)",
+      "tramo": "completo, 0,421 s"
+    }
+  ]
+}
