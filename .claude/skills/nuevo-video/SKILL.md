@@ -43,5 +43,12 @@ Duración del short: la decides tú al escribir su guion. Que la explicación qu
 el tope es 120 s y no hay que apretar hacia los 60 s. Si un punto no cabe bien explicado, alarga o quítalo entero,
 pero no lo dejes a medias. Estima con caracteres/13 y anota la duración y el porqué en el comentario del `## Short`.
 
+Cierre del short: si el vídeo tiene largo, la última frase de MISTA remite a él, adaptada al tema y con la misma idea
+(«¿Te interesa saber más? Tengo un vídeo largo en YouTube que lo explica entero»), en voz y en la caja de diálogo
+(Mario, 2026-11-02). Sin largo, el short termina con el dato.
+
+Enlaces: los pone la subida, no se escriben a mano. Cada short sale en YouTube con «Vídeo completo» y el largo recibe
+después los enlaces de sus shorts; Instagram y TikTok llevan el enlace al largo en YouTube (skill `publicar`).
+
 Las dudas se resuelven antes de la orden de subir: esa orden no debe encontrarse con ninguna pregunta pendiente.
 Al cerrar cada vuelta, actualiza `memoria/`.
