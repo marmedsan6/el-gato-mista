@@ -129,3 +129,7 @@
 - 2026-11-02 · alien-isolation-ia: largo y dos shorts publicados con la orden de Mario («…procedemos a subir los vídeos»), tras comprobar que los dos commits pendientes ya estaban en origin/main.
 - 2026-11-02 · alien-isolation-ia: los dos shorts (KSFhhGrM3os, dboKMvcuSM4) llevan el largo (w8Z7xCj_8tc) como «vídeo relacionado» en YouTube — Mario («enlacemos los vídeos largos con los cortos»). Puesto en Studio desde su Chrome.
 - 2026-11-02 · alien-isolation-ia: la descripción del largo enlaza a los dos shorts (bloque «Shorts de este vídeo», añadido en Studio) — Mario.
+
+## Descripciones mínimas (2026-11-02)
+- 2026-11-02 · **A partir de ahora**, la descripción de los vídeos (YouTube e Instagram) lleva solo el resumen del vídeo y los enlaces entre el largo y sus shorts: ni fuentes, ni música, ni efectos, ni la frase de voz sintética — Mario («que no tenga ni la fuente ni la música… solamente eso. Y el enlace…», «Quitarlo todo», «A partir de ahora»). Las fuentes siguen en `fuentes.json` y en pantalla, y el material de terceros, acreditado en pantalla (docs/criterios.md: «crédito en pantalla o descripción»). Sustituye a «fuente del dato… también en la descripción» (docs/estilo.md) y a «la descripción dice que la voz es sintética».
+- 2026-11-02 · Aplicado ya a los tres vídeos de alien-isolation-ia en YouTube Studio y en los dos reels de Instagram. En el short B, de paso, «usará la tormenta para ocultarse» pasa a «usará el clima para ocultar sus movimientos», fiel a la fuente.

@@ -91,7 +91,7 @@ Todas OFL y locales (`marca/fuentes/`), nunca de CDN ni del sistema.
 - **Largo:** sin subtítulos en pantalla; SRT aparte desde `timing.largo.json`.
 - Titular arriba a la izquierda, con una palabra clave en naranja. Nada de título centrado sobre degradado.
 - Etiquetas y contadores **junto a su objeto**, con línea guía si hace falta; **nunca en las esquinas**.
-- Fuente del dato pequeña bajo la cifra («FUENTE: [fN]») y también en la descripción.
+- Fuente del dato pequeña bajo la cifra («FUENTE: [fN]»). En la descripción, no: desde el 2026-11-02 solo lleva el resumen y los enlaces entre largo y shorts (Mario).
 - Las ideas se cuentan con **interfaz de videojuego**: barras de progreso, menús con cursor ▶, contadores, checks y aspas, insignias.
 
 ## Sonido (pendiente de los pilotos de voz y música)

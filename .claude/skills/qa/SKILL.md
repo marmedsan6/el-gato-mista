@@ -27,7 +27,7 @@ Umbrales: `docs/criterios.md` §4. Necesita FFmpeg en el PATH.
    ```
 7. Si hay bloqueantes, no se pasa a la PUERTA 2: se arregla y se repite esta skill.
 8. Sin bloqueantes: `sha256sum` del máster y nuevo bloque en `reviews/puerta-2.md` con la decisión `pendiente` (formato en criterios.md §3).
-9. Prepara `publicacion.json` (fichero, título, descripción con fuentes y créditos de `fuentes.json`, etiquetas y portada mirando el
+9. Prepara `publicacion.json` (fichero, título, descripción mínima: resumen del vídeo y enlaces entre el largo y sus shorts, sin fuentes, música ni créditos (Mario, 2026-11-02), etiquetas y portada mirando el
    fotograma) y pregunta a Mario lo que falte: `contains_synthetic_media` y cualquier duda del texto. Así su orden de subir no se
    encuentra con preguntas.
 10. Enséñale el máster. Si pide cambios, se vuelve a Escenas (`reviews/iter-NN.md`); si da la orden de subir, skill `publicar`.
