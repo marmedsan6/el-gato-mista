@@ -127,3 +127,5 @@
 - 2026-11-02 · alien-isolation-ia: sin declarar contenido sintético, títulos aprobados tal cual y se adapta `publicacion/` para subir dos shorts (short-a y short-b) — Mario.
 - 2026-11-02 · alien-isolation-ia: efectos pixel a -24 dB (antes -18) en los tres formatos, porque se oían demasiado — Mario. La flexibilidad de duración del short (commit 2b94e06) ya estaba aplicada: los shorts duran lo que pide su explicación.
 - 2026-11-02 · alien-isolation-ia: largo y dos shorts publicados con la orden de Mario («…procedemos a subir los vídeos»), tras comprobar que los dos commits pendientes ya estaban en origin/main.
+- 2026-11-02 · alien-isolation-ia: los dos shorts (KSFhhGrM3os, dboKMvcuSM4) llevan el largo (w8Z7xCj_8tc) como «vídeo relacionado» en YouTube — Mario («enlacemos los vídeos largos con los cortos»). Puesto en Studio desde su Chrome.
+- 2026-11-02 · alien-isolation-ia: la descripción del largo enlaza a los dos shorts (bloque «Shorts de este vídeo», añadido en Studio) — Mario.

@@ -1,4 +1,6 @@
-# Descripción · alien-isolation-ia (borrador para la PUERTA 2)
+# Descripción · alien-isolation-ia
+
+El bloque «Shorts de este vídeo» del largo se añadió en Studio después de publicar (2026-11-02): no está en el `publicacion.json` con el que se subió.
 
 Créditos comunes (van al final de las tres descripciones):
 
@@ -16,6 +18,10 @@ El alien de Alien: Isolation tiene dos cerebros (y el de Isolation 2 será más 
 
 ### Descripción
 El juego siempre sabe dónde estás. El alien, no. Desmontamos la IA del xenomorfo de Alien: Isolation: el director que lo empuja hacia tu zona sin decirle dónde estás, sus oídos y sus cuatro conos de visión, el medidor de amenaza que lo manda a los conductos y el árbol de comportamiento que «aprende» a medias. Y repasamos lo que Creative Assembly ha contado del alien de Alien: Isolation 2, con una parte de especulación que va marcada como tal. Revisado el 02-11-2026.
+
+Shorts de este vídeo:
+- El alien tiene dos cerebros: https://www.youtube.com/shorts/KSFhhGrM3os
+- El alien de Alien: Isolation 2: https://www.youtube.com/shorts/dboKMvcuSM4
 
 Fuentes:
 - Tommy Thompson (AI and Games), «The Perfect Organism: The AI of Alien: Isolation», Game Developer (2017): https://www.gamedeveloper.com/design/the-perfect-organism-the-ai-of-alien-isolation
