@@ -3,7 +3,7 @@
 ## Tomadas antes de empezar (2026-10-29)
 - 2026-10-29 · Contenido: explicativos y noticias, solo en español, voz sintética. Sin metraje propio ni edición de crudos.
 - 2026-10-29 · Temas: videojuegos, curiosidades, noticias, IA y series, con enganche narrativo.
-- 2026-10-29 · Formatos: largo 16:9 de 8-10 min y short 9:16 de ~60 s (máx. 120 s); mismo guion y estilo, compuestos por separado — nunca se recorta uno del otro.
+- 2026-10-29 · Formatos: largo 16:9 de 8-10 min y short 9:16 de ~60 s (máx. 120 s); mismo guion y estilo, compuestos por separado — nunca se recorta uno del otro. La duración del short cambió el 2026-11-02: ver «Duración del short».
 - 2026-10-29 · Plataformas: YouTube (largo y Shorts); Instagram y TikTok, solo shorts.
 - 2026-10-29 · Canal: «elgatomista». Línea visual de partida: pixel art — se calibra con referencias.
 - 2026-10-29 · Imágenes por código (HTML/SVG/GSAP, formas 2D, etiquetas, diagramas, paleta fija). Vídeo por IA y Blender, solo opcionales más adelante.
@@ -99,3 +99,6 @@
 - 2026-10-31 · Medidor de la voz de MISTA bajo los paneles del largo: da movimiento continuo aunque el panel tape el fondo — decisión del agente, la revisa Mario.
 - 2026-10-31 · phonic-1-voz: largo y short publicados con la orden de Mario («Súbelos»), sin pedir cambios sobre la v1.
 - 2026-10-31 · Música a -13 dB en este vídeo (antes -14): con -14 quedaba un silencio de 0,31 s tras el gancho del short — decisión del agente, 1 dB.
+
+## Duración del short (2026-11-02)
+- 2026-11-02 · El short ya no apunta a ~60 s: dura lo que necesite su explicación para quedar clara y sin ambigüedad, con tope de 120 s. Lo decide quien escribe el guion del short, mientras lo escribe, y anota en el `## Short` la duración estimada (caracteres/13) y el porqué — Mario («a veces, al tener duración pequeña, las explicaciones son un poco ambiguas o no se explica del todo bien»). Sustituye a «~60 s» de los formatos; el máximo de 120 s se mantiene.

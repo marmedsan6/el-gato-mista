@@ -27,7 +27,7 @@ en `memoria/decisiones.md` o en el estilo. Si no tienes ninguna, sigue sin pregu
 | Paso | Quién y con qué | Sale | Dudas típicas antes de generar |
 |---|---|---|---|
 | Fuentes y hechos | Opus; subagente `verificador-enlaces` | `fuentes.json`, `verificacion.md`, `reviews/enlaces.md` | Qué fuente manda si se contradicen |
-| Guion | Opus | `guion.md`, cada frase con su `[fN]` | Enfoque, gancho, qué matices cuentan, tono |
+| Guion | Opus | `guion.md`, cada frase con su `[fN]`; el short, con su duración estimada | Enfoque, gancho, qué matices cuentan, tono |
 | **PUERTA 1** | Mario | `reviews/puerta-1.md` con la SHA-256 del guion | Se le pide aprobar o cambiar |
 | Storyboard y estilo | Opus; skill `estilo` | `shotlist.md`, `style_guide.md` | Escenarios, objetos, si se aparta del estilo |
 | Voz | `motor/voz/generar.mjs` | audio en `.runtime/voz/<slug>/` | Ritmo, pronunciación de nombres; gasto, si lo hay |
@@ -38,6 +38,10 @@ en `memoria/decisiones.md` o en el estilo. Si no tienes ninguna, sigue sin pregu
 | QA | skill `qa` | `reviews/qa-vN.md`, `critica-vN-NN.md`, `publicacion.json` | Título, portada, contenido sintético, frases de la descripción |
 | **PUERTA 2** | Mario ve el máster: pide cambios o da la orden de subir | | Si pide cambios, se vuelve a Escenas y se anota en `reviews/iter-NN.md` |
 | Exportar y publicar | skill `publicar` | URLs en `memoria/videos.md` | Ninguna: su orden se ejecuta sin más preguntas |
+
+Duración del short: la decides tú al escribir su guion. Que la explicación quede clara y sin ambigüedad manda;
+el tope es 120 s y no hay que apretar hacia los 60 s. Si un punto no cabe bien explicado, alarga o quítalo entero,
+pero no lo dejes a medias. Estima con caracteres/13 y anota la duración y el porqué en el comentario del `## Short`.
 
 Las dudas se resuelven antes de la orden de subir: esa orden no debe encontrarse con ninguna pregunta pendiente.
 Al cerrar cada vuelta, actualiza `memoria/`.

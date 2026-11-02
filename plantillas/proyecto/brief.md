@@ -5,7 +5,7 @@
 - Ángulo (qué pregunta responde):
 - Gancho de los primeros 5 s:
 - Público:
-- Duración objetivo: largo __ min · short __ s
+- Duración objetivo: largo __ min · short: la decide su guion (máx. 120 s)
 - Hechos clave a verificar:
 - Material de terceros previsto (si hay):
 - Fecha límite (si es noticia):
