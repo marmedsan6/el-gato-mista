@@ -1,0 +1,152 @@
+El juego siempre sabe dónde estás.
+El alien, no.
+Y esa diferencia, que parece una tontería, es la razón por la que Éilien Aisoléishon sigue dando miedo.
+Yo me escondí en una taquilla con la respiración contenida.
+Pasó de largo.
+Volví a esconderme en otra.
+Y esa vez, abrió la puerta.
+¿Me había visto? ¿Hacía trampas? ¿O había aprendido?
+Hoy desmontamos el cerebro del xenomorfo.
+Bueno, los cerebros, porque tiene dos.
+Y al final vamos con Éilien Aisoléishon dos, porque sus creadores dicen que el nuevo será todavía más inteligente.
+La idea del primer juego es sencilla y cruel: una estación espacial, una persona y un único alien al que no puedes matar.
+No hay oleadas de enemigos.
+Hay uno.
+Durante una campaña de doce a dieciocho horas.
+Eso es un problema enorme para quien lo diseña.
+Si el alien te encuentra siempre, es injusto.
+Si no te encuentra nunca, es un pasillo vacío.
+Tiene que estar cerca.
+Casi siempre.
+Pero no encima.
+La solución de Criéitiv Asémbli fue partir al monstruo en dos.
+El primer cerebro es el director.
+No tiene cuerpo.
+Vigila la partida desde arriba y siempre sabe dónde estás.
+El segundo es el alien de verdad: el que camina, olfatea los pasillos y te mata.
+Ese no sabe dónde estás.
+Tiene que encontrarte él solo.
+El director no le dice «está en la taquilla tres».
+Solo, de vez en cuando, lo empuja hacia tu zona.
+Una pista aproximada.
+Es como si alguien le susurrara: «por aquí hace calor».
+Y a partir de ahí, que busque.
+Por eso el alien aparece tan a menudo cerca de ti sin que haga trampas.
+El que sabe dónde estás es el otro.
+El alien caza con los sentidos.
+Y el primero es el oído.
+Oye tus pasos, y más si corres.
+Oye los disparos.
+Y oye el detector de movimiento.
+Ese pitido que te salva la vida también te delata, si lo tienes a menos de metro y medio.
+Un ruido fuerte, como un disparo, lo hace ir a mirar antes que unos pasos.
+O sea, que cada vez que sacaba el revólver por los nervios, le estaba mandando una invitación.
+Gracias, yo.
+Luego está la vista.
+Y aquí el juego es más fino de lo que parece.
+Cada personaje tiene cuatro conos de visión: uno normal, uno enfocado, uno periférico y uno cercano.
+Verte no es un sí o un no.
+Cuanto más tiempo pasas dentro de uno de esos conos, más fuerte es la señal.
+Hasta que se llena.
+Por eso a veces se gira hacia ti, duda, y sigue andando.
+No te había visto del todo.
+Y un detalle que me quitó el sueño: tiene rayos de detección cortos en la espalda.
+Vamos, que tiene ojos en la nuca.
+Si intentas pegarte a él por detrás, te pilla.
+¿Y qué hace cuando te ha perdido la pista?
+Busca.
+El código lo llama acecho.
+Da vueltas por la zona, y con cada pasada estrecha el círculo.
+Así que el escondite que era seguro hace un minuto, deja de serlo.
+No porque te haya visto, sino porque está peinando la habitación.
+Ahora viene lo que más me fascina.
+El director lleva un medidor de amenaza.
+Sube cuando el alien está cerca de ti, cuando puedes verlo y cuando aparece en el detector, a un paso.
+Ojo: no sube porque te ataque.
+Sube solo por tenerlo cerca.
+Y cuando ese medidor llega arriba, el director le dice al alien: vete.
+El alien se mete en los conductos de ventilación.
+El código llama a eso estar entre bastidores.
+Pero no se va lejos.
+A menudo se mueve por los conductos por delante de ti, hacia donde es probable que vayas.
+Y el medidor tiene más ajustes: tiempos de espera, cuánto tarda en llenarse y cuántas veces puede rondarte antes de retirarse.
+Es decir: el juego mide tu miedo para darte un respiro.
+Y lo usa para que el siguiente susto llegue en el peor momento.
+¿Y lo de la taquilla? ¿Aprende o no aprende?
+El alien funciona con un árbol de comportamiento: un mapa de decisiones con más de cien nodos.
+«Si oigo un ruido, voy a mirar. Si veo algo, me acerco. Si me queman, huyo.»
+Así, pero muchísimo más grande.
+Lo clave es que algunas ramas empiezan bloqueadas.
+Mirar dentro de las taquillas, o meterse en los conductos pequeños, solo se activa después de que te le hayas escapado varias veces.
+Y además recuerda si ya se ha encontrado con el lanzallamas.
+A partir de ahí cambia: ataca y se retira, o te prepara emboscadas desde los conductos.
+Hay una regla bonita: nunca aprende de tus muertes.
+Solo de tus escapadas.
+Así no se vuelve injusto.
+Pero hay letra pequeña.
+En la versión final, algunas de esas ramas también se desbloquean en puntos fijos de la historia.
+O sea, que aprende... a medias.
+Parte es lo que haces tú.
+Parte estaba escrito.
+Y aun así, funciona.
+Porque desde dentro de la taquilla, no notas la diferencia.
+Queda la gran sospecha: que el alien se teletransporta para pillarte.
+Andi Bréi, de Criéitiv Asémbli, dijo que eso es categóricamente falso.
+En toda la campaña, el alien se teletransporta dos veces.
+Dos.
+Y es para colocarlo en una escena de vídeo, no para alcanzarte.
+Lo que parece trampa es el director empujándolo hacia ti, unos oídos muy finos y un árbol que se va abriendo.
+Ninguna pieza es mágica.
+Juntas, parecen un depredador que piensa.
+Y ahora, el que viene.
+En junio, Criéitiv Asémbli y Sega anunciaron Éilien Aisoléishon dos.
+Su director creativo, Al Jóup, lo resumió así: el asesino, más listo.
+El entorno, más duro.
+Y menos opciones de sobrevivir.
+Será en una colonia de un planeta azotado por tormentas, en un puesto de Wéilan Yutani llamado Kurosaki Stéishon.
+Llegará a Pléisteishon cinco, Équisbox Series, Nintendo Suich dos y pecé.
+Fecha, todavía ninguna.
+A finales de octubre publicaron un vídeo de preguntas a los desarrolladores.
+Y ahí soltaron varias cosas.
+Primero, que ahora hay exteriores.
+Espacios que calculan unas diez veces más grandes que los del primero.
+Y tuvieron que hacer que el alien funcionara ahí.
+Ahora será todavía más inteligente.
+Dicen que tiene comportamientos nuevos, que reaccionará mejor al jugador y a todos los objetos y herramientas nuevos.
+Que fuera no dejará de cazarte.
+Al contrario: usará que estás expuesto para cazarte con más agresividad.
+Y usará el clima para ocultar sus movimientos.
+Que tendrá cosas nuevas que aprender respecto al primero.
+Y que cambiará de comportamiento en cada encuentro, para que no te sirvan los trucos de la vez anterior.
+También dicen que la tormenta afecta a tus sentidos y a los suyos.
+Con viento y granizo no oyes sus pasos igual de claro.
+Y vuelve una cosa que da muy mal rollo: si lo activas, el alien te oye por el micrófono.
+Ahora también en pecé.
+Si haces ruido, o si ladra tu perro de fondo, eso se convierte en un ruido dentro del juego.
+Y cuanto más fuerte, desde más lejos lo oye.
+Aquí cambio de modo.
+Lo que viene ahora no lo ha dicho el estudio.
+Es lo que yo deduzco de lo que sí han dicho y de cómo funcionaba el primero.
+Primera idea.
+En el primero, aprender era desbloquear ramas del árbol.
+Si ahora tiene cosas nuevas que aprender, lo más probable es que ese árbol tenga más ramas cerradas esperando a que hagas algo.
+Más taquillas, por así decirlo.
+Nadie ha hablado de aprendizaje automático, y no lo voy a dar por hecho.
+Segunda idea.
+En el primero ya recordaba si le habías quemado.
+Si ahora cambia en cada encuentro, sospecho que recordará más cosas así: qué truco usaste, qué aparato sacaste, por dónde huiste.
+Tercera idea, la que más miedo me da.
+En el primero, cuando el medidor se llenaba, el alien se escondía en los conductos.
+Pero fuera no hay conductos.
+Y el estudio dice que usará el clima para ocultarse.
+Así que, a lo mejor, la tormenta es su nuevo conducto.
+Y cuarta.
+En un espacio diez veces más grande, la pista del director tiene que ser más gorda o el alien te perdería.
+Lo que no sé es si eso lo hará más justo... o mucho más cruel.
+Entonces, ¿es más listo el alien?
+En el primero, lo que parecía inteligencia era un truco muy bien hecho: un cerebro que sabe y no lo dice, y otro que busca con lo que oye y lo que ve.
+En el segundo, nos prometen que ese truco aprende más, se adapta más y caza también fuera.
+Hasta que salga, solo tenemos sus palabras.
+Pero yo ya tengo una cosa clara.
+El juego siempre sabe dónde estás.
+Y esta vez, a lo mejor, el alien también te oye.
