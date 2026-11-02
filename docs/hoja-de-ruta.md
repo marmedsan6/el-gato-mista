@@ -136,7 +136,7 @@ Este fichero es la lista viva de lo pendiente: se tacha lo hecho con fecha y evi
 | 7 | **Subagentes** en `.claude/agents/` con `model: haiku`: `extractor-fotogramas`, `qa-audio`, `verificador-enlaces`; `critico-visual` con modelo fuerte. Skills `nuevo-video` y `qa`. Hook de verificación al cerrar el turno cuando `motor/` tenga código | No | 2 (el extractor conviene antes de C1) |
 | 8 | **Proceso editorial**: fuentes de temas por categoría, cadencia semanal, nivel de verificación, plantilla de verificación de hechos | Decisiones | 9 |
 | 9 | **Primer vídeo de punta a punta** (largo + short) con PUERTA 1 y PUERTA 2 | Aprobaciones | — |
-| 10 | Más adelante: miniaturas, mascota o logo | Decisiones | — |
+| 10 | Más adelante: miniaturas y mascota. Logo hecho el 2026-11-02 (`marca/logo/`) | Decisiones | — |
 
 Paralelizable: 2 (C0-C4) y 3 no dependen entre sí; 5, 6 y 8 tampoco. Lo que siempre espera a
 Mario: instalaciones, gasto, elección de referencias, feedback de calibración y puertas.

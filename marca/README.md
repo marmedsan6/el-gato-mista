@@ -6,4 +6,4 @@
 Llegarán con la calibración (`docs/calibracion.md`, paso C7):
 - `tokens.json`: paleta, fuentes, tamaños por formato, duraciones, curvas, ritmo y silencios.
 - `fuentes/`: tipografías de licencia libre, con su fichero de licencia al lado.
-- Logotipo o mascota, si se decide.
+- `logo/`: logo de las redes (MISTA del sprite de los vídeos); `python marca/logo/generar.py` lo regenera en `logo/salida/`.

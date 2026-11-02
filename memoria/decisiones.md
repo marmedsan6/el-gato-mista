@@ -102,3 +102,6 @@
 
 ## Duración del short (2026-11-02)
 - 2026-11-02 · El short ya no apunta a ~60 s: dura lo que necesite su explicación para quedar clara y sin ambigüedad, con tope de 120 s. Lo decide quien escribe el guion del short, mientras lo escribe, y anota en el `## Short` la duración estimada (caracteres/13) y el porqué — Mario («a veces, al tener duración pequeña, las explicaciones son un poco ambiguas o no se explica del todo bien»). Sustituye a «~60 s» de los formatos; el máximo de 120 s se mantiene.
+
+## Logo de las redes (2026-11-02)
+- 2026-11-02 · Logo nuevo para YouTube, Instagram y TikTok: MISTA tal cual sale en los vídeos (cabeza y pecho del sprite de `motor/estilo/gato.js`, a ×2) sobre fondo `fondo`/`panel` con aro `acento_naranja`, sin texto ni manos. Ojos verde lima `#8ccf3f` **solo en el logo**; en los vídeos siguen los amarillos del sprite (`#d8c94a`) — Mario («lo más fiel posible al que sale luego por los vídeos», «sin la palabra gato», «sin las manos», «esos no son verdes son amarillos», «Solo en el logo»). Sustituye al robot de la etapa Pod 02. Se genera con `marca/logo/generar.py` (lee el sprite: si cambia el gato, se regenera). Lo sube Mario en cada red.

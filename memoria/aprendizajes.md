@@ -89,3 +89,5 @@
 - 2026-10-31 · En un largo con paneles grandes, `freezedetect` ve quieto casi todo: la boca y la cola del gato no cuentan. Un medidor de voz de 362×12 px base bajo el panel lo deja en 0 tramos.
 - 2026-10-31 · Muestrear fotogramas a tiempos fijos enseña paneles a medio aparecer; el crítico no puede juzgar el dato. Mejor sacar el último instante de cada panel (`fin` de su última frase - 0,05 s). Así aparecieron dos solapes que nadie había visto.
 - 2026-10-31 · El crítico encuentra sobre todo texto que afirma más que la voz. Conviene pedírselo de forma expresa: una captura suelta circula sin el contexto hablado.
+- 2026-11-02 · Logo: redibujar a MISTA «parecido» no convenció; leer los píxeles del sprite de `gato.js` sí, porque es fiel y no se desincroniza. Con el sprite a ×1 en una cuadrícula de 24 el aro sale tosco y el hueco entre orejas parece un sombrero; a ×2 sobre 52 con aro de 2 px, se lee bien a 110-200 px.
+- 2026-11-02 · Las redes recortan la foto de perfil en círculo inscrito: el aro debe quedar a ≤ 95 % del radio o se corta.
