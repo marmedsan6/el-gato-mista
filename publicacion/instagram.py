@@ -193,7 +193,9 @@ def load_token():
 
 
 def caption_of(video):
-    caption = (video['titulo'].strip() + '\n\n' + video['descripcion'].strip()).strip()
+    if video.get('enlace_youtube', '') is None:
+        raise ClipError('El texto de Instagram lleva el enlace a YouTube y el vídeo aún no está allí: sube antes a YouTube (la orden sin --solo).')
+    caption = redes.social_text(video)
     if len(caption) > CAPTION_LIMIT:
         raise ClipError(f'El texto supera los {CAPTION_LIMIT} caracteres de Instagram; acórtalo antes de preparar.')
     if caption.count('#') > 30:

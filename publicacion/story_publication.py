@@ -6,7 +6,7 @@ import shutil
 
 from .aprobado import PROFILE, approved, check_youtube_limits, is_format, rights_pending, source_evidence, words, write_srt
 from .core import ClipError, digest_json, ffmpeg, now, read_json, sha_file, write_json
-from . import youtube_profiles as profiles
+from . import enlaces, youtube_profiles as profiles
 
 
 def _payload(project, gate=True):
@@ -141,7 +141,8 @@ def execute(project, confirmation, probe_public=False):
     records_path = project / 'publicaciones.json'
     records = read_json(records_path) if records_path.is_file() else {'historias': {}}
     results = []
-    for item in manifest['destinos']:
+    # El largo sube antes que sus shorts, para que cada short salga ya con su enlace.
+    for item in sorted(manifest['destinos'], key=lambda destino: destino['id'] != 'largo'):
         key = digest_json({'channel_id': item['channel_id'], 'sha256': item['sha256']})
         previous = records.setdefault('historias', {}).get(key, {})
         if item['estado'] == 'incierto':
@@ -176,10 +177,16 @@ def execute(project, confirmation, probe_public=False):
             private = profiles.profile_root(item['perfil']) / 'sesiones'
             private.mkdir(exist_ok=True)
             checkpoint = private / (key + '.json')
-            video_id = previous.get('video_id') or upload_resumable(session, package / item['archivo'], item['body'], checkpoint)
+            sent = previous.get('descripcion_enviada')
+            if previous.get('video_id'):
+                video_id = previous['video_id']
+            else:
+                sent, _ = enlaces.youtube_description(project, item['id'], item['body']['snippet']['description'])
+                video_id = upload_resumable(session, package / item['archivo'], {**item['body'], 'snippet': {**item['body']['snippet'], 'description': sent}}, checkpoint)
+            # body_sha256 es el de publicacion.json, sin enlaces: así repetir la orden no lo toma por metadatos cambiados.
             record = {**previous, 'video_id': video_id, 'channel_id': item['channel_id'], 'sha256': item['sha256'],
                       'formato': item['id'], 'fecha': now(), 'url': 'https://www.youtube.com/watch?v=' + video_id,
-                      'body_sha256': digest_json(item['body'])}
+                      'body_sha256': digest_json(item['body']), **({'descripcion_enviada': sent} if sent is not None else {})}
             records['historias'][key] = record
             write_json(records_path, records)  # Persist video before the independent thumbnail request.
             if probing:
@@ -213,7 +220,48 @@ def execute(project, confirmation, probe_public=False):
                 session.close()
             write_json(package / 'publicacion.json', manifest)
     write_json(package / 'publicacion.json', manifest)
+    _complete_links(project, manifest, records, records_path, results)
     return {'huella_lote': confirmation, 'destinos': results}
+
+
+def _complete_links(project, manifest, records, records_path, results):
+    """Con todo subido, el largo recibe los enlaces de sus shorts (y un short que subió sin el largo, el suyo).
+    Pide el permiso youtube.force-ssl; sin él, el vídeo queda con `enlaces: pendientes` y se dice qué falta."""
+    from .youtube_upload import update_snippet
+    ids = enlaces.video_ids(project)
+    by_id = {result['id']: result for result in results}
+    pending = []
+    for item in manifest['destinos']:
+        record = records['historias'].get(digest_json({'channel_id': item['channel_id'], 'sha256': item['sha256']}), {})
+        base = item['body']['snippet']['description']
+        if not record.get('video_id') or item['id'] not in by_id:
+            continue
+        wanted, _ = enlaces.youtube_description(project, item['id'], base, ids)
+        if wanted != record.get('descripcion_enviada', base):
+            pending.append((item, record, wanted))
+    if not pending:
+        return
+    credentials = session = None
+    try:
+        credentials, session = profiles.authorized_session(pending[0][0]['perfil'])
+        if not profiles.can_edit(credentials):
+            raise ClipError('Falta el permiso de edición de YouTube: vuelve a conectar el perfil con youtube-conectar.')
+        for item, record, wanted in pending:
+            update_snippet(session, record['video_id'], {**item['body']['snippet'], 'description': wanted})
+            record['descripcion_enviada'] = wanted
+            write_json(records_path, records)
+            by_id[item['id']]['enlaces'] = 'añadidos'
+    except Exception as error:
+        detail = str(error)[:300] if isinstance(error, ClipError) else 'Error de conexión o autenticación (' + type(error).__name__ + ').'
+        for item, record, wanted in pending:
+            if by_id[item['id']].get('enlaces') != 'añadidos':
+                by_id[item['id']].update({'enlaces': 'pendientes', 'detalle_enlaces': detail + ' Repite la orden después: solo se añaden los enlaces.',
+                                          'descripcion_con_enlaces': wanted})
+    finally:
+        if credentials is not None:
+            write_json(profiles.profile_root(pending[0][0]['perfil']) / 'token.json', json.loads(credentials.to_json()))
+        if session is not None:
+            session.close()
 
 
 def manual_result(project, format_id, status, account, result=None, note=''):

@@ -36,7 +36,7 @@ def _per_short(result):
 
 
 def _complete(result):
-    return (all(item['estado'] == 'publicado' for item in result['youtube'])
+    return (all(item['estado'] == 'publicado' and item.get('enlaces') != 'pendientes' for item in result['youtube'])
             and all(item['estado'] in ('publicado', 'no_aplica', 'omitida') for item in _per_short(result['instagram']))
             and all(item['estado'] in ('no_aplica', 'omitida') or item.get('tiktok') in ('SEND_TO_USER_INBOX', 'PUBLISH_COMPLETE')
                     for item in _per_short(result['tiktok'])))

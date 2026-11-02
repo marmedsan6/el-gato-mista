@@ -9,8 +9,10 @@ from . import core
 from .core import ClipError, now, read_json, write_json
 
 # yt-analytics.readonly: métricas de los shorts para el bot de feedback (C9), pedido ya para no repetir el consentimiento.
+# youtube.force-ssl: editar la descripción del largo para enlazar sus shorts tras subirlos (Mario, 2026-11-02).
+EDITAR = 'https://www.googleapis.com/auth/youtube.force-ssl'
 SCOPES = ['https://www.googleapis.com/auth/youtube.upload', 'https://www.googleapis.com/auth/youtube.readonly',
-          'https://www.googleapis.com/auth/yt-analytics.readonly']
+          'https://www.googleapis.com/auth/yt-analytics.readonly', EDITAR]
 
 
 def profile_root(profile):
@@ -78,7 +80,8 @@ def authorized_session(profile):
     root = profile_root(profile)
     if not (root / 'token.json').is_file():
         raise ClipError('Perfil de YouTube todavía sin conectar: ' + profile)
-    credentials = Credentials.from_authorized_user_file(str(root / 'token.json'), SCOPES)
+    # Con los permisos que tenga el token, no con SCOPES: pedir al renovar uno que no se concedió hace fallar la subida.
+    credentials = Credentials.from_authorized_user_file(str(root / 'token.json'))
     session = AuthorizedSession(credentials)
     try:
         verify_identity(session, metadata(profile)['channel_id'])
@@ -86,6 +89,12 @@ def authorized_session(profile):
         session.close()
         raise
     return credentials, session
+
+
+def can_edit(credentials):
+    """¿Puede este token cambiar la descripción de un vídeo? Si no dice sus permisos, se intenta y YouTube responde."""
+    scopes = getattr(credentials, 'scopes', None)
+    return scopes is None or EDITAR in scopes
 
 
 def public_probe_done(profile):

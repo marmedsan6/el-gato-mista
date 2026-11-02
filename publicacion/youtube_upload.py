@@ -132,3 +132,11 @@ def upload_thumbnail(session, video_id, thumbnail):
             reasons = ''
         raise ClipError(f'YouTube no confirmó la portada (HTTP {response.status_code}{": " + reasons if reasons else ""}); '
                         'el vídeo permanece registrado para reanudar la portada sin repetir la subida.')
+
+
+def update_snippet(session, video_id, snippet):
+    """Cambia la descripción de un vídeo ya subido (videos.update). El snippet va entero: lo que falte, YouTube lo borra."""
+    response = session.put('https://www.googleapis.com/youtube/v3/videos', params={'part': 'snippet'},
+                           json={'id': video_id, 'snippet': snippet}, timeout=60)
+    if not 200 <= response.status_code < 300:
+        raise ClipError(f'YouTube no aceptó los enlaces de la descripción (HTTP {response.status_code}).')

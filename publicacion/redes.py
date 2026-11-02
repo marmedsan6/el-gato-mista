@@ -192,7 +192,7 @@ def state_key(network, formato='short'):
 
 def exported_video(project, formato='short'):
     """Vídeo del paquete exportado y aprobado, con su huella de contenido y la publicación que ya se aprobó."""
-    from . import story_publication as publication
+    from . import enlaces, story_publication as publication
     manifest, package = publication.current(project)
     item = next((destino for destino in manifest['destinos'] if destino['id'] == formato), None)
     if not item:
@@ -203,5 +203,13 @@ def exported_video(project, formato='short'):
     if core.sha_file(path) != item['sha256']:
         raise ClipError('El vídeo exportado cambió; vuelve a exportar y aprobar antes de enviarlo a una red.')
     snippet = item['body']['snippet']
-    return {'ruta': path, 'bytes': path.stat().st_size, 'sha256': item['sha256'], 'titulo': snippet['title'], 'descripcion': snippet.get('description', ''),
-            'sintetico': bool(item['body']['status'].get('containsSyntheticMedia', False)), 'huella_lote': manifest['huella_lote']}
+    description = snippet.get('description', '')
+    # El enlace a YouTube (el largo o, sin largo, este short): None si aún no está subido; '' si el texto ya lo trae a mano.
+    link = '' if enlaces.has_links(description) else enlaces.social_line(project, formato)
+    return {'ruta': path, 'bytes': path.stat().st_size, 'sha256': item['sha256'], 'titulo': snippet['title'], 'descripcion': description,
+            'enlace_youtube': link, 'sintetico': bool(item['body']['status'].get('containsSyntheticMedia', False)), 'huella_lote': manifest['huella_lote']}
+
+
+def social_text(video):
+    """Título, resumen y enlace a YouTube: el texto de Instagram y el que Mario pega en TikTok."""
+    return '\n\n'.join(part.strip() for part in (video['titulo'], video['descripcion'], video.get('enlace_youtube') or '') if part.strip())
