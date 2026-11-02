@@ -4,7 +4,7 @@ from __future__ import annotations
 import json
 import shutil
 
-from .aprobado import FORMATS, PROFILE, approved, check_youtube_limits, rights_pending, source_evidence, words, write_srt
+from .aprobado import PROFILE, approved, check_youtube_limits, is_format, rights_pending, source_evidence, words, write_srt
 from .core import ClipError, digest_json, ffmpeg, now, read_json, sha_file, write_json
 from . import youtube_profiles as profiles
 
@@ -217,7 +217,7 @@ def execute(project, confirmation, probe_public=False):
 
 
 def manual_result(project, format_id, status, account, result=None, note=''):
-    if format_id not in FORMATS or status not in ('publicado', 'fallido', 'incierto'):
+    if not is_format(format_id) or status not in ('publicado', 'fallido', 'incierto'):
         raise ClipError('Formato o resultado inválidos.')
     plan(project)
     manifest, package = current(project)

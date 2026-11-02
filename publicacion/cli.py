@@ -45,7 +45,7 @@ def parser():
     pub.add_argument('--probar-publica', action='store_true', help='Hasta confirmar la auditoría de la API: sube en público por API una sola vez y lee el estado que YouTube le da')
     outcome = commands.add_parser('publicacion-resultado', help='Anotar el resultado de una subida manual revisada')
     outcome.add_argument('proyecto')
-    outcome.add_argument('formato', choices=FORMATS)
+    outcome.add_argument('formato', help='largo, short o short-<nombre>')
     outcome.add_argument('estado', choices=['publicado', 'fallido', 'incierto'])
     outcome.add_argument('--cuenta', required=True)
     outcome.add_argument('--resultado')

@@ -1,5 +1,7 @@
 """La orden de subir de Mario: sin huellas que escribir y a todas las redes de una vez."""
 import json
+import shutil
+import subprocess
 import time
 
 import pytest
@@ -16,15 +18,15 @@ def redes_falsas(monkeypatch):
     """Instagram y TikTok de mentira, que apuntan cada llamada."""
     llamadas = []
 
-    def preparar(project, execute=False, polls=12):
+    def preparar(project, execute=False, polls=12, formato='short'):
         llamadas.append(('preparar', execute))
         return {'estado': 'listo', 'huella': 'huella-instagram', 'publicado': False}
 
-    def publicar(project, confirmation):
+    def publicar(project, confirmation, formato='short'):
         llamadas.append(('publicar', confirmation))
         return {'estado': 'publicado', 'permalink': 'https://instagram.invalid/reel'}
 
-    def bandeja(project, execute=False):
+    def bandeja(project, execute=False, formato='short'):
         llamadas.append(('bandeja', execute))
         return {'estado': 'enviado', 'tiktok': 'SEND_TO_USER_INBOX', 'siguiente': 'Termina el post.'}
 
@@ -99,7 +101,7 @@ def test_material_sin_licencia_no_se_anota_ni_se_sube(proyecto, sesion, redes_fa
 
 
 def test_un_fallo_en_una_red_no_detiene_a_las_demas(proyecto, sesion, redes_falsas, monkeypatch):
-    def rompe(project, execute=False, polls=12):
+    def rompe(project, execute=False, polls=12, formato='short'):
         raise ClipError('Instagram no aceptó el vídeo')
 
     monkeypatch.setattr(instagram, 'prepare', rompe)
@@ -110,7 +112,7 @@ def test_un_fallo_en_una_red_no_detiene_a_las_demas(proyecto, sesion, redes_fals
 
 
 def test_un_error_de_conexion_no_muestra_detalles(proyecto, sesion, redes_falsas, monkeypatch):
-    def rompe(project, execute=False):
+    def rompe(project, execute=False, formato='short'):
         raise ConnectionError('https://api.invalid/?token=secreto')
 
     monkeypatch.setattr(tiktok, 'inbox', rompe)
@@ -119,7 +121,7 @@ def test_un_error_de_conexion_no_muestra_detalles(proyecto, sesion, redes_falsas
 
 
 def test_instagram_sin_procesar_no_se_publica_y_lo_dice(proyecto, sesion, redes_falsas, monkeypatch):
-    monkeypatch.setattr(instagram, 'prepare', lambda project, execute=False, polls=12: {'estado': 'subido', 'huella': 'h', 'publicado': False})
+    monkeypatch.setattr(instagram, 'prepare', lambda project, execute=False, polls=12, formato='short': {'estado': 'subido', 'huella': 'h', 'publicado': False})
     resultado = subir.subir(proyecto, ORDEN)
     assert resultado['instagram']['estado'] == 'subido' and 'Repite la orden' in resultado['instagram']['siguiente']
     assert ('publicar', 'h') not in redes_falsas and resultado['completo'] is False
@@ -227,3 +229,72 @@ def test_una_red_desconocida_o_ninguna_se_rechaza_sin_anotar(proyecto, sesion, r
 def test_el_cli_acepta_solo_youtube(proyecto, sesion, redes_falsas):
     resultado = ejecutar('subir', 'demo', '--orden', ORDEN, '--solo', 'youtube')
     assert resultado['youtube'][0]['estado'] == 'publicado' and sesion.subidas == 1 and not redes_falsas
+
+
+def dos_shorts(proyecto):
+    """El vídeo de demo pasa a short-a y se añade un short-b distinto (alien-isolation-ia tiene dos shorts)."""
+    salida = proyecto / 'salida'
+    (salida / 'short.mp4').rename(salida / 'short-a.mp4')
+    subprocess.run(['ffmpeg', '-hide_banner', '-nostdin', '-y', '-f', 'lavfi', '-i', 'color=c=white:s=108x192:r=30:d=1',
+                    '-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo', '-shortest', '-c:v', 'libx264', '-c:a', 'aac', str(salida / 'short-b.mp4')],
+                   check=True, capture_output=True)
+    (proyecto / 'timing.short.json').rename(proyecto / 'timing.short-a.json')
+    shutil.copy2(proyecto / 'timing.short-a.json', proyecto / 'timing.short-b.json')
+    datos = read_json(proyecto / 'publicacion.json')
+    base = datos['formatos'].pop('short')
+    datos['formatos'] = {'short-a': {**base, 'archivo': 'salida/short-a.mp4'}, 'short-b': {**base, 'archivo': 'salida/short-b.mp4', 'titulo': 'Otro título'}}
+    (proyecto / 'publicacion.json').write_text(json.dumps(datos), encoding='utf-8')
+
+
+def test_publicacion_acepta_varios_shorts_y_rechaza_otros_nombres(proyecto):
+    dos_shorts(proyecto)
+    assert set(aprobado.load(proyecto)['formatos']) == {'short-a', 'short-b'}
+    assert aprobado.is_short('short-b') and aprobado.is_short('short') and not aprobado.is_short('largo')
+    datos = read_json(proyecto / 'publicacion.json')
+    datos['formatos']['corto'] = datos['formatos']['short-a']
+    (proyecto / 'publicacion.json').write_text(json.dumps(datos), encoding='utf-8')
+    with pytest.raises(ClipError, match='short-<nombre>'):
+        aprobado.load(proyecto)
+
+
+def test_dos_shorts_van_cada_uno_a_instagram_y_a_tiktok(proyecto, sesion, monkeypatch):
+    dos_shorts(proyecto)
+    llamadas = []
+    monkeypatch.setattr(instagram, 'prepare', lambda project, execute=False, polls=12, formato='short': llamadas.append(('preparar', formato)) or {'estado': 'listo', 'huella': 'h-' + formato})
+    monkeypatch.setattr(instagram, 'publish', lambda project, confirmation, formato='short': llamadas.append(('publicar', formato, confirmation)) or {'estado': 'publicado'})
+    monkeypatch.setattr(tiktok, 'inbox', lambda project, execute=False, formato='short': llamadas.append(('bandeja', formato)) or {'estado': 'enviado', 'tiktok': 'SEND_TO_USER_INBOX'})
+    resultado = subir.subir(proyecto, ORDEN)
+    assert sorted(item['id'] for item in resultado['youtube']) == ['short-a', 'short-b'] and sesion.subidas == 2
+    assert set(resultado['instagram']) == {'short-a', 'short-b'} and set(resultado['tiktok']) == {'short-a', 'short-b'}
+    assert ('publicar', 'short-b', 'h-short-b') in llamadas and ('bandeja', 'short-a') in llamadas and ('bandeja', 'short-b') in llamadas
+    assert resultado['completo'] is True
+
+
+def test_si_falla_un_short_en_una_red_el_otro_sigue_y_no_esta_completo(proyecto, sesion, monkeypatch):
+    dos_shorts(proyecto)
+
+    def preparar(project, execute=False, polls=12, formato='short'):
+        if formato == 'short-a':
+            raise ClipError('Instagram no aceptó el vídeo')
+        return {'estado': 'listo', 'huella': 'h'}
+
+    monkeypatch.setattr(instagram, 'prepare', preparar)
+    monkeypatch.setattr(instagram, 'publish', lambda project, confirmation, formato='short': {'estado': 'publicado'})
+    monkeypatch.setattr(tiktok, 'inbox', lambda project, execute=False, formato='short': {'estado': 'enviado', 'tiktok': 'SEND_TO_USER_INBOX'})
+    resultado = subir.subir(proyecto, ORDEN)
+    assert resultado['instagram']['short-a']['estado'] == 'fallido' and resultado['instagram']['short-b']['estado'] == 'publicado'
+    assert resultado['completo'] is False
+
+
+def test_dos_shorts_de_punta_a_punta_guardan_un_estado_por_short(proyecto, sesion, credenciales, monkeypatch):
+    dos_shorts(proyecto)
+    write_json(credenciales.parent / 'meta' / 'token.json', {'user_token': 'u', 'page_token': 'p', 'ig_user_id': '17', 'cuenta': '@elgatomista'})
+    write_json(credenciales.parent / 'tiktok' / 'token.json', {'access_token': 'a', 'refresh_token': 'r', 'access_expira': time.time() + 9999})
+    falsa = SesionRedes()
+    monkeypatch.setattr(instagram.requests, 'Session', lambda: falsa)
+    resultado = subir.subir(proyecto, ORDEN)
+    assert resultado['completo'] is True
+    registro = read_json(proyecto / 'redes.json')
+    assert {'instagram:short-a', 'instagram:short-b', 'tiktok:short-a', 'tiktok:short-b'} <= set(registro)
+    assert 'instagram' not in registro and 'tiktok' not in registro
+    assert sum(1 for metodo, url in falsa.llamadas if url.endswith('/media_publish')) == 2

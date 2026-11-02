@@ -278,7 +278,7 @@ def test_un_429_al_crear_el_envio_queda_como_fallido(tmp_path, privado):
 def test_un_5xx_al_crear_el_envio_queda_incierto_y_no_se_repite(tmp_path, privado, monkeypatch):
     preparar_envio(privado)
     video = video_de_prueba(tmp_path)
-    monkeypatch.setattr(redes, 'exported_video', lambda project: video)
+    monkeypatch.setattr(redes, 'exported_video', lambda project, formato='short': video)
     project = tmp_path / 'proyecto'
     session = Fake({'/inbox/video/init/': [Response(503, {'error': {'code': 'internal_error', 'message': 'temporal'}})]})
     with pytest.raises(ClipError, match='temporal'):
@@ -291,7 +291,7 @@ def test_un_5xx_al_crear_el_envio_queda_incierto_y_no_se_repite(tmp_path, privad
 
 def test_tiktok_bandeja_simula_por_defecto(tmp_path, privado, monkeypatch):
     video = video_de_prueba(tmp_path)
-    monkeypatch.setattr(redes, 'exported_video', lambda project: video)
+    monkeypatch.setattr(redes, 'exported_video', lambda project, formato='short': video)
     result = tiktok.inbox(tmp_path / 'proyecto')
     assert result['modo'] == 'simulacion' and not (tmp_path / 'proyecto' / 'trabajo' / 'redes.json').exists()
 
@@ -414,7 +414,7 @@ def preparar_instagram(tmp_path, privado, monkeypatch):
     rellenar(privado)
     write_json(privado / 'meta' / 'token.json', {'user_token': 'ut-secreto', 'page_token': 'pt-secreto', 'ig_user_id': 'ig1', 'cuenta': '@pod02', 'user_expira': time.time() + 99999})
     video = video_de_prueba(tmp_path)
-    monkeypatch.setattr(redes, 'exported_video', lambda project: video)
+    monkeypatch.setattr(redes, 'exported_video', lambda project, formato='short': video)
     return tmp_path / 'proyecto', video
 
 

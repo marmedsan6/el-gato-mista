@@ -11,10 +11,20 @@ import re
 from .core import ClipError, duration, now, read_json, sha_file
 
 FORMATS = ('short', 'largo')
+# Un vídeo puede tener varios shorts con guion propio: short-a, short-b… (alien-isolation-ia, 2026-11-02).
+VARIOS_SHORTS = re.compile(r'short-[a-z0-9]+')
 PROFILE = 'es'
 # Solo «aprobado», solo o con una nota entre paréntesis: «aprobado con cambios» o la plantilla sin rellenar no valen.
 DECISION = re.compile(r'^- Decisión de Mario[^:\n]*:\s*\*{0,2}aprobad[oa]\*{0,2}\s*(?:\(.*|«.*|\.\s*)?$', re.M | re.I)
 HUELLA = re.compile(r'^- Huella:.*$', re.M)
+
+
+def is_format(format_id):
+    return format_id in FORMATS or bool(VARIOS_SHORTS.fullmatch(format_id))
+
+
+def is_short(format_id):
+    return format_id == 'short' or bool(VARIOS_SHORTS.fullmatch(format_id))
 
 
 def gate_approved(project, sha):
@@ -36,9 +46,9 @@ def load(project):
     data = read_json(path)
     if data.get('perfil') != PROFILE:
         raise ClipError('El perfil de publicación debe ser ' + PROFILE + '.')
-    unknown = set(data.get('formatos', {})) - set(FORMATS)
+    unknown = {format_id for format_id in data.get('formatos', {}) if not is_format(format_id)}
     if unknown or not data.get('formatos'):
-        raise ClipError('publicacion.json necesita formatos short y/o largo.')
+        raise ClipError('publicacion.json necesita formatos largo, short o short-<nombre>.')
     return data
 
 

@@ -185,13 +185,18 @@ def save_record(project, data):
     write_json(record_path(project), {**data, 'actualizado': now()})
 
 
-def exported_video(project):
+def state_key(network, formato='short'):
+    """Clave del estado de una red en redes.json: el short único conserva la de siempre; cada short-<nombre>, la suya."""
+    return network if formato == 'short' else network + ':' + formato
+
+
+def exported_video(project, formato='short'):
     """Vídeo del paquete exportado y aprobado, con su huella de contenido y la publicación que ya se aprobó."""
     from . import story_publication as publication
     manifest, package = publication.current(project)
-    item = next((destino for destino in manifest['destinos'] if destino['id'] == 'short'), None)
+    item = next((destino for destino in manifest['destinos'] if destino['id'] == formato), None)
     if not item:
-        raise ClipError('El paquete exportado no tiene el short; Instagram y TikTok solo reciben shorts.')
+        raise ClipError('El paquete exportado no tiene el ' + formato + '; Instagram y TikTok solo reciben shorts.')
     path = (package / item['archivo']).resolve()
     if not path.is_relative_to(package.resolve()) or not path.is_file():
         raise ClipError('No se encuentra el vídeo del paquete exportado; vuelve a exportar.')

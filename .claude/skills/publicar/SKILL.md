@@ -21,7 +21,7 @@ El comando hace todo de una vez:
 2. Anota la orden en `reviews/puerta-2.md` con la SHA-256 del fichero vigente.
 3. Exporta el paquete a `para-subir/`.
 4. Publica en YouTube (Pod 02) y en Instagram (`@elgatomista`).
-5. Envía el short a la bandeja de TikTok (`pod02leo`).
+5. Envía el short a la bandeja de TikTok (`pod02leo`). Si el vídeo tiene varios shorts (`short-a`, `short-b`…), cada uno va aparte a Instagram y a TikTok, y el resultado de esas redes sale por short.
 
 Instagram y TikTok solo reciben shorts. No preguntes nada que el comando no haya pedido.
 
@@ -29,7 +29,7 @@ Si Mario limita las redes («de momento, solo YouTube»), añade `--solo youtube
 
 ## Antes de la orden
 
-`proyectos/<slug>/publicacion.json`, que prepara la skill `qa` (plantilla en `plantillas/proyecto/`; borra el formato que no exista). Título de hasta 100 caracteres y descripción de hasta 5000 bytes, sin `<` ni `>`.
+`proyectos/<slug>/publicacion.json`, que prepara la skill `qa` (plantilla en `plantillas/proyecto/`; borra el formato que no exista). Formatos válidos: `largo`, `short` y, si hay varios shorts, `short-<nombre>` (con su `timing.short-<nombre>.json`). Título de hasta 100 caracteres y descripción de hasta 5000 bytes, sin `<` ni `>`.
 
 Si el comando se para porque `contains_synthetic_media` es `null`, eso sí se le pregunta a Mario: no se adivina. Con su respuesta, repite la orden.
 

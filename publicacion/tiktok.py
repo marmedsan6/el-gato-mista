@@ -178,13 +178,14 @@ def send_inbox(video, state, save, session, pause=time.sleep, polls=12):
     return state
 
 
-def inbox(project, execute=False, only_status=False, session=None):
-    video = redes.exported_video(project)
-    state = redes.record(project).get('tiktok', {})
+def inbox(project, execute=False, only_status=False, session=None, formato='short'):
+    video = redes.exported_video(project, formato)
+    clave = redes.state_key('tiktok', formato)
+    state = redes.record(project).get(clave, {})
 
     def save(value):
         data = redes.record(project)
-        data['tiktok'] = value
+        data[clave] = value
         redes.save_record(project, data)
 
     info = {'destino': 'bandeja de TikTok (borrador): Mario termina el post desde la notificación; no se publica solo',
