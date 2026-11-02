@@ -216,3 +216,29 @@ function propBote(svg, x, y, color, { alto = 12 } = {}) {
   rect(svg, x, y, 8, alto, PROP.contorno); rect(svg, x + 1, y + 3, 6, alto - 4, color); rect(svg, x + 2, y + 1, 4, 2, PROP.metalClaro);
   rect(svg, x + 2, y + 4, 1, alto - 7, "#ffffff55");
 }
+
+// Taquilla de la estación 18×44 (alien-isolation-ia); abierta (0..1) gira la puerta sobre la bisagra izquierda
+function propTaquilla(svg, x, y, { abierta = 0, numero = "" } = {}) {
+  const C = PROP.contorno, M = "#2f3746", L = "#3e4859";
+  rect(svg, x, y, 18, 44, C); rect(svg, x + 1, y + 1, 16, 42, "#05070a");
+  const w = Math.max(2, Math.round(16 * (1 - abierta)));
+  rect(svg, x + 1, y + 1, w, 42, M); rect(svg, x + 1, y + 1, Math.min(w, 2), 42, L);
+  if (w > 8) {
+    for (let k = 0; k < 4; k++) rect(svg, x + 4, y + 5 + k * 3, w - 6, 1, "#1b212c"); // rejillas de ventilación
+    rect(svg, x + w - 3, y + 22, 2, 5, "#8a93a6"); // tirador
+    if (numero) rect(svg, x + 4, y + 34, w - 7, 4, "#c9bfa6");
+  }
+}
+
+// Detector de movimiento 26×22 (alien-isolation-ia): pantalla verde con barrido a pasos y puntos (dx, dy en -1..1)
+function propDetector(svg, x, y, t, { puntos = [], activo = true } = {}) {
+  const C = PROP.contorno;
+  rect(svg, x, y, 26, 22, C); rect(svg, x + 1, y + 1, 24, 20, "#2b3038"); rect(svg, x + 1, y + 1, 24, 2, "#3a414c");
+  rect(svg, x + 3, y + 4, 20, 14, "#06140d");
+  const cx = x + 13, cy = y + 16;
+  for (let r = 4; r <= 12; r += 4) for (let a = 0; a <= 12; a++) { const g = Math.PI + (a / 12) * Math.PI; const px = Math.round(cx + Math.cos(g) * r), py = Math.round(cy + Math.sin(g) * r * 0.9); if (py > y + 4) rect(svg, px, py, 1, 1, "#0f3a24"); }
+  if (!activo) return;
+  const barrido = (Math.floor(t / 0.08) % 12) / 12, g = Math.PI + barrido * Math.PI;
+  linea(svg, cx, cy, Math.round(cx + Math.cos(g) * 9), Math.round(cy + Math.sin(g) * 8), "#1fd69a");
+  puntos.forEach(([dx, dy], k) => { if (Math.floor(t / 0.3 + k) % 3 !== 0) rect(svg, cx + Math.round(dx * 9) - 1, cy + Math.round(dy * 8) - 1, 2, 2, "#c8ffe6"); });
+}
