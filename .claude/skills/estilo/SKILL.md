@@ -3,14 +3,14 @@ name: estilo
 description: Estilo visual vigente de ElGatoMista (pixel art de interfaz de videojuego con el gato MISTA como narrador). Úsala antes de escribir o revisar cualquier escena, storyboard o shotlist, y al preparar el QA visual de un vídeo.
 ---
 
-# Estilo vigente: v2 con los cambios del 2026-10-31
+# Estilo vigente: v3 (12 px, profundidad, luz y sombreado; aprobado el 2026-11-03)
 
 No copies valores aquí: léelos siempre de la fuente, que es la única que vale.
 1. `docs/estilo.md`: empieza por su bloque «Estilo vigente», que manda sobre las reglas v1 que siguen debajo.
 2. `docs/decisiones/0007-estilo-v2.md` y `memoria/decisiones.md`: el porqué de cada cambio.
 3. `marca/tokens.json`: valores de la v1; siguen valiendo salvo lo que cambie el bloque «Estilo vigente».
-4. `motor/estilo/`: implementación (`estilo.css`, `pixel.js`, `gato.js`, `escenarios.js`, `props.js`).
-5. Ejemplo publicado de referencia: `proyectos/mithril-ia-medicina/escenas/short-v2/` (de ahí sale el short v3).
+4. Implementación v3: `motor/estilo/v3/` (`gato.js`, `props.js`, `escenarios.js`) más `motor/estilo/{estilo.css, pixel.js, camara.js}`. Los ficheros v2 de `motor/estilo/` solo sirven para reproducir lo ya publicado.
+5. Ejemplo de referencia: `proyectos/mithril-ia-medicina/escenas/short-v6/` (estilo v3 completo). Calibración: `motor/calibracion/v3/`. El short publicado (v3 del vídeo) sale de `escenas/short-v2/`.
 6. Plantillas: `plantillas/proyecto/escenas/{short,largo}/escena-plantilla.html`.
 7. Si el vídeo se desvía del estilo, lo dice `proyectos/<slug>/style_guide.md` (solo las desviaciones).
 
@@ -24,6 +24,10 @@ No copies valores aquí: léelos siempre de la fuente, que es la única que vale
   Mide los tramos sin novedad en una hoja de contactos muestreada con `select='not(mod(n,30))'`.
 - [ ] **Movimiento:** escalonado y en enteros del lienzo base; entradas por salto o crecimiento, sin fundidos;
   desplazamiento lateral de 0,4 s entre bloques. Mídelo con fotogramas seguidos a 60 fps, no con la hoja.
+- [ ] **Píxel único:** todo el arte en unidades del lienzo v3 (12 px); nada dibujado a otra escala salvo el texto y el retrato (6 px).
+- [ ] **Cámara:** plano de detalle solo en las explicaciones core (pregunta a Mario cuáles); zoom al entrar y corte al salir;
+  en cada detalle, nada cortado en los bordes, en la zona tapada ni bajo la caja; fuentes a tamaño fijo. Mídelo con
+  fotogramas a tamaño completo de cada plano de detalle.
 - [ ] **Composición:** titular arriba a la izquierda; etiquetas junto a su objeto, nunca en esquinas; fuente del dato
   bajo la cifra; en el short, nada en la zona tapada (12 % arriba, 20 % abajo, franja derecha entre el 45 y el 85 %).
 - [ ] **Legibilidad:** reduce a 360×640 (o 640×360) con `scale=...:flags=area` y léelo.

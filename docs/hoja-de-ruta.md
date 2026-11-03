@@ -149,3 +149,7 @@ legal anterior. Los agentes no hacen `git push` (deny global); el push lo hace M
 - Miniaturas: quién las diseña y con qué estilo.
 - Cupo de Opus en la calibración: se mide en C2.
 - Legibilidad de fuentes pixel a 360×640: se resuelve en C4-C5.
+
+- Short v4 interno de Mithril (2026-11-03): cámara dinámica con 20 cambios de plano; `reviews/iter-04.md`, `qa-v4.md`. Iterado: demasiados zooms.
+- Short v5 interno (2026-11-03): plano de detalle solo en 3 explicaciones core (11 laboratorios, ficha y red de Claude); entra con zoom y sale con corte. `reviews/iter-05.md`, `qa-v5.md`. Mario la aprueba como estilo (2026-11-03): reglas en el bloque «Estilo vigente» de `docs/estilo.md`, biblioteca `motor/estilo/camara.js` (la v5 la usa, 14/14 fotogramas idénticos), skill `estilo` y plantilla del short con cámara. La plantilla del largo con cámara llegó con el estilo v3 (abajo).
+- Estilo v3 (2026-11-03): a partir de la referencia ref-01, todo a 12 px con profundidad, luz y sombreado a mano (calibración `motor/calibracion/v3/`, aprobada: «Me gusta, sigue»). Mithril v6 en estilo v3 (`reviews/iter-06.md`, `qa-v6.md`, `critica-v6-01.md`) y plantillas v3 del short y del largo (16:9). Mario aprueba la v6 («Me gusta»). Pendiente: escenarios 16:9 para el primer largo y pasar el estilo v3 al resto de `docs/estilo.md` y a `tokens.json`.

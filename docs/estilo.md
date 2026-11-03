@@ -1,16 +1,19 @@
 # Estilo visual de elgatomista
 
 ## Estilo vigente (manda sobre lo que sigue)
-Lo vigente es la **v2 con los cambios del 2026-10-31**, el estilo del short publicado. Decisiones de Mario en `memoria/decisiones.md`; ADR 0007.
+Lo vigente es el **estilo v3** (calibración aprobada por Mario el 2026-11-03, `reviews/calibracion/iter-v3-01.md`), que parte de la v2 con los cambios del 2026-10-31 y la cámara de la v5. Ejemplo completo: `proyectos/mithril-ia-medicina/escenas/short-v6/`; biblioteca: `motor/estilo/v3/` (la v2 queda en `motor/estilo/` para reproducir lo ya publicado). Decisiones de Mario en `memoria/decisiones.md`; ADR 0007.
 | Tema | Regla vigente | Sustituye a |
 |---|---|---|
 | Personaje | **Gato MISTA de narrador**: atigrado naranja, en escena, con poses, parpadeo, boca y cola; la voz es suya | «Sin personaje» |
-| Caja de diálogo | Con su retrato y la etiqueta «MISTA». El retrato no mueve la boca, solo parpadea | «Sin avatar» |
+| Caja de diálogo | Con su retrato y la etiqueta «MISTA». El retrato no mueve la boca, solo parpadea. **Opaca** (`panel`) | «Sin avatar», fondo translúcido |
 | Color | Escenarios pixel ilustrados por bloque, paleta ampliada, **3-4 acentos por escena** y objetos temáticos que reaccionan | «Máximo 2 acentos» |
-| Escala | Personaje y objetos a ×2; escenario y texto a ×1 | |
+| Píxel (v3) | **Un solo tamaño de píxel, 12 px de salida**, en escenario, objetos y MISTA: el arte se dibuja en unidades de un lienzo de 90×160 (short) o 160×90 (largo), 1 unidad = 3 px CSS. Retrato del diálogo a 6 px (la mitad). El texto conserva su tipografía (más fino), como la referencia ref-01 | Personaje y objetos ×2, escenario ×1 |
+| Profundidad y luz (v3) | Solo el plano medio nítido (objetos, datos y MISTA); plano lejano y suelo cercano muy desenfocados; conos de luz de foco y polvo en la luz (capa de brillo) | Fondo ligeramente desenfocado |
+| Dibujo (v3) | Escenas simples con pocos objetos grandes. Objetos y MISTA sombreados a mano (3-4 tonos: luz arriba a la izquierda, sombra abajo a la derecha, contorno interior) | Rectángulos planos |
 | Transición entre bloques | **Desplazamiento lateral de 0,4 s**, sin pantalla blanca. MISTA sale con su escenario y reaparece con un saltito | «Destello pixelado» |
 | Fondos | Vivos pero tranquilos: 3-4 cosas siempre en movimiento en cada escenario, sin tapar los datos | |
-| Efectos | A **-18 dB**, atados a lo que pasa en pantalla, nunca al ritmo del diálogo. Blip propio en cada palabra clave | Efectos en apariciones y contadores |
+| Efectos | A **-18 dB**, atados a lo que pasa en pantalla (un objeto aparece o reacciona, se completa un contador, una transición), nunca al ritmo del diálogo. El marco de la palabra clave del diálogo no suena. No suena nada que la cámara deje fuera de cuadro | Blip en cada palabra clave del diálogo |
+| Cámara | **Acercamiento lento** continuo (12 → 13 px, anclado para no tapar rótulo ni caja) en los tramos sin zoom; vuelve suave al general antes de cada desplazamiento. **Plano general** con MISTA y **plano de detalle solo en las explicaciones core** (3 en el short de Mithril). Entra con zoom a escalones (×0,25 cada 0,075 s; k múltiplo de 0,25) y sale con corte seco. MISTA queda fuera de cuadro en el detalle y vuelve al general con un saltito. Rótulos de cabecera y caja de diálogo fijos. En el detalle, el mundo se recorta en la línea de la caja, los marcos de selección solo se dibujan si su objeto se ve entero y las etiquetas de fuente no crecen. Siempre plano general antes de un desplazamiento entre bloques. Implementación: `motor/estilo/camara.js`; ejemplo: `proyectos/mithril-ia-medicina/escenas/short-v5/` | Un plano fijo por escenario |
 
 Pendiente: integrar estos cambios en el texto de abajo y en `marca/tokens.json`, que siguen en v1.
 

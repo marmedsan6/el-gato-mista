@@ -6,7 +6,7 @@ noticias, IA, series; enganche narrativo). Largo 16:9 de 8-10 min y short 9:16 d
 
 ## Lee antes de trabajar
 - memoria/decisiones.md (siempre) y, si tocas un vídeo, proyectos/<slug>/brief.md.
-- Estilo vigente (v2 con los cambios del 2026-10-31): antes de tocar escenas, skill `estilo`.
+- Estilo vigente (v3: 12 px, profundidad y luz; aprobado el 2026-11-03): antes de tocar escenas, skill `estilo`.
 - Calidad y contrato de escena: docs/criterios.md. Diseño: docs/arquitectura.md.
 - Calibración de estilo: docs/calibracion.md. Pendiente y orden: docs/hoja-de-ruta.md.
 
