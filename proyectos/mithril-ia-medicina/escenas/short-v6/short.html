@@ -1,0 +1,38 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>mithril-ia-medicina · short v6 (estilo v3: 12 px, profundidad, luz)</title>
+<!-- Render: node motor/render.mjs --escena <este html> --ancho 270 --alto 480 --duracion 58.3
+            --incluir motor/estilo --salida proyectos/mithril-ia-medicina/render/short-v6/video.mp4 -->
+<link rel="stylesheet" href="../../../../motor/estilo/estilo.css">
+<style>
+  .oculto { display: none !important; }
+  /* Cámara: el mundo se escala y desplaza desde seek(t); rótulos y caja de diálogo son interfaz fija.
+     #base (color del suelo) se ve donde la cámara recorta el mundo en la línea de la caja. */
+  #base { position: absolute; inset: 0; background: #14101a; }
+  #mundo { position: absolute; left: 0; top: 0; width: 270px; height: 480px; transform-origin: 0 0; }
+  #lejos { filter: blur(2.5px); }   /* plano lejano muy desenfocado (profundidad de campo) */
+  #delante { filter: blur(3px); }   /* suelo cercano desenfocado por delante */
+  #textos-ui { position: absolute; inset: 0; }
+</style>
+<body class="short">
+  <div id="base"></div>
+  <div id="mundo">
+    <svg class="arte" id="lejos"></svg>
+    <svg class="arte" id="medio"></svg>
+    <svg class="arte bloom" id="brillo"></svg>
+    <svg class="arte" id="frente"></svg>
+    <svg class="arte" id="delante"></svg>
+    <div id="textos"></div>
+  </div>
+  <div class="capa vineta"></div>
+  <div id="textos-ui"></div>
+  <div class="dialogo con-retrato oculto" id="dialogo"><svg class="retrato" id="retrato"></svg><span class="nombre">Mista</span><span id="frase"></span></div>
+
+  <script src="../../../../motor/estilo/pixel.js"></script>
+  <script src="../../../../motor/estilo/v3/props.js"></script>
+  <script src="../../../../motor/estilo/v3/escenarios.js"></script>
+  <script src="../../../../motor/estilo/v3/gato.js"></script>
+  <script src="../../../../motor/estilo/camara.js"></script>
+  <script src="timing.js"></script>
+  <script src="short.js"></script>
+</body>
