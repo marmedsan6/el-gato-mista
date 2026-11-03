@@ -1,7 +1,7 @@
 // Estilo v2 · MISTA, el gato narrador (ADR 0007). Pixel art por código, determinista (sin reloj; todo desde t).
 // gato(svg, x, y, { pose, t, hablando, parpadeo, mirar }, escala)  → dibuja el gato sentado; (x, y) = esquina sup. izq.
 // retratoGato(svg, x, y, { t, hablando, parpadeo }, escala)       → solo la cabeza (caja de diálogo).
-// Poses: "pie" · "senalar" · "pensar" · "sorpresa" · "celebrar" · "tocar". Necesita pixel.js (rect).
+// Poses: "pie" · "senalar" · "pensar" · "sorpresa" · "celebrar" · "tocar" · "asustado" (tiembla 1 px, pelo erizado). Necesita pixel.js (rect).
 
 // Diseño a partir del boceto de Mario (.runtime/marca/gato-referencia-mario.webp): atigrado naranja con rayas,
 // pecho, hocico y patas crema, ojos ámbar verdosos, nariz e interior de las orejas rosas, punta de la cola crema.
@@ -107,11 +107,11 @@ function gatoCabeza(svg, x, y, estado, e) {
 
 // Estado de la cara a partir de t: parpadeo cada ~3,1 s (0,1 s), boca alternando cada 0,1 s mientras habla.
 function gatoCara(pose, t, hablando, parpadeo) {
-  let ojos = pose === "sorpresa" ? "sorpresa" : pose === "celebrar" ? "felices" : pose === "pensar" ? "arriba" : "abiertos";
+  let ojos = pose === "sorpresa" || pose === "asustado" ? "sorpresa" : pose === "celebrar" ? "felices" : pose === "pensar" ? "arriba" : "abiertos";
   const ciclo = t % 3.1;
   if ((parpadeo !== false && ciclo > 3.0) && ojos !== "felices") ojos = "cerrados";
-  let boca = pose === "sorpresa" ? "grande" : "cerrada";
-  if (hablando && pose !== "sorpresa") boca = Math.floor(t / 0.1) % 2 === 0 ? "abierta" : "cerrada";
+  let boca = pose === "sorpresa" ? "grande" : pose === "asustado" ? "abierta" : "cerrada";
+  if (hablando && pose !== "sorpresa" && pose !== "asustado") boca = Math.floor(t / 0.1) % 2 === 0 ? "abierta" : "cerrada";
   return { ojos, boca };
 }
 
@@ -123,6 +123,8 @@ function gato(svg, x, y, { pose = "pie", t = 0, hablando = false, parpadeo = tru
     svg.appendChild(g);
     return gato(g, 0, 0, { pose, t, hablando, parpadeo, espejo: false }, e);
   }
+  // Asustado: tiembla 1 px a escalones (alien-isolation-ia)
+  if (pose === "asustado") x += [0, 1, 0, -1][Math.floor(t / 0.06) % 4] * e;
   // Sprite de 32×32: cuerpo en (7,16), cabeza en (8,4); cola detrás.
   gatoCola(svg, x, y, t, e);
   gatoFilas(svg, x + 7 * e, y + 17 * e, GATO_CUERPO, e);
@@ -134,6 +136,11 @@ function gato(svg, x, y, { pose = "pie", t = 0, hablando = false, parpadeo = tru
   else if (pose === "pensar") gatoPata(svg, x, y, 20, 24, 18, 19, e); // pata bajo la barbilla
   else if (pose === "celebrar") { gatoPata(svg, x, y, 9, 21, 4, 12, e); gatoPata(svg, x, y, 23, 21, 28, 12, e); }
   else if (pose === "sorpresa") { gatoPata(svg, x, y, 9, 22, 6, 17, e); gatoPata(svg, x, y, 23, 22, 26, 17, e); }
+  else if (pose === "asustado") {
+    // Pelo erizado en el lomo y patas encogidas junto al pecho
+    for (const [px, py] of [[6, 18], [5, 21], [5, 24]]) { rect(svg, x + (px - 2) * e, y + py * e, 3 * e, e, GATO_COLOR.o); rect(svg, x + (px - 1) * e, y + (py - 1) * e, e, e, GATO_COLOR.b); }
+    gatoPata(svg, x, y, 11, 23, 13, 20, e); gatoPata(svg, x, y, 21, 23, 19, 20, e);
+  }
 }
 
 function retratoGato(svg, x, y, { t = 0, hablando = false, parpadeo = true } = {}, e = 1) {

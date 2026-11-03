@@ -16,7 +16,7 @@ Cada hecho se verifica con fuente antes de producir. Nada se publica sin aprobac
 | | Largo | Short |
 |---|---|---|
 | Proporción | 16:9 | 9:16 |
-| Duración | 8-10 min | ~60 s (máx. 120 s) |
+| Duración | 8-10 min | La que pida la explicación (máx. 120 s) |
 | Resolución | 1920×1080 | 1080×1920 |
 | fps | 60 | 60 |
 | Subtítulos | SRT aparte, desde `timing.largo.json` | En pantalla, siempre |
@@ -24,6 +24,8 @@ Cada hecho se verifica con fuente antes de producir. Nada se publica sin aprobac
 
 - Mismo guion maestro y mismo estilo; el short es una versión derivada del guion, aprobada a la
   vez. Se componen por separado: nunca se recorta uno para sacar el otro.
+- La duración del short la decide quien escribe su guion, al escribirlo: la que necesite para
+  que la explicación quede clara y sin ambigüedad, hasta 120 s. No se aprieta hacia los 60 s.
 - **Hipótesis pixel art** (se confirma en la calibración): lienzo base de 480×270 (largo) y
   270×480 (short), escalado ×4 exacto a la salida, `image-rendering: pixelated`, posiciones y
   tamaños redondeados al píxel del lienzo base (sin movimiento subpíxel).

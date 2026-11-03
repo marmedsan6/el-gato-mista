@@ -1,7 +1,7 @@
 // Estilo v2 · escenarios pixel ilustrados por bloque (ADR 0007). Deterministas (t + semillas fijas).
 // escenario(nombre, capas, t, { W, H, suelo }) pinta en capas = { fondo, medio, brillo } (cada una un <svg>):
 //   fondo  → plano lejano (la capa lleva desenfoque en CSS), medio → plano nítido, brillo → luces (bloom).
-// Nombres: "laboratorio" · "servidores" · "despacho" · "azotea". `suelo` = y del suelo (px base).
+// Nombres: "laboratorio" · "servidores" · "despacho" · "azotea" · "centralita" · "hotel" · "pasillo" · "control" · "colonia". `suelo` = y del suelo (px base).
 // Necesita pixel.js (rect, bandas, disco, linea, mulberry32) y props.js.
 
 function escenarioLaboratorio({ fondo, medio, brillo }, t, { W, H, suelo, estante = true }) {
@@ -195,6 +195,205 @@ function ventilador(svg, cx, cy, t) {
   for (const g of [a, a + Math.PI / 2]) linea(svg, cx - Math.round(Math.cos(g) * 3), cy - Math.round(Math.sin(g) * 3), cx + Math.round(Math.cos(g) * 3), cy + Math.round(Math.sin(g) * 3), "#8a93a6");
 }
 
+// Sala de operadores: cuadro de luces en la pared, reloj y puestos con pantalla (phonic-1-voz)
+function escenarioCentralita({ fondo, medio, brillo }, t, { W, H, suelo }) {
+  bandas(fondo, 0, suelo, ["#141c2c", "#172033", "#1a243a", "#1d2841"]);
+  // Cuadro de luces que parpadean con semilla
+  const azar = mulberry32(83);
+  rect(fondo, 8, 22, W - 16, 66, "#0d1320");
+  for (let fila = 0; fila < 7; fila++) for (let x = 14; x < W - 14; x += 9) {
+    const fase = azar(), c = ["#1fd69a", "#f2c14e", "#5b8cff", "#e0454f"][Math.floor(azar() * 4)];
+    rect(fondo, x, 27 + fila * 8, 4, 4, Math.floor(t * 1.5 + fase * 11) % 4 === 0 ? c : "#232c42");
+  }
+  // Cables con paquetes que recorren el techo
+  rect(medio, 0, 9, W, 1, "#2a3a6a");
+  for (let k = 0; k < 3; k++) { const px = Math.floor((t * 38 + k * 131) % W); rect(medio, px, 8, 3, 3, "#ff8a3d"); rect(brillo, px - 2, 6, 7, 7, "#ff8a3d"); }
+  // Lámpara que oscila 1 px a pasos
+  const cx = Math.floor(W / 2) + [0, 1, 0, -1][Math.floor(t / 0.8) % 4];
+  rect(medio, Math.floor(W / 2), 0, 1, 12, "#0d1320"); rect(medio, cx - 8, 12, 16, 3, "#34405f");
+  disco(brillo, cx, 18, 18, "#cdd8ff");
+  // Reloj con segundero
+  const rx = W - 26, ry = 104;
+  disco(medio, rx, ry, 9, "#0d1320"); disco(medio, rx, ry, 8, "#e9e1cf");
+  const s = (Math.floor(t) % 60) / 60 * Math.PI * 2;
+  linea(medio, rx, ry, rx + Math.round(Math.sin(s) * 7), ry - Math.round(Math.cos(s) * 7), "#e0454f");
+  linea(medio, rx, ry, rx + 3, ry - 3, "#14121c");
+  // Puestos: mesa corrida y pantallas con líneas que avanzan
+  rect(medio, 0, suelo - 40, W, 5, "#3a4a6a"); rect(medio, 0, suelo - 35, W, 2, "#27324a");
+  for (const x of [8, W - 14]) rect(medio, x, suelo - 33, 6, 33, "#27324a");
+  for (let x = 10; x < W - 30; x += 56) {
+    rect(medio, x, suelo - 58, 28, 18, "#14121c"); rect(medio, x + 1, suelo - 57, 26, 15, "#0e1a24");
+    const n = (Math.floor(t * 1.4) + x) % 5;
+    for (let j = 0; j < 4; j++) rect(medio, x + 3, suelo - 55 + j * 3, j <= n ? 12 + ((x + j * 7) % 11) : 0, 1, "#1fd69a");
+  }
+  // Suelo de moqueta
+  rect(medio, 0, suelo, W, H - suelo, "#10162a");
+  for (let y = suelo + 6; y < H; y += 12) for (let x = (y % 24 ? 0 : 8); x < W; x += 16) rect(medio, x, y, 2, 2, "#172038");
+}
+
+// Vestíbulo de hotel con ventanal a la bahía de noche: mar con brillos, barca, palmera y ventilador (phonic-1-voz)
+function escenarioHotel({ fondo, medio, brillo }, t, { W, H, suelo }) {
+  bandas(fondo, 0, suelo, ["#26202c", "#2b2430", "#302834", "#352c38"]);
+  // Ventanal
+  const vx = 8, vy = 14, vw = W - 16, vh = Math.min(suelo - 74, 150);
+  bandas(fondo, vy, vh, ["#101a3c", "#16214a", "#1e2858", "#2a2e60", "#3a3468"]);
+  const a = mulberry32(91);
+  for (let k = 0; k < 28; k++) { const x = vx + a() * vw, y = vy + a() * vh * 0.45, f = a(); if (Math.floor(t * 2 + f * 9) % 6 !== 0) rect(fondo, x, y, 1, 1, "#c9d2ff"); }
+  disco(brillo, W - 44, vy + 26, 14, "#f5f7fb"); disco(medio, W - 44, vy + 26, 7, "#e9e6d8");
+  // Morros junto a la bahía y mar con brillos a escalones
+  const mar = vy + Math.floor(vh * 0.7);
+  for (const [cx, r] of [[Math.floor(W * 0.24), 26], [Math.floor(W * 0.38), 16], [Math.floor(W * 0.72), 20]]) {
+    for (let dy = -r; dy <= 0; dy++) { const dx = Math.floor(Math.sqrt(r * r - dy * dy) * 0.8); rect(fondo, cx - dx, mar + dy, dx * 2, 1, "#141a38"); }
+  }
+  rect(fondo, vx, mar, vw, vy + vh - mar, "#101c44");
+  for (let k = 0; k < 18; k++) {
+    const fase = a(), x = vx + Math.floor(a() * (vw - 10)), y = mar + 2 + Math.floor(a() * (vy + vh - mar - 4));
+    if (Math.floor(t * 1.5 + fase * 7) % 3 !== 0) rect(medio, x, y, 4 + Math.floor(fase * 6), 1, "#5b7ac0");
+  }
+  // Barca que cruza la bahía despacio, con luz
+  const bx = vx + Math.floor(((t * 4) % (vw + 30))) - 15;
+  if (bx > vx && bx < vx + vw - 12) { rect(medio, bx, mar + 6, 10, 2, "#0a0c18"); rect(medio, bx + 4, mar + 3, 1, 3, "#0a0c18"); if (Math.floor(t / 0.6) % 2 === 0) rect(medio, bx + 4, mar + 2, 1, 1, "#f2c14e"); }
+  // Marco del ventanal
+  rect(medio, vx - 3, vy - 3, vw + 6, 3, "#1a141c"); rect(medio, vx - 3, vy + vh, vw + 6, 3, "#1a141c");
+  rect(medio, vx - 3, vy, 3, vh, "#1a141c"); rect(medio, vx + vw, vy, 3, vh, "#1a141c");
+  for (let k = 1; k < 4; k++) rect(medio, vx + Math.floor((vw * k) / 4), vy, 2, vh, "#1a141c");
+  // Ventilador de techo a pasos
+  const cx = Math.floor(W / 2);
+  rect(medio, cx - 1, 0, 2, 8, "#1a141c");
+  const giro = (Math.floor(t / 0.07) % 8) * (Math.PI / 8);
+  for (const g of [giro, giro + Math.PI]) linea(medio, cx, 9, cx + Math.round(Math.cos(g) * 24), 9 + Math.round(Math.sin(g) * 3), "#5a3b26", 2);
+  // Mostrador corrido con timbre
+  rect(medio, 0, suelo - 40, W, 5, "#8a5a3a"); rect(medio, 0, suelo - 35, W, 35, "#4a2f22");
+  for (let x = 10; x < W; x += 34) rect(medio, x, suelo - 31, 24, 27, "#573828");
+  rect(medio, W - 50, suelo - 44, 10, 1, "#14121c"); rect(medio, W - 48, suelo - 47, 6, 3, "#f2c14e");
+  disco(brillo, W - 45, suelo - 48, 7, "#f2c14e");
+  // Palmera en maceta que se mece
+  const hx = W - 24, hy = suelo - 40, m = [0, 1, 1, 0, -1, -1][Math.floor(t / 0.6) % 6];
+  rect(medio, hx - 5, hy - 8, 10, 8, "#a0552e"); rect(medio, hx - 1, hy - 26, 2, 18, "#4a3526");
+  for (const [dx, dy] of [[-12, 4], [-9, -3], [9, -3], [12, 4], [0, -7]]) linea(medio, hx, hy - 26, hx + dx + m, hy - 26 + dy, "#2f8a5a", 2);
+  // Suelo de damero
+  rect(medio, 0, suelo, W, H - suelo, "#1a141c");
+  for (let y = suelo; y < H; y += 10) for (let x = ((y - suelo) / 10) % 2 ? 0 : 10; x < W; x += 20) rect(medio, x, y, 10, 10, "#241c26");
+}
+
+// Pasillo de estación espacial, oscuro: tuberías, rejilla de conducto, luz de emergencia que late a escalones,
+// fluorescente que falla y vapor (alien-isolation-ia, «más oscuro, igual de vivo»)
+function escenarioPasillo({ fondo, medio, brillo }, t, { W, H, suelo }) {
+  bandas(fondo, 0, suelo, ["#080b10", "#0a0d14", "#0c1018", "#0e131c"]);
+  // Fondo del pasillo en perspectiva: marcos que se cierran hacia una puerta lejana
+  const cx = Math.floor(W / 2);
+  for (let k = 0; k < 3; k++) {
+    const w = 150 - k * 44, h = suelo - 30 - k * 34, y = suelo - h;
+    rect(fondo, cx - w / 2, y, w, h, ["#0b0f17", "#090c13", "#06080d"][k]);
+    rect(fondo, cx - w / 2, y, w, 2, "#161d29"); rect(fondo, cx - w / 2, y, 2, h, "#161d29"); rect(fondo, cx + w / 2 - 2, y, 2, h, "#161d29");
+  }
+  rect(fondo, cx - 8, suelo - 40, 16, 40, "#050608"); rect(fondo, cx - 1, suelo - 40, 2, 40, "#1fd69a");
+  // Paneles de pared con nervios
+  for (let x = 0; x < W; x += 32) if (Math.abs(x + 16 - cx) > 90) { rect(fondo, x, 26, 2, suelo - 26, "#141a25"); rect(fondo, x + 4, 60, 22, 2, "#121823"); }
+  // Tuberías del techo con abrazaderas
+  rect(medio, 0, 4, W, 4, "#1e2530"); rect(medio, 0, 4, W, 1, "#2c3544"); rect(medio, 0, 11, W, 2, "#181e28");
+  for (let x = 12; x < W; x += 44) rect(medio, x, 3, 3, 11, "#11151d");
+  // Rejilla de conducto en el techo
+  const rx = Math.floor(W * 0.62);
+  rect(medio, rx, 15, 40, 9, "#0a0c11"); rect(medio, rx, 15, 40, 1, "#2c3544");
+  for (let k = 0; k < 6; k++) rect(medio, rx + 2 + k * 6, 17, 4, 1, "#262e3b");
+  // Luz de emergencia que late a escalones (nunca parpadeo rápido)
+  const ex = Math.floor(W * 0.18), nivel = [0, 1, 2, 3, 2, 1][Math.floor(t / 0.35) % 6];
+  rect(medio, ex - 1, 13, 2, 3, "#11151d"); rect(medio, ex - 6, 16, 12, 7, "#2a0e10"); rect(medio, ex - 5, 17, 10, 5, nivel ? "#e0454f" : "#5a1a1e"); for (let k = -3; k <= 3; k += 3) rect(medio, ex + k, 17, 1, 5, "#2a0e10");
+  if (nivel) { disco(brillo, ex, 20, 10 + nivel * 6, "#e0454f"); rect(brillo, ex - 20 - nivel * 4, suelo - 2, 40 + nivel * 8, 3, "#e0454f"); }
+  // Fluorescente que falla 0,1 s cada 5,3 s, con polvo en su luz
+  const fx = Math.floor(W * 0.42), encendido = (t % 5.3) > 0.1 && Math.abs((t % 5.3) - 0.25) > 0.05;
+  rect(medio, fx - 12, 14, 24, 3, "#2c3544"); rect(medio, fx - 10, 16, 20, 1, encendido ? "#cfe9ee" : "#3a4250");
+  if (encendido) { disco(brillo, fx, 22, 22, "#9fd8e0"); motas(medio, t, fx, 22, 36, 40, 52); }
+  // Vapor que sale de una junta de la tubería
+  const vx = Math.floor(W * 0.84);
+  for (let k = 0; k < 6; k++) {
+    const fase = (t * 0.9 + k / 6) % 1, y = 12 + Math.floor(fase * 34), x = vx + Math.floor(Math.sin(fase * 5 + k) * 3) + Math.floor(fase * 8);
+    if (fase < 0.85) rect(medio, x, y, 2 + Math.floor(fase * 4), 2 + Math.floor(fase * 3), fase < 0.5 ? "#3a4352" : "#2a313d");
+  }
+  // Suelo de rejilla
+  rect(medio, 0, suelo, W, H - suelo, "#0a0d12");
+  rect(medio, 0, suelo, W, 1, "#1e2530");
+  for (let y = suelo + 4; y < H; y += 6) rect(medio, 0, y, W, 1, "#12161e");
+  for (let x = 3; x < W; x += 8) rect(medio, x, suelo + 1, 1, H - suelo, "#0e1219");
+}
+
+// Sala de control del director: monitores al fondo, consola con botones, radar que barre y una lámpara fría
+function escenarioControl({ fondo, medio, brillo }, t, { W, H, suelo }) {
+  bandas(fondo, 0, suelo, ["#090d13", "#0b1018", "#0d131c", "#0f1620"]);
+  // Fila de monitores CRT al fondo con líneas que avanzan
+  const azar = mulberry32(57);
+  for (let x = 10; x < W - 30; x += 38) {
+    rect(fondo, x, 22, 30, 22, "#05070a"); rect(fondo, x + 2, 24, 26, 18, "#0b1a14");
+    const n = (Math.floor(t * 1.2) + Math.floor(azar() * 5)) % 5;
+    for (let j = 0; j < 4; j++) rect(fondo, x + 4, 27 + j * 4, j <= n ? 8 + ((x + j * 5) % 14) : 0, 1, "#1fd69a");
+  }
+  // Cables por la pared
+  for (const [x, c] of [[6, "#1a2030"], [W - 10, "#1a2030"]]) rect(medio, x, 0, 3, suelo - 40, c);
+  // Lámpara fría que oscila 1 px a pasos
+  const lx = Math.floor(W / 2) + [0, 1, 0, -1][Math.floor(t / 0.9) % 4];
+  rect(medio, Math.floor(W / 2), 0, 1, 10, "#10141c"); rect(medio, lx - 8, 10, 16, 3, "#2a3346");
+  disco(brillo, lx, 16, 16, "#9fd8e0");
+  // Consola: tablero inclinado y frente, botones que parpadean con semilla
+  rect(medio, 0, suelo - 42, W, 7, "#262e3e"); rect(medio, 0, suelo - 42, W, 1, "#3a4558"); rect(medio, 0, suelo - 35, W, 35, "#161b26");
+  const az2 = mulberry32(61);
+  for (let x = 12; x < W - 10; x += 10) {
+    const c = ["#1fd69a", "#e0454f", "#f2c14e", "#1fd69a"][Math.floor(az2() * 4)], f = az2();
+    rect(medio, x, suelo - 40, 4, 2, Math.floor(t * 1.3 + f * 9) % 5 === 0 ? c : "#2f3848");
+  }
+  for (let x = 16; x < W; x += 48) rect(medio, x, suelo - 30, 30, 22, "#1b2130");
+  // Radar redondo que barre a pasos en la esquina de la consola
+  const rx = W - 30, ry = suelo - 22;
+  disco(medio, rx, ry, 11, "#05070a"); disco(medio, rx, ry, 10, "#0b1a14");
+  const a = (Math.floor(t / 0.1) % 24) * (Math.PI / 12);
+  linea(medio, rx, ry, rx + Math.round(Math.cos(a) * 9), ry + Math.round(Math.sin(a) * 9), "#1fd69a");
+  disco(brillo, rx, ry, 8, "#1fd69a");
+  // Suelo
+  rect(medio, 0, suelo, W, H - suelo, "#0a0d12");
+  for (let x = 0; x < W; x += 24) rect(medio, x, suelo, 1, H - suelo, "#10141b");
+}
+
+// Exterior de Kurosaki en tormenta: torres mineras con baliza, lluvia y granizo en diagonal, relámpagos lejanos
+// y charcos con ondas
+function escenarioColonia({ fondo, medio, brillo }, t, { W, H, suelo }) {
+  const destello = (t % 6.7) < 0.16; // relámpago lejano, 0,16 s cada 6,7 s
+  bandas(fondo, 0, suelo, destello ? ["#1c2438", "#212a40", "#263048", "#2b3550", "#303a58"] : ["#06080e", "#090c14", "#0c101a", "#0f1420", "#131926"]);
+  if (destello) {
+    let x = Math.floor(W * 0.7), y = 0;
+    while (y < suelo - 60) { const nx = x + (Math.floor(y * 7.3) % 9) - 4; linea(fondo, x, y, nx, y + 8, "#cfd8ff"); x = nx; y += 8; }
+  }
+  montanas(fondo, 23, suelo - 34, 30, 8, "#0b0f19");
+  // Torres mineras en celosía con baliza roja
+  for (const [tx, th] of [[Math.floor(W * 0.12), 110], [Math.floor(W * 0.78), 140]]) {
+    rect(medio, tx, suelo - th, 3, th, "#11151e"); rect(medio, tx + 14, suelo - th, 3, th, "#11151e");
+    for (let y = suelo - th; y < suelo; y += 12) { linea(medio, tx, y, tx + 16, y + 12, "#11151e"); linea(medio, tx + 16, y, tx, y + 12, "#11151e"); }
+    rect(medio, tx - 2, suelo - th - 4, 21, 4, "#11151e");
+    if (Math.floor((t + tx) / 0.9) % 2 === 0) { rect(medio, tx + 7, suelo - th - 8, 3, 3, "#e0454f"); disco(brillo, tx + 8, suelo - th - 7, 9, "#e0454f"); }
+  }
+  // Barracones con ventanas encendidas
+  rect(medio, Math.floor(W * 0.3), suelo - 34, 90, 34, "#0e1219"); rect(medio, Math.floor(W * 0.3), suelo - 36, 90, 2, "#1a202c");
+  for (let k = 0; k < 4; k++) { const wx = Math.floor(W * 0.3) + 8 + k * 20; rect(medio, wx, suelo - 26, 8, 6, k === 2 ? "#2a2010" : "#f2c14e"); if (k !== 2) disco(brillo, wx + 4, suelo - 23, 6, "#f2c14e"); }
+  // Suelo embarrado y charcos con ondas a escalones
+  rect(medio, 0, suelo, W, H - suelo, "#100d0a");
+  for (let y = suelo + 3; y < H; y += 7) for (let x = (y % 14 ? 4 : 0); x < W; x += 22) rect(medio, x, y, 9, 1, "#17130e");
+  const charcos = [[Math.floor(W * 0.2), suelo + 12, 46], [Math.floor(W * 0.62), suelo + 22, 60]];
+  for (const [px, py, pw] of charcos) {
+    rect(medio, px, py, pw, 2, destello ? "#3a4566" : "#141a26"); rect(medio, px + 4, py + 2, pw - 8, 2, destello ? "#2c3550" : "#10151f");
+    const r = Math.floor(t / 0.2) % 4; rect(medio, px + 8 + r * 9, py + 2, 2 + r, 1, "#2c3650");
+  }
+  // Lluvia en diagonal y granizo (deterministas por semilla)
+  const az = mulberry32(17);
+  for (let k = 0; k < 90; k++) {
+    const x0 = az() * (W + 60), y0 = az() * suelo, v = 220 + az() * 60;
+    const y = (y0 + t * v) % (H + 10), x = Math.floor((x0 - y * 0.35) % (W + 60)) - 10;
+    rect(medio, x, Math.floor(y), 1, 2, "#3a4762"); rect(medio, x - 1, Math.floor(y) + 2, 1, 2, "#3a4762");
+  }
+  for (let k = 0; k < 14; k++) {
+    const x0 = az() * W, y0 = az() * H, v = 300 + az() * 80, y = (y0 + t * v) % (H + 10);
+    rect(medio, Math.floor((x0 - y * 0.3 + W) % W), Math.floor(y), 2, 2, "#8a96b0");
+  }
+}
+
 function escenario(nombre, capas, t, opciones) {
-  ({ laboratorio: escenarioLaboratorio, servidores: escenarioServidores, despacho: escenarioDespacho, azotea: escenarioAzotea })[nombre](capas, t, opciones);
+  ({ laboratorio: escenarioLaboratorio, servidores: escenarioServidores, despacho: escenarioDespacho, azotea: escenarioAzotea, centralita: escenarioCentralita, hotel: escenarioHotel, pasillo: escenarioPasillo, control: escenarioControl, colonia: escenarioColonia })[nombre](capas, t, opciones);
 }

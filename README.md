@@ -4,7 +4,7 @@ Producción de vídeos explicativos y de noticias en español con voz sintética
 generadas por código (estilo pixel art, por calibrar). Cada tema sale en dos formatos:
 
 - **Largo**: 16:9, 8-10 min (YouTube).
-- **Short**: 9:16, ~60 s, máx. 120 s (YouTube Shorts, TikTok, Instagram).
+- **Short**: 9:16, hasta 120 s, lo que pida la explicación para quedar clara (YouTube Shorts, TikTok, Instagram).
 
 Estado: **esqueleto**. Sin motor de render, sin voz y sin estilo calibrado todavía.
 

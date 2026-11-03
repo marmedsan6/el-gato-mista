@@ -1,0 +1,186 @@
+[
+ {
+  "t": 4.2,
+  "tipo": "error"
+ },
+ {
+  "t": 21.1,
+  "tipo": "error"
+ },
+ {
+  "t": 31.44,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 38.6,
+  "tipo": "destello"
+ },
+ {
+  "t": 51.12,
+  "tipo": "error"
+ },
+ {
+  "t": 53.92,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 65.08,
+  "tipo": "error"
+ },
+ {
+  "t": 73.42,
+  "tipo": "destello"
+ },
+ {
+  "t": 104.96,
+  "tipo": "error"
+ },
+ {
+  "t": 107.52,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 125.92,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 126.42,
+  "tipo": "destello"
+ },
+ {
+  "t": 135.86,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 144.78,
+  "tipo": "tick"
+ },
+ {
+  "t": 156.06,
+  "tipo": "acierto"
+ },
+ {
+  "t": 157.67,
+  "tipo": "destello"
+ },
+ {
+  "t": 180.1,
+  "tipo": "tick"
+ },
+ {
+  "t": 199.16,
+  "tipo": "error"
+ },
+ {
+  "t": 199.6,
+  "tipo": "destello"
+ },
+ {
+  "t": 206,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 214.7,
+  "tipo": "error"
+ },
+ {
+  "t": 220.27,
+  "tipo": "destello"
+ },
+ {
+  "t": 243.76,
+  "tipo": "tick"
+ },
+ {
+  "t": 244.94,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 277.28,
+  "tipo": "destello"
+ },
+ {
+  "t": 307.74,
+  "tipo": "acierto"
+ },
+ {
+  "t": 322,
+  "tipo": "error"
+ },
+ {
+  "t": 322.8,
+  "tipo": "acierto"
+ },
+ {
+  "t": 335.88,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 345.45,
+  "tipo": "destello"
+ },
+ {
+  "t": 355.96,
+  "tipo": "error"
+ },
+ {
+  "t": 360.02,
+  "tipo": "tick"
+ },
+ {
+  "t": 376.88,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 379.79,
+  "tipo": "destello"
+ },
+ {
+  "t": 385.8,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 408.58,
+  "tipo": "error"
+ },
+ {
+  "t": 409.99,
+  "tipo": "destello"
+ },
+ {
+  "t": 423,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 458.52,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 478.3,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 485.73,
+  "tipo": "destello"
+ },
+ {
+  "t": 486.5,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 529.92,
+  "tipo": "error"
+ },
+ {
+  "t": 546.84,
+  "tipo": "error"
+ },
+ {
+  "t": 547.51,
+  "tipo": "destello"
+ },
+ {
+  "t": 582.28,
+  "tipo": "error"
+ }
+]

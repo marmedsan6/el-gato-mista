@@ -1,0 +1,124 @@
+{
+  "fuentes": [
+    {
+      "id": "f1",
+      "url": "https://www.gamedeveloper.com/design/the-perfect-organism-the-ai-of-alien-isolation",
+      "autor": "Tommy Thompson (AI and Games), en Game Developer",
+      "fecha": "2017-10-31",
+      "consultada": "2026-11-02",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "Dos sistemas: un director «macro» que lleva el ritmo y la IA «micro» del alien, que siente y se mueve. El director siempre sabe dónde estás y de vez en cuando empuja al alien hacia ti, pero el alien tiene que encontrarte por sí mismo. Oye pasos, disparos y el detector de movimiento a ~1,5 m, y tiene rayos cortos detrás («ojos en la nuca»). Árbol de comportamiento de más de 100 nodos (~30 arriba); hay comportamientos bloqueados que se desbloquean según lo que hace el jugador, nunca por morir, y en la versión final también en puntos fijos de la campaña. Medidor de amenaza: sube por cercanía y por verlo; al tope, el director lo retira a los conductos («entre bastidores»), a menudo por delante de ti. Andy Bray (Creative Assembly) niega que haga trampas: en 12-18 h de campaña se teletransporta solo dos veces, para escenas.",
+      "uso": "dos cerebros, sentidos, árbol, desbloqueo, medidor de amenaza, entre bastidores, teletransportes",
+      "tramo": ""
+    },
+    {
+      "id": "f2",
+      "url": "https://www.gamedeveloper.com/design/revisiting-the-ai-of-alien-isolation",
+      "autor": "Tommy Thompson (AI and Games), en Game Developer",
+      "fecha": "2020-05-20",
+      "consultada": "2026-11-02",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "Con las herramientas OpenCAGE de Matt Filer: 36 ramas raíz en el árbol del alien; cuatro conos de visión (normal, enfocado, periférico y cercano), y cuanto más rato estás en uno, más fuerte es la señal. Mirar en taquillas y meterse en conductos pequeños solo se activa tras escaparte varias veces. El alien registra si ya se ha topado con el lanzallamas y cambia sus ataques (golpear y huir, emboscadas en conductos). La búsqueda («acecho») estrecha el radio en cada pasada. Cuenta cuántas veces te amenaza en cada fase.",
+      "uso": "conos de visión, comportamientos que se aprenden (taquillas, conductos, lanzallamas), acecho",
+      "tramo": ""
+    },
+    {
+      "id": "f3",
+      "url": "https://www.sega.co.jp/en/release/260608_6.html",
+      "autor": "SEGA / Creative Assembly (nota oficial)",
+      "fecha": "2026-06-08",
+      "consultada": "2026-11-02",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "Anuncio de Alien: Isolation 2. Al Hope, director creativo: «making the eponymous killer smarter, the environment harsher and the chance of survival slimmer» (más listo, entorno más duro, menos opciones de sobrevivir). Colonia remota azotada por tormentas, puesto de Weyland-Yutani Kurosaki Station. PS5, Xbox Series X|S, Nintendo Switch 2 y PC (Steam). Fecha y precio por anunciar. Tráiler «Last Chance».",
+      "uso": "anuncio, cita de Al Hope, escenario, plataformas, sin fecha",
+      "tramo": ""
+    },
+    {
+      "id": "f4",
+      "url": "https://www.youtube.com/watch?v=qk3WHXemQ-I",
+      "autor": "Alien: Isolation 2 (canal oficial), «Alien: Isolation 2 | Dev Q&A»",
+      "fecha": "2026-10-28",
+      "consultada": "2026-11-02",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "Subtítulos oficiales en-GB (copia en .runtime/fuentes/alien-isolation-ia/). 00:34 los exteriores, donde «the creature is now learning to adapt and hunt in these open spaces». 01:15 «It's unscripted. So no playthrough is going to be the same». 04:36-05:24 tuvieron que hacerlo funcionar en exteriores «maybe 10 times bigger»; «We also gave it some new behaviours. So now it will be even more intelligent. It will react to the player better. It will react to all the new items, gadgets, and tools»; usará que los exteriores están expuestos para cazar más agresivo y el clima para ocultar sus movimientos; «It will have new things it can learn over the original game»; «It will change its behaviour, each encounter», para que no sirvan los trucos de la vez anterior. 05:45 la tormenta afecta a tus sentidos y a los del alien. 06:05 audio espacial para saber si está entre bastidores, en los conductos o tras una pared. 07:25 objetos que se lanzan y rompen para distraerlo, más que en el primero. 14:40 micrófono: «Yes», opcional en ajustes, ahora también en PC; crea un «logical sound» con atenuación por distancia al que responden los sentidos de los enemigos.",
+      "uso": "fuente primaria de todo lo de Isolation 2 salvo el anuncio; los nombres de quien habla no salen en los subtítulos",
+      "tramo": ""
+    },
+    {
+      "id": "f5",
+      "url": "https://x.com/AlienIsolation/status/2116199323415314905",
+      "autor": "@AlienIsolation (cuenta oficial)",
+      "fecha": "2026-10-30",
+      "consultada": "2026-11-02",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "«Watch the full Dev Q&A», con enlace al vídeo de f4. En los posts propios del 26 al 30 de octubre no aparece un texto sobre la inteligencia del alien: está en el vídeo y en sus clips.",
+      "uso": "la cuenta oficial respalda f4",
+      "tramo": ""
+    },
+    {
+      "id": "f6",
+      "url": "https://collider.com/alien-isolation-2-smarter-xenomorph-hunting-weather/",
+      "autor": "Collider",
+      "fecha": "2026-10-29",
+      "consultada": "2026-11-02",
+      "tipo": "contexto",
+      "licencia": "",
+      "cita": "Atribuye a Noelie Prost (diseñadora sénior de jugabilidad) que el alien usará que los exteriores están expuestos para cazarte con más agresividad y el clima para ocultar sus movimientos. Hay que contrastarlo con f4.",
+      "uso": "secundaria; se cita f4 si los subtítulos lo confirman",
+      "tramo": ""
+    },
+    {
+      "id": "f7",
+      "url": "https://mp1st.com/news/alien-isolation-2-feature-photo-mode-launch-xenomorph-more-intelligent-wont-stop-hunting-players-outdoors",
+      "autor": "MP1st",
+      "fecha": "2026-10-28",
+      "consultada": "2026-11-02",
+      "tipo": "contexto",
+      "licencia": "",
+      "cita": "Recoge del vídeo de preguntas: «even more intelligent», «new things it can learn over the original game», cambia de comportamiento en cada encuentro y en exteriores e interiores, y exteriores unas 10 veces mayores. No menciona el micrófono.",
+      "uso": "secundaria; se cita f4 si los subtítulos lo confirman",
+      "tramo": ""
+    },
+    {
+      "id": "c1",
+      "url": "https://www.youtube.com/watch?v=bBhtydUBf3U",
+      "autor": "Alien: Isolation (canal oficial de SEGA/Creative Assembly), «'How to' Official Guide - The Alien [EU]»",
+      "fecha": "",
+      "consultada": "2026-11-02",
+      "tipo": "material",
+      "licencia": "© SEGA / Creative Assembly; uso breve con crédito (decisión de Mario, 2026-11-02)",
+      "cita": "Gameplay oficial del alien: primer plano (8-12 s), detector de movimiento (40-44 s y 140 s), mandíbulas (72 s), taquillas «PERSONAL STORAGE» (112 s) y lanzallamas contra el alien (128-132 s).",
+      "uso": "clips de 2-4 s en el monitor CRT de los bloques 1, 4, 6 y 8 del largo; sustituye a c2 y c3",
+      "tramo": "k1 0:09,5-0:12,5 (bloque 1) · k2 0:40,0-0:43,0 (bloque 4) · k3 2:08,5-2:11,5 (bloque 8); a 120×68 en un monitor CRT"
+    },
+    {
+      "id": "m1",
+      "url": "https://pixabay.com/music/ambient-bitcrushed-ambience-600682/",
+      "autor": "Lusit_Sven (Pixabay)",
+      "fecha": "2026-09-10",
+      "consultada": "2026-11-02",
+      "tipo": "material",
+      "licencia": "Pixabay Content License",
+      "cita": "«Bitcrushed Ambience», 1:25, elegida por Mario entre tres candidatas.",
+      "uso": "música de fondo del largo y de los dos shorts (en bucle, con sidechain bajo la voz)",
+      "tramo": "entera, en bucle"
+    },
+    {
+      "id": "c5",
+      "url": "https://www.youtube.com/watch?v=qk3WHXemQ-I",
+      "autor": "Creative Assembly, «Alien: Isolation 2 | Dev Q&A»",
+      "fecha": "2026-10-28",
+      "consultada": "2026-11-02",
+      "tipo": "material",
+      "licencia": "© SEGA / Creative Assembly; uso breve con crédito (decisión de Mario, 2026-11-02)",
+      "cita": "«So now it will be even more intelligent»",
+      "uso": "audio de 2,6 s en el bloque 11 del largo, con traducción en pantalla",
+      "tramo": "04:56,6-04:59,2"
+    }
+  ]
+}

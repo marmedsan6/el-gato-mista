@@ -21,19 +21,25 @@ def _safely(action):
         return {'estado': 'fallido', 'error': 'Error de conexión o autenticación (' + type(error).__name__ + '); no se muestran credenciales ni sesiones.'}
 
 
-def _instagram(project):
-    prepared = instagram.prepare(project, execute=True, polls=36)
+def _instagram(project, formato='short'):
+    prepared = instagram.prepare(project, execute=True, polls=36, formato=formato)
     if prepared.get('publicado'):
         return {'estado': 'publicado', 'ya_publicado': True, 'permalink': prepared.get('permalink')}
     if prepared['estado'] != 'listo':
         return {'estado': prepared['estado'], 'siguiente': 'Meta aún no ha terminado de procesar el vídeo. Repite la orden en un minuto: no se sube otra vez.'}
-    return instagram.publish(project, prepared['huella'])
+    return instagram.publish(project, prepared['huella'], formato=formato)
+
+
+def _per_short(result):
+    """Con varios shorts, cada red da un resultado por short ({'short-a': {...}, 'short-b': {...}}); con uno, el de siempre."""
+    return list(result.values()) if 'estado' not in result else [result]
 
 
 def _complete(result):
-    return (all(item['estado'] == 'publicado' for item in result['youtube'])
-            and result['instagram']['estado'] in ('publicado', 'no_aplica', 'omitida')
-            and (result['tiktok']['estado'] in ('no_aplica', 'omitida') or result['tiktok'].get('tiktok') in ('SEND_TO_USER_INBOX', 'PUBLISH_COMPLETE')))
+    return (all(item['estado'] == 'publicado' and item.get('enlaces') != 'pendientes' for item in result['youtube'])
+            and all(item['estado'] in ('publicado', 'no_aplica', 'omitida') for item in _per_short(result['instagram']))
+            and all(item['estado'] in ('no_aplica', 'omitida') or item.get('tiktok') in ('SEND_TO_USER_INBOX', 'PUBLISH_COMPLETE')
+                    for item in _per_short(result['tiktok'])))
 
 
 def subir(project, order, networks=NETWORKS):
@@ -57,11 +63,16 @@ def subir(project, order, networks=NETWORKS):
         result['youtube'] = _safely(lambda: story_publication.execute(project, huella)['destinos'])
         if not isinstance(result['youtube'], list):
             result['youtube'] = [result['youtube']]
-    has_short = any(item['id'] == 'short' for item in items)
-    for name, action in (('instagram', lambda: _instagram(project)), ('tiktok', lambda: tiktok.inbox(project, execute=True))):
+    shorts = [item['id'] for item in items if aprobado.is_short(item['id'])]
+    actions = (('instagram', lambda f: _instagram(project, f)), ('tiktok', lambda f: tiktok.inbox(project, execute=True, formato=f)))
+    for name, action in actions:
         if name not in networks:
             result[name] = {'estado': 'omitida'}
-        else:
-            result[name] = _safely(action) if has_short else {'estado': 'no_aplica'}
+        elif not shorts:
+            result[name] = {'estado': 'no_aplica'}
+        elif shorts == ['short']:
+            result[name] = _safely(lambda: action('short'))
+        else:  # Cada short va aparte: un fallo en uno no detiene al otro.
+            result[name] = {f: _safely(lambda f=f: action(f)) for f in shorts}
     result['completo'] = _complete(result)
     return result

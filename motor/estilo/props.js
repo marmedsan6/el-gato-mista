@@ -151,8 +151,94 @@ function propJaula(svg, x, y, t, { w = 44, h = 30, activo = true } = {}) {
   propRaton(svg, x + 4, y + h - 7, t + 0.06, { activo: false });
 }
 
+// Teléfono de mesa 26×16; si activo, vibra 1 px a pasos
+function propTelefono(svg, x, y, t, { activo = false, color = PROP.naranja } = {}) {
+  const dx = activo ? [0, 1, 0, -1][Math.floor(t / 0.06) % 4] : 0, B = PROP.papel;
+  // Auricular claro sobre el cuerpo, con los dos extremos: se lee como teléfono también en paneles oscuros
+  rect(svg, x + dx, y, 26, 3, B); rect(svg, x + dx, y + 3, 6, 3, B); rect(svg, x + 20 + dx, y + 3, 6, 3, B);
+  rect(svg, x + 4, y + 7, 18, 9, B); rect(svg, x + 5, y + 8, 16, 7, color);
+  // Dial: aro oscuro con agujeros
+  disco(svg, x + 13, y + 11, 3, PROP.contorno);
+  for (const [a, b] of [[-2, -1], [2, -1], [0, 2]]) rect(svg, x + 13 + a, y + 11 + b, 1, 1, B);
+}
+
+// Onda de voz: barras a pasos con semilla; plana si no está activa
+function propOndaVoz(svg, x, y, w, h, t, { color = PROP.naranja, activo = true, semilla = 2, paso = 3 } = {}) {
+  const azar = mulberry32(semilla), cy = y + Math.floor(h / 2);
+  for (let k = 0; k * paso < w; k++) {
+    const fase = azar() * 9, base = azar();
+    const a = activo ? Math.max(1, Math.round((h / 2) * (0.2 + 0.8 * Math.abs(Math.sin(t * 7 + fase)) * (0.4 + 0.6 * base)))) : 0;
+    rect(svg, x + k * paso, cy - a, paso - 1, a * 2 + 1, activo ? color : PROP.gris);
+  }
+}
+
+// Máquina de la cascada 40×40: tolva arriba, luz y aguja; si activo, se enciende y traquetea
+function propMaquina(svg, x, y, t, { activo = false, color = PROP.azul } = {}) {
+  const dy = activo && Math.floor(t / 0.1) % 2 === 0 ? -1 : 0, C = PROP.contorno;
+  rect(svg, x, y + dy, 40, 40, C); rect(svg, x + 1, y + 1 + dy, 38, 38, activo ? PROP.metalClaro : PROP.metal);
+  rect(svg, x + 5, y + 5 + dy, 30, 14, C); rect(svg, x + 6, y + 6 + dy, 28, 12, activo ? "#0e2230" : "#0a0f18");
+  if (activo) for (let k = 0; k < 3; k++) rect(svg, x + 8, y + 8 + k * 3 + dy, 8 + ((Math.floor(t * 8) + k * 5) % 16), 1, color);
+  for (let k = 0; k < 3; k++) { rect(svg, x + 6 + k * 11, y + 24 + dy, 6, 6, C); rect(svg, x + 7 + k * 11, y + 25 + dy, 4, 4, activo && Math.floor(t * 4 + k) % 3 === 0 ? color : PROP.gris); }
+  rect(svg, x + 4, y + 34 + dy, 32, 2, C);
+}
+
+// Mesa de restaurante con sillas alrededor, vacías o no
+function propMesaSillas(svg, x, y, { sillas = 7 } = {}) {
+  const C = PROP.contorno, ancho = 12 + sillas * 12;
+  rect(svg, x, y + 12, ancho, 8, C); rect(svg, x + 1, y + 13, ancho - 2, 6, PROP.papel);
+  rect(svg, x + 4, y + 20, 3, 12, C); rect(svg, x + ancho - 7, y + 20, 3, 12, C);
+  for (let k = 0; k < sillas; k++) {
+    const sx = x + 6 + k * 12;
+    rect(svg, sx, y, 9, 12, C); rect(svg, sx + 1, y + 1, 7, 10, PROP.madera);
+  }
+}
+
+// Candado; abierto levanta el arco
+function propCandado(svg, x, y, { abierto = false, color = PROP.dorado } = {}) {
+  const C = PROP.contorno, A = "#cfd6e4", dy = abierto ? -3 : 0; // arco claro: se lee sobre paneles oscuros
+  rect(svg, x + 2, y + dy, 8, 2, A); rect(svg, x + 2, y + dy, 2, 7 - dy, A);
+  if (!abierto) rect(svg, x + 8, y, 2, 7, A);
+  rect(svg, x, y + 6, 12, 9, C); rect(svg, x + 1, y + 7, 10, 7, color); rect(svg, x + 5, y + 9, 2, 3, C);
+}
+
+// Lápiz en diagonal
+function propLapiz(svg, x, y) {
+  for (let k = 0; k < 12; k++) rect(svg, x + k, y + 12 - k, 3, 3, k < 2 ? PROP.contorno : k > 9 ? PROP.rojo : PROP.dorado);
+}
+
+// Persona en pictograma 7×11
+function propPersona(svg, x, y, color = PROP.gris) {
+  rect(svg, x + 2, y, 3, 3, color); rect(svg, x, y + 4, 7, 4, color); rect(svg, x + 1, y + 8, 2, 3, color); rect(svg, x + 4, y + 8, 2, 3, color);
+}
+
 // Bote de reactivo (para estanterías): cuerpo de color y tapón
 function propBote(svg, x, y, color, { alto = 12 } = {}) {
   rect(svg, x, y, 8, alto, PROP.contorno); rect(svg, x + 1, y + 3, 6, alto - 4, color); rect(svg, x + 2, y + 1, 4, 2, PROP.metalClaro);
   rect(svg, x + 2, y + 4, 1, alto - 7, "#ffffff55");
+}
+
+// Taquilla de la estación 18×44 (alien-isolation-ia); abierta (0..1) gira la puerta sobre la bisagra izquierda
+function propTaquilla(svg, x, y, { abierta = 0, numero = "" } = {}) {
+  const C = PROP.contorno, M = "#2f3746", L = "#3e4859";
+  rect(svg, x, y, 18, 44, C); rect(svg, x + 1, y + 1, 16, 42, "#05070a");
+  const w = Math.max(2, Math.round(16 * (1 - abierta)));
+  rect(svg, x + 1, y + 1, w, 42, M); rect(svg, x + 1, y + 1, Math.min(w, 2), 42, L);
+  if (w > 8) {
+    for (let k = 0; k < 4; k++) rect(svg, x + 4, y + 5 + k * 3, w - 6, 1, "#1b212c"); // rejillas de ventilación
+    rect(svg, x + w - 3, y + 22, 2, 5, "#8a93a6"); // tirador
+    if (numero) rect(svg, x + 4, y + 34, w - 7, 4, "#c9bfa6");
+  }
+}
+
+// Detector de movimiento 26×22 (alien-isolation-ia): pantalla verde con barrido a pasos y puntos (dx, dy en -1..1)
+function propDetector(svg, x, y, t, { puntos = [], activo = true } = {}) {
+  const C = PROP.contorno;
+  rect(svg, x, y, 26, 22, C); rect(svg, x + 1, y + 1, 24, 20, "#2b3038"); rect(svg, x + 1, y + 1, 24, 2, "#3a414c");
+  rect(svg, x + 3, y + 4, 20, 14, "#06140d");
+  const cx = x + 13, cy = y + 16;
+  for (let r = 4; r <= 12; r += 4) for (let a = 0; a <= 12; a++) { const g = Math.PI + (a / 12) * Math.PI; const px = Math.round(cx + Math.cos(g) * r), py = Math.round(cy + Math.sin(g) * r * 0.9); if (py > y + 4) rect(svg, px, py, 1, 1, "#0f3a24"); }
+  if (!activo) return;
+  const barrido = (Math.floor(t / 0.08) % 12) / 12, g = Math.PI + barrido * Math.PI;
+  linea(svg, cx, cy, Math.round(cx + Math.cos(g) * 9), Math.round(cy + Math.sin(g) * 8), "#1fd69a");
+  puntos.forEach(([dx, dy], k) => { if (Math.floor(t / 0.3 + k) % 3 !== 0) rect(svg, cx + Math.round(dx * 9) - 1, cy + Math.round(dy * 8) - 1, 2, 2, "#c8ffe6"); });
 }

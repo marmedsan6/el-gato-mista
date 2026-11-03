@@ -21,15 +21,20 @@ El comando hace todo de una vez:
 2. Anota la orden en `reviews/puerta-2.md` con la SHA-256 del fichero vigente.
 3. Exporta el paquete a `para-subir/`.
 4. Publica en YouTube (Pod 02) y en Instagram (`@elgatomista`).
-5. Envía el short a la bandeja de TikTok (`pod02leo`).
+5. Envía el short a la bandeja de TikTok (`pod02leo`). Si el vídeo tiene varios shorts (`short-a`, `short-b`…), cada uno va aparte a Instagram y a TikTok, y el resultado de esas redes sale por short.
 
 Instagram y TikTok solo reciben shorts. No preguntes nada que el comando no haya pedido.
+
+**Enlaces (Mario, 2026-11-02):** los pone el comando, no se escriben en `publicacion.json`. El largo sube primero y cada
+short sale con «Vídeo completo: <largo>»; al terminar, la descripción del largo recibe «Shorts de este vídeo» con
+`videos.update`. Instagram lleva «Vídeo completo en YouTube: <largo>» (sin largo, «En YouTube: <el short>») y no sale
+si ese vídeo aún no está en YouTube. Una descripción que ya trae enlaces de YouTube escritos a mano no se toca.
 
 Si Mario limita las redes («de momento, solo YouTube»), añade `--solo youtube` (repetible). Repetir la orden después sin `--solo` lleva el mismo vídeo a las redes que faltan, sin volver a subirlo donde ya está.
 
 ## Antes de la orden
 
-`proyectos/<slug>/publicacion.json`, que prepara la skill `qa` (plantilla en `plantillas/proyecto/`; borra el formato que no exista). Título de hasta 100 caracteres y descripción de hasta 5000 bytes, sin `<` ni `>`.
+`proyectos/<slug>/publicacion.json`, que prepara la skill `qa` (plantilla en `plantillas/proyecto/`; borra el formato que no exista). Formatos válidos: `largo`, `short` y, si hay varios shorts, `short-<nombre>` (con su `timing.short-<nombre>.json`). Título de hasta 100 caracteres y descripción de hasta 5000 bytes, sin `<` ni `>`.
 
 Si el comando se para porque `contains_synthetic_media` es `null`, eso sí se le pregunta a Mario: no se adivina. Con su respuesta, repite la orden.
 
@@ -38,6 +43,12 @@ Si el comando se para porque `contains_synthetic_media` es `null`, eso sí se le
 Lee el resultado de cada red y cuéntaselo a Mario con su estado real y sus enlaces. `completo: false` significa que falta algo.
 
 - **TikTok no publica solo:** el vídeo queda en la bandeja y Mario termina el post desde la notificación. Díselo siempre; no lo cuentes como publicado.
+  Dale el `texto_para_tiktok` de cada short (título, resumen y enlace al largo en YouTube) para que lo pegue.
+- **Vídeo relacionado:** con largo, pon el largo como «vídeo relacionado» de cada short en Studio (Detalles → Vídeo
+  relacionado → buscar por título → Guardar), desde el Chrome de Mario: la API no lo permite.
+- **`enlaces: pendientes`** en un vídeo de YouTube: el largo no recibió los enlaces de sus shorts. Si el detalle pide
+  `youtube-conectar`, falta el permiso de edición: Mario reconecta el perfil (ver ADR 0008) y se repite la orden, que solo
+  añade los enlaces. Mientras, `descripcion_con_enlaces` es el texto que va.
 - **Una red falla y las demás no:** repite la misma orden. Solo completa lo que falte y no duplica lo ya subido.
 - **Instagram `subido`:** Meta aún procesa el vídeo. Repite la orden en un minuto.
 - **`portada_pendiente` en YouTube:** al repetir solo se reintenta la portada.

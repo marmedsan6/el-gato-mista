@@ -136,7 +136,7 @@ Este fichero es la lista viva de lo pendiente: se tacha lo hecho con fecha y evi
 | 7 | **Subagentes** en `.claude/agents/` con `model: haiku`: `extractor-fotogramas`, `qa-audio`, `verificador-enlaces`; `critico-visual` con modelo fuerte. Skills `nuevo-video` y `qa`. Hook de verificación al cerrar el turno cuando `motor/` tenga código | No | 2 (el extractor conviene antes de C1) |
 | 8 | **Proceso editorial**: fuentes de temas por categoría, cadencia semanal, nivel de verificación, plantilla de verificación de hechos | Decisiones | 9 |
 | 9 | **Primer vídeo de punta a punta** (largo + short) con PUERTA 1 y PUERTA 2 | Aprobaciones | — |
-| 10 | Más adelante: miniaturas, mascota o logo | Decisiones | — |
+| 10 | Más adelante: miniaturas y mascota. Logo hecho el 2026-11-02 (`marca/logo/`) | Decisiones | — |
 
 Paralelizable: 2 (C0-C4) y 3 no dependen entre sí; 5, 6 y 8 tampoco. Lo que siempre espera a
 Mario: instalaciones, gasto, elección de referencias, feedback de calibración y puertas.
@@ -150,6 +150,10 @@ legal anterior. Los agentes no hacen `git push` (deny global); el push lo hace M
 - Cupo de Opus en la calibración: se mide en C2.
 - Legibilidad de fuentes pixel a 360×640: se resuelve en C4-C5.
 
+## Segundo vídeo (2026-10-31)
+- `proyectos/phonic-1-voz/`: primer largo de punta a punta (8:02) y su short (54,8 s), con PUERTA 1 aprobada y QA en `reviews/qa-*-v1.md`. Herramientas nuevas: `motor/voz/por-bloques.mjs` y `motor/voz/escrito.mjs`. Publicados el 2026-10-31 con la orden de Mario; TikTok queda en la bandeja. Enlaces en `memoria/videos.md`.
+
+## Cámara dinámica y estilo v3 (2026-11-03)
 - Short v4 interno de Mithril (2026-11-03): cámara dinámica con 20 cambios de plano; `reviews/iter-04.md`, `qa-v4.md`. Iterado: demasiados zooms.
 - Short v5 interno (2026-11-03): plano de detalle solo en 3 explicaciones core (11 laboratorios, ficha y red de Claude); entra con zoom y sale con corte. `reviews/iter-05.md`, `qa-v5.md`. Mario la aprueba como estilo (2026-11-03): reglas en el bloque «Estilo vigente» de `docs/estilo.md`, biblioteca `motor/estilo/camara.js` (la v5 la usa, 14/14 fotogramas idénticos), skill `estilo` y plantilla del short con cámara. La plantilla del largo con cámara llegó con el estilo v3 (abajo).
 - Estilo v3 (2026-11-03): a partir de la referencia ref-01, todo a 12 px con profundidad, luz y sombreado a mano (calibración `motor/calibracion/v3/`, aprobada: «Me gusta, sigue»). Mithril v6 en estilo v3 (`reviews/iter-06.md`, `qa-v6.md`, `critica-v6-01.md`) y plantillas v3 del short y del largo (16:9). Mario aprueba la v6 («Me gusta»). Pendiente: escenarios 16:9 para el primer largo y pasar el estilo v3 al resto de `docs/estilo.md` y a `tokens.json`.

@@ -1,8 +1,9 @@
 # elgatomista: producción de vídeos
 
 Vídeos explicativos y de noticias en español con voz sintética (videojuegos, curiosidades,
-noticias, IA, series; enganche narrativo). Largo 16:9 de 8-10 min y short 9:16 de ~60 s
-(máx. 120 s): mismo guion y estilo, compuestos por separado, nunca recortando uno del otro.
+noticias, IA, series; enganche narrativo). Largo 16:9 de 8-10 min y short 9:16 de hasta 120 s,
+con la duración que necesite su explicación para quedar clara (la decide quien escribe su guion):
+mismo guion y estilo, compuestos por separado, nunca recortando uno del otro.
 
 ## Lee antes de trabajar
 - memoria/decisiones.md (siempre) y, si tocas un vídeo, proyectos/<slug>/brief.md.

@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "instagram:short-a": {
+    "estado": "publicado",
+    "huella": "44123e482cd0c7f53dca004fcf03b249ff576772d8b41121d560c7fae6a0febc",
+    "sha256": "51116f6a2743e0dbe4ed52df2722154071898389119fedf0b01261d42f4e4d02",
+    "creado": "2026-11-02T17:38:30.337783+00:00",
+    "container_id": "18129374812825706",
+    "status_code": "FINISHED",
+    "detalle": "Finished: Media has been uploaded and it is ready to be published.",
+    "publicando": "2026-11-02T17:39:03.146410+00:00",
+    "media_id": "18129324724866786",
+    "permalink": "https://www.instagram.com/reel/DfP3K6rk_3D/",
+    "publicado": "2026-11-02T17:39:15.293568+00:00",
+    "autorizacion": {
+      "huella": "44123e482cd0c7f53dca004fcf03b249ff576772d8b41121d560c7fae6a0febc",
+      "confirmado": "2026-11-02T17:39:15.293568+00:00"
+    }
+  },
+  "actualizado": "2026-11-02T17:41:08.475024+00:00",
+  "instagram:short-b": {
+    "estado": "publicado",
+    "huella": "b9580f88a0121be7d4fff138b5b3b70c5230a9d0eab2d20a2924a6d5ba18b8a5",
+    "sha256": "b1228a55383c1fbaf4fd0862cc9535fa922b3e9c0da6bf69733a9f0266c2bcdc",
+    "creado": "2026-11-02T17:39:15.317510+00:00",
+    "container_id": "18129375190825706",
+    "status_code": "FINISHED",
+    "detalle": "Finished: Media has been uploaded and it is ready to be published.",
+    "publicando": "2026-11-02T17:39:58.329357+00:00",
+    "media_id": "18083929616547288",
+    "permalink": "https://www.instagram.com/reel/DfP3QVFE6a3/",
+    "publicado": "2026-11-02T17:40:08.753080+00:00",
+    "autorizacion": {
+      "huella": "b9580f88a0121be7d4fff138b5b3b70c5230a9d0eab2d20a2924a6d5ba18b8a5",
+      "confirmado": "2026-11-02T17:40:08.753080+00:00"
+    }
+  },
+  "tiktok:short-a": {
+    "sha256": "51116f6a2743e0dbe4ed52df2722154071898389119fedf0b01261d42f4e4d02",
+    "estado": "enviado",
+    "creado": "2026-11-02T17:40:09.699771+00:00",
+    "publish_id": "v_inbox_file~v2.7703630201938266134",
+    "tiktok": "SEND_TO_USER_INBOX",
+    "motivo": null
+  },
+  "tiktok:short-b": {
+    "sha256": "b1228a55383c1fbaf4fd0862cc9535fa922b3e9c0da6bf69733a9f0266c2bcdc",
+    "estado": "enviado",
+    "creado": "2026-11-02T17:40:34.184018+00:00",
+    "publish_id": "v_inbox_file~v2.7703630159421900822",
+    "tiktok": "SEND_TO_USER_INBOX",
+    "motivo": null
+  }
+}

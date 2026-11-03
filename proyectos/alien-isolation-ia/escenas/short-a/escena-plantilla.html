@@ -1,0 +1,42 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Escena · short · plantilla (estilo v1)</title>
+<!-- Copia este fichero como eNN.html. Reglas: docs/estilo.md y docs/criterios.md §1 (contrato seek(t)).
+     Render: node motor/render.mjs --escena <este html> --ancho 270 --alto 480 --duracion <s> --incluir motor/estilo --salida <mp4> -->
+<link rel="stylesheet" href="../../../../motor/estilo/estilo.css">
+<body class="short violeta">
+  <svg class="arte desenfoque" id="fondo"></svg>
+  <svg class="arte bloom" id="brillo"></svg>
+  <svg class="arte" id="frente"></svg>
+  <div class="capa vineta"></div>
+
+  <!-- Máx. 2 acentos por escena. Titular arriba a la izquierda; nada en el 12 % superior ni en el 20 % inferior. -->
+  <div class="titular" id="titular" style="left:16px; top:80px;">Titular de <span class="clave">prueba</span></div>
+  <div class="dialogo" id="dialogo"></div>
+
+  <script src="../../../../motor/estilo/pixel.js"></script>
+  <script>
+    const fondo = lienzo("fondo"), brillo = lienzo("brillo"), frente = lienzo("frente");
+    tildesPixel();
+    const titular = document.getElementById("titular");
+    const dialogo = document.getElementById("dialogo");
+    // Frase de la caja de diálogo: palabra a palabra cada 0,3 s desde t0; «clave» va en caja de selección.
+    const FRASE = { t0: 0.5, texto: "Texto de prueba palabra a palabra.", clave: "palabra" };
+
+    window.seek = (t) => {
+      [fondo, brillo, frente].forEach((s) => s.replaceChildren());
+      bandas(fondo, 0, 300, ["#1e1727", "#241b33", "#2b2040", "#33264d", "#3b2c58"]);
+      // Entrada por salto (P18): -2, -1, 0 px en 0,15 s
+      const s = t < 0.075 ? -2 : t < 0.15 ? -1 : 0;
+      titular.style.top = `${80 + s}px`;
+      const palabras = FRASE.texto.split(" ");
+      const n = Math.max(0, Math.min(palabras.length, 1 + Math.floor((t - FRASE.t0) / 0.3)));
+      dialogo.hidden = t < FRASE.t0;
+      dialogo.innerHTML = palabras.slice(0, n).map((p, i) => {
+        const c = p === FRASE.clave ? `<span class="sel">${p}<i></i></span>` : p;
+        return i === n - 1 ? c : `<span class="dicho">${c}</span>`;
+      }).join(" ") + (n === palabras.length ? '<span class="cursor"></span>' : "");
+    };
+    window.seek(0);
+  </script>
+</body>

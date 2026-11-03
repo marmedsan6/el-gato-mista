@@ -1,0 +1,36 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Escena · largo · plantilla (estilo v1)</title>
+<!-- Copia este fichero como eNN.html. Reglas: docs/estilo.md y docs/criterios.md §1 (contrato seek(t)).
+     Render: node motor/render.mjs --escena <este html> --ancho 480 --alto 270 --duracion <s> --incluir motor/estilo --salida <mp4>
+     Largo: sin subtítulos en pantalla (SRT aparte); algo nuevo cada 3-8 s. -->
+<link rel="stylesheet" href="../../../../motor/estilo/estilo.css">
+<body class="largo azul">
+  <svg class="arte bloom" id="brillo"></svg>
+  <svg class="arte" id="frente"></svg>
+  <div class="capa vineta"></div>
+
+  <!-- Máx. 2 acentos por escena. Etiquetas junto a su objeto, con línea guía; nunca en las esquinas. -->
+  <div class="titular p8" id="titular" style="left:32px; top:32px;">Título del bloque</div>
+  <div class="etiqueta" id="etiqueta" style="left:200px; top:180px;">Etiqueta</div>
+
+  <script src="../../../../motor/estilo/pixel.js"></script>
+  <script>
+    const brillo = lienzo("brillo"), frente = lienzo("frente");
+    tildesPixel();
+    const etiqueta = document.getElementById("etiqueta");
+
+    window.seek = (t) => {
+      [brillo, frente].forEach((s) => s.replaceChildren());
+      // Travelling lento (P11): 2 px base por segundo, a saltos de 1 px
+      const pan = -Math.floor(t * 2);
+      disco(brillo, 240 + pan, 120, 18, "#5b8cff");
+      disco(frente, 240 + pan, 120, 10, "#5b8cff");
+      linea(frente, 240 + pan, 132, 240 + pan, 176, "#8a93a6");
+      etiqueta.style.left = `${200 + pan}px`;
+      // Crecimiento a escalones: el objeto aparece en t = 1 s
+      etiqueta.hidden = t < 1;
+    };
+    window.seek(0);
+  </script>
+</body>

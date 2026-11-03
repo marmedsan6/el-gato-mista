@@ -94,7 +94,7 @@ Todas OFL y locales (`marca/fuentes/`), nunca de CDN ni del sistema.
 - **Largo:** sin subtítulos en pantalla; SRT aparte desde `timing.largo.json`.
 - Titular arriba a la izquierda, con una palabra clave en naranja. Nada de título centrado sobre degradado.
 - Etiquetas y contadores **junto a su objeto**, con línea guía si hace falta; **nunca en las esquinas**.
-- Fuente del dato pequeña bajo la cifra («FUENTE: [fN]») y también en la descripción.
+- Fuente del dato pequeña bajo la cifra («FUENTE: [fN]»). En la descripción, no: desde el 2026-11-02 solo lleva el resumen y los enlaces entre largo y shorts (Mario).
 - Las ideas se cuentan con **interfaz de videojuego**: barras de progreso, menús con cursor ▶, contadores, checks y aspas, insignias.
 
 ## Sonido (pendiente de los pilotos de voz y música)
@@ -106,7 +106,9 @@ Todas OFL y locales (`marca/fuentes/`), nunca de CDN ni del sistema.
 - Pixel art con postproceso (P1), modo nítido, fondo violeta para el contexto y azul-negro para la explicación (P7).
 - Titular pixel pesado, cifras en monoespaciada, caja de diálogo con caja de selección.
 - Movimiento a saltos, destello pixelado, travelling lento, interfaz de juego como lenguaje base.
-- Cierre del short con el dato, sin llamada a la acción (P23).
+- Cierre del short: si el vídeo tiene largo, MISTA remite a él en la última frase, con una frase adaptada al tema que diga
+  que hay un vídeo largo en YouTube que lo explica entero (Mario, 2026-11-02; sustituye a P23 en ese caso). Sin largo,
+  termina con el dato, sin llamada a la acción (P23).
 
 ## Qué no (rechazado por Mario)
 - Narrador o personaje visible (P5).

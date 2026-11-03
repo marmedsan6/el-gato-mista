@@ -1,0 +1,958 @@
+{
+  "formato": "short",
+  "fps": 60,
+  "audio": {
+    "fichero": "short-b-apretado.wav",
+    "sha256": "0b0dafb7b38828b085004a5c2001c361c7e3ba6b8047ab8ef6d556f62db1b7b1",
+    "duracion_s": 69.794
+  },
+  "alineacion": {
+    "herramienta": "faster-whisper 1.2.1 · large-v3-turbo (int8, CPU)",
+    "con_pista": true,
+    "palabras_guion": 171,
+    "casadas": 168,
+    "porcentaje": 98.2,
+    "faltan": [],
+    "sobran": [
+      "¡Gracias! ¡Gracias!"
+    ],
+    "sustituidas": [
+      {
+        "guion": "pecé.",
+        "oido": "PC."
+      },
+      {
+        "guion": "escondía en",
+        "oido": "escondían"
+      }
+    ]
+  },
+  "frases": [
+    {
+      "id": "fr01",
+      "texto": "Los creadores de Alien: Isolation 2 dicen que su alien será todavía más inteligente.",
+      "inicio": 0,
+      "fin": 6.78,
+      "palabras": [
+        {
+          "p": "Los",
+          "i": 0,
+          "f": 0.52
+        },
+        {
+          "p": "creadores",
+          "i": 0.52,
+          "f": 1.08
+        },
+        {
+          "p": "de",
+          "i": 1.08,
+          "f": 1.32
+        },
+        {
+          "p": "Alien: Isolation 2",
+          "i": 1.32,
+          "f": 2.74
+        },
+        {
+          "p": "dicen",
+          "i": 2.74,
+          "f": 3.54
+        },
+        {
+          "p": "que",
+          "i": 3.54,
+          "f": 3.78
+        },
+        {
+          "p": "su",
+          "i": 3.78,
+          "f": 3.98
+        },
+        {
+          "p": "alien",
+          "i": 3.98,
+          "f": 4.3
+        },
+        {
+          "p": "será",
+          "i": 4.3,
+          "f": 4.64
+        },
+        {
+          "p": "todavía",
+          "i": 4.64,
+          "f": 5.22
+        },
+        {
+          "p": "más",
+          "i": 5.22,
+          "f": 5.86
+        },
+        {
+          "p": "inteligente.",
+          "i": 5.86,
+          "f": 6.78
+        }
+      ]
+    },
+    {
+      "id": "fr02",
+      "texto": "Pero, ¿más inteligente cómo?",
+      "inicio": 7.08,
+      "fin": 9.38,
+      "palabras": [
+        {
+          "p": "Pero,",
+          "i": 7.08,
+          "f": 7.46
+        },
+        {
+          "p": "¿más",
+          "i": 7.68,
+          "f": 8.2
+        },
+        {
+          "p": "inteligente",
+          "i": 8.2,
+          "f": 8.96
+        },
+        {
+          "p": "cómo?",
+          "i": 8.96,
+          "f": 9.38
+        }
+      ]
+    },
+    {
+      "id": "fr03",
+      "texto": "En el primero, el alien aprendía a medias: algunas acciones, como mirar en las taquillas, solo se activaban después de que te le escaparas varias veces.",
+      "inicio": 9.86,
+      "fin": 19.5,
+      "palabras": [
+        {
+          "p": "En",
+          "i": 9.86,
+          "f": 10.24
+        },
+        {
+          "p": "el",
+          "i": 10.24,
+          "f": 10.36
+        },
+        {
+          "p": "primero,",
+          "i": 10.36,
+          "f": 10.72
+        },
+        {
+          "p": "el",
+          "i": 11.12,
+          "f": 11.22
+        },
+        {
+          "p": "alien",
+          "i": 11.22,
+          "f": 11.54
+        },
+        {
+          "p": "aprendía",
+          "i": 11.54,
+          "f": 12.32
+        },
+        {
+          "p": "a",
+          "i": 12.32,
+          "f": 12.76
+        },
+        {
+          "p": "medias:",
+          "i": 12.76,
+          "f": 13.24
+        },
+        {
+          "p": "algunas",
+          "i": 13.6,
+          "f": 14.1
+        },
+        {
+          "p": "acciones,",
+          "i": 14.1,
+          "f": 14.52
+        },
+        {
+          "p": "como",
+          "i": 14.74,
+          "f": 15.02
+        },
+        {
+          "p": "mirar",
+          "i": 15.02,
+          "f": 15.42
+        },
+        {
+          "p": "en",
+          "i": 15.42,
+          "f": 15.54
+        },
+        {
+          "p": "las",
+          "i": 15.54,
+          "f": 15.68
+        },
+        {
+          "p": "taquillas,",
+          "i": 15.68,
+          "f": 16.14
+        },
+        {
+          "p": "solo",
+          "i": 16.44,
+          "f": 16.66
+        },
+        {
+          "p": "se",
+          "i": 16.66,
+          "f": 16.86
+        },
+        {
+          "p": "activaban",
+          "i": 16.86,
+          "f": 17.36
+        },
+        {
+          "p": "después",
+          "i": 17.36,
+          "f": 17.76
+        },
+        {
+          "p": "de",
+          "i": 17.76,
+          "f": 18.08
+        },
+        {
+          "p": "que",
+          "i": 18.08,
+          "f": 18.2
+        },
+        {
+          "p": "te",
+          "i": 18.2,
+          "f": 18.3
+        },
+        {
+          "p": "le",
+          "i": 18.3,
+          "f": 18.38
+        },
+        {
+          "p": "escaparas",
+          "i": 18.38,
+          "f": 18.86
+        },
+        {
+          "p": "varias",
+          "i": 18.86,
+          "f": 19.12
+        },
+        {
+          "p": "veces.",
+          "i": 19.12,
+          "f": 19.5
+        }
+      ]
+    },
+    {
+      "id": "fr04",
+      "texto": "Ahora, el estudio dice que tendrá cosas nuevas que aprender y que cambiará de comportamiento en cada encuentro, para que no repitas trucos.",
+      "inicio": 19.94,
+      "fin": 28.86,
+      "palabras": [
+        {
+          "p": "Ahora,",
+          "i": 19.94,
+          "f": 20.44
+        },
+        {
+          "p": "el",
+          "i": 20.66,
+          "f": 20.9
+        },
+        {
+          "p": "estudio",
+          "i": 20.9,
+          "f": 21.28
+        },
+        {
+          "p": "dice",
+          "i": 21.28,
+          "f": 21.64
+        },
+        {
+          "p": "que",
+          "i": 21.64,
+          "f": 21.8
+        },
+        {
+          "p": "tendrá",
+          "i": 21.8,
+          "f": 22.12
+        },
+        {
+          "p": "cosas",
+          "i": 22.12,
+          "f": 22.6
+        },
+        {
+          "p": "nuevas",
+          "i": 22.6,
+          "f": 23
+        },
+        {
+          "p": "que",
+          "i": 23,
+          "f": 23.24
+        },
+        {
+          "p": "aprender",
+          "i": 23.24,
+          "f": 23.64
+        },
+        {
+          "p": "y",
+          "i": 23.64,
+          "f": 24.28
+        },
+        {
+          "p": "que",
+          "i": 24.28,
+          "f": 24.44
+        },
+        {
+          "p": "cambiará",
+          "i": 24.44,
+          "f": 24.9
+        },
+        {
+          "p": "de",
+          "i": 24.9,
+          "f": 25.04
+        },
+        {
+          "p": "comportamiento",
+          "i": 25.04,
+          "f": 25.86
+        },
+        {
+          "p": "en",
+          "i": 25.86,
+          "f": 26.06
+        },
+        {
+          "p": "cada",
+          "i": 26.06,
+          "f": 26.32
+        },
+        {
+          "p": "encuentro,",
+          "i": 26.32,
+          "f": 27.02
+        },
+        {
+          "p": "para",
+          "i": 27.16,
+          "f": 27.56
+        },
+        {
+          "p": "que",
+          "i": 27.56,
+          "f": 27.7
+        },
+        {
+          "p": "no",
+          "i": 27.7,
+          "f": 27.88
+        },
+        {
+          "p": "repitas",
+          "i": 27.88,
+          "f": 28.36
+        },
+        {
+          "p": "trucos.",
+          "i": 28.36,
+          "f": 28.86
+        }
+      ]
+    },
+    {
+      "id": "fr05",
+      "texto": "Y que reaccionará a todos los objetos y herramientas nuevos.",
+      "inicio": 28.86,
+      "fin": 32.5,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 28.86,
+          "f": 29.5
+        },
+        {
+          "p": "que",
+          "i": 29.5,
+          "f": 29.64
+        },
+        {
+          "p": "reaccionará",
+          "i": 29.64,
+          "f": 30.2
+        },
+        {
+          "p": "a",
+          "i": 30.2,
+          "f": 30.42
+        },
+        {
+          "p": "todos",
+          "i": 30.42,
+          "f": 30.64
+        },
+        {
+          "p": "los",
+          "i": 30.64,
+          "f": 30.84
+        },
+        {
+          "p": "objetos",
+          "i": 30.84,
+          "f": 31.28
+        },
+        {
+          "p": "y",
+          "i": 31.28,
+          "f": 31.56
+        },
+        {
+          "p": "herramientas",
+          "i": 31.56,
+          "f": 32.18
+        },
+        {
+          "p": "nuevos.",
+          "i": 32.18,
+          "f": 32.5
+        }
+      ]
+    },
+    {
+      "id": "fr06",
+      "texto": "Además, habrá exteriores unas diez veces más grandes, en un planeta con tormentas.",
+      "inicio": 33.2,
+      "fin": 38.9,
+      "palabras": [
+        {
+          "p": "Además,",
+          "i": 33.2,
+          "f": 33.68
+        },
+        {
+          "p": "habrá",
+          "i": 33.84,
+          "f": 34.24
+        },
+        {
+          "p": "exteriores",
+          "i": 34.24,
+          "f": 34.84
+        },
+        {
+          "p": "unas",
+          "i": 34.84,
+          "f": 35.34
+        },
+        {
+          "p": "diez",
+          "i": 35.34,
+          "f": 35.74
+        },
+        {
+          "p": "veces",
+          "i": 35.74,
+          "f": 36.18
+        },
+        {
+          "p": "más",
+          "i": 36.18,
+          "f": 36.54
+        },
+        {
+          "p": "grandes,",
+          "i": 36.54,
+          "f": 37
+        },
+        {
+          "p": "en",
+          "i": 37.22,
+          "f": 37.6
+        },
+        {
+          "p": "un",
+          "i": 37.6,
+          "f": 37.72
+        },
+        {
+          "p": "planeta",
+          "i": 37.72,
+          "f": 38.08
+        },
+        {
+          "p": "con",
+          "i": 38.08,
+          "f": 38.32
+        },
+        {
+          "p": "tormentas.",
+          "i": 38.32,
+          "f": 38.9
+        }
+      ]
+    },
+    {
+      "id": "fr07",
+      "texto": "Fuera no dejará de cazarte: usará que estás expuesto para atacar con más agresividad, y el clima para ocultar sus movimientos.",
+      "inicio": 39.28,
+      "fin": 47.32,
+      "palabras": [
+        {
+          "p": "Fuera",
+          "i": 39.28,
+          "f": 39.82
+        },
+        {
+          "p": "no",
+          "i": 39.82,
+          "f": 40.26
+        },
+        {
+          "p": "dejará",
+          "i": 40.26,
+          "f": 40.62
+        },
+        {
+          "p": "de",
+          "i": 40.62,
+          "f": 40.76
+        },
+        {
+          "p": "cazarte:",
+          "i": 40.76,
+          "f": 41.18
+        },
+        {
+          "p": "usará",
+          "i": 41.62,
+          "f": 42.04
+        },
+        {
+          "p": "que",
+          "i": 42.04,
+          "f": 42.18
+        },
+        {
+          "p": "estás",
+          "i": 42.18,
+          "f": 42.4
+        },
+        {
+          "p": "expuesto",
+          "i": 42.4,
+          "f": 42.94
+        },
+        {
+          "p": "para",
+          "i": 42.94,
+          "f": 43.14
+        },
+        {
+          "p": "atacar",
+          "i": 43.14,
+          "f": 43.5
+        },
+        {
+          "p": "con",
+          "i": 43.5,
+          "f": 43.68
+        },
+        {
+          "p": "más",
+          "i": 43.68,
+          "f": 43.96
+        },
+        {
+          "p": "agresividad,",
+          "i": 43.96,
+          "f": 44.56
+        },
+        {
+          "p": "y",
+          "i": 44.56,
+          "f": 45.18
+        },
+        {
+          "p": "el",
+          "i": 45.18,
+          "f": 45.32
+        },
+        {
+          "p": "clima",
+          "i": 45.32,
+          "f": 45.68
+        },
+        {
+          "p": "para",
+          "i": 45.68,
+          "f": 46.06
+        },
+        {
+          "p": "ocultar",
+          "i": 46.06,
+          "f": 46.58
+        },
+        {
+          "p": "sus",
+          "i": 46.58,
+          "f": 46.76
+        },
+        {
+          "p": "movimientos.",
+          "i": 46.76,
+          "f": 47.32
+        }
+      ]
+    },
+    {
+      "id": "fr08",
+      "texto": "Y si lo activas, te oirá por el micrófono. Ahora también en PC. Si ladra tu perro, puede delatarte.",
+      "inicio": 47.58,
+      "fin": 54.34,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 47.58,
+          "f": 47.9
+        },
+        {
+          "p": "si",
+          "i": 47.9,
+          "f": 48.06
+        },
+        {
+          "p": "lo",
+          "i": 48.06,
+          "f": 48.18
+        },
+        {
+          "p": "activas,",
+          "i": 48.18,
+          "f": 48.68
+        },
+        {
+          "p": "te",
+          "i": 48.82,
+          "f": 49.14
+        },
+        {
+          "p": "oirá",
+          "i": 49.14,
+          "f": 49.4
+        },
+        {
+          "p": "por",
+          "i": 49.4,
+          "f": 49.54
+        },
+        {
+          "p": "el",
+          "i": 49.54,
+          "f": 49.68
+        },
+        {
+          "p": "micrófono.",
+          "i": 49.68,
+          "f": 50.18
+        },
+        {
+          "p": "Ahora",
+          "i": 50.4,
+          "f": 50.86
+        },
+        {
+          "p": "también",
+          "i": 50.86,
+          "f": 51.18
+        },
+        {
+          "p": "en",
+          "i": 51.18,
+          "f": 51.38
+        },
+        {
+          "p": "PC.",
+          "i": 51.38,
+          "f": 51.52
+        },
+        {
+          "p": "Si",
+          "i": 51.9,
+          "f": 52.38
+        },
+        {
+          "p": "ladra",
+          "i": 52.38,
+          "f": 52.66
+        },
+        {
+          "p": "tu",
+          "i": 52.66,
+          "f": 52.78
+        },
+        {
+          "p": "perro,",
+          "i": 52.78,
+          "f": 53.16
+        },
+        {
+          "p": "puede",
+          "i": 53.28,
+          "f": 53.76
+        },
+        {
+          "p": "delatarte.",
+          "i": 53.76,
+          "f": 54.34
+        }
+      ]
+    },
+    {
+      "id": "fr09",
+      "texto": "Mi apuesta, y es solo especulación: en el primero se escondía en los conductos. Fuera no hay conductos. A lo mejor, la tormenta es su nuevo escondite.",
+      "inicio": 54.34,
+      "fin": 64.46,
+      "palabras": [
+        {
+          "p": "Mi",
+          "i": 54.34,
+          "f": 54.94
+        },
+        {
+          "p": "apuesta,",
+          "i": 54.94,
+          "f": 55.4
+        },
+        {
+          "p": "y",
+          "i": 55.58,
+          "f": 55.86
+        },
+        {
+          "p": "es",
+          "i": 55.86,
+          "f": 56.02
+        },
+        {
+          "p": "solo",
+          "i": 56.02,
+          "f": 56.18
+        },
+        {
+          "p": "especulación:",
+          "i": 56.18,
+          "f": 56.76
+        },
+        {
+          "p": "en",
+          "i": 57.04,
+          "f": 57.5
+        },
+        {
+          "p": "el",
+          "i": 57.5,
+          "f": 57.62
+        },
+        {
+          "p": "primero",
+          "i": 57.62,
+          "f": 57.92
+        },
+        {
+          "p": "se",
+          "i": 57.92,
+          "f": 58.08
+        },
+        {
+          "p": "escondía",
+          "i": 58.08,
+          "f": 58.33
+        },
+        {
+          "p": "en",
+          "i": 58.33,
+          "f": 58.58
+        },
+        {
+          "p": "los",
+          "i": 58.58,
+          "f": 58.84
+        },
+        {
+          "p": "conductos.",
+          "i": 58.84,
+          "f": 59.5
+        },
+        {
+          "p": "Fuera",
+          "i": 59.78,
+          "f": 60.1
+        },
+        {
+          "p": "no",
+          "i": 60.1,
+          "f": 60.22
+        },
+        {
+          "p": "hay",
+          "i": 60.22,
+          "f": 60.32
+        },
+        {
+          "p": "conductos.",
+          "i": 60.32,
+          "f": 60.9
+        },
+        {
+          "p": "A",
+          "i": 61.06,
+          "f": 61.34
+        },
+        {
+          "p": "lo",
+          "i": 61.34,
+          "f": 61.44
+        },
+        {
+          "p": "mejor,",
+          "i": 61.44,
+          "f": 61.82
+        },
+        {
+          "p": "la",
+          "i": 62.1,
+          "f": 62.48
+        },
+        {
+          "p": "tormenta",
+          "i": 62.48,
+          "f": 63.16
+        },
+        {
+          "p": "es",
+          "i": 63.16,
+          "f": 63.34
+        },
+        {
+          "p": "su",
+          "i": 63.34,
+          "f": 63.44
+        },
+        {
+          "p": "nuevo",
+          "i": 63.44,
+          "f": 63.76
+        },
+        {
+          "p": "escondite.",
+          "i": 63.76,
+          "f": 64.46
+        }
+      ]
+    },
+    {
+      "id": "fr10",
+      "texto": "Todavía no tiene fecha. Pero yo ya estoy mirando a mi perro con desconfianza.",
+      "inicio": 64.8,
+      "fin": 69.28,
+      "palabras": [
+        {
+          "p": "Todavía",
+          "i": 64.8,
+          "f": 65.3
+        },
+        {
+          "p": "no",
+          "i": 65.3,
+          "f": 65.46
+        },
+        {
+          "p": "tiene",
+          "i": 65.46,
+          "f": 65.66
+        },
+        {
+          "p": "fecha.",
+          "i": 65.66,
+          "f": 66
+        },
+        {
+          "p": "Pero",
+          "i": 66.2,
+          "f": 66.74
+        },
+        {
+          "p": "yo",
+          "i": 66.74,
+          "f": 66.98
+        },
+        {
+          "p": "ya",
+          "i": 66.98,
+          "f": 67.34
+        },
+        {
+          "p": "estoy",
+          "i": 67.34,
+          "f": 67.58
+        },
+        {
+          "p": "mirando",
+          "i": 67.58,
+          "f": 67.9
+        },
+        {
+          "p": "a",
+          "i": 67.9,
+          "f": 68
+        },
+        {
+          "p": "mi",
+          "i": 68,
+          "f": 68.06
+        },
+        {
+          "p": "perro",
+          "i": 68.06,
+          "f": 68.38
+        },
+        {
+          "p": "con",
+          "i": 68.38,
+          "f": 68.54
+        },
+        {
+          "p": "desconfianza.",
+          "i": 68.54,
+          "f": 69.28
+        }
+      ]
+    }
+  ],
+  "escenas": []
+}

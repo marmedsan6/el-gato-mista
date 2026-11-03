@@ -193,7 +193,9 @@ def load_token():
 
 
 def caption_of(video):
-    caption = (video['titulo'].strip() + '\n\n' + video['descripcion'].strip()).strip()
+    if video.get('enlace_youtube', '') is None:
+        raise ClipError('El texto de Instagram lleva el enlace a YouTube y el vídeo aún no está allí: sube antes a YouTube (la orden sin --solo).')
+    caption = redes.social_text(video)
     if len(caption) > CAPTION_LIMIT:
         raise ClipError(f'El texto supera los {CAPTION_LIMIT} caracteres de Instagram; acórtalo antes de preparar.')
     if caption.count('#') > 30:
@@ -216,9 +218,10 @@ def container_status(session, version, token, container_id):
     return {'status_code': body.get('status_code'), 'detalle': body.get('status')}
 
 
-def prepare(project, execute=False, session=None, pause=time.sleep, polls=12):
+def prepare(project, execute=False, session=None, pause=time.sleep, polls=12, formato='short'):
     cred_version = _api_version()
-    video = redes.exported_video(project)
+    video = redes.exported_video(project, formato)
+    clave = redes.state_key('instagram', formato)
     caption = caption_of(video)
     token_file = redes.token_path('meta')
     token = None
@@ -230,7 +233,7 @@ def prepare(project, execute=False, session=None, pause=time.sleep, polls=12):
                 raise
     huella = fingerprint(token['ig_user_id'], video, caption) if token else None
     data = redes.record(project)
-    state = data.get('instagram', {})
+    state = data.get(clave, {})
     info = {'destino': 'Instagram Reels (contenedor en Meta, sin publicar)', 'cuenta': token['cuenta'] if token else None, 'archivo': video['ruta'].name,
             'bytes': video['bytes'], 'sha256': video['sha256'], 'texto': caption, 'huella': huella}
     if not execute:
@@ -244,7 +247,7 @@ def prepare(project, execute=False, session=None, pause=time.sleep, polls=12):
 
     def save(value):
         full = redes.record(project)
-        full['instagram'] = value
+        full[clave] = value
         redes.save_record(project, full)
 
     if state.get('estado') == 'publicado' and state.get('huella') == huella:
@@ -321,13 +324,14 @@ def prepare(project, execute=False, session=None, pause=time.sleep, polls=12):
             'siguiente': 'Listo para publicar con la orden de Mario.' if state['estado'] == 'listo' else 'Aún no está listo; repite el comando en un minuto.'}
 
 
-def publish(project, confirmation, session=None):
-    video = redes.exported_video(project)
+def publish(project, confirmation, session=None, formato='short'):
+    video = redes.exported_video(project, formato)
+    clave = redes.state_key('instagram', formato)
     caption = caption_of(video)
     token = load_token()
     version = _api_version()
     expected = fingerprint(token['ig_user_id'], video, caption)
-    state = redes.record(project).get('instagram', {})
+    state = redes.record(project).get(clave, {})
     if not confirmation or confirmation != expected:
         raise ClipError('La huella no coincide con lo que se publicaría (vídeo, texto o cuenta). No se publica.')
     if state.get('huella') != expected or not state.get('container_id'):
@@ -346,7 +350,7 @@ def publish(project, confirmation, session=None):
 
     def save(value):
         full = redes.record(project)
-        full['instagram'] = value
+        full[clave] = value
         redes.save_record(project, full)
 
     state = {**state, 'estado': 'publicando', 'publicando': now()}

@@ -1,0 +1,41 @@
+{
+  "perfil": "es",
+  "formatos": {
+    "short": {
+      "archivo": "salida/short-v1.mp4",
+      "titulo": "Esta IA actúa mientras hablas. En su demo apareció una reserva que la clienta nunca oyó",
+      "descripcion": "Phonic-1 presume de hacer cosas mientras sigues hablando, y en su demo de 44 minutos impresiona. Pero en el registro público, en el minuto 16, aparece una reserva confirmada (RT-4842) en el turno de la clienta. Once segundos después le dicen que a esa hora no hay sitio. No oye ese código y en el registro no aparece ninguna cancelación.\nLos matices importan: todo apunta a un simulador, así que nadie reservó nada de verdad, y no sabemos si se corrige fuera del registro público. Revisado el 31-10-2026.\n\nFuentes:\n- Phonic, demo y registro de la llamada: https://phonic.ai/demo\n- Phonic, anuncio de Phonic-1 (29-10-2026): https://phonic.ai/blog/phonic-1\n- IANA, dominios de ejemplo: https://www.iana.org/help/example-domains\n- JVCE (@Jiler830219) en X, ejemplo y regla: https://x.com/Jiler830219/status/2115865718818234838\n\nMúsica: «Morning Coffee» de Lesiakower (Pixabay Content License).\nEfectos de sonido: Freesound, CC0 (SomeGuy22, OwlStorm, SamsterBirdies, n_audioman, connersaw8, Greenhourglass).\nVoz sintética generada con Gemini TTS (Google).",
+      "tags": [
+        "IA",
+        "Phonic",
+        "Agentes de voz",
+        "Tecnología",
+        "Inteligencia artificial",
+        "Shorts"
+      ],
+      "categoria": "28",
+      "visibilidad": "public",
+      "portada_segundo": 25.5,
+      "made_for_kids": false,
+      "contains_synthetic_media": false
+    },
+    "largo": {
+      "archivo": "salida/largo-v1.mp4",
+      "titulo": "La IA que actúa mientras hablas: lo que encontré en el registro de su propia demo",
+      "descripcion": "Las IA de voz suelen sonar torpes porque son tres máquinas en fila. Phonic-1 promete otra cosa: te oye directamente y puede hacer cosas mientras sigues hablando. Abrí el registro público de su llamada de 44 minutos: impresiona, pero también aparece una reserva confirmada (RT-4842) que la clienta nunca oye y que no se cancela en ese registro.\nLos matices importan: todo apunta a que el hotel es un simulador, nadie reservó nada de verdad, y no sabemos si se corrige fuera del registro público. Recuentos propios sobre la página pública. Revisado el 31-10-2026.\n\nFuentes:\n- Phonic, demo y registro de la llamada: https://phonic.ai/demo\n- Phonic, anuncio de Phonic-1 (29-10-2026): https://phonic.ai/blog/phonic-1\n- Phonic, web: https://phonic.ai/\n- Phonic, documentación de herramientas: https://docs.phonic.ai/docs/build/tools/tools_overview\n- Moin Nadeem (Phonic) en X: https://x.com/moinnadeem/status/2115830871014183088\n- Artificial Analysis, voz a voz: https://artificialanalysis.ai/speech-to-speech\n- Alpha Signal: https://alphasignal.ai/news/mit-founded-phonic-beats-grok-and-gpt-with-fastest-voice-ai-response\n- OpenAI, agentes de voz: https://developers.openai.com/api/docs/guides/voice-agents\n- Soniox, voz a voz frente a cascada: https://soniox.com/wiki/speech-to-speech-models-vs-pipelines\n- Bill Trenchard (First Round, inversor de Phonic) en X: https://x.com/btrenchard/status/2115832143960289653\n- Erick (@ErickSky) en X, origen del tema: https://x.com/ErickSky/status/2115850611258208548\n- JVCE (@Jiler830219) en X, ejemplo y regla: https://x.com/Jiler830219/status/2115865718818234838\n- Reglamento (UE) 2024/1689, art. 50: https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=OJ:L_202401689\n- Economist & Jurist, tras el Ómnibus: https://www.economistjurist.es/zbloque-1/reglamento-europeo-de-ia-tras-el-omnibus-que-obligaciones-y-sanciones-ya-son-exigibles-en-agosto-de-2026/\n- Ley 10/2025 (BOE): https://www.boe.es/buscar/act.php?id=BOE-A-2025-26698\n- IANA, dominios de ejemplo: https://www.iana.org/help/example-domains\n- NANPA, numeración 555: https://www.nanpa.com/numbering/555-line-numbers\n\nClips de audio: llamada de demostración de Phonic, con comentario y traducción propios.\nMúsica: «Morning Coffee» de Lesiakower (Pixabay Content License).\nEfectos de sonido: Freesound, CC0 (SomeGuy22, OwlStorm, SamsterBirdies, n_audioman, connersaw8, Greenhourglass).\nVoz sintética generada con Gemini TTS (Google).",
+      "tags": [
+        "IA",
+        "Phonic",
+        "Agentes de voz",
+        "Tecnología",
+        "Inteligencia artificial",
+        "GPT-Live"
+      ],
+      "categoria": "28",
+      "visibilidad": "public",
+      "portada_segundo": 272,
+      "made_for_kids": false,
+      "contains_synthetic_media": false
+    }
+  }
+}

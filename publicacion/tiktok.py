@@ -178,17 +178,21 @@ def send_inbox(video, state, save, session, pause=time.sleep, polls=12):
     return state
 
 
-def inbox(project, execute=False, only_status=False, session=None):
-    video = redes.exported_video(project)
-    state = redes.record(project).get('tiktok', {})
+def inbox(project, execute=False, only_status=False, session=None, formato='short'):
+    video = redes.exported_video(project, formato)
+    clave = redes.state_key('tiktok', formato)
+    state = redes.record(project).get(clave, {})
 
     def save(value):
         data = redes.record(project)
-        data['tiktok'] = value
+        data[clave] = value
         redes.save_record(project, data)
 
     info = {'destino': 'bandeja de TikTok (borrador): Mario termina el post desde la notificación; no se publica solo',
-            'archivo': video['ruta'].name, 'bytes': video['bytes'], 'sha256': video['sha256'], 'titulo_propuesto': video['titulo']}
+            'archivo': video['ruta'].name, 'bytes': video['bytes'], 'sha256': video['sha256'], 'titulo_propuesto': video['titulo'],
+            # La bandeja no admite texto: Mario lo pega al terminar el post.
+            'texto_para_tiktok': redes.social_text(video) if video.get('enlace_youtube') is not None
+            else redes.social_text(video) + '\n\n(Falta el enlace a YouTube: sube antes a YouTube y repite la orden para tenerlo.)'}
     if only_status:
         if not state.get('publish_id'):
             raise ClipError('Este proyecto todavía no se ha enviado a TikTok.')
@@ -202,4 +206,4 @@ def inbox(project, execute=False, only_status=False, session=None):
     session = session or requests.Session()
     result = send_inbox(video, state, save, session)
     return {**info, 'publish_id': result.get('publish_id'), 'estado': result.get('estado'), 'tiktok': result.get('tiktok'), 'motivo': result.get('motivo'),
-            'siguiente': 'Abre TikTok, toca la notificación de la bandeja y termina el post tú.'}
+            'siguiente': 'Abre TikTok, toca la notificación de la bandeja y termina el post tú, pegando texto_para_tiktok.'}

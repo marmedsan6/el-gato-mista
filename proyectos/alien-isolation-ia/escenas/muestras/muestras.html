@@ -1,0 +1,23 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>alien-isolation-ia · muestras del estilo</title>
+<!-- Fotogramas de prueba del estilo oscuro, el alien y los escenarios nuevos (para aprobar antes de producir).
+     node motor/render.mjs --escena <este html> --ancho 480 --alto 270 --duracion 30 --fotogramas 3.2,13.2,23.2 --incluir motor/estilo --salida <dir>/muestras-largo.mp4
+     node motor/render.mjs --escena <este html> --ancho 270 --alto 480 --duracion 30 --consulta formato=short --fotogramas 3.2,13.2 --incluir motor/estilo --salida <dir>/muestras-short.mp4 -->
+<link rel="stylesheet" href="../../../../motor/estilo/estilo.css">
+<body>
+  <svg class="arte desenfoque" id="fondo"></svg>
+  <svg class="arte" id="medio"></svg>
+  <svg class="arte bloom" id="brillo"></svg>
+  <svg class="arte" id="frente"></svg>
+  <div class="capa vineta" style="background: radial-gradient(ellipse at center, transparent 45%, rgba(0, 0, 0, 0.6) 100%)"></div>
+  <div id="textos"></div>
+  <div class="dialogo con-retrato" id="dialogo" hidden><svg class="retrato" id="retrato"></svg><span class="nombre">Mista</span><span id="frase"></span></div>
+
+  <script src="../../../../motor/estilo/pixel.js"></script>
+  <script src="../../../../motor/estilo/props.js"></script>
+  <script src="../../../../motor/estilo/escenarios.js"></script>
+  <script src="../../../../motor/estilo/gato.js"></script>
+  <script src="../../../../motor/estilo/alien.js"></script>
+  <script src="muestras.js"></script>
+</body>

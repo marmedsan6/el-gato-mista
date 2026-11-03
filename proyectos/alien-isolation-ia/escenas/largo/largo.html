@@ -1,0 +1,25 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>alien-isolation-ia · largo</title>
+<!-- Render: node motor/render.mjs --escena <este html> --ancho 480 --alto 270 --duracion <s>
+            --incluir motor/estilo,proyectos/alien-isolation-ia/escenas/comun --salida proyectos/alien-isolation-ia/render/largo/video.mp4
+     Largo: sin subtítulos en pantalla (SRT aparte); algo nuevo cada 3-8 s. Los clips (k1-k3) leen fotogramas de .runtime. -->
+<link rel="stylesheet" href="../../../../motor/estilo/estilo.css">
+<body class="largo">
+  <svg class="arte desenfoque" id="fondo"></svg>
+  <svg class="arte" id="medio"></svg>
+  <svg class="arte bloom" id="brillo"></svg>
+  <svg class="arte" id="frente"></svg>
+  <div class="capa vineta" style="background: radial-gradient(ellipse at center, transparent 45%, rgba(0, 0, 0, 0.6) 100%)"></div>
+  <div id="textos"></div>
+
+  <script src="../../../../motor/estilo/pixel.js"></script>
+  <script src="../../../../motor/estilo/props.js"></script>
+  <script src="../../../../motor/estilo/escenarios.js"></script>
+  <script src="../../../../motor/estilo/gato.js"></script>
+  <script src="../../../../motor/estilo/alien.js"></script>
+  <script src="../comun/base.js"></script>
+  <script src="../comun/dibujo.js"></script>
+  <script src="timing.js"></script>
+  <script src="largo.js"></script>
+</body>

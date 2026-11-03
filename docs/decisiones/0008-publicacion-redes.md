@@ -38,3 +38,16 @@ baste para salir a todas las redes de una vez.
 - Las páginas legales de la app ya nombran este canal y esta app: no hay que reescribirlas para YouTube (ADR 0003).
 - El largo solo va a YouTube y solo está probado con ficheros de prueba.
 - Los tests de `publicacion/` no los lanza el hook de cierre: `~/.clipping-ia/venv/Scripts/python.exe -X utf8 -m pytest publicacion/tests`.
+
+## Enlaces entre el largo y sus shorts (2026-11-02)
+- Decisión de Mario: cada short enlaza a su largo y el largo a sus shorts; Instagram y TikTok llevan el enlace al largo en
+  YouTube. Lo hace `publicacion/enlaces.py` con las URLs reales de `publicaciones.json`; `publicacion.json` lleva solo el resumen.
+- El largo sube primero y los shorts salen ya con su enlace. La descripción del largo se completa después con
+  `videos.update`, que pide el permiso `youtube.force-ssl` (añadido a `SCOPES` con el sí de Mario). El token se carga con
+  los permisos que tenga: sin ese permiso, la subida sigue funcionando y el largo queda con `enlaces: pendientes`.
+- Para conceder el permiso, Mario reconecta el perfil una vez (abre Google en el navegador y elige el canal Pod 02):
+  `~/.clipping-ia/venv/Scripts/python.exe -X utf8 -m publicacion youtube-conectar <JSON OAuth de ~/.clipping-ia> --perfil es --canal-id UCA76YezyGjv7spjOfRqAKNA`.
+  El token es compartido con `canal-noticias-ia`: si ese proyecto reconecta con sus permisos, este pierde el de edición
+  y lo dirá en `enlaces: pendientes`.
+- El «vídeo relacionado» de un Short no está en la API: se pone en Studio. TikTok no admite texto en la bandeja: el
+  comando devuelve `texto_para_tiktok` para que Mario lo pegue.
