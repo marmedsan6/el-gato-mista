@@ -56,7 +56,7 @@ svg.arte { position: absolute; inset: 0; shape-rendering: crispEdges; }
 
 /* Caja de diálogo JRPG sin avatar (short) */
 .dialogo { position: absolute; left: 16px; width: 208px; top: 300px; height: 62px;
-  background: rgba(23, 30, 42, 0.94); border: 2px solid var(--texto); box-shadow: 0 0 0 1px #000, 2px 2px 0 1px #000;
+  background: #171e2a; /* opaca: con cámara, detrás puede haber objetos (crítica v4) */ border: 2px solid var(--texto); box-shadow: 0 0 0 1px #000, 2px 2px 0 1px #000;
   padding: 7px 8px; font: 500 12px/16px "Dialogo"; font-variant-ligatures: none; color: var(--texto); }
 .dialogo .dicho { color: var(--texto-suave); }
 .dialogo .cursor { position: absolute; right: 6px; bottom: 4px; width: 0; height: 0;
