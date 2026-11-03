@@ -1,0 +1,36 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Calibración v3 · galería de los matices (12 px, profundidad, travelling)</title>
+<!-- Render: node motor/render.mjs --escena <este html> --ancho 270 --alto 480 --duracion 15.4
+            --incluir motor/estilo,proyectos/mithril-ia-medicina/escenas/short-v5 --salida <mp4>
+     Tramo real de Mithril (35,0-50,4 s: los matices), con su voz. Rejilla de arte 90×160 (1 unidad = 12 px de salida). -->
+<link rel="stylesheet" href="../../estilo/estilo.css">
+<style>
+  .oculto { display: none !important; }
+  #base { position: absolute; inset: 0; background: #2a1e17; } /* color del suelo: es lo que se ve bajo la caja en los zooms */
+  /* Mundo de 3 pantallas de ancho (la pared de la galería); la cámara lo desplaza y lo escala */
+  #mundo { position: absolute; left: 0; top: 0; width: 810px; height: 480px; transform-origin: 0 0; }
+  #lejos { filter: blur(2.5px); }          /* pared y techo: muy desenfocados (profundidad de campo) */
+  #delante { filter: blur(3px); }          /* suelo y pedestales cercanos: desenfocados por delante */
+  #textos-ui { position: absolute; inset: 0; }
+</style>
+<body class="short">
+  <div id="base"></div>
+  <div id="mundo">
+    <svg class="arte" id="lejos"></svg>
+    <svg class="arte" id="medio"></svg>
+    <svg class="arte bloom" id="brillo"></svg>
+    <svg class="arte" id="frente"></svg>
+    <svg class="arte" id="delante"></svg>
+    <div id="textos"></div>
+  </div>
+  <div class="capa vineta"></div>
+  <div id="textos-ui"></div>
+  <div class="dialogo con-retrato oculto" id="dialogo"><svg class="retrato" id="retrato"></svg><span class="nombre">Mista</span><span id="frase"></span></div>
+
+  <script src="../../estilo/pixel.js"></script>
+  <script src="../../estilo/v3/gato.js"></script>
+  <script src="../../estilo/camara.js"></script>
+  <script src="../../../proyectos/mithril-ia-medicina/escenas/short-v5/timing.js"></script>
+  <script src="clip.js"></script>
+</body>

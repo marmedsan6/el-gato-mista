@@ -1,0 +1,23 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Calibración v3 · hoja de MISTA sombreado (12 px por píxel)</title>
+<!-- Render: node motor/render.mjs --escena <este html> --ancho 270 --alto 480 --duracion 0.05 --incluir motor/estilo --fotogramas 0
+     6 poses en 2 columnas a 1 unidad = 12 px de salida, y el retrato de la caja de diálogo. -->
+<link rel="stylesheet" href="../../estilo/estilo.css">
+<body class="short" style="background:#2b223d">
+  <svg class="arte" id="hoja"></svg>
+  <script src="../../estilo/pixel.js"></script>
+  <script src="../../estilo/v3/gato.js"></script>
+  <script>
+    const svg = lienzo("hoja");
+    svg.setAttribute("viewBox", "0 0 90 160");
+    window.seek = () => {
+      svg.replaceChildren();
+      rect(svg, 0, 0, 90, 160, "#2b223d");
+      [["pie", 4, 4], ["senalar", 50, 4], ["pensar", 4, 42], ["sorpresa", 50, 42], ["celebrar", 4, 80], ["tocar", 50, 80]]
+        .forEach(([pose, x, y]) => { rect(svg, x - 2, y + 32, 38, 2, "#3a2f52"); gato(svg, x, y, { pose, t: 0.3 }, 1); });
+      retratoGato(svg, 37, 122, { t: 0.3 }, 1);
+    };
+    window.seek(0);
+  </script>
+</body>

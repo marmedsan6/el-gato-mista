@@ -1,41 +1,74 @@
 <!doctype html>
 <meta charset="utf-8">
-<title>Escena · short · plantilla (estilo v1)</title>
-<!-- Copia este fichero como eNN.html. Reglas: docs/estilo.md y docs/criterios.md §1 (contrato seek(t)).
+<title>Escena · short · plantilla (estilo v3)</title>
+<!-- Copia este fichero como eNN.html. Reglas: docs/estilo.md («Estilo vigente») y docs/criterios.md §1 (contrato seek(t)).
+     Estilo v3: todo a 12 px (arte en unidades de un lienzo de 90×160; 1 unidad = 3 px CSS = 12 px de salida),
+     profundidad de campo (lejos y delante desenfocados), conos de luz, objetos y MISTA sombreados, acercamiento lento,
+     zoom solo en las explicaciones core. Ejemplo completo: proyectos/mithril-ia-medicina/escenas/short-v6/.
      Render: node motor/render.mjs --escena <este html> --ancho 270 --alto 480 --duracion <s> --incluir motor/estilo --salida <mp4> -->
 <link rel="stylesheet" href="../../../../motor/estilo/estilo.css">
-<body class="short violeta">
-  <svg class="arte desenfoque" id="fondo"></svg>
-  <svg class="arte bloom" id="brillo"></svg>
-  <svg class="arte" id="frente"></svg>
+<style>
+  .oculto { display: none !important; }
+  #base { position: absolute; inset: 0; background: #14101a; }
+  #mundo { position: absolute; left: 0; top: 0; width: 270px; height: 480px; transform-origin: 0 0; }
+  #lejos { filter: blur(2.5px); }
+  #delante { filter: blur(3px); }
+</style>
+<body class="short">
+  <div id="base"></div>
+  <div id="mundo">
+    <svg class="arte" id="lejos"></svg>
+    <svg class="arte" id="medio"></svg>
+    <svg class="arte bloom" id="brillo"></svg>
+    <svg class="arte" id="frente"></svg>
+    <svg class="arte" id="delante"></svg>
+    <div id="textos">
+      <!-- Textos pegados a un objeto (px CSS; se mueven con la cámara). La fuente lleva data-x para no crecer con el zoom. -->
+      <div class="tarjeta-texto" style="left:30px; top:104px;">Dato: <b style="font-size:16px">42</b></div>
+      <div class="fuente-dato con-fondo" data-x="16" style="left:16px; top:200px;">Fuente: prueba</div>
+    </div>
+  </div>
   <div class="capa vineta"></div>
-
-  <!-- Máx. 2 acentos por escena. Titular arriba a la izquierda; nada en el 12 % superior ni en el 20 % inferior. -->
-  <div class="titular" id="titular" style="left:16px; top:80px;">Titular de <span class="clave">prueba</span></div>
-  <div class="dialogo" id="dialogo"></div>
+  <!-- Interfaz fija: rótulo arriba a la izquierda y caja de diálogo con retrato. Nada en el 12 % superior ni en el 20 % inferior. -->
+  <div class="rotulo" style="left:16px; top:64px;">Titular de <span class="clave">prueba</span></div>
+  <div class="dialogo con-retrato" id="dialogo"><svg class="retrato" id="retrato"></svg><span class="nombre">Mista</span><span id="frase"></span></div>
 
   <script src="../../../../motor/estilo/pixel.js"></script>
+  <script src="../../../../motor/estilo/v3/props.js"></script>
+  <script src="../../../../motor/estilo/v3/escenarios.js"></script>
+  <script src="../../../../motor/estilo/v3/gato.js"></script>
+  <script src="../../../../motor/estilo/camara.js"></script>
   <script>
-    const fondo = lienzo("fondo"), brillo = lienzo("brillo"), frente = lienzo("frente");
+    const W = 270, H = 480, SUELO = 97, MESA = 83; // SUELO y MESA en unidades
+    const L = {};
+    for (const id of ["lejos", "medio", "brillo", "frente", "delante"]) { L[id] = lienzo(id); L[id].setAttribute("viewBox", "0 0 90 160"); }
+    const mundo = document.getElementById("mundo"), textos = document.getElementById("textos");
+    const retrato = document.getElementById("retrato"), frase = document.getElementById("frase");
+    retrato.setAttribute("viewBox", "0 0 34 30");
     tildesPixel();
-    const titular = document.getElementById("titular");
-    const dialogo = document.getElementById("dialogo");
-    // Frase de la caja de diálogo: palabra a palabra cada 0,3 s desde t0; «clave» va en caja de selección.
-    const FRASE = { t0: 0.5, texto: "Texto de prueba palabra a palabra.", clave: "palabra" };
+    // Cámara (px CSS): general; acercamiento lento (12 → 13 px); zoom core a escalones; sale con corte seco.
+    const CAM = crearCamara({ W, H, SX: 135, SY: 180, lineaCaja: 300, planos: [
+      [0, "corte", 1],
+      [0.3, "mover", 13 / 12, 135, 179, 1.5], // acercamiento lento
+      [2.0, "zoom", 1.5, 88, 136], // explicación core: la tarjeta
+      [3.5, "corte", 1],
+    ] });
 
     window.seek = (t) => {
-      [fondo, brillo, frente].forEach((s) => s.replaceChildren());
-      bandas(fondo, 0, 300, ["#1e1727", "#241b33", "#2b2040", "#33264d", "#3b2c58"]);
-      // Entrada por salto (P18): -2, -1, 0 px en 0,15 s
-      const s = t < 0.075 ? -2 : t < 0.15 ? -1 : 0;
-      titular.style.top = `${80 + s}px`;
-      const palabras = FRASE.texto.split(" ");
-      const n = Math.max(0, Math.min(palabras.length, 1 + Math.floor((t - FRASE.t0) / 0.3)));
-      dialogo.hidden = t < FRASE.t0;
-      dialogo.innerHTML = palabras.slice(0, n).map((p, i) => {
-        const c = p === FRASE.clave ? `<span class="sel">${p}<i></i></span>` : p;
-        return i === n - 1 ? c : `<span class="dicho">${c}</span>`;
-      }).join(" ") + (n === palabras.length ? '<span class="cursor"></span>' : "");
+      Object.values(L).forEach((s) => s.replaceChildren());
+      const cam = CAM.en(t);
+      CAM.aplicar(cam, mundo);
+      escenario3("laboratorio", { lejos: L.lejos, medio: L.medio, brillo: L.brillo, delante: L.delante }, t, { suelo: SUELO, mesa: MESA });
+      corcho3(L.medio, 4, 29, 51, 37);
+      tarjeta3(L.frente, 7, 32, 44, 33);
+      matraz3(L.frente, 7, MESA - 11, t, { color: P3.verde, activo: true, semilla: 5 });
+      if (CAM.marcoVisible(cam, 6 * 3, (MESA - 12) * 3, 9 * 3, 13 * 3)) marcoSeleccion(L.frente, 6, MESA - 12, 9, 13);
+      // MISTA solo en el plano general (en los planos de detalle queda fuera de cuadro)
+      if (cam.general) gato(L.frente, 50, SUELO - 32, { pose: "senalar", t, hablando: true, espejo: true }, 1);
+      CAM.fuentesSinZoom(cam, textos, 16, 237);
+      retrato.replaceChildren();
+      retratoGato(retrato, 5, 4.5, { t }, 1.5); // 6 px por píxel: la mitad de 12
+      frase.innerHTML = 'Texto de <span class="sel">prueba<i></i></span>';
     };
     window.seek(0);
   </script>

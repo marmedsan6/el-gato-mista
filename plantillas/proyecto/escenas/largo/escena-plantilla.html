@@ -1,35 +1,82 @@
 <!doctype html>
 <meta charset="utf-8">
-<title>Escena · largo · plantilla (estilo v1)</title>
-<!-- Copia este fichero como eNN.html. Reglas: docs/estilo.md y docs/criterios.md §1 (contrato seek(t)).
-     Render: node motor/render.mjs --escena <este html> --ancho 480 --alto 270 --duracion <s> --incluir motor/estilo --salida <mp4>
-     Largo: sin subtítulos en pantalla (SRT aparte); algo nuevo cada 3-8 s. -->
+<title>Escena · largo · plantilla (estilo v3, 16:9)</title>
+<!-- Copia este fichero como eNN.html. Reglas: docs/estilo.md («Estilo vigente») y docs/criterios.md §1 (contrato seek(t)).
+     Estilo v3 en 16:9 (Mario, 2026-11-03: «misma composición en 16:9»): arte a 12 px en un lienzo de 160×90 unidades
+     (1 unidad = 3 px CSS = 12 px de salida); MISTA en el tercio izquierdo, la idea en el centro-derecha, caja de diálogo
+     abajo a todo el ancho y rótulo arriba a la izquierda. Profundidad de campo, conos de luz y cámara como en el short.
+     Los escenarios de motor/estilo/v3/escenarios.js están dibujados en vertical (90×160): para el largo hay que dibujarlos
+     en 160×90; aquí va una sala genérica de ejemplo.
+     Render: node motor/render.mjs --escena <este html> --ancho 480 --alto 270 --duracion <s> --incluir motor/estilo --salida <mp4> -->
 <link rel="stylesheet" href="../../../../motor/estilo/estilo.css">
-<body class="largo azul">
-  <svg class="arte bloom" id="brillo"></svg>
-  <svg class="arte" id="frente"></svg>
+<style>
+  .oculto { display: none !important; }
+  #base { position: absolute; inset: 0; background: #14101a; }
+  #mundo { position: absolute; left: 0; top: 0; width: 480px; height: 270px; transform-origin: 0 0; }
+  #lejos { filter: blur(2.5px); }
+  #delante { filter: blur(3px); }
+  /* Caja de diálogo del largo: abajo, a todo el ancho con margen de 16 px */
+  body.largo .dialogo { left: 16px; width: 448px; top: 200px; height: 58px; }
+</style>
+<body class="largo">
+  <div id="base"></div>
+  <div id="mundo">
+    <svg class="arte" id="lejos"></svg>
+    <svg class="arte" id="medio"></svg>
+    <svg class="arte bloom" id="brillo"></svg>
+    <svg class="arte" id="frente"></svg>
+    <svg class="arte" id="delante"></svg>
+    <div id="textos">
+      <div class="tarjeta-texto" style="left:216px; top:66px;">Dato: <b style="font-size:16px">42</b></div>
+      <div class="fuente-dato con-fondo" data-x="216" style="left:216px; top:174px;">Fuente: prueba</div>
+    </div>
+  </div>
   <div class="capa vineta"></div>
-
-  <!-- Máx. 2 acentos por escena. Etiquetas junto a su objeto, con línea guía; nunca en las esquinas. -->
-  <div class="titular p8" id="titular" style="left:32px; top:32px;">Título del bloque</div>
-  <div class="etiqueta" id="etiqueta" style="left:200px; top:180px;">Etiqueta</div>
+  <div class="rotulo" style="left:16px; top:16px;">Titular de <span class="clave">prueba</span></div>
+  <div class="dialogo con-retrato" id="dialogo"><svg class="retrato" id="retrato"></svg><span class="nombre">Mista</span><span id="frase"></span></div>
 
   <script src="../../../../motor/estilo/pixel.js"></script>
+  <script src="../../../../motor/estilo/v3/props.js"></script>
+  <script src="../../../../motor/estilo/v3/gato.js"></script>
+  <script src="../../../../motor/estilo/camara.js"></script>
   <script>
-    const brillo = lienzo("brillo"), frente = lienzo("frente");
+    const W = 480, H = 270, SUELO = 64; // SUELO en unidades: MISTA queda justo encima de la caja (y = 200 px CSS)
+    const L = {};
+    for (const id of ["lejos", "medio", "brillo", "frente", "delante"]) { L[id] = lienzo(id); L[id].setAttribute("viewBox", "0 0 160 90"); }
+    const mundo = document.getElementById("mundo"), textos = document.getElementById("textos");
+    const retrato = document.getElementById("retrato"), frase = document.getElementById("frase");
+    retrato.setAttribute("viewBox", "0 0 34 30");
     tildesPixel();
-    const etiqueta = document.getElementById("etiqueta");
+    // Cámara (px CSS): el punto que se explica queda en (SX, SY), sobre la caja de diálogo
+    const CAM = crearCamara({ W, H, SX: 260, SY: 110, lineaCaja: 200, planos: [
+      [0, "corte", 1],
+      [0.3, "mover", 13 / 12, 260, 120, 1.5], // acercamiento lento
+      [2.0, "zoom", 1.25, 270, 111], // explicación core: la tarjeta (en 16:9 cabe a ×1,25 entre el rótulo y la caja)
+      [3.5, "corte", 1],
+    ] });
+
+    function sala(t) { // sala genérica de ejemplo en 160×90 (sustitúyela por el escenario del bloque)
+      bandas(L.lejos, 0, SUELO, ["#2a2140", "#30264a", "#372c53", "#3e325d"]);
+      rect(L.lejos, 0, SUELO - 6, 160, 6, "#2a2140"); rect(L.lejos, 0, SUELO - 6, 160, 1, "#5a4a78");
+      cono3(L.brillo, 90, 0, SUELO, "#5a4630", 0.5);
+      rect(L.delante, 0, SUELO, 160, 90 - SUELO, "#2a1e17");
+      for (let y = SUELO + 3; y < 90; y += 4) rect(L.delante, 0, y, 160, 1, "#3a2a20");
+    }
+    function cono3(brillo, cx, y0, y1, color, abre) {
+      for (let y = y0; y < y1; y += 2) { const a = Math.round(2 + (y - y0) * abre); rect(brillo, cx - a, y, a * 2, 2, color); }
+    }
 
     window.seek = (t) => {
-      [brillo, frente].forEach((s) => s.replaceChildren());
-      // Travelling lento (P11): 2 px base por segundo, a saltos de 1 px
-      const pan = -Math.floor(t * 2);
-      disco(brillo, 240 + pan, 120, 18, "#5b8cff");
-      disco(frente, 240 + pan, 120, 10, "#5b8cff");
-      linea(frente, 240 + pan, 132, 240 + pan, 176, "#8a93a6");
-      etiqueta.style.left = `${200 + pan}px`;
-      // Crecimiento a escalones: el objeto aparece en t = 1 s
-      etiqueta.hidden = t < 1;
+      Object.values(L).forEach((s) => s.replaceChildren());
+      const cam = CAM.en(t);
+      CAM.aplicar(cam, mundo);
+      sala(t);
+      tarjeta3(L.frente, 68, 18, 46, 38); // la idea, en el centro-derecha
+      if (cam.general) gato(L.frente, 12, SUELO - 32, { pose: "senalar", t, hablando: true }, 1); // MISTA en el tercio izquierdo
+      CAM.fuentesSinZoom(cam, textos, 16, 464);
+      retrato.replaceChildren();
+      retratoGato(retrato, 5, 4.5, { t }, 1.5);
+      frase.innerHTML = 'Texto de <span class="sel">prueba<i></i></span>';
     };
     window.seek(0);
   </script>
