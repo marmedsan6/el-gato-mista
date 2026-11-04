@@ -5,7 +5,7 @@ Lo vigente es el **estilo v3** (calibración aprobada por Mario el 2026-11-03, `
 | Tema | Regla vigente | Sustituye a |
 |---|---|---|
 | Personaje | **Gato MISTA de narrador**: atigrado naranja, en escena, con poses, parpadeo, boca y cola; la voz es suya | «Sin personaje» |
-| Caja de diálogo | Con su retrato y la etiqueta «MISTA». El retrato no mueve la boca, solo parpadea. **Opaca** (`panel`) | «Sin avatar», fondo translúcido |
+| Caja de diálogo | Con su retrato y la etiqueta «MISTA». El retrato no mueve la boca, solo parpadea. **Opaca** (`panel`). **Cifras en JetBrains Mono 600** (en Pixelify el 5 se lee como S; Mario, 2026-11-03) | «Sin avatar», fondo translúcido, cifras en Pixelify |
 | Color | Escenarios pixel ilustrados por bloque, paleta ampliada, **3-4 acentos por escena** y objetos temáticos que reaccionan | «Máximo 2 acentos» |
 | Píxel (v3) | **Un solo tamaño de píxel, 12 px de salida**, en escenario, objetos y MISTA: el arte se dibuja en unidades de un lienzo de 90×160 (short) o 160×90 (largo), 1 unidad = 3 px CSS. Retrato del diálogo a 6 px (la mitad). El texto conserva su tipografía (más fino), como la referencia ref-01 | Personaje y objetos ×2, escenario ×1 |
 | Profundidad y luz (v3) | Solo el plano medio nítido (objetos, datos y MISTA); plano lejano y suelo cercano muy desenfocados; conos de luz de foco y polvo en la luz (capa de brillo) | Fondo ligeramente desenfocado |
