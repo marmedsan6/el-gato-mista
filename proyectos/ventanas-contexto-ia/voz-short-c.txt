@@ -1,0 +1,9 @@
+¿Por qué tu IA no puede leer infinito? Por una fiesta.
+Para entender un texto, cada tóquen, cada trozo de palabra, se fija en todos los demás.
+Es como una fiesta en la que cada invitado saluda a todos. Con diez invitados hay cuarenta y cinco saludos. Con mil, casi medio millón.
+Duplicas el texto y ese trabajo se multiplica casi por cuatro. Meta lo dice en su informe de Llama tres: crece de forma cuadrática.
+Segundo problema: la memoria. El modelo guarda una chuleta de cada tóquen que ya ha leído, y crece con cada uno.
+Con los números del modelo más grande de Meta, una sola conversación de un millón de tóquens ocuparía más de quinientos gigas. Para un solo usuario.
+Tercero: casi no hay textos tan largos para practicar. Llama tres aprendió con textos de ocho mil tóquens y solo al final se estiró a ciento veintiocho mil.
+Y cuarto, la factura: una petición de novecientos mil tóquens cuesta cien veces lo que una de nueve mil.
+¿Te interesa saber más? Tengo un vídeo largo en Yutub que explica cómo lo están intentando resolver.

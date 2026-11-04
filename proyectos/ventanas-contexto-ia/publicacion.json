@@ -1,0 +1,49 @@
+{
+  "perfil": "es",
+  "formatos": {
+    "largo": {
+      "archivo": "salida/largo-v3.mp4",
+      "titulo": "Un millón de tokens no es memoria: así funciona (y falla) la ventana de contexto de la IA",
+      "descripcion": "Le das a tu IA un PDF de 300 páginas y se le escapa un dato. No es que sea tonta: trabaja en una mesa, y la mesa tiene un tamaño. Explicamos qué es la ventana de contexto, qué hay en ella sin que lo veas, por qué la IA relee la conversación entera en cada mensaje, por qué hacerla más grande cuesta tanto (la fiesta de los saludos), cuánto cabe hoy en cada modelo, por qué rinden peor mucho antes de llenarla y qué trucos usan las empresas para rodearla. Y si una ventana infinita lo arreglaría todo.",
+      "tags": ["Inteligencia artificial", "Ventana de contexto", "Tokens", "LLM", "ChatGPT", "Claude", "Gemini", "Explicación"],
+      "categoria": "28",
+      "visibilidad": "public",
+      "portada_segundo": 123.0,
+      "made_for_kids": false,
+      "contains_synthetic_media": false
+    },
+    "short-a": {
+      "archivo": "salida/short-a-v4.mp4",
+      "titulo": "¿Sabías que tu IA relee todo cada vez que le escribes?",
+      "descripcion": "Tu IA no te recuerda entre mensajes: relee la conversación entera cada vez. En su mesa también están las instrucciones ocultas, las herramientas, los archivos y su propia respuesta. Cuando se llena, tira lo antiguo o lo resume, y cuanto más hay, peor lo atiende. El consejo: al cambiar de tema, abre un chat nuevo.",
+      "tags": ["Inteligencia artificial", "Ventana de contexto", "ChatGPT", "Claude", "Gemini", "Shorts"],
+      "categoria": "28",
+      "visibilidad": "public",
+      "portada_segundo": 20.0,
+      "made_for_kids": false,
+      "contains_synthetic_media": false
+    },
+    "short-b": {
+      "archivo": "salida/short-b-v4.mp4",
+      "titulo": "¿De verdad tu IA lee un millón de tokens?",
+      "descripcion": "Casi todas las IA punteras anuncian un millón de tokens, unas ocho novelas. Pero que quepa no significa que lo lea bien: en las pruebas, los modelos rinden peor al alargar el texto, y Google da para Gemini 3.1 Pro un 84,9 % a 128.000 tokens y un 26,3 % a un millón. Menos papeles, pero los buenos.",
+      "tags": ["Inteligencia artificial", "Ventana de contexto", "Tokens", "Gemini", "Claude", "Shorts"],
+      "categoria": "28",
+      "visibilidad": "public",
+      "portada_segundo": 32.0,
+      "made_for_kids": false,
+      "contains_synthetic_media": false
+    },
+    "short-c": {
+      "archivo": "salida/short-c-v4.mp4",
+      "titulo": "¿Por qué tu IA no puede leer infinito?",
+      "descripcion": "Para entender un texto, cada token se fija en todos los demás: con 10 invitados hay 45 saludos y con 1.000, casi medio millón. Además, el modelo guarda una chuleta de cada token que crece sin parar, apenas hay textos tan largos para practicar y una petición de 900.000 tokens cuesta cien veces lo que una de 9.000.",
+      "tags": ["Inteligencia artificial", "Ventana de contexto", "Transformer", "Tokens", "Shorts"],
+      "categoria": "28",
+      "visibilidad": "public",
+      "portada_segundo": 14.0,
+      "made_for_kids": false,
+      "contains_synthetic_media": false
+    }
+  }
+}

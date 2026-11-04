@@ -1,0 +1,182 @@
+[
+ {
+  "t": 1.76,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 7.08,
+  "tipo": "error"
+ },
+ {
+  "t": 10.14,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 24.68,
+  "tipo": "destello"
+ },
+ {
+  "t": 37.38,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 48.08,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 53.54,
+  "tipo": "tick"
+ },
+ {
+  "t": 70.54,
+  "tipo": "tick"
+ },
+ {
+  "t": 71.1,
+  "tipo": "destello"
+ },
+ {
+  "t": 77.02,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 83.56,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 93.92,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 103.52,
+  "tipo": "destello"
+ },
+ {
+  "t": 119.36,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 121.82,
+  "tipo": "tick"
+ },
+ {
+  "t": 125.04,
+  "tipo": "tick"
+ },
+ {
+  "t": 134.1,
+  "tipo": "acierto"
+ },
+ {
+  "t": 139.82,
+  "tipo": "destello"
+ },
+ {
+  "t": 152.4,
+  "tipo": "error"
+ },
+ {
+  "t": 155.78,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 189.58,
+  "tipo": "acierto"
+ },
+ {
+  "t": 190.17,
+  "tipo": "destello"
+ },
+ {
+  "t": 193.64,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 221.7,
+  "tipo": "error"
+ },
+ {
+  "t": 245.92,
+  "tipo": "tick"
+ },
+ {
+  "t": 249.28,
+  "tipo": "destello"
+ },
+ {
+  "t": 281.7,
+  "tipo": "acierto"
+ },
+ {
+  "t": 296.53,
+  "tipo": "destello"
+ },
+ {
+  "t": 309.78,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 312.48,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 330.19,
+  "tipo": "destello"
+ },
+ {
+  "t": 370.88,
+  "tipo": "error"
+ },
+ {
+  "t": 377.82,
+  "tipo": "acierto"
+ },
+ {
+  "t": 393.18,
+  "tipo": "tick"
+ },
+ {
+  "t": 412.36,
+  "tipo": "destello"
+ },
+ {
+  "t": 421.24,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 436.84,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 450.98,
+  "tipo": "tick"
+ },
+ {
+  "t": 484.14,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 487.28,
+  "tipo": "destello"
+ },
+ {
+  "t": 511.06,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 521.02,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 529.87,
+  "tipo": "destello"
+ },
+ {
+  "t": 537.86,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 543.64,
+  "tipo": "acierto"
+ }
+]

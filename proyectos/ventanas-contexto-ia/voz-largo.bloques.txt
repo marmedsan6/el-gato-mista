@@ -1,0 +1,116 @@
+# b01 · gancho
+Le das a tu IA un pe de efe de trescientas páginas.
+Le preguntas por tres datos repartidos por el documento. Y puede que uno te lo cambie.
+No es que sea tonta. Es que trabaja en una mesa. Y la mesa tiene un tamaño.
+Hoy te explico qué es esa mesa, que en la jerga se llama ventana de contexto. Por qué tiene tope. Por qué rinde peor antes de llenarse. Y si una mesa infinita lo arreglaría todo.
+Espóiler: no del todo.
+@pausa 0.7
+# b02 · la mesa de trabajo
+Una IA como Chat ge pe te, Clod o Yémini sabe muchas cosas. Las aprendió durante su entrenamiento, y ese conocimiento ya no cambia cuando hablas con ella.
+Pero para contestarte usa otra cosa: lo que tiene delante en ese momento.
+Yo lo veo como mi mesa. Lo que sé, lo llevo en la cabeza. Pero solo puedo trabajar con los papeles que están encima de la mesa.
+Y en esa mesa no caben palabras, sino tóquens: trozos de palabra.
+En los modelos nuevos de Antrópic, un millón de tóquens son unas quinientas cincuenta y cinco mil palabras. O sea, algo más de media palabra por tóquen.
+Y ojo, porque según el idioma el mismo texto puede gastar bastantes más tóquens. El inglés suele salir más barato.
+¿Y cuánto cabe? Hoy, en los modelos punteros, alrededor de un millón de tóquens.
+Google lo traduce a unas ocho novelas.
+@pausa 0.7
+# b03 · lo que hay en la mesa sin que lo veas
+Ahora viene lo que casi nadie sabe. En la mesa no está solo lo que tú escribes.
+Están las instrucciones que la empresa le da a la IA y que tú no ves. Las herramientas que puede usar. Los archivos que le subes.
+Y su propia respuesta. Lo que escribe también ocupa sitio en la mesa, y en el siguiente mensaje pasa a ser parte de lo que lee.
+Y otra cosa: la IA no recuerda entre mensajes. Cada vez que le escribes, relee la conversación entera desde el principio.
+Es como si cada mañana me despertara sin recuerdos y me leyera de un tirón el diario de toda la conversación antes de contestarte.
+@pausa 0.7
+# b04 · la fiesta de los saludos
+¿Y cómo lee todo eso? Con algo que se llama atención. Es el corazón del Transfórmer, el diseño en el que se basan casi todas estas IA.
+La idea es que cada tóquen se fija en todos los demás para entender qué significa.
+Imagínatelo como una fiesta en la que cada invitado tiene que saludar a todos los demás.
+Con diez invitados hay cuarenta y cinco saludos. Con mil invitados, casi medio millón.
+Si duplicas los invitados, los saludos se multiplican casi por cuatro.
+Y un millón de tóquens es una fiesta de un millón de invitados. Ahí ya hablamos de unos quinientos mil millones de saludos.
+Guárdate esta fiesta, porque explica casi todo lo que viene ahora.
+@pausa 0.7
+# b05 · cuándo lo notas
+Seguro que te ha pasado: una conversación muy larga y, de repente, la IA parece olvidar lo que le dijiste al principio.
+Pueden estar pasando tres cosas distintas.
+La primera: la mesa se ha llenado y la ap tira los papeles más antiguos para hacer sitio.
+La segunda: la ap ha resumido lo anterior para seguir. Clod lo hace en sus planes de pago, y Clod Coud, cuando la conversación se acerca al límite.
+Pero un resumen, como el acta de una reunión, pierde matices.
+Y la tercera es la más curiosa: todo sigue en la mesa, pero la IA lo atiende peor cuanto más hay.
+En dos mil veintitrés, un estudio vio que los modelos usaban mejor lo que estaba al principio y al final, y peor lo del medio.
+Como en un concierto largo: te acuerdas de la primera canción y de la última.
+Hoy ese efecto ha bajado bastante. Pero el otro, el de rendir peor con más texto, sigue ahí.
+Mi consejo de profe, y también el de Google: cuando cambies de tema, abre un chat nuevo.
+@pausa 0.7
+# b06 · por qué tiene tope
+¿Y por qué no hacen la mesa infinita? Porque choca con cuatro muros.
+El primero es la fiesta. Si cada tóquen saluda a todos, el trabajo crece con el cuadrado del texto.
+Meta lo dice en su informe de Llama tres: no entrenaron con textos largos desde el principio porque el cálculo de la atención crece de forma cuadrática.
+El segundo muro es la memoria. Para no rehacer cuentas, el modelo guarda una especie de chuleta de cada tóquen que ya ha leído. Y esa chuleta engorda con cada tóquen.
+Con los números que publica Meta de su modelo más grande, la chuleta de una sola conversación de un millón de tóquens ocuparía más de quinientos gigas de memoria. Para un solo usuario.
+El tercer muro es la práctica. Casi no hay textos tan largos para entrenar.
+Llama tres aprendió con textos de unos ocho mil tóquens, y solo al final se le estiró hasta ciento veintiocho mil, con un cinco por ciento de todo su entrenamiento.
+Es como un corredor que siempre ha entrenado carreras de cinco kilómetros. Puede apuntarse a un maratón. Otra cosa es que lo termine bien.
+Y el cuarto muro es la factura. Aunque el precio por tóquen no cambie, una petición de novecientos mil tóquens cuesta cien veces lo que una de nueve mil.
+@pausa 0.7
+# b07 · de 512 a un millón
+Con todo eso, la mesa ha crecido muchísimo.
+En dos mil dieciocho, ge pe te uno trabajaba con quinientos doce tóquens.
+En dos mil veinte, ge pe te tres, con dos mil cuarenta y ocho.
+Y en dos mil veintitrés llegó el gran salto. En un solo año pasamos de los ocho mil de ge pe te cuatro a los cien mil de Clod y los doscientos mil de Clod dos punto uno.
+En dos mil veinticuatro, Yémini uno punto cinco Pro llegó al millón, y después a dos millones.
+Y en dos mil veinticinco, Open ei ai llegó al millón con ge pe te cuatro punto uno.
+De quinientos doce a un millón son unas dos mil veces más en ocho años.
+Pero aquí viene lo raro. Épok ei ai calcula que, desde dos mil veintitrés, las ventanas crecían unas treinta veces al año.
+Y sin embargo, desde dos mil veinticuatro, el techo de los grandes modelos casi no se ha movido.
+@pausa 0.7
+# b08 · noviembre de 2026
+Así está la mesa hoy.
+Antrópic, Open ei ai, Google y Dipsik: alrededor de un millón de tóquens en sus modelos punteros.
+equis ei ai se queda en quinientos mil con Grok cuatro punto siete, la mitad que Grok cuatro punto tres.
+Y Meta anuncia diez millones en Llama cuatro Scaut.
+El millón se ha vuelto el estándar. Y lo más nuevo no siempre es lo más grande: Yémini tenía dos millones en dos mil veinticuatro y hoy tiene uno.
+Ojo también con la ap: en Yémini, sin plan de pago, la ventana es de treinta y dos mil tóquens.
+@pausa 0.7
+# b09 · cabe, pero no lo lee
+Y ahora, la pregunta de verdad: ¿usan bien lo que cabe?
+La respuesta corta es que no del todo.
+Croma probó dieciocho modelos. Con la misma tarea, solo alargando el texto, todos rindieron peor.
+Ya en dos mil veinticuatro, Envidia vio que de los modelos que decían aguantar treinta y dos mil tóquens o más, solo la mitad lo hacía bien.
+Otro estudio, Nolima, probó trece modelos que anuncian ciento veintiocho mil tóquens o más. A treinta y dos mil, once de ellos ya rendían menos de la mitad que con textos cortos.
+Y Google dice de su propio Yémini tres punto uno Pro que acierta un ochenta y cuatro coma nueve por ciento en una prueba difícil a ciento veintiocho mil tóquens, pero solo un veintiséis coma tres por ciento a un millón.
+La mejora existe: en esa misma prueba, Clod Opus cuatro punto seis sacó un setenta y seis por ciento a un millón, cuando Sónet cuatro punto cinco sacaba un dieciocho coma cinco por ciento.
+Pero son cifras que dan las propias empresas.
+Y Épok ei ai ve lo mismo desde fuera: la longitud a la que los mejores modelos aciertan un ochenta por ciento se multiplicó por más de doscientos cincuenta en nueve meses.
+Lo que crece ahora no es tanto la mesa como lo bien que se usa.
+Así que la cifra de la etiqueta es el tamaño de la mesa. No lo que la IA es capaz de leer bien encima de ella.
+Por eso Antrópic habla de ingeniería de contexto: dar a la IA el menor número posible de tóquens, pero los que importan.
+@pausa 0.7
+# b10 · cómo se rodea hoy
+Y como la mesa no da para todo, las empresas hacen trucos.
+El primero es el bibliotecario. En vez de ponerte la biblioteca entera en la mesa, te trae solo las fichas que tienen que ver con tu pregunta. Se llama rag.
+Sale mucho más barato. Aunque, si sobran recursos, poner todo el documento en la mesa suele dar mejores respuestas.
+El segundo es el resumen: cuando la mesa se llena, la IA escribe un resumen de lo anterior y sigue con eso.
+Es como un punto de guardado en el que, en vez de guardar la partida entera, el personaje deja una nota de lo que ha pasado.
+El tercero son los becarios. La IA reparte el trabajo entre varias IA, cada una con su mesa limpia, y cada una le devuelve solo un resumen.
+Antrópic lo probó: rindió un noventa por ciento mejor que una sola IA en su prueba interna, pero gastó unas quince veces más tóquens.
+Y luego están los que tocan el motor por dentro. Dipsik hace que cada tóquen no salude a todos, sino solo a los que parecen importantes.
+Y otros mezclan la atención con capas que no releen todo, sino que van resumiendo sobre la marcha, como Mamba. Su coste crece en línea recta, no al cuadrado.
+Es como llevar un cuaderno que vas reescribiendo: nunca se llena, pero los detalles viejos se emborronan.
+Por eso varias de estas mezclas, como las de Chuen, conservan una de cada cuatro capas con la atención de siempre.
+Y no todos lo tienen claro: Minimax probó atajos de este tipo y volvió a la atención completa, porque en textos largos fallaban.
+@pausa 0.7
+# b11 · ¿y si fuera infinita?
+Entonces, ¿hay que tirar el Transfórmer para tener una mesa más grande?
+Para unos pocos millones de tóquens, no. Basta con retocarlo o mezclarlo, como ya hacen.
+Para una mesa de verdad infinita, sí cambia la cosa. Si la chuleta crece con cada tóquen, ningún ordenador da para siempre: en algún momento hay que resumir u olvidar.
+Y aun así, una mesa infinita no resolvería todo.
+Opinión. Darío Amodéi, que dirige Antrópic, cree que un millón de tóquens ya equivale a días de aprendizaje humano, y que llegar a cien millones es cuestión de ingeniería.
+Opinión. Andréi Karpazi, que estuvo en los comienzos de Open ei ai, cree que lo que les falta es otra cosa: aprender de verdad con la experiencia, como hacemos nosotros.
+@pausa 0.7
+# b12 · cierre
+Yo me quedo con esto.
+La mesa de tu IA es enorme, pero la usa peor de lo que dice la etiqueta.
+Cuanto mejor elijas lo que le pones delante, mejor te contestará.
+Y una mesa infinita no es lo mismo que un gato que aprende.

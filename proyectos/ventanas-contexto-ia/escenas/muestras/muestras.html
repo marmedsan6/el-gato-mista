@@ -1,0 +1,44 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>ventanas-contexto-ia · muestras del primer largo en estilo v3</title>
+<!-- Fotogramas de prueba para aprobar el aspecto antes de producir (no son escenas del vídeo).
+     node motor/render.mjs --escena <este html> --ancho 480 --alto 270 --duracion 40 --fotogramas 3.2,13.2,23.2,33.2 --incluir motor/estilo --salida <dir>/muestras-largo.mp4
+     node motor/render.mjs --escena <este html> --ancho 270 --alto 480 --duracion 10 --consulta formato=short --fotogramas 3.2 --incluir motor/estilo --salida <dir>/muestras-short.mp4 -->
+<link rel="stylesheet" href="../../../../motor/estilo/estilo.css">
+<style>
+  .oculto { display: none !important; }
+  #base { position: absolute; inset: 0; background: #14101a; }
+  #mundo { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+  body.largo #mundo { width: 480px; height: 270px; }
+  body.short #mundo { width: 270px; height: 480px; }
+  #lejos { filter: blur(2.5px); }
+  #delante { filter: blur(3px); }
+  #textos-ui { position: absolute; inset: 0; }
+  body.largo .dialogo { left: 16px; width: 448px; top: 200px; height: 58px; }
+</style>
+<body>
+  <div id="base"></div>
+  <div id="mundo">
+    <svg class="arte" id="lejos"></svg>
+    <svg class="arte" id="medio"></svg>
+    <svg class="arte bloom" id="brillo"></svg>
+    <svg class="arte" id="frente"></svg>
+    <svg class="arte" id="delante"></svg>
+    <div id="textos"></div>
+  </div>
+  <div class="capa vineta"></div>
+  <div id="textos-ui"></div>
+  <div class="dialogo con-retrato" id="dialogo"><svg class="retrato" id="retrato"></svg><span class="nombre">Mista</span><span id="frase"></span></div>
+
+  <script>
+    document.body.className = new URLSearchParams(location.search).get("formato") === "short" ? "short" : "largo";
+  </script>
+  <script src="../../../../motor/estilo/pixel.js"></script>
+  <script src="../../../../motor/estilo/v3/props.js"></script>
+  <script src="../../../../motor/estilo/v3/escenarios.js"></script>
+  <script src="../../../../motor/estilo/v3/gato.js"></script>
+  <script src="../../../../motor/estilo/camara.js"></script>
+  <script src="../comun/escenarios.js"></script>
+  <script src="../comun/objetos.js"></script>
+  <script src="muestras.js"></script>
+</body>

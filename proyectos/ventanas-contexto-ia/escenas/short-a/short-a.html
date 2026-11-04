@@ -1,0 +1,43 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>ventanas-contexto-ia · short-a (estilo v3)</title>
+<!-- Render: node motor/render.mjs --escena <este html> --ancho 270 --alto 480 --duracion <s>
+            --incluir motor/estilo,proyectos/ventanas-contexto-ia/escenas/comun --salida proyectos/ventanas-contexto-ia/render/short-a/video.mp4 -->
+<link rel="stylesheet" href="../../../../motor/estilo/estilo.css">
+<style>
+  .oculto { display: none !important; }
+  #base { position: absolute; inset: 0; background: #14101a; }
+  #mundo { position: absolute; left: 0; top: 0; width: 270px; height: 480px; transform-origin: 0 0; }
+  #lejos { filter: blur(2.5px); }
+  #delante { filter: blur(3px); }
+  #textos-ui { position: absolute; inset: 0; }
+  .cifra { font-family: "Mono"; font-weight: 600; font-size: 1.25em; line-height: 1; } .cifra .cifra { font-size: 1em; } /* cifras de etiquetas: a 360 px el 8 de Press Start se lee S */
+
+</style>
+<body class="short">
+  <div id="base"></div>
+  <div id="mundo">
+    <svg class="arte" id="lejos"></svg>
+    <svg class="arte" id="medio"></svg>
+    <svg class="arte bloom" id="brillo"></svg>
+    <svg class="arte" id="frente"></svg>
+    <svg class="arte" id="delante"></svg>
+    <div id="textos"></div>
+  </div>
+  <div class="capa vineta"></div>
+  <div id="textos-ui"></div>
+  <div class="dialogo con-retrato oculto" id="dialogo"><svg class="retrato" id="retrato"></svg><span class="nombre">Mista</span><span id="frase"></span></div>
+
+  <script src="../../../../motor/estilo/pixel.js"></script>
+  <script src="../../../../motor/estilo/v3/props.js"></script>
+  <script src="../../../../motor/estilo/v3/escenarios.js"></script>
+  <script src="../../../../motor/estilo/v3/gato.js"></script>
+  <script src="../../../../motor/estilo/camara.js"></script>
+  <script src="../comun/escenarios.js"></script>
+  <script src="../comun/objetos.js"></script>
+  <script src="../comun/base.js"></script>
+  <script src="../comun/dibujo.js"></script>
+  <script src="timing.js"></script>
+  <script src="../comun/short.js"></script>
+  <script src="short-a.js"></script>
+</body>

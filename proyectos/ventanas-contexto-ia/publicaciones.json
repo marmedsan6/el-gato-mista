@@ -1,0 +1,48 @@
+{
+  "historias": {
+    "b950301ee16132a2355faf22b597f1c25ce48e40e22a49bfd1cc970500f06ab7": {
+      "video_id": "fWmsOfEmQco",
+      "channel_id": "UCA76YezyGjv7spjOfRqAKNA",
+      "sha256": "8f3ec7db25760e3b13f9702f5c21bbe96ffff7faf22e425659d652d2a5f72829",
+      "formato": "largo",
+      "fecha": "2026-11-03T23:03:54.280058+00:00",
+      "url": "https://www.youtube.com/watch?v=fWmsOfEmQco",
+      "body_sha256": "da7e8d1d36a4d692c229124a0c627142332d53e3ff6d03a248954379b8aaec1e",
+      "descripcion_enviada": "Le das a tu IA un PDF de 300 páginas y se le escapa un dato. No es que sea tonta: trabaja en una mesa, y la mesa tiene un tamaño. Explicamos qué es la ventana de contexto, qué hay en ella sin que lo veas, por qué la IA relee la conversación entera en cada mensaje, por qué hacerla más grande cuesta tanto (la fiesta de los saludos), cuánto cabe hoy en cada modelo, por qué rinden peor mucho antes de llenarla y qué trucos usan las empresas para rodearla. Y si una ventana infinita lo arreglaría todo.",
+      "portada_sha256": "1f1aef807641e36efe7269c46c417e5ba95fcec3aacffa4e96fa931b3b1fb37d"
+    },
+    "fc84d7f323812732327c508a0f23686cc40b357c323f029043eb639d4ce1e5d2": {
+      "video_id": "jCICTg4pp58",
+      "channel_id": "UCA76YezyGjv7spjOfRqAKNA",
+      "sha256": "523f4855211171fb2a3b2bd8fc9fd979df8a107491e7ff0a142c4a03edc03705",
+      "formato": "short-a",
+      "fecha": "2026-11-03T23:03:59.075396+00:00",
+      "url": "https://www.youtube.com/watch?v=jCICTg4pp58",
+      "body_sha256": "ffff84866aee3c6d42557541d75838a492e8df3136be757a903529396f0ea00b",
+      "descripcion_enviada": "Tu IA no te recuerda entre mensajes: relee la conversación entera cada vez. En su mesa también están las instrucciones ocultas, las herramientas, los archivos y su propia respuesta. Cuando se llena, tira lo antiguo o lo resume, y cuanto más hay, peor lo atiende. El consejo: al cambiar de tema, abre un chat nuevo.\n\nVídeo completo: https://www.youtube.com/watch?v=fWmsOfEmQco",
+      "portada_sha256": "e822fe74961df046ea1dff70d91778d2e1533fbf150ff6f4ab6ac45fa9b84d88"
+    },
+    "6d0b383c6eb92cf5ca5dceb22c783cededc493129b94bad6e175f3171604a9cb": {
+      "video_id": "A8vT7mAGeW0",
+      "channel_id": "UCA76YezyGjv7spjOfRqAKNA",
+      "sha256": "6db99e5db94145f2b3ebfe8481a85000ea6229c01449796541383051100f5b0f",
+      "formato": "short-b",
+      "fecha": "2026-11-03T23:04:04.772099+00:00",
+      "url": "https://www.youtube.com/watch?v=A8vT7mAGeW0",
+      "body_sha256": "973d0fac3addc21b86ab9c27b3eb6327b26bdde101141efda3ba01b5260094ad",
+      "descripcion_enviada": "Casi todas las IA punteras anuncian un millón de tokens, unas ocho novelas. Pero que quepa no significa que lo lea bien: en las pruebas, los modelos rinden peor al alargar el texto, y Google da para Gemini 3.1 Pro un 84,9 % a 128.000 tokens y un 26,3 % a un millón. Menos papeles, pero los buenos.\n\nVídeo completo: https://www.youtube.com/watch?v=fWmsOfEmQco",
+      "portada_sha256": "1024a04102c787d55545a6196e657a55387c0e61fcd9e44913b01ad336130e1e"
+    },
+    "4ca3b5ed8fa7d137cf73c6baa57641b2d209c58e4c9a34fabf0c14c679d96b99": {
+      "video_id": "h4a993NyXiw",
+      "channel_id": "UCA76YezyGjv7spjOfRqAKNA",
+      "sha256": "970f2201b93ac45ef20dc0db7253702168237f1aa5b9aff0d9f8b212ade0a813",
+      "formato": "short-c",
+      "fecha": "2026-11-03T23:04:09.900164+00:00",
+      "url": "https://www.youtube.com/watch?v=h4a993NyXiw",
+      "body_sha256": "14d86f6692f113e005c70d2c21f6cc541a7133bcfe2fad6a1b26206abdc7c429",
+      "descripcion_enviada": "Para entender un texto, cada token se fija en todos los demás: con 10 invitados hay 45 saludos y con 1.000, casi medio millón. Además, el modelo guarda una chuleta de cada token que crece sin parar, apenas hay textos tan largos para practicar y una petición de 900.000 tokens cuesta cien veces lo que una de 9.000.\n\nVídeo completo: https://www.youtube.com/watch?v=fWmsOfEmQco",
+      "portada_sha256": "77c18daf764ed0d5205acc5c0064d393cd8bf2628678571fb88e0442a11a3aa4"
+    }
+  }
+}

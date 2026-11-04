@@ -1,0 +1,9 @@
+Cada vez que le escribes a tu IA, se relee la conversación entera. Desde el principio.
+No te recuerda entre mensajes. Trabaja con lo que tiene delante, como en una mesa. Se llama ventana de contexto.
+Y en esa mesa no está solo lo que tú escribes.
+Están las instrucciones que la empresa le da y que tú no ves, las herramientas que puede usar, los archivos que le subes.
+Y su propia respuesta, que también ocupa sitio y en el siguiente mensaje pasa a ser parte de lo que lee.
+¿Y cuando la mesa se llena? Unas apps tiran lo más antiguo. Otras lo resumen, y un resumen pierde detalles.
+Pero hay algo peor: aunque todo quepa, cuanto más hay en la mesa, peor lo atiende.
+Por eso Google da un consejo muy sencillo: cuando cambies de tema, abre un chat nuevo.
+¿Te interesa saber más? Tengo un vídeo largo en Yutub que explica la mesa entera.

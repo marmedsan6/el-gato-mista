@@ -1,0 +1,9 @@
+Casi todas las IA punteras anuncian un millón de tóquens. Unas ocho novelas.
+Pero que quepa no significa que lo lea bien.
+Croma probó dieciocho modelos. Con la misma tarea, solo alargando el texto, todos rindieron peor.
+Otro estudio probó trece modelos que anuncian ciento veintiocho mil tóquens o más. A treinta y dos mil, once ya rendían menos de la mitad que con textos cortos.
+Y Google dice de su propio Yémini tres punto uno Pro que acierta un ochenta y cuatro coma nueve por ciento en una prueba difícil a ciento veintiocho mil tóquens. A un millón, un veintiséis coma tres por ciento.
+Ha mejorado, sí: en esa prueba, Clod Opus cuatro punto seis llegó al setenta y seis por ciento a un millón. Pero son cifras de las propias empresas.
+Así que el millón es el tamaño de la mesa. No lo que la IA lee bien encima de ella.
+Mi consejo: dale solo lo que importa. Menos papeles, pero los buenos.
+¿Te interesa saber más? Tengo un vídeo largo en Yutub que explica por qué pasa esto.
