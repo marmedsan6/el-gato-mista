@@ -47,3 +47,7 @@ node_modules/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Hojas de efectos de pixelfx: se regeneran con node motor/fx-exportar.mjs
+motor/estilo/v3/fx/*.png
+.fx-tmp/
