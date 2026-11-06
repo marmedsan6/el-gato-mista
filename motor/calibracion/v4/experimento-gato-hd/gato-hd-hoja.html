@@ -1,0 +1,29 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Calibración v4 · MISTA con más detalle (mismo diseño, 64×64 a 6 px) frente al v3</title>
+<!-- Render: node motor/render.mjs --escena <este html> --ancho 270 --alto 480 --duracion 0.05 --incluir motor/estilo --fotogramas 0.3
+     Izquierda: v3 (12 px). Derecha: HD (6 px). Filas: pie, señalar, pensar, sorpresa, celebrar, tocar; abajo, espejo y retratos. -->
+<link rel="stylesheet" href="../../../estilo/estilo.css">
+<body class="short" style="background:#2b223d">
+  <svg class="arte" id="hoja"></svg>
+  <script src="../../../estilo/pixel.js"></script>
+  <script src="../../../estilo/v3/gato.js"></script>
+  <script src="gato-hd.js"></script>
+  <script>
+    const svg = lienzo("hoja");
+    svg.setAttribute("viewBox", "0 0 90 160");
+    window.seek = (t) => {
+      svg.replaceChildren();
+      rect(svg, 0, 0, 90, 160, "#2b223d");
+      [["pie", 0], ["senalar", 1], ["pensar", 2]].forEach(([pose, k]) => {
+        gato(svg, 2, 2 + k * 34, { pose, t }, 1);
+        gatoHD(svg, 50, 2 + k * 34, { pose, t }, 1);
+      });
+      gatoHD(svg, 2, 104, { pose: "tocar", t }, 1);
+      gatoHD(svg, 52, 104, { pose: "senalar", t, espejo: true }, 1);
+      retratoGato(svg, 10, 142, { t }, 1);
+      retratoGatoHD(svg, 54, 142, { t }, 1);
+    };
+    window.seek(0.3);
+  </script>
+</body>

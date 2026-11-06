@@ -1,0 +1,73 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Calibración v4 · opciones de detalle de MISTA (?op=actual|A|B|C)</title>
+<!-- Render: node motor/render.mjs --escena <este html> --ancho 270 --alto 480 --duracion 0.05 --incluir motor/estilo,motor/calibracion/v4
+            --consulta op=A --fotogramas 1.0 --salida <mp4>
+     Sprites de herramientas/gato_procedural.py: A = 48 filas a 12 px; B = 64×64 a 6 px; C = las 48 filas a 8 px; actual = v3 (32×32 a 12 px). -->
+<link rel="stylesheet" href="../../estilo/estilo.css">
+<style>
+  #lejos { filter: blur(2.5px); }
+  #delante { filter: blur(3px); }
+  image { image-rendering: pixelated; }
+</style>
+<body class="short">
+  <svg class="arte" id="lejos"></svg>
+  <svg class="arte" id="medio"></svg>
+  <svg class="arte bloom" id="brillo"></svg>
+  <svg class="arte" id="frente"></svg>
+  <svg class="arte" id="delante"></svg>
+  <div class="capa vineta"></div>
+  <div class="rotulo" id="rotulo" style="left:16px; top:64px;"></div>
+  <div class="dialogo con-retrato" id="dialogo"><svg class="retrato" id="retrato"></svg><span class="nombre">Mista</span><span id="frase"></span></div>
+
+  <script src="../../estilo/pixel.js"></script>
+  <script src="../../estilo/v3/props.js"></script>
+  <script src="../../estilo/v3/escenarios.js"></script>
+  <script src="../../estilo/v3/gato.js"></script>
+  <script>
+    const SUELO = 97, MESA = 85, NS = "http://www.w3.org/2000/svg";
+    const op = new URLSearchParams(location.search).get("op") || "actual";
+    const L = {};
+    for (const id of ["lejos", "medio", "brillo", "frente", "delante"]) { L[id] = lienzo(id); L[id].setAttribute("viewBox", "0 0 90 160"); }
+    const retrato = document.getElementById("retrato");
+    retrato.setAttribute("viewBox", "0 0 34 30");
+    // [imagen, unidades por píxel del sprite (1 unidad = 12 px de salida), x, y en unidades]
+    const OPCION = {
+      A: ["gato/a48.png", 1, 40, SUELO - 48, "Opción A · 48 filas a 12 px"],
+      B: ["gato/b64.png", 0.5, 52, SUELO - 32, "Opción B · 64×64 a 6 px"],
+      C: ["gato/a48.png", 2 / 3, 52, SUELO - 32, "Opción C · 48 filas a 8 px"],
+      B2: ["gato/b64.png", 0.5, 54, SUELO - 32, "Boceto · 64×64 a 6 px"],
+      D: ["gato/b80.png", 0.5, 48, SUELO - 40, "Boceto · 80×80 a 6 px"],
+      M: ["gato/mezcla64.png", 0.5, 54, SUELO - 32, "Mezcla · 64×64 a 6 px", "gato/mezcla-retrato.png"],
+      L: ["gato/leo64.png", 0.5, 54, SUELO - 32, "Tu gato · 64×64 a 6 px", "gato/leo-r20.png", "gato/mezcla64.png", "gato/mezcla-retrato.png"],
+    }[op];
+    const listo = Promise.all(["gato/a48.png", "gato/b64.png", "gato/b80.png", "gato/r20.png", "gato/leo64.png", "gato/leo-r20.png"].map((s) => { const i = new Image(); i.src = s; return i.decode(); }));
+    function imagen(svg, href, x, y, w, h) {
+      const im = document.createElementNS(NS, "image");
+      Object.entries({ href, x, y, width: w, height: h }).forEach(([k, v]) => im.setAttribute(k, v));
+      svg.appendChild(im);
+    }
+    window.seek = async (t) => {
+      await listo;
+      Object.values(L).forEach((s) => s.replaceChildren());
+      escenario3("laboratorio", { lejos: L.lejos, medio: L.medio, brillo: L.brillo, delante: L.delante }, t, { suelo: SUELO, mesa: MESA });
+      corcho3(L.medio, 4, 29, 51, 37); tarjeta3(L.frente, 7, 32, 44, 33);
+      matraz3(L.frente, 7, MESA - 11, t, { color: P3.verde, semilla: 5 }); matraz3(L.frente, 17, MESA - 11, t, { color: P3.azul, semilla: 6 });
+      microscopio3(L.frente, 28, MESA - 11, {});
+      retrato.replaceChildren();
+      if (!OPCION) {
+        gato(L.frente, 50, SUELO - 32, { pose: "pie", t }, 1);
+        retratoGato(retrato, 5, 4.5, { t }, 1.5);
+        document.getElementById("rotulo").textContent = "Actual · 32×32 a 12 px";
+      } else {
+        const [src, u, x, y, rot, ret = "gato/r20.png"] = OPCION, n = src.includes("80") ? 80 : src.includes("64") ? 64 : 48;
+        imagen(L.frente, src, x, y, n * u, n * u);
+        if (ret.includes("mezcla")) imagen(retrato, ret, 0, 0, 34, 30); else imagen(retrato, ret, 2, 0, 30, 30); // retrato a 6 px (1,5 px CSS por píxel)
+        document.getElementById("rotulo").textContent = rot;
+      }
+      tildesPixel();
+      document.getElementById("frase").innerHTML = 'Así me vería con más <span class="sel">detalle<i></i></span>';
+    };
+    window.seek(0);
+  </script>
+</body>
