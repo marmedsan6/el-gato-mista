@@ -11,24 +11,32 @@ const P3 = {
 };
 const SOMBRA_DE = { [P3.verde]: P3.verdeSombra, [P3.azul]: P3.azulSombra, [P3.naranja]: P3.naranjaSombra };
 
-// Matraz 7×10 con líquido sombreado; burbujas de 1 unidad que suben (más si activo)
+// Matraz 7×11 unidades, dibujado a media unidad (6 px) para tener detalle: vidrio con reflejo, cuello con boca,
+// líquido con menisco y fondo más oscuro; burbujas de media unidad que suben (más si activo)
 function matraz3(svg, x, y, t, { color = P3.verde, activo = false, semilla = 1 } = {}) {
-  const C = P3.contorno, sombra = SOMBRA_DE[color] || color;
-  rect(svg, x + 2, y, 3, 1, C); rect(svg, x + 2, y + 1, 1, 3, C); rect(svg, x + 4, y + 1, 1, 3, C); rect(svg, x + 3, y + 1, 1, 3, P3.vidrioLuz);
-  const filas = [[2, 3], [1, 5], [1, 5], [0, 7], [0, 7], [0, 7]]; // [inicio, ancho] del cuerpo, filas 4-9
-  filas.forEach(([a, w], j) => {
-    const yy = y + 4 + j;
-    rect(svg, x + a, yy, w, 1, C);
-    if (w > 2) rect(svg, x + a + 1, yy, w - 2, 1, j >= 2 ? color : P3.vidrio);
-    if (j >= 2 && w > 3) rect(svg, x + a + w - 2, yy, 1, 1, sombra);
-    if (j === 2 || j === 3) rect(svg, x + a + 1, yy, 1, 1, j === 2 ? P3.vidrioLuz : color);
+  const sombra = SOMBRA_DE[color] || color;
+  escalado(svg, x, y, 0.5, (g) => {
+    const C = P3.contorno;
+    rect(g, 4, 0, 6, 1, C); rect(g, 4, 1, 6, 1, P3.vidrioLuz); rect(g, 4, 2, 6, 1, C); // boca
+    rect(g, 5, 3, 1, 6, C); rect(g, 8, 3, 1, 6, C); rect(g, 6, 3, 2, 6, P3.vidrio); rect(g, 6, 3, 1, 5, P3.vidrioLuz);
+    // cuerpo cónico: [inicio, ancho] por fila, filas 9-20
+    const filas = [[4, 6], [4, 6], [3, 8], [3, 8], [2, 10], [2, 10], [1, 12], [1, 12], [0, 14], [0, 14], [0, 14], [0, 14]];
+    filas.forEach(([a, w], j) => {
+      const yy = 9 + j, liquido = j >= 4;
+      rect(g, a, yy, w, 1, C);
+      rect(g, a + 1, yy, w - 2, 1, liquido ? color : P3.vidrio);
+      if (liquido) rect(g, a + w - 3, yy, 2, 1, sombra);
+      if (j === 4) rect(g, a + 1, yy, w - 2, 1, P3.vidrioLuz); // menisco
+      if (j >= 9 && liquido) rect(g, a + 1, yy, w - 2, 1, sombra);
+      if (j >= 1 && j <= 9) rect(g, a + 1, yy, 1, 1, P3.vidrioLuz); // reflejo del vidrio a la izquierda
+    });
+    rect(g, 0, 21, 14, 1, C);
+    const azar = mulberry32(semilla), n = activo ? 4 : 2, v = activo ? 9 : 4;
+    for (let k = 0; k < n; k++) {
+      const fase = azar(), bx = 4 + Math.floor(azar() * 6), by = 19 - Math.floor((t * v + fase * 18) % 20);
+      if (by >= -4 && by !== 13) rect(g, bx, by, 1, 1, by < 13 ? P3.blanco : P3.vidrioLuz);
+    }
   });
-  rect(svg, x, y + 10, 7, 1, C);
-  const azar = mulberry32(semilla), n = activo ? 3 : 1, v = activo ? 5 : 2;
-  for (let k = 0; k < n; k++) {
-    const fase = azar(), bx = x + 2 + Math.floor(azar() * 3), by = y + 8 - Math.floor((t * v + fase * 10) % 11);
-    if (by >= y - 3 && by !== y + 4) rect(svg, bx, by, 1, 1, by < y + 4 ? P3.blanco : P3.vidrioLuz);
-  }
 }
 // Matraz mínimo 3×4 (iconos dentro de una tarjeta)
 function matrazMini(svg, x, y, color) {
@@ -36,22 +44,32 @@ function matrazMini(svg, x, y, color) {
   rect(svg, x + 2, y + 2, 1, 2, SOMBRA_DE[color] || color); rect(svg, x, y + 1, 1, 1, P3.vidrioLuz);
 }
 
-// Microscopio 10×11 (compacto: cabe bajo las etiquetas de fuente)
+// Microscopio 10×11 unidades, a media unidad: base con brillo, brazo curvo, platina, tubo con ocular y objetivo,
+// rueda de enfoque y destello en la lente; si activo, luz verde bajo el objetivo
 function microscopio3(svg, x, y, { activo = false } = {}) {
-  const C = P3.contorno;
-  rect(svg, x, y + 9, 10, 2, C); rect(svg, x + 1, y + 9, 8, 1, P3.metalLuz);
-  rect(svg, x + 6, y + 3, 2, 6, C); rect(svg, x + 6, y + 3, 1, 6, P3.metalLuz);
-  for (let k = 0; k < 3; k++) rect(svg, x + 2 + k, y + 1 + k, 2, 2, C);
-  rect(svg, x + 3, y + 2, 1, 1, P3.metalLuz);
-  rect(svg, x + 1, y, 3, 2, C);
-  rect(svg, x + 1, y + 6, 6, 1, C); rect(svg, x + 2, y + 5, 3, 1, P3.metalSombra);
-  if (activo) rect(svg, x + 3, y + 4, 1, 1, P3.verde);
+  escalado(svg, x, y, 0.5, (g) => {
+    const C = P3.contorno, L = "#9aa4cc", M = "#59628f", S = P3.metal; // más claro que el resto del metal: se separa del fondo
+    rect(g, 0, 18, 20, 4, C); rect(g, 1, 18, 18, 2, M); rect(g, 1, 18, 18, 1, L); rect(g, 2, 21, 16, 1, S); // base
+    rect(g, 12, 6, 4, 13, C); rect(g, 13, 6, 2, 12, M); rect(g, 13, 6, 1, 12, L); // brazo
+    rect(g, 14, 4, 3, 3, C); rect(g, 15, 5, 1, 1, L);
+    rect(g, 2, 13, 13, 2, C); rect(g, 3, 13, 11, 1, L); // platina
+    rect(g, 6, 15, 3, 1, P3.vidrio); // portaobjetos
+    for (let k = 0; k < 7; k++) rect(g, 3 + k, 2 + k, 4, 4, C); // tubo inclinado: primero el contorno…
+    for (let k = 0; k < 7; k++) rect(g, 4 + k, 3 + k, 2, 2, k < 3 ? L : M); // …luego el relleno, para que se lea el tubo
+    rect(g, 0, 0, 6, 3, C); rect(g, 1, 1, 4, 1, L); rect(g, 1, 1, 1, 1, P3.blanco); // ocular con brillo
+    rect(g, 9, 9, 3, 4, C); rect(g, 10, 10, 1, 2, P3.vidrioLuz); // objetivo con destello
+    rect(g, 16, 10, 3, 3, C); rect(g, 17, 11, 1, 1, L); // rueda de enfoque
+    if (activo) { rect(g, 9, 12, 3, 1, P3.verde); rect(g, 10, 13, 1, 1, "#9fffd8"); }
+  });
 }
 
-// Bote de reactivo 3×5 con tapón y brillo
+// Bote de reactivo 3×5 unidades, a media unidad: tapón, etiqueta y brillo
 function bote3(svg, x, y, color) {
-  rect(svg, x, y, 3, 5, P3.contorno); rect(svg, x, y + 1, 3, 4, color); rect(svg, x + 2, y + 2, 1, 3, SOMBRA_DE[color] || color);
-  rect(svg, x, y + 2, 1, 1, P3.blanco); rect(svg, x, y, 3, 1, P3.metalLuz);
+  escalado(svg, x, y, 0.5, (g) => {
+    const C = P3.contorno;
+    rect(g, 0, 0, 6, 10, C); rect(g, 1, 1, 4, 2, P3.metalLuz); rect(g, 1, 3, 4, 6, color);
+    rect(g, 4, 3, 1, 6, SOMBRA_DE[color] || color); rect(g, 1, 5, 4, 2, P3.papel); rect(g, 1, 3, 1, 2, P3.blanco);
+  });
 }
 
 // Corchera: marco de madera y corcho moteado con semilla
@@ -61,15 +79,21 @@ function corcho3(svg, x, y, w, h) {
   const azar = mulberry32(17);
   for (let k = 0; k < (w * h) / 9; k++) rect(svg, x + 1 + Math.floor(azar() * (w - 2)), y + 1 + Math.floor(azar() * (h - 2)), 1, 1, azar() < 0.5 ? "#8f6238" : "#b98a58");
 }
-// Tarjeta de papel con sombra plana, luz arriba y sombra abajo; chincheta roja centrada
+// Tarjeta de papel con sombra plana, luz arriba y sombra abajo, fibra del papel y esquina doblada; chincheta roja
 function tarjeta3(svg, x, y, w, h) {
   rect(svg, x + 1, y + 1, w, h, "#0a0806");
   rect(svg, x, y, w, h, P3.papel); rect(svg, x, y, w, 1, P3.papelLuz); rect(svg, x, y + h - 1, w, 1, P3.papelSombra); rect(svg, x + w - 1, y, 1, h, P3.papelSombra);
+  escalado(svg, x, y, 0.5, (g) => { // fibra del papel, a media unidad
+    const azar = mulberry32(w * 31 + h);
+    for (let k = 0; k < (w * h) / 6; k++) rect(g, 2 + Math.floor(azar() * (w * 2 - 4)), 2 + Math.floor(azar() * (h * 2 - 4)), 1, 1, azar() < 0.6 ? "#e6dcc6" : "#f7f0e0");
+  });
+  rect(svg, x + w - 2, y + h - 2, 2, 2, "#0a0806"); rect(svg, x + w - 3, y + h - 2, 1, 1, P3.papelSombra); rect(svg, x + w - 2, y + h - 3, 1, 1, P3.papelSombra); // esquina doblada
   const cx = x + Math.floor(w / 2);
   rect(svg, cx - 1, y - 1, 2, 2, "#8a1f28"); rect(svg, cx - 1, y - 1, 1, 1, P3.rojo);
 }
 
-// Monitor con bisel sombreado y pie; dibujo(svg, x, y, w, h) pinta la pantalla
+// Monitor con bisel sombreado y pie; dibujo(svg, x, y, w, h) pinta la pantalla. Encima: líneas de barrido a media
+// unidad, reflejo en la esquina y piloto encendido
 function monitor3(svg, x, y, w, h, { dibujo = null } = {}) {
   rect(svg, x, y, w, h, P3.contorno);
   rect(svg, x + 1, y + 1, w - 2, h - 2, P3.metal); rect(svg, x + 1, y + 1, w - 2, 1, P3.metalLuz); rect(svg, x + 1, y + h - 2, w - 2, 1, P3.metalSombra);
@@ -78,14 +102,24 @@ function monitor3(svg, x, y, w, h, { dibujo = null } = {}) {
   const cx = x + Math.floor(w / 2);
   rect(svg, cx - 1, y + h, 2, 2, P3.contorno); rect(svg, cx - 4, y + h + 2, 8, 1, P3.contorno);
   if (dibujo) dibujo(svg, x + 2, y + 2, w - 4, h - 4);
+  escalado(svg, x + 2, y + 2, 0.5, (g) => {
+    for (let k = 1; k < (h - 4) * 2; k += 2) rect(g, 0, k, (w - 4) * 2, 1, "#00000022"); // barrido
+    for (let k = 0; k < 4; k++) rect(g, 1 + k, 4 - k, 2, 1, "#ffffff18"); // reflejo
+  });
+  rect(svg, x + w - 3, y + h - 2, 1, 1, P3.verde); // piloto
 }
 
-// Caja de cartón 12×9 con cinta; si activo, salta 1 unidad
+// Caja de cartón 12×9 con cinta y textura de cartón; si activo, salta 1 unidad
 function caja3(svg, x, y, t, { activo = false } = {}) {
   const dy = activo && Math.floor(t / 0.15) % 2 === 0 ? -1 : 0, C = P3.contorno;
   rect(svg, x, y + dy, 12, 9, C);
   rect(svg, x + 1, y + 1 + dy, 10, 7, "#b07a46"); rect(svg, x + 1, y + 1 + dy, 10, 2, "#c88c52"); rect(svg, x + 9, y + 3 + dy, 2, 5, "#8e5f34");
   rect(svg, x + 5, y + 1 + dy, 2, 7, "#d9b07a");
+  escalado(svg, x, y + dy, 0.5, (g) => {
+    const azar = mulberry32(5);
+    for (let k = 0; k < 14; k++) rect(g, 2 + Math.floor(azar() * 18), 6 + Math.floor(azar() * 10), 1, 1, azar() < 0.5 ? "#9c6a3c" : "#c08a55");
+    rect(g, 10, 2, 1, 14, "#efd3a0"); // brillo de la cinta
+  });
 }
 
 // Documento 8×11; si activo, flota con vaivén; sello opcional
