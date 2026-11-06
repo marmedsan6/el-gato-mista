@@ -7,6 +7,8 @@
      abajo a todo el ancho y rótulo arriba a la izquierda. Profundidad de campo, conos de luz y cámara como en el short.
      Los escenarios de motor/estilo/v3/escenarios.js están dibujados en vertical (90×160): para el largo hay que dibujarlos
      en 160×90; aquí va una sala genérica de ejemplo.
+     Varias estaciones con paralaje y efectos (iteración v4, 2026-11-06): el modelo es motor/calibracion/v4/clip.{html,js}
+     (un contenedor por profundidad + CAM.aplicarCapas; efecto() de v3/fx.js; hojas con node motor/fx-exportar.mjs).
      Render: node motor/render.mjs --escena <este html> --ancho 480 --alto 270 --duracion <s> --incluir motor/estilo --salida <mp4> -->
 <link rel="stylesheet" href="../../../../motor/estilo/estilo.css">
 <style>
@@ -39,6 +41,8 @@
   <script src="../../../../motor/estilo/v3/props.js"></script>
   <script src="../../../../motor/estilo/v3/gato.js"></script>
   <script src="../../../../motor/estilo/camara.js"></script>
+  <script src="../../../../motor/estilo/v3/fx/fx-meta.js"></script>
+  <script src="../../../../motor/estilo/v3/fx.js"></script>
   <script>
     const W = 480, H = 270, SUELO = 64; // SUELO en unidades: MISTA queda justo encima de la caja (y = 200 px CSS)
     const L = {};
@@ -66,7 +70,8 @@
       for (let y = y0; y < y1; y += 2) { const a = Math.round(2 + (y - y0) * abre); rect(brillo, cx - a, y, a * 2, 2, color); }
     }
 
-    window.seek = (t) => {
+    window.seek = async (t) => {
+      await FX.listo; // hojas de efectos decodificadas (efecto(L.frente, "carga", t, t0, x, y, 0.5))
       Object.values(L).forEach((s) => s.replaceChildren());
       const cam = CAM.en(t);
       CAM.aplicar(cam, mundo);

@@ -5,6 +5,8 @@
      Estilo v3: todo a 12 px (arte en unidades de un lienzo de 90×160; 1 unidad = 3 px CSS = 12 px de salida),
      profundidad de campo (lejos y delante desenfocados), conos de luz, objetos y MISTA sombreados, acercamiento lento,
      zoom solo en las explicaciones core. Ejemplo completo: proyectos/mithril-ia-medicina/escenas/short-v6/.
+     Varias estaciones con paralaje y efectos (iteración v4, 2026-11-06): el modelo es motor/calibracion/v4/clip.{html,js}
+     (un contenedor por profundidad + CAM.aplicarCapas; efecto() de v3/fx.js; hojas con node motor/fx-exportar.mjs).
      Render: node motor/render.mjs --escena <este html> --ancho 270 --alto 480 --duracion <s> --incluir motor/estilo --salida <mp4> -->
 <link rel="stylesheet" href="../../../../motor/estilo/estilo.css">
 <style>
@@ -38,6 +40,8 @@
   <script src="../../../../motor/estilo/v3/escenarios.js"></script>
   <script src="../../../../motor/estilo/v3/gato.js"></script>
   <script src="../../../../motor/estilo/camara.js"></script>
+  <script src="../../../../motor/estilo/v3/fx/fx-meta.js"></script>
+  <script src="../../../../motor/estilo/v3/fx.js"></script>
   <script>
     const W = 270, H = 480, SUELO = 97, MESA = 83; // SUELO y MESA en unidades
     const L = {};
@@ -54,7 +58,8 @@
       [3.5, "corte", 1],
     ] });
 
-    window.seek = (t) => {
+    window.seek = async (t) => {
+      await FX.listo; // hojas de efectos decodificadas (efecto(L.frente, "carga", t, t0, x, y, 0.5))
       Object.values(L).forEach((s) => s.replaceChildren());
       const cam = CAM.en(t);
       CAM.aplicar(cam, mundo);

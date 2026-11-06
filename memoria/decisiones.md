@@ -162,3 +162,12 @@
 - 2026-11-03 · ventanas-contexto-ia, publicación: título del largo «Un millón de tokens no es memoria: así funciona (y falla) la ventana de contexto de la IA»; shorts con títulos en pregunta (A «¿Sabías que tu IA relee todo cada vez que le escribes?», B «¿De verdad tu IA lee un millón de tokens?», C «¿Por qué tu IA no puede leer infinito?»); sin declarar contenido sintético — Mario.
 - 2026-11-04 · ventanas-contexto-ia: PUERTA 2 aprobada con la orden de subir («Aprobados, súbelos») sobre el largo v3 y los shorts v4 (huellas en reviews/puerta-2.md).
 - 2026-11-04 · ventanas-contexto-ia: enlaces del largo a sus shorts y «vídeo relacionado» de los tres shorts puestos en Studio desde el Chrome de Mario, sin reconectar youtube-conectar — Mario («Sí, hazlo tú»). En Chrome hubo que cambiar la sesión de YouTube de la cuenta «mariobox» al canal «El Gato Mista».
+
+## Iteración de detalle (2026-11-04/06)
+- 2026-11-06 · MISTA se queda **exactamente como estaba** (sprite v3 de 32×32 a 12 px); el rediseño se deja para más adelante — Mario («Lo ajustamos más adelante… dejarlo como estaba», «MISTA tal cual; detalle al resto»). Se probaron y descartaron: un gato procedural nuevo (chibi), uno fiel al boceto en 3/4, la hoja de poses pasada a píxel y una mezcla del MISTA con la referencia («una mezcla del que teníamos y ese»); la mezcla queda en `motor/calibracion/v4/gato/` para retomarla. Resolución elegida para el futuro rediseño: 64×64 a 6 px. Ojos: ámbar o amarillos, nunca verdes.
+- 2026-11-06 · El detalle de esta iteración va a objetos, efectos (pixelfx, MIT) y cámara — Mario.
+- 2026-11-06 · **Calibración v4 aprobada** («Me gusta, sigue»; `reviews/calibracion/iter-v4-01.md`). Entra al estilo vigente:
+  - **Mundo y cámara:** un mundo de varias pantallas con una estación por idea y paralaje por capas (`CAM.aplicarCapas`: fondo 0,6, plano medio 1, primer plano 1,35). Movimientos: acercamiento lento, travelling y «revelar» (travelling y alejamiento a la vez). MISTA se queda en su estación. Es la cámara de ref-01, que no habíamos conseguido.
+  - **Objetos:** detalle interior a media unidad (6 px) y silueta a 12 px. Ningún objeto a ×2.
+  - **Efectos:** de pixelfx, solo puntuales y anclados a su causa. Ninguno con cifras o texto propio: el escáner de pixelfx pintaba un «40 %» que se leía como un dato sin fuente. La interfaz de juego (escaneos, marcos, barras) se dibuja a mano a 12 px.
+  - Reglas en el bloque «Estilo vigente» de `docs/estilo.md` y en la skill `estilo`. Crédito de pixelfx en `NOTICE.md`.

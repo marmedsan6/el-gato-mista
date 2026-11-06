@@ -157,3 +157,18 @@ legal anterior. Los agentes no hacen `git push` (deny global); el push lo hace M
 - Short v4 interno de Mithril (2026-11-03): cámara dinámica con 20 cambios de plano; `reviews/iter-04.md`, `qa-v4.md`. Iterado: demasiados zooms.
 - Short v5 interno (2026-11-03): plano de detalle solo en 3 explicaciones core (11 laboratorios, ficha y red de Claude); entra con zoom y sale con corte. `reviews/iter-05.md`, `qa-v5.md`. Mario la aprueba como estilo (2026-11-03): reglas en el bloque «Estilo vigente» de `docs/estilo.md`, biblioteca `motor/estilo/camara.js` (la v5 la usa, 14/14 fotogramas idénticos), skill `estilo` y plantilla del short con cámara. La plantilla del largo con cámara llegó con el estilo v3 (abajo).
 - Estilo v3 (2026-11-03): a partir de la referencia ref-01, todo a 12 px con profundidad, luz y sombreado a mano (calibración `motor/calibracion/v3/`, aprobada: «Me gusta, sigue»). Mithril v6 en estilo v3 (`reviews/iter-06.md`, `qa-v6.md`, `critica-v6-01.md`) y plantillas v3 del short y del largo (16:9). Mario aprueba la v6 («Me gusta»). Pendiente: escenarios 16:9 para el primer largo y pasar el estilo v3 al resto de `docs/estilo.md` y a `tokens.json`.
+
+## Iteración de detalle: cámara de ref-01, objetos y efectos (2026-11-06)
+- **MISTA:** se queda tal cual. Se probaron 4 rediseños a 64×64 y 6 px, todos descartados; la mezcla está en `motor/calibracion/v4/gato/`.
+- **Calibración v4:** `motor/calibracion/v4/clip.{html,js}`, aprobada por Mario («Me gusta, sigue»; `reviews/calibracion/iter-v4-01.md`). Incluye:
+  - paralaje por capas (`CAM.aplicarCapas`);
+  - estaciones en un mundo ancho, travelling y «revelar»;
+  - objetos con detalle a 6 px;
+  - efectos de pixelfx (`motor/estilo/v3/fx.js`, `node motor/fx-exportar.mjs`).
+- **Evidencia:** `npm test` 4/4, la v5 idéntica (8/8 fotogramas), audio a -14,0 LUFS / -2,5 dBTP y el crítico pasa en la segunda vuelta.
+- **Pendiente:**
+  - aplicar las estaciones con paralaje a un vídeo completo (el siguiente short o largo, o una Mithril v7 interna);
+  - cuantizar a 12 px las chispas finas de pixelfx si molestan;
+  - escenarios anchos de 16:9 para el largo;
+  - rediseño de MISTA cuando Mario lo pida.
+
