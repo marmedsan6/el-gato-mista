@@ -15,6 +15,7 @@
 //   anchoMundo / altoMundo: tamaño del mundo si es mayor que la pantalla (una pared de cuadros); por defecto, W y H.
 //   CAM.en(t)                          → { k, tx, ty, inicio, general }
 //   CAM.aplicar(c, mundo)              → transform del contenedor y recorte en la línea de la caja (solo si k ≥ 1,25)
+//   CAM.aplicarCapas(c, [{ el, d }])   → lo mismo con paralaje: un contenedor por capa, cada uno con su profundidad d
 //   CAM.marcoVisible(c, x, y, w, h)    → true si el rectángulo se ve entero: no se señala lo que la cámara tapa
 //   CAM.fuentesSinZoom(c, caja, xMin, xMax) → las .fuente-dato no crecen con el zoom y quedan entre xMin y xMax
 function crearCamara({ W, H, SX, SY, lineaCaja, planos, escalon = 0.075, anchoMundo = W, altoMundo = H }) {
@@ -46,6 +47,21 @@ function crearCamara({ W, H, SX, SY, lineaCaja, planos, escalon = 0.075, anchoMu
     mundo.style.clipPath = c.k < 1.25 ? "" : `inset(0 0 ${q(altoMundo - (lineaCaja - c.ty) / c.k)}px 0)`;
   }
 
+  // Paralaje (iteración de detalle, 2026-11-06; ref-01: el fondo va a ~0,5-0,65 de la velocidad del plano medio y el
+  // primer plano, más rápido). Cada capa va en su propio contenedor con su profundidad d (1 = plano medio). El punto del
+  // mundo que la cámara pone en (SX, SY) se desplaza en cada capa d veces lo que en el plano medio, y el zoom crece
+  // 1 + d·(k − 1). En reposo (k = 1, sin desplazar) todas las capas coinciden. capas: [{ el, d }, …]
+  function aplicarCapas(c, capas) {
+    const cx = (SX - c.tx) / c.k, cy = (SY - c.ty) / c.k; // punto del mundo en (SX, SY) en el plano medio
+    for (const { el, d } of capas) {
+      const kd = 1 + d * (c.k - 1), cxd = SX + d * (cx - SX), cyd = SY + d * (cy - SY);
+      const txd = q(SX - kd * cxd), tyd = q(SY - kd * cyd);
+      el.style.transformOrigin = "0 0";
+      el.style.transform = kd === 1 && !txd && !tyd ? "" : `translate(${txd}px, ${tyd}px) scale(${kd})`;
+      el.style.clipPath = c.k < 1.25 ? "" : `inset(0 0 ${q(altoMundo - (lineaCaja - tyd) / kd)}px 0)`;
+    }
+  }
+
   function marcoVisible({ k, tx, ty }, x, y, w, h) {
     const dentro = (v, a, b) => v >= a && v <= b;
     return k === 1 || (dentro(tx + k * x, 0, W) && dentro(tx + k * (x + w), 0, W) && dentro(ty + k * (y + h), 0, lineaCaja));
@@ -64,5 +80,5 @@ function crearCamara({ W, H, SX, SY, lineaCaja, planos, escalon = 0.075, anchoMu
     });
   }
 
-  return { en, aplicar, marcoVisible, fuentesSinZoom };
+  return { en, aplicar, aplicarCapas, marcoVisible, fuentesSinZoom };
 }
