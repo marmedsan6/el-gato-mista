@@ -1,0 +1,42 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Calibración v4 · laboratorio ancho (paralaje, efectos pixelfx, objetos con detalle)</title>
+<!-- Render: node motor/render.mjs --escena <este html> --ancho 270 --alto 480 --duracion 19.9
+            --incluir motor/estilo,proyectos/mithril-ia-medicina/escenas/short-v6 --salida <mp4>
+     Antes: node motor/fx-exportar.mjs (hojas de efectos). Tramo real de Mithril (0-19,9 s: bloque A), con su voz.
+     Rejilla de arte 90×160 por pantalla (1 unidad = 12 px de salida); el mundo mide 3 pantallas de ancho. -->
+<link rel="stylesheet" href="../../estilo/estilo.css">
+<style>
+  .oculto { display: none !important; }
+  #base { position: absolute; inset: 0; background: #0f1a20; } /* color del suelo: se ve bajo la caja en los zooms */
+  /* Una capa por profundidad (paralaje, CAM.aplicarCapas): lejos 0,6 · medio 1 · delante 1,35 */
+  .profundidad { position: absolute; left: 0; top: 0; width: 1080px; height: 480px; transform-origin: 0 0; }
+  #lejos { filter: blur(2.5px); }          /* pared: muy desenfocada (profundidad de campo) */
+  #delante { filter: blur(3px); }          /* suelo y estanterías cercanas: desenfocados por delante */
+  #textos-ui { position: absolute; inset: 0; }
+</style>
+<body class="short">
+  <div id="base"></div>
+  <div class="profundidad" id="p-lejos"><svg class="arte" id="lejos"></svg></div>
+  <div class="profundidad" id="p-medio">
+    <svg class="arte" id="medio"></svg>
+    <svg class="arte bloom" id="brillo"></svg>
+    <svg class="arte" id="frente"></svg>
+    <div id="textos"></div>
+  </div>
+  <div class="profundidad" id="p-delante"><svg class="arte" id="delante"></svg></div>
+  <div class="profundidad" id="p-textos"><div id="fuentes"></div></div> <!-- cartelas de fuente encima del primer plano: nunca se tapan -->
+  <div class="capa vineta"></div>
+  <div id="textos-ui"></div>
+  <div class="dialogo con-retrato oculto" id="dialogo"><svg class="retrato" id="retrato"></svg><span class="nombre">Mista</span><span id="frase"></span></div>
+
+  <script src="../../estilo/pixel.js"></script>
+  <script src="../../estilo/v3/props.js"></script>
+  <script src="../../estilo/v3/escenarios.js"></script>
+  <script src="../../estilo/v3/gato.js"></script>
+  <script src="../../estilo/camara.js"></script>
+  <script src="../../estilo/v3/fx/fx-meta.js"></script>
+  <script src="../../estilo/v3/fx.js"></script>
+  <script src="../../../proyectos/mithril-ia-medicina/escenas/short-v6/timing.js"></script>
+  <script src="clip.js"></script>
+</body>
