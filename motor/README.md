@@ -23,7 +23,6 @@ node render.mjs --escena <html> --ancho <px base> --alto <px base> --duracion <s
 - Se ejecutan solos al cerrar cada turno si hay cambios en `motor/` o en escenas (`.claude/hooks/verify-on-stop.sh`).
 
 ## Carpetas
-- `calibracion/c5a/`: fotogramas fijos de la calibración y `comun.css` / `comun.js` (tokens y dibujo pixel).
-- `calibracion/c5b/`: clip de prueba de 18 s (short y largo).
-- `piloto/`: el piloto de las 3 candidatas (`resultados.md`); se conserva como referencia.
+- `calibracion/v4/`: clip de la calibración vigente (estaciones, paralaje y efectos); `v3/gato-hoja.html`, hoja de poses de MISTA. Las calibraciones c5a, c5b, v2 y v3 están en la etiqueta git `archivo/pre-limpieza-2026-11-09`.
+- `piloto/`: `resultados.md` y `escena-spec.md`, la evidencia del ADR 0004; el código de las 3 candidatas está en la etiqueta `archivo/pre-limpieza-2026-11-09`.
 - `node_modules/` aquí mismo, ignorado por git.

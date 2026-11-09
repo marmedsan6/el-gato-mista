@@ -9,8 +9,8 @@ No copies valores aquí: léelos siempre de la fuente, que es la única que vale
 1. `docs/estilo.md`: empieza por su bloque «Estilo vigente», que manda sobre las reglas v1 que siguen debajo.
 2. `docs/decisiones/0007-estilo-v2.md` y `memoria/decisiones.md`: el porqué de cada cambio.
 3. `marca/tokens.json`: valores de la v1; siguen valiendo salvo lo que cambie el bloque «Estilo vigente».
-4. Implementación v3: `motor/estilo/v3/` (`gato.js`, `props.js`, `escenarios.js`, `fx.js` + `fx/` generado con `node motor/fx-exportar.mjs`) más `motor/estilo/{estilo.css, pixel.js, camara.js}` (`aplicarCapas` para el paralaje). Los ficheros v2 de `motor/estilo/` solo sirven para reproducir lo ya publicado.
-5. Ejemplo de referencia: `proyectos/mithril-ia-medicina/escenas/short-v6/` (estilo v3 completo). Calibración: `motor/calibracion/v3/` y, para la cámara con paralaje, estaciones y efectos, `motor/calibracion/v4/clip.{html,js}`. El short publicado (v3 del vídeo) sale de `escenas/short-v2/`.
+4. Implementación v3: `motor/estilo/v3/` (`gato.js`, `props.js`, `escenarios.js`, `fx.js` + `fx/` generado con `node motor/fx-exportar.mjs`) más `motor/estilo/{estilo.css, pixel.js, camara.js}` (`aplicarCapas` para el paralaje). Los ficheros v2 de `motor/estilo/` y `motor/estilo/v3/congelado/` solo sirven para reproducir lo ya publicado: no se editan.
+5. Ejemplo de referencia: `proyectos/mithril-ia-medicina/escenas/short-v6/` (estilo v3 completo). Calibración: para la cámara con paralaje, estaciones y efectos, `motor/calibracion/v4/clip.{html,js}`. El short publicado (v3 del vídeo) sale de `escenas/short-v2/`.
 6. Plantillas: `plantillas/proyecto/escenas/{short,largo}/escena-plantilla.html`.
 7. Si el vídeo se desvía del estilo, lo dice `proyectos/<slug>/style_guide.md` (solo las desviaciones).
 

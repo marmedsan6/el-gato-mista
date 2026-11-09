@@ -1,7 +1,7 @@
 // Estilo vigente · cámara pixel (Mario, 2026-11-03): plano general (k=1) y planos de detalle SOLO en las explicaciones
 // core del vídeo. Se entra con zoom a escalones (×0,25 cada 0,075 s) y se sale con corte seco. k siempre es múltiplo
 // de 0,25: a ×4 de salida cada píxel base mide 5, 6, 7 u 8 px enteros, así que el pixel art sigue nítido.
-// Determinista: todo depende de t. Ejemplo completo: proyectos/mithril-ia-medicina/escenas/short-v5/.
+// Determinista: todo depende de t. Ejemplo completo: proyectos/mithril-ia-medicina/escenas/short-v6/.
 //
 // Montaje en el HTML: el escenario, los objetos, MISTA y los textos de los objetos van dentro de un contenedor
 // #mundo (position:absolute; transform-origin:0 0); los rótulos de cabecera y la caja de diálogo, fuera (interfaz fija),

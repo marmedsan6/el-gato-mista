@@ -12,9 +12,6 @@
       "Bash(type *.runtime/claves*)"
     ]
   },
-  "enabledPlugins": {
-    "hyperframes@hyperframes": true
-  },
   "hooks": {
     "Stop": [
       {
