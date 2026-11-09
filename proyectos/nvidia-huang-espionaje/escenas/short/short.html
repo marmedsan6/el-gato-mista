@@ -1,0 +1,48 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>nvidia-huang-espionaje · short (estilo v5)</title>
+<!-- Render: node motor/render.mjs --escena proyectos/nvidia-huang-espionaje/escenas/short/short.html --ancho 270 --alto 480
+            --duracion 71.2 --incluir motor/estilo,proyectos/nvidia-huang-espionaje/escenas/short
+            --salida proyectos/nvidia-huang-espionaje/render/short/short.mp4
+     Estilo v5 (ADR 0009): diorama a 4 px, mundo de 9 estaciones con paralaje, MISTA solo en la entrada, los cambios de
+     tema y el cierre. Storyboard: ../../shotlist.md. -->
+<link rel="stylesheet" href="../../../../motor/estilo/estilo.css">
+<style>
+  .oculto { display: none !important; }
+  #base { position: absolute; inset: 0; background: #07090f; }
+  .profundidad { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+  #lejos { filter: blur(2px); }
+  #delante { filter: blur(2.5px); }
+  .titular.grande { font-size: 16px; line-height: 24px; }
+  .cifra-ui { font: 600 12px/10px "Mono"; color: var(--verde); }
+  .etiqueta.fondo { background: #0c1016; padding: 2px 3px 1px; }
+  .titular.tuit { font-size: 16px; line-height: 24px; }
+  .titular.tachado { color: var(--texto-suave); text-decoration: line-through; text-decoration-color: var(--rojo); text-decoration-thickness: 3px; }
+  .titular.verde { color: var(--verde); }
+  .sello { color: var(--rojo); border: 3px solid var(--rojo); outline: 1px solid #000; padding: 4px 6px 2px; background: rgba(12, 16, 22, 0.85); }
+  #transicion { position: absolute; inset: 0; overflow: hidden; }
+</style>
+<body class="short">
+  <div id="base"></div>
+  <div id="transicion">
+    <div class="profundidad" id="p-lejos"><svg class="arte" id="lejos"></svg></div>
+    <div class="profundidad" id="p-medio">
+      <svg class="arte" id="medio"></svg>
+      <svg class="arte bloom" id="brillo"></svg>
+      <svg class="arte" id="frente"></svg>
+    </div>
+    <div class="profundidad" id="p-delante"><svg class="arte" id="delante"></svg></div>
+    <svg class="arte" id="gato12"></svg>
+    <div class="capa vineta"></div>
+  </div>
+  <div id="textos"></div>
+  <div class="dialogo con-retrato oculto" id="dialogo"><svg class="retrato" id="retrato"></svg><span class="nombre">Mista</span><span id="frase"></span></div>
+
+  <script src="../../../../motor/estilo/pixel.js"></script>
+  <script src="../../../../motor/estilo/v3/gato.js"></script>
+  <script src="../../../../motor/estilo/camara.js"></script>
+  <script src="../../../../motor/estilo/v5/dibujo.js"></script>
+  <script src="../../../../motor/estilo/v5/escena.js"></script>
+  <script src="timing.js"></script>
+  <script src="short.js"></script>
+</body>

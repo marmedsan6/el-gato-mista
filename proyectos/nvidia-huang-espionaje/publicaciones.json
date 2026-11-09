@@ -1,0 +1,15 @@
+{
+  "historias": {
+    "67baf1d7362b1e0c6e185a66d889c9cf444e99885554e86233207d08c4ead9ca": {
+      "video_id": "_8y4FMhoNGo",
+      "channel_id": "UCA76YezyGjv7spjOfRqAKNA",
+      "sha256": "3c5e00263c2af63160faa699d750678516d71017fba058258febd65e649b29cd",
+      "formato": "short",
+      "fecha": "2026-11-09T21:37:53.246874+00:00",
+      "url": "https://www.youtube.com/watch?v=_8y4FMhoNGo",
+      "body_sha256": "ca1d55e61a27404a3f8724a73f0ae96d34544639bfaf30b24c86a8024d7a62ff",
+      "descripcion_enviada": "El consejo de NVIDIA ha abierto una investigación independiente tras informaciones de prensa según las cuales su CEO, Jensen Huang, habría sido objetivo de una operación de inteligencia china. Según el New York Times, funcionarios de EE. UU. creen que una ejecutiva de Megaspeed, Alice Huang, trabajaba para el espionaje chino; Huang ha admitido en un correo a su plantilla que fue infiel a su mujer. Pero NVIDIA no confirma el espionaje: investiga lo publicado y dice no tener motivos para creer que se filtraran secretos. China lo llama especulación sin fundamento.",
+      "portada_sha256": "77b0f2bf431aa0156a2bd3a29a848ba01a6458173ce3093e2ec4a951efdbc439"
+    }
+  }
+}

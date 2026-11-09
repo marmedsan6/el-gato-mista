@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "instagram": {
+    "estado": "publicado",
+    "huella": "95850c2eb4d871ba7021b92addd7b5ca2195190d0abce38442520eabd1b36584",
+    "sha256": "3c5e00263c2af63160faa699d750678516d71017fba058258febd65e649b29cd",
+    "creado": "2026-11-09T21:37:57.787087+00:00",
+    "container_id": "18130968400825706",
+    "status_code": "FINISHED",
+    "detalle": "Finished: Media has been uploaded and it is ready to be published.",
+    "publicando": "2026-11-09T21:39:10.160605+00:00",
+    "media_id": "18062157161640423",
+    "permalink": "https://www.instagram.com/reel/DfiUI2sEnlS/",
+    "publicado": "2026-11-09T21:39:19.613128+00:00",
+    "autorizacion": {
+      "huella": "95850c2eb4d871ba7021b92addd7b5ca2195190d0abce38442520eabd1b36584",
+      "confirmado": "2026-11-09T21:39:19.613128+00:00"
+    }
+  },
+  "actualizado": "2026-11-09T21:39:49.220182+00:00",
+  "tiktok": {
+    "sha256": "3c5e00263c2af63160faa699d750678516d71017fba058258febd65e649b29cd",
+    "estado": "enviado",
+    "creado": "2026-11-09T21:39:20.515798+00:00",
+    "publish_id": "v_inbox_file~v2.7706289224618149910",
+    "tiktok": "SEND_TO_USER_INBOX",
+    "motivo": null
+  }
+}

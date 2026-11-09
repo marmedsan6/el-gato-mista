@@ -1,0 +1,76 @@
+{
+  "fuentes": [
+    {
+      "id": "f1",
+      "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors",
+      "autor": "NVIDIA (consejo de administración)",
+      "fecha": "2026-11-08",
+      "consultada": "2026-11-09",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "Comunicado del consejo: abre una investigación independiente «in light of recent reporting» de que Jensen Huang fue objetivo de un esfuerzo de inteligencia extranjera; la supervisa un comité de consejeros independientes con abogados externos independientes; «no reason to believe» que se comprometiera la seguridad nacional ni secretos de NVIDIA; Jensen apoya la revisión y cooperará; el consejo confía en él y en su equipo.",
+      "uso": "Investigación interna, comité, sin indicios de secretos comprometidos, confianza en Huang. Base del MATIZ: no confirma, investiga.",
+      "tramo": ""
+    },
+    {
+      "id": "f2",
+      "url": "https://nvidianews.nvidia.com/news/a-message-to-our-company",
+      "autor": "Jensen Huang (correo a la plantilla, publicado por NVIDIA)",
+      "fecha": "2026-11-08",
+      "consultada": "2026-11-09",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "«I was unfaithful to my wife.» Pide perdón a su familia y a la plantilla; sobre las preocupaciones de seguridad nacional de la prensa, dice que el consejo abrió una investigación independiente que apoya y con la que cooperará.",
+      "uso": "La frase neutra sobre la infidelidad y su apoyo a la investigación.",
+      "tramo": ""
+    },
+    {
+      "id": "f3",
+      "url": "https://www.yahoo.com/news/us/articles/alice-huang-chinese-exec-accused-060329063.html",
+      "autor": "AFP (en Yahoo News)",
+      "fecha": "2026-11-09",
+      "consultada": "2026-11-09",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "Según NYT y WSJ, en 2025 funcionarios de EE. UU. concluyeron que Alice Huang (Huang Le), ejecutiva de Megaspeed (Singapur), tenía como objetivo a Jensen Huang; sin parentesco con él; el NYT dice que EE. UU. investiga a Megaspeed desde 2024 por posible desvío de chips de NVIDIA a China y que Singapur la interrogó en 2025; Megaspeed negó en dic. 2025 un reportaje de Bloomberg («misleading information and incorrect insinuations»). No se mencionan cargos.",
+      "uso": "Quién es Alice Huang, Megaspeed en Singapur, investigación de EE. UU. desde 2024, sin cargos, negativa de Megaspeed.",
+      "tramo": ""
+    },
+    {
+      "id": "f4",
+      "url": "https://gizmodo.com/chinese-spy-who-targeted-jensen-huang-worked-directly-for-chinas-top-spy-agency-report-2000836560",
+      "autor": "Gizmodo (resume al New York Times)",
+      "fecha": "2026-11-06",
+      "consultada": "2026-11-09",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "Según el NYT (6 nov), el Ministerio de Seguridad del Estado chino la reclutó; objetivo: conocer mejor el hardware más avanzado de NVIDIA y que Huang presionara para enviar GPU avanzadas a China; «no está claro» cuánta influencia tuvo. Megaspeed alquila a Alibaba capacidad con chips NVIDIA en el Sudeste Asiático. NVIDIA (John Rizzo): interacciones «not unusual»; embajada china: «unsubstantiated».",
+      "uso": "Ministerio de Seguridad del Estado, objetivo de la operación, Alibaba, reacción de China.",
+      "tramo": ""
+    },
+    {
+      "id": "f5",
+      "url": "https://www.manilatimes.net/2026/11/10/business/foreign-business/nvidia-probes-huang-amid-reports-china-spied-on-him/2465553",
+      "autor": "AFP (en The Manila Times)",
+      "fecha": "2026-11-10",
+      "consultada": "2026-11-09",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "Huang reconoció una aventura con una mujer que, según funcionarios de EE. UU., trabajaba para la inteligencia china. EE. UU. restringe la exportación a China de sus chips más avanzados. China califica el reportaje del NYT de «groundless speculation».",
+      "uso": "Relación entre la infidelidad y la ejecutiva (atribuida a AFP), controles de exportación y negativa de China.",
+      "tramo": ""
+    },
+    {
+      "id": "f6",
+      "url": "https://x.com/ErickSky/status/2119569753081614658",
+      "autor": "Erick (@ErickSky)",
+      "fecha": "2026-11-09",
+      "consultada": "2026-11-09",
+      "tipo": "contexto",
+      "licencia": "",
+      "cita": "Tuit de partida: dice que el consejo de NVIDIA «acaba de confirmar» que Huang fue objetivo de un esfuerzo de inteligencia extranjera.",
+      "uso": "Solo como origen del tema y de lo que corrige el MATIZ; no aporta hechos.",
+      "tramo": ""
+    }
+  ]
+}

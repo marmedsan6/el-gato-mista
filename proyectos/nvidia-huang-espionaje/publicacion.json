@@ -1,0 +1,26 @@
+{
+  "perfil": "es",
+  "formatos": {
+    "short": {
+      "archivo": "salida/short-v3.mp4",
+      "titulo": "¿Espiaron al jefe de NVIDIA para llegar a sus chips?",
+      "descripcion": "El consejo de NVIDIA ha abierto una investigación independiente tras informaciones de prensa según las cuales su CEO, Jensen Huang, habría sido objetivo de una operación de inteligencia china. Según el New York Times, funcionarios de EE. UU. creen que una ejecutiva de Megaspeed, Alice Huang, trabajaba para el espionaje chino; Huang ha admitido en un correo a su plantilla que fue infiel a su mujer. Pero NVIDIA no confirma el espionaje: investiga lo publicado y dice no tener motivos para creer que se filtraran secretos. China lo llama especulación sin fundamento.",
+      "tags": [
+        "NVIDIA",
+        "Jensen Huang",
+        "Espionaje",
+        "China",
+        "Chips",
+        "Inteligencia artificial",
+        "Noticias",
+        "Shorts"
+      ],
+      "categoria": "28",
+      "visibilidad": "public",
+      "portada_segundo": 0.5,
+      "portada_imagen": "salida/portada-codex-a.png",
+      "made_for_kids": false,
+      "contains_synthetic_media": false
+    }
+  }
+}
