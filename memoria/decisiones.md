@@ -210,3 +210,16 @@
   - **MISTA:** solo en la entrada de tema, en los cambios de tema (de pie, 1-2 s) y en el cierre, a su píxel de 12 px. El retrato de la caja se queda.
   - **Cámara:** viaja por un mundo ancho con paralaje y hace zooms core a ×1,25.
   - **Lo que no cambia:** las reglas de la caja, del rótulo, de la fuente junto a la cifra y de la zona tapada. Los vídeos publicados conservan su biblioteca (v2, v3 o v3.0 congelada).
+
+## nvidia-huang-espionaje (2026-11-09)
+- 2026-11-09 · Siguiente vídeo: **solo short**, primera prueba del estilo v5, sobre la investigación de NVIDIA a Jensen Huang (tuit de @ErickSky como punto de partida) — Mario («no da para más sobre este tema»).
+- 2026-11-09 · Enfoque de noticia con matiz: el tuit dice que NVIDIA «confirma», pero el comunicado solo abre una investigación por las informaciones de prensa; sello MATIZ — Mario.
+- 2026-11-09 · La infidelidad que admite Huang en su correo entra en una frase breve y neutra; Alice Huang (Huang Le) y Megaspeed se nombran, siempre atribuidos a la prensa y a funcionarios de EE. UU. — Mario.
+- 2026-11-09 · MISTA narrador de thriller; gancho «¿Y si para conseguir los secretos de NVIDIA no hiciera falta robarlos, sino acercarse a su jefe?»; voz «Yensen Juang», «Envidia» — Mario.
+- 2026-11-09 · Se trabaja en el worktree `elgatomista-execution-plan-c8445b` (HEAD f85916c, con el estilo v5), porque el `main` del checkout principal no lo tiene — decisión del agente.
+- 2026-11-09 · PUERTA 1 de nvidia-huang-espionaje aprobada («Aprobado»), sobre la SHA-256 del guion en reviews/puerta-1.md.
+- 2026-11-09 · nvidia-huang-espionaje, storyboard: personas genéricas (Jensen Huang, figura pixel con chaqueta de cuero sin buscar parecido; Alice Huang, silueta en sombra con dosier); MISTA en la entrada, en «El domingo…», en «Pero ojo…» y en el cierre; zoom core en el desvío de chips y en el objetivo — Mario.
+- 2026-11-09 · nvidia-huang-espionaje, sonido: Orus con estilo de narrador de thriller (gasto de voz aprobado, < 0,05 $), música «Bitcrushed Ambience» de Alien y efectos a -24 dB — Mario.
+- 2026-11-09 · nvidia-huang-espionaje: «Produce sin muestras» (sin fotogramas previos); título «¿Espiaron al jefe de NVIDIA para llegar a sus chips?» y sin declarar contenido sintético — Mario.
+- 2026-11-09 · Portada: Mario propone generarla con Codex/ChatGPT y, si le gusta, hacerlo siempre así. Prueba hecha con `codex exec` (generación de imágenes de su plan, sin gasto aparte) a partir de dos fotogramas del vídeo.
+- 2026-11-09 · **Portada con Codex, a partir de ahora** — Mario («Sí, portada Codex», tras haber dicho «si me gusta lo hacemos siempre así»). La subida admite `portada_imagen` (una imagen directamente en `salida/`, con su huella en el lote) en lugar del fotograma de `portada_segundo` (`publicacion/story_publication.py`, 2 pruebas nuevas, 116/116). Cómo se genera: skill `qa`, paso 9. Queda por ver si YouTube muestra la portada propia en el feed de Shorts o solo en el canal y la búsqueda.
