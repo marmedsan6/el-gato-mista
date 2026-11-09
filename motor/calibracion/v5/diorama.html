@@ -1,0 +1,36 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Calibración v5 · diorama (más detalle, MISTA solo en los temas)</title>
+<!-- Fijos: node motor/render.mjs --escena <este html> --ancho 270 --alto 480 --duracion 0.02 --fotogramas 3.9
+            --consulta "formato=short&px=4&escena=diorama&fuente=propio" --salida <mp4>
+     formato: short | largo · px: 6 | 4 (píxeles de salida por píxel de arte) · escena: diorama | tema · fuente: propio | atlas
+     Tramo de Mithril: fr01 «Una sola persona. Once laboratorios. Y una IA de mano derecha.» (fr04: once laboratorios externos). -->
+<link rel="stylesheet" href="../../estilo/estilo.css">
+<style>
+  .oculto { display: none !important; }
+  #base { position: absolute; inset: 0; background: #0a0d1a; }
+  #lejos { filter: blur(2px); }
+  #delante { filter: blur(2.5px); }
+  body.largo .dialogo { left: 16px; width: 448px; top: 200px; height: 58px; }
+  .titular.grande { font-size: 16px; line-height: 24px; }
+  .dato.cifra11 { font-size: 16px; line-height: 18px; }
+</style>
+<body class="short">
+  <div id="base"></div>
+  <svg class="arte" id="lejos"></svg>
+  <svg class="arte" id="medio"></svg>
+  <svg class="arte bloom" id="brillo"></svg>
+  <svg class="arte" id="frente"></svg>
+  <svg class="arte" id="gato12"></svg>
+  <svg class="arte" id="delante"></svg>
+  <div class="capa vineta"></div>
+  <div id="textos"></div>
+  <div class="dialogo con-retrato oculto" id="dialogo"><svg class="retrato" id="retrato"></svg><span class="nombre">Mista</span><span id="frase"></span></div>
+
+  <script src="../../estilo/pixel.js"></script>
+  <script src="../../estilo/v3/gato.js"></script>
+  <script src="../../estilo/v5/dibujo.js"></script>
+  <script src="../../../.runtime/v5/atlas/sprites.js"></script>
+  <script src="../../../proyectos/mithril-ia-medicina/escenas/short-v6/timing.js"></script>
+  <script src="diorama.js"></script>
+</body>
