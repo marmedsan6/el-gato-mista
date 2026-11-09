@@ -1,80 +1,122 @@
 <!doctype html>
 <meta charset="utf-8">
-<title>Escena · short · plantilla (estilo v3)</title>
-<!-- Copia este fichero como eNN.html. Reglas: docs/estilo.md («Estilo vigente») y docs/criterios.md §1 (contrato seek(t)).
-     Estilo v3: todo a 12 px (arte en unidades de un lienzo de 90×160; 1 unidad = 3 px CSS = 12 px de salida),
-     profundidad de campo (lejos y delante desenfocados), conos de luz, objetos y MISTA sombreados, acercamiento lento,
-     zoom solo en las explicaciones core. Ejemplo completo: proyectos/mithril-ia-medicina/escenas/short-v6/.
-     Varias estaciones con paralaje y efectos (iteración v4, 2026-11-06): el modelo es motor/calibracion/v4/clip.{html,js}
-     (un contenedor por profundidad + CAM.aplicarCapas; efecto() de v3/fx.js; hojas con node motor/fx-exportar.mjs).
-     Render: node motor/render.mjs --escena <este html> --ancho 270 --alto 480 --duracion <s> --incluir motor/estilo --salida <mp4> -->
+<title>Escena · plantilla (estilo v5)</title>
+<!-- Copia este fichero como eNN.html. Reglas: docs/estilo.md («Estilo vigente», v5) y docs/criterios.md §1 (contrato seek(t)).
+     Estilo v5 (ADR 0009): la idea se ve dibujada en un diorama que se mueve (algo nuevo cada 1-2 s), poco texto; arte a
+     4 px (1 unidad = 1 px CSS); MISTA solo en la entrada de tema, al cambiar de tema (de pie, 1-2 s) y en el cierre, a
+     12 px; mundo ancho con estaciones y paralaje (CAM.aplicarCapas: lejos 0,6 · medio 1 · delante 1,35); zoom core a ×1,25.
+     Biblioteca: motor/estilo/v5/{dibujo,escena}.js. Ejemplo completo: motor/calibracion/v5/clip.{html,js}.
+     Los tiempos de este ejemplo son de prueba (TIMING de abajo): en un vídeo, carga escenas/<formato>/timing.js.
+     Render: node motor/render.mjs --escena <este html> --ancho 270 --alto 480 --duracion 8 --incluir motor/estilo --salida <mp4>
+     (en el largo, --ancho 480 --alto 270). -->
 <link rel="stylesheet" href="../../../../motor/estilo/estilo.css">
 <style>
   .oculto { display: none !important; }
-  #base { position: absolute; inset: 0; background: #14101a; }
-  #mundo { position: absolute; left: 0; top: 0; width: 270px; height: 480px; transform-origin: 0 0; }
-  #lejos { filter: blur(2.5px); }
-  #delante { filter: blur(3px); }
+  #base { position: absolute; inset: 0; background: #07090f; }
+  .profundidad { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+  #lejos { filter: blur(2px); }
+  #delante { filter: blur(2.5px); }
+  body.largo .dialogo { left: 16px; width: 448px; top: 200px; height: 58px; }
+  .titular.grande { font-size: 16px; line-height: 24px; }
+  .cifra-ui { font: 600 12px/10px "Mono"; color: var(--verde); }
+  .etiqueta.fondo { background: #0c1016; padding: 2px 3px 1px; }
 </style>
 <body class="short">
   <div id="base"></div>
-  <div id="mundo">
-    <svg class="arte" id="lejos"></svg>
-    <svg class="arte" id="medio"></svg>
-    <svg class="arte bloom" id="brillo"></svg>
-    <svg class="arte" id="frente"></svg>
-    <svg class="arte" id="delante"></svg>
-    <div id="textos">
-      <!-- Textos pegados a un objeto (px CSS; se mueven con la cámara). La fuente lleva data-x para no crecer con el zoom. -->
-      <div class="tarjeta-texto" style="left:30px; top:104px;">Dato: <b style="font-size:16px">42</b></div>
-      <div class="fuente-dato con-fondo" data-x="16" style="left:16px; top:200px;">Fuente: prueba</div>
-    </div>
-  </div>
+  <div class="profundidad" id="p-lejos"><svg class="arte" id="lejos"></svg></div>
+  <div class="profundidad" id="p-medio"><svg class="arte" id="medio"></svg><svg class="arte bloom" id="brillo"></svg><svg class="arte" id="frente"></svg></div>
+  <div class="profundidad" id="p-delante"><svg class="arte" id="delante"></svg></div>
+  <svg class="arte" id="gato12"></svg>
   <div class="capa vineta"></div>
-  <!-- Interfaz fija: rótulo arriba a la izquierda y caja de diálogo con retrato. Nada en el 12 % superior ni en el 20 % inferior. -->
-  <div class="rotulo" style="left:16px; top:64px;">Titular de <span class="clave">prueba</span></div>
-  <div class="dialogo con-retrato" id="dialogo"><svg class="retrato" id="retrato"></svg><span class="nombre">Mista</span><span id="frase"></span></div>
+  <div id="textos"></div>
+  <div class="dialogo con-retrato oculto" id="dialogo"><svg class="retrato" id="retrato"></svg><span class="nombre">Mista</span><span id="frase"></span></div>
 
   <script src="../../../../motor/estilo/pixel.js"></script>
-  <script src="../../../../motor/estilo/v3/props.js"></script>
-  <script src="../../../../motor/estilo/v3/escenarios.js"></script>
   <script src="../../../../motor/estilo/v3/gato.js"></script>
   <script src="../../../../motor/estilo/camara.js"></script>
-  <script src="../../../../motor/estilo/v3/fx/fx-meta.js"></script>
-  <script src="../../../../motor/estilo/v3/fx.js"></script>
+  <script src="../../../../motor/estilo/v5/dibujo.js"></script>
+  <script src="../../../../motor/estilo/v5/escena.js"></script>
   <script>
-    const W = 270, H = 480, SUELO = 97, MESA = 83; // SUELO y MESA en unidades
-    const L = {};
-    for (const id of ["lejos", "medio", "brillo", "frente", "delante"]) { L[id] = lienzo(id); L[id].setAttribute("viewBox", "0 0 90 160"); }
-    const mundo = document.getElementById("mundo"), textos = document.getElementById("textos");
-    const retrato = document.getElementById("retrato"), frase = document.getElementById("frase");
-    retrato.setAttribute("viewBox", "0 0 34 30");
-    tildesPixel();
-    // Cámara (px CSS): general; acercamiento lento (12 → 13 px); zoom core a escalones; sale con corte seco.
-    const CAM = crearCamara({ W, H, SX: 135, SY: 180, lineaCaja: 300, planos: [
-      [0, "corte", 1],
-      [0.3, "mover", 13 / 12, 135, 179, 1.5], // acercamiento lento
-      [2.0, "zoom", 1.5, 88, 136], // explicación core: la tarjeta
-      [3.5, "corte", 1],
-    ] });
+    // Tiempos de prueba (en un vídeo: el timing.js del formato, generado con motor/timing-a-js.mjs).
+    const pal = (texto, i0, paso) => texto.split(" ").map((p, k) => ({ p, i: i0 + k * paso, f: i0 + k * paso + paso * 0.8 }));
+    window.TIMING = { frases: [
+      { id: "fr01", inicio: 0.2, fin: 3.4, palabras: pal("Esto es una plantilla. Un dato aparece y se mueve.", 0.2, 0.35) },
+      { id: "fr02", inicio: 4.4, fin: 7.6, palabras: pal("Aquí cambia de tema y se ve de cerca.", 4.4, 0.4) },
+    ] };
+    (() => {
+      const CORTO = document.body.classList.contains("short");
+      const W = CORTO ? 270 : 480, H = CORTO ? 480 : 270, MW = 2 * W;
+      const M = CORTO ? { suelo: 292, SX: 135, SY: 200, caja: 300, rotulo: [16, 64], titular: [16, 120], gato: [20, 196], asoma: [6, 195] }
+        : { suelo: 198, SX: 240, SY: 100, caja: 200, rotulo: [16, 16], titular: [176, 76], gato: [60, 104], asoma: [336, 99] };
+      const T = window.TIMING, FR = Object.fromEntries(T.frases.map((f) => [f.id, f]));
+      const P = (fr, trozo) => FR[fr].palabras.find((w) => norm5(w.p).includes(norm5(trozo))).i;
+      const T_SLIDE = 0.9, T_FIN_SLIDE = T_SLIDE + 0.4, T_DATO = P("fr01", "dato"), T_VIAJE = FR.fr02.inicio - 0.6, T_LLEGA = T_VIAJE + 1.1;
+      const T_ZOOM = P("fr02", "cerca");
+      // lienzos (unidades = px CSS); el primer plano recorre más mundo (d = 1,35)
+      const ANCHO = { lejos: MW, medio: MW, brillo: MW, frente: MW, delante: Math.round(MW * 1.25) }, L = {};
+      for (const id of Object.keys(ANCHO)) { const s = document.getElementById(id); s.setAttribute("viewBox", `0 0 ${ANCHO[id]} ${H}`); s.setAttribute("width", ANCHO[id]); s.setAttribute("height", H); L[id] = s; }
+      ["p-lejos", "p-medio", "p-delante"].forEach((id) => { const d = document.getElementById(id); d.style.width = `${id === "p-delante" ? ANCHO.delante : MW}px`; d.style.height = `${H}px`; });
+      const G12 = document.getElementById("gato12"); G12.setAttribute("viewBox", `0 0 ${W / 3} ${H / 3}`); G12.setAttribute("width", W); G12.setAttribute("height", H);
+      // dos estaciones: A (x 0..W) con un monitor y un orbe que lo enlaza; B (x W..2W) con un banco de laboratorio
+      const A = { x: Math.round(W * 0.2), y: M.suelo - 70, w: Math.round(W * 0.6), h: 60 }, B = CORTO ? { x: W + 104, y: M.suelo - 60, w: 128, h: 50 } : { x: W + 72, y: M.suelo - 60, w: 250, h: 50 }; // MISTA, a un lado; el short, fuera de la franja tapada
+      // textos: interfaz fija y anclados al mundo (siguen a la cámara sin crecer)
+      const T5 = crearTextos5({ caja: document.getElementById("textos"), W, H, lineaCaja: M.caja, corto: CORTO });
+      T5.texto(0, T_SLIDE, "rotulo", 'Tema <span class="clave">1</span>', M.rotulo);
+      T5.texto(0, T_SLIDE, "titular grande", 'Título<br><span class="clave">del tema</span>', M.titular);
+      T5.texto(T_FIN_SLIDE, T_VIAJE, "rotulo", 'Titular de <span class="clave">prueba</span>', M.rotulo);
+      T5.texto(T_DATO, T_VIAJE, "etiqueta fondo", '<span class="cifra-ui">42</span> datos', [A.x, A.y - 26], { mundo: true });
+      T5.texto(T_DATO, T_VIAJE, "fuente-dato con-fondo", "Fuente: prueba", [A.x, A.y - 15], { mundo: true });
+      T5.texto(T_ZOOM, 99, "etiqueta fondo", "Detalle", [B.x + 4, B.y - 14], { mundo: true });
+      tildesPixel();
+      const D5 = crearDialogo5({ T, ids: ["fr01", "fr02"], claves: { fr01: "dato", fr02: "tema" }, maxc: CORTO ? 21 : 52, corto: CORTO,
+        dialogo: document.getElementById("dialogo"), frase: document.getElementById("frase"), retrato: document.getElementById("retrato") });
+      const CAM = crearCamara({ W, H, SX: M.SX, SY: M.SY, lineaCaja: M.caja, anchoMundo: MW, altoMundo: H, planos: [
+        [0, "corte", 1, M.SX, M.SY],
+        [T_VIAJE, "mover", 1, M.SX + W, M.SY, T_LLEGA - T_VIAJE], // travelling con paralaje a la estación B
+        [T_ZOOM, "zoom", 1.25, B.x + B.w / 2, M.SY + 20], // zoom core a escalones; se sale con corte seco
+      ] });
+      const CAPAS = [{ el: document.getElementById("p-lejos"), d: 0.6 }, { el: document.getElementById("p-medio"), d: 1 }, { el: document.getElementById("p-delante"), d: 1.35 }];
 
-    window.seek = async (t) => {
-      await FX.listo; // hojas de efectos decodificadas (efecto(L.frente, "carga", t, t0, x, y, 0.5))
-      Object.values(L).forEach((s) => s.replaceChildren());
-      const cam = CAM.en(t);
-      CAM.aplicar(cam, mundo);
-      escenario3("laboratorio", { lejos: L.lejos, medio: L.medio, brillo: L.brillo, delante: L.delante }, t, { suelo: SUELO, mesa: MESA });
-      corcho3(L.medio, 4, 29, 51, 37);
-      tarjeta3(L.frente, 7, 32, 44, 33);
-      matraz3(L.frente, 7, MESA - 11, t, { color: P3.verde, activo: true, semilla: 5 });
-      if (CAM.marcoVisible(cam, 6 * 3, (MESA - 12) * 3, 9 * 3, 13 * 3)) marcoSeleccion(L.frente, 6, MESA - 12, 9, 13);
-      // MISTA solo en el plano general (en los planos de detalle queda fuera de cuadro)
-      if (cam.general) gato(L.frente, 50, SUELO - 32, { pose: "senalar", t, hablando: true, espejo: true }, 1);
-      CAM.fuentesSinZoom(cam, textos, 16, 237);
-      retrato.replaceChildren();
-      retratoGato(retrato, 5, 4.5, { t }, 1.5); // 6 px por píxel: la mitad de 12
-      frase.innerHTML = 'Texto de <span class="sel">prueba<i></i></span>';
-    };
-    window.seek(0);
+      function fondo(t) { // cielo en bandas con tramado, estrellas que titilan y suelo
+        const bandas = [...R5.cielo].reverse(), alto = Math.ceil(M.suelo / bandas.length);
+        bandas.forEach((c, i) => { rect(L.lejos, 0, i * alto, MW, alto, c); if (i) tramado5(L.lejos, 0, i * alto, MW, 2, bandas[i - 1], i); });
+        const az = mulberry32(3);
+        for (let k = 0; k < 60; k++) { const x = Math.floor(az() * MW), y = Math.floor(az() * M.suelo * 0.45), f = az(); if (Math.floor(t * 2 + f * 7) % 7) rect(L.lejos, x, y, 1, 1, "#8a93c0"); }
+        rect(L.lejos, 0, M.suelo, MW, H - M.suelo, "#10131c");
+        rect(L.delante, 0, M.suelo, ANCHO.delante, H, "#07090f");
+        rect(L.delante, Math.round(W * 1.12), Math.round(M.suelo * 0.3), 6, M.suelo, "#04060a"); // farola que cruza en el travelling
+      }
+      function estaciones(t) {
+        // A: un monitor con gráfica, un orbe que aparece con «dato» y una ruta que crece hasta el monitor
+        caja5(L.medio, A.x, A.y, A.w, A.h, R5.hormigon);
+        monitor5(L.frente, A.x + 10, A.y + 10, 40, 28, t, R5.verde[2], 7);
+        if (t >= T_DATO) { destello5(L.frente, L.brillo, A.x + A.w - 20, A.y + 20, t, T_DATO); orbe5(L.frente, L.brillo, A.x + A.w - 20, A.y + 20, 6, t);
+          ruta5(L.medio, L.brillo, [[A.x + A.w - 20, A.y + 20], [A.x + 50, A.y + 20]], t, 0, Math.min(1, (t - T_DATO) / 0.4)); }
+        // B: banco con matraces y un brazo robótico que trabaja
+        caja5(L.medio, B.x, B.y, B.w, B.h, R5.labLuz.slice(0, 4));
+        for (let k = 0; k < 3; k++) matraz5(L.frente, B.x + 8 + k * 8, B.y + B.h - 14, t, R5.naranja[2], R5.naranja[1], k);
+        brazo5(L.frente, B.x + B.w - 20, B.y + B.h - 8, t, { largo: 10, fase: 1 });
+      }
+      function mista(t) { // entrada de tema: entero y sale con el desplazamiento; al cambiar de tema, de pie 1-2 s
+        if (t < T_FIN_SLIDE) { gato(G12, Math.round(M.gato[0] / 3), Math.round(M.gato[1] / 3), { pose: "senalar", t, hablando: true }, 1);
+          G12.style.transform = t < T_SLIDE ? "" : `translateX(${-Math.round(((t - T_SLIDE) / 0.4) * W)}px)`; return; }
+        G12.style.transform = "";
+        if (t >= T_LLEGA && t < T_ZOOM - 0.05) gato(G12, Math.round(M.asoma[0] / 3), Math.round(M.asoma[1] / 3) + (salto5(t, T_LLEGA) || 0), { pose: "pie", t, hablando: true, espejo: !CORTO }, 1);
+      }
+      window.eventosSonido = () => [{ t: T_SLIDE, tipo: "destello" }, { t: T_DATO, tipo: "aparicion" }, { t: T_VIAJE, tipo: "destello" }];
+      window.seek = (t) => {
+        Object.values(L).forEach((s) => s.replaceChildren()); G12.replaceChildren();
+        const cam = CAM.en(t), moviendo = (t >= T_VIAJE && t < T_LLEGA) || (t >= T_SLIDE && t < T_FIN_SLIDE);
+        CAM.aplicarCapas(cam, CAPAS);
+        fondo(t);
+        ["p-medio", "p-delante"].forEach((id) => { const el = document.getElementById(id); el.style.visibility = t < T_SLIDE ? "hidden" : "visible";
+          if (t >= T_SLIDE && t < T_FIN_SLIDE) el.style.transform = `translateX(${Math.round((1 - (t - T_SLIDE) / 0.4) * W)}px)`; });
+        if (t >= T_SLIDE) estaciones(t);
+        mista(t);
+        T5.ver(t, cam, moviendo);
+        D5.pintar(t);
+      };
+      window.seek(0);
+    })();
   </script>
 </body>
