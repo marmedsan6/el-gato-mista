@@ -20,6 +20,15 @@ def _payload(project, gate=True):
         duration = render['duracion']
         if cover is None or not 0 <= cover < duration:
             raise ClipError('Elige un segundo de portada dentro del render: ' + format_id)
+        # Portada propia (Mario, 2026-11-09: generada aparte, p. ej. con Codex): una imagen directamente en salida/.
+        # Si no hay, la portada es el fotograma de portada_segundo.
+        image = publication.get('portada_imagen')
+        image_sha = None
+        if image is not None:
+            image_path = (project / str(image)).resolve()
+            if image_path.parent != (project / 'salida').resolve() or not image_path.is_file():
+                raise ClipError('La portada_imagen debe ser una imagen directamente en salida/: ' + format_id)
+            image_sha = sha_file(image_path)
         meta = profiles.metadata(PROFILE)
         body = publication_body({'titulo': publication['titulo'], 'descripcion': publication['descripcion'],
                                  'tags': publication['tags'], 'categoria': publication['categoria'],
@@ -31,6 +40,7 @@ def _payload(project, gate=True):
                        'cuenta': meta['nombre'], 'archivo': path.name, 'sha256': render['sha256'],
                        'body': body, 'visibilidad': publication['visibilidad'], 'fecha': publication.get('fecha'),
                        'portada_segundo': cover, 'metodo': profiles.route(PROFILE, publication['visibilidad']),
+                       **({'portada_imagen': str(image), 'portada_imagen_sha256': image_sha} if image is not None else {}),
                        'fuentes_pendientes': rights_pending(project), 'evidencia_uso': source_evidence(project)})
     return result
 
@@ -50,7 +60,10 @@ def export(project):
     proposal.mkdir(parents=True, exist_ok=True)
     for item in items:
         cover = proposal / (item['id'] + '.jpg')
-        ffmpeg(['-ss', f'{item["portada_segundo"]:.6f}', '-i', project / 'salida' / item['archivo'], '-frames:v', '1', '-q:v', '3', cover])
+        if item.get('portada_imagen'):
+            ffmpeg(['-i', project / item['portada_imagen'], '-frames:v', '1', '-q:v', '2', cover])
+        else:
+            ffmpeg(['-ss', f'{item["portada_segundo"]:.6f}', '-i', project / 'salida' / item['archivo'], '-frames:v', '1', '-q:v', '3', cover])
         item.update({'portada_archivo': item['id'] + '-portada.jpg', 'portada_sha256': sha_file(cover)})
         captions = project / 'trabajo' / item['id'] / 'subtitulos.srt'
         captions.parent.mkdir(parents=True, exist_ok=True)

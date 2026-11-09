@@ -9,6 +9,7 @@
       "categoria": "28",
       "visibilidad": "public",
       "portada_segundo": 0.5,
+      "portada_imagen": "<salida/portada-codex-a.png: portada generada con Codex (skill qa, paso 9); bórralo para usar el fotograma>",
       "made_for_kids": false,
       "contains_synthetic_media": null
     },
@@ -20,6 +21,7 @@
       "categoria": "28",
       "visibilidad": "public",
       "portada_segundo": 0.5,
+      "portada_imagen": "<salida/portada-codex-a.png: portada generada con Codex (skill qa, paso 9); bórralo para usar el fotograma>",
       "made_for_kids": false,
       "contains_synthetic_media": null
     }

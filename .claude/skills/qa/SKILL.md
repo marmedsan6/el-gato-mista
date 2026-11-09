@@ -31,4 +31,9 @@ Umbrales: `docs/criterios.md` §4. Necesita FFmpeg en el PATH.
    fotograma). No escribas enlaces: la subida añade los del largo y sus shorts (skill `publicar`). Comprueba que un short
    con largo termina remitiendo a él (skill `nuevo-video`, «Cierre del short») y pregunta a Mario lo que falte: `contains_synthetic_media` y cualquier duda del texto. Así su orden de subir no se
    encuentra con preguntas.
+   Portada (Mario, 2026-11-09): se genera con Codex a partir de 1-2 fotogramas del máster, en pixel art 9:16 con MISTA y el
+   título del vídeo, sin logotipos ni caras reales y con la franja derecha y el 20 % inferior libres:
+   `codex exec --skip-git-repo-check -C <carpeta temporal> -s workspace-write -i <fotograma>.png "<instrucciones>"`.
+   Se guarda en `salida/portada-codex-<letra>.png`, se enseña a Mario y va en `publicacion.json` como `portada_imagen`
+   (la subida la usa en lugar del fotograma de `portada_segundo`, que sigue siendo obligatorio).
 10. Enséñale el máster. Si pide cambios, se vuelve a Escenas (`reviews/iter-NN.md`); si da la orden de subir, skill `publicar`.

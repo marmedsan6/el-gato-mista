@@ -1,5 +1,6 @@
 """Exportar y publicar sobre un proyecto de este canal: sin red y con un YouTube de mentira."""
 import json
+import subprocess
 from pathlib import Path
 
 import pytest
@@ -114,6 +115,27 @@ def test_exportar_crea_el_paquete_vinculado_a_la_huella(proyecto):
     assert {'short.mp4', 'short-portada.jpg', 'short.srt', 'short-publicacion.txt', 'publicacion.json', 'LEEME.txt'} == nombres
     srt = (proyecto / 'para-subir' / propuesta['huella_lote'][:16] / 'short.srt').read_text(encoding='utf-8')
     assert '00:00:00,000 --> 00:00:00,900' in srt and 'Una sola persona.' in srt
+
+
+def test_portada_imagen_sustituye_al_fotograma(proyecto):
+    imagen = proyecto / 'salida' / 'portada.png'
+    subprocess.run(['ffmpeg', '-hide_banner', '-nostdin', '-y', '-f', 'lavfi', '-i', 'color=c=orange:s=54x96', '-frames:v', '1', str(imagen)],
+                   check=True, capture_output=True)
+    ajustar(proyecto, portada_imagen='salida/portada.png')
+    story_publication.export(proyecto)
+    propuesta = story_publication.plan(proyecto)
+    destino = propuesta['destinos'][0]
+    assert destino['portada_imagen'] == 'salida/portada.png' and destino['portada_imagen_sha256'] == sha_file(imagen)
+    portada = proyecto / 'para-subir' / propuesta['huella_lote'][:16] / 'short-portada.jpg'
+    medidas = subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'stream=width,height', '-of', 'csv=p=0', str(portada)],
+                             check=True, capture_output=True, text=True).stdout.strip()
+    assert medidas == '54,96'  # la de la imagen, no la del vídeo (108×192)
+
+
+def test_portada_imagen_fuera_de_salida_se_rechaza(proyecto):
+    ajustar(proyecto, portada_imagen='../portada.png')
+    with pytest.raises(ClipError, match='portada_imagen'):
+        story_publication.export(proyecto)
 
 
 def test_exportar_dos_veces_da_la_misma_huella(proyecto):
