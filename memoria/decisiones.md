@@ -171,3 +171,33 @@
   - **Objetos:** detalle interior a media unidad (6 px) y silueta a 12 px. Ningún objeto a ×2.
   - **Efectos:** de pixelfx, solo puntuales y anclados a su causa. Ninguno con cifras o texto propio: el escáner de pixelfx pintaba un «40 %» que se leía como un dato sin fuente. La interfaz de juego (escaneos, marcos, barras) se dibuja a mano a 12 px.
   - Reglas en el bloque «Estilo vigente» de `docs/estilo.md` y en la skill `estilo`. Crédito de pixelfx en `NOTICE.md`.
+
+## Resumen semanal: la semana de los agentes (2026-11-06)
+- 2026-11-06 · Siguiente idea: resumen de la semana (29 oct - 5 nov) en un largo, con shorts de los temas con más contenido. De momento solo un documento de información, sin guion, en `HermesVault/Investigación/reports/` y las transcripciones en `research_notes/` — Mario.
+- 2026-11-06 · Temas: los 5 enlaces de Mario (harness y Super-agent de DeepSeek, skill teardown, skill de seguridad de Cloudflare, app de Herdr y la semana de Fazt), más «Meta compra Conductor». Del vídeo de Fazt entran todas sus noticias (Binance, Reddit/Google, Microsoft, Neuralink y Subvocal). Fuera: OpenAI y los 948 fallos de Linux, el S-1 de Anthropic y los videojuegos (GTA 6, Ocarina) — Mario.
+- 2026-11-06 · El largo, con hilo conductor «la semana de los agentes» (por dentro → orquestadores → skills → lado oscuro → impacto → interfaces), y no como un noticiero por bloques — Mario.
+- 2026-11-06 · Binance y «qué es un harness» darían para un largo propio, pero van dentro del resumen semanal, como bloques con más peso — Mario («Dentro del resumen»). Se pueden retomar más adelante.
+- 2026-11-06 · resumen-semana-agentes: largo y **3 shorts** (A Binance, B la extensión de Claude Code con puerta trasera, C el harness), gancho de **repaso rápido** con 5 titulares, MISTA **curioso y escéptico** que corrige lo exagerado, sin guiño a cómo se hace el canal, pieza única (no es una serie) y gasto de voz sin tope (se informa del coste real) — Mario.
+- 2026-11-06 · **Publicación escalonada**: el largo hoy (viernes 6), un short el sábado, otro el domingo y otro el lunes. En YouTube se programan con `fecha` en `publicacion.json`; Instagram y TikTok, con la orden de Mario el día que toque — Mario («Hoy el video largo, mañana un short, domingo otro short y lunes otro short»). El orden de los shorts (A, B, C) y la hora (12:00 de Madrid) los propone el agente y se confirman en el QA.
+- 2026-11-06 · PUERTA 1 de resumen-semana-agentes aprobada («Aprobado» y, tras cuatro correcciones de precisión del comprobador de enlaces, «Aprobado con los cambios»), sobre la SHA-256 del guion en reviews/puerta-1.md.
+- 2026-11-06 · resumen-semana-agentes: YouTube programa cada short en su día (sábado, domingo y lunes), e Instagram y TikTok reciben **los tres shorts el sábado** — Mario («IG y TikTok, todo el sábado»). Así no hace falta tocar la subida, que manda a esas redes todos los shorts de `publicacion.json` a la vez.
+- 2026-11-06 · resumen-semana-agentes, voz: los nombres en inglés se reescriben como antes («Dipsik», «Jérder», «Cláudfler», «Báinans», «Niúralink», «Kérsor», «Éirpods»; Claude = «Clod»), con el nombre real en pantalla — Mario.
+- 2026-11-06 · resumen-semana-agentes, storyboard: los agentes son robots pixel pequeños, las skills son cartuchos de videojuego, un sello «MATIZ» marca cada exageración corregida, y hay 4 planos de detalle en el largo (el bucle del harness, las barras del Super-agent, la cronología de Binance y Stack Overflow) y uno por short — Mario.
+- 2026-11-06 · resumen-semana-agentes, publicación: largo «La semana de los agentes de IA: robo récord a Binance, puertas traseras y jefes que no trabajan»; shorts con título en pregunta (A «¿Cómo robaron 6.340 millones a Binance con una oferta de trabajo?», B «¿La extensión oficial de Claude Code con una puerta trasera?», C «¿Por qué el mismo modelo de IA da agentes distintos?»); sin declarar contenido sintético; shorts programados en YouTube a las 12:00 de Madrid — Mario.
+- 2026-11-06 · resumen-semana-agentes: la voz se regenera con el estilo «profesor cercano» de ventanas-contexto-ia, porque la primera tirada salió sin `--estilo` — Mario («usa la misma que has usado en otros videos»). Por defecto, la voz de los vídeos es Orus **con** ese estilo.
+
+## Biblioteca pixel reutilizable (2026-11-06)
+- 2026-11-06 · Mario quiere «un set enorme de imágenes pixel con animaciones» para fondos y explicaciones, no un único plató. Se estudia el reel de SpriteForge `DfUurtvD7Jd`. Propuesta en `docs/investigacion/biblioteca-pixel-2026-11-06/propuesta.md`: fondos por capas, objetos por estados y escenas explicativas reutilizables. Es una dirección solicitada y una propuesta pendiente de concretar; no cambia el estilo v3 ni autoriza gasto o instalaciones. El repositorio externo que Mario recuerda de la v6 sigue sin identificar.
+
+## Repaso y nueva dirección (2026-11-09)
+- 2026-11-09 · Lo publicado se conserva reproducible: ventanas-contexto-ia y resumen-semana-agentes cargan `motor/estilo/v3/congelado/props-v3.0.js` (el `props.js` de antes de la v4). resumen-semana-agentes, `motor/biblioteca/` y la investigación de la biblioteca pixel pasan del checkout principal a la rama — plan aprobado por Mario.
+- 2026-11-09 · Nueva forma de presentar (calibración v5, por probar): **diorama animado** (la idea se ve dibujada y se mueve, con poco texto), MISTA en pantalla solo en el inicio, en los cambios de tema y en el cierre (el retrato de la caja se queda), detalle a **6 px y 4 px** en fijos para elegir, y arte propio más los iconos del atlas `Angais/pixel-art-atlas-1.4m` (16×16, CC0, hechos con Krea; falta leer la licencia de Krea §2.3) y packs CC0, con permiso en cada descarga — Mario. Si la demo gusta, un sistema que elija el recurso (o que lo elija Opus).
+- 2026-11-09 · Limpieza aprobada por Mario fila a fila y hecha (37 elementos a la Papelera, etiqueta local `archivo/pre-limpieza-2026-11-09` antes):
+  - Mithril: short v1, v4 y v5 (citas repuntadas a short-v6) y `escenas/largo/`.
+  - Calibraciones c5a, c5b, v2 y el clip de v3. Queda `v3/gato-hoja.html`, porque `gato_mezcla.py` lee su render.
+  - Pruebas del gato, menos la mezcla. `gato_procedural.py` y `c3_acentos.py`.
+  - Pilotos de HyperFrames, Remotion y propio, con sus node_modules. Quedan `resultados.md` y `escena-spec.md`.
+  - Las 11 copias de `escena-plantilla.html` y `.claude/skills/.gitkeep`.
+  - Plugin `hyperframes` fuera de `.claude/settings.json`.
+  - `motor/.revisar-tmp.mjs` pasa a `motor/revisar.mjs`.
+  - Docs, memoria y biblioteca, sin tocar por ahora (Mario no las eligió).
