@@ -1,0 +1,10 @@
+Si le das el mismo cerebro de IA a dos agentes distintos, no harán lo mismo.
+Porque un agente no es solo el modelo. Es el modelo más su járnes.
+El járnes es todo lo que rodea al cerebro: las herramientas, el acceso a tus archivos, los permisos y la memoria. Clod Coud o Códex son járnes.
+Y decide cosas que lo cambian todo: si te pregunta antes de borrar, qué olvida cuando se le llena la memoria, y si ante un fallo repite lo mismo o prueba otra vía.
+Por eso el modelo marca el techo, pero el járnes decide cuánto te acercas a él.
+Dipsik tiene uno abierto, y con algo raro.
+Casi todos tienen un núcleo fijo: el bucle que lee, piensa, actúa y vuelve a empezar.
+Según Jélmcoud, en el de Dipsik ese bucle es una pieza más, y se puede cambiar.
+Eso sí: está en vista previa, y avisa de que habrá cambios que lo rompan.
+¿Te interesa saber más? Tengo un vídeo largo en Yutub con toda la semana de los agentes.

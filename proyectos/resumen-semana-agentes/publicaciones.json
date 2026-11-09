@@ -1,0 +1,49 @@
+{
+  "historias": {
+    "0f2524dc782e7d848be880ee57a8a0440796e892a3e479859875603541046cd5": {
+      "video_id": "I_NG4G4iiyE",
+      "channel_id": "UCA76YezyGjv7spjOfRqAKNA",
+      "sha256": "fe5810c492aa7b6c98904835dbc911f63ed5434e4f8aba9408c7eedf3f857714",
+      "formato": "largo",
+      "fecha": "2026-11-06T17:14:43.825306+00:00",
+      "url": "https://www.youtube.com/watch?v=I_NG4G4iiyE",
+      "body_sha256": "5dfc99f02d2639fb64940566ded7b920567644c51c0844cfdaa007c7cd36193a",
+      "descripcion_enviada": "Del 29 de octubre al 5 de noviembre, casi todo lo importante en IA giró alrededor de los agentes. Qué es un harness y qué tiene de raro el de DeepSeek, el Super-agent con un jefe que no trabaja, la app de Herdr y la compra de Conductor por Meta para cerrarla, las skills virales (teardown y la de seguridad de Cloudflare), la extensión oficial de Claude Code que salió con puerta trasera, el fallo de Linux que encontró un modelo de Anthropic, el robo de 6.340 millones a Binance que empezó con una oferta de trabajo, Reddit, Stack Overflow y Microsoft, y cómo hablaremos con los agentes sin voz. Con lo que pasó de verdad y con lo que se exageró.\n\nShorts de este vídeo:\n- ¿Cómo robaron 6.340 millones a Binance con una oferta de trabajo?: https://www.youtube.com/shorts/o_80P871y5I\n- ¿La extensión oficial de Claude Code con una puerta trasera?: https://www.youtube.com/shorts/IPlYFIhU5OY\n- ¿Por qué el mismo modelo de IA da agentes distintos?: https://www.youtube.com/shorts/TEsnkWW2-EI",
+      "portada_sha256": "9d020c3ac96a0ab60daee787b87d10dabb96de5ca01763403e77e73832e926b1",
+      "enlaces_via": "YouTube Studio a mano (Claude in Chrome), 2026-11-06"
+    },
+    "97221d68765bf0ab94f44d092ba305ad1029e334104591f70a2223c603b59618": {
+      "video_id": "o_80P871y5I",
+      "channel_id": "UCA76YezyGjv7spjOfRqAKNA",
+      "sha256": "aae28b6eaaa33909bbc6802ab650c5a461f9cb16fa00e153a47a1163dd1b5d81",
+      "formato": "short-a",
+      "fecha": "2026-11-06T17:15:22.740425+00:00",
+      "url": "https://www.youtube.com/watch?v=o_80P871y5I",
+      "body_sha256": "8fc032c80637eac30b750c8bf5c0adba96940c2b3b5b004ff52d9bca4dc35053",
+      "descripcion_enviada": "A Binance le robaron unos 6.340 millones de dólares, el mayor robo cripto de la historia. Todo empezó con una oferta de trabajo falsa a un ingeniero; desde su ordenador, el atacante abusó de una herramienta interna de IA para hacerse con otros dos y lanzar las retiradas. No robaron las claves: se colaron en el sistema que las firma.\n\nVídeo completo: https://www.youtube.com/watch?v=I_NG4G4iiyE",
+      "portada_sha256": "66dfe591e20926e0429a69668ffd013ce0c435d667a66ee802156e662254119b"
+    },
+    "cf059f2e74c2d84d4e6e1eda21c009b41d844bf9f0bf0e2ba2f597c10b31aff3": {
+      "video_id": "IPlYFIhU5OY",
+      "channel_id": "UCA76YezyGjv7spjOfRqAKNA",
+      "sha256": "6424b15f1e5a5e0d61f453ffba4d61927bd8b41253a333dd6d7939b87bad309d",
+      "formato": "short-b",
+      "fecha": "2026-11-06T17:15:30.971735+00:00",
+      "url": "https://www.youtube.com/watch?v=IPlYFIhU5OY",
+      "body_sha256": "1b56aaff13aa7c8bc1e286b93bfe21d608905525dde4f5f22ed4ce3768a2f590",
+      "descripcion_enviada": "El 29 de octubre, la tienda de extensiones de Cursor sirvió una versión manipulada de la extensión oficial de Claude Code, con el identificador legítimo de Anthropic. Durante unas 11 horas mandaba datos del equipo, añadía una clave SSH del atacante e intentaba abrir un túnel. Si la instalaste, busca una clave llamada svc-telemetry.\n\nVídeo completo: https://www.youtube.com/watch?v=I_NG4G4iiyE",
+      "portada_sha256": "1ea7906ce5ace178fbe54fdb0a3ba674ba03430ad79377fab44f784b5709af06"
+    },
+    "947850301192385b38bec5e2ba6c1ffe1f521fd6f9f6cf26dd3bd85654dffc7d": {
+      "video_id": "TEsnkWW2-EI",
+      "channel_id": "UCA76YezyGjv7spjOfRqAKNA",
+      "sha256": "09ecf6262eac0b9028096273eba0389566ffac1dfe70eeb1f49f00a439a85d78",
+      "formato": "short-c",
+      "fecha": "2026-11-06T17:15:40.805278+00:00",
+      "url": "https://www.youtube.com/watch?v=TEsnkWW2-EI",
+      "body_sha256": "7b176c5b5dac4e9d373080742f14dc39396954d9f9403ff6ec01c562d84fb964",
+      "descripcion_enviada": "Un agente no es solo el modelo: es el modelo más su harness, todo lo que lo rodea para trabajar (herramientas, archivos, permisos y memoria). El harness decide si pregunta antes de borrar, qué olvida y si ante un fallo prueba otra vía. En el de DeepSeek, según Helmcode, hasta el bucle del agente es una pieza que se puede cambiar.\n\nVídeo completo: https://www.youtube.com/watch?v=I_NG4G4iiyE",
+      "portada_sha256": "2a7cfb410d958b44d2d5c3679f7e174713df91f389b1768d81a7830faae94579"
+    }
+  }
+}

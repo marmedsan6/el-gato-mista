@@ -1,0 +1,41 @@
+{
+  "fuentes": [
+    {
+      "id": "f1",
+      "url": "https://www.instagram.com/reels/DfUurtvD7Jd/",
+      "autor": "SpriteForge (@spriteforgetech)",
+      "consultada": "2026-11-06",
+      "tipo": "material",
+      "licencia": "No acreditada para reutilización; solo referencia de investigación",
+      "tramo": "0–39,273 s, analizado; ningún tramo incorporado a un vídeo del canal",
+      "uso": "Resumen del argumento y análisis de cuadrícula, paleta y reutilización de sprites",
+      "evidencia": "Vídeo y metadatos locales, ASR local y hoja de contactos a 1 fps; cifra 1.561 contrastada en pantalla y descripción"
+    },
+    {
+      "id": "f2",
+      "url": "https://www.spriteforge.tech/claude",
+      "autor": "SpriteForge",
+      "consultada": "2026-11-06",
+      "tipo": "hecho",
+      "uso": "Separación entre editor gratuito y generador con créditos; paleta y cuadrícula; límites declarados",
+      "alcance": "Documentación del proveedor, no prueba independiente de calidad"
+    },
+    {
+      "id": "f3",
+      "url": "https://www.spriteforge.tech/blog/generate-pixel-art-from-claude",
+      "autor": "SpriteForge",
+      "consultada": "2026-11-06",
+      "tipo": "hecho",
+      "uso": "Tipos de generación, estados de animación y exportación PNG/hojas de sprites",
+      "alcance": "Capacidades declaradas; no ejecutadas en esta investigación"
+    },
+    {
+      "id": "f4",
+      "url": "https://www.spriteforge.tech/docs",
+      "autor": "SpriteForge",
+      "consultada": "2026-11-06",
+      "tipo": "hecho",
+      "uso": "Representación de cuadrícula indexada a paleta y transparencia"
+    }
+  ]
+}

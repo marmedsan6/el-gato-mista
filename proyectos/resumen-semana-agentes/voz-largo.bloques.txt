@@ -1,0 +1,107 @@
+# b01 · 1. Gancho
+Esta semana, a Báinans le robaron más de seis mil millones de dólares.
+Meta compró una ap de agentes. Para cerrarla.
+Una IA encontró sola un fallo grave en Linux.
+La extensión oficial de Clod Coud salió con una puerta trasera.
+Y alguien copió en nueve minutos, con unos Éirpods, unas gafas que habían levantado más de un millón de dólares.
+Parecen cinco noticias sueltas. Pero todas tienen algo en común: los agentes.
+Soy MISTA, y esta ha sido la semana de los agentes. Con lo que pasó de verdad. Y con lo que se exageró.
+Vamos por partes: cómo son por dentro, quién los manda, qué saben hacer, cómo se rompen, qué están cambiando y cómo les hablaremos.
+@pausa 0.7
+# b02 · 2. Por dentro: el harness
+Primero, una palabra que vas a oír mucho: járnes.
+Un modelo de IA es como un cerebro: razona y escribe. Pero, solo, no puede tocar nada.
+El járnes es todo lo que lo rodea para que trabaje: las herramientas, el acceso a tus archivos, los permisos y la memoria. Clod Coud o Códex son járnes.
+Y aquí viene lo curioso. Cambia el járnes y cambia el agente, aunque el cerebro sea exactamente el mismo.
+El járnes decide si el agente te pregunta antes de borrar algo. Qué olvida cuando se le llena la memoria. Y si, cuando algo falla, repite diez veces el mismo comando roto o prueba otra vía.
+Eso sí: el modelo marca el techo. Un buen járnes te acerca a él. Uno malo desperdicia un buen cerebro.
+Dipsik tiene el suyo, abierto y con licencia eme i te.
+¿Qué tiene de raro? Casi todos los járnes tienen un núcleo fijo: el bucle que lee, piensa, usa una herramienta y vuelve a empezar. Alrededor se enchufan extensiones.
+Según Jélmcoud, que lo ha analizado a fondo, en el de Dipsik ese bucle es una pieza más, y se puede cambiar como cualquier otra.
+O sea: puedes sustituir justo la pieza que decide qué hace el agente.
+Pero no te lo vendo como la panacea. Está en vista previa, y sus autores avisan, en mayúsculas, de que habrá cambios que lo rompan.
+@pausa 0.7
+# b03 · 3. El jefe que no trabaja
+Y Dipsik ha enseñado otra idea: el Súper éiyent.
+El problema es conocido. Abres tres agentes: uno arregla un test, otro revisa código y otro investiga un error. Y te pasas el rato vigilándolos.
+La solución es un jefe. Un agente que recibe los encargos y los reparte entre agentes obreros, cada uno con su tarea y sus herramientas.
+Y al jefe le quitan casi todas las herramientas, para que no se ponga a trabajar él: tiene que delegar.
+¿Por qué? Porque en sus pruebas, a un agente que podía delegar si quería, no le dio la gana ni una sola vez en cinco intentos.
+Con el jefe, el peor caso bajó de casi treinta minutos a menos de dieciséis.
+Pero ojo con la letra pequeña. Son pruebas preliminares de la propia Dipsik. Y a cambio, el sistema relee casi cuatro veces más texto.
+Además, los obreros trabajan con todos los permisos de la cuenta de quien los lanza.
+Y un detalle que me encanta: cuando Jélmcoud lo probó, Guítjab le suspendió las cuentas del agente. A una, tras su primer comentario.
+@pausa 0.7
+# b04 · 4. Los jefes de equipo
+La misma idea, pero desde fuera: herramientas para que una persona maneje muchos agentes a la vez.
+Jérder acaba de sacar su ap de escritorio. Es abierta y junta muchos agentes distintos en una sola ventana.
+Su truco: la ventana solo enseña. Los agentes viven en un pequeño servidor aparte, así que, si cierras la ap, siguen trabajando.
+Y hasta un agente puede manejar la ap: abrir pestañas y repartir el trabajo entre otros agentes.
+En la demo de Fast, Clod Coud reparte la actualización de varios proyectos entre Clod Coud, Códex, Kimi y otros agentes, cada uno en su terminal.
+El cuatro de noviembre, Meta compró Conductor, una ap que hacía algo parecido y que decía tener más de cien mil usuarios.
+¿Y qué ha hecho Meta con ella? Cerrarla. Ya no admite altas, y su nube se apaga el veinte de noviembre.
+En la misma semana, una ap de agentes abierta que llega, y otra comprada que se cierra. Los jefes de equipo valen tanto que las grandes los compran.
+@pausa 0.7
+# b05 · 5. Los oficios: las skills
+Vale, ya tenemos agentes y alguien que los manda. Pero, ¿qué saben hacer?
+Ahí entran las esquils: paquetes de instrucciones que le enseñan un oficio a un agente.
+Esta semana se hizo viral tirdáun, una esquil gratuita que convierte una máquina en un simulador tres de que puedes girar y desmontar. Un motor, un tren de aterrizaje…
+Un post viral dijo que iba a acabar con algunas carreras.
+Pues no tanto. Lo que hace es animar máquinas calculadas con medidas reales, no personajes. Y su propio autor avisa: sin una foto o un plano de referencia, le salían juguetes genéricos.
+La otra esquil viral es la de Cláudfler, que convierte a un agente en auditor de seguridad.
+Otro post dijo que encuentra todos los bags.
+Su propia documentación dice otra cosa: una sola pasada encuentra más o menos la mitad de lo que encuentran varias seguidas.
+Y no es de esta semana: es de junio. Simplemente se ha vuelto a hacer viral.
+Lo que sí mola es su regla de oro: el agente que comprueba un fallo nunca es el que lo encontró.
+Y funciona: con un modelo que busca y otro distinto que valida, los avisos falsos que se descartaban bajaron del cuarenta al once por ciento.
+Cláudfler la usó dentro de casa: en unas seis semanas, de una esquil de unas cuatrocientas cincuenta líneas pasó a revisar más de cien repositorios.
+@pausa 0.7
+# b06 · 6. El lado oscuro
+Y ahora, el giro. Porque si un agente puede tocar tus archivos, también puede ser la puerta de entrada.
+El veintinueve de octubre, en la tienda de extensiones de Kérsor apareció una versión manipulada de la extensión oficial de Clod Coud. No era una imitación: llevaba el identificador legítimo de Antrópic.
+Estuvo unas once horas. Y, según Kérsor, llegó como mucho a cinco mil personas.
+Mandaba datos de tu equipo, metía una clave del atacante para entrar por ese ese hache e intentaba abrir un túnel hacia fuera.
+Esto se llama ataque a la cadena de suministro: no te atacan a ti, atacan lo que instalas.
+La misma semana, Antrópic contó que un modelo suyo, aún sin lanzar, encontró un fallo en el núcleo de Linux y escribió un ataque que funcionaba.
+En su prueba, tardó cuarenta y ocho minutos en saltarse una protección, y cinco más en tener el control total del servidor.
+Y el mismo informe habla de fallos en Crom, Safari, Android y Uíndous.
+Pero hay matices. El ataque que enseñaron necesita una función concreta activada en el servidor. Otra empresa, Cláud Línux, no consiguió reproducirlo. Y no consta ningún ataque real.
+Aun así, el fallo está en código que usan casi todos, así que toca actualizar.
+Y la gran historia de la semana: Báinans.
+Le robaron unos seis mil trescientos cuarenta millones de dólares. Más de cuatro veces el récord anterior.
+El efe be i se lo atribuye a Corea del Norte.
+Y la campaña venía de lejos. En septiembre, un falso reclutador contactó con un ingeniero de Báinans en una web de empleo real, y le coló una prueba de selección trucada.
+El veinte de octubre, desde el ordenador de ese ingeniero, el atacante abusó de una herramienta interna de IA de la empresa para hacerse con otros dos ingenieros.
+Y nueve días después, lanzó las retiradas.
+Ese día, el bitcoin cayó más de un cuatro por ciento.
+No robaron las claves: se colaron en el propio sistema que firma las retiradas.
+Su jefe lo resumió así: no fue un error, fue una campaña de meses.
+Se han congelado casi tres mil millones, y Báinans ha repuesto el noventa y ocho por ciento con sus reservas.
+La puerta fue una persona. Y el puente, una herramienta de IA.
+@pausa 0.7
+# b07 · 7. El impacto
+Mientras tanto, hay cosas que ya están cambiando.
+Réddit dice que, en octubre, le llegaba de media más de un millón de visitas menos a la semana desde los buscadores.
+Y su jefe culpa al modo IA de Google: dice que no manda visitas. Ni a ellos, ni a nadie que él conozca.
+En Estados Unidos, sus usuarios diarios bajaron un dos por ciento, aunque en el mundo siguen creciendo.
+Sus acciones cayeron un veintinueve por ciento en un día, el peor desde que salió a bolsa. Aunque sus ingresos crecieron un cincuenta y tres por ciento.
+Estac Óverflou, la web donde los programadores se resolvían las dudas, recibió en septiembre novecientas sesenta y nueve preguntas. En marzo de dos mil catorce recibía unas doscientas siete mil.
+Parte de la culpa, dicen sus usuarios, es de una moderación muy estricta. Pero la caída es brutal.
+Y aquí viene la paradoja: la IA aprendió de Estac Óverflou y de Réddit. Ahora contesta en su lugar. ¿De quién aprenderá la siguiente?
+Y Máicrosoft ofrece una baja voluntaria a sesenta mil empleados. Ojo: no es que se vayan sesenta mil. Son sesenta mil los que pueden pedirla, el veintisiete por ciento de la plantilla. Tienen hasta principios de diciembre para decidir.
+¿El motivo? Equilibrar lo carísimo que le está saliendo construir infraestructura para la IA.
+@pausa 0.7
+# b08 · 8. Lo siguiente: hablarles sin voz
+Y la última pregunta: ¿cómo vamos a hablar con los agentes?
+Subvocal, una estártap de Uái Combinéitor, hace unas gafas que convierten en texto lo que dices sin emitir sonido. No leen tus labios: usan un radar en la montura.
+Han levantado un millón trescientos mil dólares.
+Y un desarrollador hizo una versión gratis en unos nueve minutos, con un solo prómpt y unos Éirpods Pro, que notan cómo mueves la mandíbula.
+Pero no hacen lo mismo: la copia solo reconoce las pocas palabras que le enseñas.
+Y Niúralink fue más allá: un participante de su estudio despertó un agente basado en Grok solo con el pensamiento, imaginando la frase «Jei Niúralink».
+Eso sí: no han publicado datos de cómo funciona.
+Y Mask dice que Bláindsait, su implante para la vista, está listo y solo espera al regulador. Una designación de la efe de a no es una aprobación.
+@pausa 0.7
+# b09 · 9. Cierre
+Voz, susurro, mandíbula, pensamiento.
+La carrera ya no es solo qué agente es más listo. Es quién lo construye, quién lo manda, qué sabe hacer, por dónde se rompe… y cómo le hablamos.
+Y esta semana ha pasado de todo.

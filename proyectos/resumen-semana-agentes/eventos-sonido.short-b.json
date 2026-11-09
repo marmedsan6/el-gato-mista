@@ -1,0 +1,42 @@
+[
+ {
+  "t": 6.84,
+  "tipo": "error"
+ },
+ {
+  "t": 10.42,
+  "tipo": "destello"
+ },
+ {
+  "t": 12.78,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 20.22,
+  "tipo": "destello"
+ },
+ {
+  "t": 20.96,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 26.06,
+  "tipo": "error"
+ },
+ {
+  "t": 36.2,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 37.58,
+  "tipo": "destello"
+ },
+ {
+  "t": 41.88,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 44.38,
+  "tipo": "aparicion"
+ }
+]

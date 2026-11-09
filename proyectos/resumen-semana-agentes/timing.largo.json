@@ -1,0 +1,9558 @@
+{
+  "formato": "largo",
+  "fps": 60,
+  "audio": {
+    "fichero": "largo-sin-clips.wav",
+    "sha256": "ed3b1f7b86a62256325221373c6b16d6643b9777250814cdae9436b75901c593",
+    "duracion_s": 563.2
+  },
+  "alineacion": {
+    "herramienta": "faster-whisper 1.2.1 · large-v3-turbo (int8, CPU)",
+    "con_pista": true,
+    "palabras_guion": 1732,
+    "casadas": 1576,
+    "porcentaje": 91,
+    "faltan": [],
+    "sobran": [],
+    "sustituidas": [
+      {
+        "guion": "járnes.",
+        "oido": "Harness."
+      },
+      {
+        "guion": "járnes",
+        "oido": "Harness"
+      },
+      {
+        "guion": "Coud",
+        "oido": "Code"
+      },
+      {
+        "guion": "járnes.",
+        "oido": "Harness."
+      },
+      {
+        "guion": "járnes",
+        "oido": "Harness"
+      },
+      {
+        "guion": "járnes",
+        "oido": "Harness"
+      },
+      {
+        "guion": "járnes",
+        "oido": "Harness"
+      },
+      {
+        "guion": "Dipsik",
+        "oido": "Deepseek"
+      },
+      {
+        "guion": "eme i te.",
+        "oido": "MIT."
+      },
+      {
+        "guion": "járnes",
+        "oido": "Harness"
+      },
+      {
+        "guion": "Jélmcoud,",
+        "oido": "Helmcode,"
+      },
+      {
+        "guion": "Dipsik",
+        "oido": "Deepseek"
+      },
+      {
+        "guion": "puedes",
+        "oido": "puede"
+      },
+      {
+        "guion": "Dipsik",
+        "oido": "DeepMind"
+      },
+      {
+        "guion": "Súper éiyent.",
+        "oido": "superagent."
+      },
+      {
+        "guion": "treinta",
+        "oido": "30"
+      },
+      {
+        "guion": "dieciséis.",
+        "oido": "16."
+      },
+      {
+        "guion": "Dipsik.",
+        "oido": "DeepMind."
+      },
+      {
+        "guion": "relee",
+        "oido": "relé"
+      },
+      {
+        "guion": "Jélmcoud",
+        "oido": "Helmcode"
+      },
+      {
+        "guion": "Guítjab",
+        "oido": "GitHub"
+      },
+      {
+        "guion": "del agente.",
+        "oido": "de la gente."
+      },
+      {
+        "guion": "Jérder",
+        "oido": "Yerder"
+      },
+      {
+        "guion": "ap",
+        "oido": "app"
+      },
+      {
+        "guion": "ap,",
+        "oido": "app,"
+      },
+      {
+        "guion": "ap:",
+        "oido": "app,"
+      },
+      {
+        "guion": "Clod Coud",
+        "oido": "CloudCode"
+      },
+      {
+        "guion": "Clod Coud,",
+        "oido": "CloudCode,"
+      },
+      {
+        "guion": "cuatro",
+        "oido": "4"
+      },
+      {
+        "guion": "ap",
+        "oido": "app"
+      },
+      {
+        "guion": "cien mil",
+        "oido": "100 .000"
+      },
+      {
+        "guion": "veinte",
+        "oido": "20"
+      },
+      {
+        "guion": "ap",
+        "oido": "app"
+      },
+      {
+        "guion": "esquils:",
+        "oido": "skills,"
+      },
+      {
+        "guion": "tirdáun,",
+        "oido": "Teardown,"
+      },
+      {
+        "guion": "esquil",
+        "oido": "skill"
+      },
+      {
+        "guion": "tres de",
+        "oido": "3D"
+      },
+      {
+        "guion": "esquil",
+        "oido": "skill"
+      },
+      {
+        "guion": "Cláudfler,",
+        "oido": "Cloudflare,"
+      },
+      {
+        "guion": "bags.",
+        "oido": "bugs."
+      },
+      {
+        "guion": "encuentra",
+        "oido": "encuentran"
+      },
+      {
+        "guion": "cuarenta",
+        "oido": "40"
+      },
+      {
+        "guion": "once por ciento. Cláudfler",
+        "oido": "11%. Cloudflare"
+      },
+      {
+        "guion": "seis",
+        "oido": "6"
+      },
+      {
+        "guion": "esquil",
+        "oido": "skill"
+      },
+      {
+        "guion": "cuatrocientas cincuenta",
+        "oido": "450"
+      },
+      {
+        "guion": "cien",
+        "oido": "100"
+      },
+      {
+        "guion": "veintinueve",
+        "oido": "29"
+      },
+      {
+        "guion": "Kérsor",
+        "oido": "Kersol,"
+      },
+      {
+        "guion": "Clod Coud.",
+        "oido": "CloudCode."
+      },
+      {
+        "guion": "Antrópic.",
+        "oido": "Anthropic."
+      },
+      {
+        "guion": "once",
+        "oido": "11"
+      },
+      {
+        "guion": "Kérsor,",
+        "oido": "Kersol,"
+      },
+      {
+        "guion": "cinco mil",
+        "oido": "5 .000"
+      },
+      {
+        "guion": "ese ese hache",
+        "oido": "SSH"
+      },
+      {
+        "guion": "fuera.",
+        "oido": "afuera."
+      },
+      {
+        "guion": "Antrópic",
+        "oido": "Anthropic"
+      },
+      {
+        "guion": "cuarenta y ocho",
+        "oido": "48"
+      },
+      {
+        "guion": "cinco",
+        "oido": "5"
+      },
+      {
+        "guion": "Crom,",
+        "oido": "Chrome,"
+      },
+      {
+        "guion": "Uíndous.",
+        "oido": "Windows."
+      },
+      {
+        "guion": "Cláud Línux,",
+        "oido": "CloudLinux,"
+      },
+      {
+        "guion": "Báinans.",
+        "oido": "Binance."
+      },
+      {
+        "guion": "seis mil trescientos cuarenta",
+        "oido": "6 .340"
+      },
+      {
+        "guion": "efe be i",
+        "oido": "FBI"
+      },
+      {
+        "guion": "Báinans",
+        "oido": "Binance"
+      },
+      {
+        "guion": "veinte",
+        "oido": "20"
+      },
+      {
+        "guion": "cuatro por ciento.",
+        "oido": "4%."
+      },
+      {
+        "guion": "tres mil",
+        "oido": "3 .000"
+      },
+      {
+        "guion": "Báinans",
+        "oido": "Binance"
+      },
+      {
+        "guion": "noventa y ocho por ciento",
+        "oido": "98 %"
+      },
+      {
+        "guion": "dos por ciento,",
+        "oido": "2%,"
+      },
+      {
+        "guion": "veintinueve por ciento",
+        "oido": "29 %"
+      },
+      {
+        "guion": "cincuenta y tres por ciento. Estac Óverflou,",
+        "oido": "53%. Stack Overflow,"
+      },
+      {
+        "guion": "novecientas sesenta y nueve",
+        "oido": "969"
+      },
+      {
+        "guion": "dos mil catorce",
+        "oido": "2014,"
+      },
+      {
+        "guion": "doscientas siete mil.",
+        "oido": "207 .000."
+      },
+      {
+        "guion": "Estac Óverflou",
+        "oido": "Stack Overflow"
+      },
+      {
+        "guion": "Máicrosoft",
+        "oido": "Microsoft"
+      },
+      {
+        "guion": "sesenta mil",
+        "oido": "60 .000"
+      },
+      {
+        "guion": "sesenta mil.",
+        "oido": "60 .000."
+      },
+      {
+        "guion": "sesenta mil",
+        "oido": "60 .000"
+      },
+      {
+        "guion": "veintisiete por ciento",
+        "oido": "27 %"
+      },
+      {
+        "guion": "estártap",
+        "oido": "startup"
+      },
+      {
+        "guion": "Uái Combinéitor,",
+        "oido": "Y Combinator,"
+      },
+      {
+        "guion": "Han",
+        "oido": "Ha"
+      },
+      {
+        "guion": "un millón trescientos mil",
+        "oido": "1 .300 .000"
+      },
+      {
+        "guion": "nueve",
+        "oido": "9"
+      },
+      {
+        "guion": "Éirpods",
+        "oido": "Airpods"
+      },
+      {
+        "guion": "hacen",
+        "oido": "hace"
+      },
+      {
+        "guion": "Niúralink",
+        "oido": "Neuralink"
+      },
+      {
+        "guion": "«Jei Niúralink».",
+        "oido": "Hey Neuralink."
+      },
+      {
+        "guion": "Mask",
+        "oido": "Musk"
+      },
+      {
+        "guion": "Bláindsait,",
+        "oido": "Blindside,"
+      },
+      {
+        "guion": "efe de a",
+        "oido": "FDA"
+      }
+    ]
+  },
+  "frases": [
+    {
+      "id": "fr01",
+      "texto": "Esta semana, a Binance le robaron más de seis mil millones de dólares.",
+      "inicio": 0,
+      "fin": 3.8,
+      "palabras": [
+        {
+          "p": "Esta",
+          "i": 0,
+          "f": 0.46
+        },
+        {
+          "p": "semana,",
+          "i": 0.46,
+          "f": 0.74
+        },
+        {
+          "p": "a",
+          "i": 1,
+          "f": 1.08
+        },
+        {
+          "p": "Binance",
+          "i": 1.08,
+          "f": 1.5
+        },
+        {
+          "p": "le",
+          "i": 1.5,
+          "f": 1.74
+        },
+        {
+          "p": "robaron",
+          "i": 1.74,
+          "f": 2.06
+        },
+        {
+          "p": "más",
+          "i": 2.06,
+          "f": 2.24
+        },
+        {
+          "p": "de",
+          "i": 2.24,
+          "f": 2.38
+        },
+        {
+          "p": "seis",
+          "i": 2.38,
+          "f": 2.66
+        },
+        {
+          "p": "mil",
+          "i": 2.66,
+          "f": 2.98
+        },
+        {
+          "p": "millones",
+          "i": 2.98,
+          "f": 3.36
+        },
+        {
+          "p": "de",
+          "i": 3.36,
+          "f": 3.5
+        },
+        {
+          "p": "dólares.",
+          "i": 3.5,
+          "f": 3.8
+        }
+      ]
+    },
+    {
+      "id": "fr02",
+      "texto": "Meta compró una app de agentes. Para cerrarla.",
+      "inicio": 4.36,
+      "fin": 6.8,
+      "palabras": [
+        {
+          "p": "Meta",
+          "i": 4.36,
+          "f": 4.64
+        },
+        {
+          "p": "compró",
+          "i": 4.64,
+          "f": 4.96
+        },
+        {
+          "p": "una",
+          "i": 4.96,
+          "f": 5.14
+        },
+        {
+          "p": "app",
+          "i": 5.14,
+          "f": 5.28
+        },
+        {
+          "p": "de",
+          "i": 5.28,
+          "f": 5.4
+        },
+        {
+          "p": "agentes.",
+          "i": 5.4,
+          "f": 5.82
+        },
+        {
+          "p": "Para",
+          "i": 6.08,
+          "f": 6.32
+        },
+        {
+          "p": "cerrarla.",
+          "i": 6.32,
+          "f": 6.8
+        }
+      ]
+    },
+    {
+      "id": "fr03",
+      "texto": "Una IA encontró sola un fallo grave en Linux.",
+      "inicio": 7.26,
+      "fin": 9.68,
+      "palabras": [
+        {
+          "p": "Una",
+          "i": 7.26,
+          "f": 7.52
+        },
+        {
+          "p": "IA",
+          "i": 7.52,
+          "f": 7.7
+        },
+        {
+          "p": "encontró",
+          "i": 7.7,
+          "f": 8.12
+        },
+        {
+          "p": "sola",
+          "i": 8.12,
+          "f": 8.44
+        },
+        {
+          "p": "un",
+          "i": 8.44,
+          "f": 8.72
+        },
+        {
+          "p": "fallo",
+          "i": 8.72,
+          "f": 9.02
+        },
+        {
+          "p": "grave",
+          "i": 9.02,
+          "f": 9.2
+        },
+        {
+          "p": "en",
+          "i": 9.2,
+          "f": 9.36
+        },
+        {
+          "p": "Linux.",
+          "i": 9.36,
+          "f": 9.68
+        }
+      ]
+    },
+    {
+      "id": "fr04",
+      "texto": "La extensión oficial de Claude Code salió con una puerta trasera.",
+      "inicio": 10,
+      "fin": 13.42,
+      "palabras": [
+        {
+          "p": "La",
+          "i": 10,
+          "f": 10.42
+        },
+        {
+          "p": "extensión",
+          "i": 10.42,
+          "f": 10.84
+        },
+        {
+          "p": "oficial",
+          "i": 10.84,
+          "f": 11.16
+        },
+        {
+          "p": "de",
+          "i": 11.16,
+          "f": 11.3
+        },
+        {
+          "p": "Claude Code",
+          "i": 11.3,
+          "f": 11.88
+        },
+        {
+          "p": "salió",
+          "i": 11.88,
+          "f": 12.36
+        },
+        {
+          "p": "con",
+          "i": 12.36,
+          "f": 12.56
+        },
+        {
+          "p": "una",
+          "i": 12.56,
+          "f": 12.74
+        },
+        {
+          "p": "puerta",
+          "i": 12.74,
+          "f": 13.02
+        },
+        {
+          "p": "trasera.",
+          "i": 13.02,
+          "f": 13.42
+        }
+      ]
+    },
+    {
+      "id": "fr05",
+      "texto": "Y alguien copió en nueve minutos, con unos AirPods, unas gafas que habían levantado más de un millón de dólares.",
+      "inicio": 13.66,
+      "fin": 18.98,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 13.66,
+          "f": 14.02
+        },
+        {
+          "p": "alguien",
+          "i": 14.02,
+          "f": 14.26
+        },
+        {
+          "p": "copió",
+          "i": 14.26,
+          "f": 14.58
+        },
+        {
+          "p": "en",
+          "i": 14.58,
+          "f": 14.88
+        },
+        {
+          "p": "nueve",
+          "i": 14.88,
+          "f": 15.22
+        },
+        {
+          "p": "minutos,",
+          "i": 15.22,
+          "f": 15.56
+        },
+        {
+          "p": "con",
+          "i": 15.74,
+          "f": 15.8
+        },
+        {
+          "p": "unos",
+          "i": 15.8,
+          "f": 16
+        },
+        {
+          "p": "AirPods,",
+          "i": 16,
+          "f": 16.36
+        },
+        {
+          "p": "unas",
+          "i": 16.52,
+          "f": 16.74
+        },
+        {
+          "p": "gafas",
+          "i": 16.74,
+          "f": 17.04
+        },
+        {
+          "p": "que",
+          "i": 17.04,
+          "f": 17.14
+        },
+        {
+          "p": "habían",
+          "i": 17.14,
+          "f": 17.32
+        },
+        {
+          "p": "levantado",
+          "i": 17.32,
+          "f": 17.76
+        },
+        {
+          "p": "más",
+          "i": 17.76,
+          "f": 18.04
+        },
+        {
+          "p": "de",
+          "i": 18.04,
+          "f": 18.16
+        },
+        {
+          "p": "un",
+          "i": 18.16,
+          "f": 18.28
+        },
+        {
+          "p": "millón",
+          "i": 18.28,
+          "f": 18.58
+        },
+        {
+          "p": "de",
+          "i": 18.58,
+          "f": 18.7
+        },
+        {
+          "p": "dólares.",
+          "i": 18.7,
+          "f": 18.98
+        }
+      ]
+    },
+    {
+      "id": "fr06",
+      "texto": "Parecen cinco noticias sueltas. Pero todas tienen algo en común: los agentes.",
+      "inicio": 19.54,
+      "fin": 23.68,
+      "palabras": [
+        {
+          "p": "Parecen",
+          "i": 19.54,
+          "f": 20.02
+        },
+        {
+          "p": "cinco",
+          "i": 20.02,
+          "f": 20.32
+        },
+        {
+          "p": "noticias",
+          "i": 20.32,
+          "f": 20.66
+        },
+        {
+          "p": "sueltas.",
+          "i": 20.66,
+          "f": 21.08
+        },
+        {
+          "p": "Pero",
+          "i": 21.24,
+          "f": 21.42
+        },
+        {
+          "p": "todas",
+          "i": 21.42,
+          "f": 21.78
+        },
+        {
+          "p": "tienen",
+          "i": 21.78,
+          "f": 22.04
+        },
+        {
+          "p": "algo",
+          "i": 22.04,
+          "f": 22.28
+        },
+        {
+          "p": "en",
+          "i": 22.28,
+          "f": 22.36
+        },
+        {
+          "p": "común:",
+          "i": 22.36,
+          "f": 22.62
+        },
+        {
+          "p": "los",
+          "i": 22.9,
+          "f": 23.24
+        },
+        {
+          "p": "agentes.",
+          "i": 23.24,
+          "f": 23.68
+        }
+      ]
+    },
+    {
+      "id": "fr07",
+      "texto": "Soy MISTA, y esta ha sido la semana de los agentes. Con lo que pasó de verdad. Y con lo que se exageró.",
+      "inicio": 24.06,
+      "fin": 29.28,
+      "palabras": [
+        {
+          "p": "Soy",
+          "i": 24.06,
+          "f": 24.48
+        },
+        {
+          "p": "MISTA,",
+          "i": 24.48,
+          "f": 24.82
+        },
+        {
+          "p": "y",
+          "i": 24.98,
+          "f": 25.2
+        },
+        {
+          "p": "esta",
+          "i": 25.2,
+          "f": 25.38
+        },
+        {
+          "p": "ha",
+          "i": 25.38,
+          "f": 25.48
+        },
+        {
+          "p": "sido",
+          "i": 25.48,
+          "f": 25.62
+        },
+        {
+          "p": "la",
+          "i": 25.62,
+          "f": 25.84
+        },
+        {
+          "p": "semana",
+          "i": 25.84,
+          "f": 26.18
+        },
+        {
+          "p": "de",
+          "i": 26.18,
+          "f": 26.32
+        },
+        {
+          "p": "los",
+          "i": 26.32,
+          "f": 26.44
+        },
+        {
+          "p": "agentes.",
+          "i": 26.44,
+          "f": 26.84
+        },
+        {
+          "p": "Con",
+          "i": 27.1,
+          "f": 27.28
+        },
+        {
+          "p": "lo",
+          "i": 27.28,
+          "f": 27.38
+        },
+        {
+          "p": "que",
+          "i": 27.38,
+          "f": 27.46
+        },
+        {
+          "p": "pasó",
+          "i": 27.46,
+          "f": 27.64
+        },
+        {
+          "p": "de",
+          "i": 27.64,
+          "f": 27.76
+        },
+        {
+          "p": "verdad.",
+          "i": 27.76,
+          "f": 28.02
+        },
+        {
+          "p": "Y",
+          "i": 28.18,
+          "f": 28.46
+        },
+        {
+          "p": "con",
+          "i": 28.46,
+          "f": 28.6
+        },
+        {
+          "p": "lo",
+          "i": 28.6,
+          "f": 28.66
+        },
+        {
+          "p": "que",
+          "i": 28.66,
+          "f": 28.76
+        },
+        {
+          "p": "se",
+          "i": 28.76,
+          "f": 28.86
+        },
+        {
+          "p": "exageró.",
+          "i": 28.86,
+          "f": 29.28
+        }
+      ]
+    },
+    {
+      "id": "fr08",
+      "texto": "Vamos por partes: cómo son por dentro, quién los manda, qué saben hacer, cómo se rompen, qué están cambiando y cómo les hablaremos.",
+      "inicio": 29.28,
+      "fin": 37.48,
+      "palabras": [
+        {
+          "p": "Vamos",
+          "i": 29.28,
+          "f": 30.24
+        },
+        {
+          "p": "por",
+          "i": 30.24,
+          "f": 30.46
+        },
+        {
+          "p": "partes:",
+          "i": 30.46,
+          "f": 30.76
+        },
+        {
+          "p": "cómo",
+          "i": 31.04,
+          "f": 31.34
+        },
+        {
+          "p": "son",
+          "i": 31.34,
+          "f": 31.52
+        },
+        {
+          "p": "por",
+          "i": 31.52,
+          "f": 31.7
+        },
+        {
+          "p": "dentro,",
+          "i": 31.7,
+          "f": 31.94
+        },
+        {
+          "p": "quién",
+          "i": 32.12,
+          "f": 32.52
+        },
+        {
+          "p": "los",
+          "i": 32.52,
+          "f": 32.7
+        },
+        {
+          "p": "manda,",
+          "i": 32.7,
+          "f": 33.04
+        },
+        {
+          "p": "qué",
+          "i": 33.16,
+          "f": 33.44
+        },
+        {
+          "p": "saben",
+          "i": 33.44,
+          "f": 33.72
+        },
+        {
+          "p": "hacer,",
+          "i": 33.72,
+          "f": 33.98
+        },
+        {
+          "p": "cómo",
+          "i": 34.18,
+          "f": 34.62
+        },
+        {
+          "p": "se",
+          "i": 34.62,
+          "f": 34.8
+        },
+        {
+          "p": "rompen,",
+          "i": 34.8,
+          "f": 35.16
+        },
+        {
+          "p": "qué",
+          "i": 35.34,
+          "f": 35.62
+        },
+        {
+          "p": "están",
+          "i": 35.62,
+          "f": 35.88
+        },
+        {
+          "p": "cambiando",
+          "i": 35.88,
+          "f": 36.34
+        },
+        {
+          "p": "y",
+          "i": 36.46,
+          "f": 36.74
+        },
+        {
+          "p": "cómo",
+          "i": 36.74,
+          "f": 36.94
+        },
+        {
+          "p": "les",
+          "i": 36.94,
+          "f": 37.12
+        },
+        {
+          "p": "hablaremos.",
+          "i": 37.12,
+          "f": 37.48
+        }
+      ]
+    },
+    {
+      "id": "fr09",
+      "texto": "Primero, una palabra que vas a oír mucho: harness.",
+      "inicio": 38.74,
+      "fin": 41.54,
+      "palabras": [
+        {
+          "p": "Primero,",
+          "i": 38.74,
+          "f": 39.26
+        },
+        {
+          "p": "una",
+          "i": 39.48,
+          "f": 39.56
+        },
+        {
+          "p": "palabra",
+          "i": 39.56,
+          "f": 39.88
+        },
+        {
+          "p": "que",
+          "i": 39.88,
+          "f": 40.06
+        },
+        {
+          "p": "vas",
+          "i": 40.06,
+          "f": 40.22
+        },
+        {
+          "p": "a",
+          "i": 40.22,
+          "f": 40.3
+        },
+        {
+          "p": "oír",
+          "i": 40.3,
+          "f": 40.46
+        },
+        {
+          "p": "mucho:",
+          "i": 40.46,
+          "f": 40.76
+        },
+        {
+          "p": "harness.",
+          "i": 41.08,
+          "f": 41.54
+        }
+      ]
+    },
+    {
+      "id": "fr10",
+      "texto": "Un modelo de IA es como un cerebro: razona y escribe. Pero, solo, no puede tocar nada.",
+      "inicio": 42.02,
+      "fin": 47.76,
+      "palabras": [
+        {
+          "p": "Un",
+          "i": 42.02,
+          "f": 42.4
+        },
+        {
+          "p": "modelo",
+          "i": 42.4,
+          "f": 42.7
+        },
+        {
+          "p": "de",
+          "i": 42.7,
+          "f": 42.88
+        },
+        {
+          "p": "IA",
+          "i": 42.88,
+          "f": 43.06
+        },
+        {
+          "p": "es",
+          "i": 43.06,
+          "f": 43.44
+        },
+        {
+          "p": "como",
+          "i": 43.44,
+          "f": 43.66
+        },
+        {
+          "p": "un",
+          "i": 43.66,
+          "f": 43.8
+        },
+        {
+          "p": "cerebro:",
+          "i": 43.8,
+          "f": 44.18
+        },
+        {
+          "p": "razona",
+          "i": 44.54,
+          "f": 45.06
+        },
+        {
+          "p": "y",
+          "i": 45.06,
+          "f": 45.32
+        },
+        {
+          "p": "escribe.",
+          "i": 45.32,
+          "f": 45.7
+        },
+        {
+          "p": "Pero,",
+          "i": 45.9,
+          "f": 46.34
+        },
+        {
+          "p": "solo,",
+          "i": 46.34,
+          "f": 46.64
+        },
+        {
+          "p": "no",
+          "i": 46.64,
+          "f": 46.94
+        },
+        {
+          "p": "puede",
+          "i": 46.94,
+          "f": 47.12
+        },
+        {
+          "p": "tocar",
+          "i": 47.12,
+          "f": 47.38
+        },
+        {
+          "p": "nada.",
+          "i": 47.38,
+          "f": 47.76
+        }
+      ]
+    },
+    {
+      "id": "fr11",
+      "texto": "El harness es todo lo que lo rodea para que trabaje: las herramientas, el acceso a tus archivos, los permisos y la memoria. Claude Code o Codex son harness.",
+      "inicio": 48.12,
+      "fin": 57.56,
+      "palabras": [
+        {
+          "p": "El",
+          "i": 48.12,
+          "f": 48.56
+        },
+        {
+          "p": "harness",
+          "i": 48.56,
+          "f": 48.84
+        },
+        {
+          "p": "es",
+          "i": 48.84,
+          "f": 49.06
+        },
+        {
+          "p": "todo",
+          "i": 49.06,
+          "f": 49.3
+        },
+        {
+          "p": "lo",
+          "i": 49.3,
+          "f": 49.42
+        },
+        {
+          "p": "que",
+          "i": 49.42,
+          "f": 49.52
+        },
+        {
+          "p": "lo",
+          "i": 49.52,
+          "f": 49.64
+        },
+        {
+          "p": "rodea",
+          "i": 49.64,
+          "f": 49.98
+        },
+        {
+          "p": "para",
+          "i": 49.98,
+          "f": 50.12
+        },
+        {
+          "p": "que",
+          "i": 50.12,
+          "f": 50.26
+        },
+        {
+          "p": "trabaje:",
+          "i": 50.26,
+          "f": 50.68
+        },
+        {
+          "p": "las",
+          "i": 50.84,
+          "f": 51.2
+        },
+        {
+          "p": "herramientas,",
+          "i": 51.2,
+          "f": 51.92
+        },
+        {
+          "p": "el",
+          "i": 52.06,
+          "f": 52.2
+        },
+        {
+          "p": "acceso",
+          "i": 52.2,
+          "f": 52.54
+        },
+        {
+          "p": "a",
+          "i": 52.54,
+          "f": 52.68
+        },
+        {
+          "p": "tus",
+          "i": 52.68,
+          "f": 52.8
+        },
+        {
+          "p": "archivos,",
+          "i": 52.8,
+          "f": 53.26
+        },
+        {
+          "p": "los",
+          "i": 53.68,
+          "f": 53.84
+        },
+        {
+          "p": "permisos",
+          "i": 53.84,
+          "f": 54.38
+        },
+        {
+          "p": "y",
+          "i": 54.38,
+          "f": 54.52
+        },
+        {
+          "p": "la",
+          "i": 54.52,
+          "f": 54.64
+        },
+        {
+          "p": "memoria.",
+          "i": 54.64,
+          "f": 54.98
+        },
+        {
+          "p": "Claude Code",
+          "i": 55.58,
+          "f": 56.08
+        },
+        {
+          "p": "o",
+          "i": 56.08,
+          "f": 56.32
+        },
+        {
+          "p": "Codex",
+          "i": 56.32,
+          "f": 56.82
+        },
+        {
+          "p": "son",
+          "i": 56.82,
+          "f": 57.24
+        },
+        {
+          "p": "harness.",
+          "i": 57.24,
+          "f": 57.56
+        }
+      ]
+    },
+    {
+      "id": "fr12",
+      "texto": "Y aquí viene lo curioso. Cambia el harness y cambia el agente, aunque el cerebro sea exactamente el mismo.",
+      "inicio": 57.56,
+      "fin": 63.94,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 57.56,
+          "f": 58.38
+        },
+        {
+          "p": "aquí",
+          "i": 58.38,
+          "f": 58.52
+        },
+        {
+          "p": "viene",
+          "i": 58.52,
+          "f": 58.72
+        },
+        {
+          "p": "lo",
+          "i": 58.72,
+          "f": 58.84
+        },
+        {
+          "p": "curioso.",
+          "i": 58.84,
+          "f": 59.28
+        },
+        {
+          "p": "Cambia",
+          "i": 59.5,
+          "f": 60.06
+        },
+        {
+          "p": "el",
+          "i": 60.06,
+          "f": 60.22
+        },
+        {
+          "p": "harness",
+          "i": 60.22,
+          "f": 60.48
+        },
+        {
+          "p": "y",
+          "i": 60.48,
+          "f": 60.8
+        },
+        {
+          "p": "cambia",
+          "i": 60.8,
+          "f": 61.1
+        },
+        {
+          "p": "el",
+          "i": 61.1,
+          "f": 61.2
+        },
+        {
+          "p": "agente,",
+          "i": 61.2,
+          "f": 61.52
+        },
+        {
+          "p": "aunque",
+          "i": 61.68,
+          "f": 62.02
+        },
+        {
+          "p": "el",
+          "i": 62.02,
+          "f": 62.16
+        },
+        {
+          "p": "cerebro",
+          "i": 62.16,
+          "f": 62.48
+        },
+        {
+          "p": "sea",
+          "i": 62.48,
+          "f": 62.68
+        },
+        {
+          "p": "exactamente",
+          "i": 62.68,
+          "f": 63.3
+        },
+        {
+          "p": "el",
+          "i": 63.3,
+          "f": 63.64
+        },
+        {
+          "p": "mismo.",
+          "i": 63.64,
+          "f": 63.94
+        }
+      ]
+    },
+    {
+      "id": "fr13",
+      "texto": "El harness decide si el agente te pregunta antes de borrar algo. Qué olvida cuando se le llena la memoria. Y si, cuando algo falla, repite diez veces el mismo comando roto o prueba otra vía.",
+      "inicio": 64.4,
+      "fin": 74.68,
+      "palabras": [
+        {
+          "p": "El",
+          "i": 64.4,
+          "f": 64.92
+        },
+        {
+          "p": "harness",
+          "i": 64.92,
+          "f": 65.2
+        },
+        {
+          "p": "decide",
+          "i": 65.2,
+          "f": 65.48
+        },
+        {
+          "p": "si",
+          "i": 65.48,
+          "f": 65.66
+        },
+        {
+          "p": "el",
+          "i": 65.66,
+          "f": 65.76
+        },
+        {
+          "p": "agente",
+          "i": 65.76,
+          "f": 65.98
+        },
+        {
+          "p": "te",
+          "i": 65.98,
+          "f": 66.12
+        },
+        {
+          "p": "pregunta",
+          "i": 66.12,
+          "f": 66.52
+        },
+        {
+          "p": "antes",
+          "i": 66.52,
+          "f": 66.82
+        },
+        {
+          "p": "de",
+          "i": 66.82,
+          "f": 66.96
+        },
+        {
+          "p": "borrar",
+          "i": 66.96,
+          "f": 67.24
+        },
+        {
+          "p": "algo.",
+          "i": 67.24,
+          "f": 67.48
+        },
+        {
+          "p": "Qué",
+          "i": 67.72,
+          "f": 68
+        },
+        {
+          "p": "olvida",
+          "i": 68,
+          "f": 68.38
+        },
+        {
+          "p": "cuando",
+          "i": 68.38,
+          "f": 68.68
+        },
+        {
+          "p": "se",
+          "i": 68.68,
+          "f": 68.84
+        },
+        {
+          "p": "le",
+          "i": 68.84,
+          "f": 68.94
+        },
+        {
+          "p": "llena",
+          "i": 68.94,
+          "f": 69.12
+        },
+        {
+          "p": "la",
+          "i": 69.12,
+          "f": 69.22
+        },
+        {
+          "p": "memoria.",
+          "i": 69.22,
+          "f": 69.6
+        },
+        {
+          "p": "Y",
+          "i": 69.76,
+          "f": 70.16
+        },
+        {
+          "p": "si,",
+          "i": 70.16,
+          "f": 70.34
+        },
+        {
+          "p": "cuando",
+          "i": 70.34,
+          "f": 70.66
+        },
+        {
+          "p": "algo",
+          "i": 70.66,
+          "f": 70.86
+        },
+        {
+          "p": "falla,",
+          "i": 70.86,
+          "f": 71.24
+        },
+        {
+          "p": "repite",
+          "i": 71.38,
+          "f": 71.9
+        },
+        {
+          "p": "diez",
+          "i": 71.9,
+          "f": 72.2
+        },
+        {
+          "p": "veces",
+          "i": 72.2,
+          "f": 72.5
+        },
+        {
+          "p": "el",
+          "i": 72.5,
+          "f": 72.68
+        },
+        {
+          "p": "mismo",
+          "i": 72.68,
+          "f": 72.92
+        },
+        {
+          "p": "comando",
+          "i": 72.92,
+          "f": 73.3
+        },
+        {
+          "p": "roto",
+          "i": 73.3,
+          "f": 73.68
+        },
+        {
+          "p": "o",
+          "i": 73.68,
+          "f": 73.96
+        },
+        {
+          "p": "prueba",
+          "i": 73.96,
+          "f": 74.26
+        },
+        {
+          "p": "otra",
+          "i": 74.26,
+          "f": 74.46
+        },
+        {
+          "p": "vía.",
+          "i": 74.46,
+          "f": 74.68
+        }
+      ]
+    },
+    {
+      "id": "fr14",
+      "texto": "Eso sí: el modelo marca el techo. Un buen harness te acerca a él. Uno malo desperdicia un buen cerebro.",
+      "inicio": 74.68,
+      "fin": 80.76,
+      "palabras": [
+        {
+          "p": "Eso",
+          "i": 74.68,
+          "f": 75.6
+        },
+        {
+          "p": "sí:",
+          "i": 75.6,
+          "f": 75.74
+        },
+        {
+          "p": "el",
+          "i": 75.92,
+          "f": 76.28
+        },
+        {
+          "p": "modelo",
+          "i": 76.28,
+          "f": 76.52
+        },
+        {
+          "p": "marca",
+          "i": 76.52,
+          "f": 76.84
+        },
+        {
+          "p": "el",
+          "i": 76.84,
+          "f": 77
+        },
+        {
+          "p": "techo.",
+          "i": 77,
+          "f": 77.28
+        },
+        {
+          "p": "Un",
+          "i": 77.52,
+          "f": 77.8
+        },
+        {
+          "p": "buen",
+          "i": 77.8,
+          "f": 77.98
+        },
+        {
+          "p": "harness",
+          "i": 77.98,
+          "f": 78.26
+        },
+        {
+          "p": "te",
+          "i": 78.26,
+          "f": 78.4
+        },
+        {
+          "p": "acerca",
+          "i": 78.4,
+          "f": 78.68
+        },
+        {
+          "p": "a",
+          "i": 78.68,
+          "f": 78.84
+        },
+        {
+          "p": "él.",
+          "i": 78.84,
+          "f": 78.92
+        },
+        {
+          "p": "Uno",
+          "i": 79.2,
+          "f": 79.42
+        },
+        {
+          "p": "malo",
+          "i": 79.42,
+          "f": 79.68
+        },
+        {
+          "p": "desperdicia",
+          "i": 79.68,
+          "f": 80.16
+        },
+        {
+          "p": "un",
+          "i": 80.16,
+          "f": 80.28
+        },
+        {
+          "p": "buen",
+          "i": 80.28,
+          "f": 80.42
+        },
+        {
+          "p": "cerebro.",
+          "i": 80.42,
+          "f": 80.76
+        }
+      ]
+    },
+    {
+      "id": "fr15",
+      "texto": "DeepSeek tiene el suyo, abierto y con licencia MIT.",
+      "inicio": 81.72,
+      "fin": 84.64,
+      "palabras": [
+        {
+          "p": "DeepSeek",
+          "i": 81.72,
+          "f": 82.08
+        },
+        {
+          "p": "tiene",
+          "i": 82.08,
+          "f": 82.36
+        },
+        {
+          "p": "el",
+          "i": 82.36,
+          "f": 82.48
+        },
+        {
+          "p": "suyo,",
+          "i": 82.48,
+          "f": 82.74
+        },
+        {
+          "p": "abierto",
+          "i": 82.92,
+          "f": 83.36
+        },
+        {
+          "p": "y",
+          "i": 83.36,
+          "f": 83.54
+        },
+        {
+          "p": "con",
+          "i": 83.54,
+          "f": 83.68
+        },
+        {
+          "p": "licencia",
+          "i": 83.68,
+          "f": 84.18
+        },
+        {
+          "p": "MIT.",
+          "i": 84.18,
+          "f": 84.64
+        }
+      ]
+    },
+    {
+      "id": "fr16",
+      "texto": "¿Qué tiene de raro? Casi todos los harness tienen un núcleo fijo: el bucle que lee, piensa, usa una herramienta y vuelve a empezar. Alrededor se enchufan extensiones.",
+      "inicio": 85.46,
+      "fin": 94.72,
+      "palabras": [
+        {
+          "p": "¿Qué",
+          "i": 85.46,
+          "f": 85.94
+        },
+        {
+          "p": "tiene",
+          "i": 85.94,
+          "f": 86.14
+        },
+        {
+          "p": "de",
+          "i": 86.14,
+          "f": 86.26
+        },
+        {
+          "p": "raro?",
+          "i": 86.26,
+          "f": 86.52
+        },
+        {
+          "p": "Casi",
+          "i": 86.8,
+          "f": 87.26
+        },
+        {
+          "p": "todos",
+          "i": 87.26,
+          "f": 87.44
+        },
+        {
+          "p": "los",
+          "i": 87.44,
+          "f": 87.6
+        },
+        {
+          "p": "harness",
+          "i": 87.6,
+          "f": 87.86
+        },
+        {
+          "p": "tienen",
+          "i": 87.86,
+          "f": 88.1
+        },
+        {
+          "p": "un",
+          "i": 88.1,
+          "f": 88.3
+        },
+        {
+          "p": "núcleo",
+          "i": 88.3,
+          "f": 88.64
+        },
+        {
+          "p": "fijo:",
+          "i": 88.64,
+          "f": 88.9
+        },
+        {
+          "p": "el",
+          "i": 89.06,
+          "f": 89.44
+        },
+        {
+          "p": "bucle",
+          "i": 89.44,
+          "f": 89.7
+        },
+        {
+          "p": "que",
+          "i": 89.7,
+          "f": 89.86
+        },
+        {
+          "p": "lee,",
+          "i": 89.86,
+          "f": 90.16
+        },
+        {
+          "p": "piensa,",
+          "i": 90.46,
+          "f": 90.9
+        },
+        {
+          "p": "usa",
+          "i": 91.34,
+          "f": 91.56
+        },
+        {
+          "p": "una",
+          "i": 91.56,
+          "f": 91.7
+        },
+        {
+          "p": "herramienta",
+          "i": 91.7,
+          "f": 92.2
+        },
+        {
+          "p": "y",
+          "i": 92.2,
+          "f": 92.36
+        },
+        {
+          "p": "vuelve",
+          "i": 92.36,
+          "f": 92.58
+        },
+        {
+          "p": "a",
+          "i": 92.58,
+          "f": 92.64
+        },
+        {
+          "p": "empezar.",
+          "i": 92.64,
+          "f": 92.9
+        },
+        {
+          "p": "Alrededor",
+          "i": 93.54,
+          "f": 94.02
+        },
+        {
+          "p": "se",
+          "i": 94.02,
+          "f": 94.16
+        },
+        {
+          "p": "enchufan",
+          "i": 94.16,
+          "f": 94.48
+        },
+        {
+          "p": "extensiones.",
+          "i": 94.48,
+          "f": 94.72
+        }
+      ]
+    },
+    {
+      "id": "fr17",
+      "texto": "Según Helmcode, que lo ha analizado a fondo, en el de DeepSeek ese bucle es una pieza más, y se puede cambiar como cualquier otra.",
+      "inicio": 95.64,
+      "fin": 101.84,
+      "palabras": [
+        {
+          "p": "Según",
+          "i": 95.64,
+          "f": 96.12
+        },
+        {
+          "p": "Helmcode,",
+          "i": 96.12,
+          "f": 96.58
+        },
+        {
+          "p": "que",
+          "i": 96.74,
+          "f": 96.9
+        },
+        {
+          "p": "lo",
+          "i": 96.9,
+          "f": 97
+        },
+        {
+          "p": "ha",
+          "i": 97,
+          "f": 97.06
+        },
+        {
+          "p": "analizado",
+          "i": 97.06,
+          "f": 97.38
+        },
+        {
+          "p": "a",
+          "i": 97.38,
+          "f": 97.5
+        },
+        {
+          "p": "fondo,",
+          "i": 97.5,
+          "f": 97.68
+        },
+        {
+          "p": "en",
+          "i": 98.08,
+          "f": 98.26
+        },
+        {
+          "p": "el",
+          "i": 98.26,
+          "f": 98.36
+        },
+        {
+          "p": "de",
+          "i": 98.36,
+          "f": 98.44
+        },
+        {
+          "p": "DeepSeek",
+          "i": 98.44,
+          "f": 98.8
+        },
+        {
+          "p": "ese",
+          "i": 98.8,
+          "f": 99.04
+        },
+        {
+          "p": "bucle",
+          "i": 99.04,
+          "f": 99.28
+        },
+        {
+          "p": "es",
+          "i": 99.28,
+          "f": 99.42
+        },
+        {
+          "p": "una",
+          "i": 99.42,
+          "f": 99.56
+        },
+        {
+          "p": "pieza",
+          "i": 99.56,
+          "f": 99.8
+        },
+        {
+          "p": "más,",
+          "i": 99.8,
+          "f": 100
+        },
+        {
+          "p": "y",
+          "i": 100,
+          "f": 100.38
+        },
+        {
+          "p": "se",
+          "i": 100.38,
+          "f": 100.52
+        },
+        {
+          "p": "puede",
+          "i": 100.52,
+          "f": 100.66
+        },
+        {
+          "p": "cambiar",
+          "i": 100.66,
+          "f": 100.94
+        },
+        {
+          "p": "como",
+          "i": 100.94,
+          "f": 101.16
+        },
+        {
+          "p": "cualquier",
+          "i": 101.16,
+          "f": 101.6
+        },
+        {
+          "p": "otra.",
+          "i": 101.6,
+          "f": 101.84
+        }
+      ]
+    },
+    {
+      "id": "fr18",
+      "texto": "O sea: puedes sustituir justo la pieza que decide qué hace el agente.",
+      "inicio": 102.32,
+      "fin": 105.7,
+      "palabras": [
+        {
+          "p": "O",
+          "i": 102.32,
+          "f": 102.54
+        },
+        {
+          "p": "sea:",
+          "i": 102.54,
+          "f": 102.66
+        },
+        {
+          "p": "puedes",
+          "i": 103.02,
+          "f": 103.16
+        },
+        {
+          "p": "sustituir",
+          "i": 103.16,
+          "f": 103.64
+        },
+        {
+          "p": "justo",
+          "i": 103.64,
+          "f": 103.94
+        },
+        {
+          "p": "la",
+          "i": 103.94,
+          "f": 104.08
+        },
+        {
+          "p": "pieza",
+          "i": 104.08,
+          "f": 104.32
+        },
+        {
+          "p": "que",
+          "i": 104.32,
+          "f": 104.46
+        },
+        {
+          "p": "decide",
+          "i": 104.46,
+          "f": 104.74
+        },
+        {
+          "p": "qué",
+          "i": 104.74,
+          "f": 104.98
+        },
+        {
+          "p": "hace",
+          "i": 104.98,
+          "f": 105.2
+        },
+        {
+          "p": "el",
+          "i": 105.2,
+          "f": 105.36
+        },
+        {
+          "p": "agente.",
+          "i": 105.36,
+          "f": 105.7
+        }
+      ]
+    },
+    {
+      "id": "fr19",
+      "texto": "Pero no te lo vendo como la panacea. Está en vista previa, y sus autores avisan, en mayúsculas, de que habrá cambios que lo rompan.",
+      "inicio": 105.7,
+      "fin": 113.62,
+      "palabras": [
+        {
+          "p": "Pero",
+          "i": 105.7,
+          "f": 106.5
+        },
+        {
+          "p": "no",
+          "i": 106.5,
+          "f": 106.74
+        },
+        {
+          "p": "te",
+          "i": 106.74,
+          "f": 106.84
+        },
+        {
+          "p": "lo",
+          "i": 106.84,
+          "f": 106.94
+        },
+        {
+          "p": "vendo",
+          "i": 106.94,
+          "f": 107.14
+        },
+        {
+          "p": "como",
+          "i": 107.14,
+          "f": 107.38
+        },
+        {
+          "p": "la",
+          "i": 107.38,
+          "f": 107.5
+        },
+        {
+          "p": "panacea.",
+          "i": 107.5,
+          "f": 107.98
+        },
+        {
+          "p": "Está",
+          "i": 108.14,
+          "f": 108.56
+        },
+        {
+          "p": "en",
+          "i": 108.56,
+          "f": 108.72
+        },
+        {
+          "p": "vista",
+          "i": 108.72,
+          "f": 108.9
+        },
+        {
+          "p": "previa,",
+          "i": 108.9,
+          "f": 109.24
+        },
+        {
+          "p": "y",
+          "i": 109.24,
+          "f": 109.7
+        },
+        {
+          "p": "sus",
+          "i": 109.7,
+          "f": 109.88
+        },
+        {
+          "p": "autores",
+          "i": 109.88,
+          "f": 110.26
+        },
+        {
+          "p": "avisan,",
+          "i": 110.26,
+          "f": 110.64
+        },
+        {
+          "p": "en",
+          "i": 110.88,
+          "f": 110.96
+        },
+        {
+          "p": "mayúsculas,",
+          "i": 110.96,
+          "f": 111.7
+        },
+        {
+          "p": "de",
+          "i": 111.82,
+          "f": 112.12
+        },
+        {
+          "p": "que",
+          "i": 112.12,
+          "f": 112.22
+        },
+        {
+          "p": "habrá",
+          "i": 112.22,
+          "f": 112.4
+        },
+        {
+          "p": "cambios",
+          "i": 112.4,
+          "f": 112.84
+        },
+        {
+          "p": "que",
+          "i": 112.84,
+          "f": 113.08
+        },
+        {
+          "p": "lo",
+          "i": 113.08,
+          "f": 113.24
+        },
+        {
+          "p": "rompan.",
+          "i": 113.24,
+          "f": 113.62
+        }
+      ]
+    },
+    {
+      "id": "fr20",
+      "texto": "Y DeepSeek ha enseñado otra idea: el Super-agent.",
+      "inicio": 114.6,
+      "fin": 117.6,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 114.6,
+          "f": 115.08
+        },
+        {
+          "p": "DeepSeek",
+          "i": 115.08,
+          "f": 115.5
+        },
+        {
+          "p": "ha",
+          "i": 115.5,
+          "f": 115.6
+        },
+        {
+          "p": "enseñado",
+          "i": 115.6,
+          "f": 116.04
+        },
+        {
+          "p": "otra",
+          "i": 116.04,
+          "f": 116.22
+        },
+        {
+          "p": "idea:",
+          "i": 116.22,
+          "f": 116.46
+        },
+        {
+          "p": "el",
+          "i": 116.68,
+          "f": 116.92
+        },
+        {
+          "p": "Super-agent.",
+          "i": 116.92,
+          "f": 117.6
+        }
+      ]
+    },
+    {
+      "id": "fr21",
+      "texto": "El problema es conocido. Abres tres agentes: uno arregla un test, otro revisa código y otro investiga un error. Y te pasas el rato vigilándolos.",
+      "inicio": 117.86,
+      "fin": 125.94,
+      "palabras": [
+        {
+          "p": "El",
+          "i": 117.86,
+          "f": 118.26
+        },
+        {
+          "p": "problema",
+          "i": 118.26,
+          "f": 118.56
+        },
+        {
+          "p": "es",
+          "i": 118.56,
+          "f": 118.66
+        },
+        {
+          "p": "conocido.",
+          "i": 118.66,
+          "f": 119.06
+        },
+        {
+          "p": "Abres",
+          "i": 119.3,
+          "f": 119.68
+        },
+        {
+          "p": "tres",
+          "i": 119.68,
+          "f": 119.88
+        },
+        {
+          "p": "agentes:",
+          "i": 119.88,
+          "f": 120.4
+        },
+        {
+          "p": "uno",
+          "i": 120.66,
+          "f": 120.78
+        },
+        {
+          "p": "arregla",
+          "i": 120.78,
+          "f": 121.08
+        },
+        {
+          "p": "un",
+          "i": 121.08,
+          "f": 121.2
+        },
+        {
+          "p": "test,",
+          "i": 121.2,
+          "f": 121.48
+        },
+        {
+          "p": "otro",
+          "i": 121.74,
+          "f": 121.92
+        },
+        {
+          "p": "revisa",
+          "i": 121.92,
+          "f": 122.32
+        },
+        {
+          "p": "código",
+          "i": 122.32,
+          "f": 122.68
+        },
+        {
+          "p": "y",
+          "i": 122.68,
+          "f": 123.22
+        },
+        {
+          "p": "otro",
+          "i": 123.22,
+          "f": 123.4
+        },
+        {
+          "p": "investiga",
+          "i": 123.4,
+          "f": 123.8
+        },
+        {
+          "p": "un",
+          "i": 123.8,
+          "f": 123.88
+        },
+        {
+          "p": "error.",
+          "i": 123.88,
+          "f": 124.06
+        },
+        {
+          "p": "Y",
+          "i": 124.28,
+          "f": 124.62
+        },
+        {
+          "p": "te",
+          "i": 124.62,
+          "f": 124.74
+        },
+        {
+          "p": "pasas",
+          "i": 124.74,
+          "f": 125.04
+        },
+        {
+          "p": "el",
+          "i": 125.04,
+          "f": 125.14
+        },
+        {
+          "p": "rato",
+          "i": 125.14,
+          "f": 125.34
+        },
+        {
+          "p": "vigilándolos.",
+          "i": 125.34,
+          "f": 125.94
+        }
+      ]
+    },
+    {
+      "id": "fr22",
+      "texto": "La solución es un jefe. Un agente que recibe los encargos y los reparte entre agentes obreros, cada uno con su tarea y sus herramientas.",
+      "inicio": 125.94,
+      "fin": 133.88,
+      "palabras": [
+        {
+          "p": "La",
+          "i": 125.94,
+          "f": 126.66
+        },
+        {
+          "p": "solución",
+          "i": 126.66,
+          "f": 127.04
+        },
+        {
+          "p": "es",
+          "i": 127.04,
+          "f": 127.2
+        },
+        {
+          "p": "un",
+          "i": 127.2,
+          "f": 127.62
+        },
+        {
+          "p": "jefe.",
+          "i": 127.62,
+          "f": 127.94
+        },
+        {
+          "p": "Un",
+          "i": 128.18,
+          "f": 128.58
+        },
+        {
+          "p": "agente",
+          "i": 128.58,
+          "f": 128.84
+        },
+        {
+          "p": "que",
+          "i": 128.84,
+          "f": 128.98
+        },
+        {
+          "p": "recibe",
+          "i": 128.98,
+          "f": 129.26
+        },
+        {
+          "p": "los",
+          "i": 129.26,
+          "f": 129.4
+        },
+        {
+          "p": "encargos",
+          "i": 129.4,
+          "f": 129.84
+        },
+        {
+          "p": "y",
+          "i": 129.84,
+          "f": 130.02
+        },
+        {
+          "p": "los",
+          "i": 130.02,
+          "f": 130.16
+        },
+        {
+          "p": "reparte",
+          "i": 130.16,
+          "f": 130.52
+        },
+        {
+          "p": "entre",
+          "i": 130.52,
+          "f": 130.76
+        },
+        {
+          "p": "agentes",
+          "i": 130.76,
+          "f": 131.3
+        },
+        {
+          "p": "obreros,",
+          "i": 131.3,
+          "f": 132.02
+        },
+        {
+          "p": "cada",
+          "i": 132.16,
+          "f": 132.38
+        },
+        {
+          "p": "uno",
+          "i": 132.38,
+          "f": 132.6
+        },
+        {
+          "p": "con",
+          "i": 132.6,
+          "f": 132.8
+        },
+        {
+          "p": "su",
+          "i": 132.8,
+          "f": 132.92
+        },
+        {
+          "p": "tarea",
+          "i": 132.92,
+          "f": 133.1
+        },
+        {
+          "p": "y",
+          "i": 133.1,
+          "f": 133.2
+        },
+        {
+          "p": "sus",
+          "i": 133.2,
+          "f": 133.32
+        },
+        {
+          "p": "herramientas.",
+          "i": 133.32,
+          "f": 133.88
+        }
+      ]
+    },
+    {
+      "id": "fr23",
+      "texto": "Y al jefe le quitan casi todas las herramientas, para que no se ponga a trabajar él: tiene que delegar.",
+      "inicio": 134.08,
+      "fin": 139.34,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 134.08,
+          "f": 134.48
+        },
+        {
+          "p": "al",
+          "i": 134.48,
+          "f": 134.58
+        },
+        {
+          "p": "jefe",
+          "i": 134.58,
+          "f": 134.86
+        },
+        {
+          "p": "le",
+          "i": 134.86,
+          "f": 135.18
+        },
+        {
+          "p": "quitan",
+          "i": 135.18,
+          "f": 135.42
+        },
+        {
+          "p": "casi",
+          "i": 135.42,
+          "f": 135.74
+        },
+        {
+          "p": "todas",
+          "i": 135.74,
+          "f": 136.02
+        },
+        {
+          "p": "las",
+          "i": 136.02,
+          "f": 136.18
+        },
+        {
+          "p": "herramientas,",
+          "i": 136.18,
+          "f": 136.74
+        },
+        {
+          "p": "para",
+          "i": 136.84,
+          "f": 137.16
+        },
+        {
+          "p": "que",
+          "i": 137.16,
+          "f": 137.32
+        },
+        {
+          "p": "no",
+          "i": 137.32,
+          "f": 137.4
+        },
+        {
+          "p": "se",
+          "i": 137.4,
+          "f": 137.52
+        },
+        {
+          "p": "ponga",
+          "i": 137.52,
+          "f": 137.7
+        },
+        {
+          "p": "a",
+          "i": 137.7,
+          "f": 137.78
+        },
+        {
+          "p": "trabajar",
+          "i": 137.78,
+          "f": 138.02
+        },
+        {
+          "p": "él:",
+          "i": 138.02,
+          "f": 138.24
+        },
+        {
+          "p": "tiene",
+          "i": 138.5,
+          "f": 138.74
+        },
+        {
+          "p": "que",
+          "i": 138.74,
+          "f": 138.92
+        },
+        {
+          "p": "delegar.",
+          "i": 138.92,
+          "f": 139.34
+        }
+      ]
+    },
+    {
+      "id": "fr24",
+      "texto": "¿Por qué? Porque en sus pruebas, a un agente que podía delegar si quería, no le dio la gana ni una sola vez en cinco intentos.",
+      "inicio": 139.82,
+      "fin": 146.5,
+      "palabras": [
+        {
+          "p": "¿Por",
+          "i": 139.82,
+          "f": 140.26
+        },
+        {
+          "p": "qué?",
+          "i": 140.26,
+          "f": 140.38
+        },
+        {
+          "p": "Porque",
+          "i": 140.6,
+          "f": 140.96
+        },
+        {
+          "p": "en",
+          "i": 140.96,
+          "f": 141.08
+        },
+        {
+          "p": "sus",
+          "i": 141.08,
+          "f": 141.26
+        },
+        {
+          "p": "pruebas,",
+          "i": 141.26,
+          "f": 141.66
+        },
+        {
+          "p": "a",
+          "i": 141.86,
+          "f": 141.98
+        },
+        {
+          "p": "un",
+          "i": 141.98,
+          "f": 142.06
+        },
+        {
+          "p": "agente",
+          "i": 142.06,
+          "f": 142.44
+        },
+        {
+          "p": "que",
+          "i": 142.44,
+          "f": 142.62
+        },
+        {
+          "p": "podía",
+          "i": 142.62,
+          "f": 143.02
+        },
+        {
+          "p": "delegar",
+          "i": 143.02,
+          "f": 143.38
+        },
+        {
+          "p": "si",
+          "i": 143.38,
+          "f": 143.54
+        },
+        {
+          "p": "quería,",
+          "i": 143.54,
+          "f": 143.82
+        },
+        {
+          "p": "no",
+          "i": 144,
+          "f": 144.32
+        },
+        {
+          "p": "le",
+          "i": 144.32,
+          "f": 144.44
+        },
+        {
+          "p": "dio",
+          "i": 144.44,
+          "f": 144.56
+        },
+        {
+          "p": "la",
+          "i": 144.56,
+          "f": 144.66
+        },
+        {
+          "p": "gana",
+          "i": 144.66,
+          "f": 144.88
+        },
+        {
+          "p": "ni",
+          "i": 144.88,
+          "f": 145.1
+        },
+        {
+          "p": "una",
+          "i": 145.1,
+          "f": 145.3
+        },
+        {
+          "p": "sola",
+          "i": 145.3,
+          "f": 145.46
+        },
+        {
+          "p": "vez",
+          "i": 145.46,
+          "f": 145.64
+        },
+        {
+          "p": "en",
+          "i": 145.64,
+          "f": 145.76
+        },
+        {
+          "p": "cinco",
+          "i": 145.76,
+          "f": 146.02
+        },
+        {
+          "p": "intentos.",
+          "i": 146.02,
+          "f": 146.5
+        }
+      ]
+    },
+    {
+      "id": "fr25",
+      "texto": "Con el jefe, el peor caso bajó de casi treinta minutos a menos de dieciséis.",
+      "inicio": 146.5,
+      "fin": 150.92,
+      "palabras": [
+        {
+          "p": "Con",
+          "i": 146.5,
+          "f": 147.36
+        },
+        {
+          "p": "el",
+          "i": 147.36,
+          "f": 147.48
+        },
+        {
+          "p": "jefe,",
+          "i": 147.48,
+          "f": 147.74
+        },
+        {
+          "p": "el",
+          "i": 147.98,
+          "f": 148.08
+        },
+        {
+          "p": "peor",
+          "i": 148.08,
+          "f": 148.32
+        },
+        {
+          "p": "caso",
+          "i": 148.32,
+          "f": 148.52
+        },
+        {
+          "p": "bajó",
+          "i": 148.52,
+          "f": 148.82
+        },
+        {
+          "p": "de",
+          "i": 148.82,
+          "f": 148.96
+        },
+        {
+          "p": "casi",
+          "i": 148.96,
+          "f": 149.22
+        },
+        {
+          "p": "treinta",
+          "i": 149.22,
+          "f": 149.58
+        },
+        {
+          "p": "minutos",
+          "i": 149.58,
+          "f": 149.98
+        },
+        {
+          "p": "a",
+          "i": 149.98,
+          "f": 150.24
+        },
+        {
+          "p": "menos",
+          "i": 150.24,
+          "f": 150.42
+        },
+        {
+          "p": "de",
+          "i": 150.42,
+          "f": 150.56
+        },
+        {
+          "p": "dieciséis.",
+          "i": 150.56,
+          "f": 150.92
+        }
+      ]
+    },
+    {
+      "id": "fr26",
+      "texto": "Pero ojo con la letra pequeña. Son pruebas preliminares de la propia DeepSeek. Y a cambio, el sistema relee casi cuatro veces más texto.",
+      "inicio": 151.26,
+      "fin": 158.42,
+      "palabras": [
+        {
+          "p": "Pero",
+          "i": 151.26,
+          "f": 151.72
+        },
+        {
+          "p": "ojo",
+          "i": 151.72,
+          "f": 151.88
+        },
+        {
+          "p": "con",
+          "i": 151.88,
+          "f": 152.02
+        },
+        {
+          "p": "la",
+          "i": 152.02,
+          "f": 152.08
+        },
+        {
+          "p": "letra",
+          "i": 152.08,
+          "f": 152.24
+        },
+        {
+          "p": "pequeña.",
+          "i": 152.24,
+          "f": 152.56
+        },
+        {
+          "p": "Son",
+          "i": 152.76,
+          "f": 153.06
+        },
+        {
+          "p": "pruebas",
+          "i": 153.06,
+          "f": 153.44
+        },
+        {
+          "p": "preliminares",
+          "i": 153.44,
+          "f": 153.96
+        },
+        {
+          "p": "de",
+          "i": 153.96,
+          "f": 154.08
+        },
+        {
+          "p": "la",
+          "i": 154.08,
+          "f": 154.18
+        },
+        {
+          "p": "propia",
+          "i": 154.18,
+          "f": 154.44
+        },
+        {
+          "p": "DeepSeek.",
+          "i": 154.44,
+          "f": 154.94
+        },
+        {
+          "p": "Y",
+          "i": 155.1,
+          "f": 155.46
+        },
+        {
+          "p": "a",
+          "i": 155.46,
+          "f": 155.56
+        },
+        {
+          "p": "cambio,",
+          "i": 155.56,
+          "f": 155.78
+        },
+        {
+          "p": "el",
+          "i": 156.02,
+          "f": 156.1
+        },
+        {
+          "p": "sistema",
+          "i": 156.1,
+          "f": 156.42
+        },
+        {
+          "p": "relee",
+          "i": 156.42,
+          "f": 156.78
+        },
+        {
+          "p": "casi",
+          "i": 156.78,
+          "f": 157.18
+        },
+        {
+          "p": "cuatro",
+          "i": 157.18,
+          "f": 157.52
+        },
+        {
+          "p": "veces",
+          "i": 157.52,
+          "f": 157.88
+        },
+        {
+          "p": "más",
+          "i": 157.88,
+          "f": 158.12
+        },
+        {
+          "p": "texto.",
+          "i": 158.12,
+          "f": 158.42
+        }
+      ]
+    },
+    {
+      "id": "fr27",
+      "texto": "Además, los obreros trabajan con todos los permisos de la cuenta de quien los lanza.",
+      "inicio": 158.98,
+      "fin": 162.58,
+      "palabras": [
+        {
+          "p": "Además,",
+          "i": 158.98,
+          "f": 159.32
+        },
+        {
+          "p": "los",
+          "i": 159.52,
+          "f": 159.68
+        },
+        {
+          "p": "obreros",
+          "i": 159.68,
+          "f": 160.04
+        },
+        {
+          "p": "trabajan",
+          "i": 160.04,
+          "f": 160.38
+        },
+        {
+          "p": "con",
+          "i": 160.38,
+          "f": 160.56
+        },
+        {
+          "p": "todos",
+          "i": 160.56,
+          "f": 160.92
+        },
+        {
+          "p": "los",
+          "i": 160.92,
+          "f": 161.12
+        },
+        {
+          "p": "permisos",
+          "i": 161.12,
+          "f": 161.48
+        },
+        {
+          "p": "de",
+          "i": 161.48,
+          "f": 161.58
+        },
+        {
+          "p": "la",
+          "i": 161.58,
+          "f": 161.66
+        },
+        {
+          "p": "cuenta",
+          "i": 161.66,
+          "f": 161.9
+        },
+        {
+          "p": "de",
+          "i": 161.9,
+          "f": 162.02
+        },
+        {
+          "p": "quien",
+          "i": 162.02,
+          "f": 162.16
+        },
+        {
+          "p": "los",
+          "i": 162.16,
+          "f": 162.32
+        },
+        {
+          "p": "lanza.",
+          "i": 162.32,
+          "f": 162.58
+        }
+      ]
+    },
+    {
+      "id": "fr28",
+      "texto": "Y un detalle que me encanta: cuando Helmcode lo probó, GitHub le suspendió las cuentas del agente. A una, tras su primer comentario.",
+      "inicio": 162.96,
+      "fin": 169.78,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 162.96,
+          "f": 163.4
+        },
+        {
+          "p": "un",
+          "i": 163.4,
+          "f": 163.5
+        },
+        {
+          "p": "detalle",
+          "i": 163.5,
+          "f": 163.74
+        },
+        {
+          "p": "que",
+          "i": 163.74,
+          "f": 163.86
+        },
+        {
+          "p": "me",
+          "i": 163.86,
+          "f": 163.96
+        },
+        {
+          "p": "encanta:",
+          "i": 163.96,
+          "f": 164.22
+        },
+        {
+          "p": "cuando",
+          "i": 164.42,
+          "f": 164.74
+        },
+        {
+          "p": "Helmcode",
+          "i": 164.74,
+          "f": 165.22
+        },
+        {
+          "p": "lo",
+          "i": 165.22,
+          "f": 165.42
+        },
+        {
+          "p": "probó,",
+          "i": 165.42,
+          "f": 165.72
+        },
+        {
+          "p": "GitHub",
+          "i": 166,
+          "f": 166.28
+        },
+        {
+          "p": "le",
+          "i": 166.28,
+          "f": 166.5
+        },
+        {
+          "p": "suspendió",
+          "i": 166.5,
+          "f": 166.88
+        },
+        {
+          "p": "las",
+          "i": 166.88,
+          "f": 167.02
+        },
+        {
+          "p": "cuentas",
+          "i": 167.02,
+          "f": 167.3
+        },
+        {
+          "p": "del",
+          "i": 167.3,
+          "f": 167.49
+        },
+        {
+          "p": "agente.",
+          "i": 167.49,
+          "f": 167.68
+        },
+        {
+          "p": "A",
+          "i": 167.9,
+          "f": 168.28
+        },
+        {
+          "p": "una,",
+          "i": 168.28,
+          "f": 168.48
+        },
+        {
+          "p": "tras",
+          "i": 168.64,
+          "f": 168.92
+        },
+        {
+          "p": "su",
+          "i": 168.92,
+          "f": 169.1
+        },
+        {
+          "p": "primer",
+          "i": 169.1,
+          "f": 169.32
+        },
+        {
+          "p": "comentario.",
+          "i": 169.32,
+          "f": 169.78
+        }
+      ]
+    },
+    {
+      "id": "fr29",
+      "texto": "La misma idea, pero desde fuera: herramientas para que una persona maneje muchos agentes a la vez.",
+      "inicio": 170.66,
+      "fin": 176.42,
+      "palabras": [
+        {
+          "p": "La",
+          "i": 170.66,
+          "f": 171.18
+        },
+        {
+          "p": "misma",
+          "i": 171.18,
+          "f": 171.44
+        },
+        {
+          "p": "idea,",
+          "i": 171.44,
+          "f": 171.72
+        },
+        {
+          "p": "pero",
+          "i": 171.9,
+          "f": 172.12
+        },
+        {
+          "p": "desde",
+          "i": 172.12,
+          "f": 172.34
+        },
+        {
+          "p": "fuera:",
+          "i": 172.34,
+          "f": 172.72
+        },
+        {
+          "p": "herramientas",
+          "i": 173.18,
+          "f": 173.7
+        },
+        {
+          "p": "para",
+          "i": 173.7,
+          "f": 173.88
+        },
+        {
+          "p": "que",
+          "i": 173.88,
+          "f": 174.04
+        },
+        {
+          "p": "una",
+          "i": 174.04,
+          "f": 174.24
+        },
+        {
+          "p": "persona",
+          "i": 174.24,
+          "f": 174.62
+        },
+        {
+          "p": "maneje",
+          "i": 174.62,
+          "f": 175.02
+        },
+        {
+          "p": "muchos",
+          "i": 175.02,
+          "f": 175.58
+        },
+        {
+          "p": "agentes",
+          "i": 175.58,
+          "f": 176
+        },
+        {
+          "p": "a",
+          "i": 176,
+          "f": 176.14
+        },
+        {
+          "p": "la",
+          "i": 176.14,
+          "f": 176.22
+        },
+        {
+          "p": "vez.",
+          "i": 176.22,
+          "f": 176.42
+        }
+      ]
+    },
+    {
+      "id": "fr30",
+      "texto": "Herdr acaba de sacar su app de escritorio. Es abierta y junta muchos agentes distintos en una sola ventana.",
+      "inicio": 177.04,
+      "fin": 182.82,
+      "palabras": [
+        {
+          "p": "Herdr",
+          "i": 177.04,
+          "f": 177.36
+        },
+        {
+          "p": "acaba",
+          "i": 177.36,
+          "f": 177.72
+        },
+        {
+          "p": "de",
+          "i": 177.72,
+          "f": 177.86
+        },
+        {
+          "p": "sacar",
+          "i": 177.86,
+          "f": 178.06
+        },
+        {
+          "p": "su",
+          "i": 178.06,
+          "f": 178.28
+        },
+        {
+          "p": "app",
+          "i": 178.28,
+          "f": 178.42
+        },
+        {
+          "p": "de",
+          "i": 178.42,
+          "f": 178.54
+        },
+        {
+          "p": "escritorio.",
+          "i": 178.54,
+          "f": 178.98
+        },
+        {
+          "p": "Es",
+          "i": 179.14,
+          "f": 179.48
+        },
+        {
+          "p": "abierta",
+          "i": 179.48,
+          "f": 180.1
+        },
+        {
+          "p": "y",
+          "i": 180.1,
+          "f": 180.34
+        },
+        {
+          "p": "junta",
+          "i": 180.34,
+          "f": 180.62
+        },
+        {
+          "p": "muchos",
+          "i": 180.62,
+          "f": 181
+        },
+        {
+          "p": "agentes",
+          "i": 181,
+          "f": 181.4
+        },
+        {
+          "p": "distintos",
+          "i": 181.4,
+          "f": 181.78
+        },
+        {
+          "p": "en",
+          "i": 181.78,
+          "f": 182.02
+        },
+        {
+          "p": "una",
+          "i": 182.02,
+          "f": 182.18
+        },
+        {
+          "p": "sola",
+          "i": 182.18,
+          "f": 182.4
+        },
+        {
+          "p": "ventana.",
+          "i": 182.4,
+          "f": 182.82
+        }
+      ]
+    },
+    {
+      "id": "fr31",
+      "texto": "Su truco: la ventana solo enseña. Los agentes viven en un pequeño servidor aparte, así que, si cierras la app, siguen trabajando.",
+      "inicio": 183.02,
+      "fin": 189.84,
+      "palabras": [
+        {
+          "p": "Su",
+          "i": 183.02,
+          "f": 183.32
+        },
+        {
+          "p": "truco:",
+          "i": 183.32,
+          "f": 183.56
+        },
+        {
+          "p": "la",
+          "i": 183.76,
+          "f": 184.04
+        },
+        {
+          "p": "ventana",
+          "i": 184.04,
+          "f": 184.36
+        },
+        {
+          "p": "solo",
+          "i": 184.36,
+          "f": 184.62
+        },
+        {
+          "p": "enseña.",
+          "i": 184.62,
+          "f": 185.28
+        },
+        {
+          "p": "Los",
+          "i": 185.48,
+          "f": 185.74
+        },
+        {
+          "p": "agentes",
+          "i": 185.74,
+          "f": 186.08
+        },
+        {
+          "p": "viven",
+          "i": 186.08,
+          "f": 186.36
+        },
+        {
+          "p": "en",
+          "i": 186.36,
+          "f": 186.48
+        },
+        {
+          "p": "un",
+          "i": 186.48,
+          "f": 186.6
+        },
+        {
+          "p": "pequeño",
+          "i": 186.6,
+          "f": 186.88
+        },
+        {
+          "p": "servidor",
+          "i": 186.88,
+          "f": 187.28
+        },
+        {
+          "p": "aparte,",
+          "i": 187.28,
+          "f": 187.66
+        },
+        {
+          "p": "así",
+          "i": 187.82,
+          "f": 188.08
+        },
+        {
+          "p": "que,",
+          "i": 188.08,
+          "f": 188.22
+        },
+        {
+          "p": "si",
+          "i": 188.36,
+          "f": 188.44
+        },
+        {
+          "p": "cierras",
+          "i": 188.44,
+          "f": 188.78
+        },
+        {
+          "p": "la",
+          "i": 188.78,
+          "f": 188.9
+        },
+        {
+          "p": "app,",
+          "i": 188.9,
+          "f": 189.1
+        },
+        {
+          "p": "siguen",
+          "i": 189.3,
+          "f": 189.48
+        },
+        {
+          "p": "trabajando.",
+          "i": 189.48,
+          "f": 189.84
+        }
+      ]
+    },
+    {
+      "id": "fr32",
+      "texto": "Y hasta un agente puede manejar la app: abrir pestañas y repartir el trabajo entre otros agentes.",
+      "inicio": 190.24,
+      "fin": 195.24,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 190.24,
+          "f": 190.5
+        },
+        {
+          "p": "hasta",
+          "i": 190.5,
+          "f": 190.74
+        },
+        {
+          "p": "un",
+          "i": 190.74,
+          "f": 191.1
+        },
+        {
+          "p": "agente",
+          "i": 191.1,
+          "f": 191.4
+        },
+        {
+          "p": "puede",
+          "i": 191.4,
+          "f": 191.64
+        },
+        {
+          "p": "manejar",
+          "i": 191.64,
+          "f": 192
+        },
+        {
+          "p": "la",
+          "i": 192,
+          "f": 192.16
+        },
+        {
+          "p": "app:",
+          "i": 192.16,
+          "f": 192.36
+        },
+        {
+          "p": "abrir",
+          "i": 192.64,
+          "f": 192.88
+        },
+        {
+          "p": "pestañas",
+          "i": 192.88,
+          "f": 193.44
+        },
+        {
+          "p": "y",
+          "i": 193.44,
+          "f": 193.68
+        },
+        {
+          "p": "repartir",
+          "i": 193.68,
+          "f": 194.06
+        },
+        {
+          "p": "el",
+          "i": 194.06,
+          "f": 194.16
+        },
+        {
+          "p": "trabajo",
+          "i": 194.16,
+          "f": 194.44
+        },
+        {
+          "p": "entre",
+          "i": 194.44,
+          "f": 194.64
+        },
+        {
+          "p": "otros",
+          "i": 194.64,
+          "f": 194.88
+        },
+        {
+          "p": "agentes.",
+          "i": 194.88,
+          "f": 195.24
+        }
+      ]
+    },
+    {
+      "id": "fr33",
+      "texto": "En la demo de Fazt, Claude Code reparte la actualización de varios proyectos entre Claude Code, Codex, Kimi y otros agentes, cada uno en su terminal.",
+      "inicio": 195.24,
+      "fin": 203.52,
+      "palabras": [
+        {
+          "p": "En",
+          "i": 195.24,
+          "f": 195.84
+        },
+        {
+          "p": "la",
+          "i": 195.84,
+          "f": 195.96
+        },
+        {
+          "p": "demo",
+          "i": 195.96,
+          "f": 196.16
+        },
+        {
+          "p": "de",
+          "i": 196.16,
+          "f": 196.26
+        },
+        {
+          "p": "Fazt,",
+          "i": 196.26,
+          "f": 196.6
+        },
+        {
+          "p": "Claude Code",
+          "i": 196.78,
+          "f": 197.3
+        },
+        {
+          "p": "reparte",
+          "i": 197.3,
+          "f": 197.68
+        },
+        {
+          "p": "la",
+          "i": 197.68,
+          "f": 197.8
+        },
+        {
+          "p": "actualización",
+          "i": 197.8,
+          "f": 198.28
+        },
+        {
+          "p": "de",
+          "i": 198.28,
+          "f": 198.44
+        },
+        {
+          "p": "varios",
+          "i": 198.44,
+          "f": 198.68
+        },
+        {
+          "p": "proyectos",
+          "i": 198.68,
+          "f": 199.18
+        },
+        {
+          "p": "entre",
+          "i": 199.18,
+          "f": 199.4
+        },
+        {
+          "p": "Claude Code,",
+          "i": 199.4,
+          "f": 200.04
+        },
+        {
+          "p": "Codex,",
+          "i": 200.4,
+          "f": 200.8
+        },
+        {
+          "p": "Kimi",
+          "i": 201,
+          "f": 201.26
+        },
+        {
+          "p": "y",
+          "i": 201.26,
+          "f": 201.5
+        },
+        {
+          "p": "otros",
+          "i": 201.5,
+          "f": 201.72
+        },
+        {
+          "p": "agentes,",
+          "i": 201.72,
+          "f": 202.14
+        },
+        {
+          "p": "cada",
+          "i": 202.44,
+          "f": 202.58
+        },
+        {
+          "p": "uno",
+          "i": 202.58,
+          "f": 202.82
+        },
+        {
+          "p": "en",
+          "i": 202.82,
+          "f": 203.1
+        },
+        {
+          "p": "su",
+          "i": 203.1,
+          "f": 203.22
+        },
+        {
+          "p": "terminal.",
+          "i": 203.22,
+          "f": 203.52
+        }
+      ]
+    },
+    {
+      "id": "fr34",
+      "texto": "El 4 de noviembre, Meta compró Conductor, una app que hacía algo parecido y que decía tener más de cien mil usuarios.",
+      "inicio": 204.12,
+      "fin": 209.62,
+      "palabras": [
+        {
+          "p": "El",
+          "i": 204.12,
+          "f": 204.34
+        },
+        {
+          "p": "4 de noviembre,",
+          "i": 204.34,
+          "f": 205.08
+        },
+        {
+          "p": "Meta",
+          "i": 205.22,
+          "f": 205.44
+        },
+        {
+          "p": "compró",
+          "i": 205.44,
+          "f": 205.72
+        },
+        {
+          "p": "Conductor,",
+          "i": 205.72,
+          "f": 206.3
+        },
+        {
+          "p": "una",
+          "i": 206.48,
+          "f": 206.62
+        },
+        {
+          "p": "app",
+          "i": 206.62,
+          "f": 206.76
+        },
+        {
+          "p": "que",
+          "i": 206.76,
+          "f": 206.9
+        },
+        {
+          "p": "hacía",
+          "i": 206.9,
+          "f": 207.1
+        },
+        {
+          "p": "algo",
+          "i": 207.1,
+          "f": 207.26
+        },
+        {
+          "p": "parecido",
+          "i": 207.26,
+          "f": 207.68
+        },
+        {
+          "p": "y",
+          "i": 207.68,
+          "f": 207.8
+        },
+        {
+          "p": "que",
+          "i": 207.8,
+          "f": 207.88
+        },
+        {
+          "p": "decía",
+          "i": 207.88,
+          "f": 208.1
+        },
+        {
+          "p": "tener",
+          "i": 208.1,
+          "f": 208.32
+        },
+        {
+          "p": "más",
+          "i": 208.32,
+          "f": 208.54
+        },
+        {
+          "p": "de",
+          "i": 208.54,
+          "f": 208.66
+        },
+        {
+          "p": "cien",
+          "i": 208.66,
+          "f": 208.89
+        },
+        {
+          "p": "mil",
+          "i": 208.89,
+          "f": 209.12
+        },
+        {
+          "p": "usuarios.",
+          "i": 209.12,
+          "f": 209.62
+        }
+      ]
+    },
+    {
+      "id": "fr35",
+      "texto": "¿Y qué ha hecho Meta con ella? Cerrarla. Ya no admite altas, y su nube se apaga el 20 de noviembre.",
+      "inicio": 209.84,
+      "fin": 214.94,
+      "palabras": [
+        {
+          "p": "¿Y",
+          "i": 209.84,
+          "f": 210.22
+        },
+        {
+          "p": "qué",
+          "i": 210.22,
+          "f": 210.3
+        },
+        {
+          "p": "ha",
+          "i": 210.3,
+          "f": 210.4
+        },
+        {
+          "p": "hecho",
+          "i": 210.4,
+          "f": 210.48
+        },
+        {
+          "p": "Meta",
+          "i": 210.48,
+          "f": 210.66
+        },
+        {
+          "p": "con",
+          "i": 210.66,
+          "f": 210.78
+        },
+        {
+          "p": "ella?",
+          "i": 210.78,
+          "f": 210.94
+        },
+        {
+          "p": "Cerrarla.",
+          "i": 211.44,
+          "f": 211.88
+        },
+        {
+          "p": "Ya",
+          "i": 212.1,
+          "f": 212.32
+        },
+        {
+          "p": "no",
+          "i": 212.32,
+          "f": 212.44
+        },
+        {
+          "p": "admite",
+          "i": 212.44,
+          "f": 212.66
+        },
+        {
+          "p": "altas,",
+          "i": 212.66,
+          "f": 212.98
+        },
+        {
+          "p": "y",
+          "i": 213.12,
+          "f": 213.3
+        },
+        {
+          "p": "su",
+          "i": 213.3,
+          "f": 213.4
+        },
+        {
+          "p": "nube",
+          "i": 213.4,
+          "f": 213.6
+        },
+        {
+          "p": "se",
+          "i": 213.6,
+          "f": 213.76
+        },
+        {
+          "p": "apaga",
+          "i": 213.76,
+          "f": 214
+        },
+        {
+          "p": "el",
+          "i": 214,
+          "f": 214.14
+        },
+        {
+          "p": "20 de noviembre.",
+          "i": 214.14,
+          "f": 214.94
+        }
+      ]
+    },
+    {
+      "id": "fr36",
+      "texto": "En la misma semana, una app de agentes abierta que llega, y otra comprada que se cierra. Los jefes de equipo valen tanto que las grandes los compran.",
+      "inicio": 215.26,
+      "fin": 222.58,
+      "palabras": [
+        {
+          "p": "En",
+          "i": 215.26,
+          "f": 215.62
+        },
+        {
+          "p": "la",
+          "i": 215.62,
+          "f": 215.7
+        },
+        {
+          "p": "misma",
+          "i": 215.7,
+          "f": 215.9
+        },
+        {
+          "p": "semana,",
+          "i": 215.9,
+          "f": 216.22
+        },
+        {
+          "p": "una",
+          "i": 216.4,
+          "f": 216.66
+        },
+        {
+          "p": "app",
+          "i": 216.66,
+          "f": 216.8
+        },
+        {
+          "p": "de",
+          "i": 216.8,
+          "f": 216.9
+        },
+        {
+          "p": "agentes",
+          "i": 216.9,
+          "f": 217.16
+        },
+        {
+          "p": "abierta",
+          "i": 217.16,
+          "f": 217.56
+        },
+        {
+          "p": "que",
+          "i": 217.56,
+          "f": 217.68
+        },
+        {
+          "p": "llega,",
+          "i": 217.68,
+          "f": 217.9
+        },
+        {
+          "p": "y",
+          "i": 217.9,
+          "f": 218.24
+        },
+        {
+          "p": "otra",
+          "i": 218.24,
+          "f": 218.4
+        },
+        {
+          "p": "comprada",
+          "i": 218.4,
+          "f": 218.8
+        },
+        {
+          "p": "que",
+          "i": 218.8,
+          "f": 218.94
+        },
+        {
+          "p": "se",
+          "i": 218.94,
+          "f": 219.08
+        },
+        {
+          "p": "cierra.",
+          "i": 219.08,
+          "f": 219.32
+        },
+        {
+          "p": "Los",
+          "i": 219.6,
+          "f": 220
+        },
+        {
+          "p": "jefes",
+          "i": 220,
+          "f": 220.24
+        },
+        {
+          "p": "de",
+          "i": 220.24,
+          "f": 220.32
+        },
+        {
+          "p": "equipo",
+          "i": 220.32,
+          "f": 220.5
+        },
+        {
+          "p": "valen",
+          "i": 220.5,
+          "f": 220.86
+        },
+        {
+          "p": "tanto",
+          "i": 220.86,
+          "f": 221.2
+        },
+        {
+          "p": "que",
+          "i": 221.2,
+          "f": 221.38
+        },
+        {
+          "p": "las",
+          "i": 221.38,
+          "f": 221.54
+        },
+        {
+          "p": "grandes",
+          "i": 221.54,
+          "f": 221.82
+        },
+        {
+          "p": "los",
+          "i": 221.82,
+          "f": 222.2
+        },
+        {
+          "p": "compran.",
+          "i": 222.2,
+          "f": 222.58
+        }
+      ]
+    },
+    {
+      "id": "fr37",
+      "texto": "Vale, ya tenemos agentes y alguien que los manda. Pero, ¿qué saben hacer?",
+      "inicio": 223.64,
+      "fin": 227.92,
+      "palabras": [
+        {
+          "p": "Vale,",
+          "i": 223.64,
+          "f": 224.2
+        },
+        {
+          "p": "ya",
+          "i": 224.42,
+          "f": 224.6
+        },
+        {
+          "p": "tenemos",
+          "i": 224.6,
+          "f": 224.88
+        },
+        {
+          "p": "agentes",
+          "i": 224.88,
+          "f": 225.36
+        },
+        {
+          "p": "y",
+          "i": 225.36,
+          "f": 225.64
+        },
+        {
+          "p": "alguien",
+          "i": 225.64,
+          "f": 225.9
+        },
+        {
+          "p": "que",
+          "i": 225.9,
+          "f": 226.08
+        },
+        {
+          "p": "los",
+          "i": 226.08,
+          "f": 226.22
+        },
+        {
+          "p": "manda.",
+          "i": 226.22,
+          "f": 226.54
+        },
+        {
+          "p": "Pero,",
+          "i": 226.66,
+          "f": 227.02
+        },
+        {
+          "p": "¿qué",
+          "i": 227.14,
+          "f": 227.42
+        },
+        {
+          "p": "saben",
+          "i": 227.42,
+          "f": 227.7
+        },
+        {
+          "p": "hacer?",
+          "i": 227.7,
+          "f": 227.92
+        }
+      ]
+    },
+    {
+      "id": "fr38",
+      "texto": "Ahí entran las skills: paquetes de instrucciones que le enseñan un oficio a un agente.",
+      "inicio": 228.32,
+      "fin": 232.84,
+      "palabras": [
+        {
+          "p": "Ahí",
+          "i": 228.32,
+          "f": 228.78
+        },
+        {
+          "p": "entran",
+          "i": 228.78,
+          "f": 229.06
+        },
+        {
+          "p": "las",
+          "i": 229.06,
+          "f": 229.24
+        },
+        {
+          "p": "skills:",
+          "i": 229.24,
+          "f": 229.58
+        },
+        {
+          "p": "paquetes",
+          "i": 229.88,
+          "f": 230.38
+        },
+        {
+          "p": "de",
+          "i": 230.38,
+          "f": 230.48
+        },
+        {
+          "p": "instrucciones",
+          "i": 230.48,
+          "f": 231.04
+        },
+        {
+          "p": "que",
+          "i": 231.04,
+          "f": 231.3
+        },
+        {
+          "p": "le",
+          "i": 231.3,
+          "f": 231.4
+        },
+        {
+          "p": "enseñan",
+          "i": 231.4,
+          "f": 231.74
+        },
+        {
+          "p": "un",
+          "i": 231.74,
+          "f": 231.86
+        },
+        {
+          "p": "oficio",
+          "i": 231.86,
+          "f": 232.22
+        },
+        {
+          "p": "a",
+          "i": 232.22,
+          "f": 232.38
+        },
+        {
+          "p": "un",
+          "i": 232.38,
+          "f": 232.5
+        },
+        {
+          "p": "agente.",
+          "i": 232.5,
+          "f": 232.84
+        }
+      ]
+    },
+    {
+      "id": "fr39",
+      "texto": "Esta semana se hizo viral teardown, una skill gratuita que convierte una máquina en un simulador 3D que puedes girar y desmontar. Un motor, un tren de aterrizaje…",
+      "inicio": 233.18,
+      "fin": 242.98,
+      "palabras": [
+        {
+          "p": "Esta",
+          "i": 233.18,
+          "f": 233.64
+        },
+        {
+          "p": "semana",
+          "i": 233.64,
+          "f": 233.94
+        },
+        {
+          "p": "se",
+          "i": 233.94,
+          "f": 234.12
+        },
+        {
+          "p": "hizo",
+          "i": 234.12,
+          "f": 234.26
+        },
+        {
+          "p": "viral",
+          "i": 234.26,
+          "f": 234.54
+        },
+        {
+          "p": "teardown,",
+          "i": 234.54,
+          "f": 235.14
+        },
+        {
+          "p": "una",
+          "i": 235.42,
+          "f": 235.66
+        },
+        {
+          "p": "skill",
+          "i": 235.66,
+          "f": 235.9
+        },
+        {
+          "p": "gratuita",
+          "i": 235.9,
+          "f": 236.46
+        },
+        {
+          "p": "que",
+          "i": 236.46,
+          "f": 236.62
+        },
+        {
+          "p": "convierte",
+          "i": 236.62,
+          "f": 237.04
+        },
+        {
+          "p": "una",
+          "i": 237.04,
+          "f": 237.4
+        },
+        {
+          "p": "máquina",
+          "i": 237.4,
+          "f": 237.72
+        },
+        {
+          "p": "en",
+          "i": 237.72,
+          "f": 238.02
+        },
+        {
+          "p": "un",
+          "i": 238.02,
+          "f": 238.12
+        },
+        {
+          "p": "simulador",
+          "i": 238.12,
+          "f": 238.6
+        },
+        {
+          "p": "3D",
+          "i": 238.6,
+          "f": 239
+        },
+        {
+          "p": "que",
+          "i": 239,
+          "f": 239.24
+        },
+        {
+          "p": "puedes",
+          "i": 239.24,
+          "f": 239.56
+        },
+        {
+          "p": "girar",
+          "i": 239.56,
+          "f": 239.9
+        },
+        {
+          "p": "y",
+          "i": 239.9,
+          "f": 240
+        },
+        {
+          "p": "desmontar.",
+          "i": 240,
+          "f": 240.54
+        },
+        {
+          "p": "Un",
+          "i": 240.66,
+          "f": 241.1
+        },
+        {
+          "p": "motor,",
+          "i": 241.1,
+          "f": 241.44
+        },
+        {
+          "p": "un",
+          "i": 241.72,
+          "f": 241.88
+        },
+        {
+          "p": "tren",
+          "i": 241.88,
+          "f": 242.08
+        },
+        {
+          "p": "de",
+          "i": 242.08,
+          "f": 242.2
+        },
+        {
+          "p": "aterrizaje…",
+          "i": 242.2,
+          "f": 242.98
+        }
+      ]
+    },
+    {
+      "id": "fr40",
+      "texto": "Un post viral dijo que iba a acabar con algunas carreras.",
+      "inicio": 242.98,
+      "fin": 245.54,
+      "palabras": [
+        {
+          "p": "Un",
+          "i": 242.98,
+          "f": 243.46
+        },
+        {
+          "p": "post",
+          "i": 243.46,
+          "f": 243.62
+        },
+        {
+          "p": "viral",
+          "i": 243.62,
+          "f": 243.8
+        },
+        {
+          "p": "dijo",
+          "i": 243.8,
+          "f": 244.06
+        },
+        {
+          "p": "que",
+          "i": 244.06,
+          "f": 244.24
+        },
+        {
+          "p": "iba",
+          "i": 244.24,
+          "f": 244.36
+        },
+        {
+          "p": "a",
+          "i": 244.36,
+          "f": 244.44
+        },
+        {
+          "p": "acabar",
+          "i": 244.44,
+          "f": 244.64
+        },
+        {
+          "p": "con",
+          "i": 244.64,
+          "f": 244.8
+        },
+        {
+          "p": "algunas",
+          "i": 244.8,
+          "f": 245.12
+        },
+        {
+          "p": "carreras.",
+          "i": 245.12,
+          "f": 245.54
+        }
+      ]
+    },
+    {
+      "id": "fr41",
+      "texto": "Pues no tanto. Lo que hace es animar máquinas calculadas con medidas reales, no personajes. Y su propio autor avisa: sin una foto o un plano de referencia, le salían juguetes genéricos.",
+      "inicio": 245.54,
+      "fin": 255.86,
+      "palabras": [
+        {
+          "p": "Pues",
+          "i": 245.54,
+          "f": 245.98
+        },
+        {
+          "p": "no",
+          "i": 245.98,
+          "f": 246.4
+        },
+        {
+          "p": "tanto.",
+          "i": 246.4,
+          "f": 246.68
+        },
+        {
+          "p": "Lo",
+          "i": 246.94,
+          "f": 247.26
+        },
+        {
+          "p": "que",
+          "i": 247.26,
+          "f": 247.36
+        },
+        {
+          "p": "hace",
+          "i": 247.36,
+          "f": 247.56
+        },
+        {
+          "p": "es",
+          "i": 247.56,
+          "f": 247.78
+        },
+        {
+          "p": "animar",
+          "i": 247.78,
+          "f": 248.12
+        },
+        {
+          "p": "máquinas",
+          "i": 248.12,
+          "f": 248.48
+        },
+        {
+          "p": "calculadas",
+          "i": 248.48,
+          "f": 248.96
+        },
+        {
+          "p": "con",
+          "i": 248.96,
+          "f": 249.16
+        },
+        {
+          "p": "medidas",
+          "i": 249.16,
+          "f": 249.44
+        },
+        {
+          "p": "reales,",
+          "i": 249.44,
+          "f": 249.96
+        },
+        {
+          "p": "no",
+          "i": 250.08,
+          "f": 250.24
+        },
+        {
+          "p": "personajes.",
+          "i": 250.24,
+          "f": 250.72
+        },
+        {
+          "p": "Y",
+          "i": 251,
+          "f": 251.34
+        },
+        {
+          "p": "su",
+          "i": 251.34,
+          "f": 251.48
+        },
+        {
+          "p": "propio",
+          "i": 251.48,
+          "f": 251.7
+        },
+        {
+          "p": "autor",
+          "i": 251.7,
+          "f": 251.94
+        },
+        {
+          "p": "avisa:",
+          "i": 251.94,
+          "f": 252.28
+        },
+        {
+          "p": "sin",
+          "i": 252.46,
+          "f": 252.68
+        },
+        {
+          "p": "una",
+          "i": 252.68,
+          "f": 252.86
+        },
+        {
+          "p": "foto",
+          "i": 252.86,
+          "f": 253.12
+        },
+        {
+          "p": "o",
+          "i": 253.12,
+          "f": 253.3
+        },
+        {
+          "p": "un",
+          "i": 253.3,
+          "f": 253.42
+        },
+        {
+          "p": "plano",
+          "i": 253.42,
+          "f": 253.62
+        },
+        {
+          "p": "de",
+          "i": 253.62,
+          "f": 253.76
+        },
+        {
+          "p": "referencia,",
+          "i": 253.76,
+          "f": 254.2
+        },
+        {
+          "p": "le",
+          "i": 254.36,
+          "f": 254.6
+        },
+        {
+          "p": "salían",
+          "i": 254.6,
+          "f": 254.9
+        },
+        {
+          "p": "juguetes",
+          "i": 254.9,
+          "f": 255.36
+        },
+        {
+          "p": "genéricos.",
+          "i": 255.36,
+          "f": 255.86
+        }
+      ]
+    },
+    {
+      "id": "fr42",
+      "texto": "La otra skill viral es la de Cloudflare, que convierte a un agente en auditor de seguridad.",
+      "inicio": 256.26,
+      "fin": 261.08,
+      "palabras": [
+        {
+          "p": "La",
+          "i": 256.26,
+          "f": 256.74
+        },
+        {
+          "p": "otra",
+          "i": 256.74,
+          "f": 256.88
+        },
+        {
+          "p": "skill",
+          "i": 256.88,
+          "f": 257.12
+        },
+        {
+          "p": "viral",
+          "i": 257.12,
+          "f": 257.34
+        },
+        {
+          "p": "es",
+          "i": 257.34,
+          "f": 257.54
+        },
+        {
+          "p": "la",
+          "i": 257.54,
+          "f": 257.68
+        },
+        {
+          "p": "de",
+          "i": 257.68,
+          "f": 257.82
+        },
+        {
+          "p": "Cloudflare,",
+          "i": 257.82,
+          "f": 258.38
+        },
+        {
+          "p": "que",
+          "i": 258.5,
+          "f": 258.78
+        },
+        {
+          "p": "convierte",
+          "i": 258.78,
+          "f": 259.2
+        },
+        {
+          "p": "a",
+          "i": 259.2,
+          "f": 259.38
+        },
+        {
+          "p": "un",
+          "i": 259.38,
+          "f": 259.5
+        },
+        {
+          "p": "agente",
+          "i": 259.5,
+          "f": 259.86
+        },
+        {
+          "p": "en",
+          "i": 259.86,
+          "f": 260.12
+        },
+        {
+          "p": "auditor",
+          "i": 260.12,
+          "f": 260.44
+        },
+        {
+          "p": "de",
+          "i": 260.44,
+          "f": 260.64
+        },
+        {
+          "p": "seguridad.",
+          "i": 260.64,
+          "f": 261.08
+        }
+      ]
+    },
+    {
+      "id": "fr43",
+      "texto": "Otro post dijo que encuentra todos los bugs.",
+      "inicio": 261.56,
+      "fin": 263.3,
+      "palabras": [
+        {
+          "p": "Otro",
+          "i": 261.56,
+          "f": 261.82
+        },
+        {
+          "p": "post",
+          "i": 261.82,
+          "f": 261.96
+        },
+        {
+          "p": "dijo",
+          "i": 261.96,
+          "f": 262.16
+        },
+        {
+          "p": "que",
+          "i": 262.16,
+          "f": 262.3
+        },
+        {
+          "p": "encuentra",
+          "i": 262.3,
+          "f": 262.62
+        },
+        {
+          "p": "todos",
+          "i": 262.62,
+          "f": 262.92
+        },
+        {
+          "p": "los",
+          "i": 262.92,
+          "f": 263.12
+        },
+        {
+          "p": "bugs.",
+          "i": 263.12,
+          "f": 263.3
+        }
+      ]
+    },
+    {
+      "id": "fr44",
+      "texto": "Su propia documentación dice otra cosa: una sola pasada encuentra más o menos la mitad de lo que encuentran varias seguidas.",
+      "inicio": 263.6,
+      "fin": 269.36,
+      "palabras": [
+        {
+          "p": "Su",
+          "i": 263.6,
+          "f": 264.02
+        },
+        {
+          "p": "propia",
+          "i": 264.02,
+          "f": 264.34
+        },
+        {
+          "p": "documentación",
+          "i": 264.34,
+          "f": 264.9
+        },
+        {
+          "p": "dice",
+          "i": 264.9,
+          "f": 265.08
+        },
+        {
+          "p": "otra",
+          "i": 265.08,
+          "f": 265.24
+        },
+        {
+          "p": "cosa:",
+          "i": 265.24,
+          "f": 265.48
+        },
+        {
+          "p": "una",
+          "i": 265.74,
+          "f": 266.06
+        },
+        {
+          "p": "sola",
+          "i": 266.06,
+          "f": 266.24
+        },
+        {
+          "p": "pasada",
+          "i": 266.24,
+          "f": 266.6
+        },
+        {
+          "p": "encuentra",
+          "i": 266.6,
+          "f": 267.04
+        },
+        {
+          "p": "más",
+          "i": 267.04,
+          "f": 267.22
+        },
+        {
+          "p": "o",
+          "i": 267.22,
+          "f": 267.32
+        },
+        {
+          "p": "menos",
+          "i": 267.32,
+          "f": 267.54
+        },
+        {
+          "p": "la",
+          "i": 267.54,
+          "f": 267.74
+        },
+        {
+          "p": "mitad",
+          "i": 267.74,
+          "f": 267.98
+        },
+        {
+          "p": "de",
+          "i": 267.98,
+          "f": 268.14
+        },
+        {
+          "p": "lo",
+          "i": 268.14,
+          "f": 268.24
+        },
+        {
+          "p": "que",
+          "i": 268.24,
+          "f": 268.32
+        },
+        {
+          "p": "encuentran",
+          "i": 268.32,
+          "f": 268.68
+        },
+        {
+          "p": "varias",
+          "i": 268.68,
+          "f": 268.92
+        },
+        {
+          "p": "seguidas.",
+          "i": 268.92,
+          "f": 269.36
+        }
+      ]
+    },
+    {
+      "id": "fr45",
+      "texto": "Y no es de esta semana: es de junio. Simplemente se ha vuelto a hacer viral.",
+      "inicio": 269.36,
+      "fin": 273.1,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 269.36,
+          "f": 270.04
+        },
+        {
+          "p": "no",
+          "i": 270.04,
+          "f": 270.2
+        },
+        {
+          "p": "es",
+          "i": 270.2,
+          "f": 270.3
+        },
+        {
+          "p": "de",
+          "i": 270.3,
+          "f": 270.38
+        },
+        {
+          "p": "esta",
+          "i": 270.38,
+          "f": 270.5
+        },
+        {
+          "p": "semana:",
+          "i": 270.5,
+          "f": 270.82
+        },
+        {
+          "p": "es",
+          "i": 271.02,
+          "f": 271.18
+        },
+        {
+          "p": "de",
+          "i": 271.18,
+          "f": 271.26
+        },
+        {
+          "p": "junio.",
+          "i": 271.26,
+          "f": 271.56
+        },
+        {
+          "p": "Simplemente",
+          "i": 271.74,
+          "f": 272.18
+        },
+        {
+          "p": "se",
+          "i": 272.18,
+          "f": 272.42
+        },
+        {
+          "p": "ha",
+          "i": 272.42,
+          "f": 272.48
+        },
+        {
+          "p": "vuelto",
+          "i": 272.48,
+          "f": 272.72
+        },
+        {
+          "p": "a",
+          "i": 272.72,
+          "f": 272.8
+        },
+        {
+          "p": "hacer",
+          "i": 272.8,
+          "f": 272.9
+        },
+        {
+          "p": "viral.",
+          "i": 272.9,
+          "f": 273.1
+        }
+      ]
+    },
+    {
+      "id": "fr46",
+      "texto": "Lo que sí mola es su regla de oro: el agente que comprueba un fallo nunca es el que lo encontró.",
+      "inicio": 273.58,
+      "fin": 279.14,
+      "palabras": [
+        {
+          "p": "Lo",
+          "i": 273.58,
+          "f": 274.02
+        },
+        {
+          "p": "que",
+          "i": 274.02,
+          "f": 274.12
+        },
+        {
+          "p": "sí",
+          "i": 274.12,
+          "f": 274.26
+        },
+        {
+          "p": "mola",
+          "i": 274.26,
+          "f": 274.48
+        },
+        {
+          "p": "es",
+          "i": 274.48,
+          "f": 274.68
+        },
+        {
+          "p": "su",
+          "i": 274.68,
+          "f": 274.88
+        },
+        {
+          "p": "regla",
+          "i": 274.88,
+          "f": 275.3
+        },
+        {
+          "p": "de",
+          "i": 275.3,
+          "f": 275.44
+        },
+        {
+          "p": "oro:",
+          "i": 275.44,
+          "f": 275.66
+        },
+        {
+          "p": "el",
+          "i": 275.98,
+          "f": 276.28
+        },
+        {
+          "p": "agente",
+          "i": 276.28,
+          "f": 276.54
+        },
+        {
+          "p": "que",
+          "i": 276.54,
+          "f": 276.7
+        },
+        {
+          "p": "comprueba",
+          "i": 276.7,
+          "f": 277.08
+        },
+        {
+          "p": "un",
+          "i": 277.08,
+          "f": 277.22
+        },
+        {
+          "p": "fallo",
+          "i": 277.22,
+          "f": 277.56
+        },
+        {
+          "p": "nunca",
+          "i": 277.56,
+          "f": 278.08
+        },
+        {
+          "p": "es",
+          "i": 278.08,
+          "f": 278.36
+        },
+        {
+          "p": "el",
+          "i": 278.36,
+          "f": 278.48
+        },
+        {
+          "p": "que",
+          "i": 278.48,
+          "f": 278.58
+        },
+        {
+          "p": "lo",
+          "i": 278.58,
+          "f": 278.7
+        },
+        {
+          "p": "encontró.",
+          "i": 278.7,
+          "f": 279.14
+        }
+      ]
+    },
+    {
+      "id": "fr47",
+      "texto": "Y funciona: con un modelo que busca y otro distinto que valida, los avisos falsos que se descartaban bajaron del cuarenta al once por ciento.",
+      "inicio": 279.34,
+      "fin": 287.425,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 279.34,
+          "f": 279.64
+        },
+        {
+          "p": "funciona:",
+          "i": 279.64,
+          "f": 279.96
+        },
+        {
+          "p": "con",
+          "i": 280.24,
+          "f": 280.58
+        },
+        {
+          "p": "un",
+          "i": 280.58,
+          "f": 280.68
+        },
+        {
+          "p": "modelo",
+          "i": 280.68,
+          "f": 280.9
+        },
+        {
+          "p": "que",
+          "i": 280.9,
+          "f": 281.06
+        },
+        {
+          "p": "busca",
+          "i": 281.06,
+          "f": 281.36
+        },
+        {
+          "p": "y",
+          "i": 281.36,
+          "f": 281.56
+        },
+        {
+          "p": "otro",
+          "i": 281.56,
+          "f": 281.74
+        },
+        {
+          "p": "distinto",
+          "i": 281.74,
+          "f": 282.1
+        },
+        {
+          "p": "que",
+          "i": 282.1,
+          "f": 282.24
+        },
+        {
+          "p": "valida,",
+          "i": 282.24,
+          "f": 282.56
+        },
+        {
+          "p": "los",
+          "i": 282.78,
+          "f": 283.02
+        },
+        {
+          "p": "avisos",
+          "i": 283.02,
+          "f": 283.34
+        },
+        {
+          "p": "falsos",
+          "i": 283.34,
+          "f": 283.66
+        },
+        {
+          "p": "que",
+          "i": 283.66,
+          "f": 283.76
+        },
+        {
+          "p": "se",
+          "i": 283.76,
+          "f": 283.88
+        },
+        {
+          "p": "descartaban",
+          "i": 283.88,
+          "f": 284.4
+        },
+        {
+          "p": "bajaron",
+          "i": 284.4,
+          "f": 284.82
+        },
+        {
+          "p": "del",
+          "i": 284.82,
+          "f": 285.04
+        },
+        {
+          "p": "cuarenta",
+          "i": 285.04,
+          "f": 285.48
+        },
+        {
+          "p": "al",
+          "i": 285.48,
+          "f": 285.82
+        },
+        {
+          "p": "once",
+          "i": 285.82,
+          "f": 286.355
+        },
+        {
+          "p": "por",
+          "i": 286.355,
+          "f": 286.89
+        },
+        {
+          "p": "ciento.",
+          "i": 286.89,
+          "f": 287.425
+        }
+      ]
+    },
+    {
+      "id": "fr48",
+      "texto": "Cloudflare la usó dentro de casa: en unas seis semanas, de una skill de unas 450 líneas pasó a revisar más de cien repositorios.",
+      "inicio": 287.425,
+      "fin": 294.68,
+      "palabras": [
+        {
+          "p": "Cloudflare",
+          "i": 287.425,
+          "f": 287.96
+        },
+        {
+          "p": "la",
+          "i": 287.96,
+          "f": 288.08
+        },
+        {
+          "p": "usó",
+          "i": 288.08,
+          "f": 288.26
+        },
+        {
+          "p": "dentro",
+          "i": 288.26,
+          "f": 288.46
+        },
+        {
+          "p": "de",
+          "i": 288.46,
+          "f": 288.62
+        },
+        {
+          "p": "casa:",
+          "i": 288.62,
+          "f": 288.82
+        },
+        {
+          "p": "en",
+          "i": 289.02,
+          "f": 289.26
+        },
+        {
+          "p": "unas",
+          "i": 289.26,
+          "f": 289.46
+        },
+        {
+          "p": "seis",
+          "i": 289.46,
+          "f": 289.6
+        },
+        {
+          "p": "semanas,",
+          "i": 289.6,
+          "f": 289.96
+        },
+        {
+          "p": "de",
+          "i": 290.14,
+          "f": 290.18
+        },
+        {
+          "p": "una",
+          "i": 290.18,
+          "f": 290.3
+        },
+        {
+          "p": "skill",
+          "i": 290.3,
+          "f": 290.52
+        },
+        {
+          "p": "de",
+          "i": 290.52,
+          "f": 290.68
+        },
+        {
+          "p": "unas",
+          "i": 290.68,
+          "f": 290.92
+        },
+        {
+          "p": "450",
+          "i": 290.92,
+          "f": 291.5
+        },
+        {
+          "p": "líneas",
+          "i": 291.5,
+          "f": 292.26
+        },
+        {
+          "p": "pasó",
+          "i": 292.5,
+          "f": 292.8
+        },
+        {
+          "p": "a",
+          "i": 292.8,
+          "f": 292.92
+        },
+        {
+          "p": "revisar",
+          "i": 292.92,
+          "f": 293.28
+        },
+        {
+          "p": "más",
+          "i": 293.28,
+          "f": 293.5
+        },
+        {
+          "p": "de",
+          "i": 293.5,
+          "f": 293.64
+        },
+        {
+          "p": "cien",
+          "i": 293.64,
+          "f": 293.98
+        },
+        {
+          "p": "repositorios.",
+          "i": 293.98,
+          "f": 294.68
+        }
+      ]
+    },
+    {
+      "id": "fr49",
+      "texto": "Y ahora, el giro. Porque si un agente puede tocar tus archivos, también puede ser la puerta de entrada.",
+      "inicio": 295.48,
+      "fin": 302.16,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 295.48,
+          "f": 296.04
+        },
+        {
+          "p": "ahora,",
+          "i": 296.04,
+          "f": 296.32
+        },
+        {
+          "p": "el",
+          "i": 296.54,
+          "f": 296.86
+        },
+        {
+          "p": "giro.",
+          "i": 296.86,
+          "f": 297.2
+        },
+        {
+          "p": "Porque",
+          "i": 297.46,
+          "f": 298
+        },
+        {
+          "p": "si",
+          "i": 298,
+          "f": 298.3
+        },
+        {
+          "p": "un",
+          "i": 298.3,
+          "f": 298.46
+        },
+        {
+          "p": "agente",
+          "i": 298.46,
+          "f": 298.78
+        },
+        {
+          "p": "puede",
+          "i": 298.78,
+          "f": 299.04
+        },
+        {
+          "p": "tocar",
+          "i": 299.04,
+          "f": 299.32
+        },
+        {
+          "p": "tus",
+          "i": 299.32,
+          "f": 299.54
+        },
+        {
+          "p": "archivos,",
+          "i": 299.54,
+          "f": 300.08
+        },
+        {
+          "p": "también",
+          "i": 300.3,
+          "f": 300.76
+        },
+        {
+          "p": "puede",
+          "i": 300.76,
+          "f": 301.1
+        },
+        {
+          "p": "ser",
+          "i": 301.1,
+          "f": 301.32
+        },
+        {
+          "p": "la",
+          "i": 301.32,
+          "f": 301.44
+        },
+        {
+          "p": "puerta",
+          "i": 301.44,
+          "f": 301.72
+        },
+        {
+          "p": "de",
+          "i": 301.72,
+          "f": 301.9
+        },
+        {
+          "p": "entrada.",
+          "i": 301.9,
+          "f": 302.16
+        }
+      ]
+    },
+    {
+      "id": "fr50",
+      "texto": "El 29 de octubre, en la tienda de extensiones de Cursor apareció una versión manipulada de la extensión oficial de Claude Code. No era una imitación: llevaba el identificador legítimo de Anthropic.",
+      "inicio": 302.68,
+      "fin": 314.42,
+      "palabras": [
+        {
+          "p": "El",
+          "i": 302.68,
+          "f": 303.24
+        },
+        {
+          "p": "29 de octubre,",
+          "i": 303.24,
+          "f": 304.2
+        },
+        {
+          "p": "en",
+          "i": 304.36,
+          "f": 304.48
+        },
+        {
+          "p": "la",
+          "i": 304.48,
+          "f": 304.58
+        },
+        {
+          "p": "tienda",
+          "i": 304.58,
+          "f": 304.82
+        },
+        {
+          "p": "de",
+          "i": 304.82,
+          "f": 304.96
+        },
+        {
+          "p": "extensiones",
+          "i": 304.96,
+          "f": 305.48
+        },
+        {
+          "p": "de",
+          "i": 305.48,
+          "f": 305.58
+        },
+        {
+          "p": "Cursor",
+          "i": 305.58,
+          "f": 305.98
+        },
+        {
+          "p": "apareció",
+          "i": 306.2,
+          "f": 306.8
+        },
+        {
+          "p": "una",
+          "i": 306.8,
+          "f": 306.94
+        },
+        {
+          "p": "versión",
+          "i": 306.94,
+          "f": 307.26
+        },
+        {
+          "p": "manipulada",
+          "i": 307.26,
+          "f": 307.94
+        },
+        {
+          "p": "de",
+          "i": 307.94,
+          "f": 308.08
+        },
+        {
+          "p": "la",
+          "i": 308.08,
+          "f": 308.2
+        },
+        {
+          "p": "extensión",
+          "i": 308.2,
+          "f": 308.76
+        },
+        {
+          "p": "oficial",
+          "i": 308.76,
+          "f": 309.2
+        },
+        {
+          "p": "de",
+          "i": 309.2,
+          "f": 309.52
+        },
+        {
+          "p": "Claude Code.",
+          "i": 309.52,
+          "f": 310.12
+        },
+        {
+          "p": "No",
+          "i": 310.58,
+          "f": 310.96
+        },
+        {
+          "p": "era",
+          "i": 310.96,
+          "f": 311.12
+        },
+        {
+          "p": "una",
+          "i": 311.12,
+          "f": 311.26
+        },
+        {
+          "p": "imitación:",
+          "i": 311.26,
+          "f": 311.78
+        },
+        {
+          "p": "llevaba",
+          "i": 311.94,
+          "f": 312.44
+        },
+        {
+          "p": "el",
+          "i": 312.44,
+          "f": 312.56
+        },
+        {
+          "p": "identificador",
+          "i": 312.56,
+          "f": 313.28
+        },
+        {
+          "p": "legítimo",
+          "i": 313.28,
+          "f": 313.9
+        },
+        {
+          "p": "de",
+          "i": 313.9,
+          "f": 314.02
+        },
+        {
+          "p": "Anthropic.",
+          "i": 314.02,
+          "f": 314.42
+        }
+      ]
+    },
+    {
+      "id": "fr51",
+      "texto": "Estuvo unas once horas. Y, según Cursor, llegó como mucho a cinco mil personas.",
+      "inicio": 315.34,
+      "fin": 319.62,
+      "palabras": [
+        {
+          "p": "Estuvo",
+          "i": 315.34,
+          "f": 315.72
+        },
+        {
+          "p": "unas",
+          "i": 315.72,
+          "f": 315.96
+        },
+        {
+          "p": "once",
+          "i": 315.96,
+          "f": 316.18
+        },
+        {
+          "p": "horas.",
+          "i": 316.18,
+          "f": 316.46
+        },
+        {
+          "p": "Y,",
+          "i": 316.66,
+          "f": 317.1
+        },
+        {
+          "p": "según",
+          "i": 317.1,
+          "f": 317.42
+        },
+        {
+          "p": "Cursor,",
+          "i": 317.42,
+          "f": 317.86
+        },
+        {
+          "p": "llegó",
+          "i": 318,
+          "f": 318.1
+        },
+        {
+          "p": "como",
+          "i": 318.1,
+          "f": 318.34
+        },
+        {
+          "p": "mucho",
+          "i": 318.34,
+          "f": 318.64
+        },
+        {
+          "p": "a",
+          "i": 318.64,
+          "f": 318.8
+        },
+        {
+          "p": "cinco",
+          "i": 318.8,
+          "f": 318.99
+        },
+        {
+          "p": "mil",
+          "i": 318.99,
+          "f": 319.18
+        },
+        {
+          "p": "personas.",
+          "i": 319.18,
+          "f": 319.62
+        }
+      ]
+    },
+    {
+      "id": "fr52",
+      "texto": "Mandaba datos de tu equipo, metía una clave del atacante para entrar por SSH e intentaba abrir un túnel hacia fuera.",
+      "inicio": 320.44,
+      "fin": 326.82,
+      "palabras": [
+        {
+          "p": "Mandaba",
+          "i": 320.44,
+          "f": 320.96
+        },
+        {
+          "p": "datos",
+          "i": 320.96,
+          "f": 321.22
+        },
+        {
+          "p": "de",
+          "i": 321.22,
+          "f": 321.34
+        },
+        {
+          "p": "tu",
+          "i": 321.34,
+          "f": 321.48
+        },
+        {
+          "p": "equipo,",
+          "i": 321.48,
+          "f": 321.86
+        },
+        {
+          "p": "metía",
+          "i": 322.08,
+          "f": 322.34
+        },
+        {
+          "p": "una",
+          "i": 322.34,
+          "f": 322.52
+        },
+        {
+          "p": "clave",
+          "i": 322.52,
+          "f": 322.8
+        },
+        {
+          "p": "del",
+          "i": 322.8,
+          "f": 322.96
+        },
+        {
+          "p": "atacante",
+          "i": 322.96,
+          "f": 323.4
+        },
+        {
+          "p": "para",
+          "i": 323.4,
+          "f": 323.62
+        },
+        {
+          "p": "entrar",
+          "i": 323.62,
+          "f": 323.82
+        },
+        {
+          "p": "por",
+          "i": 323.82,
+          "f": 324.04
+        },
+        {
+          "p": "SSH",
+          "i": 324.04,
+          "f": 324.7
+        },
+        {
+          "p": "e",
+          "i": 324.7,
+          "f": 325.32
+        },
+        {
+          "p": "intentaba",
+          "i": 325.32,
+          "f": 325.72
+        },
+        {
+          "p": "abrir",
+          "i": 325.72,
+          "f": 325.9
+        },
+        {
+          "p": "un",
+          "i": 325.9,
+          "f": 326.1
+        },
+        {
+          "p": "túnel",
+          "i": 326.1,
+          "f": 326.34
+        },
+        {
+          "p": "hacia",
+          "i": 326.34,
+          "f": 326.52
+        },
+        {
+          "p": "fuera.",
+          "i": 326.52,
+          "f": 326.82
+        }
+      ]
+    },
+    {
+      "id": "fr53",
+      "texto": "Esto se llama ataque a la cadena de suministro: no te atacan a ti, atacan lo que instalas.",
+      "inicio": 327.32,
+      "fin": 332.12,
+      "palabras": [
+        {
+          "p": "Esto",
+          "i": 327.32,
+          "f": 327.76
+        },
+        {
+          "p": "se",
+          "i": 327.76,
+          "f": 327.88
+        },
+        {
+          "p": "llama",
+          "i": 327.88,
+          "f": 328.1
+        },
+        {
+          "p": "ataque",
+          "i": 328.1,
+          "f": 328.44
+        },
+        {
+          "p": "a",
+          "i": 328.44,
+          "f": 328.62
+        },
+        {
+          "p": "la",
+          "i": 328.62,
+          "f": 328.68
+        },
+        {
+          "p": "cadena",
+          "i": 328.68,
+          "f": 328.98
+        },
+        {
+          "p": "de",
+          "i": 328.98,
+          "f": 329.1
+        },
+        {
+          "p": "suministro:",
+          "i": 329.1,
+          "f": 329.66
+        },
+        {
+          "p": "no",
+          "i": 329.84,
+          "f": 330.12
+        },
+        {
+          "p": "te",
+          "i": 330.12,
+          "f": 330.26
+        },
+        {
+          "p": "atacan",
+          "i": 330.26,
+          "f": 330.6
+        },
+        {
+          "p": "a",
+          "i": 330.6,
+          "f": 330.7
+        },
+        {
+          "p": "ti,",
+          "i": 330.7,
+          "f": 330.76
+        },
+        {
+          "p": "atacan",
+          "i": 331.04,
+          "f": 331.48
+        },
+        {
+          "p": "lo",
+          "i": 331.48,
+          "f": 331.58
+        },
+        {
+          "p": "que",
+          "i": 331.58,
+          "f": 331.68
+        },
+        {
+          "p": "instalas.",
+          "i": 331.68,
+          "f": 332.12
+        }
+      ]
+    },
+    {
+      "id": "fr54",
+      "texto": "La misma semana, Anthropic contó que un modelo suyo, aún sin lanzar, encontró un fallo en el núcleo de Linux y escribió un ataque que funcionaba.",
+      "inicio": 332.9,
+      "fin": 340.5,
+      "palabras": [
+        {
+          "p": "La",
+          "i": 332.9,
+          "f": 333.16
+        },
+        {
+          "p": "misma",
+          "i": 333.16,
+          "f": 333.34
+        },
+        {
+          "p": "semana,",
+          "i": 333.34,
+          "f": 333.72
+        },
+        {
+          "p": "Anthropic",
+          "i": 333.8,
+          "f": 334.1
+        },
+        {
+          "p": "contó",
+          "i": 334.1,
+          "f": 334.48
+        },
+        {
+          "p": "que",
+          "i": 334.48,
+          "f": 334.58
+        },
+        {
+          "p": "un",
+          "i": 334.58,
+          "f": 334.72
+        },
+        {
+          "p": "modelo",
+          "i": 334.72,
+          "f": 334.98
+        },
+        {
+          "p": "suyo,",
+          "i": 334.98,
+          "f": 335.38
+        },
+        {
+          "p": "aún",
+          "i": 335.46,
+          "f": 335.64
+        },
+        {
+          "p": "sin",
+          "i": 335.64,
+          "f": 335.78
+        },
+        {
+          "p": "lanzar,",
+          "i": 335.78,
+          "f": 336.14
+        },
+        {
+          "p": "encontró",
+          "i": 336.58,
+          "f": 337.04
+        },
+        {
+          "p": "un",
+          "i": 337.04,
+          "f": 337.2
+        },
+        {
+          "p": "fallo",
+          "i": 337.2,
+          "f": 337.5
+        },
+        {
+          "p": "en",
+          "i": 337.5,
+          "f": 337.6
+        },
+        {
+          "p": "el",
+          "i": 337.6,
+          "f": 337.7
+        },
+        {
+          "p": "núcleo",
+          "i": 337.7,
+          "f": 338
+        },
+        {
+          "p": "de",
+          "i": 338,
+          "f": 338.08
+        },
+        {
+          "p": "Linux",
+          "i": 338.08,
+          "f": 338.36
+        },
+        {
+          "p": "y",
+          "i": 338.36,
+          "f": 338.94
+        },
+        {
+          "p": "escribió",
+          "i": 338.94,
+          "f": 339.34
+        },
+        {
+          "p": "un",
+          "i": 339.34,
+          "f": 339.48
+        },
+        {
+          "p": "ataque",
+          "i": 339.48,
+          "f": 339.74
+        },
+        {
+          "p": "que",
+          "i": 339.74,
+          "f": 339.96
+        },
+        {
+          "p": "funcionaba.",
+          "i": 339.96,
+          "f": 340.5
+        }
+      ]
+    },
+    {
+      "id": "fr55",
+      "texto": "En su prueba, tardó cuarenta y ocho minutos en saltarse una protección, y cinco más en tener el control total del servidor.",
+      "inicio": 341.06,
+      "fin": 347.88,
+      "palabras": [
+        {
+          "p": "En",
+          "i": 341.06,
+          "f": 341.58
+        },
+        {
+          "p": "su",
+          "i": 341.58,
+          "f": 341.72
+        },
+        {
+          "p": "prueba,",
+          "i": 341.72,
+          "f": 342.02
+        },
+        {
+          "p": "tardó",
+          "i": 342.24,
+          "f": 342.44
+        },
+        {
+          "p": "cuarenta",
+          "i": 342.44,
+          "f": 342.593
+        },
+        {
+          "p": "y",
+          "i": 342.593,
+          "f": 342.747
+        },
+        {
+          "p": "ocho",
+          "i": 342.747,
+          "f": 342.9
+        },
+        {
+          "p": "minutos",
+          "i": 342.9,
+          "f": 343.42
+        },
+        {
+          "p": "en",
+          "i": 343.42,
+          "f": 343.62
+        },
+        {
+          "p": "saltarse",
+          "i": 343.62,
+          "f": 344.02
+        },
+        {
+          "p": "una",
+          "i": 344.02,
+          "f": 344.18
+        },
+        {
+          "p": "protección,",
+          "i": 344.18,
+          "f": 344.68
+        },
+        {
+          "p": "y",
+          "i": 344.68,
+          "f": 345.26
+        },
+        {
+          "p": "cinco",
+          "i": 345.26,
+          "f": 345.6
+        },
+        {
+          "p": "más",
+          "i": 345.6,
+          "f": 345.88
+        },
+        {
+          "p": "en",
+          "i": 345.88,
+          "f": 346.26
+        },
+        {
+          "p": "tener",
+          "i": 346.26,
+          "f": 346.52
+        },
+        {
+          "p": "el",
+          "i": 346.52,
+          "f": 346.7
+        },
+        {
+          "p": "control",
+          "i": 346.7,
+          "f": 347
+        },
+        {
+          "p": "total",
+          "i": 347,
+          "f": 347.3
+        },
+        {
+          "p": "del",
+          "i": 347.3,
+          "f": 347.48
+        },
+        {
+          "p": "servidor.",
+          "i": 347.48,
+          "f": 347.88
+        }
+      ]
+    },
+    {
+      "id": "fr56",
+      "texto": "Y el mismo informe habla de fallos en Chrome, Safari, Android y Windows.",
+      "inicio": 347.88,
+      "fin": 352.48,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 347.88,
+          "f": 348.8
+        },
+        {
+          "p": "el",
+          "i": 348.8,
+          "f": 348.9
+        },
+        {
+          "p": "mismo",
+          "i": 348.9,
+          "f": 349.08
+        },
+        {
+          "p": "informe",
+          "i": 349.08,
+          "f": 349.42
+        },
+        {
+          "p": "habla",
+          "i": 349.42,
+          "f": 349.56
+        },
+        {
+          "p": "de",
+          "i": 349.56,
+          "f": 349.7
+        },
+        {
+          "p": "fallos",
+          "i": 349.7,
+          "f": 350
+        },
+        {
+          "p": "en",
+          "i": 350,
+          "f": 350.18
+        },
+        {
+          "p": "Chrome,",
+          "i": 350.18,
+          "f": 350.5
+        },
+        {
+          "p": "Safari,",
+          "i": 350.72,
+          "f": 351.12
+        },
+        {
+          "p": "Android",
+          "i": 351.46,
+          "f": 351.74
+        },
+        {
+          "p": "y",
+          "i": 351.74,
+          "f": 352.16
+        },
+        {
+          "p": "Windows.",
+          "i": 352.16,
+          "f": 352.48
+        }
+      ]
+    },
+    {
+      "id": "fr57",
+      "texto": "Pero hay matices. El ataque que enseñaron necesita una función concreta activada en el servidor. Otra empresa, CloudLinux, no consiguió reproducirlo. Y no consta ningún ataque real.",
+      "inicio": 352.94,
+      "fin": 363.48,
+      "palabras": [
+        {
+          "p": "Pero",
+          "i": 352.94,
+          "f": 353.44
+        },
+        {
+          "p": "hay",
+          "i": 353.44,
+          "f": 353.58
+        },
+        {
+          "p": "matices.",
+          "i": 353.58,
+          "f": 353.96
+        },
+        {
+          "p": "El",
+          "i": 354.18,
+          "f": 354.68
+        },
+        {
+          "p": "ataque",
+          "i": 354.68,
+          "f": 354.92
+        },
+        {
+          "p": "que",
+          "i": 354.92,
+          "f": 355.04
+        },
+        {
+          "p": "enseñaron",
+          "i": 355.04,
+          "f": 355.44
+        },
+        {
+          "p": "necesita",
+          "i": 355.44,
+          "f": 355.9
+        },
+        {
+          "p": "una",
+          "i": 355.9,
+          "f": 356.08
+        },
+        {
+          "p": "función",
+          "i": 356.08,
+          "f": 356.48
+        },
+        {
+          "p": "concreta",
+          "i": 356.48,
+          "f": 357.08
+        },
+        {
+          "p": "activada",
+          "i": 357.08,
+          "f": 357.5
+        },
+        {
+          "p": "en",
+          "i": 357.5,
+          "f": 357.6
+        },
+        {
+          "p": "el",
+          "i": 357.6,
+          "f": 357.66
+        },
+        {
+          "p": "servidor.",
+          "i": 357.66,
+          "f": 358.02
+        },
+        {
+          "p": "Otra",
+          "i": 358.72,
+          "f": 359.14
+        },
+        {
+          "p": "empresa,",
+          "i": 359.14,
+          "f": 359.46
+        },
+        {
+          "p": "CloudLinux,",
+          "i": 359.6,
+          "f": 360.08
+        },
+        {
+          "p": "no",
+          "i": 360.22,
+          "f": 360.48
+        },
+        {
+          "p": "consiguió",
+          "i": 360.48,
+          "f": 360.9
+        },
+        {
+          "p": "reproducirlo.",
+          "i": 360.9,
+          "f": 361.56
+        },
+        {
+          "p": "Y",
+          "i": 361.72,
+          "f": 362.14
+        },
+        {
+          "p": "no",
+          "i": 362.14,
+          "f": 362.3
+        },
+        {
+          "p": "consta",
+          "i": 362.3,
+          "f": 362.66
+        },
+        {
+          "p": "ningún",
+          "i": 362.66,
+          "f": 362.86
+        },
+        {
+          "p": "ataque",
+          "i": 362.86,
+          "f": 363.14
+        },
+        {
+          "p": "real.",
+          "i": 363.14,
+          "f": 363.48
+        }
+      ]
+    },
+    {
+      "id": "fr58",
+      "texto": "Aun así, el fallo está en código que usan casi todos, así que toca actualizar.",
+      "inicio": 364.18,
+      "fin": 368.2,
+      "palabras": [
+        {
+          "p": "Aun",
+          "i": 364.18,
+          "f": 364.44
+        },
+        {
+          "p": "así,",
+          "i": 364.44,
+          "f": 364.64
+        },
+        {
+          "p": "el",
+          "i": 364.82,
+          "f": 364.98
+        },
+        {
+          "p": "fallo",
+          "i": 364.98,
+          "f": 365.22
+        },
+        {
+          "p": "está",
+          "i": 365.22,
+          "f": 365.34
+        },
+        {
+          "p": "en",
+          "i": 365.34,
+          "f": 365.44
+        },
+        {
+          "p": "código",
+          "i": 365.44,
+          "f": 365.76
+        },
+        {
+          "p": "que",
+          "i": 365.76,
+          "f": 365.94
+        },
+        {
+          "p": "usan",
+          "i": 365.94,
+          "f": 366.18
+        },
+        {
+          "p": "casi",
+          "i": 366.18,
+          "f": 366.52
+        },
+        {
+          "p": "todos,",
+          "i": 366.52,
+          "f": 366.84
+        },
+        {
+          "p": "así",
+          "i": 367.1,
+          "f": 367.3
+        },
+        {
+          "p": "que",
+          "i": 367.3,
+          "f": 367.46
+        },
+        {
+          "p": "toca",
+          "i": 367.46,
+          "f": 367.7
+        },
+        {
+          "p": "actualizar.",
+          "i": 367.7,
+          "f": 368.2
+        }
+      ]
+    },
+    {
+      "id": "fr59",
+      "texto": "Y la gran historia de la semana: Binance.",
+      "inicio": 368.66,
+      "fin": 371.4,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 368.66,
+          "f": 369.22
+        },
+        {
+          "p": "la",
+          "i": 369.22,
+          "f": 369.34
+        },
+        {
+          "p": "gran",
+          "i": 369.34,
+          "f": 369.54
+        },
+        {
+          "p": "historia",
+          "i": 369.54,
+          "f": 369.84
+        },
+        {
+          "p": "de",
+          "i": 369.84,
+          "f": 370
+        },
+        {
+          "p": "la",
+          "i": 370,
+          "f": 370.1
+        },
+        {
+          "p": "semana:",
+          "i": 370.1,
+          "f": 370.38
+        },
+        {
+          "p": "Binance.",
+          "i": 370.84,
+          "f": 371.4
+        }
+      ]
+    },
+    {
+      "id": "fr60",
+      "texto": "Le robaron unos seis mil trescientos cuarenta millones de dólares. Más de cuatro veces el récord anterior.",
+      "inicio": 371.4,
+      "fin": 377.72,
+      "palabras": [
+        {
+          "p": "Le",
+          "i": 371.4,
+          "f": 372.16
+        },
+        {
+          "p": "robaron",
+          "i": 372.16,
+          "f": 372.52
+        },
+        {
+          "p": "unos",
+          "i": 372.52,
+          "f": 372.88
+        },
+        {
+          "p": "seis",
+          "i": 372.88,
+          "f": 373.26
+        },
+        {
+          "p": "mil",
+          "i": 373.26,
+          "f": 373.64
+        },
+        {
+          "p": "trescientos",
+          "i": 373.64,
+          "f": 374.02
+        },
+        {
+          "p": "cuarenta",
+          "i": 374.02,
+          "f": 374.4
+        },
+        {
+          "p": "millones",
+          "i": 374.4,
+          "f": 374.78
+        },
+        {
+          "p": "de",
+          "i": 374.78,
+          "f": 375.02
+        },
+        {
+          "p": "dólares.",
+          "i": 375.02,
+          "f": 375.3
+        },
+        {
+          "p": "Más",
+          "i": 375.66,
+          "f": 376.2
+        },
+        {
+          "p": "de",
+          "i": 376.2,
+          "f": 376.32
+        },
+        {
+          "p": "cuatro",
+          "i": 376.32,
+          "f": 376.68
+        },
+        {
+          "p": "veces",
+          "i": 376.68,
+          "f": 376.96
+        },
+        {
+          "p": "el",
+          "i": 376.96,
+          "f": 377.16
+        },
+        {
+          "p": "récord",
+          "i": 377.16,
+          "f": 377.42
+        },
+        {
+          "p": "anterior.",
+          "i": 377.42,
+          "f": 377.72
+        }
+      ]
+    },
+    {
+      "id": "fr61",
+      "texto": "El FBI se lo atribuye a Corea del Norte.",
+      "inicio": 378.22,
+      "fin": 380.4,
+      "palabras": [
+        {
+          "p": "El",
+          "i": 378.22,
+          "f": 378.68
+        },
+        {
+          "p": "FBI",
+          "i": 378.68,
+          "f": 379
+        },
+        {
+          "p": "se",
+          "i": 379,
+          "f": 379.2
+        },
+        {
+          "p": "lo",
+          "i": 379.2,
+          "f": 379.28
+        },
+        {
+          "p": "atribuye",
+          "i": 379.28,
+          "f": 379.66
+        },
+        {
+          "p": "a",
+          "i": 379.66,
+          "f": 379.76
+        },
+        {
+          "p": "Corea",
+          "i": 379.76,
+          "f": 380.02
+        },
+        {
+          "p": "del",
+          "i": 380.02,
+          "f": 380.14
+        },
+        {
+          "p": "Norte.",
+          "i": 380.14,
+          "f": 380.4
+        }
+      ]
+    },
+    {
+      "id": "fr62",
+      "texto": "Y la campaña venía de lejos. En septiembre, un falso reclutador contactó con un ingeniero de Binance en una web de empleo real, y le coló una prueba de selección trucada.",
+      "inicio": 380.78,
+      "fin": 390,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 380.78,
+          "f": 381.32
+        },
+        {
+          "p": "la",
+          "i": 381.32,
+          "f": 381.42
+        },
+        {
+          "p": "campaña",
+          "i": 381.42,
+          "f": 381.76
+        },
+        {
+          "p": "venía",
+          "i": 381.76,
+          "f": 382
+        },
+        {
+          "p": "de",
+          "i": 382,
+          "f": 382.1
+        },
+        {
+          "p": "lejos.",
+          "i": 382.1,
+          "f": 382.4
+        },
+        {
+          "p": "En",
+          "i": 382.84,
+          "f": 383.2
+        },
+        {
+          "p": "septiembre,",
+          "i": 383.2,
+          "f": 383.68
+        },
+        {
+          "p": "un",
+          "i": 383.86,
+          "f": 384.08
+        },
+        {
+          "p": "falso",
+          "i": 384.08,
+          "f": 384.38
+        },
+        {
+          "p": "reclutador",
+          "i": 384.38,
+          "f": 384.9
+        },
+        {
+          "p": "contactó",
+          "i": 384.9,
+          "f": 385.32
+        },
+        {
+          "p": "con",
+          "i": 385.32,
+          "f": 385.48
+        },
+        {
+          "p": "un",
+          "i": 385.48,
+          "f": 385.6
+        },
+        {
+          "p": "ingeniero",
+          "i": 385.6,
+          "f": 385.96
+        },
+        {
+          "p": "de",
+          "i": 385.96,
+          "f": 386.1
+        },
+        {
+          "p": "Binance",
+          "i": 386.1,
+          "f": 386.5
+        },
+        {
+          "p": "en",
+          "i": 386.5,
+          "f": 386.9
+        },
+        {
+          "p": "una",
+          "i": 386.9,
+          "f": 387.06
+        },
+        {
+          "p": "web",
+          "i": 387.06,
+          "f": 387.22
+        },
+        {
+          "p": "de",
+          "i": 387.22,
+          "f": 387.34
+        },
+        {
+          "p": "empleo",
+          "i": 387.34,
+          "f": 387.64
+        },
+        {
+          "p": "real,",
+          "i": 387.64,
+          "f": 387.9
+        },
+        {
+          "p": "y",
+          "i": 387.9,
+          "f": 388.26
+        },
+        {
+          "p": "le",
+          "i": 388.26,
+          "f": 388.38
+        },
+        {
+          "p": "coló",
+          "i": 388.38,
+          "f": 388.64
+        },
+        {
+          "p": "una",
+          "i": 388.64,
+          "f": 388.78
+        },
+        {
+          "p": "prueba",
+          "i": 388.78,
+          "f": 389.04
+        },
+        {
+          "p": "de",
+          "i": 389.04,
+          "f": 389.18
+        },
+        {
+          "p": "selección",
+          "i": 389.18,
+          "f": 389.58
+        },
+        {
+          "p": "trucada.",
+          "i": 389.58,
+          "f": 390
+        }
+      ]
+    },
+    {
+      "id": "fr63",
+      "texto": "El 20 de octubre, desde el ordenador de ese ingeniero, el atacante abusó de una herramienta interna de IA de la empresa para hacerse con otros dos ingenieros.",
+      "inicio": 390.48,
+      "fin": 398.06,
+      "palabras": [
+        {
+          "p": "El",
+          "i": 390.48,
+          "f": 391.02
+        },
+        {
+          "p": "20 de octubre,",
+          "i": 391.02,
+          "f": 391.66
+        },
+        {
+          "p": "desde",
+          "i": 391.9,
+          "f": 392.08
+        },
+        {
+          "p": "el",
+          "i": 392.08,
+          "f": 392.2
+        },
+        {
+          "p": "ordenador",
+          "i": 392.2,
+          "f": 392.58
+        },
+        {
+          "p": "de",
+          "i": 392.58,
+          "f": 392.7
+        },
+        {
+          "p": "ese",
+          "i": 392.7,
+          "f": 392.84
+        },
+        {
+          "p": "ingeniero,",
+          "i": 392.84,
+          "f": 393.26
+        },
+        {
+          "p": "el",
+          "i": 393.46,
+          "f": 393.78
+        },
+        {
+          "p": "atacante",
+          "i": 393.78,
+          "f": 394.16
+        },
+        {
+          "p": "abusó",
+          "i": 394.16,
+          "f": 394.48
+        },
+        {
+          "p": "de",
+          "i": 394.48,
+          "f": 394.58
+        },
+        {
+          "p": "una",
+          "i": 394.58,
+          "f": 394.7
+        },
+        {
+          "p": "herramienta",
+          "i": 394.7,
+          "f": 395.16
+        },
+        {
+          "p": "interna",
+          "i": 395.16,
+          "f": 395.46
+        },
+        {
+          "p": "de",
+          "i": 395.46,
+          "f": 395.56
+        },
+        {
+          "p": "IA",
+          "i": 395.56,
+          "f": 395.76
+        },
+        {
+          "p": "de",
+          "i": 395.76,
+          "f": 395.88
+        },
+        {
+          "p": "la",
+          "i": 395.88,
+          "f": 395.98
+        },
+        {
+          "p": "empresa",
+          "i": 395.98,
+          "f": 396.3
+        },
+        {
+          "p": "para",
+          "i": 396.3,
+          "f": 396.56
+        },
+        {
+          "p": "hacerse",
+          "i": 396.56,
+          "f": 396.86
+        },
+        {
+          "p": "con",
+          "i": 396.86,
+          "f": 397
+        },
+        {
+          "p": "otros",
+          "i": 397,
+          "f": 397.24
+        },
+        {
+          "p": "dos",
+          "i": 397.24,
+          "f": 397.44
+        },
+        {
+          "p": "ingenieros.",
+          "i": 397.44,
+          "f": 398.06
+        }
+      ]
+    },
+    {
+      "id": "fr64",
+      "texto": "Y nueve días después, lanzó las retiradas.",
+      "inicio": 398.06,
+      "fin": 400.7,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 398.06,
+          "f": 398.76
+        },
+        {
+          "p": "nueve",
+          "i": 398.76,
+          "f": 398.98
+        },
+        {
+          "p": "días",
+          "i": 398.98,
+          "f": 399.16
+        },
+        {
+          "p": "después,",
+          "i": 399.16,
+          "f": 399.48
+        },
+        {
+          "p": "lanzó",
+          "i": 399.68,
+          "f": 400.1
+        },
+        {
+          "p": "las",
+          "i": 400.1,
+          "f": 400.24
+        },
+        {
+          "p": "retiradas.",
+          "i": 400.24,
+          "f": 400.7
+        }
+      ]
+    },
+    {
+      "id": "fr65",
+      "texto": "Ese día, el bitcoin cayó más de un cuatro por ciento.",
+      "inicio": 401.3,
+      "fin": 403.82,
+      "palabras": [
+        {
+          "p": "Ese",
+          "i": 401.3,
+          "f": 401.82
+        },
+        {
+          "p": "día,",
+          "i": 401.82,
+          "f": 402.04
+        },
+        {
+          "p": "el",
+          "i": 402.2,
+          "f": 402.22
+        },
+        {
+          "p": "bitcoin",
+          "i": 402.22,
+          "f": 402.44
+        },
+        {
+          "p": "cayó",
+          "i": 402.44,
+          "f": 402.8
+        },
+        {
+          "p": "más",
+          "i": 402.8,
+          "f": 402.94
+        },
+        {
+          "p": "de",
+          "i": 402.94,
+          "f": 403.04
+        },
+        {
+          "p": "un",
+          "i": 403.04,
+          "f": 403.12
+        },
+        {
+          "p": "cuatro",
+          "i": 403.12,
+          "f": 403.353
+        },
+        {
+          "p": "por",
+          "i": 403.353,
+          "f": 403.587
+        },
+        {
+          "p": "ciento.",
+          "i": 403.587,
+          "f": 403.82
+        }
+      ]
+    },
+    {
+      "id": "fr66",
+      "texto": "No robaron las claves: se colaron en el propio sistema que firma las retiradas.",
+      "inicio": 404.46,
+      "fin": 408.78,
+      "palabras": [
+        {
+          "p": "No",
+          "i": 404.46,
+          "f": 404.98
+        },
+        {
+          "p": "robaron",
+          "i": 404.98,
+          "f": 405.3
+        },
+        {
+          "p": "las",
+          "i": 405.3,
+          "f": 405.44
+        },
+        {
+          "p": "claves:",
+          "i": 405.44,
+          "f": 405.72
+        },
+        {
+          "p": "se",
+          "i": 405.92,
+          "f": 406.26
+        },
+        {
+          "p": "colaron",
+          "i": 406.26,
+          "f": 406.66
+        },
+        {
+          "p": "en",
+          "i": 406.66,
+          "f": 406.9
+        },
+        {
+          "p": "el",
+          "i": 406.9,
+          "f": 407.04
+        },
+        {
+          "p": "propio",
+          "i": 407.04,
+          "f": 407.34
+        },
+        {
+          "p": "sistema",
+          "i": 407.34,
+          "f": 407.7
+        },
+        {
+          "p": "que",
+          "i": 407.7,
+          "f": 407.88
+        },
+        {
+          "p": "firma",
+          "i": 407.88,
+          "f": 408.14
+        },
+        {
+          "p": "las",
+          "i": 408.14,
+          "f": 408.3
+        },
+        {
+          "p": "retiradas.",
+          "i": 408.3,
+          "f": 408.78
+        }
+      ]
+    },
+    {
+      "id": "fr67",
+      "texto": "Su jefe lo resumió así: no fue un error, fue una campaña de meses.",
+      "inicio": 409.16,
+      "fin": 413.52,
+      "palabras": [
+        {
+          "p": "Su",
+          "i": 409.16,
+          "f": 409.68
+        },
+        {
+          "p": "jefe",
+          "i": 409.68,
+          "f": 409.98
+        },
+        {
+          "p": "lo",
+          "i": 409.98,
+          "f": 410.26
+        },
+        {
+          "p": "resumió",
+          "i": 410.26,
+          "f": 410.62
+        },
+        {
+          "p": "así:",
+          "i": 410.62,
+          "f": 410.82
+        },
+        {
+          "p": "no",
+          "i": 411.06,
+          "f": 411.44
+        },
+        {
+          "p": "fue",
+          "i": 411.44,
+          "f": 411.6
+        },
+        {
+          "p": "un",
+          "i": 411.6,
+          "f": 411.74
+        },
+        {
+          "p": "error,",
+          "i": 411.74,
+          "f": 411.92
+        },
+        {
+          "p": "fue",
+          "i": 412.12,
+          "f": 412.48
+        },
+        {
+          "p": "una",
+          "i": 412.48,
+          "f": 412.64
+        },
+        {
+          "p": "campaña",
+          "i": 412.64,
+          "f": 413.12
+        },
+        {
+          "p": "de",
+          "i": 413.12,
+          "f": 413.26
+        },
+        {
+          "p": "meses.",
+          "i": 413.26,
+          "f": 413.52
+        }
+      ]
+    },
+    {
+      "id": "fr68",
+      "texto": "Se han congelado casi tres mil millones, y Binance ha repuesto el noventa y ocho por ciento con sus reservas.",
+      "inicio": 413.9,
+      "fin": 419.52,
+      "palabras": [
+        {
+          "p": "Se",
+          "i": 413.9,
+          "f": 414.3
+        },
+        {
+          "p": "han",
+          "i": 414.3,
+          "f": 414.4
+        },
+        {
+          "p": "congelado",
+          "i": 414.4,
+          "f": 414.8
+        },
+        {
+          "p": "casi",
+          "i": 414.8,
+          "f": 415.06
+        },
+        {
+          "p": "tres",
+          "i": 415.06,
+          "f": 415.35
+        },
+        {
+          "p": "mil",
+          "i": 415.35,
+          "f": 415.64
+        },
+        {
+          "p": "millones,",
+          "i": 415.64,
+          "f": 415.98
+        },
+        {
+          "p": "y",
+          "i": 416.26,
+          "f": 416.64
+        },
+        {
+          "p": "Binance",
+          "i": 416.64,
+          "f": 417.06
+        },
+        {
+          "p": "ha",
+          "i": 417.06,
+          "f": 417.26
+        },
+        {
+          "p": "repuesto",
+          "i": 417.26,
+          "f": 417.6
+        },
+        {
+          "p": "el",
+          "i": 417.6,
+          "f": 417.72
+        },
+        {
+          "p": "noventa",
+          "i": 417.72,
+          "f": 417.876
+        },
+        {
+          "p": "y",
+          "i": 417.876,
+          "f": 418.032
+        },
+        {
+          "p": "ocho",
+          "i": 418.032,
+          "f": 418.188
+        },
+        {
+          "p": "por",
+          "i": 418.188,
+          "f": 418.344
+        },
+        {
+          "p": "ciento",
+          "i": 418.344,
+          "f": 418.5
+        },
+        {
+          "p": "con",
+          "i": 418.5,
+          "f": 418.86
+        },
+        {
+          "p": "sus",
+          "i": 418.86,
+          "f": 419.04
+        },
+        {
+          "p": "reservas.",
+          "i": 419.04,
+          "f": 419.52
+        }
+      ]
+    },
+    {
+      "id": "fr69",
+      "texto": "La puerta fue una persona. Y el puente, una herramienta de IA.",
+      "inicio": 419.76,
+      "fin": 423.26,
+      "palabras": [
+        {
+          "p": "La",
+          "i": 419.76,
+          "f": 420.2
+        },
+        {
+          "p": "puerta",
+          "i": 420.2,
+          "f": 420.5
+        },
+        {
+          "p": "fue",
+          "i": 420.5,
+          "f": 420.72
+        },
+        {
+          "p": "una",
+          "i": 420.72,
+          "f": 420.88
+        },
+        {
+          "p": "persona.",
+          "i": 420.88,
+          "f": 421.2
+        },
+        {
+          "p": "Y",
+          "i": 421.4,
+          "f": 421.76
+        },
+        {
+          "p": "el",
+          "i": 421.76,
+          "f": 421.86
+        },
+        {
+          "p": "puente,",
+          "i": 421.86,
+          "f": 422.16
+        },
+        {
+          "p": "una",
+          "i": 422.42,
+          "f": 422.48
+        },
+        {
+          "p": "herramienta",
+          "i": 422.48,
+          "f": 422.96
+        },
+        {
+          "p": "de",
+          "i": 422.96,
+          "f": 423.06
+        },
+        {
+          "p": "IA.",
+          "i": 423.06,
+          "f": 423.26
+        }
+      ]
+    },
+    {
+      "id": "fr70",
+      "texto": "Mientras tanto, hay cosas que ya están cambiando.",
+      "inicio": 424.22,
+      "fin": 426.54,
+      "palabras": [
+        {
+          "p": "Mientras",
+          "i": 424.22,
+          "f": 424.74
+        },
+        {
+          "p": "tanto,",
+          "i": 424.74,
+          "f": 425.08
+        },
+        {
+          "p": "hay",
+          "i": 425.12,
+          "f": 425.26
+        },
+        {
+          "p": "cosas",
+          "i": 425.26,
+          "f": 425.5
+        },
+        {
+          "p": "que",
+          "i": 425.5,
+          "f": 425.72
+        },
+        {
+          "p": "ya",
+          "i": 425.72,
+          "f": 425.86
+        },
+        {
+          "p": "están",
+          "i": 425.86,
+          "f": 426.06
+        },
+        {
+          "p": "cambiando.",
+          "i": 426.06,
+          "f": 426.54
+        }
+      ]
+    },
+    {
+      "id": "fr71",
+      "texto": "Reddit dice que, en octubre, le llegaba de media más de un millón de visitas menos a la semana desde los buscadores.",
+      "inicio": 427.01,
+      "fin": 432.42,
+      "palabras": [
+        {
+          "p": "Reddit",
+          "i": 427.01,
+          "f": 427.26
+        },
+        {
+          "p": "dice",
+          "i": 427.26,
+          "f": 427.6
+        },
+        {
+          "p": "que,",
+          "i": 427.6,
+          "f": 427.76
+        },
+        {
+          "p": "en",
+          "i": 427.76,
+          "f": 427.9
+        },
+        {
+          "p": "octubre,",
+          "i": 427.9,
+          "f": 428.4
+        },
+        {
+          "p": "le",
+          "i": 428.4,
+          "f": 428.68
+        },
+        {
+          "p": "llegaba",
+          "i": 428.68,
+          "f": 429
+        },
+        {
+          "p": "de",
+          "i": 429,
+          "f": 429.12
+        },
+        {
+          "p": "media",
+          "i": 429.12,
+          "f": 429.38
+        },
+        {
+          "p": "más",
+          "i": 429.38,
+          "f": 429.64
+        },
+        {
+          "p": "de",
+          "i": 429.64,
+          "f": 429.76
+        },
+        {
+          "p": "un",
+          "i": 429.76,
+          "f": 429.84
+        },
+        {
+          "p": "millón",
+          "i": 429.84,
+          "f": 430.08
+        },
+        {
+          "p": "de",
+          "i": 430.08,
+          "f": 430.18
+        },
+        {
+          "p": "visitas",
+          "i": 430.18,
+          "f": 430.64
+        },
+        {
+          "p": "menos",
+          "i": 430.64,
+          "f": 430.96
+        },
+        {
+          "p": "a",
+          "i": 430.96,
+          "f": 431.14
+        },
+        {
+          "p": "la",
+          "i": 431.14,
+          "f": 431.22
+        },
+        {
+          "p": "semana",
+          "i": 431.22,
+          "f": 431.52
+        },
+        {
+          "p": "desde",
+          "i": 431.52,
+          "f": 431.76
+        },
+        {
+          "p": "los",
+          "i": 431.76,
+          "f": 431.96
+        },
+        {
+          "p": "buscadores.",
+          "i": 431.96,
+          "f": 432.42
+        }
+      ]
+    },
+    {
+      "id": "fr72",
+      "texto": "Y su jefe culpa al modo IA de Google: dice que no manda visitas. Ni a ellos, ni a nadie que él conozca.",
+      "inicio": 432.7,
+      "fin": 438.58,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 432.7,
+          "f": 433.14
+        },
+        {
+          "p": "su",
+          "i": 433.14,
+          "f": 433.28
+        },
+        {
+          "p": "jefe",
+          "i": 433.28,
+          "f": 433.56
+        },
+        {
+          "p": "culpa",
+          "i": 433.56,
+          "f": 433.9
+        },
+        {
+          "p": "al",
+          "i": 433.9,
+          "f": 434.04
+        },
+        {
+          "p": "modo",
+          "i": 434.04,
+          "f": 434.22
+        },
+        {
+          "p": "IA",
+          "i": 434.22,
+          "f": 434.44
+        },
+        {
+          "p": "de",
+          "i": 434.44,
+          "f": 434.54
+        },
+        {
+          "p": "Google:",
+          "i": 434.54,
+          "f": 434.8
+        },
+        {
+          "p": "dice",
+          "i": 435.08,
+          "f": 435.28
+        },
+        {
+          "p": "que",
+          "i": 435.28,
+          "f": 435.4
+        },
+        {
+          "p": "no",
+          "i": 435.4,
+          "f": 435.52
+        },
+        {
+          "p": "manda",
+          "i": 435.52,
+          "f": 435.74
+        },
+        {
+          "p": "visitas.",
+          "i": 435.74,
+          "f": 436.18
+        },
+        {
+          "p": "Ni",
+          "i": 436.32,
+          "f": 436.68
+        },
+        {
+          "p": "a",
+          "i": 436.68,
+          "f": 436.76
+        },
+        {
+          "p": "ellos,",
+          "i": 436.76,
+          "f": 437.06
+        },
+        {
+          "p": "ni",
+          "i": 437.18,
+          "f": 437.56
+        },
+        {
+          "p": "a",
+          "i": 437.56,
+          "f": 437.7
+        },
+        {
+          "p": "nadie",
+          "i": 437.7,
+          "f": 437.96
+        },
+        {
+          "p": "que",
+          "i": 437.96,
+          "f": 438.12
+        },
+        {
+          "p": "él",
+          "i": 438.12,
+          "f": 438.2
+        },
+        {
+          "p": "conozca.",
+          "i": 438.2,
+          "f": 438.58
+        }
+      ]
+    },
+    {
+      "id": "fr73",
+      "texto": "En Estados Unidos, sus usuarios diarios bajaron un dos por ciento, aunque en el mundo siguen creciendo.",
+      "inicio": 438.98,
+      "fin": 443.54,
+      "palabras": [
+        {
+          "p": "En",
+          "i": 438.98,
+          "f": 439.4
+        },
+        {
+          "p": "Estados",
+          "i": 439.4,
+          "f": 439.6
+        },
+        {
+          "p": "Unidos,",
+          "i": 439.6,
+          "f": 439.92
+        },
+        {
+          "p": "sus",
+          "i": 440.04,
+          "f": 440.12
+        },
+        {
+          "p": "usuarios",
+          "i": 440.12,
+          "f": 440.56
+        },
+        {
+          "p": "diarios",
+          "i": 440.56,
+          "f": 440.9
+        },
+        {
+          "p": "bajaron",
+          "i": 440.9,
+          "f": 441.28
+        },
+        {
+          "p": "un",
+          "i": 441.28,
+          "f": 441.42
+        },
+        {
+          "p": "dos",
+          "i": 441.42,
+          "f": 441.607
+        },
+        {
+          "p": "por",
+          "i": 441.607,
+          "f": 441.793
+        },
+        {
+          "p": "ciento,",
+          "i": 441.793,
+          "f": 441.98
+        },
+        {
+          "p": "aunque",
+          "i": 441.98,
+          "f": 442.52
+        },
+        {
+          "p": "en",
+          "i": 442.52,
+          "f": 442.64
+        },
+        {
+          "p": "el",
+          "i": 442.64,
+          "f": 442.72
+        },
+        {
+          "p": "mundo",
+          "i": 442.72,
+          "f": 442.88
+        },
+        {
+          "p": "siguen",
+          "i": 442.88,
+          "f": 443.16
+        },
+        {
+          "p": "creciendo.",
+          "i": 443.16,
+          "f": 443.54
+        }
+      ]
+    },
+    {
+      "id": "fr74",
+      "texto": "Sus acciones cayeron un 29 % en un día, el peor desde que salió a bolsa. Aunque sus ingresos crecieron un 53 %.",
+      "inicio": 443.9,
+      "fin": 452.24,
+      "palabras": [
+        {
+          "p": "Sus",
+          "i": 443.9,
+          "f": 444.3
+        },
+        {
+          "p": "acciones",
+          "i": 444.3,
+          "f": 444.68
+        },
+        {
+          "p": "cayeron",
+          "i": 444.68,
+          "f": 445.24
+        },
+        {
+          "p": "un",
+          "i": 445.24,
+          "f": 445.38
+        },
+        {
+          "p": "29 %",
+          "i": 445.38,
+          "f": 446.46
+        },
+        {
+          "p": "en",
+          "i": 446.46,
+          "f": 446.78
+        },
+        {
+          "p": "un",
+          "i": 446.78,
+          "f": 446.88
+        },
+        {
+          "p": "día,",
+          "i": 446.88,
+          "f": 447.06
+        },
+        {
+          "p": "el",
+          "i": 447.3,
+          "f": 447.54
+        },
+        {
+          "p": "peor",
+          "i": 447.54,
+          "f": 447.82
+        },
+        {
+          "p": "desde",
+          "i": 447.82,
+          "f": 447.98
+        },
+        {
+          "p": "que",
+          "i": 447.98,
+          "f": 448.12
+        },
+        {
+          "p": "salió",
+          "i": 448.12,
+          "f": 448.36
+        },
+        {
+          "p": "a",
+          "i": 448.36,
+          "f": 448.44
+        },
+        {
+          "p": "bolsa.",
+          "i": 448.44,
+          "f": 448.72
+        },
+        {
+          "p": "Aunque",
+          "i": 449.04,
+          "f": 449.28
+        },
+        {
+          "p": "sus",
+          "i": 449.28,
+          "f": 449.44
+        },
+        {
+          "p": "ingresos",
+          "i": 449.44,
+          "f": 449.82
+        },
+        {
+          "p": "crecieron",
+          "i": 449.82,
+          "f": 450.22
+        },
+        {
+          "p": "un",
+          "i": 450.22,
+          "f": 450.34
+        },
+        {
+          "p": "53 %.",
+          "i": 450.34,
+          "f": 452.24
+        }
+      ]
+    },
+    {
+      "id": "fr75",
+      "texto": "Stack Overflow, la web donde los programadores se resolvían las dudas, recibió en septiembre 969 preguntas. En marzo de 2014 recibía unas 207.000.",
+      "inicio": 452.24,
+      "fin": 462.96,
+      "palabras": [
+        {
+          "p": "Stack Overflow,",
+          "i": 452.24,
+          "f": 453
+        },
+        {
+          "p": "la",
+          "i": 453.2,
+          "f": 453.34
+        },
+        {
+          "p": "web",
+          "i": 453.34,
+          "f": 453.52
+        },
+        {
+          "p": "donde",
+          "i": 453.52,
+          "f": 453.72
+        },
+        {
+          "p": "los",
+          "i": 453.72,
+          "f": 453.94
+        },
+        {
+          "p": "programadores",
+          "i": 453.94,
+          "f": 454.5
+        },
+        {
+          "p": "se",
+          "i": 454.5,
+          "f": 454.68
+        },
+        {
+          "p": "resolvían",
+          "i": 454.68,
+          "f": 455.06
+        },
+        {
+          "p": "las",
+          "i": 455.06,
+          "f": 455.24
+        },
+        {
+          "p": "dudas,",
+          "i": 455.24,
+          "f": 455.56
+        },
+        {
+          "p": "recibió",
+          "i": 455.56,
+          "f": 456.34
+        },
+        {
+          "p": "en",
+          "i": 456.34,
+          "f": 456.4
+        },
+        {
+          "p": "septiembre",
+          "i": 456.4,
+          "f": 456.86
+        },
+        {
+          "p": "969",
+          "i": 456.86,
+          "f": 458.34
+        },
+        {
+          "p": "preguntas.",
+          "i": 458.34,
+          "f": 458.9
+        },
+        {
+          "p": "En",
+          "i": 459.28,
+          "f": 459.8
+        },
+        {
+          "p": "marzo",
+          "i": 459.8,
+          "f": 460.12
+        },
+        {
+          "p": "de",
+          "i": 460.12,
+          "f": 460.24
+        },
+        {
+          "p": "2014",
+          "i": 460.24,
+          "f": 460.78
+        },
+        {
+          "p": "recibía",
+          "i": 461.26,
+          "f": 461.54
+        },
+        {
+          "p": "unas",
+          "i": 461.54,
+          "f": 461.76
+        },
+        {
+          "p": "207.000.",
+          "i": 461.76,
+          "f": 462.96
+        }
+      ]
+    },
+    {
+      "id": "fr76",
+      "texto": "Parte de la culpa, dicen sus usuarios, es de una moderación muy estricta. Pero la caída es brutal.",
+      "inicio": 463.36,
+      "fin": 468.74,
+      "palabras": [
+        {
+          "p": "Parte",
+          "i": 463.36,
+          "f": 463.88
+        },
+        {
+          "p": "de",
+          "i": 463.88,
+          "f": 464
+        },
+        {
+          "p": "la",
+          "i": 464,
+          "f": 464.08
+        },
+        {
+          "p": "culpa,",
+          "i": 464.08,
+          "f": 464.34
+        },
+        {
+          "p": "dicen",
+          "i": 464.58,
+          "f": 464.78
+        },
+        {
+          "p": "sus",
+          "i": 464.78,
+          "f": 465
+        },
+        {
+          "p": "usuarios,",
+          "i": 465,
+          "f": 465.4
+        },
+        {
+          "p": "es",
+          "i": 465.64,
+          "f": 465.8
+        },
+        {
+          "p": "de",
+          "i": 465.8,
+          "f": 465.9
+        },
+        {
+          "p": "una",
+          "i": 465.9,
+          "f": 466.02
+        },
+        {
+          "p": "moderación",
+          "i": 466.02,
+          "f": 466.52
+        },
+        {
+          "p": "muy",
+          "i": 466.52,
+          "f": 466.74
+        },
+        {
+          "p": "estricta.",
+          "i": 466.74,
+          "f": 467.24
+        },
+        {
+          "p": "Pero",
+          "i": 467.36,
+          "f": 467.66
+        },
+        {
+          "p": "la",
+          "i": 467.66,
+          "f": 467.8
+        },
+        {
+          "p": "caída",
+          "i": 467.8,
+          "f": 468.06
+        },
+        {
+          "p": "es",
+          "i": 468.06,
+          "f": 468.26
+        },
+        {
+          "p": "brutal.",
+          "i": 468.26,
+          "f": 468.74
+        }
+      ]
+    },
+    {
+      "id": "fr77",
+      "texto": "Y aquí viene la paradoja: la IA aprendió de Stack Overflow y de Reddit. Ahora contesta en su lugar. ¿De quién aprenderá la siguiente?",
+      "inicio": 469.2,
+      "fin": 475.7,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 469.2,
+          "f": 469.52
+        },
+        {
+          "p": "aquí",
+          "i": 469.52,
+          "f": 469.62
+        },
+        {
+          "p": "viene",
+          "i": 469.62,
+          "f": 469.8
+        },
+        {
+          "p": "la",
+          "i": 469.8,
+          "f": 469.92
+        },
+        {
+          "p": "paradoja:",
+          "i": 469.92,
+          "f": 470.36
+        },
+        {
+          "p": "la",
+          "i": 470.68,
+          "f": 470.84
+        },
+        {
+          "p": "IA",
+          "i": 470.84,
+          "f": 471.04
+        },
+        {
+          "p": "aprendió",
+          "i": 471.04,
+          "f": 471.44
+        },
+        {
+          "p": "de",
+          "i": 471.44,
+          "f": 471.56
+        },
+        {
+          "p": "Stack Overflow",
+          "i": 471.56,
+          "f": 472.16
+        },
+        {
+          "p": "y",
+          "i": 472.16,
+          "f": 472.28
+        },
+        {
+          "p": "de",
+          "i": 472.28,
+          "f": 472.36
+        },
+        {
+          "p": "Reddit.",
+          "i": 472.36,
+          "f": 472.58
+        },
+        {
+          "p": "Ahora",
+          "i": 472.9,
+          "f": 473.14
+        },
+        {
+          "p": "contesta",
+          "i": 473.14,
+          "f": 473.54
+        },
+        {
+          "p": "en",
+          "i": 473.54,
+          "f": 473.62
+        },
+        {
+          "p": "su",
+          "i": 473.62,
+          "f": 473.7
+        },
+        {
+          "p": "lugar.",
+          "i": 473.7,
+          "f": 473.96
+        },
+        {
+          "p": "¿De",
+          "i": 474.36,
+          "f": 474.74
+        },
+        {
+          "p": "quién",
+          "i": 474.74,
+          "f": 474.96
+        },
+        {
+          "p": "aprenderá",
+          "i": 474.96,
+          "f": 475.38
+        },
+        {
+          "p": "la",
+          "i": 475.38,
+          "f": 475.48
+        },
+        {
+          "p": "siguiente?",
+          "i": 475.48,
+          "f": 475.7
+        }
+      ]
+    },
+    {
+      "id": "fr78",
+      "texto": "Y Microsoft ofrece una baja voluntaria a sesenta mil empleados. Ojo: no es que se vayan sesenta mil. Son sesenta mil los que pueden pedirla, el 27 % de la plantilla. Tienen hasta principios de diciembre para decidir.",
+      "inicio": 476.46,
+      "fin": 489.26,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 476.46,
+          "f": 476.98
+        },
+        {
+          "p": "Microsoft",
+          "i": 476.98,
+          "f": 477.5
+        },
+        {
+          "p": "ofrece",
+          "i": 477.5,
+          "f": 477.94
+        },
+        {
+          "p": "una",
+          "i": 477.94,
+          "f": 478.1
+        },
+        {
+          "p": "baja",
+          "i": 478.1,
+          "f": 478.32
+        },
+        {
+          "p": "voluntaria",
+          "i": 478.32,
+          "f": 478.84
+        },
+        {
+          "p": "a",
+          "i": 478.84,
+          "f": 479.06
+        },
+        {
+          "p": "sesenta",
+          "i": 479.06,
+          "f": 479.44
+        },
+        {
+          "p": "mil",
+          "i": 479.44,
+          "f": 479.82
+        },
+        {
+          "p": "empleados.",
+          "i": 479.82,
+          "f": 480.4
+        },
+        {
+          "p": "Ojo:",
+          "i": 480.4,
+          "f": 481
+        },
+        {
+          "p": "no",
+          "i": 481.16,
+          "f": 481.3
+        },
+        {
+          "p": "es",
+          "i": 481.3,
+          "f": 481.46
+        },
+        {
+          "p": "que",
+          "i": 481.46,
+          "f": 481.56
+        },
+        {
+          "p": "se",
+          "i": 481.56,
+          "f": 481.72
+        },
+        {
+          "p": "vayan",
+          "i": 481.72,
+          "f": 481.94
+        },
+        {
+          "p": "sesenta",
+          "i": 481.94,
+          "f": 482.2
+        },
+        {
+          "p": "mil.",
+          "i": 482.2,
+          "f": 482.46
+        },
+        {
+          "p": "Son",
+          "i": 482.72,
+          "f": 483.04
+        },
+        {
+          "p": "sesenta",
+          "i": 483.04,
+          "f": 483.41
+        },
+        {
+          "p": "mil",
+          "i": 483.41,
+          "f": 483.78
+        },
+        {
+          "p": "los",
+          "i": 483.78,
+          "f": 483.96
+        },
+        {
+          "p": "que",
+          "i": 483.96,
+          "f": 484.1
+        },
+        {
+          "p": "pueden",
+          "i": 484.1,
+          "f": 484.36
+        },
+        {
+          "p": "pedirla,",
+          "i": 484.36,
+          "f": 484.78
+        },
+        {
+          "p": "el",
+          "i": 484.92,
+          "f": 485.18
+        },
+        {
+          "p": "27 %",
+          "i": 485.18,
+          "f": 485.92
+        },
+        {
+          "p": "de",
+          "i": 485.92,
+          "f": 486.16
+        },
+        {
+          "p": "la",
+          "i": 486.16,
+          "f": 486.26
+        },
+        {
+          "p": "plantilla.",
+          "i": 486.26,
+          "f": 486.66
+        },
+        {
+          "p": "Tienen",
+          "i": 487.02,
+          "f": 487.54
+        },
+        {
+          "p": "hasta",
+          "i": 487.54,
+          "f": 487.72
+        },
+        {
+          "p": "principios",
+          "i": 487.72,
+          "f": 488.16
+        },
+        {
+          "p": "de",
+          "i": 488.16,
+          "f": 488.28
+        },
+        {
+          "p": "diciembre",
+          "i": 488.28,
+          "f": 488.6
+        },
+        {
+          "p": "para",
+          "i": 488.6,
+          "f": 488.8
+        },
+        {
+          "p": "decidir.",
+          "i": 488.8,
+          "f": 489.26
+        }
+      ]
+    },
+    {
+      "id": "fr79",
+      "texto": "¿El motivo? Equilibrar lo carísimo que le está saliendo construir infraestructura para la IA.",
+      "inicio": 489.54,
+      "fin": 494.02,
+      "palabras": [
+        {
+          "p": "¿El",
+          "i": 489.54,
+          "f": 489.9
+        },
+        {
+          "p": "motivo?",
+          "i": 489.9,
+          "f": 490.22
+        },
+        {
+          "p": "Equilibrar",
+          "i": 490.4,
+          "f": 491.16
+        },
+        {
+          "p": "lo",
+          "i": 491.16,
+          "f": 491.3
+        },
+        {
+          "p": "carísimo",
+          "i": 491.3,
+          "f": 491.74
+        },
+        {
+          "p": "que",
+          "i": 491.74,
+          "f": 491.88
+        },
+        {
+          "p": "le",
+          "i": 491.88,
+          "f": 491.94
+        },
+        {
+          "p": "está",
+          "i": 491.94,
+          "f": 492.06
+        },
+        {
+          "p": "saliendo",
+          "i": 492.06,
+          "f": 492.44
+        },
+        {
+          "p": "construir",
+          "i": 492.44,
+          "f": 492.84
+        },
+        {
+          "p": "infraestructura",
+          "i": 492.84,
+          "f": 493.52
+        },
+        {
+          "p": "para",
+          "i": 493.52,
+          "f": 493.7
+        },
+        {
+          "p": "la",
+          "i": 493.7,
+          "f": 493.84
+        },
+        {
+          "p": "IA.",
+          "i": 493.84,
+          "f": 494.02
+        }
+      ]
+    },
+    {
+      "id": "fr80",
+      "texto": "Y la última pregunta: ¿cómo vamos a hablar con los agentes?",
+      "inicio": 494.9,
+      "fin": 498.16,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 494.9,
+          "f": 495.4
+        },
+        {
+          "p": "la",
+          "i": 495.4,
+          "f": 495.56
+        },
+        {
+          "p": "última",
+          "i": 495.56,
+          "f": 495.82
+        },
+        {
+          "p": "pregunta:",
+          "i": 495.82,
+          "f": 496.26
+        },
+        {
+          "p": "¿cómo",
+          "i": 496.5,
+          "f": 496.96
+        },
+        {
+          "p": "vamos",
+          "i": 496.96,
+          "f": 497.22
+        },
+        {
+          "p": "a",
+          "i": 497.22,
+          "f": 497.34
+        },
+        {
+          "p": "hablar",
+          "i": 497.34,
+          "f": 497.5
+        },
+        {
+          "p": "con",
+          "i": 497.5,
+          "f": 497.64
+        },
+        {
+          "p": "los",
+          "i": 497.64,
+          "f": 497.78
+        },
+        {
+          "p": "agentes?",
+          "i": 497.78,
+          "f": 498.16
+        }
+      ]
+    },
+    {
+      "id": "fr81",
+      "texto": "Subvocal, una startup de Y Combinator, hace unas gafas que convierten en texto lo que dices sin emitir sonido. No leen tus labios: usan un radar en la montura.",
+      "inicio": 498.84,
+      "fin": 507.9,
+      "palabras": [
+        {
+          "p": "Subvocal,",
+          "i": 498.84,
+          "f": 499.36
+        },
+        {
+          "p": "una",
+          "i": 499.6,
+          "f": 499.76
+        },
+        {
+          "p": "startup",
+          "i": 499.76,
+          "f": 500.08
+        },
+        {
+          "p": "de",
+          "i": 500.08,
+          "f": 500.28
+        },
+        {
+          "p": "Y Combinator,",
+          "i": 500.28,
+          "f": 501.1
+        },
+        {
+          "p": "hace",
+          "i": 501.32,
+          "f": 501.7
+        },
+        {
+          "p": "unas",
+          "i": 501.7,
+          "f": 501.9
+        },
+        {
+          "p": "gafas",
+          "i": 501.9,
+          "f": 502.26
+        },
+        {
+          "p": "que",
+          "i": 502.26,
+          "f": 502.38
+        },
+        {
+          "p": "convierten",
+          "i": 502.38,
+          "f": 502.86
+        },
+        {
+          "p": "en",
+          "i": 502.86,
+          "f": 503.06
+        },
+        {
+          "p": "texto",
+          "i": 503.06,
+          "f": 503.34
+        },
+        {
+          "p": "lo",
+          "i": 503.34,
+          "f": 503.48
+        },
+        {
+          "p": "que",
+          "i": 503.48,
+          "f": 503.6
+        },
+        {
+          "p": "dices",
+          "i": 503.6,
+          "f": 503.9
+        },
+        {
+          "p": "sin",
+          "i": 503.9,
+          "f": 504.26
+        },
+        {
+          "p": "emitir",
+          "i": 504.26,
+          "f": 504.62
+        },
+        {
+          "p": "sonido.",
+          "i": 504.62,
+          "f": 505
+        },
+        {
+          "p": "No",
+          "i": 505,
+          "f": 505.52
+        },
+        {
+          "p": "leen",
+          "i": 505.52,
+          "f": 505.8
+        },
+        {
+          "p": "tus",
+          "i": 505.8,
+          "f": 505.94
+        },
+        {
+          "p": "labios:",
+          "i": 505.94,
+          "f": 506.3
+        },
+        {
+          "p": "usan",
+          "i": 506.52,
+          "f": 506.86
+        },
+        {
+          "p": "un",
+          "i": 506.86,
+          "f": 507.02
+        },
+        {
+          "p": "radar",
+          "i": 507.02,
+          "f": 507.32
+        },
+        {
+          "p": "en",
+          "i": 507.32,
+          "f": 507.52
+        },
+        {
+          "p": "la",
+          "i": 507.52,
+          "f": 507.54
+        },
+        {
+          "p": "montura.",
+          "i": 507.54,
+          "f": 507.9
+        }
+      ]
+    },
+    {
+      "id": "fr82",
+      "texto": "Han levantado un millón trescientos mil dólares.",
+      "inicio": 508.14,
+      "fin": 510.48,
+      "palabras": [
+        {
+          "p": "Han",
+          "i": 508.14,
+          "f": 508.52
+        },
+        {
+          "p": "levantado",
+          "i": 508.52,
+          "f": 508.96
+        },
+        {
+          "p": "un",
+          "i": 508.96,
+          "f": 509.265
+        },
+        {
+          "p": "millón",
+          "i": 509.265,
+          "f": 509.57
+        },
+        {
+          "p": "trescientos",
+          "i": 509.57,
+          "f": 509.875
+        },
+        {
+          "p": "mil",
+          "i": 509.875,
+          "f": 510.18
+        },
+        {
+          "p": "dólares.",
+          "i": 510.18,
+          "f": 510.48
+        }
+      ]
+    },
+    {
+      "id": "fr83",
+      "texto": "Y un desarrollador hizo una versión gratis en unos nueve minutos, con un solo prompt y unos AirPods Pro, que notan cómo mueves la mandíbula.",
+      "inicio": 510.78,
+      "fin": 518.6,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 510.78,
+          "f": 511.32
+        },
+        {
+          "p": "un",
+          "i": 511.32,
+          "f": 511.44
+        },
+        {
+          "p": "desarrollador",
+          "i": 511.44,
+          "f": 511.98
+        },
+        {
+          "p": "hizo",
+          "i": 511.98,
+          "f": 512.36
+        },
+        {
+          "p": "una",
+          "i": 512.36,
+          "f": 512.5
+        },
+        {
+          "p": "versión",
+          "i": 512.5,
+          "f": 512.78
+        },
+        {
+          "p": "gratis",
+          "i": 512.78,
+          "f": 513.28
+        },
+        {
+          "p": "en",
+          "i": 513.28,
+          "f": 513.48
+        },
+        {
+          "p": "unos",
+          "i": 513.48,
+          "f": 513.7
+        },
+        {
+          "p": "nueve",
+          "i": 513.7,
+          "f": 513.9
+        },
+        {
+          "p": "minutos,",
+          "i": 513.9,
+          "f": 514.28
+        },
+        {
+          "p": "con",
+          "i": 514.28,
+          "f": 514.92
+        },
+        {
+          "p": "un",
+          "i": 514.92,
+          "f": 515.16
+        },
+        {
+          "p": "solo",
+          "i": 515.16,
+          "f": 515.46
+        },
+        {
+          "p": "prompt",
+          "i": 515.46,
+          "f": 515.72
+        },
+        {
+          "p": "y",
+          "i": 515.72,
+          "f": 516.02
+        },
+        {
+          "p": "unos",
+          "i": 516.02,
+          "f": 516.24
+        },
+        {
+          "p": "AirPods Pro,",
+          "i": 516.24,
+          "f": 516.76
+        },
+        {
+          "p": "que",
+          "i": 517.02,
+          "f": 517.24
+        },
+        {
+          "p": "notan",
+          "i": 517.24,
+          "f": 517.54
+        },
+        {
+          "p": "cómo",
+          "i": 517.54,
+          "f": 517.78
+        },
+        {
+          "p": "mueves",
+          "i": 517.78,
+          "f": 518.08
+        },
+        {
+          "p": "la",
+          "i": 518.08,
+          "f": 518.18
+        },
+        {
+          "p": "mandíbula.",
+          "i": 518.18,
+          "f": 518.6
+        }
+      ]
+    },
+    {
+      "id": "fr84",
+      "texto": "Pero no hacen lo mismo: la copia solo reconoce las pocas palabras que le enseñas.",
+      "inicio": 518.82,
+      "fin": 522.86,
+      "palabras": [
+        {
+          "p": "Pero",
+          "i": 518.82,
+          "f": 519.24
+        },
+        {
+          "p": "no",
+          "i": 519.24,
+          "f": 519.36
+        },
+        {
+          "p": "hacen",
+          "i": 519.36,
+          "f": 519.48
+        },
+        {
+          "p": "lo",
+          "i": 519.48,
+          "f": 519.58
+        },
+        {
+          "p": "mismo:",
+          "i": 519.58,
+          "f": 519.8
+        },
+        {
+          "p": "la",
+          "i": 520.08,
+          "f": 520.44
+        },
+        {
+          "p": "copia",
+          "i": 520.44,
+          "f": 520.7
+        },
+        {
+          "p": "solo",
+          "i": 520.7,
+          "f": 521.08
+        },
+        {
+          "p": "reconoce",
+          "i": 521.08,
+          "f": 521.52
+        },
+        {
+          "p": "las",
+          "i": 521.52,
+          "f": 521.68
+        },
+        {
+          "p": "pocas",
+          "i": 521.68,
+          "f": 521.94
+        },
+        {
+          "p": "palabras",
+          "i": 521.94,
+          "f": 522.22
+        },
+        {
+          "p": "que",
+          "i": 522.22,
+          "f": 522.36
+        },
+        {
+          "p": "le",
+          "i": 522.36,
+          "f": 522.46
+        },
+        {
+          "p": "enseñas.",
+          "i": 522.46,
+          "f": 522.86
+        }
+      ]
+    },
+    {
+      "id": "fr85",
+      "texto": "Y Neuralink fue más allá: un participante de su estudio despertó un agente basado en Grok solo con el pensamiento, imaginando la frase «Hey Neuralink».",
+      "inicio": 523.42,
+      "fin": 532.54,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 523.42,
+          "f": 523.8
+        },
+        {
+          "p": "Neuralink",
+          "i": 523.8,
+          "f": 524.4
+        },
+        {
+          "p": "fue",
+          "i": 524.4,
+          "f": 524.68
+        },
+        {
+          "p": "más",
+          "i": 524.68,
+          "f": 524.86
+        },
+        {
+          "p": "allá:",
+          "i": 524.86,
+          "f": 525.04
+        },
+        {
+          "p": "un",
+          "i": 525.34,
+          "f": 525.7
+        },
+        {
+          "p": "participante",
+          "i": 525.7,
+          "f": 526.24
+        },
+        {
+          "p": "de",
+          "i": 526.24,
+          "f": 526.36
+        },
+        {
+          "p": "su",
+          "i": 526.36,
+          "f": 526.48
+        },
+        {
+          "p": "estudio",
+          "i": 526.48,
+          "f": 526.8
+        },
+        {
+          "p": "despertó",
+          "i": 526.8,
+          "f": 527.56
+        },
+        {
+          "p": "un",
+          "i": 527.56,
+          "f": 527.74
+        },
+        {
+          "p": "agente",
+          "i": 527.74,
+          "f": 528.08
+        },
+        {
+          "p": "basado",
+          "i": 528.08,
+          "f": 528.48
+        },
+        {
+          "p": "en",
+          "i": 528.48,
+          "f": 528.62
+        },
+        {
+          "p": "Grok",
+          "i": 528.62,
+          "f": 528.88
+        },
+        {
+          "p": "solo",
+          "i": 528.88,
+          "f": 529.2
+        },
+        {
+          "p": "con",
+          "i": 529.2,
+          "f": 529.38
+        },
+        {
+          "p": "el",
+          "i": 529.38,
+          "f": 529.5
+        },
+        {
+          "p": "pensamiento,",
+          "i": 529.5,
+          "f": 530.16
+        },
+        {
+          "p": "imaginando",
+          "i": 530.32,
+          "f": 531.06
+        },
+        {
+          "p": "la",
+          "i": 531.06,
+          "f": 531.18
+        },
+        {
+          "p": "frase",
+          "i": 531.18,
+          "f": 531.48
+        },
+        {
+          "p": "«Hey Neuralink».",
+          "i": 531.48,
+          "f": 532.54
+        }
+      ]
+    },
+    {
+      "id": "fr86",
+      "texto": "Eso sí: no han publicado datos de cómo funciona.",
+      "inicio": 532.54,
+      "fin": 535.34,
+      "palabras": [
+        {
+          "p": "Eso",
+          "i": 532.54,
+          "f": 533.24
+        },
+        {
+          "p": "sí:",
+          "i": 533.24,
+          "f": 533.38
+        },
+        {
+          "p": "no",
+          "i": 533.58,
+          "f": 533.9
+        },
+        {
+          "p": "han",
+          "i": 533.9,
+          "f": 534
+        },
+        {
+          "p": "publicado",
+          "i": 534,
+          "f": 534.42
+        },
+        {
+          "p": "datos",
+          "i": 534.42,
+          "f": 534.66
+        },
+        {
+          "p": "de",
+          "i": 534.66,
+          "f": 534.8
+        },
+        {
+          "p": "cómo",
+          "i": 534.8,
+          "f": 534.94
+        },
+        {
+          "p": "funciona.",
+          "i": 534.94,
+          "f": 535.34
+        }
+      ]
+    },
+    {
+      "id": "fr87",
+      "texto": "Y Musk dice que Blindsight, su implante para la vista, está listo y solo espera al regulador. Una designación de la FDA no es una aprobación.",
+      "inicio": 535.96,
+      "fin": 545.28,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 535.96,
+          "f": 536.38
+        },
+        {
+          "p": "Musk",
+          "i": 536.38,
+          "f": 536.68
+        },
+        {
+          "p": "dice",
+          "i": 536.68,
+          "f": 537.08
+        },
+        {
+          "p": "que",
+          "i": 537.08,
+          "f": 537.28
+        },
+        {
+          "p": "Blindsight,",
+          "i": 537.28,
+          "f": 537.94
+        },
+        {
+          "p": "su",
+          "i": 538,
+          "f": 538.2
+        },
+        {
+          "p": "implante",
+          "i": 538.2,
+          "f": 538.52
+        },
+        {
+          "p": "para",
+          "i": 538.52,
+          "f": 538.68
+        },
+        {
+          "p": "la",
+          "i": 538.68,
+          "f": 538.8
+        },
+        {
+          "p": "vista,",
+          "i": 538.8,
+          "f": 539.04
+        },
+        {
+          "p": "está",
+          "i": 539.54,
+          "f": 539.66
+        },
+        {
+          "p": "listo",
+          "i": 539.66,
+          "f": 539.96
+        },
+        {
+          "p": "y",
+          "i": 539.96,
+          "f": 540.32
+        },
+        {
+          "p": "solo",
+          "i": 540.32,
+          "f": 540.52
+        },
+        {
+          "p": "espera",
+          "i": 540.52,
+          "f": 540.78
+        },
+        {
+          "p": "al",
+          "i": 540.78,
+          "f": 540.88
+        },
+        {
+          "p": "regulador.",
+          "i": 540.88,
+          "f": 541.3
+        },
+        {
+          "p": "Una",
+          "i": 541.9,
+          "f": 542.32
+        },
+        {
+          "p": "designación",
+          "i": 542.32,
+          "f": 543.14
+        },
+        {
+          "p": "de",
+          "i": 543.14,
+          "f": 543.3
+        },
+        {
+          "p": "la",
+          "i": 543.3,
+          "f": 543.42
+        },
+        {
+          "p": "FDA",
+          "i": 543.42,
+          "f": 543.7
+        },
+        {
+          "p": "no",
+          "i": 543.7,
+          "f": 544.42
+        },
+        {
+          "p": "es",
+          "i": 544.42,
+          "f": 544.64
+        },
+        {
+          "p": "una",
+          "i": 544.64,
+          "f": 544.8
+        },
+        {
+          "p": "aprobación.",
+          "i": 544.8,
+          "f": 545.28
+        }
+      ]
+    },
+    {
+      "id": "fr88",
+      "texto": "Voz, susurro, mandíbula, pensamiento.",
+      "inicio": 546.86,
+      "fin": 550.9,
+      "palabras": [
+        {
+          "p": "Voz,",
+          "i": 546.86,
+          "f": 547.46
+        },
+        {
+          "p": "susurro,",
+          "i": 547.46,
+          "f": 548.06
+        },
+        {
+          "p": "mandíbula,",
+          "i": 548.66,
+          "f": 549.32
+        },
+        {
+          "p": "pensamiento.",
+          "i": 549.9,
+          "f": 550.9
+        }
+      ]
+    },
+    {
+      "id": "fr89",
+      "texto": "La carrera ya no es solo qué agente es más listo. Es quién lo construye, quién lo manda, qué sabe hacer, por dónde se rompe… y cómo le hablamos.",
+      "inicio": 551.32,
+      "fin": 560.76,
+      "palabras": [
+        {
+          "p": "La",
+          "i": 551.32,
+          "f": 551.84
+        },
+        {
+          "p": "carrera",
+          "i": 551.84,
+          "f": 552.18
+        },
+        {
+          "p": "ya",
+          "i": 552.18,
+          "f": 552.32
+        },
+        {
+          "p": "no",
+          "i": 552.32,
+          "f": 552.42
+        },
+        {
+          "p": "es",
+          "i": 552.42,
+          "f": 552.56
+        },
+        {
+          "p": "solo",
+          "i": 552.56,
+          "f": 552.76
+        },
+        {
+          "p": "qué",
+          "i": 552.76,
+          "f": 553.06
+        },
+        {
+          "p": "agente",
+          "i": 553.06,
+          "f": 553.52
+        },
+        {
+          "p": "es",
+          "i": 553.52,
+          "f": 553.66
+        },
+        {
+          "p": "más",
+          "i": 553.66,
+          "f": 553.84
+        },
+        {
+          "p": "listo.",
+          "i": 553.84,
+          "f": 554.22
+        },
+        {
+          "p": "Es",
+          "i": 554.38,
+          "f": 554.82
+        },
+        {
+          "p": "quién",
+          "i": 554.82,
+          "f": 555.18
+        },
+        {
+          "p": "lo",
+          "i": 555.18,
+          "f": 555.38
+        },
+        {
+          "p": "construye,",
+          "i": 555.38,
+          "f": 556
+        },
+        {
+          "p": "quién",
+          "i": 556.22,
+          "f": 556.46
+        },
+        {
+          "p": "lo",
+          "i": 556.46,
+          "f": 556.64
+        },
+        {
+          "p": "manda,",
+          "i": 556.64,
+          "f": 557.02
+        },
+        {
+          "p": "qué",
+          "i": 557.32,
+          "f": 557.48
+        },
+        {
+          "p": "sabe",
+          "i": 557.48,
+          "f": 557.72
+        },
+        {
+          "p": "hacer,",
+          "i": 557.72,
+          "f": 558.04
+        },
+        {
+          "p": "por",
+          "i": 558.32,
+          "f": 558.5
+        },
+        {
+          "p": "dónde",
+          "i": 558.5,
+          "f": 558.7
+        },
+        {
+          "p": "se",
+          "i": 558.7,
+          "f": 558.88
+        },
+        {
+          "p": "rompe…",
+          "i": 558.88,
+          "f": 559.24
+        },
+        {
+          "p": "y",
+          "i": 559.24,
+          "f": 559.9
+        },
+        {
+          "p": "cómo",
+          "i": 559.9,
+          "f": 560.2
+        },
+        {
+          "p": "le",
+          "i": 560.2,
+          "f": 560.34
+        },
+        {
+          "p": "hablamos.",
+          "i": 560.34,
+          "f": 560.76
+        }
+      ]
+    },
+    {
+      "id": "fr90",
+      "texto": "Y esta semana ha pasado de todo.",
+      "inicio": 560.76,
+      "fin": 562.84,
+      "palabras": [
+        {
+          "p": "Y",
+          "i": 560.76,
+          "f": 561.3
+        },
+        {
+          "p": "esta",
+          "i": 561.3,
+          "f": 561.48
+        },
+        {
+          "p": "semana",
+          "i": 561.48,
+          "f": 561.76
+        },
+        {
+          "p": "ha",
+          "i": 561.76,
+          "f": 561.9
+        },
+        {
+          "p": "pasado",
+          "i": 561.9,
+          "f": 562.16
+        },
+        {
+          "p": "de",
+          "i": 562.16,
+          "f": 562.52
+        },
+        {
+          "p": "todo.",
+          "i": 562.52,
+          "f": 562.84
+        }
+      ]
+    }
+  ],
+  "escenas": []
+}

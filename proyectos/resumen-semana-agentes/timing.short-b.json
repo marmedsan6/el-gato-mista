@@ -1,0 +1,855 @@
+{
+  "formato": "short-b",
+  "fps": 60,
+  "audio": {
+    "fichero": "short-b-apretado.wav",
+    "sha256": "2b98e006019f7772719203736f24339a88b1a224bd7f1cb8087e4fad68dcdc28",
+    "duracion_s": 46.77
+  },
+  "alineacion": {
+    "herramienta": "faster-whisper 1.2.1 · large-v3-turbo (int8, CPU)",
+    "con_pista": true,
+    "palabras_guion": 158,
+    "casadas": 147,
+    "porcentaje": 93,
+    "faltan": [],
+    "sobran": [],
+    "sustituidas": [
+      {
+        "guion": "Clod Coud.",
+        "oido": "ClodQuad."
+      },
+      {
+        "guion": "ese ese hache",
+        "oido": "SSH"
+      },
+      {
+        "guion": "ese uve ce telémetri.",
+        "oido": "SVC Telemetry."
+      },
+      {
+        "guion": "Yutub",
+        "oido": "YouTube"
+      },
+      {
+        "guion": "agentes.",
+        "oido": "ajantes."
+      }
+    ]
+  },
+  "frases": [
+    {
+      "id": "fr01",
+      "texto": "Imagina instalar la extensión oficial de Claude Code. Con el nombre correcto. Del editor correcto. Y que traiga una puerta trasera.",
+      "inicio": 0,
+      "fin": 7.26,
+      "palabras": [
+        {
+          "p": "Imagina",
+          "i": 0,
+          "f": 0.66
+        },
+        {
+          "p": "instalar",
+          "i": 0.66,
+          "f": 1.06
+        },
+        {
+          "p": "la",
+          "i": 1.06,
+          "f": 1.2
+        },
+        {
+          "p": "extensión",
+          "i": 1.2,
+          "f": 1.62
+        },
+        {
+          "p": "oficial",
+          "i": 1.62,
+          "f": 1.96
+        },
+        {
+          "p": "de",
+          "i": 1.96,
+          "f": 2.1
+        },
+        {
+          "p": "Claude Code.",
+          "i": 2.1,
+          "f": 2.58
+        },
+        {
+          "p": "Con",
+          "i": 2.72,
+          "f": 3.06
+        },
+        {
+          "p": "el",
+          "i": 3.06,
+          "f": 3.2
+        },
+        {
+          "p": "nombre",
+          "i": 3.2,
+          "f": 3.38
+        },
+        {
+          "p": "correcto.",
+          "i": 3.38,
+          "f": 3.98
+        },
+        {
+          "p": "Del",
+          "i": 4.28,
+          "f": 4.52
+        },
+        {
+          "p": "editor",
+          "i": 4.52,
+          "f": 4.82
+        },
+        {
+          "p": "correcto.",
+          "i": 4.82,
+          "f": 5.4
+        },
+        {
+          "p": "Y",
+          "i": 5.58,
+          "f": 5.92
+        },
+        {
+          "p": "que",
+          "i": 5.92,
+          "f": 6.04
+        },
+        {
+          "p": "traiga",
+          "i": 6.04,
+          "f": 6.3
+        },
+        {
+          "p": "una",
+          "i": 6.3,
+          "f": 6.5
+        },
+        {
+          "p": "puerta",
+          "i": 6.5,
+          "f": 6.84
+        },
+        {
+          "p": "trasera.",
+          "i": 6.84,
+          "f": 7.26
+        }
+      ]
+    },
+    {
+      "id": "fr02",
+      "texto": "Pasó el 29 de octubre, en la tienda de extensiones de Cursor.",
+      "inicio": 7.46,
+      "fin": 10.48,
+      "palabras": [
+        {
+          "p": "Pasó",
+          "i": 7.46,
+          "f": 7.84
+        },
+        {
+          "p": "el",
+          "i": 7.84,
+          "f": 7.92
+        },
+        {
+          "p": "29 de octubre,",
+          "i": 7.92,
+          "f": 8.74
+        },
+        {
+          "p": "en",
+          "i": 8.88,
+          "f": 9.02
+        },
+        {
+          "p": "la",
+          "i": 9.02,
+          "f": 9.12
+        },
+        {
+          "p": "tienda",
+          "i": 9.12,
+          "f": 9.34
+        },
+        {
+          "p": "de",
+          "i": 9.34,
+          "f": 9.5
+        },
+        {
+          "p": "extensiones",
+          "i": 9.5,
+          "f": 9.96
+        },
+        {
+          "p": "de",
+          "i": 9.96,
+          "f": 10.08
+        },
+        {
+          "p": "Cursor.",
+          "i": 10.08,
+          "f": 10.48
+        }
+      ]
+    },
+    {
+      "id": "fr03",
+      "texto": "No era una imitación: era una versión manipulada que llevaba el identificador legítimo de Anthropic.",
+      "inicio": 10.76,
+      "fin": 16,
+      "palabras": [
+        {
+          "p": "No",
+          "i": 10.76,
+          "f": 11.06
+        },
+        {
+          "p": "era",
+          "i": 11.06,
+          "f": 11.2
+        },
+        {
+          "p": "una",
+          "i": 11.2,
+          "f": 11.34
+        },
+        {
+          "p": "imitación:",
+          "i": 11.34,
+          "f": 11.76
+        },
+        {
+          "p": "era",
+          "i": 12.04,
+          "f": 12.28
+        },
+        {
+          "p": "una",
+          "i": 12.28,
+          "f": 12.42
+        },
+        {
+          "p": "versión",
+          "i": 12.42,
+          "f": 12.78
+        },
+        {
+          "p": "manipulada",
+          "i": 12.78,
+          "f": 13.48
+        },
+        {
+          "p": "que",
+          "i": 13.48,
+          "f": 13.82
+        },
+        {
+          "p": "llevaba",
+          "i": 13.82,
+          "f": 14.12
+        },
+        {
+          "p": "el",
+          "i": 14.12,
+          "f": 14.26
+        },
+        {
+          "p": "identificador",
+          "i": 14.26,
+          "f": 14.92
+        },
+        {
+          "p": "legítimo",
+          "i": 14.92,
+          "f": 15.44
+        },
+        {
+          "p": "de",
+          "i": 15.44,
+          "f": 15.56
+        },
+        {
+          "p": "Anthropic.",
+          "i": 15.56,
+          "f": 16
+        }
+      ]
+    },
+    {
+      "id": "fr04",
+      "texto": "Estuvo unas 11 horas y, según Cursor, llegó como mucho a 5.000 personas.",
+      "inicio": 16.36,
+      "fin": 20.22,
+      "palabras": [
+        {
+          "p": "Estuvo",
+          "i": 16.36,
+          "f": 16.66
+        },
+        {
+          "p": "unas",
+          "i": 16.66,
+          "f": 16.92
+        },
+        {
+          "p": "11 horas",
+          "i": 16.92,
+          "f": 17.38
+        },
+        {
+          "p": "y,",
+          "i": 17.38,
+          "f": 17.6
+        },
+        {
+          "p": "según",
+          "i": 17.72,
+          "f": 17.88
+        },
+        {
+          "p": "Cursor,",
+          "i": 17.88,
+          "f": 18.28
+        },
+        {
+          "p": "llegó",
+          "i": 18.42,
+          "f": 18.82
+        },
+        {
+          "p": "como",
+          "i": 18.82,
+          "f": 19.08
+        },
+        {
+          "p": "mucho",
+          "i": 19.08,
+          "f": 19.36
+        },
+        {
+          "p": "a",
+          "i": 19.36,
+          "f": 19.5
+        },
+        {
+          "p": "5.000",
+          "i": 19.5,
+          "f": 19.84
+        },
+        {
+          "p": "personas.",
+          "i": 19.84,
+          "f": 20.22
+        }
+      ]
+    },
+    {
+      "id": "fr05",
+      "texto": "Mandaba datos de tu equipo, metía una clave del atacante para entrar por SSH e intentaba abrir un túnel hacia fuera.",
+      "inicio": 20.62,
+      "fin": 26.72,
+      "palabras": [
+        {
+          "p": "Mandaba",
+          "i": 20.62,
+          "f": 20.96
+        },
+        {
+          "p": "datos",
+          "i": 20.96,
+          "f": 21.2
+        },
+        {
+          "p": "de",
+          "i": 21.2,
+          "f": 21.34
+        },
+        {
+          "p": "tu",
+          "i": 21.34,
+          "f": 21.46
+        },
+        {
+          "p": "equipo,",
+          "i": 21.46,
+          "f": 21.74
+        },
+        {
+          "p": "metía",
+          "i": 22.12,
+          "f": 22.38
+        },
+        {
+          "p": "una",
+          "i": 22.38,
+          "f": 22.56
+        },
+        {
+          "p": "clave",
+          "i": 22.56,
+          "f": 22.8
+        },
+        {
+          "p": "del",
+          "i": 22.8,
+          "f": 22.94
+        },
+        {
+          "p": "atacante",
+          "i": 22.94,
+          "f": 23.36
+        },
+        {
+          "p": "para",
+          "i": 23.36,
+          "f": 23.6
+        },
+        {
+          "p": "entrar",
+          "i": 23.6,
+          "f": 23.82
+        },
+        {
+          "p": "por",
+          "i": 23.82,
+          "f": 24.06
+        },
+        {
+          "p": "SSH",
+          "i": 24.06,
+          "f": 24.82
+        },
+        {
+          "p": "e",
+          "i": 24.82,
+          "f": 25.26
+        },
+        {
+          "p": "intentaba",
+          "i": 25.26,
+          "f": 25.7
+        },
+        {
+          "p": "abrir",
+          "i": 25.7,
+          "f": 25.86
+        },
+        {
+          "p": "un",
+          "i": 25.86,
+          "f": 26.06
+        },
+        {
+          "p": "túnel",
+          "i": 26.06,
+          "f": 26.3
+        },
+        {
+          "p": "hacia",
+          "i": 26.3,
+          "f": 26.46
+        },
+        {
+          "p": "fuera.",
+          "i": 26.46,
+          "f": 26.72
+        }
+      ]
+    },
+    {
+      "id": "fr06",
+      "texto": "En la mayoría de los equipos, el túnel no llegaba a funcionar, porque hacían falta permisos de administrador. Pero la clave y los datos, sí.",
+      "inicio": 27.04,
+      "fin": 33.54,
+      "palabras": [
+        {
+          "p": "En",
+          "i": 27.04,
+          "f": 27.24
+        },
+        {
+          "p": "la",
+          "i": 27.24,
+          "f": 27.32
+        },
+        {
+          "p": "mayoría",
+          "i": 27.32,
+          "f": 27.56
+        },
+        {
+          "p": "de",
+          "i": 27.56,
+          "f": 27.72
+        },
+        {
+          "p": "los",
+          "i": 27.72,
+          "f": 27.86
+        },
+        {
+          "p": "equipos,",
+          "i": 27.86,
+          "f": 28.28
+        },
+        {
+          "p": "el",
+          "i": 28.46,
+          "f": 28.54
+        },
+        {
+          "p": "túnel",
+          "i": 28.54,
+          "f": 28.82
+        },
+        {
+          "p": "no",
+          "i": 28.82,
+          "f": 29
+        },
+        {
+          "p": "llegaba",
+          "i": 29,
+          "f": 29.3
+        },
+        {
+          "p": "a",
+          "i": 29.3,
+          "f": 29.38
+        },
+        {
+          "p": "funcionar,",
+          "i": 29.38,
+          "f": 29.76
+        },
+        {
+          "p": "porque",
+          "i": 29.76,
+          "f": 30.24
+        },
+        {
+          "p": "hacían",
+          "i": 30.24,
+          "f": 30.5
+        },
+        {
+          "p": "falta",
+          "i": 30.5,
+          "f": 30.76
+        },
+        {
+          "p": "permisos",
+          "i": 30.76,
+          "f": 31.18
+        },
+        {
+          "p": "de",
+          "i": 31.18,
+          "f": 31.26
+        },
+        {
+          "p": "administrador.",
+          "i": 31.26,
+          "f": 31.82
+        },
+        {
+          "p": "Pero",
+          "i": 32.2,
+          "f": 32.6
+        },
+        {
+          "p": "la",
+          "i": 32.6,
+          "f": 32.76
+        },
+        {
+          "p": "clave",
+          "i": 32.76,
+          "f": 32.98
+        },
+        {
+          "p": "y",
+          "i": 32.98,
+          "f": 33.08
+        },
+        {
+          "p": "los",
+          "i": 33.08,
+          "f": 33.18
+        },
+        {
+          "p": "datos,",
+          "i": 33.18,
+          "f": 33.36
+        },
+        {
+          "p": "sí.",
+          "i": 33.44,
+          "f": 33.54
+        }
+      ]
+    },
+    {
+      "id": "fr07",
+      "texto": "Si la instalaste, mira si tienes una clave llamada svc-telemetry.",
+      "inicio": 33.74,
+      "fin": 37.7,
+      "palabras": [
+        {
+          "p": "Si",
+          "i": 33.74,
+          "f": 34.04
+        },
+        {
+          "p": "la",
+          "i": 34.04,
+          "f": 34.14
+        },
+        {
+          "p": "instalaste,",
+          "i": 34.14,
+          "f": 34.56
+        },
+        {
+          "p": "mira",
+          "i": 34.92,
+          "f": 35.04
+        },
+        {
+          "p": "si",
+          "i": 35.04,
+          "f": 35.18
+        },
+        {
+          "p": "tienes",
+          "i": 35.18,
+          "f": 35.4
+        },
+        {
+          "p": "una",
+          "i": 35.4,
+          "f": 35.58
+        },
+        {
+          "p": "clave",
+          "i": 35.58,
+          "f": 35.82
+        },
+        {
+          "p": "llamada",
+          "i": 35.82,
+          "f": 36.2
+        },
+        {
+          "p": "svc-telemetry.",
+          "i": 36.2,
+          "f": 37.7
+        }
+      ]
+    },
+    {
+      "id": "fr08",
+      "texto": "Esto es un ataque a la cadena de suministro: no te atacan a ti, atacan lo que instalas.",
+      "inicio": 37.86,
+      "fin": 42.34,
+      "palabras": [
+        {
+          "p": "Esto",
+          "i": 37.86,
+          "f": 38.22
+        },
+        {
+          "p": "es",
+          "i": 38.22,
+          "f": 38.36
+        },
+        {
+          "p": "un",
+          "i": 38.36,
+          "f": 38.48
+        },
+        {
+          "p": "ataque",
+          "i": 38.48,
+          "f": 38.68
+        },
+        {
+          "p": "a",
+          "i": 38.68,
+          "f": 38.84
+        },
+        {
+          "p": "la",
+          "i": 38.84,
+          "f": 38.9
+        },
+        {
+          "p": "cadena",
+          "i": 38.9,
+          "f": 39.16
+        },
+        {
+          "p": "de",
+          "i": 39.16,
+          "f": 39.28
+        },
+        {
+          "p": "suministro:",
+          "i": 39.28,
+          "f": 39.78
+        },
+        {
+          "p": "no",
+          "i": 40.02,
+          "f": 40.42
+        },
+        {
+          "p": "te",
+          "i": 40.42,
+          "f": 40.52
+        },
+        {
+          "p": "atacan",
+          "i": 40.52,
+          "f": 40.8
+        },
+        {
+          "p": "a",
+          "i": 40.8,
+          "f": 40.9
+        },
+        {
+          "p": "ti,",
+          "i": 40.9,
+          "f": 40.96
+        },
+        {
+          "p": "atacan",
+          "i": 41.3,
+          "f": 41.64
+        },
+        {
+          "p": "lo",
+          "i": 41.64,
+          "f": 41.76
+        },
+        {
+          "p": "que",
+          "i": 41.76,
+          "f": 41.88
+        },
+        {
+          "p": "instalas.",
+          "i": 41.88,
+          "f": 42.34
+        }
+      ]
+    },
+    {
+      "id": "fr09",
+      "texto": "¿Te interesa saber más? Tengo un vídeo largo en YouTube con toda la semana de los agentes.",
+      "inicio": 42.52,
+      "fin": 46.54,
+      "palabras": [
+        {
+          "p": "¿Te",
+          "i": 42.52,
+          "f": 42.74
+        },
+        {
+          "p": "interesa",
+          "i": 42.74,
+          "f": 43.08
+        },
+        {
+          "p": "saber",
+          "i": 43.08,
+          "f": 43.28
+        },
+        {
+          "p": "más?",
+          "i": 43.28,
+          "f": 43.46
+        },
+        {
+          "p": "Tengo",
+          "i": 43.64,
+          "f": 44.04
+        },
+        {
+          "p": "un",
+          "i": 44.04,
+          "f": 44.16
+        },
+        {
+          "p": "vídeo",
+          "i": 44.16,
+          "f": 44.38
+        },
+        {
+          "p": "largo",
+          "i": 44.38,
+          "f": 44.6
+        },
+        {
+          "p": "en",
+          "i": 44.6,
+          "f": 44.78
+        },
+        {
+          "p": "YouTube",
+          "i": 44.78,
+          "f": 45.04
+        },
+        {
+          "p": "con",
+          "i": 45.04,
+          "f": 45.34
+        },
+        {
+          "p": "toda",
+          "i": 45.34,
+          "f": 45.54
+        },
+        {
+          "p": "la",
+          "i": 45.54,
+          "f": 45.66
+        },
+        {
+          "p": "semana",
+          "i": 45.66,
+          "f": 45.92
+        },
+        {
+          "p": "de",
+          "i": 45.92,
+          "f": 46.06
+        },
+        {
+          "p": "los",
+          "i": 46.06,
+          "f": 46.2
+        },
+        {
+          "p": "agentes.",
+          "i": 46.2,
+          "f": 46.54
+        }
+      ]
+    }
+  ],
+  "escenas": []
+}

@@ -1,0 +1,210 @@
+[
+ {
+  "t": 0,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 4.36,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 7.26,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 10,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 13.66,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 23.24,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 37.91,
+  "tipo": "destello"
+ },
+ {
+  "t": 43.8,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 47.12,
+  "tipo": "error"
+ },
+ {
+  "t": 61.2,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 79.42,
+  "tipo": "error"
+ },
+ {
+  "t": 99.56,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 103.16,
+  "tipo": "acierto"
+ },
+ {
+  "t": 112.4,
+  "tipo": "error"
+ },
+ {
+  "t": 113.91,
+  "tipo": "destello"
+ },
+ {
+  "t": 130.16,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 145.76,
+  "tipo": "error"
+ },
+ {
+  "t": 150.96,
+  "tipo": "acierto"
+ },
+ {
+  "t": 166.5,
+  "tipo": "error"
+ },
+ {
+  "t": 170.02,
+  "tipo": "destello"
+ },
+ {
+  "t": 178.28,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 189.3,
+  "tipo": "acierto"
+ },
+ {
+  "t": 211.44,
+  "tipo": "error"
+ },
+ {
+  "t": 222.91,
+  "tipo": "destello"
+ },
+ {
+  "t": 229.84,
+  "tipo": "acierto"
+ },
+ {
+  "t": 240,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 245.54,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 263.6,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 285.82,
+  "tipo": "acierto"
+ },
+ {
+  "t": 294.88,
+  "tipo": "destello"
+ },
+ {
+  "t": 302.68,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 326.1,
+  "tipo": "error"
+ },
+ {
+  "t": 332.31,
+  "tipo": "destello"
+ },
+ {
+  "t": 346.7,
+  "tipo": "error"
+ },
+ {
+  "t": 352.94,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 368.23,
+  "tipo": "destello"
+ },
+ {
+  "t": 372.88,
+  "tipo": "error"
+ },
+ {
+  "t": 383.2,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 390.48,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 398.06,
+  "tipo": "error"
+ },
+ {
+  "t": 417.72,
+  "tipo": "acierto"
+ },
+ {
+  "t": 423.54,
+  "tipo": "destello"
+ },
+ {
+  "t": 445.38,
+  "tipo": "error"
+ },
+ {
+  "t": 457.16,
+  "tipo": "error"
+ },
+ {
+  "t": 480.4,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 494.26,
+  "tipo": "destello"
+ },
+ {
+  "t": 507.02,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 513.7,
+  "tipo": "tick"
+ },
+ {
+  "t": 518.82,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 527.74,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 545.87,
+  "tipo": "destello"
+ },
+ {
+  "t": 560.76,
+  "tipo": "acierto"
+ }
+]

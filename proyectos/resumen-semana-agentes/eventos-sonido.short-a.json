@@ -1,0 +1,50 @@
+[
+ {
+  "t": 1.14,
+  "tipo": "error"
+ },
+ {
+  "t": 9.94,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 10.59,
+  "tipo": "destello"
+ },
+ {
+  "t": 11.48,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 20.5,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 26.82,
+  "tipo": "error"
+ },
+ {
+  "t": 28.94,
+  "tipo": "destello"
+ },
+ {
+  "t": 31.1,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 40.88,
+  "tipo": "acierto"
+ },
+ {
+  "t": 42.75,
+  "tipo": "destello"
+ },
+ {
+  "t": 44.66,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 48.62,
+  "tipo": "aparicion"
+ }
+]

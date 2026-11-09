@@ -1,0 +1,42 @@
+{
+  "fecha": "2026-11-06",
+  "nota": "Recursos propios del canal; copia para aislar el catálogo de cambios en vídeos existentes.",
+  "recursos": [
+    {
+      "origen": "motor/estilo/pixel.js",
+      "snapshot": "motor/biblioteca/v1/base/pixel.js",
+      "sha256_original": "7345f1776c99156251b85580f7e16e60190e128892b48e7d377f7005ca105f50",
+      "sha256_copia": "7345f1776c99156251b85580f7e16e60190e128892b48e7d377f7005ca105f50"
+    },
+    {
+      "origen": "motor/estilo/v3/gato.js",
+      "snapshot": "motor/biblioteca/v1/base/gato.js",
+      "sha256_original": "345cbb221d4c01f1968115626d1cf728459ab990819f65c2c6dd8012f98b32ef",
+      "sha256_copia": "345cbb221d4c01f1968115626d1cf728459ab990819f65c2c6dd8012f98b32ef"
+    },
+    {
+      "origen": "motor/estilo/v3/props.js",
+      "snapshot": "motor/biblioteca/v1/base/props.js",
+      "sha256_original": "12afa3929601ea6f94f0f6d3f21a9d9971cb3be1418b1b63392209657f9966b6",
+      "sha256_copia": "12afa3929601ea6f94f0f6d3f21a9d9971cb3be1418b1b63392209657f9966b6"
+    },
+    {
+      "origen": "motor/estilo/v3/escenarios.js",
+      "snapshot": "motor/biblioteca/v1/base/fondos-vertical.js",
+      "sha256_original": "d041174d3347d96eb207aefb2a405a96030f6f8f64586b73438ef594d5d9069b",
+      "sha256_copia": "d041174d3347d96eb207aefb2a405a96030f6f8f64586b73438ef594d5d9069b"
+    },
+    {
+      "origen": "proyectos/ventanas-contexto-ia/escenas/comun/escenarios.js",
+      "snapshot": "motor/biblioteca/v1/base/fondos-horizontal.js",
+      "sha256_original": "fe509c3f4fcf8958601e381b7526fc2922c3eeed6b5dc743ac881aaea465abfe",
+      "sha256_copia": "fe509c3f4fcf8958601e381b7526fc2922c3eeed6b5dc743ac881aaea465abfe"
+    },
+    {
+      "origen": "proyectos/resumen-semana-agentes/escenas/comun/agentes.js",
+      "snapshot": "motor/biblioteca/v1/base/agentes.js",
+      "sha256_original": "279a7ab37869cecebe526d0922c76b696b924b7f8a873bfba4eb6a9bfe06ea1f",
+      "sha256_copia": "279a7ab37869cecebe526d0922c76b696b924b7f8a873bfba4eb6a9bfe06ea1f"
+    }
+  ]
+}

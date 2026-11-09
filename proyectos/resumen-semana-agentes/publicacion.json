@@ -1,0 +1,82 @@
+{
+  "perfil": "es",
+  "formatos": {
+    "largo": {
+      "archivo": "salida/largo-v3.mp4",
+      "titulo": "La semana de los agentes de IA: robo récord a Binance, puertas traseras y jefes que no trabajan",
+      "descripcion": "Del 29 de octubre al 5 de noviembre, casi todo lo importante en IA giró alrededor de los agentes. Qué es un harness y qué tiene de raro el de DeepSeek, el Super-agent con un jefe que no trabaja, la app de Herdr y la compra de Conductor por Meta para cerrarla, las skills virales (teardown y la de seguridad de Cloudflare), la extensión oficial de Claude Code que salió con puerta trasera, el fallo de Linux que encontró un modelo de Anthropic, el robo de 6.340 millones a Binance que empezó con una oferta de trabajo, Reddit, Stack Overflow y Microsoft, y cómo hablaremos con los agentes sin voz. Con lo que pasó de verdad y con lo que se exageró.",
+      "tags": [
+        "Inteligencia artificial",
+        "Agentes de IA",
+        "DeepSeek",
+        "Binance",
+        "Claude Code",
+        "Ciberseguridad",
+        "Noticias de IA",
+        "Resumen semanal"
+      ],
+      "categoria": "28",
+      "visibilidad": "public",
+      "portada_segundo": 377.4,
+      "made_for_kids": false,
+      "contains_synthetic_media": false
+    },
+    "short-a": {
+      "archivo": "salida/short-a-v3.mp4",
+      "titulo": "¿Cómo robaron 6.340 millones a Binance con una oferta de trabajo?",
+      "descripcion": "A Binance le robaron unos 6.340 millones de dólares, el mayor robo cripto de la historia. Todo empezó con una oferta de trabajo falsa a un ingeniero; desde su ordenador, el atacante abusó de una herramienta interna de IA para hacerse con otros dos y lanzar las retiradas. No robaron las claves: se colaron en el sistema que las firma.",
+      "tags": [
+        "Binance",
+        "Ciberseguridad",
+        "Criptomonedas",
+        "Inteligencia artificial",
+        "Noticias",
+        "Shorts"
+      ],
+      "portada_segundo": 6.0,
+      "fecha": "2026-11-07T12:00:00+01:00",
+      "categoria": "28",
+      "visibilidad": "public",
+      "made_for_kids": false,
+      "contains_synthetic_media": false
+    },
+    "short-b": {
+      "archivo": "salida/short-b-v4.mp4",
+      "titulo": "¿La extensión oficial de Claude Code con una puerta trasera?",
+      "descripcion": "El 29 de octubre, la tienda de extensiones de Cursor sirvió una versión manipulada de la extensión oficial de Claude Code, con el identificador legítimo de Anthropic. Durante unas 11 horas mandaba datos del equipo, añadía una clave SSH del atacante e intentaba abrir un túnel. Si la instalaste, busca una clave llamada svc-telemetry.",
+      "tags": [
+        "Claude Code",
+        "Cursor",
+        "Ciberseguridad",
+        "Cadena de suministro",
+        "Inteligencia artificial",
+        "Shorts"
+      ],
+      "portada_segundo": 14.0,
+      "fecha": "2026-11-08T12:00:00+01:00",
+      "categoria": "28",
+      "visibilidad": "public",
+      "made_for_kids": false,
+      "contains_synthetic_media": false
+    },
+    "short-c": {
+      "archivo": "salida/short-c-v4.mp4",
+      "titulo": "¿Por qué el mismo modelo de IA da agentes distintos?",
+      "descripcion": "Un agente no es solo el modelo: es el modelo más su harness, todo lo que lo rodea para trabajar (herramientas, archivos, permisos y memoria). El harness decide si pregunta antes de borrar, qué olvida y si ante un fallo prueba otra vía. En el de DeepSeek, según Helmcode, hasta el bucle del agente es una pieza que se puede cambiar.",
+      "tags": [
+        "Agentes de IA",
+        "DeepSeek",
+        "Harness",
+        "Inteligencia artificial",
+        "Claude Code",
+        "Shorts"
+      ],
+      "portada_segundo": 40.0,
+      "fecha": "2026-11-09T12:00:00+01:00",
+      "categoria": "28",
+      "visibilidad": "public",
+      "made_for_kids": false,
+      "contains_synthetic_media": false
+    }
+  }
+}

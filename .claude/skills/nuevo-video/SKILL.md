@@ -30,7 +30,7 @@ en `memoria/decisiones.md` o en el estilo. Si no tienes ninguna, sigue sin pregu
 | Guion | Opus | `guion.md`, cada frase con su `[fN]`; el short, con su duración estimada | Enfoque, gancho, qué matices cuentan, tono |
 | **PUERTA 1** | Mario | `reviews/puerta-1.md` con la SHA-256 del guion | Se le pide aprobar o cambiar |
 | Storyboard y estilo | Opus; skill `estilo` | `shotlist.md`, `style_guide.md` | Escenarios, objetos, si se aparta del estilo |
-| Voz | `motor/voz/generar.mjs` | audio en `.runtime/voz/<slug>/` | Ritmo, pronunciación de nombres; gasto, si lo hay |
+| Voz | `motor/voz/generar.mjs`, Orus **con** el `--estilo` de siempre (el último en `.runtime/cache/voz/gemini-*.meta.json`) | audio en `.runtime/voz/<slug>/` | Ritmo, pronunciación de nombres; gasto, si lo hay |
 | Alineación | `motor/voz/alinear.py` | `timing.<formato>.json` | |
 | Escenas | Opus; skill `estilo`, `motor/timing-a-js.mjs` | `escenas/<formato>/` | Enséñale fotogramas si hay una idea visual nueva |
 | Render | `motor/render.mjs` | `render/<formato>/` | |
