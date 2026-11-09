@@ -201,3 +201,12 @@
   - Plugin `hyperframes` fuera de `.claude/settings.json`.
   - `motor/.revisar-tmp.mjs` pasa a `motor/revisar.mjs`.
   - Docs, memoria y biblioteca, sin tocar por ahora (Mario no las eligió).
+- 2026-11-09 · Más dinamismo en la v5: **el diorama se mueve** (lo que se explica reacciona a la voz: piezas que entran, se encienden, trabajan) y **la cámara viaja** por un mundo ancho con paralaje; **algo nuevo cada 1-2 s** — Mario. No se piden cortes rápidos ni transiciones con juego.
+- 2026-11-09 · Descargas aprobadas para la prueba v5: `validation-000.parquet` del atlas (1,3 MB, 4.096 sprites) y `scifitiles-sheet.png` de Buch (OpenGameArt, CC0, 13 KB), en `.runtime/v5/` — Mario («Sí, los dos»). La hoja de Buch es cenital y no sirve para el diorama lateral.
+- 2026-11-09 · Densidad de la v5: **4 px** de salida por píxel de arte (lienzo de 270×480 / 480×270 unidades) — Mario («4 px»). El clip v5 (`motor/calibracion/v5/clip.{html,js}`) queda a la espera de su revisión (`reviews/calibracion/iter-v5-02.md`).
+- 2026-11-09 · **Calibración v5 aprobada** («Me gusta, sigue»; `reviews/calibracion/iter-v5-02.md`). Pasa a estilo vigente (ADR 0009) y sustituye a la v3/v4 en los vídeos nuevos:
+  - **Presentación:** diorama animado (la idea se ve dibujada y se mueve), poco texto y algo nuevo cada 1-2 s.
+  - **Arte:** a 4 px.
+  - **MISTA:** solo en la entrada de tema, en los cambios de tema (de pie, 1-2 s) y en el cierre, a su píxel de 12 px. El retrato de la caja se queda.
+  - **Cámara:** viaja por un mundo ancho con paralaje y hace zooms core a ×1,25.
+  - **Lo que no cambia:** las reglas de la caja, del rótulo, de la fuente junto a la cifra y de la zona tapada. Los vídeos publicados conservan su biblioteca (v2, v3 o v3.0 congelada).

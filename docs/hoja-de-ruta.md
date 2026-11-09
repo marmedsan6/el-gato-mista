@@ -166,9 +166,27 @@ legal anterior. Los agentes no hacen `git push` (deny global); el push lo hace M
   - objetos con detalle a 6 px;
   - efectos de pixelfx (`motor/estilo/v3/fx.js`, `node motor/fx-exportar.mjs`).
 - **Evidencia:** `npm test` 4/4, la v5 idéntica (8/8 fotogramas), audio a -14,0 LUFS / -2,5 dBTP y el crítico pasa en la segunda vuelta.
+- **Pendiente** (sustituido por la v5, abajo).
+
+## Repaso del repo y estilo v5 (2026-11-09)
+- **Repaso:** vídeo resumen-semana-agentes y biblioteca pixel traídos a la rama, props v3.0 congelado para lo publicado (34/34 fotogramas iguales), limpieza aprobada fila a fila (37 elementos a la Papelera; etiqueta `archivo/pre-limpieza-2026-11-09`). Commits `bae142d`, `ce847ee`, `6105057` y `4397c28`.
+- **Estilo v5** (ADR 0009), aprobado por Mario («Me gusta, sigue»):
+  - diorama animado a 4 px;
+  - MISTA solo en los temas;
+  - cámara que viaja con paralaje;
+  - algo nuevo cada 1-2 s.
+- **Material de la v5:**
+  - fijos y clip en `motor/calibracion/v5/` (`reviews/calibracion/iter-v5-01.md`, `iter-v5-02.md`, `critica-v5-01.md` y `critica-v5-02.md`);
+  - biblioteca en `motor/estilo/v5/` (el traslado deja el clip y los fijos idénticos: 40/40 fotogramas);
+  - plantillas v5 en `plantillas/proyecto/escenas/`.
+- Los pendientes de la v4 quedan resueltos o absorbidos:
+  - los escenarios anchos en 16:9 y el clip en los dos formatos entran en la v5;
+  - las chispas de pixelfx desaparecen: la v5 no usa pixelfx;
+  - el rediseño de MISTA, solo si Mario lo pide.
 - **Pendiente:**
-  - aplicar las estaciones con paralaje a un vídeo completo (el siguiente short o largo, o una Mithril v7 interna);
-  - cuantizar a 12 px las chispas finas de pixelfx si molestan;
-  - escenarios anchos de 16:9 para el largo;
-  - rediseño de MISTA cuando Mario lo pida.
+  - aplicar la v5 al siguiente vídeo completo;
+  - decidir con Mario el catálogo de recursos por concepto (`motor/biblioteca/`) y si un sistema (u Opus) elige el recurso;
+  - leer la licencia de Krea §2.3 antes de usar el atlas en algo publicable;
+  - detalles menores del clip: el cable sobre las ventanas en el 16:9, la franja bajo los zooms y el bebé de la cuna;
+  - llevar la v5 al texto v1 de `docs/estilo.md` y a `marca/tokens.json` si Mario lo pide.
 

@@ -7,7 +7,7 @@ mismo guion y estilo, compuestos por separado, nunca recortando uno del otro.
 
 ## Lee antes de trabajar
 - memoria/decisiones.md (siempre) y, si tocas un vídeo, proyectos/<slug>/brief.md.
-- Estilo vigente (v3: 12 px, profundidad y luz; aprobado el 2026-11-03): antes de tocar escenas, skill `estilo`.
+- Estilo vigente (v5: diorama animado a 4 px, MISTA solo en los temas; aprobado el 2026-11-09, ADR 0009): antes de tocar escenas, skill `estilo`.
 - Calidad y contrato de escena: docs/criterios.md. Diseño: docs/arquitectura.md.
 - Calibración de estilo: docs/calibracion.md. Pendiente y orden: docs/hoja-de-ruta.md.
 
