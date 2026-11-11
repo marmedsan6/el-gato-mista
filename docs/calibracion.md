@@ -2,7 +2,8 @@
 
 Procedimiento fijo para definir el estilo visual, iterarlo y guardarlo para reutilizarlo.
 Basado en la receta del reel de santiremedio (nota de la bóveda
-`canal-videos/transcripcion-reel-estilo-edicion-2026-10-29.md`). **Todavía no se ha ejecutado.**
+`canal-videos/transcripcion-reel-estilo-edicion-2026-10-29.md`). Ejecutado entero el 2026-10-29 (estilo v1) y, desde
+entonces, en vueltas cortas (C5-C7) para cada versión: la vigente es la v6 (`reviews/calibracion/iter-v6-01.md`).
 
 Coste: esfuerzo alto solo en C2, C3, C4 y en las síntesis de C6. C1 y las medidas, con
 subagente Haiku. El agente avisa del gasto de cupo antes de cada paso caro.

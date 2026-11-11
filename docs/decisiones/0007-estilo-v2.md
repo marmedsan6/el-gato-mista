@@ -11,7 +11,7 @@ seguir iterando:
 - **Pide más:** un vídeo más vívido, con más pixel art y color, con el gato para explicar, y con objetos que rodeen la
   explicación e interactúen con ella.
 
-## Decisión (propuesta)
+## Decisión
 Sobre el estilo v1 cambia lo siguiente; el resto se mantiene.
 1. **Gato narrador «MISTA»** (deja sin efecto P5): gato **atigrado naranja** según el boceto de Mario (rayas y «M» en la
    frente, crema en pecho, hocico, patas y punta de la cola, ojos ámbar verdosos con pupila vertical), sprite de ~32×32 base, en escena.

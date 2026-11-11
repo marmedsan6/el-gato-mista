@@ -1,6 +1,6 @@
 ---
 name: qa
-description: QA de un máster de ElGatoMista antes de la PUERTA 2 (audio, congelados, negros, hoja de contactos y crítica visual) con informe en reviews/qa.md. Úsala al terminar el montaje de un vídeo o tras arreglar defectos.
+description: QA de un máster de ElGatoMista antes de la PUERTA 2 (medidas con motor/qa.mjs, lint de textos y crítica visual) con informe en reviews/qa-vN.md. Úsala al terminar el montaje de un vídeo o tras arreglar defectos.
 ---
 
 # QA de un máster
@@ -8,15 +8,19 @@ description: QA de un máster de ElGatoMista antes de la PUERTA 2 (audio, congel
 Umbrales: `docs/criterios.md` §4. Necesita FFmpeg en el PATH.
 
 1. Entrada: `proyectos/<slug>/salida/<formato>-vN.mp4` (formato `largo` o `short`).
-2. `ffprobe`: resolución (1920×1080 o 1080×1920), 60 fps, duración (largo 8-10 min; short ≤ 120 s).
+2. `node motor/qa.mjs --proyecto <slug> --formato <formato> --version <N> --escena <html de la escena>`: ficha, huella,
+   sonoridad, pico, silencios, congelados y negros; último instante de cada frase a tamaño completo y a tamaño de móvil,
+   hojas a 2 fps y tiras de cada movimiento de cámara, en `.runtime/qa/<slug>-<formato>-vN/`. Deja el borrador de
+   `reviews/qa-vN.md` y sale con 1 si una medida falla. No lo lances mientras corre un render.
+   Pega en el informe el resumen de `node motor/revisar.mjs … --estricto` (tiene que dar 0 errores).
 3. Subagente `verificador-enlaces` otra vez, con fecha de consulta nueva, si es noticia o han pasado días desde la última
    comprobación. Deja `reviews/enlaces-puerta2.md`; comprueba en la fuente lo que marque como parcial antes de tocar el guion.
-4. En paralelo:
-   - subagente `qa-audio` sobre el máster, que escribe la sección `## Audio` de `reviews/qa.md`;
-   - subagente `extractor-fotogramas` en modo QA, que deja medidas, congelados, negros y hojas en `.runtime/qa/<slug>-<formato>/`.
-5. Aviso a Mario de que se gasta cupo de Opus y llamada al subagente `critico-visual` con las hojas, unos 12 fotogramas
-   repartidos y sus versiones a 360×640 (`ffmpeg -i f.png -vf scale=360:-1 ...`). La crítica va a `reviews/critica-NN.md`.
-6. Escribe `reviews/qa-vN.md`:
+4. Aviso a Mario de que se gasta cupo de Opus y llamada al subagente `critico-visual` **sobre el máster final** (no sobre
+   una versión anterior), con la carpeta de `qa.mjs` y la voz de cada frase. Pídele expresamente: textos que se tocan o
+   se leen juntos, que repiten la caja o afirman más que la voz, estaciones que no se entienden sin leer y choques en
+   los movimientos. La crítica va a `reviews/critica-NN.md` (el crítico no escribe: cópiala).
+5. Tú no abras los fotogramas uno a uno: mira las hojas y, como mucho, 3-4 sueltos (más de 20 imágenes bloquean el chat).
+6. Completa `reviews/qa-vN.md` (el borrador de `qa.mjs`):
    ```markdown
    # QA · <slug> · <formato> vN · AAAA-MM-DD
    | Comprobación | Medida | Umbral | OK/FALLA |

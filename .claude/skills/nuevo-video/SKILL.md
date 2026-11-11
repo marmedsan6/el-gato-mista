@@ -16,7 +16,8 @@ description: Crea un vídeo nuevo de ElGatoMista en proyectos/<slug>/ a partir d
 6. Añade la fila del vídeo a `memoria/videos.md` (etapa: brief).
 
 Comprobación: `ls proyectos/<slug>` muestra brief.md, fuentes.json, verificacion.md, guion.md, shotlist.md,
-style_guide.md, publicacion.json, timing.*.json, escenas/, render/, reviews/ y salida/; y `grep -l "<slug>" proyectos/<slug>/*.md`
+style_guide.md, publicacion.json, timing.*.json, escenas/ (vacía: la escena sale de `plantillas/escenas/v6/`), render/,
+reviews/ y salida/; y `grep -l "<slug>" proyectos/<slug>/*.md`
 no devuelve ningún fichero.
 
 ## El flujo completo
@@ -27,13 +28,14 @@ en `memoria/decisiones.md` o en el estilo. Si no tienes ninguna, sigue sin pregu
 | Paso | Quién y con qué | Sale | Dudas típicas antes de generar |
 |---|---|---|---|
 | Fuentes y hechos | Opus; subagente `verificador-enlaces` | `fuentes.json`, `verificacion.md`, `reviews/enlaces.md` | Qué fuente manda si se contradicen |
-| Guion | Opus | `guion.md`, cada frase con su `[fN]`; el short, con su duración estimada | Enfoque, gancho, qué matices cuentan, tono |
+| Guion | Opus | `guion.md`, cada párrafo con sus `[fN]` (de ahí sale la fuente de la caja); el short, con su duración estimada | Enfoque, gancho, qué matices cuentan, tono |
 | **PUERTA 1** | Mario | `reviews/puerta-1.md` con la SHA-256 del guion | Se le pide aprobar o cambiar |
-| Storyboard y estilo | Opus; skill `estilo` | `shotlist.md`, `style_guide.md` | Escenarios, objetos, si se aparta del estilo |
-| Voz | `motor/voz/generar.mjs`, Orus **con** el `--estilo` de siempre (el último en `.runtime/cache/voz/gemini-*.meta.json`) | audio en `.runtime/voz/<slug>/` | Ritmo, pronunciación de nombres; gasto, si lo hay |
-| Alineación | `motor/voz/alinear.py` | `timing.<formato>.json` | |
-| Escenas | Opus; skill `estilo`, `motor/timing-a-js.mjs` | `escenas/<formato>/` | Enséñale fotogramas si hay una idea visual nueva |
-| Render | `motor/render.mjs` | `render/<formato>/` | |
+| Storyboard y estilo | Opus; skill `estilo` | `shotlist.md`, `style_guide.md` | Escenarios, qué se dibuja para cada dato, cambios de tema, zooms core |
+| Voz | `motor/voz/generar.mjs` (largo: `por-bloques.mjs`), Orus **con** el `--estilo` de siempre (el último en `.runtime/cache/voz/gemini-*.meta.json`); en el short, `apretar-pausas.mjs` | audio en `.runtime/voz/<slug>/` | Ritmo, pronunciación de nombres; gasto, si lo hay |
+| Alineación | `motor/voz/alinear.py`, `escrito.mjs` y `revisar-alineacion.mjs --corregir` | `timing.<formato>.json` con los límites de frase en los silencios | |
+| Escenas | Opus; skill `estilo`; plantilla de `plantillas/escenas/v6/`; `motor/timing-a-js.mjs --guion` | `escenas/<formato>/` | Enséñale fotogramas si hay una idea visual nueva |
+| Lint | `node motor/revisar.mjs … --estricto` | 0 errores antes de renderizar entero | |
+| Render | `motor/render.mjs` (un tramo: `--desde/--hasta`) | `render/<formato>/` | |
 | Mezcla | `motor/eventos.mjs`, `motor/mezcla.mjs` | `salida/<formato>-vN.mp4` | Música y efectos, si no están decididos |
 | QA | skill `qa` | `reviews/qa-vN.md`, `critica-vN-NN.md`, `publicacion.json` | Título, portada, contenido sintético, frases de la descripción |
 | **PUERTA 2** | Mario ve el máster: pide cambios o da la orden de subir | | Si pide cambios, se vuelve a Escenas y se anota en `reviews/iter-NN.md` |
@@ -41,7 +43,8 @@ en `memoria/decisiones.md` o en el estilo. Si no tienes ninguna, sigue sin pregu
 
 Duración del short: la decides tú al escribir su guion. Que la explicación quede clara y sin ambigüedad manda;
 el tope es 120 s y no hay que apretar hacia los 60 s. Si un punto no cabe bien explicado, alarga o quítalo entero,
-pero no lo dejes a medias. Estima con caracteres/13 y anota la duración y el porqué en el comentario del `## Short`.
+pero no lo dejes a medias. Estima con caracteres/17 (Orus con el estilo de siempre) o caracteres/13 (estilo lento: thriller,
+miedo) y anota la duración y el porqué en el comentario del `## Short`. Todos los comandos, en `motor/README.md`.
 
 Cierre del short: si el vídeo tiene largo, la última frase de MISTA remite a él, adaptada al tema y con la misma idea
 («¿Te interesa saber más? Tengo un vídeo largo en YouTube que lo explica entero»), en voz y en la caja de diálogo

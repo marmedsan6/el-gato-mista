@@ -1,7 +1,8 @@
 # 0005 · Estilo v1
 
 - Fecha: 2026-10-29
-- Estado: aceptada (Mario: «Me gusta, aprobado», sobre el clip C5b v2)
+- Estado: aceptada (Mario: «Me gusta, aprobado», sobre el clip C5b v2). **Sustituida en parte** por los ADR 0007, 0009 y
+  0010: lo vigente es el bloque «Estilo vigente» de `docs/estilo.md`.
 
 ## Contexto
 El estilo se calibró con el método de `docs/calibracion.md`:

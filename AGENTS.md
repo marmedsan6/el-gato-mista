@@ -7,7 +7,7 @@ mismo guion y estilo, compuestos por separado, nunca recortando uno del otro.
 
 ## Lee antes de trabajar
 - memoria/decisiones.md (siempre) y, si tocas un vídeo, proyectos/<slug>/brief.md.
-- Estilo vigente (v5: diorama animado a 4 px, MISTA solo en los temas; aprobado el 2026-11-09, ADR 0009): antes de tocar escenas, skill `estilo`.
+- Estilo vigente (v6: diorama animado a 4 px, casi sin texto, fuente en la caja de diálogo; ADR 0009 y 0010): antes de tocar escenas, skill `estilo`.
 - Calidad y contrato de escena: docs/criterios.md. Diseño: docs/arquitectura.md.
 - Calibración de estilo: docs/calibracion.md. Pendiente y orden: docs/hoja-de-ruta.md.
 
@@ -23,7 +23,10 @@ brief → fuentes y verificación → guion → [PUERTA 1] → storyboard y esti
 ## Reglas
 - Español siempre. Cada hecho, con fuente en fuentes.json; sin fuente no entra.
 - Material de terceros: solo público, registrado en fuentes.json (URL, autor, licencia, tramo) y acreditado.
-- Escenas: contrato seek(t) de docs/criterios.md, sin excepciones en modo render.
+- Escenas: contrato seek(t) de docs/criterios.md, sin excepciones en modo render. Ninguna se renderiza entera sin pasar
+  `node motor/revisar.mjs … --estricto`, y ningún máster va al crítico sin `node motor/qa.mjs` (comandos: motor/README.md).
+- Lo publicado no se toca: sus escenas y bibliotecas (v2, v3, v5) se quedan como están; `npm test` compara sus huellas.
+- No lances nada pesado mientras corre un render (8 navegadores saturan la máquina) y revisa imágenes en hojas, no una a una.
 - Claves solo en .runtime/claves/: nunca las leas, imprimas ni copies. Usa .env.example.
   Excepción: las credenciales de las redes están en ~/.clipping-ia (ADR 0008), con la misma regla.
 - Pesados en .runtime/, render/ y salida/ (ignorados). Nada pesado en git.
@@ -43,4 +46,5 @@ brief → fuentes y verificación → guion → [PUERTA 1] → storyboard y esti
 
 ## Memoria
 Al cerrar una tarea, actualiza memoria/: decisiones.md (qué y por qué), videos.md (estado
-de cada vídeo), aprendizajes.md (qué funcionó y qué no).
+de cada vídeo), aprendizajes.md (qué funcionó y qué no). Esos tres ficheros llevan lo vigente; lo anterior al 2026-11-10
+está entero en memoria/historial/ (léelo solo si necesitas el porqué de algo antiguo).
