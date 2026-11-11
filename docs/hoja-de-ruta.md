@@ -7,7 +7,7 @@ primeros vídeos) está en `docs/historial/hoja-de-ruta-hasta-2026-11-09.md`. El
 - **Vídeos:** 7 publicados (Mithril, Phonic-1, Alien: Isolation, ventanas de contexto, resumen semanal, NVIDIA y Fable 5.2).
 - **Estilo:** v6 (ADR 0010) sobre la v5 (ADR 0009). Reglas de Mario del 2026-11-10 y prueba aprobada el 2026-11-11 («Me gusta, sigue»).
 - **Sistema:** motor propio con lint, QA en un comando, limitador, render por tramo y huellas de lo publicado.
-- **Git:** todo en la rama `claude/elgatomista-execution-plan-c8445b`; `main` va por detrás hasta que Mario fusione.
+- **Git:** la rama `claude/elgatomista-execution-plan-c8445b` y el `main` local están en el mismo commit; falta el push de Mario.
 
 ## Iteración v6 (2026-11-10)
 Diagnóstico: `docs/investigacion/diagnostico-2026-11-10/informe.md`. Decisiones: `memoria/decisiones.md`.
@@ -31,7 +31,7 @@ Diagnóstico: `docs/investigacion/diagnostico-2026-11-10/informe.md`. Decisiones
 ## Pendiente, en orden
 | # | Tarea | Necesita a Mario |
 |---|---|---|
-| 1 | Push de la rama y avance de `main` en origin (los commits de la v6 están hechos desde el 2026-11-11). Después, ordenar el checkout principal: tiene cambios locales distintos de la rama (memoria, skill `nuevo-video`, `proyectos/resumen-semana-agentes/`, `proyectos/anthropic-fable-5-2/`) y una carpeta que solo está allí (`docs/investigacion/diagnostico-canal-2026-11-10/`) | Sí: el push y decidir qué se conserva |
+| 1 | Push de `main` y de la rama (el `main` local ya está en la punta de la rama desde el 2026-11-11; lo que había sin versionar en el checkout principal está en `.runtime/respaldo-main-2026-11-11/`) | Sí: el push |
 | 2 | Decidir qué se hace con el short publicado de NVIDIA (el crítico lo da por no apto a posteriori) | Sí |
 | 3 | Instagram de anthropic-fable-5-2, que falló al subir (HTTP 400 ProcessingFailedError) | Sí |
 | 4 | Primer vídeo completo en v6 (un largo con sus shorts) | Tema y puertas |
