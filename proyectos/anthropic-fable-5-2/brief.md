@@ -1,0 +1,23 @@
+# Brief · anthropic-fable-5-2
+
+- Tema: Anthropic ha sacado Claude Fable 5.2 (y su gemelo con salvaguardas, Mythos 5.2) el 9 de noviembre de 2026: qué mejora frente a **Opus 5.5** y frente al **Fable 5.1** anterior, y cuánto cuesta.
+- Categoría: noticias · IA
+- Ángulo (qué pregunta responde): **«¿Por qué el modelo nuevo de Anthropic cuesta el doble y sale más barato?»**. Fable 5.2 sube en casi todas las pruebas frente a Opus 5.5 y frente a Fable 5.1, pero cuesta el doble por token; aun así, sale a la mitad por tarea. Y Anthropic sigue recomendando empezar por Opus 5.5. El vídeo desmonta el «+30 %» del anuncio y pone las cifras en su sitio.
+- Gancho de los primeros 5 s: la paradoja del precio — «Fable 5.2 cuesta el doble por token… y aun así sale a la mitad por tarea» (Mario, 2026-11-10).
+- Público: general interesado en IA y en programación, sin jerga. Los benchmarks se explican con una frase de qué miden.
+- Tono: MISTA **escéptico con el marketing** de Anthropic: presenta las cifras del anuncio y las corrige con el matiz del coste y con la recomendación de seguir con Opus 5.5 (Mario, 2026-11-10).
+- Formato: **solo short 9:16**, sin largo (Mario, 2026-11-10). Sin largo, el short termina con el dato, sin remitir a ningún vídeo.
+- Duración objetivo: short, la decide su guion (máx. 120 s).
+- Cámara: **plano de detalle (zoom core) en la balanza de precio y coste** (Mario, 2026-11-10). El resto, plano general.
+- Voz: Gemini TTS «Orus» con el `--estilo` de siempre (profesor cercano), como los últimos vídeos. Nombres en `voz-escrito.json` («Féibol», «Mítos», «Ópus», «Antrópic»…), con el nombre real en pantalla.
+- Hechos clave a verificar:
+  - Fecha y contenido del anuncio de Fable 5.2 / Mythos 5.2 (9 nov 2026).
+  - Precios: Fable 5.2 8 $/40 $ por millón de tokens; fast mode 16 $/80 $; Opus 5.5 4 $/20 $; precio de Fable 5.1 (si no se verifica, no entra).
+  - Benchmarks del anuncio frente a Fable 5.1 y Opus 5.5 (FrontierCode 2.0, SWE v2, AutomationBench, Terminal-Bench-Science, WANDR, OSWorld 2.1, RoboDojo, RLI, HLE, Chartography).
+  - El matiz de esfuerzo: a High empata con Opus 5.5 a Max por la mitad de coste por tarea; Anthropic recomienda empezar por Opus 5.5.
+  - Que Fable y Mythos son el mismo modelo con salvaguardas distintas; 1 M de contexto; 4 cambios que rompen código respecto a 5.1.
+- Material de terceros previsto: ninguno. Todo pixel art con MISTA; las fuentes, pequeñas en pantalla.
+- Sonido: el chiptune suave de siempre y efectos a -24 dB.
+- Gasto: voz de Orus (plan de Gemini con facturación); se informa del coste real al terminar.
+- Fecha límite (si es noticia): cuanto antes; noticia del 9 nov 2026. Antes de la PUERTA 2 se vuelven a consultar las fuentes.
+- Origen del tema: Mario, 2026-11-10.

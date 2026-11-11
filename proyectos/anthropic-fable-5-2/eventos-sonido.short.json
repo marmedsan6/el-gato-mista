@@ -1,0 +1,118 @@
+[
+ {
+  "t": 1.32,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 4.06,
+  "tipo": "error"
+ },
+ {
+  "t": 5.2,
+  "tipo": "destello"
+ },
+ {
+  "t": 10.625,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 16.36,
+  "tipo": "destello"
+ },
+ {
+  "t": 22.4,
+  "tipo": "error"
+ },
+ {
+  "t": 23.21,
+  "tipo": "destello"
+ },
+ {
+  "t": 28.12,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 28.44,
+  "tipo": "acierto"
+ },
+ {
+  "t": 35.58,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 38.42,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 40.619,
+  "tipo": "destello"
+ },
+ {
+  "t": 41.86,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 45.92,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 50.592,
+  "tipo": "destello"
+ },
+ {
+  "t": 50.992,
+  "tipo": "destello"
+ },
+ {
+  "t": 58.38,
+  "tipo": "error"
+ },
+ {
+  "t": 59.5,
+  "tipo": "error"
+ },
+ {
+  "t": 59.82,
+  "tipo": "destello"
+ },
+ {
+  "t": 67.02,
+  "tipo": "acierto"
+ },
+ {
+  "t": 68.14,
+  "tipo": "acierto"
+ },
+ {
+  "t": 76.893,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 83.18,
+  "tipo": "error"
+ },
+ {
+  "t": 84.14,
+  "tipo": "acierto"
+ },
+ {
+  "t": 86.11,
+  "tipo": "destello"
+ },
+ {
+  "t": 88.18,
+  "tipo": "acierto"
+ },
+ {
+  "t": 88.592,
+  "tipo": "destello"
+ },
+ {
+  "t": 88.592,
+  "tipo": "destello"
+ },
+ {
+  "t": 89.6,
+  "tipo": "tick"
+ }
+]

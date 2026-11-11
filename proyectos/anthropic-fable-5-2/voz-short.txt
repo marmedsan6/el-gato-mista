@@ -1,0 +1,25 @@
+Anthropic ha sacado un modelo nuevo, Féibol cinco punto dos, y cuesta el doble por token que el que te recomienda usar.
+Y, aun así, sale más barato.
+Féibol y Mítos son el mismo modelo.
+Mítos solo lo usan organizaciones verificadas, para ciberseguridad y biología.
+Féibol es el de todos los días.
+Antrópic dice que genera texto hasta un treinta por ciento más rápido que su versión anterior.
+Ese «hasta» es un techo, no una media.
+Pero el dato que muerde es otro.
+Según sus pruebas, Féibol cinco punto dos saca cuarenta y nueve coma uno por ciento en Fróntier Coud, que mide si tus cambios de código los aceptarían los dueños del proyecto.
+Su versión anterior, Féibol cinco punto uno, sacaba treinta y dos coma cuatro.
+Y Ópus cinco punto cinco, cuarenta y cinco coma cinco.
+En ciencia, setenta y cuatro coma seis frente a cincuenta y dos coma seis y cincuenta y ocho coma siete.
+En robótica simulada casi se triplica: sesenta y cuatro coma nueve frente a veintisiete coma seis.
+Ahora, el precio.
+Ópus cinco punto cinco cuesta cuatro dólares por millón de tóquens de entrada y veinte de salida.
+Féibol cinco punto dos, ocho y cuarenta.
+El doble.
+Pero Antrópic no vende el tóquen: vende la tarea.
+Con el mismo esfuerzo, Féibol cinco punto dos empata con Ópus cinco punto cinco al máximo y sale por la mitad.
+Y esa letra pequeña la dice el propio anuncio: la mitad de coste es una estimación suya, y para la mayoría del trabajo te recomienda seguir con Ópus cinco punto cinco.
+Sube a Féibol solo cuando Ópus, apretado al máximo, no llegue.
+Y ojo: migrar no es cambiar el nombre.
+Hay cuatro cambios que rompen código, y el pensamiento del modelo ya no se puede desactivar.
+Así que el modelo nuevo no es el que más gana.
+Es el que gana más barato.

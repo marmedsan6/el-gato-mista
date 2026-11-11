@@ -1,0 +1,100 @@
+{
+  "fuentes": [
+    {
+      "id": "f1",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "autor": "Anthropic",
+      "fecha": "2026-11-09",
+      "consultada": "2026-11-10",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "Anuncio de Claude Fable 5.2 y Claude Mythos 5.2 (9 nov 2026). «Fable and Mythos are the same underlying model»: Fable lleva salvaguardas fuertes de ciberseguridad y biología y está disponible para todos; Mythos, solo para organizaciones verificadas. Generan salida «hasta un 30 % más rápido» que Fable 5.1 y Mythos 5.1 y cuestan 8 $ por millón de tokens de entrada y 40 $ por millón de salida. Modo rápido opcional (hasta 2,5 veces más rápido): 16 $ / 80 $. Para la mayoría de tareas de código y conocimiento recomiendan empezar por Opus 5.5 y subir a Fable o Mythos según la complejidad. Tabla de benchmarks Fable 5.2 / Fable 5.1 / Opus 5.5: FrontierCode 2.0 49,1 % (Xhigh) / 32,4 % (Xhigh) / 45,5 %; FrontierSWE v2 69,9 / 56,3 / 62,3; AutomationBench 51,4 / 31,4 / 42,5; Terminal-Bench-Science 0.1 74,6 / 52,6 / 58,7; CyScenarioBench 76,3 (Mythos 5.2) / 61,7 (Mythos 5.1) / 67,6 (Opus 5.5 sin salvaguardas); CVE Rediscovery 89,6 / 78,3 / 81,3; binder design 85,1 / 79,1 / 82,6; WANDR 82,1 / 68,7 / 72,3; OSWorld 2.1 89,3 / 83,5 / 87,2; RoboDojo Sim 64,9 / 27,6 / 39,4; AA-Briefcase 66,1 / 61,5 / 61,2 (Elo 1785 / 1669 / 1800); RLI 41,3 (High) / 17,9 / 21,3; HLE con herramientas 74,2 / 65,6 / 67,7; Chartography sin herramientas 73,4 / 44,8 / 64,4. «At High effort, Fable 5.2 scores about the same as Opus 5.5's best score (45.3% vs 45.5%) for roughly half the cost per task»; en Xhigh llega a 49,1 %, la puntuación más alta de cualquier modelo lanzado que han probado. Pruebas de prelanzamiento: migraciones de software que no se podían hacer, tres dispositivos electrónicos desde cero, dos problemas abiertos de física de agujeros negros y la prueba del último teorema de Fermat formalizada en 30 horas. Salvaguardas de ciber y biología tan robustas como las de Fable 5.1 pero con menos bloqueos innecesarios; «strongest-ever protections against distillation attacks».",
+      "uso": "Fecha, precio, modo rápido, velocidad, Fable = Mythos, recomendación de empezar por Opus 5.5, tabla de benchmarks, coste por tarea, hazañas de prelanzamiento, salvaguardas",
+      "tramo": ""
+    },
+    {
+      "id": "f2",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "autor": "Anthropic (documentación de la plataforma)",
+      "fecha": "",
+      "consultada": "2026-11-10",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "Tabla de precios por millón de tokens (entrada / salida / escrituras de caché 5 min / 1 h / lecturas de caché): Claude Fable 5.2 8 $ / 40 $ / 10 $ / 16 $ / 0,20 $; Claude Opus 5.5 4 $ / 20 $ / 5 $ / 8 $ / 0,20 $; Claude Sonnet 5.5 2 $ / 10 $; Claude Haiku 5.5 0,10 $ / 0,50 $; Claude Mythos 5.2 8 $ / 40 $ (caché 10 $ / 16 $ / 0,20 $). Fable 5.1 figura en la tabla de modelos adicionales con 10 $ / 50 $ (fila cortada al leerla: no se usa en el guion).",
+      "uso": "Precios de Fable 5.2 y Opus 5.5; que Fable 5.1 sigue existiendo",
+      "tramo": ""
+    },
+    {
+      "id": "f3",
+      "url": "https://www.anthropic.com/claude-opus-5-5",
+      "autor": "Anthropic",
+      "fecha": "2026-09-22",
+      "consultada": "2026-11-10",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "Anuncio de Claude Opus 5.5 (22 sep 2026): «the first model in our new Claude 5.5 family»; «It performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5». Precios: entrada 4 $ y salida 20 $ por millón de tokens; lecturas de caché 0,20 $; escrituras 5 $. Modo rápido: 8 $ / 40 $. Benchmarks frente a Fable 5.1: Terminal-Bench 4.0 66,4 % / 55,8 %; FrontierCode v1.1 54,4 % / 50,3 %; CursorBench 4.0 57,8 % / 51,8 %; GDPval-AA v2.1 1846 / 1735; AutomationBench 40,0 % / 31,4 %; HLE con herramientas 67,7 % / 65,6 %; Terminal-Bench-Science 0.1 58,7 % / 52,6 %; OSWorld 2.1 81,8 % / 80,7 %; Chartography con herramientas 89,0 % / 88,4 %. Resultados «at max effort» salvo que se indique. En una prueba interna, Opus 5.5 y Fable 5.1 tradujeron HAProxy de C a Rust: Opus 5.5 tardó 9,5 horas frente a 12 y costó un 51 % menos.",
+      "uso": "Posicionamiento de Opus 5.5 como modelo recomendado y su precio; comparativa Opus 5.5 frente a Fable 5.1 (código, ciencia, automatización)",
+      "tramo": ""
+    },
+    {
+      "id": "f4",
+      "url": "https://www.anthropic.com/claude/mythos",
+      "autor": "Anthropic",
+      "fecha": "2026-11-09",
+      "consultada": "2026-11-10",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "Página de la familia Mythos: Mythos 5.2 (9 nov 2026) es «our most capable model for cybersecurity and life sciences research», disponible para organizaciones verificadas (Life Sciences y Cyber Verification Programs). Precio desde 8 $ / 40 $ por millón de tokens; modo rápido 16 $ / 80 $. «Claude Fable 5.2 and Claude Mythos 5.2 are the same underlying model. Results below are for Fable 5.2 unless noted; where Mythos 5.2 results are shown, the gap reflects tasks where Fable 5.2's safeguards intervene». Repite la tabla de benchmarks de f1. Historial: Mythos 5.1 el 1 de septiembre de 2026; controles de exportación levantados el 1 de julio.",
+      "uso": "Mythos 5.2: mismo modelo, acceso verificado, precios, y que la diferencia en las pruebas es por las salvaguardas",
+      "tramo": ""
+    },
+    {
+      "id": "f5",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "autor": "Anthropic",
+      "fecha": "2026-09",
+      "consultada": "2026-11-10",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "Anuncio de Claude Fable 5.1 y Claude Mythos 5.1 (septiembre de 2026): «the world's most advanced models for coding and knowledge work»; Fable 5.1 y Mythos 5.1 son el mismo modelo con distintos niveles de salvaguardas. «Fable 5.1 will cost an estimated 25% less than Fable 5 for typical workloads» por la rebaja de las lecturas de caché. Tabla frente a Fable 5 y Opus 5: Terminal-Bench-Science 0.1 52,6 % / 24,7 % / 29,0 %; Terminal-Bench 4.0 55,8 % (Mythos 5.1: 60,9 %) / 42,0 % / 52,3 %; GDPval-AA v2 1853 / 1723 / 1824; OSWorld 2.0 77,9 % / 72,9 % / 75,4 % (parcial); HLE sin herramientas 60,9 % / 57,8 % / 56,6 %; AutomationBench 31,4 % / 17,1 % / 26,9 %; CursorBench 3.2.0 73,4 % / 70,5 % / 70,0 %. Fable 5.1 usa por defecto esfuerzo High en Claude Code y Medium en Claude Cowork y Claude.ai.",
+      "uso": "Qué era Fable 5.1, cuándo salió y sus cifras frente a Opus 5 para la comparativa del modelo anterior",
+      "tramo": ""
+    },
+    {
+      "id": "f6",
+      "url": "https://platform.claude.com/docs/en/models/fable-5-2/whats-new-fable-5-2",
+      "autor": "Anthropic (documentación de la plataforma)",
+      "fecha": "",
+      "consultada": "2026-11-10",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "Novedades de Fable 5.2 frente a Fable 5.1: ventana de contexto de 1 M de tokens (por defecto y máxima) y hasta 128k tokens de salida; pensamiento adaptativo siempre activo, con el parámetro de esfuerzo; tokenizador el de Opus 4.7. Cuatro cambios que pueden romper código: la comprobación de prefijo se aplica a todas las cuentas; solo Fable 5.2 y Mythos 5.2 leen los bloques de pensamiento de Fable 5.2; la herramienta de uso de ordenador computer_20251124 da error salvo en Amazon Bedrock; con la herramienta de asesor, un ejecutor Fable 5.2 necesita un asesor Fable 5.2 o Mythos 5.2. Recomendación: «For most workloads, start with the latest Claude Opus model… and move to Claude Fable 5.2 when your evals on a Claude Opus model at higher effort still don't meet your requirements».",
+      "uso": "Contexto de 1 M, 128k de salida, cambios que rompen código y recomendación de empezar por Opus",
+      "tramo": ""
+    },
+    {
+      "id": "f7",
+      "url": "https://platform.claude.com/docs/en/models/fable-5-2/migration-guide",
+      "autor": "Anthropic (documentación de la plataforma)",
+      "fecha": "",
+      "consultada": "2026-11-10",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "Guía de migración a Fable 5.2 y Mythos 5.2: pensamiento adaptativo siempre activo (desactivarlo o usar presupuesto manual da error 400); los cinco niveles de esfuerzo, con High por defecto (igual que Fable 5.1); no se admite precarga de la respuesta del asistente, ni temperatura, top_p o top_k, ni forzar una herramienta; ventana de 1 M de tokens y hasta 128k de salida; precio 8 $ / 40 $ por millón de tokens. Disponible en la API de Claude, Claude Platform en AWS, Google Cloud, Amazon Bedrock y Microsoft Foundry; Mythos 5.2, solo para organizaciones verificadas.",
+      "uso": "1 M de contexto, esfuerzo por defecto, precio y disponibilidad",
+      "tramo": ""
+    },
+    {
+      "id": "f8",
+      "url": "https://platform.claude.com/docs/en/models/overview",
+      "autor": "Anthropic (documentación de la plataforma)",
+      "fecha": "",
+      "consultada": "2026-11-10",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "Comparativa de modelos: «If you're unsure which model to use, start with Claude Opus 5.5 for most workloads. Use Claude Fable 5.2 for demanding reasoning and long-horizon agentic work, or when your evals on Claude Opus 5.5 at higher effort still fall short». Fable 5.2 es «for demanding reasoning and long-horizon agentic work»; Opus 5.5, «for long-running agentic coding and knowledge work».",
+      "uso": "Que la documentación recomienda empezar por Opus 5.5",
+      "tramo": ""
+    }
+  ]
+}

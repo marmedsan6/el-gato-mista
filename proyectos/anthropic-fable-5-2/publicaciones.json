@@ -1,0 +1,15 @@
+{
+  "historias": {
+    "b7e9422c0f458c16b8577636045a46b5897038b33af957a462f9dfeac2296863": {
+      "video_id": "Khdv6jail5M",
+      "channel_id": "UCA76YezyGjv7spjOfRqAKNA",
+      "sha256": "173b21420400c4efdfa1486a0730fc66973709af0a414d54499d75799621f043",
+      "formato": "short",
+      "fecha": "2026-11-10T13:12:18.272243+00:00",
+      "url": "https://www.youtube.com/watch?v=Khdv6jail5M",
+      "body_sha256": "59464cd2d43176f3d2551abb0bb9a4bef077bf3b3c7cd1e530a56f4144545c62",
+      "descripcion_enviada": "Anthropic ha sacado Claude Fable 5.2, que cuesta el doble por token que Opus 5.5, el modelo que la propia empresa te recomienda para el día a día. Y aun así, según sus pruebas, sale más barato por tarea: a la misma exigencia empata con Opus 5.5 y cuesta la mitad. El vídeo repasa qué mejora frente a Fable 5.1 y a Opus 5.5 en código, ciencia y robótica, cuánto cuesta cada uno, y la letra pequeña del anuncio: la mitad de coste es una estimación de Anthropic, que sigue diciendo que empieces por Opus 5.5 y subas a Fable solo cuando no llegue.",
+      "portada_sha256": "9bdc90eba612c50c7322876a379e3a73ff505d87b5d44a8519e79615cf6f844b"
+    }
+  }
+}

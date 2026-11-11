@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "instagram": {
+    "estado": "subida_fallida",
+    "huella": "42df80996afab101a0cb7238e87aa41b92d1d1d1379424ad252a621bd86758d3",
+    "sha256": "173b21420400c4efdfa1486a0730fc66973709af0a414d54499d75799621f043",
+    "creado": "2026-11-10T13:16:34.102573+00:00",
+    "container_id": "18131120386825706"
+  },
+  "actualizado": "2026-11-10T13:19:59.887477+00:00",
+  "tiktok": {
+    "sha256": "173b21420400c4efdfa1486a0730fc66973709af0a414d54499d75799621f043",
+    "estado": "enviado",
+    "creado": "2026-11-10T13:14:42.628197+00:00",
+    "publish_id": "v_inbox_file~v2.7706530317166888982",
+    "tiktok": "PROCESSING_UPLOAD",
+    "motivo": null
+  }
+}

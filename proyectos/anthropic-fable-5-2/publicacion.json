@@ -1,0 +1,25 @@
+{
+  "perfil": "es",
+  "formatos": {
+    "short": {
+      "archivo": "salida/short-v1.mp4",
+      "titulo": "¿Por qué el modelo nuevo de Anthropic cuesta el doble y sale más barato?",
+      "descripcion": "Anthropic ha sacado Claude Fable 5.2, que cuesta el doble por token que Opus 5.5, el modelo que la propia empresa te recomienda para el día a día. Y aun así, según sus pruebas, sale más barato por tarea: a la misma exigencia empata con Opus 5.5 y cuesta la mitad. El vídeo repasa qué mejora frente a Fable 5.1 y a Opus 5.5 en código, ciencia y robótica, cuánto cuesta cada uno, y la letra pequeña del anuncio: la mitad de coste es una estimación de Anthropic, que sigue diciendo que empieces por Opus 5.5 y subas a Fable solo cuando no llegue.",
+      "tags": [
+        "Anthropic",
+        "Claude",
+        "Fable 5.2",
+        "Opus 5.5",
+        "Inteligencia artificial",
+        "Modelos de IA",
+        "Noticias",
+        "Shorts"
+      ],
+      "categoria": "28",
+      "visibilidad": "public",
+      "portada_segundo": 0.5,
+      "made_for_kids": false,
+      "contains_synthetic_media": false
+    }
+  }
+}
