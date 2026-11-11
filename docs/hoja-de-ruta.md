@@ -31,7 +31,7 @@ Diagnóstico: `docs/investigacion/diagnostico-2026-11-10/informe.md`. Decisiones
 ## Pendiente, en orden
 | # | Tarea | Necesita a Mario |
 |---|---|---|
-| 1 | Commits de la iteración v6 y fusión con `main` (la prueba ya está aprobada) | Sí: decir «commit» y hacer el push |
+| 1 | Push de la rama y avance de `main` en origin (los commits de la v6 están hechos desde el 2026-11-11). Después, ordenar el checkout principal: tiene cambios locales distintos de la rama (memoria, skill `nuevo-video`, `proyectos/resumen-semana-agentes/`, `proyectos/anthropic-fable-5-2/`) y una carpeta que solo está allí (`docs/investigacion/diagnostico-canal-2026-11-10/`) | Sí: el push y decidir qué se conserva |
 | 2 | Decidir qué se hace con el short publicado de NVIDIA (el crítico lo da por no apto a posteriori) | Sí |
 | 3 | Instagram de anthropic-fable-5-2, que falló al subir (HTTP 400 ProcessingFailedError) | Sí |
 | 4 | Primer vídeo completo en v6 (un largo con sus shorts) | Tema y puertas |
