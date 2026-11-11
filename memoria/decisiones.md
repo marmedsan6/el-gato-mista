@@ -78,8 +78,13 @@ necesitas el porqué de algo antiguo). Lo nuevo se añade al final de su tema o 
 
 - 2026-11-11 · Con la prueba aprobada quedan como están las cuatro decisiones del agente de arriba (tuit sin titular, sin «(Huang Le)», rótulos y título de 2 s): Mario no pidió cambiarlas.
 
+## Diagnóstico de gancho y herramientas (2026-11-10; otra sesión, en el checkout principal)
+- 2026-11-10 · Mario pide un diagnóstico del canal sobre el repo `youtube-agent-skill` (vía un tuit de @dopamine_crypto) y dos reels de Instagram, para mejorar el sistema «sin hacer ruido en exceso». Respuestas de Mario: los reels se descargan y se analizan con ffmpeg; el gancho debe ser **las dos cosas** (situación del espectador en la primera frase **y** sostenida 5-8 s); **solo el diagnóstico escrito** por ahora; el repo de terceros **solo como referencia, sin copiar código**.
+- 2026-11-10 · Diagnóstico en `docs/investigacion/diagnostico-canal-2026-11-10/diagnostico.md`. Conclusión: nuestro gancho empieza por el sujeto o por una cifra sin dueño; el de referencia («Suppose So», reel `DfgwuIqsFS0`) empieza por el espectador y demora el primer dato. Del repo se descartan `/yt-shorts` (choca con la regla de guion propio) y `/yt-edit`; se adopta la idea del «eslabón más débil» y la de leer el CSV de retención de Studio. **Nada implementado**: las fases 0.1-0.4 y 1.1-1.3 esperan el sí de Mario.
+
 ## Pendiente de que Mario decida
 - Qué hacer con el short publicado de NVIDIA: el crítico, a posteriori, lo da por no apto (se lee «NVIDIA INVESTIGA CHINA» 2,6 s y tres frases no llevan fuente visible). Hay una v4 interna.
 - Si lo siguiente se hace ya en v6 (anthropic-fable-5-2 salió en v5).
 - El catálogo de dioramas por concepto y si un sistema (u Opus) elige el recurso.
 - Instagram de anthropic-fable-5-2 (falló al subir).
+- Las fases 0.1-0.4 y 1.1-1.3 del diagnóstico de gancho (`docs/investigacion/diagnostico-canal-2026-11-10/diagnostico.md`): nada implementado.
