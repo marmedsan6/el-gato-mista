@@ -1,0 +1,455 @@
+{
+ "navegador": "chromium_headless_shell-1243",
+ "escenas": [
+  {
+   "escena": "proyectos/alien-isolation-ia/escenas/largo/largo.html",
+   "ancho": 480,
+   "alto": 270,
+   "tiempos": [
+    36.436,
+    109.308,
+    182.18,
+    255.052,
+    327.924,
+    400.796,
+    473.668,
+    546.54
+   ],
+   "huellas": [
+    "da0fb265b7660434dbc8a6d3ac57e5a5b6512fe179b17a4c33141616e60568fb",
+    "e2a1fe353c72fa4ce9a7877cfeb5638bddc3d23dce862ed2571014fc9bd7d9b0",
+    "ef284f9002dbf281ff3df64a3a8b1ffcd1807b5d178fbddb1ef02e58af65c1bd",
+    "ccececb2f6cde2e3c90a861cf2558590bfc374caf239372760d7bc444d78a40e",
+    "62086e465143c56723bd5c2261488ae5d8b138f681421ed8c7f5f25c5bec0dd6",
+    "a8dbdb7307fff0188f4dfa9d477874e26654ca57c979ddf41725fe108055e5cb",
+    "95366e8d642f50d02d39f3e21fc40b41044a139ccacb9e1ea618e5fd0c77d69d",
+    "f7df8aee8f1738869b2bfa373183ec7b51cf6c00edc2d05e0faf03f92e04f20f"
+   ]
+  },
+  {
+   "escena": "proyectos/alien-isolation-ia/escenas/short-a/short-a.html",
+   "ancho": 270,
+   "alto": 480,
+   "tiempos": [
+    3.378,
+    10.133,
+    16.888,
+    23.643,
+    30.398,
+    37.153,
+    43.908,
+    50.663
+   ],
+   "huellas": [
+    "e5e18df8ca622bd800f91f25165aea448f346e6c1a945c7a59b420fc0e23a81e",
+    "0850ec6282389310ba5bd7c480474429cb9b1ea8fbca77b789cce361d3bf5022",
+    "594d9bcc0d012f92552ad80af6df382d7890d7a4d27f6b91b81f877de947c05d",
+    "6da72e094a03bcc8abd4aa41a15102e5544248362e54838bf744ea8fe810826c",
+    "f7d27644a20626a427acb3bdec3c578ba568d126918c467d42a1748c4ed76046",
+    "1aab517ea3217d3c8db806a91225a64cb98e2a05a385ef8a2307652564dda203",
+    "f1b379e66804e7529364aac0eb5e65b5774bc1361522bcde4d7f582c3ea39625",
+    "9b709bbdbe704891e9c98cdf7eba8ed4e707901424aac9810842c013375beb03"
+   ]
+  },
+  {
+   "escena": "proyectos/alien-isolation-ia/escenas/short-b/short-b.html",
+   "ancho": 270,
+   "alto": 480,
+   "tiempos": [
+    4.362,
+    13.086,
+    21.811,
+    30.535,
+    39.259,
+    47.983,
+    56.708,
+    65.432
+   ],
+   "huellas": [
+    "b8c718ecbd44cb1c51450915ee043f54711765e78445a38d3e6802f59301b545",
+    "8873c409c5339ee1cf187390d62e7d6acb9d6267b7eb935a50eb608da02fd704",
+    "7889e652fd31500f9d9bc34bf9564060980b6c30817d7cd85fd32405a85e3210",
+    "4c4e21d0091d7ae63a999e33494f812e405abd059be3b714ffbb1051f3231e7b",
+    "c35846caba649e494efd356dd06086ec6959edb86aff6397454b2356c8865c74",
+    "a1b8b5a62307d17797b5374da14fae9747db4412b3d39cb6c8087f78a219ff3b",
+    "c287898c93a3cdf4d35427eb2f9705020c22e4831dae4bb25794d85d6e8c8b7e",
+    "416df4fb235509359b31435b48debff719b8feadb5d68fafde0255b84247d8a3"
+   ]
+  },
+  {
+   "escena": "proyectos/anthropic-fable-5-2/escenas/short/short.html",
+   "ancho": 270,
+   "alto": 480,
+   "tiempos": [
+    5.64,
+    16.92,
+    28.2,
+    39.48,
+    50.76,
+    62.04,
+    73.32,
+    84.6
+   ],
+   "huellas": [
+    "4f03c7d98f66767abf15df86e8a4ed2d04931ff4f08e3c09eb05f2fbd6f54187",
+    "cfb740ce08f3910905c370a2fc4c2889548224d29b64751317de4e3653bb4bfb",
+    "8db385315a43cf92fc020f1c2920335490ac61d57b471870bcca724be3780e74",
+    "e58fee8dbc302876855be147dc902b2e543bb62d0c07ea0680d4b2b5bab7f72b",
+    "2bb00650aef767a47b1fbaf2f93770e8ff9ccfdbd85504e4d544c8770a1a8da6",
+    "4b970b3d4e89487a07870a06eda85ea3d49815835d345e8971bf2b2679df69ba",
+    "b00ae22674e68fcfef3ea9242a2a5442478a07ef3a5d42db9d85d0cf541d09e9",
+    "eb609f3096003df27b3b56187c99cd0452b6c64a2942fc33f4d836edac634b93"
+   ]
+  },
+  {
+   "escena": "proyectos/mithril-ia-medicina/escenas/short-v2/short.html",
+   "ancho": 270,
+   "alto": 480,
+   "tiempos": [
+    3.61,
+    10.83,
+    18.05,
+    25.27,
+    32.49,
+    39.71,
+    46.93,
+    54.15
+   ],
+   "huellas": [
+    "a31a11f0c02f3744f59d73f95ec0b224f84c67507c50ff3e22c95371e45dffb0",
+    "81792e26d5ef7fbc74570bd73bd392f9f9b6ae785d2189894138c98d3866b141",
+    "5254791f4b8b932a9a11d0194165b33ec427519c382fb0db1486647729c0f518",
+    "01c2d9f9b59223221a4e56c304e9f10a96169541bf759bb34ccad6d124e65063",
+    "9adc25b339abb460037e67e13db1731377339c7fc47c9aecb4910769ee3f5d68",
+    "0f18fcec6c79cc638f9a11893bba68f13f7634fdbff462c1b866de03208b7f7b",
+    "b33bc3d7a8b9c94bd681cf29e92361e2d9c4d0789dae2b3958e2be0810393f44",
+    "a5b80019e917143ae9a7f257ce25318374a314cda7a176f36d8beeaa6459257d"
+   ]
+  },
+  {
+   "escena": "proyectos/mithril-ia-medicina/escenas/short-v6/short.html",
+   "ancho": 270,
+   "alto": 480,
+   "tiempos": [
+    3.61,
+    10.83,
+    18.05,
+    25.27,
+    32.49,
+    39.71,
+    46.93,
+    54.15
+   ],
+   "huellas": [
+    "baba643e070770cc1dd8cdad3cd48f0e96328cf2bf177bc7a5eef1ef27b04218",
+    "5680a129a52bf8e069e404fad778a655f13799a238fb8d0271f61b953498cb20",
+    "df5316ee61be5b042d5773d94a7307c756d88052afd8594a1ae5c112ce4cb9ab",
+    "f566082852e9f12c405adbcdd7842d7e9bf26a51610cff9e56c5b6733a632d12",
+    "43a2e1a73c6aabdf2f159a9aaaa1db1791f52b35c64bbe69b334c4a8617c1d51",
+    "12a0d8298f9b8e043619e97109a284487d5d1734c145ebd5b49d286d1b6485e2",
+    "75710327e58fb3af986ad65a114116e89ef0d445a2a7ad10b61dc30e059f694c",
+    "f9149da381732249cff91007932a9a0a1878c6c785a53aad96f2c0ef2cbb159f"
+   ]
+  },
+  {
+   "escena": "proyectos/nvidia-huang-espionaje/escenas/short/short.html",
+   "ancho": 270,
+   "alto": 480,
+   "tiempos": [
+    4.411,
+    13.232,
+    22.053,
+    30.875,
+    39.696,
+    48.518,
+    57.339,
+    66.16
+   ],
+   "huellas": [
+    "14cf2e335433a1ab1564b3e68a6c019f412be12540d861330bba478e1fa1dff3",
+    "e204dc3532ffc38663f4b7d40bce615a5b006a7c44206f50aa6d9b9c74d4c42e",
+    "82c3c3c3901de8677833f5f39e56a41edac7c881e26445a5954bb55ec5656864",
+    "e7a0bba7231ccd10139fee327ac2c703d7e65f6bd7a2654c4bb4a4540479afaa",
+    "503e767e71b20165e49bea61369a0fbb613dd5e37bf90b25ba0f039b84ae7daa",
+    "7c87ce859edf4bbe8a4bb300dfeafb6c514d6d29ee850559be01472d38ace94b",
+    "51449f2369b8541070ebfaf38e17c29d35a6960c69970440bb111aa00438d83f",
+    "b1e8f948fba857cd0f394efc6aa94605750c7b0d594264ff439fd7b363008e88"
+   ]
+  },
+  {
+   "escena": "proyectos/nvidia-huang-espionaje/escenas/short-v4/short.html",
+   "ancho": 270,
+   "alto": 480,
+   "tiempos": [
+    4.411,
+    13.232,
+    22.053,
+    30.875,
+    39.696,
+    48.518,
+    57.339,
+    66.16
+   ],
+   "huellas": [
+    "55e64fdec1ae0a6f25551093ca5efa34feefd5452ebefb11263b63d784006230",
+    "bc5e9c26c7a472547966ca535ce8db06eec4175cbd4d7b8268bd4de448e96ee0",
+    "887399557860f1515d6632699890f53246096b150a3a7d0c695ad9a615c55902",
+    "9509e73b8169a1c63fd260b50a117b02e5fa0118b999265833058a08261dd2b4",
+    "aac65e2911aeb6d706b5132e3f1442c8ca6938c4efba0d1cedf829570123a692",
+    "02d23b8a36474928ad96f136bf6dd55567837d51151fda6fb4556db8485a2f37",
+    "0973f549f58cd4cec968e0576d345ac6dc53283980d3e79ce42f733aa15a1046",
+    "50eb0d38fa3c8fa3f3ea22a7fb0198380cccdc2ca879fd2f1d8282e97532a317"
+   ]
+  },
+  {
+   "escena": "proyectos/phonic-1-voz/escenas/largo/largo.html",
+   "ancho": 480,
+   "alto": 270,
+   "tiempos": [
+    30.103,
+    90.31,
+    150.517,
+    210.724,
+    270.93,
+    331.137,
+    391.344,
+    451.551
+   ],
+   "huellas": [
+    "133bc69408c63fe5f6eed6e81de03de36bee279ecc449522817ab514750fc629",
+    "14786e89239b6566bd3a5c3d5226997f2e696103dacc14c043b41c3875340bf4",
+    "9892a93bf1a0b21679c66d3757190f11ff66d8f483b567c1c47081f750dfe3f4",
+    "c7e48d57642f5420bf0de1d0cef91ae507858385c0109508e0fbace7bf20ee89",
+    "dc6801e5ca3a70c5d302c0380f5ee4e1803a05d760a075d65c8cccd9c216e2cd",
+    "081c1f564f5ddf79c56a01acde4cf4def57b8def9635458d2c10df718c3bd781",
+    "16fda19a566443ef001163c54a2a418654fd75db5c5611a8cc1616feaec9d477",
+    "f03ce6b2403380aca5e7f97260c16d87ed885454909af3a8dd00ef81630f7a49"
+   ]
+  },
+  {
+   "escena": "proyectos/phonic-1-voz/escenas/short/short.html",
+   "ancho": 270,
+   "alto": 480,
+   "tiempos": [
+    3.405,
+    10.215,
+    17.025,
+    23.835,
+    30.645,
+    37.455,
+    44.265,
+    51.075
+   ],
+   "huellas": [
+    "a795638fc134205b18bdba1aa86b2f41ce3812e4067d225cf62ac50c7a7ad156",
+    "fe0dfe0c72b1cead5aedf9635bf00cbbe50418f672d6e806dab29bacaed81d50",
+    "ffe3b8a56a01c48718c680670ef82792a70d85fe8598c29c91bfa981e3318a9b",
+    "c818e9a1d145c4f1b9dad70e75abca2bc8e21fc50e42b2cc58ea45a2c412f8e5",
+    "d6137b1d6b0f43e37296503b5dbd3fe03761b338697fc28d7aa8277ec232782c",
+    "7976e7f9d4741c4dabe74007157e49873d213527b18afa42708b85fe20d58b2b",
+    "9d5ed334543dc640bf2d77151b0e68afeeb844ae6396557020bf2cd5f523c7c8",
+    "607f317528e975cc84932e10d6124d3984d66e8c4fc8e6f2fa49462d3b90725e"
+   ]
+  },
+  {
+   "escena": "proyectos/resumen-semana-agentes/escenas/largo/largo.html",
+   "ancho": 480,
+   "alto": 270,
+   "tiempos": [
+    35.2,
+    105.6,
+    176,
+    246.4,
+    316.8,
+    387.2,
+    457.6,
+    528
+   ],
+   "huellas": [
+    "458e6e03714c239aa1f6a293a7b6f7f030140b1121de15f8ab6d12ecdd0c4b11",
+    "422808b0a6be9426ec1a25482fcbb348fa8434bf90d58c093ec542dcee622cbe",
+    "9aa262d02c2fd1cc072b3ee2db1da3b353052d512ef0c31eb9572f607bdf97ba",
+    "d5dd922572226a1f22c3c5e49b2bd8f115897bce7a89038f6533a726d5a7590f",
+    "bc130d14d164b914d23d89da8db40bc5e4f2bf3a66f2207dec63223a7761ca21",
+    "da49c3b06319aeac269f3a29535b017ec7f9dc849eb8059c1dc0a3cb1d782f40",
+    "64bb6ce3d03282937b23c362d0252d3b8d8d1098112b382a2aad3dd6b66fc1cc",
+    "d775b04c1ff5fca35e0981bb59d985cea79cb4ba5e8fefa6d57073adad1c8c71"
+   ]
+  },
+  {
+   "escena": "proyectos/resumen-semana-agentes/escenas/short-a/short-a.html",
+   "ancho": 270,
+   "alto": 480,
+   "tiempos": [
+    3.182,
+    9.545,
+    15.908,
+    22.272,
+    28.635,
+    34.999,
+    41.362,
+    47.725
+   ],
+   "huellas": [
+    "c2f6962cfdaa17ff32b322d051d19ee7492206b995f5c4f788b12a6a75e19bec",
+    "6cd633f46db5a6fdd7a173ff5a9f74d71b88a4b3fce0348f018a5a1962c29141",
+    "37f27d127b64ac787aa0bceb6b9bc6f387dee3fe592e0d2fbafb82c76dd1413a",
+    "30d6252fbd056383455aa8f01aff2748d572ba3be2a8982b8cb05821a00641f7",
+    "3dd1bee56f7cb2dfcae1c75cc420c3acf837b3d14eb9260900c308dea8a1d047",
+    "effd5cffdb92d3552373047281bf4d61f8a5ee947e2ed27c5194dde5f32186c4",
+    "b5145750dba8ae9be29f47746c324ae8d0f25cc83f7d23f90e29feb00256bb26",
+    "eaa27967f937126305ff04fc85814de4f574ecc7b7c0f350de906a1c353500ac"
+   ]
+  },
+  {
+   "escena": "proyectos/resumen-semana-agentes/escenas/short-b/short-b.html",
+   "ancho": 270,
+   "alto": 480,
+   "tiempos": [
+    2.923,
+    8.769,
+    14.616,
+    20.462,
+    26.308,
+    32.154,
+    38.001,
+    43.847
+   ],
+   "huellas": [
+    "3ceaa875c098b02f3949026f4a84dd41edc5983f108d9ee736e8a6a6440ccf5c",
+    "cd2ab66cffaebc45c729a9eecedddba8d581eb2bda90c1fd86c824a9e7537961",
+    "04aad48c9a8df56330f0bc44e6717c25d4b5a9073440bbf5748fc153cde939ef",
+    "4637103d5c42054299960c7ecb7ecb9e3a5ece5701e997d6d0babdd071a82b25",
+    "09b09e1cc61ac74b00debee1f2279d1a10289fe0d43f2f5f318e4ca8b31c8ea8",
+    "c2adf63c1a268a28a89b32bdc6413847a4fd9338e84982f552b5eefd5d042675",
+    "5ade218039f4771d244b9d9f700c69721ccfbe53e69910b0f023b5755e4cfc12",
+    "544bc9fd12717d224b40f0960344c8a34ebda2912da7bd1f83546bb86a46f3ac"
+   ]
+  },
+  {
+   "escena": "proyectos/resumen-semana-agentes/escenas/short-c/short-c.html",
+   "ancho": 270,
+   "alto": 480,
+   "tiempos": [
+    3.338,
+    10.015,
+    16.692,
+    23.369,
+    30.046,
+    36.723,
+    43.4,
+    50.077
+   ],
+   "huellas": [
+    "e164276e006c560af77decd94bff0d0455525714b7c6fd6dd373222b8db7d9a0",
+    "12695be58b4042f087a69c5bba37d2206f2054b49f404e003708295ec31455bd",
+    "3d96657a05b11e2cf97d5f061a163db7a386ebebbe631384c5db4f1198f45486",
+    "f93266218e18d1d91a407a410fcd12d8b2b3cd745fe3e6cf1470131c13371f49",
+    "6f81e75a489aa917bced817314f0e20ec66adef13107ac99d4da1d18a985bb8a",
+    "cc1e9e77afa4a347b53d9328602f0523e9b8a7e9b7f2ee8d6e9bc11886afb14a",
+    "e816e59f08b3c660d35ff380c309012d3a3d5abfebc65469f5864cdb68c975fc",
+    "e4155db33740e1bf9fef56d49a44a6747fd094e8e1df76cb334ea4b02198b2a5"
+   ]
+  },
+  {
+   "escena": "proyectos/ventanas-contexto-ia/escenas/largo/largo.html",
+   "ancho": 480,
+   "alto": 270,
+   "tiempos": [
+    34.021,
+    102.064,
+    170.106,
+    238.149,
+    306.191,
+    374.234,
+    442.276,
+    510.319
+   ],
+   "huellas": [
+    "8435fd55c69895eb14778324ca40a41bc559aebe2ee6adf5bfe62a26b2c9daef",
+    "690016552425a28ef437374634897be8a388c9b46433c8055234a8ffd01d42ca",
+    "d957035573b578e0e686a4d6888306b419b15f66a043e3b8c5293e00ea91ebe7",
+    "30bf123e297de5d8820ff1f8eaa3d8f906eaeb4a8fd91d3c5544c21df78eab8b",
+    "fda1a3ca29c156a118fb79f79a6e8f5d220bcf29d1989e13971c22e180022145",
+    "ff68f1bb4807cccc63d249e974e50e011f2c688c9d6682f76856236150c2af93",
+    "97d48a060e1b717d3460f9436c8353626409aa63466b20a1bed4935c5871a829",
+    "51b41d320bb75373e76235ed8286e77cb2706df9c1a5e7878943ca8d5aff68d4"
+   ]
+  },
+  {
+   "escena": "proyectos/ventanas-contexto-ia/escenas/short-a/short-a.html",
+   "ancho": 270,
+   "alto": 480,
+   "tiempos": [
+    2.864,
+    8.591,
+    14.319,
+    20.047,
+    25.774,
+    31.502,
+    37.23,
+    42.957
+   ],
+   "huellas": [
+    "c301dec583135415cdcb47a9f5fabcb0ce8eac01e43c67523766b01dc17b5a52",
+    "25a204c5fa119c63ecf4449b41fdbefaaf6701e827a5f88878e39e99590763f3",
+    "3dafade1f573f7b46581d5de639453cf200c3b0048f7570297c34809d7119bfa",
+    "3b98ac57ceb50ad28917de7dc7b599218d326183327483625227b757deb72165",
+    "50fc99a964b6797435d3cce191ca0cda9953f3835d69fdf6c13a98b874b4a8fe",
+    "88154961c279e38b518320da459071eb37c1edfeb72020b251015dbec8c5dee8",
+    "c67614f9baa95c765ac2e8773b20914f1ba1a29e9eade71e20c175c36a4ddbc4",
+    "656302ee29c294a0207a1b2dc6b9a3041a90fda478168724ebe8072acb7ddbfa"
+   ]
+  },
+  {
+   "escena": "proyectos/ventanas-contexto-ia/escenas/short-b/short-b.html",
+   "ancho": 270,
+   "alto": 480,
+   "tiempos": [
+    3.554,
+    10.662,
+    17.77,
+    24.878,
+    31.987,
+    39.095,
+    46.203,
+    53.311
+   ],
+   "huellas": [
+    "322500de0c576ab7675286025463e578aa9b50fac600f94220892fa2d4527e2f",
+    "c5604dba955db8d513abdb9f766c9fba08a2610f047280bc5f62eff6b7bdfe81",
+    "825e12b4d72987d8b906b0992696272a572ac1135753071161ebe5ee5fe5c064",
+    "2597799f664c2a672be931e0105b48211f23c21a84d42e44a8a3b5cfa78f1b95",
+    "bb2237e5979695ff094a8692223874f35537c2e29a816ee0861ff0a75ae320ed",
+    "543e8195813250fe0bedc626237adace1cf705d6ab8d08d16b5410fae3be4bbb",
+    "32476ac487ecca8249f922202f973784e7e9ee2a27fe37f37382f142638e9676",
+    "cb762c86ddb63f48b69df1e4aaedbe50441a393ca731c9f30d0a76871fe6f0c2"
+   ]
+  },
+  {
+   "escena": "proyectos/ventanas-contexto-ia/escenas/short-c/short-c.html",
+   "ancho": 270,
+   "alto": 480,
+   "tiempos": [
+    3.765,
+    11.296,
+    18.826,
+    26.357,
+    33.887,
+    41.418,
+    48.948,
+    56.479
+   ],
+   "huellas": [
+    "450a1b34892e00441779d670b56e7764aaa555d440e9d7075236d19334483e7a",
+    "1f356e0c2be43066dd960c7bdb2f462a26fa6d998d5967e144162c9c09e406e5",
+    "7965ad52140dd91a82d3c8e29b00714314ab5a4ff75e0c747268698a4a33035e",
+    "ac605714344761025bead66458fea357db24956edfa53b0ea053f01abc454340",
+    "489caa1c0f11864157aaf5fb3e2ad875cf9dfcfa165c8d2d207dee18ced53561",
+    "61f1d6e1a0c4b856303a4b8d334b2a7bd026ce6add9ffd80e11cc5a63e8ef6be",
+    "8426ed08d2c752ad32701dabe73e2435d75a72b348f59341203f0b6fe30f1b08",
+    "14f928284e5d130f8c88a96577fd283f67f4987d4b714707e36bf65464049ec6"
+   ]
+  }
+ ]
+}

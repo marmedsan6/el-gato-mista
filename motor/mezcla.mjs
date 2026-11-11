@@ -1,16 +1,22 @@
 // Montaje y mezcla (docs/arquitectura.md §8-9, marca/tokens.json `sonido`):
 // voz delante, música de fondo que se aparta bajo la voz (sidechain), efectos 1 fotograma después de la imagen,
 // y normalización final en dos pasadas a -14 LUFS integrados con pico real < -2 dBTP. El vídeo se copia sin recodificar.
+// Tras la normalización, un limitador con sobremuestreo ×4 (el AAC sube el pico unas décimas: en NVIDIA, de -2,5 a
+// -2,1 dBTP) y, al final, se mide el máster ya codificado con ebur128: si queda fuera de -14 ± 1 LUFS o por encima de
+// -2 dBTP, sale con 1.
 //
 // Uso: node motor/mezcla.mjs --video <mp4 sin audio> --voz <wav> --salida <mp4> [--musica <fichero>]
 //        [--eventos <json [{t, tipo}]> --sfx-dir <carpeta con sfx-<tipo>.*>] [--fps 60] [--musica-db -22] [--sfx-db -10]
-//        [--voz-desfase 0]
-// Deja también <salida>.mezcla.json con los parámetros y las medidas de las dos pasadas.
+//        [--voz-desfase 0] [--techo -3] [--sin-limitador]
+//   --techo  techo del limitador en dBFS de muestra (con ×4 de sobremuestreo deja el máster en torno a -2,4 dBTP)
+// Deja también <salida>.mezcla.json con los parámetros, las medidas de las dos pasadas y la del máster final.
 import { execFileSync, spawnSync } from "node:child_process";
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
+import { leerEbur128 } from "./qa-medidas.mjs";
 
 const arg = (n, por) => { const i = process.argv.indexOf(`--${n}`); return i >= 0 ? process.argv[i + 1] : por; };
+const TECHO_DB = Number(arg("techo", "-3")), LIMITADOR = !process.argv.includes("--sin-limitador");
 const video = resolve(arg("video", "")), voz = resolve(arg("voz", "")), salida = resolve(arg("salida", ""));
 const musica = arg("musica") && resolve(arg("musica"));
 const eventos = arg("eventos") ? JSON.parse(readFileSync(resolve(arg("eventos")), "utf8")) : [];
@@ -67,14 +73,24 @@ const m1 = JSON.parse(json);
 
 // --- pasada 2: normalización lineal con las medidas y codificación ---
 const ln = `loudnorm=I=-14:TP=-2.5:LRA=11:measured_I=${m1.input_i}:measured_TP=${m1.input_tp}:measured_LRA=${m1.input_lra}:measured_thresh=${m1.input_thresh}:offset=${m1.target_offset}:linear=true:print_format=json`;
-const r = spawnSync("ffmpeg", ["-y", "-hide_banner", "-nostats", ...entradas, "-filter_complex", `${grafoBase};[premezcla]${ln},aresample=48000[a]`,
+const limitador = LIMITADOR ? `,aresample=192000,alimiter=limit=${Math.pow(10, TECHO_DB / 20).toFixed(4)}:level=false:attack=5:release=50,aresample=48000` : ",aresample=48000";
+const r = spawnSync("ffmpeg", ["-y", "-hide_banner", "-nostats", ...entradas, "-filter_complex", `${grafoBase};[premezcla]${ln}${limitador}[a]`,
   "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-shortest",
   "-map_metadata", "-1", "-fflags", "+bitexact", "-flags:a", "+bitexact", "-movflags", "+faststart", salida], { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 });
 if (r.status !== 0) { console.error(r.stderr.slice(-2000)); process.exit(1); }
 const j2 = r.stderr.slice(r.stderr.lastIndexOf("{"), r.stderr.lastIndexOf("}") + 1);
 const m2 = j2 ? JSON.parse(j2) : null;
 
+// --- medida del máster ya codificado: lo que anuncia loudnorm no basta (aprendizaje del 2026-11-02) ---
+const fin = spawnSync("ffmpeg", ["-hide_banner", "-nostats", "-i", salida, "-af", "ebur128=peak=true", "-f", "null", "-"], { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 });
+const master = leerEbur128(fin.stderr);
+const dentro = master.lufs !== null && Math.abs(master.lufs + 14) <= 1 && master.pico !== null && master.pico < -2;
+
 const info = { video, voz, musica: musica || null, eventos: eventos.length, efectos_usados: usados.length, efectos_sin_fichero: sinFichero,
-  musica_db: MUSICA_DB, sfx_db: SFX_DB, fps: FPS, pasada1: m1, pasada2: m2 && { output_i: m2.output_i, output_tp: m2.output_tp, normalization_type: m2.normalization_type } };
+  musica_db: MUSICA_DB, sfx_db: SFX_DB, fps: FPS, limitador: LIMITADOR ? { techo_db: TECHO_DB, sobremuestreo: 4 } : null,
+  pasada1: m1, pasada2: m2 && { output_i: m2.output_i, output_tp: m2.output_tp, normalization_type: m2.normalization_type },
+  master: { ...master, dentro_de_umbral: dentro } };
 writeFileSync(salida + ".mezcla.json", JSON.stringify(info, null, 2));
-console.log(JSON.stringify({ salida, efectos: usados.length, efectos_sin_fichero: sinFichero, premezcla_lufs: m1.input_i, final_lufs: m2?.output_i, final_tp: m2?.output_tp, tipo: m2?.normalization_type }));
+console.log(JSON.stringify({ salida, efectos: usados.length, efectos_sin_fichero: sinFichero, premezcla_lufs: m1.input_i, final_lufs: m2?.output_i, final_tp: m2?.output_tp, tipo: m2?.normalization_type,
+  master_lufs: master.lufs, master_dbtp: master.pico, dentro_de_umbral: dentro }));
+if (!dentro) { console.error(`El máster queda fuera de umbral: ${master.lufs} LUFS (−14 ± 1) y ${master.pico} dBTP (< −2). Baja --techo o revisa los niveles.`); process.exit(1); }

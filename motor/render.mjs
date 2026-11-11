@@ -4,6 +4,7 @@
 // Uso:
 //   node render.mjs --escena <html> --ancho <px base> --alto <px base> --duracion <s> --salida <mp4>
 //                   [--consulta "formato=short"] [--incluir dir1,dir2] [--fps 60] [--escala 4] [--workers 8] [--fotogramas t1,t2]
+//                   [--desde s] [--hasta s]   (solo ese tramo, para previsualizar; con su propia caché)
 //   → <mp4> (H.264 yuv420p crf 18 bt709, ancho×escala × alto×escala, fps) y <dir del mp4>/t_<t>.png por cada t.
 //
 // La escena expone window.seek(t). Opcional: window.claveFotograma(t) → texto que cambia si y solo si cambia
@@ -38,6 +39,10 @@ if (!escena || !existsSync(escena) || !(W > 0) || !(H > 0) || !(DURACION > 0) ||
   process.exit(2);
 }
 const TOTAL = Math.round(DURACION * FPS);
+// Tramo opcional (previsualizar sin renderizarlo todo): --desde y --hasta en segundos. El MP4 solo lleva ese tramo.
+const DESDE = arg("desde"), HASTA = arg("hasta");
+const F0 = DESDE !== undefined ? Math.max(0, Math.min(TOTAL - 1, Math.round(Number(DESDE) * FPS))) : 0;
+const F1 = HASTA !== undefined ? Math.max(F0 + 1, Math.min(TOTAL, Math.round(Number(HASTA) * FPS))) : TOTAL;
 const runtime = process.env.RUNTIME_DIR || "C:/Users/mario/proyectos/canal-videos/.runtime";
 const executablePath = process.env.CHROMIUM_PATH ||
   join(homedir(), "AppData/Local/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-win64/chrome-headless-shell.exe");
@@ -59,7 +64,8 @@ for (const dir of carpetas) {
     huella.update(join(dir, f)).update(readFileSync(join(dir, f)));
   }
 }
-huella.update([consulta, W, H, DURACION, FPS, ESCALA, mp4].join("\0")).update(readFileSync(fileURLToPath(import.meta.url)));
+// (el tramo solo entra en la clave si se pide: la de los renders completos no cambia)
+huella.update([consulta, W, H, DURACION, FPS, ESCALA, mp4, ...(F0 > 0 || F1 < TOTAL ? [F0, F1] : [])].join("\0")).update(readFileSync(fileURLToPath(import.meta.url)));
 const clave = huella.digest("hex").slice(0, 16);
 const cache = join(runtime, "render-cache", clave);
 const ficheroCache = (f) => join(cache, `f_${String(f).padStart(5, "0")}.png`);
@@ -94,13 +100,13 @@ try {
   const claves = await paginas[0].evaluate(({ total, fps }) =>
     typeof window.claveFotograma === "function" ? Array.from({ length: total }, (_, f) => String(window.claveFotograma(f / fps))) : null,
   { total: TOTAL, fps: FPS });
-  for (let f = 0; f < TOTAL; f++) {
-    if (!claves || f === 0 || claves[f] !== claves[f - 1]) inicios.push(f);
+  for (let f = F0; f < F1; f++) {
+    if (!claves || f === F0 || claves[f] !== claves[f - 1]) inicios.push(f);
     tramo[f] = inicios[inicios.length - 1];
   }
   const pendientes = inicios.filter((f) => !(existsSync(ficheroCache(f)) && statSync(ficheroCache(f)).size > 0));
   yaHechos = inicios.length - pendientes.length;
-  console.error(`[render] ${inicios.length} fotogramas distintos de ${TOTAL}; en caché ${yaHechos}, por hacer ${pendientes.length}`);
+  console.error(`[render] ${inicios.length} fotogramas distintos de ${F1 - F0}; en caché ${yaHechos}, por hacer ${pendientes.length}`);
 
   for (const s of listaT) writeFileSync(join(dirname(mp4), `t_${s}.png`), await foto(paginas[0], Number(s)));
 
@@ -128,13 +134,13 @@ const ff = spawn("ffmpeg", ["-y", "-hide_banner", "-loglevel", "error",
   "-f", "image2pipe", "-framerate", String(FPS), "-c:v", "png", "-i", "pipe:0",
   "-vf", "scale=out_color_matrix=bt709:out_range=tv,format=yuv420p",
   "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-colorspace", "bt709", "-color_primaries", "bt709",
-  "-color_trc", "bt709", "-color_range", "tv", "-frames:v", String(TOTAL),
+  "-color_trc", "bt709", "-color_range", "tv", "-frames:v", String(F1 - F0),
   "-map_metadata", "-1", "-fflags", "+bitexact", "-flags:v", "+bitexact", "-movflags", "+faststart", parcial],
   { stdio: ["pipe", "ignore", "inherit"] });
 const cerrado = new Promise((res, rej) => { ff.on("error", rej); ff.on("close", (c) => (c === 0 ? res() : rej(new Error(`ffmpeg salió con ${c}`)))); });
 ff.stdin.on("error", () => {});
 let actual = -1, buffer = null;
-for (let f = 0; f < TOTAL; f++) {
+for (let f = F0; f < F1; f++) {
   if (tramo[f] !== actual) { actual = tramo[f]; buffer = readFileSync(ficheroCache(actual)); }
   if (!ff.stdin.write(buffer)) await new Promise((r) => ff.stdin.once("drain", r));
 }
@@ -142,4 +148,4 @@ ff.stdin.end();
 await cerrado;
 renameSync(parcial, mp4);
 console.error(`total: ${((Date.now() - inicioMs) / 1000).toFixed(1)} s`);
-console.log(JSON.stringify({ mp4, fotogramas: TOTAL, distintos: inicios.length, reutilizados_de_cache: yaHechos, rehechos, pngs: listaT.length, cache }));
+console.log(JSON.stringify({ mp4, fotogramas: F1 - F0, ...(F0 > 0 || F1 < TOTAL ? { desde_s: F0 / FPS, hasta_s: F1 / FPS } : {}), distintos: inicios.length, reutilizados_de_cache: yaHechos, rehechos, pngs: listaT.length, cache }));
