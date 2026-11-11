@@ -1,0 +1,86 @@
+[
+ {
+  "t": 2.26,
+  "tipo": "destello"
+ },
+ {
+  "t": 4.98,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 6.665,
+  "tipo": "destello"
+ },
+ {
+  "t": 7.96,
+  "tipo": "error"
+ },
+ {
+  "t": 13.09,
+  "tipo": "destello"
+ },
+ {
+  "t": 14.19,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 18.84,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 21.135,
+  "tipo": "destello"
+ },
+ {
+  "t": 24.6,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 30.394,
+  "tipo": "destello"
+ },
+ {
+  "t": 31.494,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 38.481,
+  "tipo": "destello"
+ },
+ {
+  "t": 40.76,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 45.94,
+  "tipo": "seleccion"
+ },
+ {
+  "t": 48.675,
+  "tipo": "destello"
+ },
+ {
+  "t": 51.06,
+  "tipo": "aparicion"
+ },
+ {
+  "t": 53.362,
+  "tipo": "destello"
+ },
+ {
+  "t": 55.24,
+  "tipo": "error"
+ },
+ {
+  "t": 61.62,
+  "tipo": "acierto"
+ },
+ {
+  "t": 65.221,
+  "tipo": "destello"
+ },
+ {
+  "t": 67.76,
+  "tipo": "tick"
+ }
+]

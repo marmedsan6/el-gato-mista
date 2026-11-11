@@ -1,0 +1,45 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>nvidia-huang-espionaje · short v4 interna (estilo v6)</title>
+<!-- Versión INTERNA en estilo v6 (ADR 0010): no se republica. La publicada es ../short/ (estilo v5).
+     Timing:  node motor/voz/revisar-alineacion.mjs proyectos/nvidia-huang-espionaje/timing.short.json <voz.wav>
+                --corregir proyectos/nvidia-huang-espionaje/escenas/short-v4/timing.short.json
+              node motor/timing-a-js.mjs proyectos/nvidia-huang-espionaje/escenas/short-v4/timing.short.json
+                proyectos/nvidia-huang-espionaje/escenas/short-v4/timing.js --guion proyectos/nvidia-huang-espionaje/guion.md
+                --seccion Short --fuentes proyectos/nvidia-huang-espionaje/fuentes.json
+     Lint:    node motor/revisar.mjs proyectos/nvidia-huang-espionaje/escenas/short-v4/short.html 270 480 71.17 0.05 . --estricto
+     Render:  node motor/render.mjs --escena proyectos/nvidia-huang-espionaje/escenas/short-v4/short.html --ancho 270 --alto 480
+                --duracion 71.2 --incluir motor/estilo,motor/estilo/v5,motor/estilo/v6
+                --salida proyectos/nvidia-huang-espionaje/render/short-v4/short.mp4 -->
+<link rel="stylesheet" href="../../../../motor/estilo/estilo.css">
+<link rel="stylesheet" href="../../../../motor/estilo/v6/estilo-v6.css">
+<style>
+  .titular.pieza .despues, .titular.pieza.negado .antes { display: none; }
+  .titular.pieza.negado .despues { display: inline; }
+</style>
+<body class="short">
+  <div id="base"></div>
+  <div id="transicion">
+    <div class="profundidad" id="p-lejos"><svg class="arte" id="lejos"></svg></div>
+    <div class="profundidad" id="p-medio">
+      <svg class="arte" id="medio"></svg>
+      <svg class="arte bloom" id="brillo"></svg>
+      <svg class="arte" id="frente"></svg>
+      <div id="textos-mundo"></div>
+    </div>
+    <div class="profundidad" id="p-delante"><svg class="arte" id="delante"></svg></div>
+    <svg class="arte" id="gato12"></svg>
+    <div class="capa vineta"></div>
+  </div>
+  <div id="textos"></div>
+  <div class="dialogo con-retrato oculto" id="dialogo"><svg class="retrato" id="retrato"></svg><span class="nombre">Mista</span><span id="frase"></span><span class="fuente6" id="fuente"></span></div>
+
+  <script src="../../../../motor/estilo/pixel.js"></script>
+  <script src="../../../../motor/estilo/v3/gato.js"></script>
+  <script src="../../../../motor/estilo/camara.js"></script>
+  <script src="../../../../motor/estilo/v5/dibujo.js"></script>
+  <script src="../../../../motor/estilo/v6/piezas.js"></script>
+  <script src="../../../../motor/estilo/v6/escena.js"></script>
+  <script src="timing.js"></script>
+  <script src="short.js"></script>
+</body>
