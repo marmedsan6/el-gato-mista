@@ -44,6 +44,12 @@ test("si las frases no cuadran con el guion, falla con un mensaje claro", () => 
   assert.throws(() => fuentesPorFrase(GUION, "Short", [fr("fr01", "Una frase que no tiene nada que ver y que es larguísima para este párrafo tan corto de aquí.")]), /no cuadran/);
 });
 
+test("los títulos de bloque (###) no suman palabras al párrafo que les sigue", () => {
+  const g = "## Maestro (largo)\n### 4. Lo que te recomiendan\nPrimero, YouTube. ¿Cómo decide qué vídeos salen? [f4]\n\n### 5. Cierre\nY ya está.\n";
+  const p = parrafosDelGuion(g, "Maestro");
+  assert.deepEqual(p.map((x) => [x.palabras, x.fuentes]), [[7, ["f4"]], [3, []]]);
+});
+
 test("nombre corto: el campo corto o el autor hasta el paréntesis", () => {
   assert.deepEqual(nombresCortos({ fuentes: [{ id: "f1", autor: "NVIDIA (consejo de administración)" }, { id: "f3", autor: "AFP (en Yahoo News)", corto: "NYT vía AFP" }] }),
     { f1: "NVIDIA", f3: "NYT vía AFP" });

@@ -14,7 +14,8 @@ export function parrafosDelGuion(guion, seccion) {
   if (ini < 0) throw new Error(`El guion no tiene la sección «## ${seccion}»`);
   const resto = lineas.slice(ini + 1);
   const fin = resto.findIndex((l) => /^##\s+/.test(l));
-  const cuerpo = (fin < 0 ? resto : resto.slice(0, fin)).join("\n");
+  // los títulos de bloque (### …) no se leen: no se cuentan como palabras del párrafo que les sigue
+  const cuerpo = (fin < 0 ? resto : resto.slice(0, fin)).filter((l) => !/^#{3,}\s/.test(l)).join("\n");
   return cuerpo.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean).map((p) => {
     const fuentes = [...new Set([...p.matchAll(/\[(f\d+)\]/g)].map((m) => m[1]))];
     const texto = p.replace(/\[f\d+\]/g, "").replace(/\s+/g, " ").trim();
