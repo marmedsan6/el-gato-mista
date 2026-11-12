@@ -1,0 +1,330 @@
+{
+  "proyecto": "tiktok-ingenieria-inversa-2026-11-12",
+  "consultada": "2026-11-12",
+  "nota": "Fuentes de la investigación. 'leida' = se ha abierto y leído el texto citado en esta investigación; 'titular' = cifra vista en buscador o resumen, URL no verificada entera; 'no accesible' = bloquea la lectura.",
+  "fuentes": [
+    {
+      "id": "f1",
+      "url": "https://youtu.be/W4XfPfHMYIE",
+      "autor": "(no se nombra: pedido de Mario, 2026-11-12)",
+      "consultada": "2026-11-12",
+      "tipo": "material",
+      "licencia": "No acreditada para reutilización; solo referencia de investigación",
+      "tramo": "0–24:35, transcrito entero; ningún tramo incorporado a un vídeo del canal",
+      "uso": "Vídeo de origen: qué afirma, qué opina y qué deja abierto",
+      "evidencia": "Subtítulos automáticos en español descargados con yt-dlp y convertidos a texto con tiempos (.runtime/yt/transcripcion.txt)",
+      "estado": "leida"
+    },
+    {
+      "id": "f2",
+      "url": "https://x.com/ayoships/status/2117650684774580249",
+      "autor": "Ayo Omolewa (@ayoships)",
+      "consultada": "2026-11-12",
+      "tipo": "hecho",
+      "uso": "Anuncio del autor: «I reverse engineered tiktok» (3 de noviembre de 2026)",
+      "alcance": "Publicación del propio autor; no verificable sin sesión de X",
+      "estado": "titular"
+    },
+    {
+      "id": "f3",
+      "url": "https://x.com/ayoships/status/2118388273571901655",
+      "autor": "Ayo Omolewa (@ayoships)",
+      "consultada": "2026-11-12",
+      "tipo": "hecho",
+      "uso": "El autor dice que extrajo los modelos de cara de la app y los portó desde ByteNN para que corran en el navegador",
+      "alcance": "Declaración del autor recogida por BroBible; no leída en X",
+      "estado": "titular"
+    },
+    {
+      "id": "f4",
+      "url": "https://ayoships.com/",
+      "autor": "Ayo Omolewa",
+      "consultada": "2026-11-12",
+      "tipo": "hecho",
+      "uso": "Página del autor: «I decompile viral apps and expose the dark patterns inside them»",
+      "estado": "leida"
+    },
+    {
+      "id": "f5",
+      "url": "https://ayoships.com/tools/tiktok-face",
+      "autor": "Ayo Omolewa",
+      "consultada": "2026-11-12",
+      "tipo": "hecho",
+      "uso": "Herramienta «What TikTok sees»: atractivo, edad, género y ánimo; «Stays on your device»; «Not affiliated with TikTok»",
+      "estado": "leida"
+    },
+    {
+      "id": "f6",
+      "url": "https://ayoships.com/tools/tiktok-face/engine.js",
+      "autor": "Ayo Omolewa",
+      "consultada": "2026-11-12",
+      "tipo": "hecho",
+      "uso": "Código del motor: comentario «Runs TikTok's decoded face networks with the same 16-bit fixed-point steps its engine uses»; la nota publicada es attractiveRaw + 15, acotada a 0-100",
+      "alcance": "Código de la herramienta del autor; no es el código de TikTok",
+      "estado": "leida"
+    },
+    {
+      "id": "f7",
+      "url": "https://ayoships.com/tools/tiktok-face/expnet.json",
+      "autor": "Ayo Omolewa",
+      "consultada": "2026-11-12",
+      "tipo": "hecho",
+      "uso": "Especificación del modelo de cara publicado: 103 operaciones, 61 convoluciones, ~289.000 parámetros, salidas predict_attractive, predict_happy, prob_exp, predict_valence, predict_arousal",
+      "alcance": "Archivo publicado por el autor; se ha analizado su estructura, no se ha ejecutado",
+      "estado": "leida"
+    },
+    {
+      "id": "f8",
+      "url": "https://ayoships.com/tools/tiktok-face/face.js",
+      "autor": "Ayo Omolewa",
+      "consultada": "2026-11-12",
+      "tipo": "hecho",
+      "uso": "Entrada de 256×256 píxeles alineada por ojos y boca; «No score under 16» (MIN_AGE=16)",
+      "estado": "leida"
+    },
+    {
+      "id": "f9",
+      "url": "https://brobible.com/culture/article/developer-claims-tiktok-rates-users-attractiveness/",
+      "autor": "Douglas Charles, BroBible",
+      "consultada": "2026-11-12",
+      "tipo": "prensa",
+      "uso": "Recoge el anuncio del autor, la cita del tuit del 5 de noviembre y el aviso de que «no han sido verificadas de forma independiente»",
+      "estado": "leida"
+    },
+    {
+      "id": "f10",
+      "url": "https://whatsnewx.com/t/tiktok-retention-reverse-engineering/",
+      "autor": "TrendGuide (whatsnewx.com)",
+      "consultada": "2026-11-12",
+      "tipo": "prensa",
+      "uso": "Estado público de la investigación al 4 de noviembre de 2026: solo un avance, sin informe ni descarga",
+      "alcance": "Sitio agregador; dato de contexto, no de hecho técnico",
+      "estado": "leida"
+    },
+    {
+      "id": "f11",
+      "url": "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/ip_26_2361/IP_26_2361_EN.pdf",
+      "autor": "Comisión Europea",
+      "consultada": "2026-11-12",
+      "tipo": "oficial",
+      "uso": "Comunicado del 6 de noviembre de 2026: conclusiones preliminares por el «efecto madriguera» del feed Para ti",
+      "alcance": "Descargado; el PDF no se pudo extraer en texto; el contenido se cita a través de f12, f13 y f14",
+      "estado": "no accesible"
+    },
+    {
+      "id": "f12",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-tiktoks-you-feed-breach-digital-services-act-harmful-rabbit-holes",
+      "autor": "Comisión Europea",
+      "consultada": "2026-11-12",
+      "tipo": "oficial",
+      "uso": "Texto oficial del hallazgo preliminar: cuanto más interactúa un usuario con un tipo de contenido, más se le recomienda lo mismo; riesgo para salud mental e imagen corporal",
+      "estado": "leida"
+    },
+    {
+      "id": "f13",
+      "url": "https://www.rte.ie/news/europe/2026/1106/1598263-eu-tiktok-videos/",
+      "autor": "Brian O'Donovan, RTÉ",
+      "consultada": "2026-11-12",
+      "tipo": "prensa",
+      "uso": "Detalle del hallazgo, cita de Henna Virkkunen, tope de multa del 6 % del volumen de negocio mundial y respuesta de TikTok («fundamentally inaccurate»); la CE adoptó también hallazgos preliminares en febrero de 2026 (diseño adictivo) y julio de 2026 (menores)",
+      "estado": "leida"
+    },
+    {
+      "id": "f14",
+      "url": "https://digital-strategy.ec.europa.eu/es/news/commission-preliminarily-finds-tiktoks-addictive-design-breach-digital-services-act",
+      "autor": "Comisión Europea",
+      "consultada": "2026-11-12",
+      "tipo": "oficial",
+      "uso": "Hallazgo preliminar del 6 de febrero de 2026 sobre diseño adictivo: desplazamiento infinito, reproducción automática, notificaciones y recomendador; herramientas de tiempo de pantalla poco eficaces",
+      "estado": "leida"
+    },
+    {
+      "id": "f15",
+      "url": "https://dsa-act.eu/article-74-fines/",
+      "autor": "Texto del Reglamento (UE) 2022/2065",
+      "consultada": "2026-11-12",
+      "tipo": "oficial",
+      "uso": "Artículo 74: multas de hasta el 6 % del volumen de negocio mundial anual",
+      "alcance": "Texto consolidado publicado en portal de terceros",
+      "estado": "leida"
+    },
+    {
+      "id": "f16",
+      "url": "https://www.amnesty.org/es/latest/news/2026/11/tiktok/",
+      "autor": "Amnistía Internacional",
+      "consultada": "2026-11-12",
+      "tipo": "prensa",
+      "uso": "Reacción del 6 de noviembre de 2026 y referencia a su informe «Dragged into the Rabbit Hole» (2025) sobre el feed Para ti y contenido de autolesión y suicidio",
+      "estado": "leida"
+    },
+    {
+      "id": "f17",
+      "url": "https://files.lbr.cloud/public/2024-10/Kentucky%20Complaint.pdf",
+      "autor": "Commonwealth of Kentucky (demanda, 24-CI-00824)",
+      "consultada": "2026-11-12",
+      "tipo": "oficial",
+      "uso": "Documentos internos citados: «Habit Moment» a los 260 vídeos en la primera semana; «Aha Moment» a los 20 vídeos el primer día; «not attractive subjects» y cambio del algoritmo; «it took me 20 mins to drop into negative filter bubble»; programa de tiempo de pantalla de 108,5 a 107 min; «literally mean sleep, and eating…»; Douyin en modo adolescente 40 min al día",
+      "alcance": "Alegaciones de la fiscalía sobre documentos internos; TikTok las califica de «cherry-picked» y fuera de contexto",
+      "estado": "leida"
+    },
+    {
+      "id": "f18",
+      "url": "https://www.legalreader.com/kentucky-tiktok-lawsuit-leak-childrens-mental-health/",
+      "autor": "Ryan J. Farrick, Legal Reader (a partir de AP)",
+      "consultada": "2026-11-12",
+      "tipo": "prensa",
+      "uso": "Contexto de la filtración por error de tachado y respuesta de TikTok («cherry-picks misleading quotes… out of context»)",
+      "estado": "leida"
+    },
+    {
+      "id": "f19",
+      "url": "https://www.straitstimes.com/world/united-states/tiktok-projects-77-billion-in-sales-from-tiktok-live-lawsuit-claims",
+      "autor": "Bloomberg / The Straits Times",
+      "consultada": "2026-11-12",
+      "tipo": "prensa",
+      "uso": "Demanda del fiscal general de Washington D. C.: 1.700 M $ de ingresos globales de TikTok Live en un trimestre de 2023 (más de 400 M $ en EE. UU.); TikTok proyectaba 77.000 M $ en 2027; los regalos se canjean por dinero y TikTok se queda una parte",
+      "estado": "leida"
+    },
+    {
+      "id": "f20",
+      "url": "https://www.theintercept.com/2020/03/16/tiktok-app-moderators-users-discrimination/",
+      "autor": "Sam Biddle, Paulo Victor Ribeiro y Tatiana Dias, The Intercept",
+      "consultada": "2026-11-12",
+      "tipo": "prensa",
+      "uso": "Directrices internas de 2020: retirar del feed vídeos de personas con «ugly facial looks», «abnormal body shape», casa deteriorada, barrios pobres; justificación: «decrease the short-term new user retention rate»; respuesta de TikTok: «early blunt attempt at preventing bullying»",
+      "estado": "leida"
+    },
+    {
+      "id": "f21",
+      "url": "https://www.tiktok.com/legal/page/us/privacy-policy/en",
+      "autor": "TikTok",
+      "consultada": "2026-11-12",
+      "tipo": "oficial",
+      "uso": "Política de EE. UU. (actualizada el 15 de julio de 2026): recoge «battery state, audio settings and connected audio devices», «keystroke patterns or rhythms», resolución de pantalla; usa análisis de imagen para «content and ad recommendations»",
+      "estado": "leida"
+    },
+    {
+      "id": "f22",
+      "url": "https://www.tiktok.com/legal/page/eea/privacy-policy/en",
+      "autor": "TikTok",
+      "consultada": "2026-11-12",
+      "tipo": "oficial",
+      "uso": "Política del EEE, Reino Unido y Suiza (30 de noviembre de 2025): los datos técnicos son modelo de dispositivo, sistema operativo, patrones de pulsación, IP, idioma y ajustes; no menciona batería, sensores de movimiento ni resolución de pantalla",
+      "alcance": "Lectura del texto publicado el 2026-11-12; puede cambiar",
+      "estado": "leida"
+    },
+    {
+      "id": "f23",
+      "url": "https://newsroom.tiktok.com/how-tiktok-recommends-videos-for-you?lang=en",
+      "autor": "TikTok Newsroom",
+      "consultada": "2026-11-12",
+      "tipo": "oficial",
+      "uso": "Factores declarados del feed Para ti: interacciones del usuario, información del vídeo y ajustes de dispositivo y cuenta, estos últimos «con menor peso»; el autor de una recomendación no es el país de origen",
+      "estado": "leida"
+    },
+    {
+      "id": "f24",
+      "url": "https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/investigations-into-businesses/2025/pipeda-2025-003/",
+      "autor": "Comisionado de Privacidad de Canadá, CAI de Quebec, OIPC de Columbia Británica y de Alberta",
+      "consultada": "2026-11-12",
+      "tipo": "oficial",
+      "uso": "TikTok usa análisis facial y de voz; modelos de edad de cuenta y de vídeo usados para recomendar en el feed; no se explica bien su uso para anuncios y recomendaciones",
+      "estado": "leida"
+    },
+    {
+      "id": "f25",
+      "url": "https://engineering.wisc.edu/news/popular-social-media-mobile-apps-extract-data-from-photos-on-your-phone-introducing-both-bias-and-errors/",
+      "autor": "Universidad de Wisconsin-Madison (West, Ahmed, Fawaz)",
+      "consultada": "2026-11-12",
+      "tipo": "académico",
+      "uso": "TikTok estima edad y género de las caras de las fotos; más errores en menores de 18; estudio presentado en IEEE S&P 2024",
+      "estado": "leida"
+    },
+    {
+      "id": "f26",
+      "url": "https://arxiv.org/html/2509.24138v1",
+      "autor": "Chandon Hamel y Mike Busch (Regis University)",
+      "consultada": "2026-11-12",
+      "tipo": "académico",
+      "uso": "Los modelos de puntuación de belleza muestran diferencias significativas por grupo étnico (p<0,001) incluso sobre datos equilibrados; solo el 4,8-9,5 % de las comparaciones cumple paridad; SCUT-FBP5500 tiene 2.000 mujeres y 2.000 hombres asiáticos frente a 750 y 750 caucásicos",
+      "estado": "leida"
+    },
+    {
+      "id": "f27",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9086604/",
+      "autor": "Estudio de clasificación de actividad con acelerómetro de smartphone",
+      "consultada": "2026-11-12",
+      "tipo": "académico",
+      "uso": "Con el acelerómetro de un móvil se distingue tumbado, sentado, andando o corriendo con una precisión del ~89-93 % en laboratorio",
+      "estado": "leida"
+    },
+    {
+      "id": "f28",
+      "url": "https://segmentfault.com/a/1190000044454939",
+      "autor": "Equipo técnico de ByteDance (Gao Yuan, Tang Zhongfeng), «抖音功耗优化实践», reproducido en SegmentFault",
+      "consultada": "2026-11-12",
+      "tipo": "oficial",
+      "uso": "Modo de bajo consumo de Douyin: entra automáticamente al 30 % de batería y busca «obtener más tiempo de uso» con menos consumo; se descartaron bajar brillo y volumen; ganancia de 20 mA; «en baja batería apagar sensores innecesarios»",
+      "alcance": "Artículo técnico de ByteDance sobre Douyin (China); no menciona cambios en las recomendaciones ni el feed",
+      "estado": "leida"
+    },
+    {
+      "id": "f29",
+      "url": "https://wrapped.vantezzen.io/state-of-the-feed",
+      "autor": "Wrapped for TikTok (proyecto independiente)",
+      "consultada": "2026-11-12",
+      "tipo": "académico",
+      "uso": "16.981 donaciones de datos: 464.272.908 vídeos vistos; mediana de tiempo antes de pasar vídeo 10 s → 6 s; vídeos descartados en menos de 3 s 23 % → 33 %; mediana de sesión 30 vídeos y 20 min; 20 % de sesiones de más de una hora concentran el 60 % del tiempo",
+      "alcance": "Muestra no representativa, autoseleccionada; el tiempo se infiere del hueco entre vídeos",
+      "estado": "leida"
+    },
+    {
+      "id": "f30",
+      "url": "https://arxiv.org/html/2303.02041v2",
+      "autor": "Goetzen, Wang, Redmiles, Zannettou, Ayalon (MPI-SWS, TU Delft)",
+      "consultada": "2026-11-12",
+      "tipo": "académico",
+      "uso": "n=255: el 78,4 % sobreestima su tiempo en TikTok frente al registro del servidor; solo el 17,6 % acierta la franja",
+      "estado": "leida"
+    },
+    {
+      "id": "f31",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0747563223003606",
+      "autor": "Cervigón-Carrasco et al., Computers in Human Behavior",
+      "consultada": "2026-11-12",
+      "tipo": "académico",
+      "uso": "Tras 15 minutos de TikTok el grupo sobreestima el intervalo; el de lectura lo estima con precisión",
+      "alcance": "Resumen visto en buscador; el artículo bloquea la lectura",
+      "estado": "titular"
+    },
+    {
+      "id": "f32",
+      "url": "https://www.mdpi.com/2076-328X/15/7/930",
+      "autor": "Jiang, Yan et al., Behavioral Sciences (2025)",
+      "consultada": "2026-11-12",
+      "tipo": "académico",
+      "uso": "Experimento con 56 universitarios: la duración de la tarea, y no el tipo de contenido, explica la distorsión del tiempo",
+      "alcance": "Resumen visto en buscador; la revista bloquea la lectura (403)",
+      "estado": "titular"
+    },
+    {
+      "id": "f33",
+      "url": "https://commentgrid.com/blog/tiktok-stats-2026-key-figures-trends",
+      "autor": "CommentGrid (a partir de Similarweb App Intelligence vía DataReportal)",
+      "consultada": "2026-11-12",
+      "tipo": "prensa",
+      "uso": "1 h 37 min al día por usuario activo de Android en agosto de 2025",
+      "alcance": "Cifra de terceros recogida por un blog; no leída en DataReportal",
+      "estado": "titular"
+    },
+    {
+      "id": "f34",
+      "url": "https://www.help.tinder.com/hc/en-us/articles/7606685697037-Powering-Tinder-The-Method-Behind-Our-Matching",
+      "autor": "Tinder",
+      "consultada": "2026-11-12",
+      "tipo": "oficial",
+      "uso": "Tinder dice que ya no usa el Elo y que su sistema es dinámico según likes, nopes y fotos similares; niega usar etnia o religión",
+      "estado": "leida"
+    }
+  ]
+}
