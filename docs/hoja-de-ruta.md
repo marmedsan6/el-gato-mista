@@ -35,7 +35,7 @@ Diagnóstico: `docs/investigacion/diagnostico-2026-11-10/informe.md`. Decisiones
 | 2 | Decidir qué se hace con el short publicado de NVIDIA (el crítico lo da por no apto a posteriori) | Sí |
 | 3 | Instagram de anthropic-fable-5-2, que falló al subir (HTTP 400 ProcessingFailedError) | Sí |
 | 4 | ~~Primer vídeo completo en v6~~: hecho, `como-google-sabe-lo-que-quieres` publicado el 2026-11-12 y fijado como estándar. Queda subir a `motor/estilo/v6/` y a las plantillas lo que sirve a todos (`short-motor.js`, el mundo por bloque, la tabla de nombres cortos de fuente del short) | No |
-| 5 | Mundo por tema o virtualizado para el largo: el mundo por bloque de como-google funciona, pero el largo tardó 14,5 h en renderizar (3,3 s por captura); falta abaratarlo | No |
+| 5 | ~~Render del largo~~: las 14,5 h eran el portátil en espera, no la escena ([informe](investigacion/render-largo-2026-11-12/informe.md)). Hecho (2026-11-12) en `render.mjs`: petición de mantener despierto, PNG rápido (`optimizeForSpeed`, −27 %, píxeles idénticos) y progreso con hora y ritmo; un tramo del largo va a 0,037-0,041 s por captura (el largo entero, ~13 min con la codificación). El mundo virtualizado ya no hace falta. Queda: tapa abierta al renderizar | No |
 | 6 | Catálogo de dioramas por concepto (`motor/biblioteca/`) y quién elige el recurso | Decisión |
 | 7 | Lo que el crítico dejó sin bloquear en la v6 (`reviews/calibracion/iter-v6-01.md`): la estación del matiz con el periódico en lugar del tuit, sujetos más grandes (Jensen Huang, la silueta, la rotativa), tramos quietos del matiz y del cierre, y la IA del clip. Rediseño de MISTA si Mario lo pide | Decisión |
 | 8 | Línea de tiempo declarativa y un comando que encadene la producción | No |

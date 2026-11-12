@@ -58,6 +58,7 @@ necesitas el porqué de algo antiguo). Lo nuevo se añade al final de su tema o 
 ## Sistema y agentes
 - Motor de render propio (ADR 0004). Orquesta Opus; lo mecánico, al modelo barato de frontera; el crítico visual es Opus y se avisa antes de cada pasada.
 - Lo publicado se conserva reproducible: cada vídeo carga la biblioteca que usó (v2, v3, `v3/congelado/`, v5) y `npm test` compara sus huellas — Mario (2026-11-09, 2026-11-10).
+- Render (2026-11-12): `render.mjs` pide que el equipo no se duerma mientras renderiza, captura con PNG rápido (`optimizeForSpeed`, píxeles idénticos) y registra hora y ritmo — Mario («Sí, aplícalos», tras el [informe](../docs/investigacion/render-largo-2026-11-12/informe.md)). Se quedan 8 navegadores; `--num-raster-threads=1` y el mundo virtualizado, descartados — decisión del agente.
 - Para revisar escenas, hojas de contactos (una imagen por tanda), nunca fotogramas sueltos acumulados: más de 20 imágenes en el historial bloquean la sesión — decisión del agente (2026-11-10).
 - Biblioteca pixel reutilizable: Mario quiere «un set enorme de imágenes pixel con animaciones»; la propuesta (`docs/investigacion/biblioteca-pixel-2026-11-06/`) sigue por concretar. El atlas de Krea no entra en nada publicado hasta leer su licencia (2026-11-06, 2026-11-09).
 
