@@ -1,0 +1,448 @@
+{
+  "proyecto": "ffxiv-1-0-a-realm-reborn",
+  "fecha_consulta": "2026-11-12",
+  "nota": "Investigación previa al brief. Cada hecho del documento apunta a una de estas fuentes. El material de terceros (vídeos) está marcado con su licencia; ninguno se ha descargado.",
+  "fuentes": [
+    {
+      "id": "W1",
+      "tipo": "enciclopedia",
+      "titulo": "Final Fantasy XIV (2010 video game)",
+      "autor": "Wikipedia (en)",
+      "url": "https://en.wikipedia.org/wiki/Final_Fantasy_XIV_(2010_video_game)",
+      "licencia": "CC BY-SA 4.0",
+      "usado_para": "Desarrollo, lanzamiento del 30-09-2010, notas de Metacritic (49/100) y citas de críticos, 603.000 copias, postmortem GDC 2014 (macetero, 20 jugadores), cambio de equipo (10-12-2010), recorte del 90 %, terremoto de Tohoku, Séptima Era Umbral y cierre del 11-11-2012."
+    },
+    {
+      "id": "W2",
+      "tipo": "enciclopedia",
+      "titulo": "Final Fantasy XIV (A Realm Reborn)",
+      "autor": "Wikipedia (en)",
+      "url": "https://en.wikipedia.org/wiki/Final_Fantasy_XIV",
+      "licencia": "CC BY-SA 4.0",
+      "usado_para": "Reconstrucción: planificación en enero de 2011 y desarrollo en abril, 400 decisiones de diseño, Duty Finder, Cartas del productor, parche 1.18 y fatiga, cuotas en enero de 2012, Legacy Campaign, anuncio del nombre (26-07-2012), arranque de ARR (24-27 ago 2013), macOS, Xbox, prueba gratuita hasta Stormblood, ciclo de parches, 24 M de jugadores."
+    },
+    {
+      "id": "W3",
+      "tipo": "enciclopedia",
+      "titulo": "Final Fantasy XIV — ficha y plataformas",
+      "autor": "Wikipedia (en)",
+      "url": "https://en.wikipedia.org/wiki/Final_Fantasy_XIV",
+      "licencia": "CC BY-SA 4.0",
+      "usado_para": "Fechas de plataformas (PS4 14-04-2014, macOS 23-06-2015, PS5 25-05-2021, Xbox 21-03-2024, Switch 2 04-08-2026) y expansiones (Heavensward 23-06-2015, Stormblood 20-06-2017, Shadowbringers 02-07-2019, Endwalker 07-12-2021)."
+    },
+    {
+      "id": "W4",
+      "tipo": "enciclopedia",
+      "titulo": "Final Fantasy XIV: Dawntrail",
+      "autor": "Wikipedia (en)",
+      "url": "https://en.wikipedia.org/wiki/Final_Fantasy_XIV:_Dawntrail",
+      "licencia": "CC BY-SA 4.0",
+      "usado_para": "Dawntrail (02-07-2024), repaso gráfico, nota 79/100 y la más baja de las cinco, crítica al ritmo y a Wuk Lamat, parches 7.1-7.5 (7.5 el 28-04-2026 y su segunda parte el 08-09-2026), colas unificadas por región (Japón 12-10-2026, NA y EU 10-11-2026)."
+    },
+    {
+      "id": "W5",
+      "tipo": "enciclopedia",
+      "titulo": "Final Fantasy XIV: Evercold",
+      "autor": "Wikipedia (en)",
+      "url": "https://en.wikipedia.org/wiki/Final_Fantasy_XIV:_Evercold",
+      "licencia": "CC BY-SA 4.0",
+      "usado_para": "Evercold: 23-02-2027 (acceso anticipado 19-02), el Cuarto y la «Godless Realms Saga», Bastion y Zephyr, sistema Evolved, fin de las piedras de tomo, colaboraciones con FFVII Remake y Evangelion, fin del soporte de PS4 a mitad del ciclo."
+    },
+    {
+      "id": "S1",
+      "tipo": "oficial",
+      "titulo": "Free trial now to include FINAL FANTASY XIV: Shadowbringers!",
+      "autor": "Square Enix (The Lodestone)",
+      "url": "https://na.finalfantasyxiv.com/lodestone/topics/detail/c4e17b1fd48ab3419e12fdd92a16ca387b272fc1",
+      "licencia": "© Square Enix; cita con crédito",
+      "usado_para": "Desde el martes 28 de abril (parche 7.5) la prueba gratuita incluye Shadowbringers."
+    },
+    {
+      "id": "S2",
+      "tipo": "prensa",
+      "titulo": "Final Fantasy XIV: Evercold Expansion, Switch 2 Version Announced",
+      "autor": "Alex Fuller (RPGamer)",
+      "url": "https://rpgamer.com/2026/04/final-fantasy-xiv-evercold-expansion-switch-2-version-announced/",
+      "fecha": "2026-04-24",
+      "licencia": "© RPGamer; cita con crédito",
+      "usado_para": "Anuncio en el Fan Fest de Anaheim del 24-04-2026; Switch 2 en agosto de 2026 con suscripción aparte, sin Nintendo Switch Online y con 50 % de descuento para quien ya paga en otra plataforma."
+    },
+    {
+      "id": "S3",
+      "tipo": "prensa",
+      "titulo": "Final Fantasy 14: A Realm Reborn Passes 2.5 Million Registered Accounts",
+      "autor": "IGN",
+      "url": "https://www.ign.com/articles/2014/12/11/final-fantasy-14-a-realm-reborn-passes-25-million-registered-accounts",
+      "fecha": "2014-12-11",
+      "licencia": "© IGN; cita con crédito",
+      "usado_para": "2,5 millones de cuentas registradas en diciembre de 2014."
+    },
+    {
+      "id": "S4",
+      "tipo": "oficial",
+      "titulo": "FINAL FANTASY XIV: Endwalker anuncia nueva fecha de lanzamiento (nota de prensa)",
+      "autor": "Square Enix North America Press Hub",
+      "url": "https://press.na.square-enix.com/FINAL-FANTASY-XIV-ENDWALKER-ANNOUNCES-NEW-RELEASE-DATE-ALONGSIDE-LAUNC",
+      "licencia": "© Square Enix; cita con crédito",
+      "usado_para": "«Más de 24 millones de jugadores registrados» y la prueba gratuita ampliada a Heavensward (2021)."
+    },
+    {
+      "id": "S5",
+      "tipo": "oficial",
+      "titulo": "FINAL FANTASY XIV Online now has over 30 million players (nota de prensa)",
+      "autor": "Square Enix (vía GamesMEA)",
+      "url": "https://gamesmea.com/final-fantasy-xiv-online-now-has-over-30-million-players/",
+      "fecha": "2024-01",
+      "licencia": "© Square Enix; cita con crédito",
+      "usado_para": "«Más de 30 millones de jugadores registrados» y prueba gratuita hasta Stormblood (parche 4.58)."
+    },
+    {
+      "id": "S6",
+      "tipo": "comunidad",
+      "titulo": "The Seventh Umbral — guía de usuario",
+      "autor": "Proyecto Seventh Umbral",
+      "url": "http://seventhumbral.org/guide.php",
+      "licencia": "Proyecto de la comunidad; sin licencia declarada",
+      "usado_para": "Servidor privado del parche 1.23b con launcher propio, activo."
+    },
+    {
+      "id": "S7",
+      "tipo": "blog técnico",
+      "titulo": "A better way to play FFXIV 1.x",
+      "autor": "redstrate",
+      "url": "https://redstrate.com/blog/2026/03/a-better-way-to-play-ffxiv-1.x/",
+      "fecha": "2026-03-21 (actualizado 2026-10-12)",
+      "licencia": "© redstrate; cita con crédito",
+      "usado_para": "Ecosistema de preservación del 1.x (launchers Umbra y Novum, servidores Seventh Umbral y Project Meteor, Kodama), problemas para arrancarlo en PCs modernos y que Kodama solo permite andar por ahora."
+    },
+    {
+      "id": "S8",
+      "tipo": "repositorio",
+      "titulo": "Project-Novum/NovumLauncher — FFXIV 1.0 Launcher",
+      "autor": "Project Novum (GitHub)",
+      "url": "https://github.com/Project-Novum/NovumLauncher",
+      "licencia": "Ver licencia del repositorio",
+      "usado_para": "Launcher alternativo del 1.0 mantenido por la comunidad."
+    },
+    {
+      "id": "S9",
+      "tipo": "oficial",
+      "titulo": "FINAL FANTASY XIV Fan Kit",
+      "autor": "Square Enix",
+      "url": "https://na.finalfantasyxiv.com/lodestone/special/fankit/",
+      "licencia": "Sujeto al acuerdo de licencia del Fan Kit",
+      "usado_para": "Material oficial para fans (fondos, avatares, marcos, tonos); no incluye capturas de juego."
+    },
+    {
+      "id": "V1",
+      "tipo": "video",
+      "titulo": "FINAL FANTASY XIV: A Realm Reborn - End of an Era",
+      "autor": "FINAL FANTASY XIV (canal oficial)",
+      "url": "https://www.youtube.com/watch?v=39j5v8jlndM",
+      "duracion": "5:53",
+      "fecha": "2012-11-11",
+      "licencia": "© Square Enix; uso de cita, tramo a registrar",
+      "usado_para": "Cierre del 1.0: caída de Dalamud y Bahamut."
+    },
+    {
+      "id": "V2",
+      "tipo": "video",
+      "titulo": "FINAL FANTASY XIV (Version 1.0) Trailer",
+      "autor": "FINAL FANTASY XIV (canal oficial)",
+      "url": "https://www.youtube.com/watch?v=Vg6yutR3AG0",
+      "duracion": "7:20",
+      "licencia": "© Square Enix; uso de cita",
+      "usado_para": "Imagen del 1.0 en su lanzamiento."
+    },
+    {
+      "id": "V3",
+      "tipo": "video",
+      "titulo": "FINAL FANTASY XIV: A Realm Reborn - A New Beginning",
+      "autor": "FINAL FANTASY XIV (canal oficial)",
+      "url": "https://www.youtube.com/watch?v=h542YbZuwkQ",
+      "duracion": "8:38",
+      "licencia": "© Square Enix; uso de cita",
+      "usado_para": "El relanzamiento."
+    },
+    {
+      "id": "V4",
+      "tipo": "video",
+      "titulo": "FINAL FANTASY XIV: A Realm Reborn - Launch Trailer (2013)",
+      "autor": "FINAL FANTASY XIV (canal oficial)",
+      "url": "https://www.youtube.com/watch?v=dc5HY3KEqug",
+      "duracion": "—",
+      "fecha": "2013",
+      "licencia": "© Square Enix; uso de cita",
+      "usado_para": "Lanzamiento de ARR."
+    },
+    {
+      "id": "V5",
+      "tipo": "video",
+      "titulo": "FINAL FANTASY XIV Documentary Part #1 - \"One Point O\"",
+      "autor": "/noclip",
+      "url": "https://www.youtube.com/watch?v=Xs0yQKI7Yw4",
+      "duracion": "50:42",
+      "licencia": "© noclip; referencia, no material",
+      "usado_para": "Documental sobre el 1.0 y su fracaso."
+    },
+    {
+      "id": "V6",
+      "tipo": "video",
+      "titulo": "FINAL FANTASY XIV Documentary Part #2 - \"Rewriting History\"",
+      "autor": "/noclip",
+      "url": "https://www.youtube.com/watch?v=aoOI5R-6u8k",
+      "duracion": "36:43",
+      "licencia": "© noclip; referencia, no material",
+      "usado_para": "La reconstrucción de ARR."
+    },
+    {
+      "id": "V7",
+      "tipo": "video",
+      "titulo": "FINAL FANTASY XIV: Evercold Teaser Trailer",
+      "autor": "FINAL FANTASY XIV (canal oficial)",
+      "url": "https://www.youtube.com/watch?v=Dk3rfUC80DE",
+      "duracion": "4:27",
+      "licencia": "© Square Enix; uso de cita",
+      "usado_para": "Anuncio de Evercold."
+    },
+    {
+      "id": "V8",
+      "tipo": "video",
+      "titulo": "FINAL FANTASY XIV: Evercold | Full Trailer | Launches February 23, 2027",
+      "autor": "FINAL FANTASY XIV (canal oficial)",
+      "url": "https://www.youtube.com/watch?v=8mN8N5O5ru0",
+      "duracion": "6:16",
+      "licencia": "© Square Enix; uso de cita",
+      "usado_para": "Fecha de Evercold: 23 de febrero de 2027."
+    },
+    {
+      "id": "V9",
+      "tipo": "video",
+      "titulo": "FINAL FANTASY XIV Documentary Part #3 - \"The New World\"",
+      "autor": "/noclip",
+      "url": "https://www.youtube.com/watch?v=ONT6fxiu9cw",
+      "duracion": "26:06",
+      "licencia": "© noclip; referencia, no material",
+      "usado_para": "El FFXIV posterior a ARR."
+    },
+    {
+      "id": "V10",
+      "tipo": "video",
+      "titulo": "Keynote｜FINAL FANTASY XIV Fan Festival 2026 in Anaheim",
+      "autor": "FINAL FANTASY XIV (canal oficial)",
+      "url": "https://www.youtube.com/watch?v=My8F6qH2lCQ",
+      "duracion": "155:29",
+      "licencia": "© Square Enix; uso de cita",
+      "usado_para": "Keynote del 24-04-2026: anuncio de Evercold y de Switch 2."
+    },
+    {
+      "id": "V11",
+      "tipo": "video",
+      "titulo": "Naoki Yoshida, 10 years of Final Fantasy XIV",
+      "autor": "Archipel",
+      "url": "https://www.youtube.com/watch?v=emFem0PJdd0",
+      "duracion": "30:39",
+      "licencia": "© Archipel; referencia, no material",
+      "usado_para": "Entrevista larga con Yoshida."
+    },
+    {
+      "id": "V12",
+      "tipo": "video",
+      "titulo": "(2012) Naoki Yoshida Keynote - \"FFXIV: Reincarnating a Game\" (Eng subs)",
+      "autor": "blluist",
+      "url": "https://www.youtube.com/watch?v=rAydRZ1zeCA",
+      "duracion": "63:59",
+      "licencia": "© blluist; referencia, no material",
+      "usado_para": "Keynote de 2012 sobre la reconstrucción."
+    },
+    {
+      "id": "V13",
+      "tipo": "video",
+      "titulo": "Final Fantasy XIV Video Review",
+      "autor": "IGN",
+      "url": "https://www.youtube.com/watch?v=YalPV3cgI78",
+      "duracion": "4:03",
+      "fecha": "2010",
+      "licencia": "© IGN; referencia, no material",
+      "usado_para": "El análisis del 1.0 en su época."
+    },
+    {
+      "id": "V14",
+      "tipo": "video",
+      "titulo": "Final Fantasy XIV (V.1.0) Review",
+      "autor": "GameTrailers",
+      "url": "https://www.youtube.com/watch?v=1Mwdn5-nMJ0",
+      "duracion": "—",
+      "fecha": "2010",
+      "licencia": "© GameTrailers; referencia, no material",
+      "usado_para": "«Lanzado antes de estar terminado»."
+    },
+    {
+      "id": "V15",
+      "tipo": "video",
+      "titulo": "I Replayed Final Fantasy XIV 1.0 For This Review",
+      "autor": "ProJared",
+      "url": "https://www.youtube.com/watch?v=iU8biK4FNCw",
+      "duracion": "66:07",
+      "fecha": "2022",
+      "licencia": "© ProJared; referencia, no material",
+      "usado_para": "Revisión del 1.0 jugado hoy en servidor privado."
+    },
+    {
+      "id": "V16",
+      "tipo": "video",
+      "titulo": "Why did FFXIV 1.0 need a complete overhaul?",
+      "autor": "Valgard Gaming",
+      "url": "https://www.youtube.com/watch?v=b_SZDvp9kms",
+      "duracion": "10:52",
+      "licencia": "© Valgard Gaming; referencia, no material",
+      "usado_para": "Por qué hubo que rehacerlo."
+    },
+    {
+      "id": "V17",
+      "tipo": "video",
+      "titulo": "The Story of Final Fantasy XIV: A Realm Reborn",
+      "autor": "The Exploring Series",
+      "url": "https://www.youtube.com/watch?v=8Z6Srs4wpzI",
+      "duracion": "228:33",
+      "licencia": "© The Exploring Series; referencia, no material",
+      "usado_para": "Historia completa del relanzamiento."
+    },
+    {
+      "id": "V18",
+      "tipo": "video",
+      "titulo": "FINAL FANTASY XIV: THE FINAL 11 MINUTES *End Of Eorzea*",
+      "autor": "GameNChick",
+      "url": "https://www.youtube.com/watch?v=YgEg8kXmifo",
+      "duracion": "11:22",
+      "fecha": "2012",
+      "licencia": "© GameNChick; referencia, no material sin permiso",
+      "usado_para": "Los últimos minutos del servidor del 1.0 (2,07 M de visitas)."
+    },
+    {
+      "id": "V19",
+      "tipo": "video",
+      "titulo": "Final Fantasy XIV : Last Moments of Eorzea & Final",
+      "autor": "Roivas Alenko",
+      "url": "https://www.youtube.com/watch?v=TzLUASTdV5g",
+      "duracion": "27:38",
+      "fecha": "2012",
+      "licencia": "© Roivas Alenko; referencia, no material sin permiso",
+      "usado_para": "El cierre visto por jugadores."
+    },
+    {
+      "id": "V20",
+      "tipo": "video",
+      "titulo": "FFXIV: Last Footage From 1.0",
+      "autor": "v3lvetf4ir",
+      "url": "https://www.youtube.com/watch?v=udqDl7N0hO0",
+      "duracion": "14:29",
+      "licencia": "© v3lvetf4ir; referencia, no material sin permiso",
+      "usado_para": "Últimas imágenes del 1.0."
+    },
+    {
+      "id": "V21",
+      "tipo": "video",
+      "titulo": "ORIGINAL FFXIV! Asmongold Reacts to 1.0 Final Minutes",
+      "autor": "Asmongold TV",
+      "url": "https://www.youtube.com/watch?v=A4OQMAndXgM",
+      "duracion": "—",
+      "licencia": "© Asmongold TV; referencia, no material",
+      "usado_para": "Interés actual por el cierre del 1.0."
+    },
+    {
+      "id": "V22",
+      "tipo": "video",
+      "titulo": "Final Fantasy XIV 1.0 en Español - Escena Final: El Fin de una Era (End of an Era)",
+      "autor": "FFVII-Collector",
+      "url": "https://www.youtube.com/watch?v=Y4K3E0GAqAY",
+      "duracion": "5:47",
+      "licencia": "© FFVII-Collector; referencia, no material",
+      "usado_para": "La escena final en español."
+    },
+    {
+      "id": "V23",
+      "tipo": "video",
+      "titulo": "How to play Final Fantasy 14 v1.23b (2026)",
+      "autor": "Slerp Lederp",
+      "url": "https://www.youtube.com/watch?v=HNtGxs4fUP8",
+      "duracion": "12:47",
+      "fecha": "2026",
+      "licencia": "© Slerp Lederp; referencia, no material",
+      "usado_para": "El 1.0 jugable hoy (tutorial actual)."
+    },
+    {
+      "id": "V24",
+      "tipo": "video",
+      "titulo": "Final Fantasy XIV 1.0 vs 6.0 - Limsa Lominsa Plaza Comparison (Recorded Nov 2022)",
+      "autor": "Wogle",
+      "url": "https://www.youtube.com/watch?v=4_A3V7rLmf0",
+      "duracion": "—",
+      "fecha": "2022",
+      "licencia": "© Wogle; referencia, no material",
+      "usado_para": "Comparativa visual 1.0 frente a la versión actual."
+    },
+    {
+      "id": "V25",
+      "tipo": "video",
+      "titulo": "FFXIV 1.0 - An Abandoned World - 1 Hour In Gridania - Private Server",
+      "autor": "DarkFuseion",
+      "url": "https://www.youtube.com/watch?v=cw3FWjBMEb4",
+      "duracion": "—",
+      "licencia": "© DarkFuseion; referencia, no material",
+      "usado_para": "El 1.0 en un servidor privado."
+    },
+    {
+      "id": "V26",
+      "tipo": "video",
+      "titulo": "FFXIV, HISTORIA COMPLETA - 1.0 (Parte 1: El Origen)",
+      "autor": "El Archivo de Aryn (Final Fantasy XIV Español)",
+      "url": "https://www.youtube.com/watch?v=xhKjTVeAFmk",
+      "duracion": "20:29",
+      "licencia": "© El Archivo de Aryn; referencia, no material",
+      "usado_para": "El vídeo español más visto sobre el 1.0 (lore)."
+    },
+    {
+      "id": "V27",
+      "tipo": "video",
+      "titulo": "Final Fantasy XIV - La historia desde el lanzamiento (1.0) hasta A Realm Reborn (2.0)",
+      "autor": "ELNAL",
+      "url": "https://www.youtube.com/watch?v=Ev66X7SZ_hQ",
+      "duracion": "15:12",
+      "licencia": "© ELNAL; referencia, no material",
+      "usado_para": "Cobertura española del paso del 1.0 al 2.0."
+    },
+    {
+      "id": "V28",
+      "tipo": "video",
+      "titulo": "Final Fantasy XIV Online A Realm Reborn - Vídeo Análisis",
+      "autor": "3DJuegos",
+      "url": "https://www.youtube.com/watch?v=1Bvs0DIiQhM",
+      "duracion": "7:10",
+      "fecha": "2013",
+      "licencia": "© 3DJuegos; referencia, no material",
+      "usado_para": "La prensa española ante ARR."
+    },
+    {
+      "id": "V29",
+      "tipo": "video",
+      "titulo": "FINAL FANTASY XIV en 2026 ¿Vale la pena empezar AHORA? | Guía en Español",
+      "autor": "OldToxicFlux",
+      "url": "https://www.youtube.com/watch?v=tAqTp9XUwYk",
+      "duracion": "9:22",
+      "licencia": "© OldToxicFlux; referencia, no material",
+      "usado_para": "El formato «estado actual» que ya existe en español."
+    },
+    {
+      "id": "V30",
+      "tipo": "video",
+      "titulo": "FFXIV Tactics: Understanding the Fatigue System",
+      "autor": "FFXIVTactics",
+      "url": "https://www.youtube.com/watch?v=abE09-tqhoM",
+      "duracion": "5:19",
+      "fecha": "2010",
+      "licencia": "© FFXIVTactics; referencia, no material",
+      "usado_para": "El sistema de fatiga del 1.0 (240.000 visitas)."
+    }
+  ]
+}
