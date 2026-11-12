@@ -140,3 +140,24 @@ def update_snippet(session, video_id, snippet):
                            json={'id': video_id, 'snippet': snippet}, timeout=60)
     if not 200 <= response.status_code < 300:
         raise ClipError(f'YouTube no aceptó los enlaces de la descripción (HTTP {response.status_code}).')
+
+
+# Campos de status que se pueden reenviar; uploadStatus, failureReason y rejectionReason son solo de lectura.
+STATUS_EDITABLE = ('embeddable', 'license', 'publicStatsViewable', 'selfDeclaredMadeForKids', 'containsSyntheticMedia')
+
+
+def set_public(session, video_id):
+    """Pasa a público un vídeo privado o programado (videos.update, part=status) sin cambiar el resto de su status.
+    Devuelve cómo estaba antes."""
+    response = session.get('https://www.googleapis.com/youtube/v3/videos', params={'part': 'status', 'id': video_id}, timeout=60)
+    items = response.json().get('items') if 200 <= response.status_code < 300 else None
+    if not items:
+        raise ClipError(f'YouTube no devuelve el estado del vídeo {video_id} (HTTP {response.status_code}).')
+    current = items[0].get('status', {})
+    status = {'privacyStatus': 'public', **{k: current[k] for k in STATUS_EDITABLE if k in current}}
+    response = session.put('https://www.googleapis.com/youtube/v3/videos', params={'part': 'status'},
+                           json={'id': video_id, 'status': status}, timeout=60)
+    if not 200 <= response.status_code < 300:
+        raise ClipError(f'YouTube no aceptó publicar el vídeo {video_id} (HTTP {response.status_code}).')
+    before = current.get('privacyStatus', '?')
+    return before + (', programado ' + current['publishAt'] if current.get('publishAt') else '')

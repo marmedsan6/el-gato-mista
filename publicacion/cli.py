@@ -43,6 +43,9 @@ def parser():
     pub.add_argument('--confirmacion-lote', help='Huella exacta del lote autorizada por Mario en el chat')
     pub.add_argument('--ejecutar', action='store_true')
     pub.add_argument('--probar-publica', action='store_true', help='Hasta confirmar la auditoría de la API: sube en público por API una sola vez y lee el estado que YouTube le da')
+    now_cmd = commands.add_parser('youtube-publicar-ya', help='Orden de Mario: un vídeo ya subido y programado pasa a público ahora (pide permiso de edición)')
+    now_cmd.add_argument('proyecto')
+    now_cmd.add_argument('formato')
     outcome = commands.add_parser('publicacion-resultado', help='Anotar el resultado de una subida manual revisada')
     outcome.add_argument('proyecto')
     outcome.add_argument('formato', help='largo, short o short-<nombre>')
@@ -85,6 +88,9 @@ def run(args):
             if args.probar_publica and not args.ejecutar:
                 raise ClipError('--probar-publica solo se usa con --ejecutar y la huella autorizada por Mario.')
             return execute(project, args.confirmacion_lote, args.probar_publica) if args.ejecutar else plan(project)
+        if name == 'youtube-publicar-ya':
+            from .story_publication import publish_now
+            return publish_now(project, args.formato)
         if name == 'publicacion-resultado':
             return manual_result(project, args.formato, args.estado, args.cuenta, args.resultado, args.nota)
     raise ClipError('Comando desconocido.')

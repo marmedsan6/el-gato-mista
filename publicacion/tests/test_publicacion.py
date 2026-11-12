@@ -239,3 +239,70 @@ def test_la_plantilla_sin_rellenar_no_se_puede_exportar(proyecto):
     (proyecto / 'publicacion.json').write_text(json.dumps(datos), encoding='utf-8')
     with pytest.raises(ClipError, match='sin < ni >'):
         story_publication.export(proyecto)
+
+
+class SesionProgramado:
+    """YouTube de mentira con un vídeo privado programado: guarda lo que se le pide cambiar."""
+
+    def __init__(self):
+        self.cambios = []
+
+    def get(self, url, params=None, **kwargs):
+        from conftest import Respuesta
+        return Respuesta(200, payload={'items': [{'id': 'abcdefghijk', 'status': {
+            'privacyStatus': 'private', 'publishAt': '2026-11-13T11:00:00Z', 'uploadStatus': 'processed', 'embeddable': True,
+            'license': 'youtube', 'publicStatsViewable': True, 'selfDeclaredMadeForKids': False, 'containsSyntheticMedia': False}}]})
+
+    def put(self, url, params=None, json=None, **kwargs):
+        from conftest import Respuesta
+        self.cambios.append((params, json))
+        return Respuesta(200, payload={'id': 'abcdefghijk'})
+
+    def close(self):
+        pass
+
+
+def _subido(proyecto, formato='short'):
+    from publicacion.core import write_json
+    write_json(proyecto / 'publicaciones.json', {'historias': {'x': {'formato': formato, 'video_id': 'abcdefghijk', 'estado': 'publicado',
+                                                                   'fecha': '2026-11-12T12:00:00+00:00', 'url': 'https://www.youtube.com/shorts/abcdefghijk'}}})
+
+
+def test_publicar_ya_pasa_a_publico_sin_tocar_lo_demas(proyecto, monkeypatch):
+    from conftest import Credenciales
+    from publicacion import youtube_profiles
+    from publicacion.core import read_json
+    from publicacion.story_publication import publish_now
+    falsa = SesionProgramado()
+    monkeypatch.setattr(youtube_profiles, 'authorized_session', lambda perfil: (Credenciales(), falsa))
+    _subido(proyecto)
+    resultado = publish_now(proyecto, 'short')
+    assert resultado == {'formato': 'short', 'video_id': 'abcdefghijk', 'antes': 'private, programado 2026-11-13T11:00:00Z', 'ahora': 'public'}
+    params, cuerpo = falsa.cambios[0]
+    assert params == {'part': 'status'} and cuerpo['id'] == 'abcdefghijk'
+    assert cuerpo['status'] == {'privacyStatus': 'public', 'embeddable': True, 'license': 'youtube', 'publicStatsViewable': True,
+                                'selfDeclaredMadeForKids': False, 'containsSyntheticMedia': False}
+    assert read_json(proyecto / 'publicaciones.json')['historias']['x']['publicado_ya']
+
+
+def test_publicar_ya_exige_el_permiso_de_edicion(proyecto, monkeypatch):
+    from publicacion import youtube_profiles
+    from publicacion.story_publication import publish_now
+
+    class SinEditar:
+        scopes = ['https://www.googleapis.com/auth/youtube.upload']
+
+        def to_json(self):
+            return '{}'
+    falsa = SesionProgramado()
+    monkeypatch.setattr(youtube_profiles, 'authorized_session', lambda perfil: (SinEditar(), falsa))
+    _subido(proyecto)
+    with pytest.raises(ClipError, match='youtube-conectar'):
+        publish_now(proyecto, 'short')
+    assert falsa.cambios == []
+
+
+def test_publicar_ya_un_formato_sin_subir_da_un_mensaje_claro(proyecto, sesion):
+    from publicacion.story_publication import publish_now
+    with pytest.raises(ClipError, match='no está subido'):
+        publish_now(proyecto, 'short')

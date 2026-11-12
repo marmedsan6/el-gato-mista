@@ -307,3 +307,30 @@ def manual_result(project, format_id, status, account, result=None, note=''):
         records['historias'][key]['portada_sha256'] = item['portada_sha256']
     write_json(records_path, records)
     return item
+
+
+def publish_now(project, format_id):
+    """Orden de Mario: un vídeo ya subido y programado sale ya (p. ej. el short A con el largo, Mario 2026-11-12).
+    No toca publicacion.json (su huella es la del lote subido): lo anota en publicaciones.json."""
+    from .youtube_upload import set_public
+    video_id = enlaces.video_ids(project).get(format_id)
+    if not video_id:
+        raise ClipError(f'Ese formato no está subido a YouTube: {format_id}. Súbelo antes con la orden de Mario.')
+    credentials = session = None
+    try:
+        credentials, session = profiles.authorized_session(PROFILE)
+        if not profiles.can_edit(credentials):
+            raise ClipError('Falta el permiso de edición de YouTube: vuelve a conectar el perfil con youtube-conectar.')
+        before = set_public(session, video_id)
+    finally:
+        if credentials is not None:
+            write_json(profiles.profile_root(PROFILE) / 'token.json', json.loads(credentials.to_json()))
+        if session is not None:
+            session.close()
+    records_path = project / 'publicaciones.json'
+    records = read_json(records_path)
+    for record in records.get('historias', {}).values():
+        if record.get('video_id') == video_id:
+            record.update({'publicado_ya': now(), 'estado_previo': before})
+    write_json(records_path, records)
+    return {'formato': format_id, 'video_id': video_id, 'antes': before, 'ahora': 'public'}
