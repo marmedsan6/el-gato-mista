@@ -34,8 +34,8 @@ Diagnóstico: `docs/investigacion/diagnostico-2026-11-10/informe.md`. Decisiones
 | 1 | Push de `main` y de la rama (el `main` local ya está en la punta de la rama desde el 2026-11-11; lo que había sin versionar en el checkout principal está en `.runtime/respaldo-main-2026-11-11/`) | Sí: el push |
 | 2 | Decidir qué se hace con el short publicado de NVIDIA (el crítico lo da por no apto a posteriori) | Sí |
 | 3 | Instagram de anthropic-fable-5-2, que falló al subir (HTTP 400 ProcessingFailedError) | Sí |
-| 4 | Primer vídeo completo en v6 (un largo con sus shorts) | Tema y puertas |
-| 5 | Mundo por tema o virtualizado para el largo: con 16 pantallas, cada captura cuesta 3,6 veces más que con 2 | No |
+| 4 | ~~Primer vídeo completo en v6~~: hecho, `como-google-sabe-lo-que-quieres` publicado el 2026-11-12 y fijado como estándar. Queda subir a `motor/estilo/v6/` y a las plantillas lo que sirve a todos (`short-motor.js`, el mundo por bloque, la tabla de nombres cortos de fuente del short) | No |
+| 5 | Mundo por tema o virtualizado para el largo: el mundo por bloque de como-google funciona, pero el largo tardó 14,5 h en renderizar (3,3 s por captura); falta abaratarlo | No |
 | 6 | Catálogo de dioramas por concepto (`motor/biblioteca/`) y quién elige el recurso | Decisión |
 | 7 | Lo que el crítico dejó sin bloquear en la v6 (`reviews/calibracion/iter-v6-01.md`): la estación del matiz con el periódico en lugar del tuit, sujetos más grandes (Jensen Huang, la silueta, la rotativa), tramos quietos del matiz y del cierre, y la IA del clip. Rediseño de MISTA si Mario lo pide | Decisión |
 | 8 | Línea de tiempo declarativa y un comando que encadene la producción | No |
@@ -44,5 +44,5 @@ Diagnóstico: `docs/investigacion/diagnostico-2026-11-10/informe.md`. Decisiones
 | 11 | Franja negra bajo el zoom de la oficina en 16:9 (pendiente desde la v5) | No |
 
 ## Dudas abiertas
-- Miniaturas del largo: hoy la portada se genera con Codex a partir de fotogramas.
+- Portadas: siempre con Codex, del largo y de cada short (Mario, 2026-11-12). En YouTube Studio los shorts no las enseñaban; falta comprobar si YouTube las muestra en los Shorts.
 - Si GitHub Pages sirve la rama `gh-pages` (ADR 0003): la rama está en origin; no se ha comprobado la web.

@@ -1,8 +1,10 @@
 # 0010 · Estilo v6: casi sin texto, fuente en la caja y puerta automática
 
 - Fecha: 2026-11-10
-- Estado: **aceptada**. Reglas de Mario del 2026-11-10 (`memoria/decisiones.md`) y prueba aprobada el 2026-11-11 («Me
-  gusta, sigue»; `reviews/calibracion/iter-v6-01.md`): short interno v4 de NVIDIA y clip v6 en 16:9.
+- Estado: **aceptada y estándar completo**. Reglas de Mario del 2026-11-10 (`memoria/decisiones.md`) y prueba aprobada el
+  2026-11-11 («Me gusta, sigue»; `reviews/calibracion/iter-v6-01.md`): short interno v4 de NVIDIA y clip v6 en 16:9.
+  Primer vídeo completo (largo con tres shorts), `como-google-sabe-lo-que-quieres`, publicado el 2026-11-12; Mario lo fija
+  como versión estándar y completa ese día, con portadas de Codex para el largo y cada short y el short A saliendo con el largo.
 - Sustituye en parte: ADR 0009 (v5) en textos, fuente del dato, rótulos, zoom core y tiempos de cámara. El diorama a
   4 px, MISTA solo en los temas, la paleta y la caja de diálogo no cambian.
 

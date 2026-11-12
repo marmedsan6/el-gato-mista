@@ -35,9 +35,16 @@ Umbrales: `docs/criterios.md` §4. Necesita FFmpeg en el PATH.
    fotograma). No escribas enlaces: la subida añade los del largo y sus shorts (skill `publicar`). Comprueba que un short
    con largo termina remitiendo a él (skill `nuevo-video`, «Cierre del short») y pregunta a Mario lo que falte: `contains_synthetic_media` y cualquier duda del texto. Así su orden de subir no se
    encuentra con preguntas.
-   Portada (Mario, 2026-11-09): se genera con Codex a partir de 1-2 fotogramas del máster, en pixel art 9:16 con MISTA y el
-   título del vídeo, sin logotipos ni caras reales y con la franja derecha y el 20 % inferior libres:
-   `codex exec --skip-git-repo-check -C <carpeta temporal> -s workspace-write -i <fotograma>.png "<instrucciones>"`.
-   Se guarda en `salida/portada-codex-<letra>.png`, se enseña a Mario y va en `publicacion.json` como `portada_imagen`
-   (la subida la usa en lugar del fotograma de `portada_segundo`, que sigue siendo obligatorio).
+   **Portadas, siempre con Codex** (Mario, 2026-11-09 y 2026-11-12): una para el largo y una para **cada** short, a partir
+   de 1-2 fotogramas del máster y de uno con MISTA, en pixel art con MISTA y el título del vídeo, sin logotipos ni caras
+   reales. Largo: 16:9 con la esquina inferior derecha libre (la duración); short: 9:16 con la franja derecha y el 20 %
+   inferior libres. Las `-i` van **antes** de `-C` (si no, `-i` se traga el prompt); las cuatro pueden ir en paralelo (~8 min):
+   `codex exec --skip-git-repo-check -i <mista>.png -i <fotograma>.png -C <carpeta temporal> -s workspace-write "<instrucciones>"`.
+   Codex no da el tamaño exacto: se escala a 1280×720 o 1080×1920 (menos de 2 MB) y se guarda en
+   `salida/portada-codex-largo.png` y `salida/portada-codex-<letra>.png` (`-short.png` si hay uno solo). Se enseñan a Mario
+   y van en `publicacion.json` como `portada_imagen` (la subida la usa en lugar del fotograma de `portada_segundo`, que
+   sigue siendo obligatorio). Ejemplo: `proyectos/como-google-sabe-lo-que-quieres/`.
+   **Calendario** (Mario, 2026-11-12): el primer short (A, o el único) **sale con el largo**: sin `fecha`. Los demás, uno al
+   día a las 12:00 (Madrid) desde el día siguiente: `fecha` en ISO con zona (`2026-11-14T12:00:00+01:00`), puesta con el día
+   de la orden de subir.
 10. Enséñale el máster. Si pide cambios, se vuelve a Escenas (`reviews/iter-NN.md`); si da la orden de subir, skill `publicar`.

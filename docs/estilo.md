@@ -3,7 +3,9 @@
 ## Estilo vigente: v6
 Reglas de Mario del 2026-11-10 (ADR 0010) sobre la v5 (ADR 0009, aprobada el 2026-11-09). Prueba aprobada por Mario el
 2026-11-11 («Me gusta, sigue»): short interno v4 de NVIDIA y clip en 16:9 (`reviews/calibracion/iter-v6-01.md`).
-- **Ejemplos completos:** `proyectos/nvidia-huang-espionaje/escenas/short-v4/` (9:16) y `motor/calibracion/v6/clip.{html,js}` (16:9).
+- **Ejemplos completos:** `proyectos/como-google-sabe-lo-que-quieres/` (el estándar: largo con un mundo por bloque en
+  `escenas/largo/` y tres shorts sobre `escenas/comun/short-motor.js`, publicado el 2026-11-12), `proyectos/nvidia-huang-espionaje/escenas/short-v4/`
+  (9:16) y `motor/calibracion/v6/clip.{html,js}` (16:9).
 - **Biblioteca:** `motor/estilo/v6/` (`escena.js`, `piezas.js`, `estilo-v6.css`) sobre `motor/estilo/v5/dibujo.js`, con
   `motor/estilo/{estilo.css, pixel.js, camara.js}` y `v3/gato.js`.
 - **Plantillas:** `plantillas/escenas/v6/{short,largo}/escena-plantilla.html`.

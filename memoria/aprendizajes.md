@@ -25,6 +25,10 @@ Lo que sigue sirviendo, por temas. El historial completo (con las medidas y el d
 - 2026-11-10 · **Nada pesado mientras corre un render.** Con 8 navegadores, un lint o un `qa.mjs` a la vez multiplican los tiempos por 5-10 (un render de 3 min tardó 28; un QA de 12 s, más de 5 min).
 - 2026-11-10 · Una capa HTML del ancho del mundo dentro de un plano con transformación (un `div` con `inset: 0` en `#p-medio`, 2.430 px a ×4) ahoga el render con 8 navegadores: 60 fotogramas en 107 s frente a 30 s al dejarla sin tamaño. Los contenedores de textos del mundo no llevan tamaño propio.
 - 2026-11-10 · `render.mjs --desde/--hasta` renderiza solo un tramo (2 s en unos 20-30 s): sirve para ver un cambio sin el render entero. Tocar `render.mjs` invalida todas las cachés (su contenido entra en la clave).
+- 2026-11-11 · **Mundo por bloque** en un largo (`proyectos/como-google-sabe-lo-que-quieres/escenas/largo/largo.js`): cada bloque tiene su `ruta6`, su `crearCamara` y su `lienzos6`, que se rehace solo al cambiar de bloque; el mundo del bloque b empieza con una copia de la última estación del b-1, así el cambio de tema es el salto «tema» de siempre. Los textos del mundo usan coordenadas locales de su bloque. `window.revision` junta movimientos, salidas y llegadas de todos (sin la llegada artificial en 0 de los bloques > 1). Con `?hasta=N` se revisa por tramos.
+- 2026-11-11 · `fuentes-frases.mjs` contaba el título `### 4. …` como palabras del párrafo siguiente y rompía el reparto con títulos de 4+ palabras; ahora los ignora (test en `tests/fuentes-frases.test.mjs`).
+- 2026-11-11 · Una frase de menos de 2,5 s no da para estación propia: la pieza clave no llega a sus 2 s antes de que salga la cámara. Se junta con la estación vecina.
+- 2026-11-12 · **Un largo de 8 min a 1920×1080 tarda 14,5 h** sin caché (15.804 capturas distintas, ~3,3 s cada una con 8 navegadores; los shorts de 60 s, minutos). La caché va por la huella de los ficheros: tocar una escena ya renderizada la invalida entera. Para arreglar un tramo se renderiza solo ese tramo con `--desde/--hasta` (de la salida de cámara anterior a la llegada siguiente, para que los bordes coincidan) y se empalma en el MP4.
 - `render.mjs --fotogramas` guarda los PNG y luego renderiza todo: para ver fotogramas sueltos, `revisar.mjs` con tiempos.
 - Clips con fotogramas en la escena: `seek` puede devolver la promesa de `img.decode()`.
 - Medir motores o variantes en paralelo falsea los tiempos: en serie y con la máquina libre.
@@ -40,6 +44,7 @@ Lo que sigue sirviendo, por temas. El historial completo (con las medidas y el d
 - El texto en pantalla se relee fuera de la voz: el crítico caza sobre todo texto que afirma más que ella (pídeselo y dale la voz de cada frase). Las cifras dibujadas también se comprueban (un «×10» que medía 28 veces el área).
 - Lo que el crítico marca como «depende del texto» se arregla dibujando el objeto. Un icono plano sin contorno se lee como una letra: contorno y 3 tonos. 11 celdas iguales se leen como una hoja de cálculo.
 - Press Start 2P: ÁÉÍÓÚ se leen como minúsculas (`tildesPixel()` / `tildes6()`, que dejan la letra sin tilde en el DOM); a 360 px el 8 y el 5 se leen como S (cifras en JetBrains Mono). Pixelify Sans: ligadura «fi» que se lee como «ñ» (desactivadas en `*`).
+- 2026-11-12 · En 9:16 la pestaña de fuente va bajo la caja, alineada a la derecha y en una línea: con más de ~17 caracteres («Pan et al., PoPETs 2018») se sale por la izquierda y el lint da «la fuente se ve 0,00 s». Nombres cortos para el short (en `short-motor.js` de como-google). Y el lint no ve las placas del dibujo: una placa bajo el rótulo o tapada por una cifra solo sale en la hoja de contactos.
 - Caja de diálogo: paginar simulando el ajuste de línea (21 caracteres × 2 líneas en el short) y medir el DOM; el signo de puntuación pegado a la palabra clave (`.nw`) para que no caiga solo a la línea siguiente.
 - `P(frase, "palabra")` busca en el timing ya pasado por `escrito.mjs`: las cifras del guion en dígitos se buscan en dígitos. Si falla, falla al pintar ese bloque: `revisar.mjs` lo caza sin renderizar.
 - En una base de escena que une estilos por texto, un `;` que falta hace que el navegador descarte en silencio lo que sigue.
@@ -58,6 +63,8 @@ Lo que sigue sirviendo, por temas. El historial completo (con las medidas y el d
 - El cupo gratuito de Gemini TTS se acaba tras unas 10 peticiones al día: en un largo, agrupar tramos (`por-bloques.mjs` guarda en caché y sigue donde iba).
 - faster-whisper: decodificar con FFmpeg y pasar el array (PyAV rompe `decode_audio`). Dar el guion como pista puede forzar la coincidencia: comprobar también a ciegas (`--sin-pista`).
 - 2026-11-10 · Un 97,9 % de alineación puede esconder un límite de frase mal puesto (0,56 s en NVIDIA: «China.» 0,06 s y «Y» 0,86 s). `node motor/voz/revisar-alineacion.mjs` lo compara con los silencios y lo ajusta: se elige el silencio más largo entre las dos frases, no el más cercano.
+- 2026-11-11 · Los textos de voz se generan desde el guion con un script de ida y vuelta (reescribir nombres y cifras, y comprobar que al deshacerlo sale el guion párrafo a párrafo): 93 de 93 sin diferencias. `alinear.py` pone `formato: short` por defecto: en un largo, pásale `--formato largo` o corrige el campo.
+- 2026-11-11 · Un largo de 8.734 caracteres son 8 peticiones a Gemini (una por bloque) y tres shorts, 3 más: las 11 salieron el mismo día con el cupo gratuito. Con el estilo de explicativo, el largo fue a 17,8 caracteres/s y el short B a 20.
 - `ffmpeg silenceremove` deja los silencios en ~0,58 s; recortar los tramos medidos con `silencedetect` sí funciona (`apretar-pausas.mjs`).
 
 ## Audio
@@ -67,6 +74,7 @@ Lo que sigue sirviendo, por temas. El historial completo (con las medidas y el d
 
 ## QA y crítico
 - El crítico (Opus) encuentra lo que las medidas no ven y merece la pasada **sobre el máster final**: la v3 de NVIDIA se publicó con la crítica de la v2 y llevaba un defecto bloqueante. No puede escribir: su crítica se copia a `reviews/`.
+- 2026-11-12 · Con varios formatos, `qa.mjs` escribe `reviews/qa-vN.md` solo para el primero y no pisa los demás: el informe se completa a mano por formato (`qa-largo-vN.md`, `qa-shorts-vN.md`). En un largo con `--voz-desfase`, pásale `--timing` con las frases desplazadas (sin eso, los fotogramas de frase caen antes de tiempo). El crítico puede medir la zona segura del short en la escala de 360×640 con los límites de 270×480: comprueba sus «en la franja derecha» antes de tocar nada.
 - Dale el último instante de cada frase (no tiempos fijos), tiras de cada movimiento y los reducidos a 360×640: lo saca todo `node motor/qa.mjs` en unos 12 s.
 - El verificador de enlaces barato da falsos «no respaldado»: sus «parcial» y «no respalda» se comprueban en la fuente antes de tocar un guion aprobado.
 - Al sacar código de una escena a la biblioteca, comparar huellas de fotogramas por `seek(t)` antes y después prueba que nada cambia, sin renderizar.
@@ -75,8 +83,12 @@ Lo que sigue sirviendo, por temas. El historial completo (con las medidas y el d
 - YouTube: tras subir, `processing` unos 3 min antes de ver etiquetas. `containsSyntheticMedia: false` no vuelve por la API. El «vídeo relacionado» de un Short no está en la API: se pone en Studio. `videos.update` reemplaza el snippet entero.
 - Studio en el Chrome de Mario abre por defecto «mariobox»: cambiar a «El Gato Mista». La foto de perfil no se cambia por API en ninguna red.
 - TikTok: sandbox, solo a la bandeja. Instagram no sale sin el enlace a YouTube en el texto.
+- 2026-11-12 · **Portada de un Short:** `thumbnails.set` con la imagen 9:16 la deja como miniatura general (en `maxresdefault`, recortada a 16:9 con los lados desenfocados), pero la miniatura vertical del feed de Shorts y de Studio (`oar2`, 1080×1920) sigue siendo un fotograma elegido por YouTube. Según la ayuda de YouTube (support.google.com/youtube/answer/72431), la vertical solo se sube desde Studio en un ordenador (Miniatura → Subir archivo), con la cuenta verificada; se comprueba con `https://i.ytimg.com/vi/<id>/oar2.jpg` cuando el short es público.
+- 2026-11-12 · La subida sí manda la portada de cada short (`thumbnails.set`, huella en `publicaciones.json`, la jpg 1080×1920 de Codex en `para-subir/`), pero Mario no la veía en YouTube Studio mientras los shorts seguían privados y programados. La del largo público sí se sirve (`i.ytimg.com/vi/<id>/maxresdefault.jpg`); la de un short solo se puede comprobar desde fuera cuando es público.
+- 2026-11-12 · Con shorts programados (`fecha`), YouTube los deja para su día pero **Instagram los publica en el momento** (como-google: los reels de B y C salieron el 12, sus shorts de YouTube el 14 y el 15). Repetir la orden no duplica nada (TikTok devuelve los mismos `publish_id`). Instagram puede fallar con «HTTP 400 ProcessingFailedError» en un short concreto dos veces seguidas (short A de como-google, como anthropic-fable-5-2): no es la conexión, porque los otros salen.
 - `publicacion/` admite varios shorts; si cambian los metadatos tras subir, no vuelve a subir.
 - Portada con Codex: `codex exec -i ref1.png -i ref2.png -C <carpeta> -s workspace-write "<prompt>"` (unos 8 min).
+- 2026-11-12 · En `codex exec` las `-i` van **antes** de `-C`/`-s`: `-i` admite varios ficheros y, si va justo antes del prompt, se lo traga («No prompt provided via stdin»). Cuatro portadas en paralelo tardan lo que una (~8 min); salen a 941×1672 o 1672×941 y se escalan a 1080×1920 o 1280×720.
 - 2026-11-10 · YouTube genera sus subtítulos automáticos con la voz («envidia», «Megaspited»): subir los propios desde el timing está pendiente (necesita `youtube.force-ssl`).
 
 ## Navegador, descargas e investigación
@@ -85,6 +97,12 @@ Lo que sigue sirviendo, por temas. El historial completo (con las medidas y el d
 - Pixabay bloquea curl en la página de la pista, pero el enlace del CDN sí descarga. Freesound da la vista previa HQ de los CC0.
 - El navegador integrado no abre `file://`: para ver una escena, `revisar.mjs` con capturas; para ver un máster publicado, YouTube.
 - Investigación a fondo con subagentes en paralelo: unos 600 mil tokens; lo que citan de memoria se verifica antes del guion.
+- 2026-11-11 · WebFetch no lee PDF (devuelve el binario), pero lo guarda en `tool-results/`; `pdftotext -layout` (en `/mingw64/bin`) lo pasa a texto y se busca con Grep. El Read de PDF falla sin `pdftoppm`.
+- 2026-11-11 · En las fuentes, leer el artículo y no la nota de prensa: la de Northeastern dice «17.000 apps» y «ninguna activó el micrófono»; el artículo dice 17.260 analizadas, 9.100 probadas en marcha y avisa de que no detectaría audio pasado a texto.
+- 2026-11-11 · Comillas rectas dentro de una cita en `fuentes.json` rompen el JSON: escápalas o usa «».
+- 2026-11-11 · Investigar un vídeo de YouTube: `yt-dlp --dump-json` da título, métricas y pista de subtítulos, pero el canal no tiene subtítulos del autor; con faster-whisper (`small`) sobre el audio decodificado con ffmpeg (`-f f32le -ac 1 -ar 16000`) salen 128 segmentos en ~4 min de CPU. faster-whisper 1.2.1 con av 19 rompe (`metadata_errors`): se le pasa el numpy directamente, sin fichero.
+- 2026-11-11 · Reddit bloquea la búsqueda (403/429) y `old.reddit` pide cuenta; lo que sí responde es el RSS de subreddit (`/r/<sub>/.rss`) y el de hilo (`/r/<sub>/comments/<id>/.rss`, con los comentarios), con esperas de 10-15 s. DuckDuckGo devuelve «anomaly» a las pocas consultas; Google sirve página sin resultados y Bing ignora el `site:`. X no se lee sin sesión. Hacker News, por su API de Algolia, es de donde sale la discusión de verdad.
+- 2026-11-11 · Google Noticias da los titulares fiables pero no las URLs: las de Reuters (401) y las construidas a mano en CNBC, The Verge y Tom's Hardware (404) no abren. Un titular de Google Noticias no basta para citar: o se abre el artículo, o se marca «URL por confirmar».
 - En temas de salud, las búsquedas de detalle biológico pueden activar salvaguardas: el guion se queda en la noticia y la divulgación general.
 
 ## Diagnóstico de gancho (2026-11-10; otra sesión, en el checkout principal)

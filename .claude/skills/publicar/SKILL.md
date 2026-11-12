@@ -25,6 +25,12 @@ El comando hace todo de una vez:
 
 Instagram y TikTok solo reciben shorts. No preguntes nada que el comando no haya pedido.
 
+**Calendario (Mario, 2026-11-12):** con largo, el primer short (A) sale a la vez que él (sin `fecha` en `publicacion.json`)
+y los demás uno al día a las 12:00 desde el día siguiente (`fecha`). YouTube los deja privados con `publishAt`; Instagram
+los publica en el momento. Si un short ya subido tiene que salir antes, con la orden de Mario:
+`~/.clipping-ia/venv/Scripts/python.exe -X utf8 -m publicacion youtube-publicar-ya <slug> <formato>` (pide el permiso de
+edición; no toca `publicacion.json` y lo anota en `publicaciones.json`).
+
 **Enlaces (Mario, 2026-11-02):** los pone el comando, no se escriben en `publicacion.json`. El largo sube primero y cada
 short sale con «Vídeo completo: <largo>»; al terminar, la descripción del largo recibe «Shorts de este vídeo» con
 `videos.update`. Instagram lleva «Vídeo completo en YouTube: <largo>» (sin largo, «En YouTube: <el short>») y no sale
@@ -44,6 +50,13 @@ Lee el resultado de cada red y cuéntaselo a Mario con su estado real y sus enla
 
 - **TikTok no publica solo:** el vídeo queda en la bandeja y Mario termina el post desde la notificación. Díselo siempre; no lo cuentes como publicado.
   Dale el `texto_para_tiktok` de cada short (título, resumen y enlace al largo en YouTube) para que lo pegue.
+- **Portada vertical de cada short (comprobado el 2026-11-12):** la subida pone la portada de Codex como miniatura general
+  (la horizontal, `maxresdefault`), pero la vertical que se ve en el feed de Shorts y en Studio (`oar2`) sigue siendo un
+  fotograma. Hoy solo se cambia en **YouTube Studio desde un ordenador**: Contenido → Shorts → el short → Miniatura →
+  «Subir archivo» (`salida/portada-codex-<letra>.png`, 9:16) → Guardar. Va en el mismo paso que el vídeo relacionado.
+  Con Claude en el Chrome de Mario: `studio.youtube.com/video/<id>/edit`, `find` del `file-input` oculto de Miniatura y
+  `file_upload` con la portada (sin pulsar «Subir archivo», que abre el selector nativo); luego Vídeo relacionado → el largo →
+  Guardar («Se han guardado los cambios»). Vale también con el short aún programado.
 - **Vídeo relacionado:** con largo, pon el largo como «vídeo relacionado» de cada short en Studio (Detalles → Vídeo
   relacionado → buscar por título → Guardar), desde el Chrome de Mario: la API no lo permite.
 - **`enlaces: pendientes`** en un vídeo de YouTube: el largo no recibió los enlaces de sus shorts. Si el detalle pide
