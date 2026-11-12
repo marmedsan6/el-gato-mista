@@ -29,7 +29,7 @@ node motor/qa.mjs --proyecto <slug> --formato short --version <N> --escena <html
 ## Piezas
 | Fichero | Qué hace |
 |---|---|
-| `render.mjs` | Captura por `window.seek(t)` y codifica H.264 (crf 18, bt709). Caché por fotograma en `<RUNTIME_DIR>/render-cache/<clave>/` (la clave incluye la escena, `--incluir`, los parámetros y el propio `render.mjs`). Con `window.claveFotograma(t)` captura una vez cada tramo igual. Falla si la escena usa reloj. `--fotogramas t1,t2` deja PNG sueltos; `--desde/--hasta`, solo un tramo |
+| `render.mjs` | Captura por `window.seek(t)` y codifica H.264 (crf 18, bt709). Caché por fotograma en `<RUNTIME_DIR>/render-cache/<clave>/` (la clave incluye la escena, `--incluir`, los parámetros y el propio `render.mjs`). Con `window.claveFotograma(t)` captura una vez cada tramo igual. Falla si la escena usa reloj. `--fotogramas t1,t2` deja PNG sueltos; `--desde/--hasta`, solo un tramo. En Windows pide que el equipo no se duerma mientras renderiza (la tapa cerrada lo duerme igual), captura con `optimizeForSpeed` (PNG sin pérdida) y el progreso lleva hora y s/captura: si el ritmo pasa de ~0,05 s a más de 0,5 s, el equipo se ha frenado |
 | `revisar.mjs` | Recorre `seek(t)` cada `paso` s, junta errores, pasa el lint y saca capturas ×2. `--estricto` sale con 1. `--consulta "formato=largo"` |
 | `lint-textos.mjs` | Lógica del lint: solapes, fuera de pantalla, zona tapada, texto sobre la caja, permanencia, textos simultáneos, saltos, transcripción de la voz, fuente visible, piezas clave y rótulo frente a la llegada. Lee `window.TIMING` y `window.revision` |
 | `voz/revisar-alineacion.mjs` | Compara los límites de frase con `silencedetect`, avisa de duraciones imposibles y ajusta |

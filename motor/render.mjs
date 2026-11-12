@@ -13,6 +13,10 @@
 //
 // Reanudación: cada fotograma se guarda en <RUNTIME_DIR>/render-cache/<clave>/ con escritura atómica; al relanzar
 // con los mismos argumentos solo se rehacen los que faltan. La caché no se borra (sin borrado permanente).
+//
+// Velocidad (docs/investigacion/render-largo-2026-11-12): en Windows pide al sistema que no se duerma mientras dura el
+// render (la espera moderna lo frenaba de 0,05 a varios s por captura; cerrar la tapa lo duerme igual) y captura con
+// optimizeForSpeed (PNG sin pérdida, píxeles idénticos, −27 %). El progreso lleva hora y ritmo para ver un frenazo.
 import { chromium } from "playwright";
 import { spawn } from "node:child_process";
 import { createHash } from "node:crypto";
@@ -72,6 +76,20 @@ const ficheroCache = (f) => join(cache, `f_${String(f).padStart(5, "0")}.png`);
 mkdirSync(cache, { recursive: true });
 mkdirSync(dirname(mp4), { recursive: true });
 
+// Mantener despierto: un PowerShell hijo con SetThreadExecutionState(ES_CONTINUOUS | ES_SYSTEM_REQUIRED |
+// ES_DISPLAY_REQUIRED) que vive mientras viva este proceso. No cambia ningún ajuste de energía.
+let despierto = null;
+if (process.platform === "win32") {
+  const ps = `Add-Type -Namespace W -Name P -MemberDefinition '[DllImport("kernel32.dll")] public static extern uint SetThreadExecutionState(uint f);';` +
+    `[void][W.P]::SetThreadExecutionState([uint32]"0x80000003"); while (Get-Process -Id ${process.pid} -ErrorAction SilentlyContinue) { Start-Sleep 5 }`;
+  despierto = spawn("powershell", ["-NoProfile", "-NonInteractive", "-Command", ps], { stdio: "ignore", windowsHide: true });
+  despierto.unref(); // no retiene a node: sin esto, el render no termina (el hijo espera a que muera este proceso)
+  despierto.on("error", (e) => console.error(`[render] aviso: no pude pedir que el equipo no se duerma (${e.message})`));
+  process.on("exit", () => { try { despierto.kill(); } catch {} });
+}
+const hora = () => new Date().toTimeString().slice(0, 8);
+const minutos = (s) => (s < 90 ? `${Math.round(s)} s` : `${Math.round(s / 60)} min`);
+
 const inicioMs = Date.now();
 const navegadores = [];
 const violaciones = [];
@@ -91,7 +109,7 @@ try {
   };
   const foto = async (pagina, t) => {
     await pagina.evaluate(async (s) => { await window.seek(s); await document.fonts.ready; }, t);
-    const { data } = await pagina.cdp.send("Page.captureScreenshot", { format: "png", clip: { x: 0, y: 0, width: W, height: H, scale: ESCALA } });
+    const { data } = await pagina.cdp.send("Page.captureScreenshot", { format: "png", clip: { x: 0, y: 0, width: W, height: H, scale: ESCALA }, optimizeForSpeed: true });
     return Buffer.from(data, "base64");
   };
   const paginas = await Promise.all(Array.from({ length: trabajadores }, abrirPagina));
@@ -106,11 +124,12 @@ try {
   }
   const pendientes = inicios.filter((f) => !(existsSync(ficheroCache(f)) && statSync(ficheroCache(f)).size > 0));
   yaHechos = inicios.length - pendientes.length;
-  console.error(`[render] ${inicios.length} fotogramas distintos de ${F1 - F0}; en caché ${yaHechos}, por hacer ${pendientes.length}`);
+  console.error(`[render] ${hora()} · ${inicios.length} fotogramas distintos de ${F1 - F0}; en caché ${yaHechos}, por hacer ${pendientes.length}`);
 
   for (const s of listaT) writeFileSync(join(dirname(mp4), `t_${s}.png`), await foto(paginas[0], Number(s)));
 
-  let siguiente = 0;
+  let siguiente = 0, marcaMs = Date.now(), marcaN = 0;
+  const inicioCapturaMs = Date.now();
   await Promise.all(paginas.map(async (pagina) => {
     while (siguiente < pendientes.length) {
       const f = pendientes[siguiente++];
@@ -119,7 +138,13 @@ try {
       writeFileSync(tmp, png);
       renameSync(tmp, ficheroCache(f));
       rehechos++;
-      if (rehechos % 300 === 0) console.error(`  ${rehechos}/${pendientes.length}`);
+      if (rehechos % 300 === 0) {
+        // ritmo del último tramo (si se hunde, el equipo se ha frenado) y lo que queda al ritmo medio
+        const ahora = Date.now(), ritmo = (ahora - marcaMs) / 1000 / (rehechos - marcaN);
+        const medio = (ahora - inicioCapturaMs) / 1000 / rehechos;
+        marcaMs = ahora; marcaN = rehechos;
+        console.error(`  ${rehechos}/${pendientes.length} · ${hora()} · ${ritmo.toFixed(3)} s/captura · quedan ~${minutos(medio * (pendientes.length - rehechos))}`);
+      }
     }
   }));
   for (const p of paginas) violaciones.push(...(await p.evaluate(() => window.__violaciones)));
