@@ -75,7 +75,8 @@ Detalle y comandos en `motor/README.md`.
 ## 8. Esquemas de datos
 `fuentes.json`:
 ```json
-{ "fuentes": [ { "id": "f1", "url": "", "autor": "", "corto": "nombre que se enseña en la caja (opcional)", "fecha": "",
+{ "fuentes": [ { "id": "f1", "url": "", "autor": "", "corto": "nombre que se enseña en la caja (opcional)",
+    "corto_short": "nombre para la pestaña del short, ≤ 17 caracteres (opcional; si falta, corto)", "fecha": "",
     "consultada": "", "tipo": "hecho | material | contexto", "licencia": "", "cita": "", "uso": "", "tramo": "" } ] }
 ```
 `timing.<formato>.json` (lo escribe `alinear.py`):

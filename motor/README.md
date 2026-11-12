@@ -33,7 +33,7 @@ node motor/qa.mjs --proyecto <slug> --formato short --version <N> --escena <html
 | `revisar.mjs` | Recorre `seek(t)` cada `paso` s, junta errores, pasa el lint y saca capturas ×2. `--estricto` sale con 1. `--consulta "formato=largo"` |
 | `lint-textos.mjs` | Lógica del lint: solapes, fuera de pantalla, zona tapada, texto sobre la caja, permanencia, textos simultáneos, saltos, transcripción de la voz, fuente visible, piezas clave y rótulo frente a la llegada. Lee `window.TIMING` y `window.revision` |
 | `voz/revisar-alineacion.mjs` | Compara los límites de frase con `silencedetect`, avisa de duraciones imposibles y ajusta |
-| `timing-a-js.mjs`, `fuentes-frases.mjs` | `window.TIMING` para la escena, con `frases[].fuentes` y nombres cortos |
+| `timing-a-js.mjs`, `fuentes-frases.mjs` | `window.TIMING` para la escena, con `frases[].fuentes` y nombres cortos (en un short, `corto_short`, y aviso si pasa de 17 caracteres) |
 | `eventos.mjs` | `window.eventosSonido()` de la escena → JSON |
 | `mezcla.mjs` | Voz + música (sidechain) + efectos, `loudnorm` en dos pasadas, limitador con sobremuestreo ×4 y medida del máster con `ebur128` |
 | `qa.mjs`, `qa-medidas.mjs` | QA de un máster: ficha, huella, sonoridad, silencios, congelados, negros, último instante de cada frase (completo y a tamaño de móvil), hojas a 2 fps y tiras de los movimientos de cámara |

@@ -1,0 +1,39 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Prueba · montarShort6 con una fuente que no cabe en la pestaña</title>
+<!-- Fixture de tests/short-v6.test.mjs: un short mínimo con montarShort6 cuya fuente f1 tiene un nombre de 30 caracteres. -->
+<link rel="stylesheet" href="../../estilo/estilo.css">
+<link rel="stylesheet" href="../../estilo/v6/estilo-v6.css">
+<body class="short">
+  <div id="base"></div>
+  <div id="transicion">
+    <div class="profundidad" id="p-lejos"><svg class="arte" id="lejos"></svg></div>
+    <div class="profundidad" id="p-medio">
+      <svg class="arte" id="medio"></svg><svg class="arte bloom" id="brillo"></svg><svg class="arte" id="frente"></svg>
+      <div id="textos-mundo"></div>
+    </div>
+    <div class="profundidad" id="p-delante"><svg class="arte" id="delante"></svg></div>
+    <svg class="arte" id="gato12"></svg>
+    <div class="capa vineta"></div>
+  </div>
+  <div id="textos"></div>
+  <div class="dialogo con-retrato oculto" id="dialogo"><svg class="retrato" id="retrato"></svg><span class="nombre">Mista</span><span id="frase"></span><span class="fuente6" id="fuente"></span></div>
+  <script src="../../estilo/pixel.js"></script>
+  <script src="../../estilo/v3/gato.js"></script>
+  <script src="../../estilo/camara.js"></script>
+  <script src="../../estilo/v5/dibujo.js"></script>
+  <script src="../../estilo/v6/piezas.js"></script>
+  <script src="../../estilo/v6/escena.js"></script>
+  <script src="../../estilo/v6/short.js"></script>
+  <script>
+    const pal = (texto, i0, paso) => texto.split(" ").map((p, k) => ({ p, i: i0 + k * paso, f: i0 + k * paso + paso * 0.8 }));
+    window.TIMING = { formato: "short", audio: { duracion_s: 8 }, fuentes: { f1: "Un nombre de fuente larguísimo" }, frases: [
+      { id: "fr01", inicio: 2.3, fin: 4.6, fuentes: ["f1"], palabras: pal("Una frase con su fuente.", 2.3, 0.45) },
+      { id: "fr02", inicio: 5.4, fin: 7.6, fuentes: [], palabras: pal("Y otra sin fuente aquí.", 5.4, 0.45) },
+    ] };
+    const vacia = (L, x0, t) => caja5(L.medio, x0 + 60, 230, 150, 50, R5.hormigon);
+    montarShort6({ TT: tiempos6(window.TIMING), entrada: 2.2, titulo: ["Prueba", "Fuente<br>larga"],
+      estaciones: [{ dib: vacia, hasta: "fr01" }, { dib: vacia, hasta: "fr02" }],
+      temas: [{ desde: 0, hasta: 0, html: "Uno" }, { desde: 1, hasta: 1, html: "Dos", pose: "pie" }] });
+  </script>
+</body>

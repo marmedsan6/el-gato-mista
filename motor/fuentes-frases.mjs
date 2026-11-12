@@ -50,3 +50,18 @@ export function nombresCortos(fuentes) {
   const lista = Array.isArray(fuentes) ? fuentes : fuentes.fuentes || [];
   return Object.fromEntries(lista.map((f) => [f.id, (f.corto || (f.autor || f.id).split(" (")[0]).trim()]));
 }
+
+// Nombres para la pestaña del short (9:16): el campo `corto_short` de fuentes.json, o el de nombresCortos si falta. La pestaña
+// cuelga bajo la caja en una línea y alineada a la derecha: con más de MAX_SHORT caracteres se sale por la izquierda.
+export const MAX_SHORT = 17;
+export function nombresShort(fuentes) {
+  const lista = Array.isArray(fuentes) ? fuentes : fuentes.fuentes || [];
+  const base = nombresCortos(lista);
+  return Object.fromEntries(lista.map((f) => [f.id, (f.corto_short || base[f.id]).trim()]));
+}
+
+// Avisos de los nombres de short que no caben: [{ id, nombre, largo }]. Con `usadas`, solo esas marcas.
+export function avisosNombresShort(fuentes, { max = MAX_SHORT, usadas = null } = {}) {
+  return Object.entries(nombresShort(fuentes)).filter(([id, n]) => (!usadas || usadas.includes(id)) && n.length > max)
+    .map(([id, nombre]) => ({ id, nombre, largo: nombre.length }));
+}

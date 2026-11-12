@@ -1,28 +1,28 @@
 <!doctype html>
 <meta charset="utf-8">
-<title>Escena · plantilla (estilo v6)</title>
+<title>Escena · plantilla del short (estilo v6)</title>
 <!-- Copia este fichero a proyectos/<slug>/escenas/<formato>/<formato>.html (misma profundidad: las rutas valen tal cual) y saca
      el script a un .js. Reglas: bloque «Estilo vigente» de docs/estilo.md (v6, ADR 0010) y docs/criterios.md §1.
      Estilo v6: diorama animado a 4 px (1 unidad = 1 px CSS) con algo nuevo cada 1-2 s, y CASI SIN TEXTO:
        - título en la entrada y un rótulo por tema (los momentos de MISTA); cambia al llegar la cámara;
        - como mucho 1 identificador a la vez, de 1-3 palabras, pegado a su objeto; nada que repita la voz;
        - los nombres propios, mejor dentro del dibujo (placa6); la cifra, grande y sola (T6.cifra);
-       - la fuente de cada frase sale sola en la caja de diálogo (frases[].fuentes, de las marcas [fN] del guion);
-       - toda pieza clave, 2 s en pantalla antes de que salga la cámara (decláralas en window.revision);
+       - la fuente de cada frase sale sola en la caja de diálogo (frases[].fuentes, de las marcas [fN] del guion); en el
+         short, con el nombre `corto_short` de fuentes.json (≤ 17 caracteres; el lint avisa si no cabe);
+       - toda pieza clave, 2 s en pantalla antes de que salga la cámara (claves de montarShort6);
        - la cámara sale tras el fin real de la frase (ruta6) y el zoom core es un acercamiento de 0,4 s.
-     Biblioteca: motor/estilo/v6/{escena,piezas}.js sobre motor/estilo/v5/dibujo.js. Ejemplos completos:
-     proyectos/nvidia-huang-espionaje/escenas/short-v4/ (9:16) y motor/calibracion/v6/clip.{html,js} (16:9).
+     Motor: montarShort6 (motor/estilo/v6/short.js) monta el mundo, la cámara, el título, los rótulos, MISTA, la caja y
+     window.revision; la escena solo pone sus estaciones (dib(L, x0, t)), sus temas, sus textos y sus piezas clave.
+     Biblioteca: motor/estilo/v6/{escena,piezas,short}.js sobre motor/estilo/v5/dibujo.js. Ejemplo completo:
+     proyectos/como-google-sabe-lo-que-quieres/escenas/short-a/ (el estándar; hecho con la versión del motor anterior a la subida).
      Los tiempos de este ejemplo son de prueba (TIMING de abajo): en un vídeo, carga el timing.js del formato, generado con
        node motor/voz/revisar-alineacion.mjs <timing.json> <voz.wav> --corregir <timing.json>
-       node motor/timing-a-js.mjs <timing.json> <timing.js> --guion <guion.md> --seccion <Short|Maestro> --fuentes <fuentes.json>
-     Antes de renderizar entero:  node motor/revisar.mjs <este html> 270 480 <duración> 0.05 . --estricto
-     Render: node motor/render.mjs --escena <este html> --ancho 270 --alto 480 --duracion 10
+       node motor/timing-a-js.mjs <timing.json> <timing.js> --guion <guion.md> --seccion <Short…> --fuentes <fuentes.json>
+     Antes de renderizar entero:  node motor/revisar.mjs <este html> 270 480 <duración> 0.05 <carpeta> --estricto
+     Render: node motor/render.mjs --escena <este html> --ancho 270 --alto 480 --duracion 13.8
                --incluir motor/estilo,motor/estilo/v5,motor/estilo/v6 --salida <mp4>     (un tramo: --desde 2 --hasta 6) -->
 <link rel="stylesheet" href="../../../../motor/estilo/estilo.css">
 <link rel="stylesheet" href="../../../../motor/estilo/v6/estilo-v6.css">
-<style>
-  body.largo .dialogo { left: 16px; width: 448px; top: 200px; height: 58px; }
-</style>
 <body class="short">
   <div id="base"></div>
   <div id="transicion">
@@ -44,72 +44,60 @@
   <script src="../../../../motor/estilo/v5/dibujo.js"></script>
   <script src="../../../../motor/estilo/v6/piezas.js"></script>
   <script src="../../../../motor/estilo/v6/escena.js"></script>
+  <script src="../../../../motor/estilo/v6/short.js"></script>
+  <!-- en un vídeo: <script src="../comun/piezas-<slug>.js"></script> (sus piezas) y <script src="timing.js"></script> -->
   <script>
-    // Tiempos de prueba. La voz entra tras el título (2 s): o el gancho no nombra nada hasta entonces, o --voz-desfase.
+    // Tiempos de prueba. La voz entra tras el título (2 s): o el gancho no nombra nada hasta entonces, o se retrasa la voz.
     const pal = (texto, i0, paso) => texto.split(" ").map((p, k) => ({ p, i: i0 + k * paso, f: i0 + k * paso + paso * 0.8 }));
-    window.TIMING = { audio: { duracion_s: 9.4 }, fuentes: { f1: "Prueba" }, frases: [
+    window.TIMING = { formato: "short", audio: { duracion_s: 13.2 }, fuentes: { f1: "Prueba" }, frases: [
       { id: "fr01", inicio: 2.3, fin: 5.4, fuentes: ["f1"], palabras: pal("Esto es una plantilla: un dato aparece y se mueve.", 2.3, 0.3) },
-      { id: "fr02", inicio: 5.8, fin: 9.2, fuentes: [], palabras: pal("Aquí cambia de tema y se ve de cerca.", 5.8, 0.42) },
+      { id: "fr02", inicio: 6.0, fin: 9.6, fuentes: [], palabras: pal("Aquí el dibujo trabaja y se ve de cerca.", 6.0, 0.45) },
+      { id: "fr03", inicio: 10.2, fin: 13.0, fuentes: [], palabras: pal("En resumen: así se monta un short.", 10.2, 0.4) },
     ] };
     (() => {
-      const CORTO = document.body.classList.contains("short");
-      const W = CORTO ? 270 : 480, H = CORTO ? 480 : 270;
-      const N = Number(new URLSearchParams(location.search).get("n")) || 2; // ?n=16: mundo de 16 pantallas, para medir cuánto cuesta un mundo ancho
-      const M = CORTO ? { suelo: 292, SX: 135, SY: 200, caja: 300, rotulo: [16, 64], titular: [16, 116], gato: [20, 196], asoma: [6, 195] }
-        : { suelo: 198, SX: 240, SY: 100, caja: 200, rotulo: [16, 16], titular: [176, 76], gato: [60, 104], asoma: [336, 99] };
-      const T = window.TIMING, TT = tiempos6(T), P = TT.P, SU = M.suelo, DURACION = TT.DURACION;
-      const { L, ANCHO, MW, G12, CAPAS, X, limpiar } = lienzos6({ W, H, N });
-      const F = fondoNoche6({ L, ANCHO, W, H, N, SU, SX: M.SX, lunas: [0] });
+      const T = window.TIMING, TT = tiempos6(T), P = TT.P, SU = 292;
+      const T_ENTRADA = 2.2, T_DATO = P("fr01", "dato"), T_TRABAJA = P("fr02", "trabaja"), T_RESUMEN = P("fr03", "resumen");
 
-      // tiempos y recorrido: el título dura hasta T_ENTRADA; la cámara sale de la estación 0 tras el fin real de fr01
-      const T_ENTRADA = 2.2, T_DATO = P("fr01", "dato"), T_CERCA = P("fr02", "cerca");
-      const A = { x: Math.round(W * 0.2), y: SU - 70, w: Math.round(W * 0.6), h: 60 };                 // estación 0
-      const B = { x: X(1) + Math.round(W * 0.25), y: SU - 60, w: Math.round(W * 0.5), h: 50 };          // estación 1
-      const R = ruta6({ W, M, fin: TT.fin, entrada: T_ENTRADA, saltos: [["fr01", "tema", 0.3]],
-        zooms: [{ est: 1, desde: T_CERCA, cx: B.x - X(1) + B.w / 2, cy: M.SY + 20 }] });
-      window.revision = { movimientos: R.movimientos, salidas: R.salidas, llegadas: R.llegadas, claves: [{ t: T_DATO, nombre: "el orbe del dato" }] };
-
-      // textos: título, un rótulo por tema, la cifra y un identificador pegado a su objeto
-      const T6 = crearTextos6({ interfaz: document.getElementById("textos"), mundo: document.getElementById("textos-mundo") });
-      T6.titulo(0, T_ENTRADA, 'Tema <span class="clave">1</span>', 'Título<br><span class="clave">del tema</span>', M);
-      T6.rotulo(R.LLE(0), R.SAL(0), 'Primer <span class="clave">tema</span>', M.rotulo);
-      T6.rotulo(R.LLE(1), DURACION + 1, 'Segundo <span class="clave">tema</span>', M.rotulo);
-      T6.cifra(T_DATO, R.SAL(0), '42<span class="unidad">datos</span>', [A.x, A.y - 30], true);
-      T6.identificador(R.LLE(1) + 0.4, DURACION + 1, "Detalle", [B.x + 4, B.y - 16]);
-      const D6 = crearDialogo6({ T, ids: ["fr01", "fr02"], claves: { fr01: "dato", fr02: "tema" }, maxc: CORTO ? 21 : 52, corto: CORTO,
-        dialogo: document.getElementById("dialogo"), frase: document.getElementById("frase"), retrato: document.getElementById("retrato"), fuente: document.getElementById("fuente") });
-      tildes6();
-      const CAM = crearCamara({ W, H, SX: M.SX, SY: M.SY, lineaCaja: M.caja, anchoMundo: MW, altoMundo: H, planos: R.planos });
-
-      function estaciones(t) {
-        // 0: un edificio con su nombre en una placa (texto dentro del dibujo), un monitor y un orbe que entra con «dato»
-        caja5(L.medio, A.x, A.y, A.w, A.h, R5.hormigon);
-        placa6(L.medio, A.x + 6, A.y - 1, "NOMBRE", { color: R5.ia[3] });
-        monitor5(L.frente, A.x + 10, A.y + 18, 40, 28, t, R5.verde[2], 7);
-        if (t >= T_DATO) { destello5(L.frente, L.brillo, A.x + A.w - 20, A.y + 30, t, T_DATO); orbe5(L.frente, L.brillo, A.x + A.w - 20, A.y + 30, 6, t);
-          ruta5(L.medio, L.brillo, [[A.x + A.w - 20, A.y + 30], [A.x + 50, A.y + 30]], t, 0, prog6(t, T_DATO, T_DATO + 0.4)); }
-        // 1: banco con matraces y un brazo robótico que trabaja
-        caja5(L.medio, B.x, B.y, B.w, B.h, R5.labLuz.slice(0, 4));
-        for (let k = 0; k < 3; k++) matraz5(L.frente, B.x + 8 + k * 8, B.y + B.h - 14, t, R5.naranja[2], R5.naranja[1], k);
-        brazo5(L.frente, B.x + B.w - 20, B.y + B.h - 8, t, { largo: 10, fase: 1 });
+      // 0 · un edificio con su nombre en una placa (texto dentro del dibujo), un monitor y un orbe que entra con «dato»
+      const A = { x: 54, y: SU - 70, w: 162, h: 60 };
+      function edificio(L, x0, t) {
+        const ax = x0 + A.x;
+        caja5(L.medio, ax, A.y, A.w, A.h, R5.hormigon);
+        placa6(L.medio, ax + 6, A.y - 1, "NOMBRE", { color: R5.ia[3] });
+        monitor5(L.frente, ax + 10, A.y + 18, 40, 28, t, R5.verde[2], 7);
+        if (t >= T_DATO) { destello5(L.frente, L.brillo, ax + A.w - 20, A.y + 30, t, T_DATO); orbe5(L.frente, L.brillo, ax + A.w - 20, A.y + 30, 6, t);
+          ruta5(L.medio, L.brillo, [[ax + A.w - 20, A.y + 30], [ax + 50, A.y + 30]], t, 0, prog6(t, T_DATO, T_DATO + 0.4)); }
       }
-      const MOMENTOS = [{ desde: R.LLE(1), hasta: T_CERCA - 0.05, pose: "pie" }]; // MISTA, de pie 1-2 s al cambiar de tema
-      window.eventosSonido = () => [{ t: T_ENTRADA, tipo: "destello" }, { t: T_DATO, tipo: "aparicion" }, { t: R.SAL(0), tipo: "destello" }];
-      window.claveFotograma = clave6(R.moviendo);
-      window.seek = (t) => {
-        limpiar();
-        const cam = CAM.en(t);
-        CAM.aplicarCapas(cam, CAPAS);
-        F.cielo(t);
-        const enTema = t < T_ENTRADA;
-        ["p-medio", "p-delante"].forEach((id) => { const el = document.getElementById(id); el.style.visibility = enTema ? "hidden" : "visible";
-          if (t >= T_ENTRADA && t < R.LLE(0)) el.style.transform = `translateX(${Math.round((1 - prog6(t, T_ENTRADA, R.LLE(0))) * W)}px)`; });
-        if (!enTema) { F.suelo(); estaciones(t); F.delante(); }
-        mista6(G12, t, { W, M, hablando: TT.hablando, entrada: [T_ENTRADA, R.LLE(0)], momentos: MOMENTOS });
-        T6.ver(t);
-        D6.pintar(t);
-      };
-      window.seek(0);
+      // 1 · banco con matraces y un brazo robótico que trabaja (zoom core con «trabaja»: después de que llegue la cámara)
+      const B = { x: 68, y: SU - 60, w: 134, h: 50 };
+      function laboratorio(L, x0, t) {
+        const bx = x0 + B.x;
+        caja5(L.medio, bx, B.y, B.w, B.h, R5.labLuz.slice(0, 4));
+        for (let k = 0; k < 3; k++) matraz5(L.frente, bx + 8 + k * 8, B.y + B.h - 14, t, R5.naranja[2], R5.naranja[1], k);
+        brazo5(L.frente, bx + B.w - 20, B.y + B.h - 8, t, { largo: 10, fase: 1 });
+      }
+      // 2 · cierre: el monitor del principio, con el orbe que vuelve y se enciende con «resumen»
+      function cierre(L, x0, t) {
+        caja5(L.medio, x0 + 70, SU - 64, 130, 54, R5.hormigon);
+        monitor5(L.frente, x0 + 82, SU - 50, 40, 28, t, R5.verde[2], 7);
+        const y = SU - 40 + Math.round(Math.sin(t * 2) * 4);
+        if (t >= T_RESUMEN) destello5(L.frente, L.brillo, x0 + 166, y, t, T_RESUMEN);
+        orbe5(L.frente, L.brillo, x0 + 166, y, 6, t);
+      }
+
+      montarShort6({ TT, entrada: T_ENTRADA, titulo: ['Tema <span class="clave">1</span>', 'Título<br><span class="clave">del tema</span>'],
+        estaciones: [{ dib: edificio, hasta: "fr01", extra: 0.3 }, { dib: laboratorio, hasta: "fr02" }, { dib: cierre, hasta: "fr03" }],
+        zooms: [{ est: 1, desde: T_TRABAJA, cx: B.x + B.w / 2, cy: 220 }],
+        temas: [{ desde: 0, hasta: 1, html: 'Primer <span class="clave">tema</span>' }, { desde: 2, hasta: 2, html: 'En <span class="clave">resumen</span>', pose: "pie" }],
+        textos: (T6, R, X) => {
+          T6.cifra(T_DATO, R.SAL(0), '42<span class="unidad">datos</span>', [X(0) + A.x, A.y - 30], true);
+          T6.identificador(R.LLE(1) + 0.05, R.SAL(1) - 0.5, "Detalle", [X(1) + B.x + 4, B.y - 16]);
+        },
+        claves: [[T_DATO, "el orbe del dato"], [T_TRABAJA, "el brazo que trabaja"], [T_RESUMEN, "el orbe que vuelve"]],
+        sonidos: [[T_DATO, "aparicion"], [T_RESUMEN, "tick"]],
+        clavesDialogo: { fr01: "dato", fr02: "trabaja", fr03: "resumen" },
+        // cortos: { f1: "Prueba" },   // nombre de una fuente solo para este short (si corto_short no basta)
+      });
     })();
   </script>
 </body>

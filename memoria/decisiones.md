@@ -41,6 +41,7 @@ necesitas el porqué de algo antiguo). Lo nuevo se añade al final de su tema o 
 - Cierre del short con largo: la última frase de MISTA remite a él, adaptada al tema; sin largo, termina con el dato — Mario (2026-11-02).
 - Personas reales: figuras pixel genéricas, sin buscar parecido; quien no deba reconocerse, en silueta — Mario (2026-11-09).
 - Nunca: neón chillón, sonidos estridentes, fundidos de entrada, etiquetas en las esquinas, título centrado sobre degradado — Mario (2026-10-29).
+- Motores v6 en la biblioteca (2026-11-12, encargo de la sesión que publicó como-google; decisión del agente en el cómo): el motor de shorts y el mundo por bloque de como-google suben a `motor/estilo/v6/short.js` (`montarShort6`) y `largo.js` (`montarLargo6`, `desfase6`), en ficheros nuevos para no tocar `escena.js` ni lo publicado; las plantillas v6 los usan. Las escenas de como-google se quedan como están (siguen con su `short-motor.js`): portadas al motor nuevo dan los mismos fotogramas en 40 instantes por escena. Los nombres de fuente del short salen de `corto_short` en `fuentes.json` (≤ 17 caracteres; si falta, `corto`) o del parámetro `cortos`, no de una tabla del vídeo; `timing-a-js.mjs`, la escena y el lint avisan si no caben.
 
 ## Fuentes y material de terceros
 - Cada hecho, con fuente en `fuentes.json`; sin fuente no entra. Fuente primaria si existe.

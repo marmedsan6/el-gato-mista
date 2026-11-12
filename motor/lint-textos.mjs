@@ -4,7 +4,7 @@
 // Muestreo:
 //   { W, H, corto, paso,
 //     frases: [{ id, inicio, fin, texto, fuentes: [] }],                      // del timing (opcional)
-//     revision: { movimientos: [[a, b]], salidas: [t], claves: [{ t, nombre }] } | null,   // window.revision (opcional)
+//     revision: { movimientos: [[a, b]], salidas: [t], claves: [{ t, nombre }], avisos?: [{ regla, texto }] } | null,   // window.revision (opcional)
 //     instantes: [{ t, textos: [{ id, clase, texto, arte, l, t, r, b }],
 //                   dialogo: { l, t, r, b, lineas, huerfano } | null,
 //                   fuente: { texto, l, t, r, b } | null }] }
@@ -17,6 +17,7 @@ export const POR_DEFECTO = {
   transitorio: 0.15,    // s por debajo de los cuales un solape, un salto o una salida de cuadro no cuentan (entradas a saltos)
   repite: 0.6,          // parte de las palabras de un texto que, si están en la frase que suena, lo delatan como transcripción
   margenClave: 2,       // s entre una pieza clave y la salida de la cámara
+  maxFuenteShort: 17,   // caracteres que caben en la pestaña de la fuente del short (aviso, sin «Fuente:»)
 };
 
 const VACIAS = new Set(["de", "del", "la", "el", "los", "las", "a", "al", "que", "se", "lo", "en", "su", "sus", "y", "o", "para", "por", "sin", "con", "un", "una", "es", "como"]);
@@ -129,6 +130,12 @@ export function lintTextos(m, opciones = {}) {
       }
     }
   }
+  // pestaña de la fuente del short: una línea alineada a la derecha; con más de maxFuenteShort caracteres se sale por la izquierda
+  if (corto) {
+    const vistas = new Set(m.instantes.filter((i) => i.fuente && i.fuente.texto).map((i) => i.fuente.texto.replace(/^fuente:\s*/i, "").trim()));
+    for (const n of vistas) if (n.length > op.maxFuenteShort) avisos.push({ regla: "fuente-larga", texto: `«${n}» tiene ${n.length} caracteres; en la pestaña del short caben ${op.maxFuenteShort} (corto_short en fuentes.json)` });
+  }
+  for (const a of (m.revision && m.revision.avisos) || []) if (!avisos.some((b) => b.regla === a.regla && b.texto === a.texto)) avisos.push(a); // los que declara la escena (montarShort6)
   if (!m.revision) avisos.push({ regla: "revision", texto: "la escena no declara window.revision: no se comprueban piezas clave ni saltos con la cámara en movimiento" });
 
   errores.sort((a, b) => a.desde - b.desde || a.regla.localeCompare(b.regla));

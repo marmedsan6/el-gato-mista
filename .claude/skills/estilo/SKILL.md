@@ -11,11 +11,16 @@ No copies valores aquí: léelos siempre de la fuente, que es la única que vale
 3. Implementación v6:
    - `motor/estilo/v6/escena.js` (`tiempos6`, `lienzos6`, `ruta6`, `crearTextos6`, `crearDialogo6`, `mista6`, `clave6`);
    - `motor/estilo/v6/piezas.js` (piezas reutilizables, `fondoNoche6`, `placa6`) y `estilo-v6.css`;
+   - motores (subidos de como-google): `motor/estilo/v6/short.js` (`montarShort6`: el short entero; la escena solo pone
+     estaciones, temas, textos y claves; nombres de fuente de ≤ 17 caracteres con `corto_short` en `fuentes.json` o
+     `cortos`) y `motor/estilo/v6/largo.js` (`montarLargo6`: un mundo por bloque; `desfase6`; `?hasta=N`);
    - debajo, sin cambios: `motor/estilo/v5/dibujo.js`, `motor/estilo/{estilo.css, pixel.js, camara.js}` y `v3/gato.js`.
    - No se editan: los ficheros v2 de `motor/estilo/`, `v3/`, `v3/congelado/` y `v5/`. Reproducen lo ya publicado y
      `npm test` compara sus huellas. Lo que un vídeo dibuje y sirva a otro se sube a `v6/piezas.js`.
-4. Ejemplos: `proyectos/nvidia-huang-espionaje/escenas/short-v4/` (9:16) y `motor/calibracion/v6/clip.{html,js}` (16:9).
-5. Plantillas: `plantillas/escenas/v6/{short,largo}/escena-plantilla.html` (cópiala a `escenas/<formato>/`).
+4. Ejemplos: `proyectos/como-google-sabe-lo-que-quieres/` (el estándar: largo y tres shorts, con los motores en su versión
+   de proyecto), `proyectos/nvidia-huang-espionaje/escenas/short-v4/` (9:16) y `motor/calibracion/v6/clip.{html,js}` (16:9).
+5. Plantillas: `plantillas/escenas/v6/short/` (con `montarShort6`) y `plantillas/escenas/v6/largo/` (con `montarLargo6`):
+   copia `escena-plantilla.html` a `escenas/<formato>/`. Un vídeo nuevo parte de ahí, no de copiar otro proyecto.
 6. Si el vídeo se desvía del estilo, lo dice `proyectos/<slug>/style_guide.md` (solo las desviaciones).
 
 ## Al escribir el storyboard

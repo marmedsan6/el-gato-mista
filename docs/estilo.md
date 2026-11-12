@@ -6,7 +6,10 @@ Reglas de Mario del 2026-11-10 (ADR 0010) sobre la v5 (ADR 0009, aprobada el 202
 - **Ejemplos completos:** `proyectos/nvidia-huang-espionaje/escenas/short-v4/` (9:16) y `motor/calibracion/v6/clip.{html,js}` (16:9).
 - **Biblioteca:** `motor/estilo/v6/` (`escena.js`, `piezas.js`, `estilo-v6.css`) sobre `motor/estilo/v5/dibujo.js`, con
   `motor/estilo/{estilo.css, pixel.js, camara.js}` y `v3/gato.js`.
-- **Plantillas:** `plantillas/escenas/v6/{short,largo}/escena-plantilla.html`.
+- **Plantillas y motores:** `plantillas/escenas/v6/{short,largo}/escena-plantilla.html`, sobre los dos motores que subió
+  como-google (2026-11-12): `motor/estilo/v6/short.js` (`montarShort6`: short de N estaciones; la escena solo pone sus
+  estaciones, temas, textos y piezas clave) y `motor/estilo/v6/largo.js` (`montarLargo6`: un mundo por bloque del guion,
+  cada uno con su `ruta6`, cámara y lienzos, que empieza con una copia de la última estación del anterior; `?hasta=N`).
 - **Vídeos ya publicados:** se reproducen con su biblioteca de entonces (v2 en `motor/estilo/`, v3 en `motor/estilo/v3/`,
   la v3.0 congelada en `motor/estilo/v3/congelado/` y la v5 en `motor/estilo/v5/`). No se editan: `npm test` compara sus
   huellas (`motor/huellas/publicados.json`).
@@ -15,7 +18,7 @@ Reglas de Mario del 2026-11-10 (ADR 0010) sobre la v5 (ADR 0009, aprobada el 202
 |---|---|
 | Presentación | **Diorama animado.** Cada idea es una ilustración pixel grande que se mueve para explicarla: un sujeto grande y con detalle delante y lo contado en el fondo. Nunca muchas casillas iguales. Lo que depende del texto se arregla dibujando el objeto |
 | Texto en pantalla (v6) | **Casi sin texto.** Además de la caja: el título de entrada, un rótulo por tema y, como mucho, **1 identificador** a la vez (1-3 palabras pegadas a lo que nombran, nunca en filas fijas) o la **cifra**, grande y sola. Ninguno repite la voz. Los nombres propios, mejor **dentro del dibujo** (`placa6`: placa, cartel, cabecera) |
-| Fuente del dato (v6) | En una **pestaña de la caja de diálogo**, mientras suena la frase. Sale sola de las marcas `[fN]` del guion (`motor/timing-a-js.mjs --guion`). En el short cuelga bajo la caja; en el largo va dentro, en la línea del nombre |
+| Fuente del dato (v6) | En una **pestaña de la caja de diálogo**, mientras suena la frase. Sale sola de las marcas `[fN]` del guion (`motor/timing-a-js.mjs --guion`). En el short cuelga bajo la caja, en una línea de **17 caracteres como mucho** (`corto_short` en `fuentes.json`; el lint avisa si no cabe); en el largo va dentro, en la línea del nombre |
 | Rótulos (v6) | Arriba a la izquierda, **solo en los temas** (los momentos de MISTA: entrada, cambios de tema y cierre). Cambian **al llegar** la cámara. El título de entrada dura 2 s como mínimo |
 | Permanencia (v6) | Todo texto y toda pieza clave, **2 s o más** en pantalla antes de que salga la cámara |
 | Píxel | **4 px de salida por píxel de arte**: lienzo de 270×480 (short) o 480×270 (largo) unidades, 1 unidad = 1 px CSS. Objetos sombreados (luz arriba a la izquierda, contorno, 3-5 tonos por rampa `R5`); hasta los iconos pequeños llevan contorno y 3 tonos |
