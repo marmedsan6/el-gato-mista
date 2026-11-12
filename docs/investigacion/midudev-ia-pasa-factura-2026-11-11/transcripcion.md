@@ -1,0 +1,140 @@
+# Transcripción · «La IA empieza a pasar factura a las tecnológicas» (midudev)
+
+Vídeo: https://www.youtube.com/watch?v=VKq42hak7Ak · canal @midudev · 593 s (9:53) · publicado el 2026-11-10
+
+**Cómo se ha hecho:** audio descargado con yt-dlp (2026.10.26) y transcrito con faster-whisper 1.2.1,
+modelo `small`, VAD activado, sin contexto entre segmentos, en CPU. Es una transcripción automática:
+las cifras y los nombres se han cotejado con la prensa en `investigacion.md`.
+Los tiempos son el inicio de cada segmento.
+
+## Transcripción literal (por segmentos)
+
+
+- **[00:00]** Vamos a hablar un momento de la bolsa porque han pasado cosas bastante interesantes.
+- **[00:03]** La bolsa Intel Google Reddit, madre mía, la que se ha liado.
+- **[00:08]** Y es que el viernes 30 de octubre, el NASDAQ bajó 2,9%, que no es mucho, el SP500 1,8%.
+- **[00:15]** Pero el NASDAQ ya está a un 8% por debajo del máximo del 6 de octubre, un 8%.
+- **[00:21]** El peor mes desde marzo del 2025.
+- **[00:24]** Y hay tres casos que lo explican.
+- **[00:26]** Y aquí podemos ver cómo nos comenta que las acciones de Estados Unidos de algunas tecnológicas
+- **[00:33]** han caído con fuerza por el gasto con inteligencia artificial y se acerca al billón, al billón
+- **[00:39]** de dólares, la caída, ¿vale?
+- **[00:41]** Entonces, ¿qué es lo que ha pasado?
+- **[00:42]** Pues tenemos las acciones de Intel que han bajado solo el viernes en un día un 28%.
+- **[00:49]** Pero si esto fuese poco, va Google y bajó el jueves en un día un 12%.
+- **[00:56]** también las de reddit, que las de reddit vais a alucinar, porque las de reddit y aquí es donde
+- **[01:02]** está el problema. Hoy han subido un 2,38, pero reddit en un día, que fijaos la caída, reddit se
+- **[01:10]** perdió un cuarto del valor de la empresa en un día. Hay muchas razones y es bastante,
+- **[01:17]** Mira, hoy está subiendo ya un 141, pero fijaos, un Google, un 10%,
+- **[01:24]** un 10%, y también, por supuesto, tenemos las de Intel,
+- **[01:27]** que es bastante salvaje. Hoy está bajando en 5,54,
+- **[01:31]** pero es que Intel ha perdido en tres días un tercio del valor
+- **[01:36]** de la empresa. Madre de Dios, es que es una pasada.
+- **[01:39]** Vamos por partes. Intel, Alphabet, Reddit y la burbuja.
+- **[01:43]** Intel, ¿vale? Está bajando. En los últimos cinco días
+- **[01:46]** baja un 33%, bajar un 28%, el peor día de su historia, se esfumaron más de 130.000 millones
+- **[01:51]** de dólares de valor y que es lo que pasa que las previsiones del trimestre, porque anunciaron
+- **[01:56]** el resultado del trimestre, estuvieron por debajo de las expectativas, la previsión
+- **[02:00]** fue de 16.000 millones de dólares, esperaban 17.000, bueno, eso hasta ahí, pero el CFO
+- **[02:05]** a finales del chip Financial Officer dice que este año no habrá flujo de caja positivo
+- **[02:12]** y que la demanda de los ordenadores de los PC está floja y que este año va a ir a peor.
+- **[02:17]** ¿Por qué?
+- **[02:18]** Porque la RAM está cara por los centros de datos y se están parando de los ordenadores
+- **[02:21]** porque como la RAM ha subido tanto, los ordenadores no están a un precio atractivo, por lo tanto
+- **[02:25]** la gente no compre ordenas.
+- **[02:27]** Y claro, pues entonces Intel, si no se ven de ordenadores, ¿por qué pasa con Intel?
+- **[02:31]** Encima, el estado, Estados Unidos es el mayor accionista de Intel que tiene más
+- **[02:36]** de un 10%.
+- **[02:37]** Entonces, hay una causa también que no se ha explicado mucho, que me parece bastante
+- **[02:41]** interesante y es que a ver no creo que sea sólo esto pero ha podido contribuir y es que resulta que hubo
+- **[02:47]** un accidente en una fábrica de ira el explosión en fa 28 de intel amenaza a los envíos de cheón y
+- **[02:53]** tendrá un impacto de 600 millones de dólares claro pues ahí lo tenéis aquí hay una de las
+- **[02:58]** explosión en fa 28 estima 600 millones entre el cuarto trimestre la planta de ira el estudo cerrada
+- **[03:04]** cerca dos semanas claro esto también ha podido afectar bastante porque este accidente no se
+- **[03:09]** escuchado mucho, bueno, accidente. Veta, sabes, es un accidente o ha sido lo que sea, pero el tema es que
+- **[03:15]** esto también puede tener que ver. Eso Intel, ¿vale? ¿Qué pasa con Alphabet? Más de 500.000
+- **[03:20]** millones que ha perdido de valor de golpe. Has oído dos cosas que han ocurrido a la vez con Google
+- **[03:25]** y esto sí que es interesante en el tema de inteligencia artificial, aunque lo de Intel también.
+- **[03:28]** Los resúmenes de inteligencia artificial están encima del buscador, ¿vale? Y se están comiendo
+- **[03:33]** la publicidad de la búsqueda. Esto es una cosa que ya sabíamos que iba a pasar. Claro,
+- **[03:37]** Pero el negocio de Google, el negocio principal durante mucho tiempo, ha sido el buscador y
+- **[03:42]** lo que está ocurriendo es que la búsqueda de Google ya no es lo que está dando más
+- **[03:48]** dinero al negocio, sino que realmente se lo está dando todo lo demás.
+- **[03:53]** ¿Por qué está pasando esto?
+- **[03:55]** Porque Google no sabe cómo rentabilizar el modo inteligencia artificial o no sabe
+- **[04:00]** o no lo ha hecho, todavía igual en un momento lo hace y tal.
+- **[04:03]** Además de todo esto, el gasto de este año va a subir hasta los 200.000 millones de dólares,
+- **[04:08]** casi todo inteligencia artificial y de nuevo el flujo de caja se pone negativo.
+- **[04:14]** El tema se está poniendo un poco crítico con todo esto.
+- **[04:17]** ¿Qué pasa?
+- **[04:18]** El flujo de caja al final es el dinero que entra y que sale de una empresa durante un
+- **[04:22]** periodo de tiempo.
+- **[04:23]** ¿Sirve para saber si tu negocio al final pues tiene dinero disponible para pagar
+- **[04:26]** facturas, nóminas, impuestos, gastos?
+- **[04:29]** El problema es que si el flujo de caja es negativo, digamos que el dinero que entra y
+- **[04:34]** que sale, es que te estás endeudando, o sea, no te están saliendo los números, no, el
+- **[04:37]** dinero no está, está siendo negativo, por lo tanto, digamos que estás por encima de
+- **[04:41]** tus posibilidades.
+- **[04:42]** Esto es normal, o sea, no es algo que sea negativo, porque al final hay que tener en
+- **[04:46]** cuenta que por temas operativos es normal que te quieras quedar sin liquidez o
+- **[04:51]** que quieras al final, pues invertir de cara al futuro.
+- **[04:54]** ¿Cuál es el problema que está teniendo Intel, Google y todas estas?
+- **[04:58]** tendo flujos de caja negativos con endeudamiento muy bestia, pero el problema es que no saben si van
+- **[05:05]** a recuperar la inversión y la gente, los inversores cada vez más están más nerviosos porque no van
+- **[05:11]** resultados. Claro, cuando tú tienes lo de que la inteligencia artificial se ha comido las
+- **[05:16]** búsquedas de Google y encima eso no lo rentabiliza y te está costando un dineral, pues claro,
+- **[05:22]** tú le dices no y he invertido más en inteligencia artificial y dice ya, pero a ver, ¿sabes? O sea,
+- **[05:27]** a ver. Esto está muy bien, pero el tema es que no veo que esto lo esté rentabilizando amigo.
+- **[05:32]** O sea, te estás metiendo en un follón y esto es lo que básicamente se está penalizando bastante.
+- **[05:37]** Por ejemplo, Reddit, menos usuarios de lo esperado, dice que la búsquedas de inteligencia
+- **[05:43]** artificial de Google le está quitando visitas. Esto lo ha dicho la gente de Reddit, no es que me lo
+- **[05:47]** estoy inventando yo. No, no, la gente de Reddit dice que la inteligencia artificial de Google
+- **[05:51]** le está afectando negativamente. Oficial y confirmado, Reddit reporta una importante
+- **[05:56]** edadentífico web por la inteligencia artificial de Google. Los resúmenes de
+- **[06:00]** inteligencia artificial de dibujador dan la respuesta a usuario que ya no
+- **[06:03]** necesita pincharle los enlaces. Pues es que estamos peor. Google no solo no gana
+- **[06:07]** dinero con las búsquedas de inteligencia artificial, sino que además le está
+- **[06:12]** penalizando a otras empresas. Es que es muy bestia, fíjate la
+- **[06:16]** canibalización que está siendo la inteligencia artificial, porque es del
+- **[06:20]** palo, yo al menos gano dinero y tú te jodes. Pero es que ni eso, es que lo
+- **[06:23]** que le está pasando a Google es que no está ganando dinero con esto y además mientras
+- **[06:28]** resulta que a Reddit le has quitado un millón de referencias en promedio por semana. O sea,
+- **[06:34]** es una verdadera salvajada. Mira, para el directivo el motivo se encuentra la nueva búsqueda
+- **[06:37]** donde dije que la realidad es que el modo IA no genera tráfico ni para nosotros ni
+- **[06:41]** para nadie hasta donde yo sé. Antes servía para traer tráfico, ahora ya no. Dice,
+- **[06:46]** sin embargo, al dar a usuario información que necesita, este siente menos la necesidad
+- **[06:49]** de pinchar. Desde la aparición de IA Overviews en modo búsqueda de IA, Google
+- **[06:53]** ha defendido que sus herramientas han tenido un impacto positivo en el tráfico.
+- **[06:55]** Sí, claro.
+- **[06:56]** Alegando que han crecido las clics de calidad.
+- **[06:59]** Esta tendencia a clicar menos por parte de los usuarios tiene un impacto en la monetización
+- **[07:02]** de las páginas web que dependen de los ingresos, precedentes, los anuncios y las visitas.
+- **[07:05]** Recientemente un juez de Estados Unidos desestimó las demandas e interpuesta contra Google
+- **[07:09]** por la empresa de tecnología educativa Chech y la compañía Madrid de Ronnie Stone.
+- **[07:12]** A ver, os voy a hacer una cosa, que esto va a pasar tarde o temprano.
+- **[07:16]** Por un lado os vais a encontrar que más pronto que tarde en Reddit van a obligar
+- **[07:20]** a que inicie sesión.
+- **[07:21]** pasa que Reddit ha intentado bloquear agentes y tal no es posible pues lo que van a hacer es que vas a
+- **[07:28]** tener que iniciar sesión. No os voy a engañar y os voy a decir una cosa todavía más polémica. Estamos
+- **[07:32]** en un punto de inteligencia artificial que cuando le pongan el bloqueo de iniciar sesión que te crees,
+- **[07:36]** que no le van a poner, no va a hacer que la IaaS pueda iniciar sesión y esto en qué va a
+- **[07:41]** terminar que vamos a tener muchos, muchos, muchos, muchas demandas, muchas multas, muchas cosas porque
+- **[07:49]** problema es que nadie sabe cómo hacer que todo funcione, ¿sabes? Que todo sea justo para el que
+- **[07:57]** crea, para el que busca y tal. O sea, creo que vamos hacia un punto en el que vamos a tener
+- **[08:03]** páginas web que le va a pedir a la IA pues que le pague si quieres entrar. Vamos a tener que poner
+- **[08:08]** el PyMan Require Test de Cloufler. Esto va a ocurrir. ¿Por qué? Porque es que si no,
+- **[08:12]** lo que estamos viendo es que si se pierden los clics y va a ocurrir esto. El PaperCroll,
+- **[08:17]** esto cada vez lo veo más claro de que van a devolver oye eres una gente de inteligencia
+- **[08:23]** artificial vale pues tienes que pagar si quieres ver esta página web porque si no no va o sea no
+- **[08:28]** no veo fácil solución para reddit y google va a tener que compensar a reddit es que es imposible
+- **[08:36]** esto va a ser inviable más todavía más la inteligencia artificial por supuesto y esto va
+- **[08:41]** acelerar todavía más el hecho de que va a ser menos fácil sacar dinero. Es que va a ser así.
+- **[08:47]** Ya os habréis dado cuenta que ahora por ejemplo en Amazon ya no puedes navegar con una gente de
+- **[08:52]** inteligencia artificial. Ya hay un montón de páginas que bloquean a los agentes. Esto
+- **[08:56]** va a ir a peor para que os hagáis esa idea. Y para terminar la nota Meta, Alphabet, Oracle,
+- **[09:01]** Amazon, Microsoft se han comprometido a gastar entre las 5 en 2026 800 mil millones de dólares.
+- **[09:09]** En 2026, en lo que queda de año, no en 2027, el problema es que el mercado ya no aplaude
+- **[09:16]** esto, lo que quiere saber en qué, centros de datos, computación, chips, GPU, RAM, todo eso,
+- **[09:22]** en construir, en infraestructura. ¿Cuál es el problema? El problema es que tú te gastas
+- **[09:27]** todo esto y lo que quiero es que cuando vuelves de esta inversión que me digas dónde
+- **[09:31]** está el dinero y esto ya no se está aplaudiendo y esto amigos, va a ir a peor.
