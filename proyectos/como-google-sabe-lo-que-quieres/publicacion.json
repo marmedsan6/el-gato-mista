@@ -1,0 +1,86 @@
+{
+  "perfil": "es",
+  "formatos": {
+    "largo": {
+      "archivo": "salida/largo-v4.mp4",
+      "titulo": "¿Cómo sabe Google lo que quieres? El viaje de un robot aspirador por tus pantallas",
+      "descripcion": "Miras un robot aspirador en una tienda online y al día siguiente te sale en YouTube, en las noticias y en cualquier web. ¿Te escucha el móvil? Un estudio con más de 17.000 apps dice que no hace falta. Seguimos el viaje de ese robot: qué guarda Google de tu actividad, cómo elige YouTube qué recomendarte, cómo funciona el anuncio que te persigue (la lista de la tienda y la subasta que ocurre mientras carga la página), qué pasó con el fin de las cookies y dónde puedes verlo y cambiarlo.",
+      "tags": [
+        "Google",
+        "YouTube",
+        "Algoritmos",
+        "Publicidad online",
+        "Privacidad",
+        "Cookies",
+        "Curiosidades",
+        "Tecnología"
+      ],
+      "categoria": "28",
+      "visibilidad": "public",
+      "portada_segundo": 5,
+      "portada_imagen": "salida/portada-codex-largo.png",
+      "made_for_kids": false,
+      "contains_synthetic_media": false
+    },
+    "short-a": {
+      "archivo": "salida/short-a-v3.mp4",
+      "titulo": "¿Tu móvil te escucha para enseñarte anuncios?",
+      "descripcion": "Investigadores de Northeastern probaron más de 17.000 apps de Android buscando alguna que activara el micrófono para mandar audio. No encontraron ninguna. Lo que sí vieron fue otra cosa, y es que para saber lo que quieres no les hace falta escucharte: les basta con el rastro que dejas.",
+      "tags": [
+        "Privacidad",
+        "Móvil",
+        "Micrófono",
+        "Publicidad online",
+        "Curiosidades",
+        "Shorts"
+      ],
+      "portada_segundo": 14,
+      "portada_imagen": "salida/portada-codex-a.png",
+      "fecha": "2026-11-13T12:00:00+01:00",
+      "categoria": "28",
+      "visibilidad": "public",
+      "made_for_kids": false,
+      "contains_synthetic_media": false
+    },
+    "short-b": {
+      "archivo": "salida/short-b-v3.mp4",
+      "titulo": "Tu visita a una web se subasta antes de que termine de cargar",
+      "descripcion": "Mientras una página carga, el hueco del anuncio sale a subasta y varios anunciantes pujan por ti con una ficha de datos tuyos. Si una tienda te tiene en su lista porque miraste un producto, puede pujar por ti, y en el sistema de Google tiene entre 80 milésimas y un segundo para responder.",
+      "tags": [
+        "Publicidad online",
+        "Google Ads",
+        "Privacidad",
+        "Subasta en tiempo real",
+        "Curiosidades",
+        "Shorts"
+      ],
+      "portada_segundo": 11,
+      "portada_imagen": "salida/portada-codex-b.png",
+      "fecha": "2026-11-14T12:00:00+01:00",
+      "categoria": "28",
+      "visibilidad": "public",
+      "made_for_kids": false,
+      "contains_synthetic_media": false
+    },
+    "short-c": {
+      "archivo": "salida/short-c-v2.mp4",
+      "titulo": "Dónde ver lo que Google cree que te gusta (y cómo cambiarlo)",
+      "descripcion": "Google tiene una lista de lo que cree que te interesa y puedes verla en Mi centro de anuncios: qué datos usa y unos interruptores para apagarlos. Ojo, apagar la actividad para los anuncios no apaga las recomendaciones de YouTube: son ajustes separados.",
+      "tags": [
+        "Google",
+        "Privacidad",
+        "Mi centro de anuncios",
+        "YouTube",
+        "Trucos",
+        "Shorts"
+      ],
+      "portada_segundo": 8,
+      "portada_imagen": "salida/portada-codex-c.png",
+      "fecha": "2026-11-15T12:00:00+01:00",
+      "categoria": "28",
+      "visibilidad": "public",
+      "made_for_kids": false,
+      "contains_synthetic_media": false
+    }
+  }
+}

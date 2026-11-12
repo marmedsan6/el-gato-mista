@@ -1,0 +1,48 @@
+{
+  "historias": {
+    "c9b5c33023dffe31b1643250fae5aaf998672f90655f6f62ca7638ffb133ada7": {
+      "video_id": "S7LlMUoAkq4",
+      "channel_id": "UCA76YezyGjv7spjOfRqAKNA",
+      "sha256": "f03b6bc628b929aeb1787bdef5e68e1cba7a55b5e63c4f80a19ddaac840cb5d8",
+      "formato": "largo",
+      "fecha": "2026-11-12T12:38:28.025766+00:00",
+      "url": "https://www.youtube.com/watch?v=S7LlMUoAkq4",
+      "body_sha256": "43704624d2ea3e2add5c7bc068538f181c054fd35fbf2f229bf756593d721787",
+      "descripcion_enviada": "Miras un robot aspirador en una tienda online y al día siguiente te sale en YouTube, en las noticias y en cualquier web. ¿Te escucha el móvil? Un estudio con más de 17.000 apps dice que no hace falta. Seguimos el viaje de ese robot: qué guarda Google de tu actividad, cómo elige YouTube qué recomendarte, cómo funciona el anuncio que te persigue (la lista de la tienda y la subasta que ocurre mientras carga la página), qué pasó con el fin de las cookies y dónde puedes verlo y cambiarlo.",
+      "portada_sha256": "95cfd59474cf77cda2378ddd403bafebd5e8ce20c57522eded00f4588aab969e"
+    },
+    "51322ad3713ab659fbc62fa7b1a684a7a03928bf8456dd5a47aa4e9482f12988": {
+      "video_id": "TxSy1K60UjM",
+      "channel_id": "UCA76YezyGjv7spjOfRqAKNA",
+      "sha256": "64ee4fc677e1b0e6b285101eadc52c0d59558e59eca244a774ebdcb08ae853e4",
+      "formato": "short-a",
+      "fecha": "2026-11-12T12:38:33.976932+00:00",
+      "url": "https://www.youtube.com/watch?v=TxSy1K60UjM",
+      "body_sha256": "960bd024c96cd01083308a128bfe493f25c371172bba7829355f3a0f037e1b87",
+      "descripcion_enviada": "Investigadores de Northeastern probaron más de 17.000 apps de Android buscando alguna que activara el micrófono para mandar audio. No encontraron ninguna. Lo que sí vieron fue otra cosa, y es que para saber lo que quieres no les hace falta escucharte: les basta con el rastro que dejas.\n\nVídeo completo: https://www.youtube.com/watch?v=S7LlMUoAkq4",
+      "portada_sha256": "9c65db1bbe51acb2bc4ac5bd14a3c6e3cec33d2f744f2acd7e7141e83c637b49"
+    },
+    "6eb75ae387d9af0c5b6f8d0ce6a6f4f23943225487bceca2e1262a973589db46": {
+      "video_id": "MQefKVHyVbM",
+      "channel_id": "UCA76YezyGjv7spjOfRqAKNA",
+      "sha256": "9c77166dbf1d521fdbacaa7ca04cfe49c2ab10f4d7bb06cd1e4c32fa12f3978d",
+      "formato": "short-b",
+      "fecha": "2026-11-12T12:38:41.260769+00:00",
+      "url": "https://www.youtube.com/watch?v=MQefKVHyVbM",
+      "body_sha256": "f4ca8f1f281d6c27578202f130e93294fd3fb3112affea63ae8387e18c0c7dcf",
+      "descripcion_enviada": "Mientras una página carga, el hueco del anuncio sale a subasta y varios anunciantes pujan por ti con una ficha de datos tuyos. Si una tienda te tiene en su lista porque miraste un producto, puede pujar por ti, y en el sistema de Google tiene entre 80 milésimas y un segundo para responder.\n\nVídeo completo: https://www.youtube.com/watch?v=S7LlMUoAkq4",
+      "portada_sha256": "cdb4c8474f55197b516ff27ef1004aea51dda662266723964de361df339bcccf"
+    },
+    "8f0c4cd13fd1a06624b80dd026f1e238bba1efaae2f92248807bb041b7366022": {
+      "video_id": "yJjCNxX3AYM",
+      "channel_id": "UCA76YezyGjv7spjOfRqAKNA",
+      "sha256": "cb866ffbcecf834644433569b43da14460c2c9c1bf15029f8669ae18deb6ed10",
+      "formato": "short-c",
+      "fecha": "2026-11-12T12:38:47.760608+00:00",
+      "url": "https://www.youtube.com/watch?v=yJjCNxX3AYM",
+      "body_sha256": "fef77b8864dae091d093b995c9a79312a56bbb108852d25b62a639dcd4f67c2e",
+      "descripcion_enviada": "Google tiene una lista de lo que cree que te interesa y puedes verla en Mi centro de anuncios: qué datos usa y unos interruptores para apagarlos. Ojo, apagar la actividad para los anuncios no apaga las recomendaciones de YouTube: son ajustes separados.\n\nVídeo completo: https://www.youtube.com/watch?v=S7LlMUoAkq4",
+      "portada_sha256": "dc4e8b1607b75c09b5350fdde1db06830ff6fb8637bc5aaa93ffdbdd52e92e95"
+    }
+  }
+}

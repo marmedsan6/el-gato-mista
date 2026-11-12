@@ -1,0 +1,926 @@
+{
+ "formato": "short",
+ "fps": 60,
+ "audio": {
+  "fichero": "short-c.wav",
+  "sha256": "9024891e1179b1a845d930bf63ac81a0efdbfaefff8caaa5e356661350c1fee2",
+  "duracion_s": 50.616
+ },
+ "alineacion": {
+  "herramienta": "faster-whisper 1.2.1 · large-v3-turbo (int8, CPU)",
+  "con_pista": true,
+  "palabras_guion": 165,
+  "casadas": 162,
+  "porcentaje": 98.2,
+  "faltan": [],
+  "sobran": [],
+  "sustituidas": [
+   {
+    "guion": "Crom,",
+    "oido": "Chrome,"
+   },
+   {
+    "guion": "Yutub,",
+    "oido": "YouTube,"
+   },
+   {
+    "guion": "Yutub",
+    "oido": "YouTube"
+   }
+  ],
+  "limites_ajustados": 7,
+  "ajuste": "motor/voz/revisar-alineacion.mjs (silencedetect)"
+ },
+ "frases": [
+  {
+   "id": "fr01",
+   "texto": "Google tiene una lista de lo que cree que te gusta. Y la puedes ver.",
+   "inicio": 0,
+   "fin": 3.898,
+   "palabras": [
+    {
+     "p": "Google",
+     "i": 0,
+     "f": 0.48
+    },
+    {
+     "p": "tiene",
+     "i": 0.48,
+     "f": 0.76
+    },
+    {
+     "p": "una",
+     "i": 0.76,
+     "f": 0.96
+    },
+    {
+     "p": "lista",
+     "i": 0.96,
+     "f": 1.28
+    },
+    {
+     "p": "de",
+     "i": 1.28,
+     "f": 1.48
+    },
+    {
+     "p": "lo",
+     "i": 1.48,
+     "f": 1.64
+    },
+    {
+     "p": "que",
+     "i": 1.64,
+     "f": 1.78
+    },
+    {
+     "p": "cree",
+     "i": 1.78,
+     "f": 2.14
+    },
+    {
+     "p": "que",
+     "i": 2.14,
+     "f": 2.32
+    },
+    {
+     "p": "te",
+     "i": 2.32,
+     "f": 2.44
+    },
+    {
+     "p": "gusta.",
+     "i": 2.44,
+     "f": 2.78
+    },
+    {
+     "p": "Y",
+     "i": 2.98,
+     "f": 3.28
+    },
+    {
+     "p": "la",
+     "i": 3.28,
+     "f": 3.42
+    },
+    {
+     "p": "puedes",
+     "i": 3.42,
+     "f": 3.74
+    },
+    {
+     "p": "ver.",
+     "i": 3.74,
+     "f": 3.898
+    }
+   ]
+  },
+  {
+   "id": "fr02",
+   "texto": "Está en Mi centro de anuncios. Ahí te enseña qué datos usa para tus anuncios: tu rango de edad, tu idioma, tu actividad y las zonas desde donde usas Google.",
+   "inicio": 4.134,
+   "fin": 13.961,
+   "palabras": [
+    {
+     "p": "Está",
+     "i": 4.134,
+     "f": 4.46
+    },
+    {
+     "p": "en",
+     "i": 4.46,
+     "f": 4.84
+    },
+    {
+     "p": "Mi",
+     "i": 4.84,
+     "f": 5.22
+    },
+    {
+     "p": "centro",
+     "i": 5.22,
+     "f": 5.62
+    },
+    {
+     "p": "de",
+     "i": 5.62,
+     "f": 5.82
+    },
+    {
+     "p": "anuncios.",
+     "i": 5.82,
+     "f": 6.32
+    },
+    {
+     "p": "Ahí",
+     "i": 6.54,
+     "f": 6.88
+    },
+    {
+     "p": "te",
+     "i": 6.88,
+     "f": 7.02
+    },
+    {
+     "p": "enseña",
+     "i": 7.02,
+     "f": 7.36
+    },
+    {
+     "p": "qué",
+     "i": 7.36,
+     "f": 7.6
+    },
+    {
+     "p": "datos",
+     "i": 7.6,
+     "f": 7.98
+    },
+    {
+     "p": "usa",
+     "i": 7.98,
+     "f": 8.24
+    },
+    {
+     "p": "para",
+     "i": 8.24,
+     "f": 8.42
+    },
+    {
+     "p": "tus",
+     "i": 8.42,
+     "f": 8.62
+    },
+    {
+     "p": "anuncios:",
+     "i": 8.62,
+     "f": 9.08
+    },
+    {
+     "p": "tu",
+     "i": 9.24,
+     "f": 9.42
+    },
+    {
+     "p": "rango",
+     "i": 9.42,
+     "f": 9.7
+    },
+    {
+     "p": "de",
+     "i": 9.7,
+     "f": 9.84
+    },
+    {
+     "p": "edad,",
+     "i": 9.84,
+     "f": 10.16
+    },
+    {
+     "p": "tu",
+     "i": 10.34,
+     "f": 10.44
+    },
+    {
+     "p": "idioma,",
+     "i": 10.44,
+     "f": 10.78
+    },
+    {
+     "p": "tu",
+     "i": 11.02,
+     "f": 11.1
+    },
+    {
+     "p": "actividad",
+     "i": 11.1,
+     "f": 11.64
+    },
+    {
+     "p": "y",
+     "i": 11.64,
+     "f": 12.14
+    },
+    {
+     "p": "las",
+     "i": 12.14,
+     "f": 12.38
+    },
+    {
+     "p": "zonas",
+     "i": 12.38,
+     "f": 12.66
+    },
+    {
+     "p": "desde",
+     "i": 12.66,
+     "f": 13
+    },
+    {
+     "p": "donde",
+     "i": 13,
+     "f": 13.3
+    },
+    {
+     "p": "usas",
+     "i": 13.3,
+     "f": 13.62
+    },
+    {
+     "p": "Google.",
+     "i": 13.62,
+     "f": 13.961
+    }
+   ]
+  },
+  {
+   "id": "fr03",
+   "texto": "Tiene interruptores para que no use tu actividad en webs y apps, tu historial de YouTube o tus zonas. Pero apagar eso no apaga las recomendaciones: son ajustes separados.",
+   "inicio": 14.183,
+   "fin": 23.591,
+   "palabras": [
+    {
+     "p": "Tiene",
+     "i": 14.183,
+     "f": 14.68
+    },
+    {
+     "p": "interruptores",
+     "i": 14.68,
+     "f": 15.28
+    },
+    {
+     "p": "para",
+     "i": 15.28,
+     "f": 15.46
+    },
+    {
+     "p": "que",
+     "i": 15.46,
+     "f": 15.6
+    },
+    {
+     "p": "no",
+     "i": 15.6,
+     "f": 15.76
+    },
+    {
+     "p": "use",
+     "i": 15.76,
+     "f": 15.94
+    },
+    {
+     "p": "tu",
+     "i": 15.94,
+     "f": 16.06
+    },
+    {
+     "p": "actividad",
+     "i": 16.06,
+     "f": 16.42
+    },
+    {
+     "p": "en",
+     "i": 16.42,
+     "f": 16.66
+    },
+    {
+     "p": "webs",
+     "i": 16.66,
+     "f": 16.96
+    },
+    {
+     "p": "y",
+     "i": 16.96,
+     "f": 17.18
+    },
+    {
+     "p": "apps,",
+     "i": 17.18,
+     "f": 17.4
+    },
+    {
+     "p": "tu",
+     "i": 17.64,
+     "f": 17.76
+    },
+    {
+     "p": "historial",
+     "i": 17.76,
+     "f": 18.1
+    },
+    {
+     "p": "de",
+     "i": 18.1,
+     "f": 18.2
+    },
+    {
+     "p": "YouTube",
+     "i": 18.2,
+     "f": 18.5
+    },
+    {
+     "p": "o",
+     "i": 18.5,
+     "f": 18.78
+    },
+    {
+     "p": "tus",
+     "i": 18.78,
+     "f": 18.98
+    },
+    {
+     "p": "zonas.",
+     "i": 18.98,
+     "f": 19.26
+    },
+    {
+     "p": "Pero",
+     "i": 19.5,
+     "f": 19.98
+    },
+    {
+     "p": "apagar",
+     "i": 19.98,
+     "f": 20.3
+    },
+    {
+     "p": "eso",
+     "i": 20.3,
+     "f": 20.5
+    },
+    {
+     "p": "no",
+     "i": 20.5,
+     "f": 20.84
+    },
+    {
+     "p": "apaga",
+     "i": 20.84,
+     "f": 21.16
+    },
+    {
+     "p": "las",
+     "i": 21.16,
+     "f": 21.32
+    },
+    {
+     "p": "recomendaciones:",
+     "i": 21.32,
+     "f": 22.02
+    },
+    {
+     "p": "son",
+     "i": 22.16,
+     "f": 22.46
+    },
+    {
+     "p": "ajustes",
+     "i": 22.46,
+     "f": 22.92
+    },
+    {
+     "p": "separados.",
+     "i": 22.92,
+     "f": 23.591
+    }
+   ]
+  },
+  {
+   "id": "fr04",
+   "texto": "Y si quitas los anuncios personalizados, seguirás viendo anuncios, pero menos relevantes, según Google.",
+   "inicio": 23.825,
+   "fin": 28.996,
+   "palabras": [
+    {
+     "p": "Y",
+     "i": 23.825,
+     "f": 24.18
+    },
+    {
+     "p": "si",
+     "i": 24.18,
+     "f": 24.34
+    },
+    {
+     "p": "quitas",
+     "i": 24.34,
+     "f": 24.6
+    },
+    {
+     "p": "los",
+     "i": 24.6,
+     "f": 24.72
+    },
+    {
+     "p": "anuncios",
+     "i": 24.72,
+     "f": 25.06
+    },
+    {
+     "p": "personalizados,",
+     "i": 25.06,
+     "f": 25.72
+    },
+    {
+     "p": "seguirás",
+     "i": 25.88,
+     "f": 26.34
+    },
+    {
+     "p": "viendo",
+     "i": 26.34,
+     "f": 26.54
+    },
+    {
+     "p": "anuncios,",
+     "i": 26.54,
+     "f": 26.94
+    },
+    {
+     "p": "pero",
+     "i": 27,
+     "f": 27.14
+    },
+    {
+     "p": "menos",
+     "i": 27.14,
+     "f": 27.64
+    },
+    {
+     "p": "relevantes,",
+     "i": 27.64,
+     "f": 28.3
+    },
+    {
+     "p": "según",
+     "i": 28.46,
+     "f": 28.66
+    },
+    {
+     "p": "Google.",
+     "i": 28.66,
+     "f": 28.996
+    }
+   ]
+  },
+  {
+   "id": "fr05",
+   "texto": "Lo que se guarda en tu cuenta está en «Actividad en la Web y en Aplicaciones». Tiene una casilla que añade tu historial de Chrome, si lo sincronizas. Se puede apagar o borrar.",
+   "inicio": 29.227,
+   "fin": 37.856,
+   "palabras": [
+    {
+     "p": "Lo",
+     "i": 29.227,
+     "f": 29.84
+    },
+    {
+     "p": "que",
+     "i": 29.84,
+     "f": 29.96
+    },
+    {
+     "p": "se",
+     "i": 29.96,
+     "f": 30.08
+    },
+    {
+     "p": "guarda",
+     "i": 30.08,
+     "f": 30.34
+    },
+    {
+     "p": "en",
+     "i": 30.34,
+     "f": 30.38
+    },
+    {
+     "p": "tu",
+     "i": 30.38,
+     "f": 30.48
+    },
+    {
+     "p": "cuenta",
+     "i": 30.48,
+     "f": 30.68
+    },
+    {
+     "p": "está",
+     "i": 30.68,
+     "f": 30.88
+    },
+    {
+     "p": "en",
+     "i": 30.88,
+     "f": 31.06
+    },
+    {
+     "p": "«Actividad",
+     "i": 31.06,
+     "f": 31.58
+    },
+    {
+     "p": "en",
+     "i": 31.58,
+     "f": 31.78
+    },
+    {
+     "p": "la",
+     "i": 31.78,
+     "f": 31.88
+    },
+    {
+     "p": "Web",
+     "i": 31.88,
+     "f": 32.04
+    },
+    {
+     "p": "y",
+     "i": 32.04,
+     "f": 32.24
+    },
+    {
+     "p": "en",
+     "i": 32.24,
+     "f": 32.34
+    },
+    {
+     "p": "Aplicaciones».",
+     "i": 32.34,
+     "f": 33.18
+    },
+    {
+     "p": "Tiene",
+     "i": 33.18,
+     "f": 33.54
+    },
+    {
+     "p": "una",
+     "i": 33.54,
+     "f": 33.68
+    },
+    {
+     "p": "casilla",
+     "i": 33.68,
+     "f": 33.98
+    },
+    {
+     "p": "que",
+     "i": 33.98,
+     "f": 34.14
+    },
+    {
+     "p": "añade",
+     "i": 34.14,
+     "f": 34.42
+    },
+    {
+     "p": "tu",
+     "i": 34.42,
+     "f": 34.56
+    },
+    {
+     "p": "historial",
+     "i": 34.56,
+     "f": 34.9
+    },
+    {
+     "p": "de",
+     "i": 34.9,
+     "f": 35
+    },
+    {
+     "p": "Chrome,",
+     "i": 35,
+     "f": 35.2
+    },
+    {
+     "p": "si",
+     "i": 35.32,
+     "f": 35.54
+    },
+    {
+     "p": "lo",
+     "i": 35.54,
+     "f": 35.66
+    },
+    {
+     "p": "sincronizas.",
+     "i": 35.66,
+     "f": 36.28
+    },
+    {
+     "p": "Se",
+     "i": 36.48,
+     "f": 36.8
+    },
+    {
+     "p": "puede",
+     "i": 36.8,
+     "f": 36.98
+    },
+    {
+     "p": "apagar",
+     "i": 36.98,
+     "f": 37.28
+    },
+    {
+     "p": "o",
+     "i": 37.28,
+     "f": 37.54
+    },
+    {
+     "p": "borrar.",
+     "i": 37.54,
+     "f": 37.856
+    }
+   ]
+  },
+  {
+   "id": "fr06",
+   "texto": "En YouTube, «No me interesa», «No recomendar el canal», o pausar el historial.",
+   "inicio": 38.156,
+   "fin": 42.226,
+   "palabras": [
+    {
+     "p": "En",
+     "i": 38.156,
+     "f": 38.46
+    },
+    {
+     "p": "YouTube,",
+     "i": 38.46,
+     "f": 38.7
+    },
+    {
+     "p": "«No",
+     "i": 38.9,
+     "f": 39.14
+    },
+    {
+     "p": "me",
+     "i": 39.14,
+     "f": 39.26
+    },
+    {
+     "p": "interesa»,",
+     "i": 39.26,
+     "f": 39.74
+    },
+    {
+     "p": "«No",
+     "i": 39.74,
+     "f": 40.14
+    },
+    {
+     "p": "recomendar",
+     "i": 40.14,
+     "f": 40.6
+    },
+    {
+     "p": "el",
+     "i": 40.6,
+     "f": 40.76
+    },
+    {
+     "p": "canal»,",
+     "i": 40.76,
+     "f": 40.98
+    },
+    {
+     "p": "o",
+     "i": 40.98,
+     "f": 41.26
+    },
+    {
+     "p": "pausar",
+     "i": 41.26,
+     "f": 41.7
+    },
+    {
+     "p": "el",
+     "i": 41.7,
+     "f": 41.8
+    },
+    {
+     "p": "historial.",
+     "i": 41.8,
+     "f": 42.226
+    }
+   ]
+  },
+  {
+   "id": "fr07",
+   "texto": "Y en Discover, seguir temas o quitar los que no te interesan.",
+   "inicio": 42.494,
+   "fin": 45.481,
+   "palabras": [
+    {
+     "p": "Y",
+     "i": 42.494,
+     "f": 42.8
+    },
+    {
+     "p": "en",
+     "i": 42.8,
+     "f": 42.9
+    },
+    {
+     "p": "Discover,",
+     "i": 42.9,
+     "f": 43.2
+    },
+    {
+     "p": "seguir",
+     "i": 43.46,
+     "f": 43.72
+    },
+    {
+     "p": "temas",
+     "i": 43.72,
+     "f": 43.98
+    },
+    {
+     "p": "o",
+     "i": 43.98,
+     "f": 44.3
+    },
+    {
+     "p": "quitar",
+     "i": 44.3,
+     "f": 44.6
+    },
+    {
+     "p": "los",
+     "i": 44.6,
+     "f": 44.76
+    },
+    {
+     "p": "que",
+     "i": 44.76,
+     "f": 44.86
+    },
+    {
+     "p": "no",
+     "i": 44.86,
+     "f": 44.96
+    },
+    {
+     "p": "te",
+     "i": 44.96,
+     "f": 45.06
+    },
+    {
+     "p": "interesan.",
+     "i": 45.06,
+     "f": 45.481
+    }
+   ]
+  },
+  {
+   "id": "fr08",
+   "texto": "¿Quieres saber cómo llega todo eso a tu pantalla? Tengo un vídeo largo en YouTube que lo explica entero.",
+   "inicio": 45.781,
+   "fin": 50.3,
+   "palabras": [
+    {
+     "p": "¿Quieres",
+     "i": 45.781,
+     "f": 45.98
+    },
+    {
+     "p": "saber",
+     "i": 45.98,
+     "f": 46.14
+    },
+    {
+     "p": "cómo",
+     "i": 46.14,
+     "f": 46.34
+    },
+    {
+     "p": "llega",
+     "i": 46.34,
+     "f": 46.56
+    },
+    {
+     "p": "todo",
+     "i": 46.56,
+     "f": 46.86
+    },
+    {
+     "p": "eso",
+     "i": 46.86,
+     "f": 47.02
+    },
+    {
+     "p": "a",
+     "i": 47.02,
+     "f": 47.12
+    },
+    {
+     "p": "tu",
+     "i": 47.12,
+     "f": 47.18
+    },
+    {
+     "p": "pantalla?",
+     "i": 47.18,
+     "f": 47.5
+    },
+    {
+     "p": "Tengo",
+     "i": 47.76,
+     "f": 48.18
+    },
+    {
+     "p": "un",
+     "i": 48.18,
+     "f": 48.3
+    },
+    {
+     "p": "vídeo",
+     "i": 48.3,
+     "f": 48.48
+    },
+    {
+     "p": "largo",
+     "i": 48.48,
+     "f": 48.72
+    },
+    {
+     "p": "en",
+     "i": 48.72,
+     "f": 48.86
+    },
+    {
+     "p": "YouTube",
+     "i": 48.86,
+     "f": 49.06
+    },
+    {
+     "p": "que",
+     "i": 49.06,
+     "f": 49.3
+    },
+    {
+     "p": "lo",
+     "i": 49.3,
+     "f": 49.4
+    },
+    {
+     "p": "explica",
+     "i": 49.4,
+     "f": 49.78
+    },
+    {
+     "p": "entero.",
+     "i": 49.78,
+     "f": 50.3
+    }
+   ]
+  }
+ ],
+ "escenas": []
+}

@@ -1,0 +1,10 @@
+Seguro que te ha pasado: hablas de algo con alguien y, al rato, te sale un anuncio justo de eso. Y piensas: el móvil me escucha.
+En dos mil dieciocho, unos investigadores de la Universidad Nortístern lo comprobaron.
+Analizaron diecisiete mil doscientas sesenta apps de Android, pusieron a funcionar nueve mil cien en móviles de verdad y registraron todo lo que enviaban a internet.
+Buscaban audio del micrófono saliendo del teléfono. ¿Resultado? Ninguna app enviaba audio.
+Con un límite que ellos mismos avisan: si una app pasara lo que oye a texto antes de enviarlo, no lo habrían visto.
+Lo que sí encontraron fue otra cosa: apps que grababan la pantalla mientras las usabas y mandaban las imágenes a otra empresa.
+Entonces, ¿de dónde sale el anuncio? De tu rastro. Lo que buscas en Google se guarda en tu cuenta si tienes activada la actividad web, y con ella Google deduce qué te interesa.
+Y muchas webs llevan una etiqueta de Google que te mete, en segundos, en una lista para enseñarte anuncios.
+No les hace falta escucharte. Ya les das pistas de sobra.
+¿Quieres ver el viaje completo? Tengo un vídeo largo en Yutub que lo explica entero.

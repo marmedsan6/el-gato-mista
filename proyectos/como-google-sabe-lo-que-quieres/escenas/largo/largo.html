@@ -1,0 +1,46 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>como-google-sabe-lo-que-quieres · largo (estilo v6)</title>
+<!-- Largo 16:9 en estilo v6 (ADR 0010), con un mundo por bloque (style_guide.md). La implementación manda: largo.js.
+     Timing:  node motor/voz/revisar-alineacion.mjs proyectos/como-google-sabe-lo-que-quieres/timing.largo.json
+                .runtime/voz/como-google-sabe-lo-que-quieres/largo-sin-clips.wav --corregir proyectos/como-google-sabe-lo-que-quieres/timing.largo.json
+              node motor/timing-a-js.mjs proyectos/como-google-sabe-lo-que-quieres/timing.largo.json
+                proyectos/como-google-sabe-lo-que-quieres/escenas/largo/timing.js --guion proyectos/como-google-sabe-lo-que-quieres/guion.md
+                --seccion Maestro --fuentes proyectos/como-google-sabe-lo-que-quieres/fuentes.json
+     Lint:    node motor/revisar.mjs proyectos/como-google-sabe-lo-que-quieres/escenas/largo/largo.html 480 270 <duración> 0.05 <capturas> --estricto
+              (mientras se construye: ?hasta=N solo pinta hasta el bloque N; pásalo con --consulta "hasta=2")
+     Render:  node motor/render.mjs --escena proyectos/como-google-sabe-lo-que-quieres/escenas/largo/largo.html --ancho 480 --alto 270
+                --duracion <s> --incluir motor/estilo,motor/estilo/v5,motor/estilo/v6,proyectos/como-google-sabe-lo-que-quieres/escenas/comun
+     La voz entra 1,2 s después (título de 2 s): en la mezcla, --voz-desfase 1.2. -->
+<link rel="stylesheet" href="../../../../motor/estilo/estilo.css">
+<link rel="stylesheet" href="../../../../motor/estilo/v6/estilo-v6.css">
+<style>
+  body.largo .dialogo { left: 16px; width: 448px; top: 200px; height: 58px; }
+</style>
+<body class="largo">
+  <div id="base"></div>
+  <div id="transicion">
+    <div class="profundidad" id="p-lejos"><svg class="arte" id="lejos"></svg></div>
+    <div class="profundidad" id="p-medio">
+      <svg class="arte" id="medio"></svg><svg class="arte bloom" id="brillo"></svg><svg class="arte" id="frente"></svg>
+      <div id="textos-mundo"></div>
+    </div>
+    <div class="profundidad" id="p-delante"><svg class="arte" id="delante"></svg></div>
+    <svg class="arte" id="gato12"></svg>
+    <div class="capa vineta"></div>
+  </div>
+  <div id="textos"></div>
+  <div class="dialogo con-retrato oculto" id="dialogo"><svg class="retrato" id="retrato"></svg><span class="nombre">Mista</span><span id="frase"></span><span class="fuente6" id="fuente"></span></div>
+
+  <script src="../../../../motor/estilo/pixel.js"></script>
+  <script src="../../../../motor/estilo/v3/gato.js"></script>
+  <script src="../../../../motor/estilo/camara.js"></script>
+  <script src="../../../../motor/estilo/v5/dibujo.js"></script>
+  <script src="../../../../motor/estilo/v6/piezas.js"></script>
+  <script src="../../../../motor/estilo/v6/escena.js"></script>
+  <script src="../comun/piezas-google.js"></script>
+  <script src="../comun/piezas-google-b.js"></script>
+  <script src="../comun/piezas-google-c.js"></script>
+  <script src="timing.js"></script>
+  <script src="largo.js"></script>
+</body>

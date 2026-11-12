@@ -1,0 +1,81 @@
+# b01 · gancho
+Imagina que abres Yutub y lo primero que ves es un vídeo de ese robot aspirador que estuviste mirando ayer en una tienda online.
+No lo compraste. No se lo contaste a nadie.
+Luego entras a leer las noticias, y ahí está otra vez. Un anuncio del mismo robot, en mitad del artículo.
+¿Cómo lo sabe?
+Hoy vamos a seguir a ese robot aspirador desde que lo miras hasta que te persigue por internet. Y al final te enseño dónde ver lo que Google cree que te gusta, y cómo cambiarlo.
+@pausa 0.7
+# b02 · ¿me está escuchando?
+Lo primero que piensa casi todo el mundo es que el móvil le escucha. Hablas de algo y, al rato, te sale un anuncio de eso.
+En dos mil dieciocho, un equipo de la Universidad Nortístern, en Boston, decidió comprobarlo.
+Analizaron diecisiete mil doscientas sesenta apps de Android. A nueve mil cien las pusieron a funcionar en móviles de verdad, con un programa que tocaba la pantalla como lo haría una persona, y registraron todo lo que enviaban a internet.
+Buscaban audio: grabaciones del micrófono saliendo del teléfono.
+¿Y qué encontraron? Ninguna app enviaba audio. Ni una.
+Ojo, los propios autores avisan de un límite: si una app convirtiera lo que oye en texto antes de enviarlo, su sistema no lo habría visto. No es una prueba absoluta, pero es el primer estudio a gran escala sobre esto, y salió vacío.
+Lo que sí encontraron fue otra cosa. Algunas apps grababan la pantalla mientras las usabas y mandaban esas imágenes a otra empresa.
+Una app de reparto a domicilio, Go paf, enviaba capturas a Ap si, una empresa de analítica, sin que el usuario lo supiera.
+Y aquí está la clave: no les hace falta escucharte. Tú ya les das pistas de sobra. Vamos a ver cuáles.
+@pausa 0.7
+# b03 · el rastro
+Volvamos al robot aspirador. Antes de llegar a la tienda, lo más probable es que lo buscaras en Google.
+Esa búsqueda se guarda en tu cuenta si tienes activado un ajuste que se llama «Actividad en la Web y en Aplicaciones». Guarda lo que buscas y lo que haces en productos de Google como el buscador o Maps. También el idioma, el tipo de dispositivo y, más o menos, desde dónde te conectas.
+Dentro de ese ajuste hay una casilla que va más allá. Si está marcada, se guarda también tu historial de Crom, siempre que hayas iniciado sesión en el navegador y lo sincronices.
+Y tu actividad en webs y apps que usan servicios de Google, incluidas las que están asociadas con Google para mostrar anuncios.
+Con todo eso, Google puede deducir qué te interesa. Lo dice en su propia ayuda.
+Pero ojo: esto no significa que Google lo vea todo. Lo que le llega es lo que pasa por sus servicios: el buscador, Yutub, Crom si lo sincronizas, y las webs que llevan algo de Google dentro.
+Y aquí vuelve la tienda. Muchas webs llevan una etiqueta de Google: un trocito de código invisible que el dueño pone para sus campañas de anuncios. Enseguida vemos qué hace.
+@pausa 0.7
+# b04 · lo que te recomiendan
+Primero, Yutub. ¿Cómo decide qué vídeos salen en tu portada?
+Yutub puede usar la actividad de tu cuenta de Google para elegir lo que te recomienda. Así que esa búsqueda del robot aspirador ya cuenta.
+En dos mil dieciséis, tres ingenieros de Google publicaron cómo lo hacía Yutub. Y es un embudo en dos pasos.
+El primer paso coge millones de vídeos y se queda con unos cientos que podrían interesarte. Para elegirlos mira lo que has visto, lo que has buscado, tu región, tu dispositivo y datos como tu edad.
+El segundo paso ordena esos cientos y se queda con unas docenas: las que acaban en tu pantalla.
+¿Y con qué criterio las ordena? Aquí está lo curioso. No por la probabilidad de que hagas clic, sino por cuánto tiempo esperan que veas el vídeo.
+La razón la explican ellos mismos: si ordenas por clics, premias los vídeos engañosos, esos que la gente abre y deja a medias. El famoso clicbéit.
+En dos mil veintiuno, Yutub contó cómo llegaron ahí. En dos mil once vieron que un clic no significaba que vieras el vídeo. En dos mil doce empezaron a contar el tiempo de visionado, y las visualizaciones cayeron un veinte por ciento. Lo asumieron.
+Hoy mezclan más señales: clics, tiempo de visionado, encuestas, compartidos, me gusta y no me gusta. Según Yutub, más de ochenta mil millones de señales.
+Las encuestas son esas que a veces te salen debajo de un vídeo, de una a cinco estrellas.
+Y comparan tus hábitos con los de gente parecida a ti.
+Por ejemplo: si mucha gente que vio el robot aspirador vio después un vídeo de trucos de limpieza, es probable que ese vídeo te salga a ti.
+Y esto pesa mucho, porque según Yutub, las recomendaciones generan más visionado que las suscripciones o las búsquedas.
+Con los artículos que te salen en el móvil, en la app de Google, sin que busques nada, pasa algo parecido. Eso se llama Discóver.
+Discóver usa información de tu dispositivo, de otros productos de Google y de lo que guarda tu cuenta: la actividad que acabamos de ver y tu ubicación, si la tienes activada.
+Así que, si ayer buscaste robots aspiradores, no te extrañe que hoy te salga una comparativa de robots aspiradores.
+@pausa 0.7
+# b05 · el anuncio que te persigue
+Y ahora, lo que más inquieta: el anuncio del robot en la web de noticias. Eso no es una recomendación. Es publicidad, y funciona distinto.
+¿Recuerdas la etiqueta de Google de la tienda? Cuando entras a la página del robot, la etiqueta avisa. Y en segundos entras en una lista de esa tienda: gente que ha visto este robot.
+Google antes lo llamaba rimárketin. Ahora lo llama, sin más, «tus datos».
+La tienda puede usar esa lista para enseñarte anuncios en el buscador, en Yutub y en webs que muestran anuncios de Google.
+Y te quedas en esa lista treinta días, si la tienda no lo cambia. Puede alargarlo hasta quinientos cuarenta. Casi año y medio.
+Pero ¿cómo acaba ese anuncio justo en la web de noticias que estás leyendo? Con una subasta.
+Mientras la página termina de cargar, la web de noticias pone a la venta el hueco del anuncio, y varios anunciantes pujan por él.
+Para pujar, reciben una ficha con datos tuyos: tu dirección i pe, identificadores de tus cúquis, tu tipo de dispositivo, tu ubicación, tu idioma… y en qué grupos de audiencia estás.
+Si la tienda te tiene en su lista, puede pujar por ti. Y si gana, ahí está el robot.
+¿Cuánto dura todo esto? En el sistema de Google, quien puja tiene entre ochenta milésimas y un segundo para responder. Antes de que termines de leer el titular.
+Y hay algo que el regulador británico de protección de datos señaló en dos mil diecinueve: en una sola visita a una web, tus datos pueden acabar viéndolos cientos de empresas. A ese regulador le pareció desproporcionado, intrusivo e injusto.
+@pausa 0.7
+# b06 · el giro de las cookies
+Para que esto funcione entre webs distintas, hay una pieza clásica: las cúquis de terceros.
+Una cookie es un archivo que crea una web en tu navegador. Las de terceros las crea otra web distinta de la que visitas, por ejemplo la de un anuncio metido en la página. Y sirven para personalizar anuncios y saber qué haces en otras webs.
+Google tenía previsto quitar las cúquis de terceros de Crom y sustituirlas por otro sistema, que llamó Práivasi Sándbox.
+Pero en julio de dos mil veinticuatro cambió de idea: en vez de quitarlas, dejaría elegir a cada usuario.
+En abril de dos mil veinticinco, ni eso: confirmó que no habría ningún aviso para elegir. Las cúquis de terceros se quedan, y quien quiera las bloquea en los ajustes de Crom. En modo incógnito ya vienen bloqueadas.
+Y en octubre de dos mil veinticinco retiró casi todo el sistema que iba a sustituirlas. ¿El motivo? Que casi nadie lo usaba.
+O sea: la cookie que iba a desaparecer sigue ahí.
+@pausa 0.7
+# b07 · cómo verlo y cambiarlo
+Vale, ¿y qué puedes hacer tú? Bastante, la verdad.
+Lo primero: en Mi centro de anuncios, Google te enseña qué datos usa para tus anuncios. Tu rango de edad, tu idioma, tu actividad y las zonas desde donde usas Google.
+Ahí tienes interruptores para que no use tu actividad en webs y apps, tu historial de Yutub o tus zonas. Un detalle: apagar la actividad para los anuncios no apaga las recomendaciones. Son ajustes separados.
+Y si desactivas los anuncios personalizados del todo, seguirás viendo anuncios. Solo que menos relevantes, según Google.
+Para las recomendaciones, en Yutub puedes marcar «No me interesa» o «No recomendar el canal». Y puedes pausar o borrar tu historial de reproducciones y de búsquedas.
+En Discóver, puedes seguir temas o decir que uno no te interesa.
+Y si no quieres que tu actividad se guarde en tu cuenta, el ajuste es «Actividad en la Web y en Aplicaciones», con su casilla de Crom. Se puede apagar o borrar cuando quieras.
+Una última cosa. Google asegura que nunca vende tu información personal, y que no usa tus correos de Yimeil, ni Draif, ni Fotos para anuncios. Es lo que dice Google.
+@pausa 0.7
+# b08 · cierre
+Así que nadie escuchó tu conversación.
+Buscaste el robot. La tienda llevaba una etiqueta. Entraste en una lista. Y mientras cargaba la web de noticias, esa tienda pujó por ti y ganó.
+Google no te lee la mente. Te lee el rastro.
