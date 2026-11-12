@@ -51,3 +51,11 @@ test("veredicto: el short de NVIDIA v3 pasa; un pico de -1,6 dBTP o un silencio 
   assert.deepEqual(veredicto({ ...base, congelados: [{ inicio: 42, duracion: 2.1 }] }).filter((f) => !f.ok).map((f) => f.nombre), ["Congelados ≥ 2 s"]);
   assert.ok(!veredicto({ ...base, formato: "largo", ancho: 1920, alto: 1080, duracion: 71 }).every((f) => f.ok)); // un largo de 71 s no pasa
 });
+
+test("veredicto: un tramo abierto hasta el final cuenta lo que dura de verdad", () => {
+  const base = { formato: "short", ancho: 1080, alto: 1920, fps: 60, duracion: 62.02, lufs: -14.1, pico: -2.9, silencios: [], congelados: [], negros: [] };
+  assert.ok(veredicto({ ...base, congelados: [{ inicio: 61, duracion: null }] }).every((f) => f.ok)); // 1,02 s hasta el final
+  assert.deepEqual(veredicto({ ...base, congelados: [{ inicio: 59.5, duracion: null }] }).filter((f) => !f.ok).map((f) => f.nombre), ["Congelados ≥ 2 s"]);
+  assert.ok(veredicto({ ...base, silencios: [{ inicio: 61.8, fin: null, duracion: null }] }).every((f) => f.ok)); // 0,22 s
+  assert.deepEqual(veredicto({ ...base, silencios: [{ inicio: 61.4, fin: null, duracion: null }] }).filter((f) => !f.ok).map((f) => f.nombre), ["Silencios ≥ 0,4 s (-35 dB)"]);
+});

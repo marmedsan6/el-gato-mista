@@ -54,9 +54,10 @@ export function veredicto({ formato, ancho, alto, fps, duracion, lufs, pico, sil
   fila("Duración", `${duracion.toFixed(2)} s`, corto ? "short ≤ 120 s" : "largo 8-10 min", corto ? duracion <= 120 : duracion >= 480 && duracion <= 600);
   fila("Sonoridad integrada", `${lufs} LUFS`, "-14 ± 1 LUFS", lufs !== null && Math.abs(lufs + 14) <= 1);
   fila("Pico real", `${pico} dBTP`, "< -2 dBTP", pico !== null && pico < -2);
-  const largos = silencios.filter((s) => s.duracion === null || s.duracion >= 0.4);
+  const dura = (x) => (x.duracion === null ? duracion - x.inicio : x.duracion); // un tramo abierto llega hasta el final
+  const largos = silencios.filter((s) => dura(s) >= 0.4);
   fila("Silencios ≥ 0,4 s (-35 dB)", String(largos.length), corto ? "short sin pausas" : "informativo en el largo", corto ? largos.length === 0 : true);
-  const quietos = congelados.filter((c) => c.duracion === null || c.duracion >= 2);
+  const quietos = congelados.filter((c) => dura(c) >= 2);
   fila("Congelados ≥ 2 s", String(quietos.length), "0", quietos.length === 0);
   fila("Tramos casi quietos ≥ 1 s", String(congelados.length), "informativo (algo nuevo cada 1-2 s)", true);
   fila("Negros", String(negros.length), "0", negros.length === 0);
