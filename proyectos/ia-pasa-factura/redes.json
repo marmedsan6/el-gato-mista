@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "instagram:short-a": {
+    "estado": "subida_fallida",
+    "huella": "b14c10f1ed3677438c4e8ec12dc98ef631dd16ff072ecf7e82473db5b9a881fb",
+    "sha256": "6a2aa6ac81f0ea8609a3ff8a895de456e4375ae8e24a0c024a71869ec17f3833",
+    "creado": "2026-11-13T13:22:23.129424+00:00",
+    "container_id": "18131902231825706"
+  },
+  "actualizado": "2026-11-13T13:25:36.607766+00:00",
+  "instagram:short-b": {
+    "estado": "subida_fallida",
+    "huella": "802c84d392636296cc90473a6a00d5c664a0d05cb74b42f13a712a1f94c5d47b",
+    "sha256": "2827d2b3c775799ede0c4b181cac2cc7d037b87a7150cdcc674bf1be96b908dc",
+    "creado": "2026-11-13T13:17:01.192121+00:00",
+    "container_id": "18131899540825706"
+  },
+  "tiktok:short-b": {
+    "sha256": "2827d2b3c775799ede0c4b181cac2cc7d037b87a7150cdcc674bf1be96b908dc",
+    "estado": "enviado",
+    "creado": "2026-11-13T13:20:43.809985+00:00",
+    "publish_id": "v_inbox_file~v2.7707645243272923158",
+    "tiktok": "PROCESSING_UPLOAD",
+    "motivo": null
+  },
+  "tiktok:short-a": {
+    "sha256": "6a2aa6ac81f0ea8609a3ff8a895de456e4375ae8e24a0c024a71869ec17f3833",
+    "estado": "creando",
+    "creado": "2026-11-13T13:25:36.607766+00:00"
+  }
+}

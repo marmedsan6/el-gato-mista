@@ -1,0 +1,46 @@
+{
+  "perfil": "es",
+  "formatos": {
+    "short-a": {
+      "archivo": "salida/short-a-v4.mp4",
+      "titulo": "¿Por qué Reddit te va a pedir una cuenta?",
+      "descripcion": "Cuando Google te responde arriba con un resumen de IA, casi nadie entra en las webs: un estudio de Pew midió que, con resumen, la gente hace clic en un resultado la mitad de veces. Reddit dice que el tráfico que le llega desde Google ha bajado por la búsqueda con IA y va a probar a pedir una cuenta para entrar. Lo raro es que la IA aprende justo de webs así.",
+      "tags": [
+        "Reddit",
+        "Google",
+        "Inteligencia artificial",
+        "Internet",
+        "Stack Overflow",
+        "Noticias",
+        "Shorts"
+      ],
+      "categoria": "28",
+      "visibilidad": "public",
+      "portada_segundo": 19.5,
+      "portada_imagen": "salida/portada-codex-a.png",
+      "made_for_kids": false,
+      "contains_synthetic_media": false
+    },
+    "short-b": {
+      "archivo": "salida/short-b-v4.mp4",
+      "titulo": "Google gasta más de lo que le entra",
+      "descripcion": "Según la propia Google, una pregunta de texto a Gemini gasta unas cinco gotas de agua. Casi nada. Pero Alphabet, su dueña, acaba de presentar un flujo de caja libre negativo y una deuda casi seis veces mayor que hace un año: sigue ganando dinero, pero construye centros de datos a un ritmo de más de 200.000 millones de dólares al año. Qué es el flujo de caja libre y por qué la diferencia la pone la deuda.",
+      "tags": [
+        "Google",
+        "Alphabet",
+        "Inteligencia artificial",
+        "Centros de datos",
+        "Economía",
+        "Noticias",
+        "Shorts"
+      ],
+      "categoria": "28",
+      "visibilidad": "public",
+      "portada_segundo": 70.9,
+      "portada_imagen": "salida/portada-codex-b.png",
+      "fecha": "2026-11-14T12:00:00+01:00",
+      "made_for_kids": false,
+      "contains_synthetic_media": false
+    }
+  }
+}

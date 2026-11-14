@@ -1,0 +1,69 @@
+{
+  "fuentes": [
+    {
+      "id": "f1",
+      "url": "https://www.cnbc.com/2026/10/29/reddit-rddt-q3-2026.html",
+      "autor": "Jonathan Vanian (CNBC), «Reddit shares sink on weak sales guidance and plans login requirement test as Google search traffic shrinks»",
+      "corto": "CNBC, Reddit",
+      "fecha": "2026-10-29",
+      "consultada": "2026-11-12",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "Steve Huffman (CEO): el tráfico de referencias desde la búsqueda bajó «meaningfully in this quarter» y se espera que siga en el Q4; lo atribuye al «shift to AI mode and AI overviews»: «a fundamental shift in how the Google product works, from being a traffic driver to whatever's going on now». Reddit planea exigir una cuenta para acceder; la prueba empieza en el Q4 fuera de EE. UU., sin calendario para el resto; motivo: «a continued focus on our core users that come to Reddit directly»; aún decide qué podrán ver los usuarios sin sesión. DAUq 130,3 M (+12 %, se esperaban 133,7 M); EE. UU. 50,7 M (−2 %). La acción cayó más del 15 % tras los resultados.",
+      "uso": "short A: el CEO culpa a los resúmenes de IA; la prueba de cuenta obligatoria",
+      "tramo": ""
+    },
+    {
+      "id": "f2",
+      "url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
+      "autor": "Athena Chapekis y Anna Lieb (Pew Research Center), «Google users are less likely to click on links when an AI summary appears in the results»",
+      "corto": "Pew Research",
+      "fecha": "2025-07-22",
+      "consultada": "2026-11-12",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "«Users who encountered an AI summary clicked on a traditional search result link in 8% of all visits.» Sin resumen: «15% of visits». Clic en un enlace del propio resumen: «just 1% of all visits». Datos de navegación de 900 adultos de EE. UU. del 1 al 31 de marzo de 2025; 68.879 búsquedas de Google, 12.593 con resumen de IA.",
+      "uso": "short A: con resumen de IA se hace clic la mitad de veces",
+      "tramo": ""
+    },
+    {
+      "id": "f3",
+      "url": "https://academic.oup.com/pnasnexus/article/3/9/pgae400/7754871",
+      "autor": "R. Maria del Rio-Chanona, Nadzeya Laurentsyeva y Johannes Wachs, «Large language models reduce public knowledge sharing on online Q&A platforms», PNAS Nexus 3(9), pgae400",
+      "corto": "PNAS Nexus, 2024",
+      "fecha": "2024-09-11",
+      "consultada": "2026-11-12",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "«Within 6 months of ChatGPT's release, activity on Stack Overflow decreased by 25%», medido frente a plataformas comparables donde ChatGPT tenía menos acceso o era menos útil; los autores lo dan como cota inferior.",
+      "uso": "short A: la IA aprende de foros que, por ella, reciben menos preguntas",
+      "tramo": ""
+    },
+    {
+      "id": "f4",
+      "url": "https://arxiv.org/abs/2508.15734",
+      "autor": "Cooper Elsworth, Keguo Huang, David Patterson y otros (Google), «Measuring the environmental impact of delivering AI at Google Scale», arXiv:2508.15734",
+      "corto": "Google, 2025",
+      "fecha": "2025-08-21",
+      "consultada": "2026-11-12",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "«the median Gemini Apps text prompt consumes 0.24 Wh of energy» y «the equivalent of five drops of water (0.26 mL)». Medida de la propia Google, para consultas de texto.",
+      "uso": "short B: lo que cuesta una pregunta (atribuido a Google)",
+      "tramo": ""
+    },
+    {
+      "id": "f5",
+      "url": "https://www.cnbc.com/2026/10/28/alphabet-googl-earnings-q3-2026.html",
+      "autor": "Samantha Subin (CNBC), resultados de Alphabet del Q3 2026",
+      "corto": "CNBC, Alphabet",
+      "fecha": "2026-10-28",
+      "consultada": "2026-11-12",
+      "tipo": "hecho",
+      "licencia": "",
+      "cita": "«Alphabet reported negative free cash flow of $9.07 billion during the third quarter.» «long-term debt climbing to $125.1 billion, up from $21.6 billion a year earlier». Capex del Q3: 51.360 M $; «Annual capex is expected to top $200 billion»; «We continue to expect our capex to increase significantly in 2027». Beneficio neto: 26.170 M $ (34.980 M $ un año antes). Nube: 30.700 M $, más del doble. «Alphabet shares slumped more than 10%».",
+      "uso": "short B: flujo de caja libre negativo, deuda, gasto en centros de datos; matiz: gana dinero",
+      "tramo": ""
+    }
+  ]
+}

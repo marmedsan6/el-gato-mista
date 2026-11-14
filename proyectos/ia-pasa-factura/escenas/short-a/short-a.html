@@ -1,0 +1,41 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>ia-pasa-factura · short a (estilo v6)</title>
+<!-- Short 9:16 en estilo v6 (ADR 0010). La implementación manda: short-a.js sobre ../comun/short-motor.js.
+     Timing:  node motor/timing-a-js.mjs proyectos/ia-pasa-factura/timing.short-a.json
+                proyectos/ia-pasa-factura/escenas/short-a/timing.js --guion proyectos/ia-pasa-factura/guion.md
+                --seccion "Short A" --fuentes proyectos/ia-pasa-factura/fuentes.json
+     Lint:    node motor/revisar.mjs proyectos/ia-pasa-factura/escenas/short-a/short-a.html 270 480 <duración> 0.05 <capturas> --estricto
+     Render:  node motor/render.mjs --escena proyectos/ia-pasa-factura/escenas/short-a/short-a.html --ancho 270 --alto 480
+                --duracion <s> --incluir motor/estilo,motor/estilo/v5,motor/estilo/v6,proyectos/ia-pasa-factura/escenas/comun -->
+<link rel="stylesheet" href="../../../../motor/estilo/estilo.css">
+<link rel="stylesheet" href="../../../../motor/estilo/v6/estilo-v6.css">
+<body class="short">
+  <div id="base"></div>
+  <div id="transicion">
+    <div class="profundidad" id="p-lejos"><svg class="arte" id="lejos"></svg></div>
+    <div class="profundidad" id="p-medio">
+      <svg class="arte" id="medio"></svg><svg class="arte bloom" id="brillo"></svg><svg class="arte" id="frente"></svg>
+      <div id="textos-mundo"></div>
+    </div>
+    <div class="profundidad" id="p-delante"><svg class="arte" id="delante"></svg></div>
+    <svg class="arte" id="gato12"></svg>
+    <div class="capa vineta"></div>
+  </div>
+  <div id="textos"></div>
+  <div class="dialogo con-retrato oculto" id="dialogo"><svg class="retrato" id="retrato"></svg><span class="nombre">Mista</span><span id="frase"></span><span class="fuente6" id="fuente"></span></div>
+
+  <script src="../../../../motor/estilo/pixel.js"></script>
+  <script src="../../../../motor/estilo/v3/gato.js"></script>
+  <script src="../../../../motor/estilo/camara.js"></script>
+  <script src="../../../../motor/estilo/v5/dibujo.js"></script>
+  <script src="../../../../motor/estilo/v6/piezas.js"></script>
+  <script src="../../../../motor/estilo/v6/escena.js"></script>
+  <script src="../comun/piezas-google.js"></script>
+  <script src="../comun/piezas-google-b.js"></script>
+  <script src="../comun/piezas-google-c.js"></script>
+  <script src="../comun/piezas-factura.js"></script>
+  <script src="../comun/short-motor.js"></script>
+  <script src="timing.js"></script>
+  <script src="short-a.js"></script>
+</body>

@@ -1,6 +1,8 @@
 # Guion · La IA ya está pasando factura (y la primera factura la paga internet)
 
-Estado: **borrador para la PUERTA 1**. Pendiente de la aprobación de Mario; no se ha generado voz ni escenas.
+Estado: **sustituido (2026-11-12)**. Mario decidió hacer solo dos shorts, sin largo: el guion vigente está en
+`proyectos/ia-pasa-factura/guion.md`. Ojo: el «≈ 29 minutos» de §«Cifras de voz» es un error; 4.400 caracteres a ~17
+por segundo son unos 4 min 20 s.
 Fuente de los hechos: [investigacion.md](investigacion.md) §3 y §8 bis. Cada bloque lleva la fuente que
 iría en la caja de diálogo (formato v6: automática por frase desde los `[fN]`).
 

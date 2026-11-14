@@ -1,0 +1,26 @@
+{
+  "historias": {
+    "10e21822c42a6e656c0771ce218f43897f7a4880981382af7b8d26997ab80b62": {
+      "video_id": "3O3K_B4Ztk8",
+      "channel_id": "UCA76YezyGjv7spjOfRqAKNA",
+      "sha256": "6a2aa6ac81f0ea8609a3ff8a895de456e4375ae8e24a0c024a71869ec17f3833",
+      "formato": "short-a",
+      "fecha": "2026-11-13T13:13:57.267152+00:00",
+      "url": "https://www.youtube.com/watch?v=3O3K_B4Ztk8",
+      "body_sha256": "e1fdc4538e7b96c8735e035c20b6d44ea6a677762725b138212ad6d6121f122d",
+      "descripcion_enviada": "Cuando Google te responde arriba con un resumen de IA, casi nadie entra en las webs: un estudio de Pew midió que, con resumen, la gente hace clic en un resultado la mitad de veces. Reddit dice que el tráfico que le llega desde Google ha bajado por la búsqueda con IA y va a probar a pedir una cuenta para entrar. Lo raro es que la IA aprende justo de webs así.",
+      "portada_sha256": "e90f9d9857a6a392eb16650a828535daa2d0fbc09cde280240d61bdfac43bdea"
+    },
+    "ebf5a3c5604086e9914967e9dbced48eb604abe7d9102710f967350bebdfa43c": {
+      "video_id": "hmUmJN_iQgw",
+      "channel_id": "UCA76YezyGjv7spjOfRqAKNA",
+      "sha256": "2827d2b3c775799ede0c4b181cac2cc7d037b87a7150cdcc674bf1be96b908dc",
+      "formato": "short-b",
+      "fecha": "2026-11-13T13:14:04.147246+00:00",
+      "url": "https://www.youtube.com/watch?v=hmUmJN_iQgw",
+      "body_sha256": "a3b1595de1537d6e789fedb06de1098b0782814493f47d983ffb0f60ab2698ac",
+      "descripcion_enviada": "Según la propia Google, una pregunta de texto a Gemini gasta unas cinco gotas de agua. Casi nada. Pero Alphabet, su dueña, acaba de presentar un flujo de caja libre negativo y una deuda casi seis veces mayor que hace un año: sigue ganando dinero, pero construye centros de datos a un ritmo de más de 200.000 millones de dólares al año. Qué es el flujo de caja libre y por qué la diferencia la pone la deuda.",
+      "portada_sha256": "b1ddefe3fba038cfc1c3dff0cbf0677ed1308234701fe837a2dbe32eee8a7482"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+Usas la IA todos los días.
+Le preguntas a qué hora cierra la farmacia.
+Esa pregunta sale de tu móvil y viaja hasta un edificio lleno de servidores.
+Y allí, alguien paga la factura.
+¿Cuánto cuesta? Según la propia Google, una pregunta de texto típica a Yémini gasta cero coma veinticuatro vatios hora y unas cinco gotas de agua.
+Casi nada. Entonces, ¿por qué la empresa dueña de Google se está endeudando?
+Para entenderlo hay que mirar una línea de sus cuentas: el flujo de caja libre. Es el dinero que le queda a una empresa después de pagar lo que cuesta funcionar y lo que invierte en edificios y máquinas.
+Álfabet, la dueña de Google, presentó el suyo el veintiocho de octubre: menos nueve mil setenta millones de dólares en un trimestre.
+Y su deuda a largo plazo pasó de veintiún mil seiscientos millones a ciento veinticinco mil cien millones en un año. Casi seis veces más.
+¿En qué se va? En centros de datos y chips: espera gastar más de doscientos mil millones este año, y más el que viene.
+Ojo: Google no está en apuros. En ese mismo trimestre ganó veintiséis mil ciento setenta millones.
+El problema es el ritmo. Tu pregunta cuesta casi nada, pero para contestar las de todo el mundo, y para todo lo demás que hace con IA, antes hay que construir los edificios.
+Y ese gasto, hoy, ya no le cabe en la caja: la diferencia la pone la deuda.
