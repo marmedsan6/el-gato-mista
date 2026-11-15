@@ -1,0 +1,47 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Piloto de piezas generadas · short A con Codex (estaciones 0 y 1)</title>
+<!-- Piloto (2026-11-14, rama prueba/piezas-generadas): copia de proyectos/ia-pasa-factura/escenas/short-a/short-a.html
+     con las dos primeras estaciones dibujadas con piezas de Codex convertidas a rejilla (piezas-codex.js).
+     Lint:   node motor/revisar.mjs motor/calibracion/piezas-generadas/short-a-codex.html 270 480 26.2 0.05 <capturas> --estricto
+     Render: node motor/render.mjs --escena motor/calibracion/piezas-generadas/short-a-codex.html --ancho 270 --alto 480
+               --duracion 67.12 --hasta 26.2 --incluir motor/estilo,motor/estilo/v5,motor/estilo/v6,proyectos/ia-pasa-factura/escenas/comun,motor/calibracion/piezas-generadas -->
+<link rel="stylesheet" href="../../estilo/estilo.css">
+<link rel="stylesheet" href="../../estilo/v6/estilo-v6.css">
+<body class="short">
+  <div id="base"></div>
+  <div id="transicion">
+    <div class="profundidad" id="p-lejos"><svg class="arte" id="lejos"></svg></div>
+    <div class="profundidad" id="p-medio">
+      <svg class="arte" id="medio"></svg><svg class="arte bloom" id="brillo"></svg><svg class="arte" id="frente"></svg>
+      <div id="textos-mundo"></div>
+    </div>
+    <div class="profundidad" id="p-delante"><svg class="arte" id="delante"></svg></div>
+    <svg class="arte" id="gato12"></svg>
+    <div class="capa vineta"></div>
+  </div>
+  <div id="textos"></div>
+  <div class="dialogo con-retrato oculto" id="dialogo"><svg class="retrato" id="retrato"></svg><span class="nombre">Mista</span><span id="frase"></span><span class="fuente6" id="fuente"></span></div>
+
+  <script src="../../estilo/pixel.js"></script>
+  <script src="../../estilo/v3/gato.js"></script>
+  <script src="../../estilo/camara.js"></script>
+  <script src="../../estilo/v5/dibujo.js"></script>
+  <script src="../../estilo/v6/piezas.js"></script>
+  <script src="../../estilo/v6/escena.js"></script>
+  <script src="../../../proyectos/ia-pasa-factura/escenas/comun/piezas-google.js"></script>
+  <script src="../../../proyectos/ia-pasa-factura/escenas/comun/piezas-google-b.js"></script>
+  <script src="../../../proyectos/ia-pasa-factura/escenas/comun/piezas-google-c.js"></script>
+  <script src="../../../proyectos/ia-pasa-factura/escenas/comun/piezas-factura.js"></script>
+  <script src="../../../proyectos/ia-pasa-factura/escenas/comun/short-motor.js"></script>
+  <script src="../../../proyectos/ia-pasa-factura/escenas/short-a/timing.js"></script>
+  <script src="piezas-gen.js"></script>
+  <script src="piezas-codex.js"></script>
+  <script>
+    // Coordenadas medidas a mano sobre las rejillas de piezas-codex.js: hueco de la puerta y escaparate de la tienda,
+    // y tablilla del observador (donde van las marcas)
+    window.PIEZAS_PILOTO = CODEX;
+    window.META_PILOTO = { puerta: { x: 55, y: 31, w: 17, h: 35 }, ventana: { x: 11, y: 33, w: 38, h: 23 }, tablilla: { x: 7, y: 11 } };
+  </script>
+  <script src="short-a-piloto.js"></script>
+</body>
