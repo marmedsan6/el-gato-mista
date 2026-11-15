@@ -107,10 +107,19 @@ try {
     pagina.cdp = await contexto.newCDPSession(pagina);
     return pagina;
   };
-  const foto = async (pagina, t) => {
-    await pagina.evaluate(async (s) => { await window.seek(s); await document.fonts.ready; }, t);
-    const { data } = await pagina.cdp.send("Page.captureScreenshot", { format: "png", clip: { x: 0, y: 0, width: W, height: H, scale: ESCALA }, optimizeForSpeed: true });
-    return Buffer.from(data, "base64");
+  // Con la máquina cargada, Chrome a veces responde «Unable to capture screenshot» (aprendizajes, 2026-11-03 y
+  // 2026-11-13): se reintenta hasta 2 veces; seek(t) es determinista, así que la imagen no cambia.
+  const foto = async (pagina, t, intento = 1) => {
+    try {
+      await pagina.evaluate(async (s) => { await window.seek(s); await document.fonts.ready; }, t);
+      const { data } = await pagina.cdp.send("Page.captureScreenshot", { format: "png", clip: { x: 0, y: 0, width: W, height: H, scale: ESCALA }, optimizeForSpeed: true });
+      return Buffer.from(data, "base64");
+    } catch (e) {
+      if (intento >= 3 || !/Unable to capture screenshot/.test(String(e?.message))) throw e;
+      console.error(`[render] ${hora()} · captura fallida en t=${t} (intento ${intento}), reintento`);
+      await new Promise((r) => setTimeout(r, 500 * intento));
+      return foto(pagina, t, intento + 1);
+    }
   };
   const paginas = await Promise.all(Array.from({ length: trabajadores }, abrirPagina));
 
