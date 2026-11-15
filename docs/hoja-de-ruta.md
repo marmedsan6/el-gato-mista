@@ -36,11 +36,11 @@ Diagnóstico: `docs/investigacion/diagnostico-2026-11-10/informe.md`. Decisiones
 | 3 | Instagram de anthropic-fable-5-2, que falló al subir (HTTP 400 ProcessingFailedError) | Sí |
 | 4 | ~~Primer vídeo completo en v6~~: hecho, `como-google-sabe-lo-que-quieres` publicado el 2026-11-12 y fijado como estándar. Queda subir a `motor/estilo/v6/` y a las plantillas lo que sirve a todos (`short-motor.js`, el mundo por bloque, la tabla de nombres cortos de fuente del short) | No |
 | 5 | ~~Render del largo~~: las 14,5 h eran el portátil en espera, no la escena ([informe](investigacion/render-largo-2026-11-12/informe.md)). Hecho (2026-11-12) en `render.mjs`: petición de mantener despierto, PNG rápido (`optimizeForSpeed`, −27 %, píxeles idénticos) y progreso con hora y ritmo; un tramo del largo va a 0,037-0,041 s por captura (el largo entero, ~13 min con la codificación). El mundo virtualizado ya no hace falta. Queda: tapa abierta al renderizar | No |
-| 6 | Catálogo de dioramas por concepto (`motor/biblioteca/`) y quién elige el recurso | Decisión |
+| 6 | ~~Catálogo de dioramas por concepto y quién elige el recurso~~: abandonado por Mario el 2026-11-13 tras investigarlo y probarlo ([informe](investigacion/biblioteca-pixel-2026-11-13/informe.md), [prueba v7](investigacion/biblioteca-pixel-2026-11-13/prueba-v7.md)). Se sigue con el dibujo propio de la v6 | — |
 | 7 | Lo que el crítico dejó sin bloquear en la v6 (`reviews/calibracion/iter-v6-01.md`): la estación del matiz con el periódico en lugar del tuit, sujetos más grandes (Jensen Huang, la silueta, la rotativa), tramos quietos del matiz y del cierre, y la IA del clip. Rediseño de MISTA si Mario lo pide | Decisión |
 | 8 | Línea de tiempo declarativa y un comando que encadene la producción | No |
 | 9 | Subtítulos propios en YouTube (necesita reconectar con `youtube.force-ssl`); identificador @Pod02-leo; apodo de TikTok | Reconectar |
-| 10 | Licencia de Krea §2.3 antes de usar el atlas en algo publicable | No |
+| 10 | ~~Licencia de Krea §2.3 antes de usar el atlas~~: leída el 2026-11-13 (uso comercial con facturación anual por debajo de 1 M$, ver [informe](investigacion/biblioteca-pixel-2026-11-13/informe.md)); la idea del set se abandonó | — |
 | 11 | Franja negra bajo el zoom de la oficina en 16:9 (pendiente desde la v5) | No |
 
 ## Dudas abiertas

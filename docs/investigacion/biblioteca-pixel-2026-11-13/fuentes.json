@@ -1,0 +1,77 @@
+{
+  "fuentes": [
+    {
+      "id": "f1",
+      "url": "https://kenney.nl/support",
+      "autor": "Kenney",
+      "consultada": "2026-11-13",
+      "tipo": "hecho",
+      "uso": "Los recursos de Kenney son CC0: uso comercial sin atribución obligatoria"
+    },
+    {
+      "id": "f2",
+      "url": "https://retrodiffusion.ai/pricing",
+      "autor": "Retro Diffusion",
+      "consultada": "2026-11-13",
+      "tipo": "hecho",
+      "uso": "Precios por imagen (RD Fast 0,03 $, RD Core 0,10 $, RD Pro 0,18 $; animaciones desde 0,10 $ por tanda). La página no dice nada de forzar una paleta propia en el modelo"
+    },
+    {
+      "id": "f3",
+      "url": "https://www.pixellab.ai/",
+      "autor": "PixelLab",
+      "consultada": "2026-11-13",
+      "tipo": "hecho",
+      "uso": "Estilo por imágenes de referencia, animaciones, servidor MCP para Claude Code y API. Paleta propia y precios: no aparecen en la página"
+    },
+    {
+      "id": "f4",
+      "url": "https://ludo.ai/compare/best-ai-pixel-art-generators",
+      "autor": "Ludo.ai (análisis de terceros)",
+      "consultada": "2026-11-13",
+      "tipo": "hecho",
+      "uso": "Planes de PixelLab de 12 a 50 $ al mes; las cifras de generaciones no cuadran entre fuentes: confirmar en la web oficial antes de pagar"
+    },
+    {
+      "id": "f5",
+      "url": "https://huggingface.co/datasets/Angais/pixel-art-atlas-1.4m",
+      "autor": "Angais",
+      "consultada": "2026-11-13",
+      "tipo": "hecho",
+      "uso": "1.409.404 sprites de 16×16 con transparencia, generados con Krea 2 y una LoRA; licencia CC0 «hasta donde Angais puede renunciar»; descripciones sin revisar; no anula la licencia de Krea"
+    },
+    {
+      "id": "f6",
+      "url": "https://www.krea.ai/krea-2-licensing",
+      "autor": "Krea",
+      "consultada": "2026-11-13",
+      "tipo": "hecho",
+      "uso": "§2.3: uso comercial de lo generado permitido si la facturación anual total es inferior a 1 millón de dólares; por encima, licencia de empresa",
+      "alcance": "Leído a través del buscador sobre la página oficial; no es asesoramiento legal"
+    },
+    {
+      "id": "f7",
+      "url": "https://www.pixellab.ai/pixellab-api",
+      "autor": "PixelLab",
+      "consultada": "2026-11-13",
+      "tipo": "hecho",
+      "uso": "Capacidades de la API (estilo de referencia, inpainting, rotación, animación por texto, esqueleto y VFX), tamaños máximos y coste estimado por llamada; no detalla el uso comercial"
+    },
+    {
+      "id": "f8",
+      "url": "https://www.pixellab.ai/docs/tools/animation",
+      "autor": "PixelLab",
+      "consultada": "2026-11-13",
+      "tipo": "hecho",
+      "uso": "«Animation with text»: 4 fotogramas, lienzo de 64×64 exactos, paleta objetivo, Tier 1; recomienda generar varias veces y repasar"
+    },
+    {
+      "id": "f9",
+      "url": "https://www.pixellab.ai/select-interface",
+      "autor": "PixelLab",
+      "consultada": "2026-11-13",
+      "tipo": "hecho",
+      "uso": "Interfaces: creador simple, de personajes, mapas, editor, extensión de Aseprite, Game Builder, MCP para agentes y API"
+    }
+  ]
+}

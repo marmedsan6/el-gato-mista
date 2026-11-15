@@ -1,0 +1,89 @@
+{
+  "fuentes": [
+    {
+      "id": "f1",
+      "url": "https://www.spriteforge.tech/blog/generate-pixel-art-from-claude",
+      "autor": "SpriteForge",
+      "consultada": "2026-11-14",
+      "tipo": "hecho",
+      "uso": "Método: un modelo Claude escribe cada sprite como rejilla de letras de paleta a su tamaño final, una letra por píxel. Hasta 64 px de lado (mejor de 8 a 32). Pasadas por fases (silueta primero), paleta bloqueada por proyecto, animación de 1 a 8 fotogramas (una llamada por fotograma). Precio por llamada (octubre de 2026): Haiku 0,03-0,12 $, Sonnet 0,12-0,72 $, Opus 0,24-1,62 $ según 16, 32 o 64 px. La página no dice de quién es lo generado"
+    },
+    {
+      "id": "f2",
+      "url": "https://retrodiffusion.ai/app/guide/api",
+      "autor": "Retro Diffusion",
+      "consultada": "2026-11-14",
+      "tipo": "hecho",
+      "uso": "API y MCP. RD Fast 0,03 $, RD Plus 0,06 $, RD Core 0,10 $ (de 12 a 512 px, cualquier proporción, p. ej. 480×270), RD Pro 0,18 $ por imagen. `input_palette`: imagen de paleta que limita los colores de salida. Hasta 9 imágenes de referencia en Core y Pro. Animaciones 0,07-0,25 $ por petición (4 a 16 fotogramas). Quitar fondo. El uso gratuito diario es solo de la web, no de la API. La página no detalla la licencia de lo generado"
+    },
+    {
+      "id": "f3",
+      "url": "https://www.pixellab.ai/termsofservice",
+      "autor": "PixelLab",
+      "consultada": "2026-11-14",
+      "tipo": "hecho",
+      "uso": "Términos: el usuario conserva la propiedad de lo que crea y puede usarlo con fines comerciales (§1.3 y §3.3); prohibido entrenar modelos propios con lo generado sin permiso escrito (§1.2); uso programático solo por la API oficial (§2.2). No exige atribución. No distingue la cuenta gratuita de las de pago"
+    },
+    {
+      "id": "f4",
+      "url": "https://www.pixellab.ai/pixellab-api",
+      "autor": "PixelLab",
+      "consultada": "2026-11-14",
+      "tipo": "hecho",
+      "uso": "Coste estimado por llamada: imagen 0,007-0,017 $ (hasta 400-512 px), herramientas Pro 0,08-0,15 $, animación 0,016-0,079 $. Paleta forzada en Pixflux, Bitforge, inpaint, rotar y animación v1. Estilo por imágenes de referencia en Bitforge y Pro. La página no dice si la API exige suscripción"
+    },
+    {
+      "id": "f5",
+      "url": "https://ludo.ai/compare/best-ai-pixel-art-generators",
+      "autor": "Ludo.ai y otras comparativas de terceros (vía buscador)",
+      "consultada": "2026-11-14",
+      "tipo": "hecho",
+      "uso": "Planes de PixelLab de 12, 24 y 50 $ al mes; prueba gratuita sin tarjeta; servidor MCP en api.pixellab.ai/mcp. Cifras de terceros: confirmar en la web oficial antes de pagar",
+      "alcance": "Resumen del buscador, no leído en la página oficial"
+    },
+    {
+      "id": "f6",
+      "url": "https://github.com/Hugo-Dz/spritefusion-pixel-snapper",
+      "autor": "Hugo-Dz (Sprite Fusion)",
+      "consultada": "2026-11-14",
+      "tipo": "hecho",
+      "uso": "Pixel Snapper: herramienta libre (Rust y WebAssembly) que ajusta a una rejilla exacta el pixel art generado por IA y reduce los colores a una paleta",
+      "alcance": "Resumen del buscador; el repositorio no se ha abierto ni instalado"
+    },
+    {
+      "id": "f7",
+      "url": "https://github.com/Astropulse/pixeldetector",
+      "autor": "Astropulse (autor de Retro Diffusion)",
+      "consultada": "2026-11-14",
+      "tipo": "hecho",
+      "uso": "pixeldetector (detecta la resolución nativa y reduce), sd-palettize (cuantiza con k-medias) y K-Centroid (reducción que conserva detalle): el posproceso de Retro Diffusion es público. El modelo se genera a más resolución y se reduce al tamaño de píxel real",
+      "alcance": "Resumen del buscador; los repositorios no se han abierto"
+    },
+    {
+      "id": "f8",
+      "url": "https://astropulse.itch.io/retrodiffusion",
+      "autor": "Astropulse",
+      "consultada": "2026-11-14",
+      "tipo": "hecho",
+      "uso": "El modelo se entrenó con pixel art licenciado del autor y de otros artistas con su consentimiento; un perfil de hace unos tres años lo describe como ajuste fino de Stable Diffusion 1.5",
+      "alcance": "Resumen del buscador; no describe el modelo actual de la web"
+    },
+    {
+      "id": "f9",
+      "url": "https://app.cinevva.com/guides/free-2d-sprites-tilesets",
+      "autor": "Comparativas de terceros (vía buscador)",
+      "consultada": "2026-11-14",
+      "tipo": "hecho",
+      "uso": "Bibliotecas grandes: itch.io (53.641 packs gratuitos a finales de agosto de 2026, licencia pack a pack), OpenGameArt (licencias mezcladas: CC0, CC-BY, CC-BY-SA, GPL) y Kenney (más de 40.000 recursos, todos CC0)",
+      "alcance": "Resumen del buscador"
+    },
+    {
+      "id": "p1",
+      "url": "docs/investigacion/herramientas-pixel-2026-11-14/comparacion.png",
+      "autor": "Prueba propia",
+      "consultada": "2026-11-14",
+      "tipo": "medida",
+      "uso": "Hoja de comparación a 1920×1080 (4 px por píxel de arte): piezas v6 de ia-pasa-factura, dos hojas generadas con Codex y convertidas con convertir.py, y dos sprites escritos como rejilla de letras"
+    }
+  ]
+}
