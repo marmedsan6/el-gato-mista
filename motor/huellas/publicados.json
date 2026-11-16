@@ -102,6 +102,156 @@
    ]
   },
   {
+   "escena": "proyectos/como-google-sabe-lo-que-quieres/escenas/largo/largo.html",
+   "ancho": 480,
+   "alto": 270,
+   "tiempos": [
+    30.784,
+    92.351,
+    153.919,
+    215.486,
+    277.054,
+    338.621,
+    400.189,
+    461.756
+   ],
+   "huellas": [
+    "145769eb839324abb109f16bb6369c45295361b344ed7f017c008f1a9503c065",
+    "41fb51ae896f3877fa025f619500a6190ecf08b86e256e70eb39c05a3c6acc7e",
+    "ce06da13f15b19b097168b4d02d8ced883a9de956c4fd4c62bc163ccf7764e1d",
+    "43b0543b07a5cc5fccf4b305059dd49163227e1065918d08d0e3a1aa2d30dae4",
+    "7ac0014e7f26d7fa7617469473305a01725744a6e5f1e098897b8264c3b8cb4f",
+    "13ff7a761259a081ec1af9130934d4577cb3f8c0d49060ff08034cdf35207550",
+    "b80a4a6d4f6431b93f0382a7d7e97eda18d15a4de50ae44b5ce1aac49d6928f6",
+    "16637773a2d3c7c175ad4714cc95ceb5b52089925983924aaad4912bc0457708"
+   ]
+  },
+  {
+   "escena": "proyectos/como-google-sabe-lo-que-quieres/escenas/short-a/short-a.html",
+   "ancho": 270,
+   "alto": 480,
+   "tiempos": [
+    3.839,
+    11.516,
+    19.193,
+    26.871,
+    34.548,
+    42.226,
+    49.903,
+    57.58
+   ],
+   "huellas": [
+    "3549707c3b36ebc92b60fbaebd1f71b00a5b1c5dca76b4870cd26b4fe140dcd6",
+    "325b7005048603ccaaf02734ad24c90dae7288efbd91dcea91987d5fb8189c57",
+    "f19621fb33eacaef2f8adbfe983fff3cc13a171508855ad673dd349ea3b111ce",
+    "0ca3335177d2a2f339a069d95845563c12b0fe6d125ebab53dade1d87a484a2b",
+    "91c3794f16f28f58cd7bde24a847df4c2dec959e9ea45abcae33ee397a893c9f",
+    "7474fc92901c0481a60fcb1e79d199fc5f677eb2e4339f62e87fc91b16a94948",
+    "c21495bc4b924fab9b7e9063e618c69cfb491eaf42d2e2d1b10d5ab9c5279c80",
+    "cd2ab795c32b5cc6d927f44e665b7deeaa8033a62d2a1c384154598445130d0d"
+   ]
+  },
+  {
+   "escena": "proyectos/como-google-sabe-lo-que-quieres/escenas/short-b/short-b.html",
+   "ancho": 270,
+   "alto": 480,
+   "tiempos": [
+    3.185,
+    9.556,
+    15.926,
+    22.297,
+    28.667,
+    35.038,
+    41.408,
+    47.779
+   ],
+   "huellas": [
+    "ddeeb0297d4c738cb8f4765b9b0c2ab0c30c1172e65b08c0fba887983ac61b49",
+    "b3823de1795a21cde718efcc183507a20fe1622ce60f58f91f8aa7060f3a352a",
+    "501e63d9e376b5f85d114c81434e1d8e0a864e23290b411275842e4e29a10ad4",
+    "4d2b1d7a590d34ef689807e471712e58ce96132981007f71c99e67d22e8ff6b3",
+    "493638730c5b6668de2300ea70d0f45409f0df8b2bf36e1415e7d1dfdd4697c3",
+    "b3e2b3b7d291ebb14bdebe613ea699349b3ed082c59b9eda149337b0cd759f44",
+    "a92a53c471acc7fa1cd70e9b47760811e214967c830bf94a99e0ed5f0f0cb073",
+    "ebafb3dfb8a93c60dc12086f4333ce6aab48a700080bf8f0b5ae072947bda152"
+   ]
+  },
+  {
+   "escena": "proyectos/como-google-sabe-lo-que-quieres/escenas/short-c/short-c.html",
+   "ancho": 270,
+   "alto": 480,
+   "tiempos": [
+    3.164,
+    9.491,
+    15.817,
+    22.145,
+    28.472,
+    34.799,
+    41.126,
+    47.453
+   ],
+   "huellas": [
+    "42d6002f5bd5b582872be6b54359c5cd769cc6b2f846c0fe4a630c5fb4161f3c",
+    "e42674f72c9d71221b208820303d432aef3535a554e9115fa3d47372e85dc3ec",
+    "335d72cc2adb21c56b331606c0fc2fc0fdee5913cf5bc9d803f725598f470d22",
+    "0543d6822d7c7fd7908a875e67ad68beaa64505c007352e6da6a156383d98c8b",
+    "8e14db93bff573e64c67ac45843aa49938fcdb336f1726240db3124c75464e51",
+    "2edb750b37e6217a92a83464d248ca06124b68928e8d33070593788c84b8f561",
+    "53823a5211b8312e1c6225372f8781e6546ede3a5327778b1b3218d74ea5879b",
+    "a97d0e82fecab365271983458e49c5253f5aa32f8ad35ce276179e3683f2184b"
+   ]
+  },
+  {
+   "escena": "proyectos/ia-pasa-factura/escenas/short-a/short-a.html",
+   "ancho": 270,
+   "alto": 480,
+   "tiempos": [
+    4.158,
+    12.473,
+    20.787,
+    29.103,
+    37.418,
+    45.732,
+    54.048,
+    62.363
+   ],
+   "huellas": [
+    "2df111516452c8f05946eb0198ec22f57bf035d8ca07f4fc1041069d013a78f8",
+    "13e596baf606094a328ca514c4ab8ea8788906bab9d95b453f2cb9daf5f6941a",
+    "563b24c586ec41d34a60a21b7c5feb068e2817e705100387cf4a71433f0081ed",
+    "5eb713371ce778ae8dddf8b6bc08715531be8ef64092fb044bdf8cd6df64c1c0",
+    "82618fab67108c448886aa1dadfc92f0958c5a5579d202f55f5e5507f6eba7e6",
+    "73f25b6ca47c4d110d061e1b895f15936f843f58b2aebefbe6c42bbc58d5c2e7",
+    "1940d3e2853463a8fb29bbab2c902f144da764494987b0d0cdefc4755276ea3d",
+    "aa6e8bacb7af92d000ca882da62fdec55dc62b9a9585cc577179cefbcfa9acd3"
+   ]
+  },
+  {
+   "escena": "proyectos/ia-pasa-factura/escenas/short-b/short-b.html",
+   "ancho": 270,
+   "alto": 480,
+   "tiempos": [
+    4.763,
+    14.288,
+    23.813,
+    33.338,
+    42.864,
+    52.389,
+    61.914,
+    71.439
+   ],
+   "huellas": [
+    "a791c81478b07585cc6e0551ba1eae8458ce578e70ecd5942832be5739ebf8c7",
+    "0ca664a374fb80789d4ceabf3f68bc6e4051ef0abfc58e7f1567820484222bf2",
+    "756a8008e7507c44c09f559e32c803f71ec1385249c6ebe19899fb1dc04e071a",
+    "43949a931a01286e17820db11abde41578ecb260dde0d05bea8e69e90ed7d233",
+    "d0d8f51e8ca00f1e94bae3a0539a0eaa7c4fed34fbdf0a8c01b0ba2561533de8",
+    "a06ca38cb33336f823e8a70b751e37646bb555e3da2b283495227c6139ff8af0",
+    "8023ae66219f2f2b5a1c7316fe62758fc40457e32433b2da11f53e8e7724f423",
+    "8298b7c77dfee5d3c39f1c6d2d64cdc0f411bbaa54c3c3c5ebcbd3fabac8a8f6"
+   ]
+  },
+  {
    "escena": "proyectos/mithril-ia-medicina/escenas/short-v2/short.html",
    "ancho": 270,
    "alto": 480,
