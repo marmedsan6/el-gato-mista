@@ -1,0 +1,5 @@
+{ "extra": "El robot es el MISMO de la imagen adjunta: cuerpo redondeado de metal azul pizarra, pantalla por cara con dos ojos azules, antena con punta ámbar.", "piezas": [
+  { "nombre": "robot-lee", "tipo": "robot", "pide": "El robot de pie leyendo un libro abierto que sostiene con las dos manos, de perfil mirando a la derecha" },
+  { "nombre": "robot-llama", "tipo": "robot", "pide": "El mismo robot de pie llamando a una puerta con el puño levantado, de perfil mirando a la derecha" },
+  { "nombre": "despacho", "tipo": "interfaz", "pide": "Una ventana de edificio iluminada en ámbar vista desde fuera, con el marco oscuro, y dentro una persona de traje sentada a una mesa, de cintura para arriba", "alto": 40, "ancho": 50 }
+] }

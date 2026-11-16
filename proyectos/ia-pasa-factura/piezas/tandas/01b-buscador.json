@@ -1,0 +1,3 @@
+{ "tipo": "interfaz", "extra": "Píxel MUY pequeño y MUY detallado: la ventana debe medir de verdad unos 125 píxeles lógicos de alto, con su contorno de 1 píxel. Que ocupe casi toda la imagen.", "piezas": [
+  { "nombre": "buscador", "pide": "Una ventana de navegador web genérica, sin logotipos: barra superior oscura con tres botoncitos redondos naranja, dorado y verde, debajo una barra de búsqueda blanca con una lupa, y debajo el área de resultados vacía de un azul muy oscuro con tres líneas grises finas abajo", "alto": 100, "ancho": 118 }
+] }

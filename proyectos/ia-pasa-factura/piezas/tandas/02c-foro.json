@@ -1,0 +1,3 @@
+{ "tipo": "edificio", "extra": "Píxel MUY pequeño y MUY detallado: el edificio debe medir de verdad unos 240 píxeles lógicos de alto y la puerta de la calle unos 44 de alto (una persona de pie mediría 35). Que ocupe casi toda la altura de la imagen.", "piezas": [
+  { "nombre": "foro", "pide": "Un bloque de oficinas oscuro y estrecho de muchas plantas, visto de frente, con una rejilla regular de ventanas cuadradas pequeñas casi todas encendidas en ámbar; en la planta de arriba, DENTRO de la fachada, una ventana más ancha iluminada donde se ve de cintura para arriba a una persona de traje sentada a su mesa; abajo, una puerta de calle alta y estrecha de doble hoja", "alto": 190, "ancho": 90 }
+] }

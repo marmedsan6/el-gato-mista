@@ -1,0 +1,5 @@
+{ "tipo": "objeto", "extra": "Los signos tienen que leerse de lejos: grandes, gruesos, con contorno casi negro y color claro.", "piezas": [
+  { "nombre": "pregunta", "pide": "Un signo de interrogación grande y grueso de color ámbar dorado, solo, sin bocadillo", "alto": 18, "ancho": 12 },
+  { "nombre": "bocadillo-pregunta", "pide": "Un bocadillo de cómic blanco pequeño con un signo de interrogación oscuro dentro", "alto": 14, "ancho": 14 },
+  { "nombre": "bocadillo-exclamacion", "pide": "Un bocadillo de cómic blanco pequeño con un signo de exclamación verde dentro", "alto": 14, "ancho": 14 }
+] }

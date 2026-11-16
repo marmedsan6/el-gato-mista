@@ -1,0 +1,4 @@
+{ "tipo": "edificio", "piezas": [
+  { "nombre": "foro", "pide": "Un bloque de oficinas oscuro de muchas plantas, visto de frente, con una rejilla regular de ventanas cuadradas pequeñas, casi todas encendidas con luz ámbar, y una puerta en la planta baja", "alto": 150, "ancho": 110 },
+  { "nombre": "portal", "pide": "La fachada de hormigón de un edificio alto visto de frente, ocupada casi entera por una puerta de madera grande y cerrada, con un marco grueso y un pequeño panel de botones gris a la derecha de la puerta", "alto": 150, "ancho": 130 }
+] }

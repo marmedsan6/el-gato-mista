@@ -1,0 +1,6 @@
+{ "tipo": "mueble", "piezas": [
+  { "nombre": "estanteria", "pide": "Una estantería de madera ancha de dos baldas llena de libros de colores (azul, verde, naranja, dorado), vista de frente", "alto": 60, "ancho": 120 },
+  { "nombre": "mesa-vacia", "pide": "Una mesa pequeña de oficina con un portátil abierto encima y una silla vacía, de perfil mirando a la derecha, sin persona", "alto": 22, "ancho": 24 },
+  { "nombre": "calendario", "tipo": "objeto", "pide": "Un calendario de pared con anillas arriba, la cabecera azul y la hoja blanca con una cuadrícula de días", "alto": 22, "ancho": 20 },
+  { "nombre": "libros", "tipo": "objeto", "pide": "Tres libros de pie, uno azul, uno verde y uno naranja, juntos", "alto": 14, "ancho": 16 }
+] }

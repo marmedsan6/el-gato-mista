@@ -1,0 +1,4 @@
+{ "piezas": [
+  { "nombre": "ventana-foro", "tipo": "interfaz", "pide": "Un cuadro de marco gris que deja ver otra sala verde de foro con cuatro personas pequeñas sentadas en dos filas, como una ventana a otro sitio", "alto": 48, "ancho": 56 },
+  { "nombre": "libro-abierto", "tipo": "objeto", "pide": "Un libro abierto de hojas blancas, visto de frente", "alto": 12, "ancho": 18 }
+] }

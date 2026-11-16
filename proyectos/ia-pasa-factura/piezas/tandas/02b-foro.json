@@ -1,0 +1,3 @@
+{ "tipo": "edificio", "extra": "Píxel MUY pequeño y MUY detallado: el edificio debe medir de verdad unos 190 píxeles lógicos de alto, con ventanas de unos 6 píxeles. Que ocupe casi toda la altura de la imagen.", "piezas": [
+  { "nombre": "foro", "pide": "Un bloque de oficinas oscuro de muchas plantas, visto de frente, con una rejilla regular de ventanas cuadradas pequeñas separadas por el muro, casi todas encendidas con luz ámbar, cornisa arriba y una puerta en la planta baja", "alto": 150, "ancho": 110 }
+] }

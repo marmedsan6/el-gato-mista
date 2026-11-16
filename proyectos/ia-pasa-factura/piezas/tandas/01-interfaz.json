@@ -1,0 +1,5 @@
+{ "tipo": "interfaz", "piezas": [
+  { "nombre": "buscador", "pide": "Una ventana de navegador web genérica, sin logotipos: barra superior con tres botoncitos redondos, debajo una barra de búsqueda blanca con una lupa, y debajo el área de resultados vacía de un azul muy oscuro con tres líneas grises cortas abajo", "alto": 100, "ancho": 118 },
+  { "nombre": "cartel-resumen", "pide": "Un cartel luminoso azul de interfaz, rectangular y horizontal, con una estrella blanca de cuatro puntas a la izquierda y tres líneas blancas horizontales a la derecha, sin texto", "alto": 40, "ancho": 76 },
+  { "nombre": "cartel-enlaces", "pide": "El MISMO cartel azul con la estrella y las tres líneas, y además una fila de cuatro botoncitos cuadrados más claros en el borde de abajo", "alto": 40, "ancho": 76 }
+] }

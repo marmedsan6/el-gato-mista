@@ -1,0 +1,4 @@
+{ "extra": "El robot es el MISMO de la imagen adjunta (metal azul pizarra, pantalla por cara con dos ojos azules, antena con punta ámbar).", "piezas": [
+  { "nombre": "robot-llama", "tipo": "robot", "pide": "El robot de pie, de perfil mirando a la derecha, con un brazo levantado y el puño cerrado hacia delante como si llamara a una puerta. SOLO el robot: sin puerta, sin pared, sin nada más" },
+  { "nombre": "ventana-foro", "tipo": "interfaz", "pide": "Una pantalla plana de pared con marco rectangular gris oscuro sencillo, que muestra una sala de foro de paredes verde azulado con cuatro personas pequeñas sentadas en dos filas de mesas", "alto": 48, "ancho": 56 }
+] }

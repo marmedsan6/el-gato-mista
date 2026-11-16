@@ -1,0 +1,165 @@
+{
+  "buscador": {
+    "anclas": {
+      "barra": {
+        "x": 6,
+        "y": 14,
+        "w": 70,
+        "h": 7
+      },
+      "resultados": {
+        "x": 4,
+        "y": 26,
+        "w": 74,
+        "h": 24
+      }
+    },
+    "etiquetas": [
+      "interfaz",
+      "web",
+      "buscador"
+    ]
+  },
+  "cartel-enlaces": {
+    "anclas": {
+      "enlace": {
+        "x": 26,
+        "y": 34,
+        "w": 6,
+        "h": 4
+      }
+    },
+    "etiquetas": [
+      "interfaz",
+      "ia",
+      "resumen",
+      "enlaces"
+    ]
+  },
+  "observador": {
+    "anclas": {
+      "papel": {
+        "x": 10,
+        "y": 10,
+        "w": 6,
+        "h": 7
+      }
+    }
+  },
+  "portal": {
+    "anclas": {
+      "puerta": {
+        "x": 16,
+        "y": 22,
+        "w": 80,
+        "h": 109
+      }
+    },
+    "etiquetas": [
+      "edificio",
+      "puerta",
+      "acceso"
+    ]
+  },
+  "estanteria": {
+    "escalaLibre": false,
+    "etiquetas": [
+      "mueble",
+      "biblioteca",
+      "saber"
+    ]
+  },
+  "bocadillo-exclamacion": {
+    "igualar": {
+      "#1fd69a": "#0b0e14",
+      "#13936a": "#2f3a4f"
+    },
+    "etiquetas": [
+      "signo",
+      "conversación"
+    ]
+  },
+  "cartel-resumen": {
+    "etiquetas": [
+      "interfaz",
+      "ia",
+      "resumen"
+    ]
+  },
+  "foro": {
+    "etiquetas": [
+      "edificio",
+      "web",
+      "foro"
+    ]
+  },
+  "candado-abierto": {
+    "etiquetas": [
+      "objeto",
+      "seguridad"
+    ]
+  },
+  "candado-cerrado": {
+    "etiquetas": [
+      "objeto",
+      "seguridad"
+    ]
+  },
+  "teclado": {
+    "etiquetas": [
+      "objeto",
+      "seguridad",
+      "acceso"
+    ]
+  },
+  "globo": {
+    "etiquetas": [
+      "objeto",
+      "mundo"
+    ]
+  },
+  "pregunta": {
+    "etiquetas": [
+      "signo",
+      "duda"
+    ]
+  },
+  "bocadillo-pregunta": {
+    "etiquetas": [
+      "signo",
+      "conversación"
+    ]
+  },
+  "mesa-vacia": {
+    "etiquetas": [
+      "mueble",
+      "oficina"
+    ]
+  },
+  "calendario": {
+    "etiquetas": [
+      "objeto",
+      "tiempo"
+    ]
+  },
+  "robot-lee": {
+    "etiquetas": [
+      "robot",
+      "ia",
+      "pose"
+    ]
+  },
+  "robot-llama": {
+    "etiquetas": [
+      "robot",
+      "ia",
+      "pose"
+    ]
+  },
+  "libro-abierto": {
+    "etiquetas": [
+      "objeto",
+      "saber"
+    ]
+  }
+}

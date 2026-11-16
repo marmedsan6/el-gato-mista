@@ -1,0 +1,113 @@
+{
+ "nota": "Piezas del short A en v7 (calibración, interno). Las del set se copian al montar.",
+ "piezas": [
+  {
+   "nombre": "tienda",
+   "de": "set"
+  },
+  {
+   "nombre": "quieto",
+   "de": "set"
+  },
+  {
+   "nombre": "paso",
+   "de": "set"
+  },
+  {
+   "nombre": "tendero",
+   "de": "set"
+  },
+  {
+   "nombre": "observador",
+   "de": "set"
+  },
+  {
+   "nombre": "sentada",
+   "de": "set"
+  },
+  {
+   "nombre": "robot",
+   "de": "set"
+  },
+  {
+   "nombre": "buscador",
+   "de": "01b-buscador"
+  },
+  {
+   "nombre": "cartel-resumen",
+   "de": "01c-carteles"
+  },
+  {
+   "nombre": "cartel-enlaces",
+   "de": "01c-carteles"
+  },
+  {
+   "nombre": "foro",
+   "de": "02b-foro"
+  },
+  {
+   "nombre": "portal",
+   "de": "02-edificios"
+  },
+  {
+   "nombre": "candado-abierto",
+   "de": "03-objetos"
+  },
+  {
+   "nombre": "candado-cerrado",
+   "de": "03-objetos"
+  },
+  {
+   "nombre": "teclado",
+   "de": "03-objetos"
+  },
+  {
+   "nombre": "globo",
+   "de": "03-objetos"
+  },
+  {
+   "nombre": "pregunta",
+   "de": "04-signos"
+  },
+  {
+   "nombre": "bocadillo-pregunta",
+   "de": "04-signos"
+  },
+  {
+   "nombre": "bocadillo-exclamacion",
+   "de": "04-signos"
+  },
+  {
+   "nombre": "estanteria",
+   "de": "05b-estanteria"
+  },
+  {
+   "nombre": "mesa-vacia",
+   "de": "05-muebles"
+  },
+  {
+   "nombre": "calendario",
+   "de": "05-muebles"
+  },
+  {
+   "nombre": "libros",
+   "de": "05-muebles"
+  },
+  {
+   "nombre": "robot-lee",
+   "de": "06-robot"
+  },
+  {
+   "nombre": "robot-llama",
+   "de": "08-repuestos"
+  },
+  {
+   "nombre": "ventana-foro",
+   "de": "08-repuestos"
+  },
+  {
+   "nombre": "libro-abierto",
+   "de": "07-foro-gemelo"
+  }
+ ]
+}

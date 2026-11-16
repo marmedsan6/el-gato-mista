@@ -1,0 +1,97 @@
+{
+ "pregunta": {
+  "filas": [
+   "...aaaaaa...",
+   ".abbbbbccda.",
+   ".bbcccccccda",
+   "abccccccccca",
+   "abcceaaaccce",
+   "accea..accce",
+   "aeeea..accee",
+   ".....abcceea",
+   "....abcceeea",
+   "...abcceeaa.",
+   "...acccea...",
+   "...accee....",
+   "...aeeea....",
+   "....aaaa....",
+   "...abbcea...",
+   "...acccea...",
+   "...acceea...",
+   "....aaaa...."
+  ],
+  "paleta": {
+   "a": "#161b26",
+   "b": "#ffd486",
+   "c": "#f0a83a",
+   "d": "#6a4210",
+   "e": "#c25e22"
+  },
+  "w": 12,
+  "h": 18,
+  "pixel_falso": 34.39,
+  "limpiados": 0,
+  "tipo": "objeto"
+ },
+ "bocadillo-pregunta": {
+  "filas": [
+   "....aaaaaa....",
+   "..abbbbbbbba..",
+   ".abbcddddbbba.",
+   ".bbbddddddbbe.",
+   "abbbddbbddbbea",
+   "abbbbbbdddbbea",
+   "abbbbbdddbbbea",
+   "abbbbbddbbbbea",
+   "abbbbbddbbbeea",
+   ".ebbbbddbbbea.",
+   "..bbbbbbbbea..",
+   ".abbeeeeeea...",
+   "abeaaaaaa.....",
+   "aa............"
+  ],
+  "paleta": {
+   "a": "#161b26",
+   "b": "#f5f7fb",
+   "c": "#43506a",
+   "d": "#3a4166",
+   "e": "#8a93c0"
+  },
+  "w": 14,
+  "h": 14,
+  "pixel_falso": 38.43,
+  "limpiados": 0,
+  "tipo": "objeto"
+ },
+ "bocadillo-exclamacion": {
+  "filas": [
+   "....aaaaaa....",
+   "..abbbbbbbba..",
+   ".abbbcdecbbfa.",
+   ".bbbbceecbbbf.",
+   "abbbbceecbbbfa",
+   "abbbbceecbbbfa",
+   "abbbbbeebbbbfa",
+   "abbbbbccbbbbfa",
+   "abbbbccccbbffa",
+   ".fbbbceecbbfa.",
+   "..bbbbccbbfa..",
+   ".abbffffffa...",
+   "abfaaaaaa.....",
+   "aa............"
+  ],
+  "paleta": {
+   "a": "#161b26",
+   "b": "#f5f7fb",
+   "c": "#13936a",
+   "d": "#ffd486",
+   "e": "#1fd69a",
+   "f": "#8a93c0"
+  },
+  "w": 14,
+  "h": 14,
+  "pixel_falso": 38.43,
+  "limpiados": 0,
+  "tipo": "objeto"
+ }
+}

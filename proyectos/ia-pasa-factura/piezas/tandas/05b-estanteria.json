@@ -1,0 +1,3 @@
+{ "tipo": "mueble", "extra": "Píxel MUY pequeño y MUY detallado: la estantería debe medir de verdad unos 75 píxeles lógicos de alto y 150 de ancho, con lomos de libro de 3-4 píxeles. Que ocupe casi todo el ancho de la imagen.", "piezas": [
+  { "nombre": "estanteria", "pide": "Una estantería de madera ancha de dos baldas llena de libros de colores (azul, verde, naranja, dorado) de pie, vista de frente", "alto": 60, "ancho": 120 }
+] }

@@ -1,0 +1,6 @@
+{ "tipo": "objeto", "piezas": [
+  { "nombre": "candado-abierto", "pide": "Un candado dorado grande con el arco ABIERTO, levantado y girado a un lado", "alto": 26, "ancho": 20 },
+  { "nombre": "candado-cerrado", "pide": "El MISMO candado dorado con el arco CERRADO", "alto": 24, "ancho": 20 },
+  { "nombre": "teclado", "pide": "Un panel de acceso de pared gris metálico con seis botones cuadrados en dos columnas", "alto": 30, "ancho": 20 },
+  { "nombre": "globo", "pide": "Un globo terráqueo pequeño en su peana, con océanos azules y continentes verdes", "alto": 24, "ancho": 18 }
+] }

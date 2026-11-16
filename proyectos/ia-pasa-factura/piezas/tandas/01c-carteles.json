@@ -1,0 +1,4 @@
+{ "tipo": "interfaz", "extra": "Píxel MUY pequeño y MUY detallado: cada cartel debe medir de verdad unos 50 píxeles lógicos de alto y 95 de ancho, con contorno de 1 píxel. Que ocupen casi toda la imagen.", "piezas": [
+  { "nombre": "cartel-resumen", "pide": "Un cartel luminoso azul de interfaz, rectangular y horizontal, con borde azul claro, una estrella blanca de cuatro puntas a la izquierda y tres líneas blancas horizontales finas a la derecha, sin texto", "alto": 40, "ancho": 76 },
+  { "nombre": "cartel-enlaces", "pide": "El MISMO cartel azul con la estrella y las tres líneas, y además una fila de cuatro botoncitos rectangulares oscuros en el borde de abajo", "alto": 40, "ancho": 76 }
+] }
