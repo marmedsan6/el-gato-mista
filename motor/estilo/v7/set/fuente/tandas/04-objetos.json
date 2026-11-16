@@ -1,0 +1,7 @@
+{
+ "piezas": [
+  { "nombre": "portatil", "tipo": "objeto", "pide": "Un portátil abierto visto de perfil y algo de frente, con la pantalla encendida en azul", "alto": 16, "ancho": 22 },
+  { "nombre": "movil", "tipo": "objeto", "pide": "Un teléfono móvil de pie, visto de frente, con la pantalla encendida en azul y un botón", "alto": 16, "ancho": 9 },
+  { "nombre": "ventana", "tipo": "interfaz", "pide": "Un marco vacío de ventana de programa de ordenador: barra superior con tres botoncitos redondos de colores y el interior liso de un azul muy oscuro, sin nada dentro", "alto": 80, "ancho": 120 }
+ ]
+}

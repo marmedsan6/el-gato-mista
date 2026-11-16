@@ -1,0 +1,7 @@
+{
+ "piezas": [
+  { "nombre": "centro-datos", "tipo": "edificio", "pide": "Un centro de datos: nave baja y ancha de hormigón sin ventanas, con rejillas de ventilación, unidades de refrigeración en el tejado y una puerta metálica, visto de frente", "alto": 70, "ancho": 130 },
+  { "nombre": "camion", "tipo": "vehiculo", "pide": "Un camión de reparto con caja cerrada, de perfil mirando a la derecha, con las ruedas visibles" },
+  { "nombre": "rack", "tipo": "maquina", "pide": "Un armario rack de servidores de frente: estructura metálica oscura con servidores apilados y lucecitas verdes y azules", "alto": 52, "ancho": 24 }
+ ]
+}

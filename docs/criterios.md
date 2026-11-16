@@ -24,6 +24,9 @@ Toda escena, en cualquier motor:
    pieza clave del dibujo, 2 s o más en pantalla.
 10. La escena declara `window.revision` (`movimientos`, `salidas`, `llegadas` y `claves`) y pasa
     `node motor/revisar.mjs … --estricto` antes de renderizarse entera.
+11. Arte (estilo v7, ADR 0011): todo lo que tiene silueta es una pieza generada de `window.PIEZAS`, aprobada por Mario en
+    la puerta de estilo del vídeo (`reviews/piezas.md`) antes de escribir las escenas. Un vídeo no mezcla piezas generadas
+    con piezas dibujadas por código; lo que siga siendo código y tenga forma lleva contorno, 3 tonos y la luz de las piezas.
 
 ## 2. Fuentes y hechos
 - Cada afirmación factual del guion apunta a un `id` de `fuentes.json`: marca `[fN]` al final de su párrafo.
@@ -51,6 +54,7 @@ En la PUERTA 2, la orden de subir de Mario es la aprobación: `subir` anota su b
 ## 4. QA
 | Comprobación | Herramienta | Umbral |
 |---|---|---|
+| Piezas (v7) | `node motor/piezas/montar.mjs <slug>` + hoja de contactos | Sin errores de anclas, paleta ni escala; hoja aprobada por Mario |
 | Textos y sincronía | `node motor/revisar.mjs … --estricto` (antes del render) | 0 errores del lint |
 | Alineación | `node motor/voz/revisar-alineacion.mjs` | Sin desfases: límites de frase en los silencios |
 | Congelados | `node motor/qa.mjs` (`freezedetect`) | Ninguno de 2 s o más; los de 1 s o más se listan |

@@ -1,0 +1,7 @@
+{
+ "tipo": "edificio",
+ "piezas": [
+  { "nombre": "sede", "pide": "La sede de una empresa tecnológica: edificio de oficinas de tres plantas con fachada de cristal en franjas, ventanas con luz fría encendida en algunas plantas y entrada de cristal en la planta baja, visto de frente", "alto": 120, "ancho": 80 },
+  { "nombre": "pisos", "pide": "Un bloque de pisos de tres plantas de ladrillo, con balcones pequeños, ventanas con luz cálida en algunas y portal en la planta baja, visto de frente", "alto": 120, "ancho": 70 }
+ ]
+}

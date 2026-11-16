@@ -28,7 +28,11 @@ reducidas a 360×640 para legibilidad.
    En las tiras de movimiento: saltos, textos que cambian de sitio y rótulos que no corresponden a lo que se ve.
 6. Composición: jerarquía, aire, alineaciones, coherencia entre escenas.
 7. Errores obvios: texto cortado, elementos fuera de lienzo, solapes, faltas de ortografía visibles.
-8. Texto en pantalla: más textos que el presupuesto, textos que se leen juntos como una frase, que repiten la caja de
+8. Arte generado (estilo v7, ADR 0011): mezcla de manos (algo con silueta dibujado por código junto a piezas generadas,
+   o piezas con densidad de píxel, contorno o sombreado distintos entre sí); lectura de lo pequeño a 360×640 (signos,
+   bocadillos, objetos de mano: 10 px de arte o más); escala entre personas, puertas y edificios (`motor/piezas/escala.json`);
+   píxeles sueltos o ruido de la conversión.
+9. Texto en pantalla: más textos que el presupuesto, textos que se leen juntos como una frase, que repiten la caja de
    diálogo o que afirman más que la voz (si te dan la voz de cada frase). Di qué estaciones no se entienden sin leer.
 
 ## Salida (exacta)

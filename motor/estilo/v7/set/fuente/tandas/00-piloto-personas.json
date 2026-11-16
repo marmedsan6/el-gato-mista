@@ -1,0 +1,10 @@
+{
+ "nota": "Del piloto del 2026-11-14 (.runtime/piloto-piezas/codex-personas2/hoja.png): no se vuelve a pedir, se reconvierte.",
+ "tipo": "persona",
+ "piezas": [
+  { "nombre": "quieto", "pide": "Un paseante de pie, quieto, de perfil mirando a la derecha" },
+  { "nombre": "paso", "pide": "El mismo paseante a mitad de paso" },
+  { "nombre": "tendero", "pide": "Un tendero con delantal, de perfil" },
+  { "nombre": "observador", "pide": "Una persona con un portapapeles, de perfil" }
+ ]
+}

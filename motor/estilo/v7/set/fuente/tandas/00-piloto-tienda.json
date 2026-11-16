@@ -1,0 +1,7 @@
+{
+ "nota": "Del piloto del 2026-11-14 (.runtime/piloto-piezas/codex-tienda2/hoja.png): no se vuelve a pedir, se reconvierte.",
+ "tipo": "tienda",
+ "piezas": [
+  { "nombre": "tienda", "pide": "Una tienda de barrio de una planta vista de frente: toldo a rayas anchas crema y ocre, escaparate grande a la izquierda iluminado en ámbar con dos estantes y cajas, y a la derecha una puerta alta y abierta con el hueco oscuro" }
+ ]
+}

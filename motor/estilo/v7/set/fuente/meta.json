@@ -1,0 +1,88 @@
+{
+  "tienda": {
+    "etiquetas": [
+      "calle",
+      "comercio",
+      "web"
+    ],
+    "anclas": {
+      "puerta": {
+        "x": 56,
+        "y": 32,
+        "w": 18,
+        "h": 35
+      },
+      "escaparate": {
+        "x": 14,
+        "y": 33,
+        "w": 35,
+        "h": 22
+      }
+    },
+    "estados": {
+      "apagada": {
+        "#ffd486": "#41291f",
+        "#f0a83a": "#2a1d1c",
+        "#c25e22": "#41291f",
+        "#efe6d2": "#5c3a26"
+      }
+    }
+  },
+  "quieto": {
+    "etiquetas": [
+      "persona",
+      "paseante"
+    ],
+    "referencia": true
+  },
+  "paso": {
+    "etiquetas": [
+      "persona",
+      "paseante",
+      "pose"
+    ]
+  },
+  "tendero": {
+    "etiquetas": [
+      "persona",
+      "comercio"
+    ]
+  },
+  "observador": {
+    "etiquetas": [
+      "persona",
+      "investigador"
+    ],
+    "anclas": {
+      "tablilla": {
+        "x": 7,
+        "y": 11,
+        "w": 4,
+        "h": 2
+      }
+    }
+  },
+  "centro-datos": {
+    "etiquetas": [
+      "tecnología",
+      "ia",
+      "edificio"
+    ],
+    "igualar": {
+      "#ffb37a": "#8a93c0",
+      "#b8ad96": "#5b6a86",
+      "#a8674a": "#43506a"
+    }
+  },
+  "camion": {
+    "etiquetas": [
+      "calle",
+      "reparto"
+    ],
+    "igualar": {
+      "#ffb37a": "#8a93c0",
+      "#d8946c": "#43506a",
+      "#b8ad96": "#5b6a86"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "nota": "Piezas de las plantillas v7, todas del set. Se montan con: node motor/piezas/montar.mjs plantillas/escenas/v7/piezas --salida plantillas/escenas/v7/comun/piezas.js",
+  "piezas": [
+    { "nombre": "tienda", "de": "set" },
+    { "nombre": "quieto", "de": "set" },
+    { "nombre": "paso", "de": "set" },
+    { "nombre": "robot", "de": "set" },
+    { "nombre": "portatil", "de": "set" }
+  ]
+}

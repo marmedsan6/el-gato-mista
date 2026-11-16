@@ -7,13 +7,13 @@ mismo guion y estilo, compuestos por separado, nunca recortando uno del otro.
 
 ## Lee antes de trabajar
 - memoria/decisiones.md (siempre) y, si tocas un vídeo, proyectos/<slug>/brief.md.
-- Estilo vigente (v6: diorama animado a 4 px, casi sin texto, fuente en la caja de diálogo; ADR 0009 y 0010): antes de tocar escenas, skill `estilo`.
+- Estilo vigente (v7: la v6 —diorama animado a 4 px, casi sin texto, fuente en la caja— con todo lo que tiene silueta generado con Codex; ADR 0009, 0010 y 0011): antes de tocar escenas, skill `estilo`.
 - Calidad y contrato de escena: docs/criterios.md. Diseño: docs/arquitectura.md.
 - Calibración de estilo: docs/calibracion.md. Pendiente y orden: docs/hoja-de-ruta.md.
 
 ## Flujo
 brief → fuentes y verificación → guion → [PUERTA 1] → storyboard y estilo → voz → alineación
-→ escenas → render por escena → montaje y mezcla → QA → [PUERTA 2] → exportar → publicar.
+→ piezas (puerta de estilo) → escenas → render por escena → montaje y mezcla → QA → [PUERTA 2] → exportar → publicar.
 - Paso a paso: skill `nuevo-video`. Mario y su diagrama mandan si algo no cuadra.
 - **Dudas:** antes de generar cada pieza (guion, voz, escenas, máster), pregunta a Mario lo que no esté decidido
   y sirva para refinar el vídeo, y genera con sus respuestas. No adivines ni preguntes lo ya decidido.

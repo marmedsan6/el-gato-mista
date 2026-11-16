@@ -1,0 +1,119 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Escena · plantilla del largo (estilo v7)</title>
+<!-- Copia este fichero a proyectos/<slug>/escenas/<formato>/<formato>.html (misma profundidad: las rutas valen tal cual) y saca
+     el script a un .js. Reglas: bloque «Estilo vigente» de docs/estilo.md (v7, ADR 0011 sobre la v6, ADR 0010) y docs/criterios.md §1.
+     Estilo v7 = la v6 (diorama a 4 px, casi sin texto, fuente en la caja, cámara tras la frase) con el ARTE GENERADO:
+       - todo lo que tenga silueta es una pieza de window.PIEZAS (../comun/piezas.js, que escribe
+           node motor/piezas/montar.mjs <slug>   desde proyectos/<slug>/piezas/, tras la puerta de estilo de reviews/piezas.md);
+       - por código solo: mover, teñir por paleta (estados de la pieza, camisa7), cielo y suelo (fondoNoche6), placas
+         (placa6), cifras y efectos, y lo que se mueve por dentro de una pieza escrito como rejilla (puerta7);
+       - sprite7 coloca por ancla y suelo; punto7 da las anclas internas medidas (hueco de la puerta, escaparate…);
+       - lo pequeño (signos, objetos de mano): 10 píxeles de arte o más, claro y sobre fondo liso.
+     Biblioteca: motor/estilo/v7/generado.js sobre motor/estilo/v6/{escena,piezas}.js y motor/estilo/v5/dibujo.js.
+     Las piezas de este ejemplo salen del set (plantillas/escenas/v7/piezas/lista.json); los tiempos son de prueba: en un
+     vídeo, carga el timing.js del formato (motor/timing-a-js.mjs … --guion <guion.md>).
+     Antes de renderizar entero:  node motor/revisar.mjs <este html> 480 270 <duración> 0.05 . --estricto
+     Render: node motor/render.mjs --escena <este html> --ancho 480 --alto 270 --duracion 10
+               --incluir motor/estilo,motor/estilo/v5,motor/estilo/v6,motor/estilo/v7,<escenas/comun> --salida <mp4> -->
+<link rel="stylesheet" href="../../../../motor/estilo/estilo.css">
+<link rel="stylesheet" href="../../../../motor/estilo/v6/estilo-v6.css">
+<style>
+  body.largo .dialogo { left: 16px; width: 448px; top: 200px; height: 58px; }
+</style>
+<body class="largo">
+  <div id="base"></div>
+  <div id="transicion">
+    <div class="profundidad" id="p-lejos"><svg class="arte" id="lejos"></svg></div>
+    <div class="profundidad" id="p-medio">
+      <svg class="arte" id="medio"></svg><svg class="arte bloom" id="brillo"></svg><svg class="arte" id="frente"></svg>
+      <div id="textos-mundo"></div>
+    </div>
+    <div class="profundidad" id="p-delante"><svg class="arte" id="delante"></svg></div>
+    <svg class="arte" id="gato12"></svg>
+    <div class="capa vineta"></div>
+  </div>
+  <div id="textos"></div>
+  <div class="dialogo con-retrato oculto" id="dialogo"><svg class="retrato" id="retrato"></svg><span class="nombre">Mista</span><span id="frase"></span><span class="fuente6" id="fuente"></span></div>
+
+  <script src="../../../../motor/estilo/pixel.js"></script>
+  <script src="../../../../motor/estilo/v3/gato.js"></script>
+  <script src="../../../../motor/estilo/camara.js"></script>
+  <script src="../../../../motor/estilo/v5/dibujo.js"></script>
+  <script src="../../../../motor/estilo/v6/piezas.js"></script>
+  <script src="../../../../motor/estilo/v6/escena.js"></script>
+  <script src="../../../../motor/estilo/v7/generado.js"></script>
+  <script src="../comun/piezas.js"></script>
+  <script>
+    // Tiempos de prueba. La voz entra tras el título (2 s): o el gancho no nombra nada hasta entonces, o --voz-desfase.
+    const pal = (texto, i0, paso) => texto.split(" ").map((p, k) => ({ p, i: i0 + k * paso, f: i0 + k * paso + paso * 0.8 }));
+    window.TIMING = { audio: { duracion_s: 9.4 }, fuentes: { f1: "Prueba" }, frases: [
+      { id: "fr01", inicio: 2.3, fin: 5.4, fuentes: ["f1"], palabras: pal("Esto es una plantilla: un dato aparece y se mueve.", 2.3, 0.3) },
+      { id: "fr02", inicio: 5.8, fin: 9.2, fuentes: [], palabras: pal("Aquí cambia de tema y se ve de cerca.", 5.8, 0.42) },
+    ] };
+    (() => {
+      const PZ = window.PIEZAS;
+      if (!PZ) throw new Error("Faltan las piezas (../comun/piezas.js): node motor/piezas/montar.mjs <slug>");
+      const CORTO = document.body.classList.contains("short");
+      const W = CORTO ? 270 : 480, H = CORTO ? 480 : 270;
+      const N = 2;
+      const M = CORTO ? { suelo: 292, SX: 135, SY: 200, caja: 300, rotulo: [16, 64], titular: [16, 116], gato: [20, 196], asoma: [6, 195] }
+        : { suelo: 198, SX: 240, SY: 100, caja: 200, rotulo: [16, 16], titular: [176, 76], gato: [60, 104], asoma: [336, 99] };
+      const T = window.TIMING, TT = tiempos6(T), P = TT.P, SU = M.suelo, DURACION = TT.DURACION;
+      const { L, ANCHO, MW, G12, CAPAS, X, limpiar } = lienzos6({ W, H, N });
+      const F = fondoNoche6({ L, ANCHO, W, H, N, SU, SX: M.SX, lunas: [0] });
+
+      // tiempos y recorrido: el título dura hasta T_ENTRADA; la cámara sale de la estación 0 tras el fin real de fr01
+      const T_ENTRADA = 2.2, T_DATO = P("fr01", "dato"), T_CERCA = P("fr02", "cerca");
+      const A = Math.round(W * 0.62), B = X(1) + Math.round(W * 0.4);   // anclas de la tienda y del robot
+      const R = ruta6({ W, M, fin: TT.fin, entrada: T_ENTRADA, saltos: [["fr01", "tema", 0.3]],
+        zooms: [{ est: 1, desde: T_CERCA, cx: Math.round(W * 0.48), cy: SU - 30 }] });
+      window.revision = { movimientos: R.movimientos, salidas: R.salidas, llegadas: R.llegadas, claves: [{ t: T_DATO, nombre: "la tienda que se apaga" }] };
+
+      // textos: título, un rótulo por tema y la cifra; el nombre, dentro del dibujo (placa6)
+      const T6 = crearTextos6({ interfaz: document.getElementById("textos"), mundo: document.getElementById("textos-mundo") });
+      T6.titulo(0, T_ENTRADA, 'Tema <span class="clave">1</span>', 'Título<br><span class="clave">del tema</span>', M);
+      T6.rotulo(R.LLE(0), R.SAL(0), 'Primer <span class="clave">tema</span>', M.rotulo);
+      T6.rotulo(R.LLE(1), DURACION + 1, 'Segundo <span class="clave">tema</span>', M.rotulo);
+      T6.cifra(T_DATO, R.SAL(0), '42<span class="unidad">datos</span>', [Math.round(W * 0.12), SU - 150], true);
+      const D6 = crearDialogo6({ T, ids: ["fr01", "fr02"], claves: { fr01: "dato", fr02: "tema" }, maxc: CORTO ? 21 : 52, corto: CORTO,
+        dialogo: document.getElementById("dialogo"), frase: document.getElementById("frase"), retrato: document.getElementById("retrato"), fuente: document.getElementById("fuente") });
+      tildes6();
+      const CAM = crearCamara({ W, H, SX: M.SX, SY: M.SY, lineaCaja: M.caja, anchoMundo: MW, altoMundo: H, planos: R.planos });
+
+      function estaciones(t) {
+        // 0: la tienda; un paseante llega a la puerta y, con «dato», la tienda se apaga y la puerta se cierra
+        const apaga = T_DATO + 0.6;
+        const Tn = sprite7(L.medio, PZ.tienda, A, SU, { estado: t >= apaga ? "apagada" : null });
+        const hueco = punto7(Tn, "puerta"), esc = punto7(Tn, "escaparate");
+        if (t < apaga) rect(L.brillo, esc.x - 3, esc.y - 3, esc.w + 6, esc.h + 6, "#3a2c1c");
+        puerta7(L.medio, hueco, prog6(t, apaga, apaga + 0.4));
+        placa6(L.medio, Tn.x0 + 6, Tn.y0 - 16, "TIENDA", { color: "#ffd486" });
+        const f = prog6(t, T_ENTRADA, T_DATO);
+        andar7(L.frente, { quieto: PZ.quieto, paso: PZ.paso }, Math.round(X(0) + 20 + (hueco.cx - X(0) - 30) * f), SU, t,
+          { anda: f > 0 && f < 1, camisa: CAMISAS7[1] });
+        // 1: el robot (la IA) con un portátil que parpadea
+        sprite7(L.medio, PZ.robot, B, SU, { dir: Math.floor(t * 2) % 4 === 3 ? -1 : 1 });
+        const pt = sprite7(L.frente, PZ.portatil, B + 30, SU);
+        if (Math.floor(t * 3) % 2 === 0) rect(L.brillo, pt.x0 - 2, pt.y0 - 2, PZ.portatil.w + 4, PZ.portatil.h + 4, R5.ia[0]);
+      }
+      const MOMENTOS = [{ desde: R.LLE(1), hasta: T_CERCA - 0.05, pose: "pie" }]; // MISTA, de pie 1-2 s al cambiar de tema
+      window.eventosSonido = () => [{ t: T_ENTRADA, tipo: "destello" }, { t: T_DATO, tipo: "aparicion" }, { t: R.SAL(0), tipo: "destello" }];
+      window.claveFotograma = clave6(R.moviendo);
+      window.seek = (t) => {
+        limpiar();
+        const cam = CAM.en(t);
+        CAM.aplicarCapas(cam, CAPAS);
+        F.cielo(t);
+        const enTema = t < T_ENTRADA;
+        ["p-medio", "p-delante"].forEach((id) => { const el = document.getElementById(id); el.style.visibility = enTema ? "hidden" : "visible";
+          if (t >= T_ENTRADA && t < R.LLE(0)) el.style.transform = `translateX(${Math.round((1 - prog6(t, T_ENTRADA, R.LLE(0))) * W)}px)`; });
+        if (!enTema) { F.suelo(); estaciones(t); F.delante(); }
+        mista6(G12, t, { W, M, hablando: TT.hablando, entrada: [T_ENTRADA, R.LLE(0)], momentos: MOMENTOS });
+        T6.ver(t);
+        D6.pintar(t);
+      };
+      window.seek(0);
+    })();
+  </script>
+</body>

@@ -18,7 +18,9 @@ Umbrales: `docs/criterios.md` §4. Necesita FFmpeg en el PATH.
 4. Aviso a Mario de que se gasta cupo de Opus y llamada al subagente `critico-visual` **sobre el máster final** (no sobre
    una versión anterior), con la carpeta de `qa.mjs` y la voz de cada frase. Pídele expresamente: textos que se tocan o
    se leen juntos, que repiten la caja o afirman más que la voz, estaciones que no se entienden sin leer y choques en
-   los movimientos. La crítica va a `reviews/critica-NN.md` (el crítico no escribe: cópiala).
+   los movimientos. En un vídeo v7, además: mezcla de manos (algo con silueta por código, o piezas con píxel, contorno o
+   sombreado distintos), lectura de lo pequeño a 360 px (signos, bocadillos, objetos de mano), escala entre personas,
+   puertas y edificios, y ruido de la conversión. Dale también `piezas/contactos.png`. La crítica va a `reviews/critica-NN.md` (el crítico no escribe: cópiala).
 5. Tú no abras los fotogramas uno a uno: mira las hojas y, como mucho, 3-4 sueltos (más de 20 imágenes bloquean el chat).
 6. Completa `reviews/qa-vN.md` (el borrador de `qa.mjs`):
    ```markdown

@@ -1,0 +1,77 @@
+{
+  "nota": "Fuente del set de referencia de la v7 (16 piezas, Mario 2026-11-15). Se monta con node motor/piezas/montar.mjs set y, lo aprobado, pasa al set con promover.mjs.",
+  "piezas": [
+    {
+      "nombre": "quieto",
+      "de": "00-piloto-personas"
+    },
+    {
+      "nombre": "paso",
+      "de": "00-piloto-personas"
+    },
+    {
+      "nombre": "tendero",
+      "de": "00-piloto-personas"
+    },
+    {
+      "nombre": "observador",
+      "de": "00-piloto-personas"
+    },
+    {
+      "nombre": "observador2",
+      "de": "05-observador"
+    },
+    {
+      "nombre": "observador3",
+      "de": "05-observador"
+    },
+    {
+      "nombre": "sentada",
+      "de": "01-personajes"
+    },
+    {
+      "nombre": "ejecutiva",
+      "de": "01-personajes"
+    },
+    {
+      "nombre": "robot",
+      "de": "01-personajes"
+    },
+    {
+      "nombre": "tienda",
+      "de": "00-piloto-tienda"
+    },
+    {
+      "nombre": "sede",
+      "de": "02-edificios"
+    },
+    {
+      "nombre": "pisos",
+      "de": "02-edificios"
+    },
+    {
+      "nombre": "centro-datos",
+      "de": "03-maquinas"
+    },
+    {
+      "nombre": "camion",
+      "de": "03-maquinas"
+    },
+    {
+      "nombre": "rack",
+      "de": "03-maquinas"
+    },
+    {
+      "nombre": "portatil",
+      "de": "04-objetos"
+    },
+    {
+      "nombre": "movil",
+      "de": "04-objetos"
+    },
+    {
+      "nombre": "ventana",
+      "de": "04-objetos"
+    }
+  ]
+}

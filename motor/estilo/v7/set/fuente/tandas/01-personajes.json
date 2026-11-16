@@ -1,0 +1,7 @@
+{
+ "piezas": [
+  { "nombre": "sentada", "tipo": "persona-sentada", "pide": "Una persona sentada en una silla de oficina, de perfil mirando a la derecha, tecleando en un portátil abierto sobre una mesa pequeña" },
+  { "nombre": "ejecutiva", "tipo": "persona", "pide": "Una ejecutiva de pie con traje de chaqueta oscuro y un maletín, de perfil mirando a la derecha" },
+  { "nombre": "robot", "tipo": "robot", "pide": "Un robot amable que representa a la inteligencia artificial: cuerpo redondeado de metal azul pizarra, una pantalla por cara con dos ojos azules luminosos, brazos cortos, de pie y de perfil mirando a la derecha" }
+ ]
+}

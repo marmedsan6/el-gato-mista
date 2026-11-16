@@ -1,0 +1,8 @@
+{
+  "nota": "Alternativa al observador del piloto: su portapapeles marrón no se veía a 360 px (crítico, 2026-11-14).",
+  "tipo": "persona",
+  "piezas": [
+    { "nombre": "observador2", "pide": "Una investigadora de pie, de perfil mirando a la derecha, que sostiene delante del pecho un portapapeles GRANDE con la hoja BLANCA bien visible y un lápiz" },
+    { "nombre": "observador3", "pide": "Un investigador de pie con bata de laboratorio, de perfil mirando a la derecha, apuntando en un portapapeles GRANDE de hoja BLANCA bien visible" }
+  ]
+}
