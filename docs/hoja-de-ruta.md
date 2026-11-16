@@ -5,7 +5,7 @@ primeros vídeos) está en `docs/historial/hoja-de-ruta-hasta-2026-11-09.md`. El
 
 ## Dónde estamos
 - **Vídeos:** 7 publicados (Mithril, Phonic-1, Alien: Isolation, ventanas de contexto, resumen semanal, NVIDIA y Fable 5.2).
-- **Estilo:** v6 (ADR 0010) sobre la v5 (ADR 0009). Reglas de Mario del 2026-11-10 y prueba aprobada el 2026-11-11 («Me gusta, sigue»).
+- **Estilo:** v7 (ADR 0011, aprobada el 2026-11-16): la v6 (ADR 0010) con todo lo que tiene silueta generado con Codex, set de referencia de 18 piezas, escala fija y puerta de estilo por vídeo. Calibración en `reviews/calibracion/iter-v7-01.md`.
 - **Sistema:** motor propio con lint, QA en un comando, limitador, render por tramo y huellas de lo publicado.
 - **Git:** la rama `claude/elgatomista-execution-plan-c8445b` y el `main` local están en el mismo commit; falta el push de Mario.
 
@@ -42,6 +42,8 @@ Diagnóstico: `docs/investigacion/diagnostico-2026-11-10/informe.md`. Decisiones
 | 9 | Subtítulos propios en YouTube (necesita reconectar con `youtube.force-ssl`); identificador @Pod02-leo; apodo de TikTok | Reconectar |
 | 10 | ~~Licencia de Krea §2.3 antes de usar el atlas~~: leída el 2026-11-13 (uso comercial con facturación anual por debajo de 1 M$, ver [informe](investigacion/biblioteca-pixel-2026-11-13/informe.md)); la idea del set se abandonó | — |
 | 11 | Franja negra bajo el zoom de la oficina en 16:9 (pendiente desde la v5) | No |
+| 12 | Lo que la crítica de la v7 dejó sin bloquear (`reviews/calibracion/critica-v7-02.md`): pantallas con contenido que se lea a 360 (la del foro de Stack Overflow), objetos de mano diminutos (los libros), signos que flotan sin anclaje, y un vigilante de escala para las piezas compuestas (puertas de edificios altos, portales) | No |
+| 13 | El primer vídeo real en v7: decidir cuál y llevarlo por el paso Piezas de `nuevo-video` | Sí: el tema |
 
 ## Dudas abiertas
 - Portadas: siempre con Codex, del largo y de cada short (Mario, 2026-11-12). En YouTube Studio los shorts no las enseñaban; falta comprobar si YouTube las muestra en los Shorts.
