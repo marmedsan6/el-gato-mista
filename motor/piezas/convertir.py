@@ -1,29 +1,25 @@
-# Conversor del piloto de piezas generadas (2026-11-14): de una hoja de pixel art generada a sprites de rejilla de
-# letras con la paleta del canal, en el formato que pinta sprite5() (motor/estilo/v5/dibujo.js).
-#  - Hoja de un generador general (Codex): «píxel falso» de tamaño no entero; se detecta su periodo y se sigue la
-#    deriva de la rejilla línea a línea.
-#  - --nativo: PNG que ya está en su rejilla real (PixelLab); solo se pasa a letras y paleta.
+# Conversor del arte generado (estilo v7): de una hoja de pixel art de un generador (Codex) a piezas de rejilla de
+# letras con la paleta del canal, en el formato que pinta sprite5() (motor/estilo/v5/dibujo.js). Viene del piloto del
+# 2026-11-14 (docs/investigacion/herramientas-pixel-2026-11-14/piloto.md).
+#  - La hoja trae un «píxel falso» de tamaño no entero: se detecta su periodo y se sigue la deriva de la rejilla.
+#  - --alto / --altos: fuerza el píxel para que la pieza salga con esa altura en píxeles de arte (Codex no mantiene la
+#    escala entre hojas). Al reducir, exacta (rejilla uniforme); cerca de lo que trae, siguiendo su rejilla (±1-3 %); si
+#    se pide más de lo que trae, se queda en lo que trae y avisa (ampliar no añade detalle): se pide otra hoja.
+#  - --nativo: PNG que ya está en su rejilla real; solo se pasa a letras y paleta.
 # Uso:
-#   python convertir.py hoja.png salida.js --var CODEX --rejilla 4x1 --nombres a,b,c,d [--mismo-pixel] [--limpiar]
-#                       [--nativo] [--contactos hoja-contactos.png] [--anadir]
-import argparse, json
+#   python convertir.py hoja.png piezas.json --nombres a,b,c [--rejilla auto|CxF] [--altos a=28,b=67 | --alto 28]
+#                       [--tonos 14] [--limpiar] [--contactos hoja.png] [--referencia set.json#quieto] [--regla carpeta]
+#   La salida es JSON ({nombre: pieza}); con .js escribe «Object.assign(VAR, …)» como en el piloto (--var, --anadir).
+import argparse, json, os, sys
 import numpy as np
 from PIL import Image
 
-PALETA = {  # R5 y acentos del canal (docs/estilo.md, motor/estilo/v5/dibujo.js, piezas-factura.js)
-    "contorno": ["#0b0e14"],
-    "hormigon": ["#161b26", "#222a3a", "#2f3a4f", "#43506a", "#5b6a86"],
-    "metal": ["#262b48", "#3a4166", "#5a6390", "#8a93c0"],
-    "ia": ["#1d2f6b", "#3a5fc0", "#5b8cff", "#9fc4ff", "#f5f7fb"],
-    "naranja": ["#7a3a14", "#c25e22", "#ff8a3d", "#ffb37a"],
-    "verde": ["#0d5a42", "#13936a", "#1fd69a", "#8ff0c8"],
-    "ambar": ["#6a4210", "#b0701c", "#f0a83a", "#ffd486"],
-    "oficina": ["#2a1d1c", "#41291f", "#5c3a26", "#7c5232", "#f2c14e"],
-    "crema": ["#b8ad96", "#efe6d2"],
-    "piel": ["#a8674a", "#d8946c", "#f2c4a0"],
-    "pelo": ["#2a1810", "#4a2c1a"],
-    "rojo": ["#e0454f"],
-}
+AQUI = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, AQUI)
+import hoja  # noqa: E402
+
+with open(os.path.join(AQUI, "paleta.json"), encoding="utf-8") as _f:
+    PALETA = json.load(_f)["rampas"]
 COLORES = list(dict.fromkeys(c for r in PALETA.values() for c in r))
 CLAVES = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
@@ -101,15 +97,24 @@ def perfiles(a):
     return np.abs(np.diff(a, axis=1)).sum(axis=(0, 2)), np.abs(np.diff(a, axis=0)).sum(axis=(1, 2))
 
 
-def muestrear(crop, p=None):
+def muestrear(crop, p=None, fijo=False):
+    """Divide el recorte en celdas de un píxel de arte y toma el color mediano del centro de cada una. Sin `fijo`, las
+    líneas siguen la deriva de la rejilla del generador; con `fijo` (al reducir, cuando esa rejilla ya no sirve), son
+    uniformes y arrancan en la caja del objeto, así que la altura sale exacta."""
     a = crop.astype(float)
     gx, gy = perfiles(a)
     if p is None:
         _, px, fx = periodo(gx)
         _, py, fy = periodo(gy)
         p = (px + py) / 2
-    fx, fy = fase_para(gx, p), fase_para(gy, p)
-    xs, ys = cortes(gx, p, fx), cortes(gy, p, fy)
+    if fijo:
+        lleno = ~es_fondo(a)
+        ys0, xs0 = np.where(lleno.sum(axis=1) >= 2)[0], np.where(lleno.sum(axis=0) >= 2)[0]
+        xs = list(np.arange(xs0.min(), xs0.max() + 1 + p * 0.5, p))
+        ys = list(np.arange(ys0.min(), ys0.max() + 1 + p * 0.5, p))
+    else:
+        fx, fy = fase_para(gx, p), fase_para(gy, p)
+        xs, ys = cortes(gx, p, fx), cortes(gy, p, fy)
     filas = []
     for y0, y1 in zip(ys, ys[1:]):
         fila = []
@@ -128,6 +133,67 @@ def muestrear(crop, p=None):
             fila.append(np.median(trozo[~tinte], axis=0))
         filas.append(fila)
     return filas, p
+
+
+def segmentos(im, n):
+    """Separa los objetos de una hoja de una fila por las columnas de fondo. Devuelve n cajas (x0, x1, y0, y1) de
+    izquierda a derecha, o None si no salen n. Si salen de más, une los trozos más cercanos (un objeto con un hueco)."""
+    lleno = ~es_fondo(im.astype(float))
+    col = lleno.sum(axis=0) >= 2
+    trozos, i, W = [], 0, len(col)
+    while i < W:
+        if col[i]:
+            j = i
+            while j < W and col[j]:
+                j += 1
+            trozos.append([i, j])
+            i = j
+        else:
+            i += 1
+    if not trozos:
+        return None
+    pesos = [lleno[:, a:b].sum() for a, b in trozos]
+    trozos = [t for t, p in zip(trozos, pesos) if p > max(pesos) * 0.01]  # motas de compresión
+    while len(trozos) > n:
+        k = min(range(len(trozos) - 1), key=lambda q: trozos[q + 1][0] - trozos[q][1])
+        trozos[k] = [trozos[k][0], trozos[k + 1][1]]
+        del trozos[k + 1]
+    if len(trozos) != n:
+        return None
+    cajas = []
+    for a, b in trozos:
+        filas = np.where(lleno[:, a:b].sum(axis=1) >= 2)[0]
+        cajas.append((a, b, int(filas.min()), int(filas.max()) + 1))
+    return cajas
+
+
+def alto_px(crop):
+    """Alto en píxeles de imagen de lo que no es fondo (filas con 2 píxeles o más, para no contar motas)."""
+    filas = np.where((~es_fondo(crop.astype(float))).sum(axis=1) >= 2)[0]
+    return int(filas.max() - filas.min() + 1) if len(filas) else crop.shape[0]
+
+
+def alto_filas(filas):
+    """Alto de lo muestreado sin las filas vacías de arriba y abajo."""
+    llenas = [j for j, f in enumerate(filas) if any(c is not None for c in f)]
+    return llenas[-1] - llenas[0] + 1 if llenas else 0
+
+
+def muestrear_alto(crop, alto, p0, p_nat):
+    """Muestrea con el píxel que deja la pieza en `alto` filas. Si reduce (más de un 10 % sobre el píxel de la hoja),
+    con rejilla uniforme. Si no, siguiendo la rejilla de la hoja: los cortes se pegan a los bordes y pueden quedar a ±1,
+    así que se corrige el píxel y se repite (pocas vueltas, se queda con el más cercano)."""
+    fijo = p0 > p_nat * 1.1
+    p, mejor = p0, None
+    for _ in range(6):
+        filas, _ = muestrear(crop, p, fijo)
+        h = alto_filas(filas)
+        if mejor is None or abs(h - alto) < abs(mejor[2] - alto):
+            mejor = (filas, p, h)
+        if h == alto or h == 0:
+            break
+        p *= h / alto
+    return mejor[0], mejor[1]
 
 
 def nativo(img):
@@ -153,7 +219,7 @@ def agrupar(colores, k):
 
 def indices(filas, k=None):
     """Cada píxel al color de la paleta más cercano (índice), o -1 si es transparente. Con k, agrupa antes los colores
-    del sprite en k tonos: así el ruido dentro de una misma superficie no salta entre dos colores de la paleta."""
+    de la pieza en k tonos: así el ruido dentro de una misma superficie no salta entre dos colores de la paleta."""
     h, w = len(filas), max(len(f) for f in filas)
     m = np.full((h, w), -1, dtype=int)
     pos = [(j, i) for j, fila in enumerate(filas) for i, c in enumerate(fila) if c is not None]
@@ -199,57 +265,80 @@ def a_letras(m):
     return filas, {k: COLORES[i] for i, k in usados.items()}
 
 
-def contactos(sprites, ruta, escala=4):
-    fondo = (14, 18, 36)
-    ancho = sum(s["w"] for s in sprites.values()) + 6 * (len(sprites) + 1)
-    alto = max(s["h"] for s in sprites.values()) + 12
-    im = Image.new("RGB", (ancho, alto), fondo)
-    x = 6
-    for s in sprites.values():
-        y = alto - 6 - s["h"]
-        for j, fila in enumerate(s["filas"]):
-            for i, c in enumerate(fila):
-                if c != ".":
-                    im.putpixel((x + i, y + j), tuple(int(v) for v in rgb(s["paleta"][c])))
-        x += s["w"] + 6
-    im.resize((ancho * escala, alto * escala), Image.NEAREST).save(ruta)
+def leer_pieza(ref):
+    """«fichero.json#nombre» → la pieza (para la persona de referencia de la hoja)."""
+    ruta, nombre = ref.split("#")
+    with open(ruta, encoding="utf-8") as f:
+        datos = json.load(f)
+    return datos.get("piezas", datos)[nombre]
 
 
-def main():
+def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("hoja")
     ap.add_argument("salida")
-    ap.add_argument("--var", default="PIEZAS")
-    ap.add_argument("--rejilla", default="1x1")
+    ap.add_argument("--var", default="PIEZAS", help="solo con salida .js")
+    ap.add_argument("--rejilla", default="auto", help="auto (una fila, separa por el fondo) o CxF (casillas iguales)")
     ap.add_argument("--nombres", default=None)
     ap.add_argument("--nativo", action="store_true")
     ap.add_argument("--mismo-pixel", action="store_true", help="todas las casillas con el píxel mediano de la hoja")
     ap.add_argument("--pixel", type=float, default=None, help="fuerza el tamaño del píxel falso (reduce si es mayor que el real)")
+    ap.add_argument("--alto", type=int, default=None, help="altura final de todas las piezas, en píxeles de arte")
+    ap.add_argument("--altos", default=None, help="altura final por pieza: nombre=N,nombre=N")
     ap.add_argument("--limpiar", action="store_true")
-    ap.add_argument("--tonos", type=int, default=None, help="agrupa los colores del sprite en N tonos antes de la paleta")
+    ap.add_argument("--tonos", type=int, default=None, help="agrupa los colores de la pieza en N tonos antes de la paleta")
     ap.add_argument("--contactos", default=None)
-    ap.add_argument("--anadir", action="store_true", help="añade a la variable en vez de crearla")
-    a = ap.parse_args()
-    cols, fils = (int(v) for v in a.rejilla.lower().split("x"))
-    nombres = a.nombres.split(",") if a.nombres else [f"s{k}" for k in range(cols * fils)]
+    ap.add_argument("--referencia", default=None, help="persona de referencia para la hoja: fichero.json#nombre")
+    ap.add_argument("--regla", default=None, help="carpeta donde dejar la regla de cada pieza")
+    ap.add_argument("--anadir", action="store_true", help="solo con salida .js: añade a la variable en vez de crearla")
+    a = ap.parse_args(argv)
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")  # la consola de Windows va en cp1252
     img = Image.open(a.hoja)
-    sprites = {}
+    altos = dict((k, int(v)) for k, v in (x.split("=") for x in a.altos.split(","))) if a.altos else {}
     if a.nativo:
-        recortes = [img]
+        recortes = [None]
     else:
         im = np.array(img.convert("RGB"))
         H, W = im.shape[:2]
         recortes = []
-        for j in range(fils):
-            for i in range(cols):
-                celda = im[j * H // fils:(j + 1) * H // fils, i * W // cols:(i + 1) * W // cols]
-                ys, xs = np.where(~es_fondo(celda.astype(float)))
-                recortes.append(celda[max(ys.min() - 12, 0):ys.max() + 12, max(xs.min() - 12, 0):xs.max() + 12])
+        if a.rejilla == "auto":
+            n = len(a.nombres.split(",")) if a.nombres else 1
+            cajas = segmentos(im, n)
+            if cajas is None:
+                sys.exit(f"No salen {n} objetos separados por el fondo: usa --rejilla CxF o pide otra hoja")
+            for x0, x1, y0, y1 in cajas:
+                recortes.append(im[max(y0 - 12, 0):y1 + 12, max(x0 - 12, 0):x1 + 12])
+        else:
+            cols, fils = (int(v) for v in a.rejilla.lower().split("x"))
+            for j in range(fils):
+                for i in range(cols):
+                    celda = im[j * H // fils:(j + 1) * H // fils, i * W // cols:(i + 1) * W // cols]
+                    ys, xs = np.where(~es_fondo(celda.astype(float)))
+                    recortes.append(celda[max(ys.min() - 12, 0):ys.max() + 12, max(xs.min() - 12, 0):xs.max() + 12])
+    nombres = a.nombres.split(",") if a.nombres else [f"s{k}" for k in range(len(recortes))]
+    if len(nombres) != len(recortes):
+        sys.exit(f"{len(nombres)} nombres para {len(recortes)} casillas")
     p_comun = a.pixel
     if a.mismo_pixel and not a.nativo:
         p_comun = float(np.median([muestrear(c)[1] for c in recortes]))
-    for k, crop in enumerate(recortes):
-        filas, p = nativo(crop) if a.nativo else muestrear(crop, p_comun)
+    piezas = {}
+    for nombre, crop in zip(nombres, recortes):
+        alto = altos.get(nombre, a.alto)
+        p_forzado, aviso, p_nat = p_comun, "", None
+        if crop is not None and alto:
+            p_forzado = alto_px(crop) / alto
+            _, p_nat = muestrear(crop)
+            if p_forzado < p_nat * 0.9:
+                aviso = f" · AVISO: pides {alto} de alto y la hoja trae unos {alto_px(crop) / p_nat:.0f}: se queda en lo que trae"
+        if crop is None:
+            filas, p = nativo(img)
+        elif alto and aviso:  # pide más de lo que hay: se queda con el píxel de la hoja (ampliar no añade detalle)
+            filas, p = muestrear(crop, p_nat)
+        elif alto:
+            filas, p = muestrear_alto(crop, alto, p_forzado, p_nat)
+        else:
+            filas, p = muestrear(crop, p_forzado)
         m = indices(filas, a.tonos)
         cambios = 0
         if a.limpiar:
@@ -258,15 +347,27 @@ def main():
         rejilla, paleta = a_letras(m)
         s = {"filas": rejilla, "paleta": paleta, "w": len(rejilla[0]), "h": len(rejilla),
              "pixel_falso": round(float(p), 2), "limpiados": cambios}
-        sprites[nombres[k]] = s
-        print(f"{nombres[k]}: píxel {p:.2f} → {s['w']}×{s['h']}, {len(paleta)} colores, {cambios} píxeles limpiados")
-    with open(a.salida, "a" if a.anadir else "w", encoding="utf-8") as f:
-        if not a.anadir:
-            f.write("// Generado por motor/piloto/piezas-generadas/convertir.py (piloto, no se edita a mano).\n")
-            f.write(f"var {a.var} = {a.var} || {{}};\n")
-        f.write(f"Object.assign({a.var}, " + json.dumps(sprites, ensure_ascii=False) + ");\n")
+        piezas[nombre] = s
+        print(f"{nombre}: píxel {p:.2f} → {s['w']}×{s['h']}, {len(paleta)} colores, {cambios} píxeles limpiados{aviso}")
+    if a.salida.endswith(".js"):
+        with open(a.salida, "a" if a.anadir else "w", encoding="utf-8") as f:
+            if not a.anadir:
+                f.write("// Generado por motor/piezas/convertir.py (no se edita a mano).\n")
+                f.write(f"var {a.var} = {a.var} || {{}};\n")
+            f.write(f"Object.assign({a.var}, " + json.dumps(piezas, ensure_ascii=False) + ");\n")
+    else:
+        with open(a.salida, "w", encoding="utf-8") as f:
+            json.dump(piezas, f, ensure_ascii=False, indent=1)
+            f.write("\n")
+    lista = [dict(s, nombre=n) for n, s in piezas.items()]
     if a.contactos:
-        contactos(sprites, a.contactos)
+        hoja.contactos(lista, a.contactos, leer_pieza(a.referencia) if a.referencia else None)
+    if a.regla:
+        os.makedirs(a.regla, exist_ok=True)
+        for s in lista:
+            hoja.regla(s, os.path.join(a.regla, f"regla-{s['nombre']}.png"))
+    return piezas
 
 
-main()
+if __name__ == "__main__":
+    main()

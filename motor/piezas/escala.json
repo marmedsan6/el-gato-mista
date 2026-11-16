@@ -1,0 +1,20 @@
+{
+  "nota": "Escala fija del arte generado (estilo v7), en píxeles de arte (1 = 4 px de salida). Punto de partida del 2026-11-15 (piloto y piezas v6); la aprueba Mario con el set de referencia. generar.mjs pide estas alturas a Codex y montar.mjs rechaza una pieza fuera de [min, max] salvo que su meta diga \"escalaLibre\": true.",
+  "persona": 28,
+  "referencia": "quieto",
+  "tipos": {
+    "persona": { "alto": 28, "min": 26, "max": 30, "nota": "de pie, en plano general" },
+    "persona-sentada": { "alto": 24, "min": 20, "max": 28, "nota": "sentada en su silla, con lo que tenga delante (mesa, portátil)" },
+    "persona-sujeto": { "alto": 46, "min": 44, "max": 48, "nota": "persona que es el sujeto de su estación (silueta6 mide 46)" },
+    "puerta": { "alto": 35, "ancho": 17, "min": 33, "max": 38, "nota": "hueco de una puerta de calle" },
+    "tienda": { "alto": 67, "ancho": 86, "min": 60, "max": 80, "nota": "edificio de una planta con toldo" },
+    "edificio": { "alto": 120, "min": 60, "max": 200, "nota": "unos 40 por planta" },
+    "farola": { "alto": 70, "min": 64, "max": 76 },
+    "vehiculo": { "alto": 40, "ancho": 72, "min": 30, "max": 50 },
+    "robot": { "alto": 34, "min": 30, "max": 38, "nota": "la IA como personaje" },
+    "mueble": { "alto": 24, "min": 12, "max": 60, "nota": "mesa, estantería, mostrador" },
+    "maquina": { "alto": 48, "min": 24, "max": 90, "nota": "rack, servidor, mecanismo fijo" },
+    "interfaz": { "alto": 80, "min": 40, "max": 140, "nota": "marco de ventana, pantalla grande" },
+    "objeto": { "alto": 16, "min": 10, "max": 40, "nota": "objeto de mano o icono; nunca menos de 10 (regla de lo pequeño)" }
+  }
+}

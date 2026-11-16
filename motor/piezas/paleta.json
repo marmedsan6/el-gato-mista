@@ -1,0 +1,17 @@
+{
+  "nota": "Paleta del arte generado (estilo v7): rampas R5 de motor/estilo/v5/dibujo.js y acentos del canal (docs/estilo.md). La usa convertir.py para pasar cada píxel al color más cercano y montar.mjs para validar. Es la misma del piloto del 2026-11-14.",
+  "rampas": {
+    "contorno": ["#0b0e14"],
+    "hormigon": ["#161b26", "#222a3a", "#2f3a4f", "#43506a", "#5b6a86"],
+    "metal": ["#262b48", "#3a4166", "#5a6390", "#8a93c0"],
+    "ia": ["#1d2f6b", "#3a5fc0", "#5b8cff", "#9fc4ff", "#f5f7fb"],
+    "naranja": ["#7a3a14", "#c25e22", "#ff8a3d", "#ffb37a"],
+    "verde": ["#0d5a42", "#13936a", "#1fd69a", "#8ff0c8"],
+    "ambar": ["#6a4210", "#b0701c", "#f0a83a", "#ffd486"],
+    "oficina": ["#2a1d1c", "#41291f", "#5c3a26", "#7c5232", "#f2c14e"],
+    "crema": ["#b8ad96", "#efe6d2"],
+    "piel": ["#a8674a", "#d8946c", "#f2c4a0"],
+    "pelo": ["#2a1810", "#4a2c1a"],
+    "rojo": ["#e0454f"]
+  }
+}

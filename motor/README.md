@@ -15,10 +15,14 @@ node motor/voz/escrito.mjs <timing.json> <voz-escrito.json>
 node motor/voz/revisar-alineacion.mjs <timing.json> <voz.wav> --corregir <timing.json>
 # 3 · timing de la escena, con la fuente de cada frase (marcas [fN] del guion)
 node motor/timing-a-js.mjs <timing.json> <escena>/timing.js --guion <guion.md> --seccion Short --fuentes <fuentes.json>
+# 3b · piezas (estilo v7): generar por tandas, aceptar el intento bueno, medir anclas, montar y aprobar la hoja
+node motor/piezas/generar.mjs --tanda proyectos/<slug>/piezas/tandas/<NN-nombre>.json [--seco] [--solo-convertir [N]] [--aceptar N]
+node motor/piezas/montar.mjs <slug> [--regla]          # → escenas/comun/piezas.js y piezas/contactos.png (puerta de estilo)
+node motor/piezas/promover.mjs <slug> a,b,c            # al cerrar el vídeo: piezas reutilizables al set (motor/estilo/v7/set/)
 # 4 · puerta antes del render: errores de seek(t) y lint de textos y sincronía
 node motor/revisar.mjs <html> 270 480 <duración> 0.05 <carpeta de capturas> [t1,t2] --estricto
 # 5 · render (un tramo para previsualizar: --desde 10 --hasta 14)
-node motor/render.mjs --escena <html> --ancho 270 --alto 480 --duracion <s> --incluir motor/estilo,motor/estilo/v5,motor/estilo/v6 --salida <mp4>
+node motor/render.mjs --escena <html> --ancho 270 --alto 480 --duracion <s> --incluir motor/estilo,motor/estilo/v5,motor/estilo/v6,motor/estilo/v7,<escenas/comun> --salida <mp4>
 # 6 · efectos y mezcla (falla si el máster no queda en -14 ± 1 LUFS y < -2 dBTP)
 node motor/eventos.mjs --escena <html> --ancho 270 --alto 480 --salida <eventos.json>
 node motor/mezcla.mjs --video <mp4> --voz <wav> --musica <mp3> --eventos <eventos.json> --sfx-dir <dir> --musica-db -13 --sfx-db -24 --salida <máster>
@@ -38,7 +42,8 @@ node motor/qa.mjs --proyecto <slug> --formato short --version <N> --escena <html
 | `mezcla.mjs` | Voz + música (sidechain) + efectos, `loudnorm` en dos pasadas, limitador con sobremuestreo ×4 y medida del máster con `ebur128` |
 | `qa.mjs`, `qa-medidas.mjs` | QA de un máster: ficha, huella, sonoridad, silencios, congelados, negros, último instante de cada frase (completo y a tamaño de móvil), hojas a 2 fps y tiras de los movimientos de cámara |
 | `huellas.mjs` | `--generar` guarda las huellas de las escenas publicadas en `huellas/publicados.json`; sin argumentos, compara |
-| `estilo/` | `v6/` vigente (ADR 0010) sobre `v5/dibujo.js`; raíz (v2), `v3/`, `v3/congelado/` y `v5/` solo reproducen lo publicado |
+| `estilo/` | `v7/` vigente (ADR 0011: `generado.js`, `short-motor.js` y el set en `set/`) sobre `v6/` y `v5/dibujo.js`; raíz (v2), `v3/`, `v3/congelado/`, `v5/` y `v6/` reproducen lo publicado y no se editan |
+| `piezas/` | Arte generado (v7). `generar.mjs`: petición de `peticion.md` con la escala de `escala.json` (pide un 25 % de más), `codex exec` con las referencias de `referencia/` (las regenera `promover.mjs` desde el set), conversión y hoja de contactos en `.runtime/piezas/<vídeo>/<tanda>/intento-N/`; registro de tiempo y tokens en `registro.jsonl`. `convertir.py`: detecta el píxel falso, fuerza la altura (`--alto`/`--altos`: al reducir, exacta; si la hoja trae menos, se queda y avisa), agrupa tonos y pasa a la paleta de `paleta.json`; `hoja.py` dibuja hojas, reglas y referencias. `montar.mjs`: lista + meta + set → `escenas/comun/piezas.js` (copia también las del set) con validación de anclas, paleta y escala. `promover.mjs`: al set, con `catalogo.md` y `contactos.png`. Python: variable `PYTHON` o el 3.12 de la máquina (Pillow y NumPy) |
 | `biblioteca/` | Catálogo pixel v1 (investigación del 2026-11-06); no lo usa ninguna escena |
 
 ## Tests (`npm test`, en `motor/`)
@@ -46,10 +51,12 @@ node motor/qa.mjs --proyecto <slug> --formato short --version <N> --escena <html
 - `determinismo`: dos renders dan PNG y MP4 idénticos; una escena con reloj se rechaza.
 - `publicados`: las escenas ya publicadas conservan sus huellas.
 - `lint-textos`, `revisar`, `alineacion`, `fuentes-frases`, `qa-medidas`: las herramientas de la v6.
+- `conversor`, `piezas`, `generado`: el conversor (hoja sintética con píxel falso), `montar`/`generar --seco` y la biblioteca v7.
 - Se ejecutan solos al cerrar cada turno si hay cambios en `motor/` o en escenas (`.claude/hooks/verify-on-stop.sh`).
 
 ## Carpetas
-- `calibracion/v6/`: clip de la calibración vigente. `v5/`, `v4/` y `v3/gato-hoja.html`, historial. Las anteriores están en la
+- `calibracion/v7/`: clip 16:9 de la calibración vigente (el short A en v7 está en `proyectos/ia-pasa-factura/escenas/short-a-v7/`).
+  `piezas-generadas/`, el piloto del 2026-11-14. `calibracion/v6/`: clip de la v6. `v5/`, `v4/` y `v3/gato-hoja.html`, historial. Las anteriores están en la
   etiqueta git `archivo/pre-limpieza-2026-11-09`.
 - `piloto/`: `resultados.md` y `escena-spec.md`, la evidencia del ADR 0004.
 - `node_modules/` aquí mismo, ignorado por git (`npm ci` la primera vez).
